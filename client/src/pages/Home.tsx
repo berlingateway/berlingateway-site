@@ -1,9 +1,17 @@
+import { useAuth } from "@/_core/hooks/useAuth";
+import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Activity, Users, FileText, Lock } from "lucide-react";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
+  const submitCase = trpc.case.submit.useMutation();
+
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } as any }
@@ -125,21 +133,50 @@ export default function Home() {
           <h2 className="text-3xl font-serif text-center mb-12">Request Confidential Consultation</h2>
           
           <Card className="p-8 shadow-sm border-slate-200 bg-white rounded-none">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.target as HTMLFormElement;
+                const formData = new FormData(form);
+                const data = {
+                  fullName: formData.get('fullName') as string,
+                  country: formData.get('country') as string,
+                  medicalSituation: formData.get('medicalSituation') as string,
+                };
+                
+                // Send to backend for email trigger
+                await submitCase.mutateAsync(data);
+
+                // Show success message
+                const card = form.closest('.p-8');
+                if (card) {
+                  card.innerHTML = `
+                    <div class="text-center py-12 space-y-6">
+                      <h3 class="text-2xl font-serif text-slate-900">Case Under Strategic Review</h3>
+                      <div class="w-16 h-[1px] bg-slate-200 mx-auto"></div>
+                      <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
+                        Your submission has been formally integrated into our clinical governance process and is currently undergoing preliminary strategic evaluation.
+                      </p>
+                      <p class="text-slate-500 text-sm">
+                        No further action is required at this stage.
+                      </p>
+                    </div>
+                  `;
+                }
+              }}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">Full Name</label>
-                  <input type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+                  <input name="fullName" type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">Country</label>
-                  <input type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+                  <input name="country" type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700">Medical Situation (Brief Description)</label>
-                <textarea className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50 h-32"></textarea>
+                <textarea name="medicalSituation" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50 h-32"></textarea>
               </div>
 
               <div className="pt-4">

@@ -40,96 +40,38 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  
-  /* Berlin Medical Care Brand Colors */
-  --color-bmc-navy: #003A8F;
-  --color-bmc-cyan: #00B4D8;
-  --color-bmc-gold: #D4AF37;
-  --color-bmc-white: #FFFFFF;
 }
 
 :root {
-  /* Berlin Medical Care Theme - Light Mode Default */
-  --primary: oklch(0.35 0.15 265); /* Navy Blue approx */
-  --primary-foreground: oklch(1 0 0);
-  
-  --secondary: oklch(0.85 0.1 230); /* Cyan tint */
-  --secondary-foreground: oklch(0.35 0.15 265);
-  
-  --accent: oklch(0.8 0.15 85); /* Gold approx */
-  --accent-foreground: oklch(0.2 0.05 85);
-  
-  --background: oklch(0.98 0.01 260); /* Very light blue-ish white */
-  --foreground: oklch(0.2 0.05 265); /* Dark Navy */
-  
+  /* Institutional Palette: Deep Medical Blue, Slate Grays, Pure White */
+  --primary: oklch(0.25 0.08 260); /* Deep Navy Blue */
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.96 0 0); /* Very Light Gray */
+  --secondary-foreground: oklch(0.25 0.08 260);
+  --muted: oklch(0.94 0 0);
+  --muted-foreground: oklch(0.45 0 0); /* Slate Gray */
+  --accent: oklch(0.92 0 0);
+  --accent-foreground: oklch(0.25 0.08 260);
+  --background: oklch(0.99 0 0); /* Pure White */
+  --foreground: oklch(0.20 0.02 260); /* Almost Black Blue */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.05 265);
-  
+  --card-foreground: oklch(0.20 0.02 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.05 265);
-  
-  --muted: oklch(0.95 0.02 260);
-  --muted-foreground: oklch(0.5 0.05 265);
-  
+  --popover-foreground: oklch(0.20 0.02 260);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  
-  --border: oklch(0.9 0.02 260);
-  --input: oklch(0.9 0.02 260);
-  --ring: oklch(0.35 0.15 265);
-  
-  --radius: 0.75rem;
-  
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-  
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  --border: oklch(0.90 0 0);
+  --input: oklch(0.90 0 0);
+  --ring: oklch(0.25 0.08 260);
+  --radius: 0.2rem; /* Sharp, professional corners */
 }
 
 .dark {
-  /* Dark mode not primary focus but good to have */
-  --primary: oklch(0.45 0.15 265);
-  --primary-foreground: oklch(1 0 0);
-  
-  --background: oklch(0.15 0.05 265); /* Dark Navy */
-  --foreground: oklch(0.95 0.02 260);
-  
-  --card: oklch(0.2 0.05 265);
-  --card-foreground: oklch(0.95 0.02 260);
-  
-  --popover: oklch(0.2 0.05 265);
-  --popover-foreground: oklch(0.95 0.02 260);
-  
-  --secondary: oklch(0.3 0.1 230);
-  --secondary-foreground: oklch(0.95 0.02 260);
-  
-  --muted: oklch(0.25 0.05 265);
-  --muted-foreground: oklch(0.7 0.05 265);
-  
-  --accent: oklch(0.8 0.15 85);
-  --accent-foreground: oklch(0.2 0.05 85);
-  
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  
-  --border: oklch(0.3 0.05 265);
-  --input: oklch(0.3 0.05 265);
-  --ring: oklch(0.45 0.15 265);
-  
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --primary: oklch(0.98 0 0);
+  --primary-foreground: oklch(0.25 0.08 260);
+  --background: oklch(0.15 0.02 260);
+  --foreground: oklch(0.98 0 0);
+  /* ... (rest of dark mode if needed, but we focus on light/clean) */
 }
 
 @layer base {
@@ -137,23 +79,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Cairo', 'Roboto', sans-serif;
+    @apply bg-background text-foreground font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cairo', 'Roboto', sans-serif;
-    font-weight: 700;
-  }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
+    @apply font-serif tracking-tight; /* Serif for authority */
   }
 }
 
@@ -162,46 +91,16 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1280px;
-    }
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1200px;
   }
   
-  /* Custom Utilities for Berlin Medical Care */
-  .bmc-gradient {
-    background: linear-gradient(135deg, var(--color-bmc-navy) 0%, #0050b3 100%);
+  /* Institutional Typography Utility */
+  .text-institutional {
+    font-family: 'Playfair Display', serif;
   }
-  
-  .bmc-gold-text {
-    color: var(--color-bmc-gold);
-  }
-  
-  .bmc-card-hover {
-    transition: all 0.3s ease;
-  }
-  
-  .bmc-card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px -5px rgba(0, 58, 143, 0.15);
-    border-color: var(--color-bmc-cyan);
+  .text-clean {
+    font-family: 'Inter', sans-serif;
   }
 }

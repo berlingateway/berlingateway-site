@@ -1,160 +1,167 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageCircle, Facebook, Instagram, Video, ExternalLink, Phone, MapPin, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowRight, ShieldCheck, Activity, Users, FileText, Lock } from "lucide-react";
 
 export default function Home() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 } as any
-    }
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } as any }
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 relative overflow-hidden" dir="rtl">
-      {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-primary/10 to-transparent -z-10" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -z-10 translate-y-1/2 translate-x-1/2" />
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-200">
       
-      {/* Main Content Container */}
-      <motion.div 
-        className="w-full max-w-md z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Header Section */}
-        <motion.div variants={itemVariants} className="text-center mb-8">
-          <div className="w-24 h-24 mx-auto bg-white rounded-full shadow-lg flex items-center justify-center mb-4 border-4 border-accent/20 p-2">
-            {/* Placeholder for Logo - Using Brandenburg Gate Icon Concept */}
-            <div className="text-4xl">🏛️</div>
-          </div>
-          
-          <h1 className="text-2xl font-bold text-primary mb-2 font-cairo leading-tight">
-            A German Medical Gateway <br/>
-            <span className="text-lg font-normal text-primary/80">for Private & International Patients</span><br/>
-            <span className="text-sm font-normal text-muted-foreground mt-1 block">Operated by Berlin Medical Care</span>
+      {/* Navigation (Minimal) */}
+      <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
+        <div className="text-xl font-serif font-bold tracking-tight text-slate-900">Berlin Medical Care</div>
+        <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
+          <span>Strategic Approach</span>
+          <span>Operations</span>
+          <span>Discretion</span>
+        </div>
+        <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50">
+          Patient Portal
+        </Button>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative py-32 px-6 md:px-12 max-w-5xl mx-auto text-center">
+        <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+          <h1 className="text-4xl md:text-6xl font-serif font-medium text-slate-900 leading-tight mb-6">
+            Strategic Medical Authority <br/> for Complex Cases
           </h1>
-          <p className="text-muted-foreground text-xl font-bold mt-2 text-primary">بوابة الطب الألماني للنخبة</p>
-          <div className="flex items-center justify-center gap-2 mt-2">
-            <span className="px-3 py-1 bg-secondary/30 text-primary text-xs rounded-full font-bold border border-secondary">🇩🇪 German Quality</span>
-            <span className="px-3 py-1 bg-accent/20 text-accent-foreground text-xs rounded-full font-bold border border-accent/50">✨ Excellence</span>
-          </div>
-        </motion.div>
-
-        {/* Primary CTA - WhatsApp */}
-        <motion.div variants={itemVariants} className="mb-6">
-          <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" className="block group">
-            <div className="bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-xl shadow-lg flex items-center justify-between transition-all transform group-hover:-translate-y-1 group-hover:shadow-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12" />
-              <div className="flex items-center gap-4">
-                <div className="bg-white/20 p-2 rounded-full">
-                  <MessageCircle size={28} fill="white" className="text-white" />
-                </div>
-                <div className="text-right">
-                  <h3 className="font-bold text-xl">تواصل عبر واتساب</h3>
-                  <p className="text-white/90 text-sm">طلب تقييم طبي خاص</p>
-                </div>
-              </div>
-              <ExternalLink className="opacity-70 group-hover:opacity-100 transition-opacity" />
-            </div>
-          </a>
-        </motion.div>
-
-        {/* Social Media Grid */}
-        <motion.div variants={itemVariants} className="grid grid-cols-1 gap-4 mb-8">
+          <p className="text-xl md:text-2xl text-slate-500 font-light mb-8 max-w-3xl mx-auto">
+            Consulted before critical medical decisions are made.
+          </p>
+          <p className="text-lg text-slate-400 font-cairo font-light mb-12">
+            مرجعية طبية استراتيجية يُستشار رأيها قبل اتخاذ القرارات العلاجية الكبرى
+          </p>
           
-          {/* Facebook */}
-          <a href="https://www.facebook.com/share/1JuvcRvEQg/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="block group">
-            <Card className="p-4 flex items-center justify-between hover:border-primary/50 transition-all group-hover:shadow-md bmc-card-hover">
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-600/10 p-2 rounded-full text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <Facebook size={24} />
-                </div>
-                <span className="font-bold text-lg text-foreground">تابعنا على فيسبوك</span>
-              </div>
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-colors">
-                <ExternalLink size={16} />
-              </div>
-            </Card>
-          </a>
-
-          {/* Instagram */}
-          <a href="https://www.instagram.com/berlintreatment?igsh=MWxodW1ubDZ1dGd2Zg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="block group">
-            <Card className="p-4 flex items-center justify-between hover:border-pink-500/50 transition-all group-hover:shadow-md bmc-card-hover">
-              <div className="flex items-center gap-4">
-                <div className="bg-pink-500/10 p-2 rounded-full text-pink-600 group-hover:bg-gradient-to-tr group-hover:from-yellow-400 group-hover:via-red-500 group-hover:to-purple-500 group-hover:text-white transition-all">
-                  <Instagram size={24} />
-                </div>
-                <span className="font-bold text-lg text-foreground">تابعنا على انستجرام</span>
-              </div>
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center group-hover:bg-pink-500/10 group-hover:text-pink-500 transition-colors">
-                <ExternalLink size={16} />
-              </div>
-            </Card>
-          </a>
-
-          {/* TikTok */}
-          <a href="https://www.tiktok.com/@berlinmedicalcare41?_r=1&_t=ZG-93UvdO0CXRo" target="_blank" rel="noopener noreferrer" className="block group">
-            <Card className="p-4 flex items-center justify-between hover:border-black/50 transition-all group-hover:shadow-md bmc-card-hover">
-              <div className="flex items-center gap-4">
-                <div className="bg-black/5 p-2 rounded-full text-black group-hover:bg-black group-hover:text-white transition-colors">
-                  <Video size={24} />
-                </div>
-                <span className="font-bold text-lg text-foreground">تابعنا على تيك توك</span>
-              </div>
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center group-hover:bg-black/10 group-hover:text-black transition-colors">
-                <ExternalLink size={16} />
-              </div>
-            </Card>
-          </a>
-
-        </motion.div>
-
-        {/* Footer Info */}
-        <motion.div variants={itemVariants} className="text-center space-y-4">
-          <div className="flex justify-center gap-6 text-muted-foreground">
-            <div className="flex flex-col items-center gap-1">
-              <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
-                <MapPin size={20} />
-              </div>
-              <span className="text-xs font-medium">Berlin, Germany</span>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
-                <Globe size={20} />
-              </div>
-              <span className="text-xs font-medium">Worldwide</span>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
-                <Phone size={20} />
-              </div>
-              <span className="text-xs font-medium">24/7 Support</span>
-            </div>
-          </div>
-
-          <div className="pt-8 pb-4 border-t border-border/50 mt-6">
-            <p className="text-primary font-bold text-sm">Berlin Medical Care</p>
-            <p className="text-accent-foreground/70 text-xs mt-1">Excellence you can Trust</p>
+          <div className="flex justify-center">
+            <div className="h-16 w-[1px] bg-slate-200"></div>
           </div>
         </motion.div>
+      </section>
 
-      </motion.div>
+      {/* Positioning Statement */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-2xl md:text-3xl font-serif text-slate-800 leading-relaxed mb-6">
+            "Trusted with the direction of complex medical pathways across Germany."
+          </p>
+          <p className="text-xl text-slate-500 font-cairo">
+            نُؤتمن على توجيه المسارات الطبية المعقدة داخل ألمانيا.
+          </p>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-serif mb-6">Philosophy</h2>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              Serious medical cases require structured leadership. We do not facilitate tourism; we engineer medical pathways. Our role is to provide the strategic oversight necessary for high-stakes medical interventions.
+            </p>
+            <p className="text-lg text-slate-500 font-cairo leading-relaxed">
+              الحالات الطبية الجادة تحتاج إلى قيادة منظمة. نحن لا نسهل السياحة العلاجية؛ نحن نهندس المسارات الطبية. دورنا هو توفير الرقابة الاستراتيجية اللازمة للتدخلات الطبية الحاسمة.
+            </p>
+          </div>
+          <div className="bg-slate-100 h-96 w-full flex items-center justify-center">
+            {/* Abstract Architectural Visual Placeholder */}
+            <div className="text-slate-300">
+              <ShieldCheck size={64} strokeWidth={1} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Operate */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-serif mb-16 text-center">How We Operate</h2>
+          
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="space-y-4">
+              <Activity className="text-slate-400 mb-4" size={32} />
+              <h3 className="text-xl font-medium">Strategic Case Evaluation</h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Rigorous analysis of medical history and current status before any travel or treatment begins.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <Users className="text-slate-400 mb-4" size={32} />
+              <h3 className="text-xl font-medium">Physician Coordination</h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Direct engagement with Germany's leading specialists to form a cohesive treatment team.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <FileText className="text-slate-400 mb-4" size={32} />
+              <h3 className="text-xl font-medium">Treatment Oversight</h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Continuous monitoring of the medical pathway to ensure adherence to the strategic plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Discretion */}
+      <section className="py-32 px-6 text-center max-w-4xl mx-auto">
+        <Lock className="mx-auto text-slate-300 mb-6" size={48} strokeWidth={1} />
+        <h2 className="text-3xl md:text-4xl font-serif text-slate-800 mb-6">
+          "Discretion is not a feature of our work — it is a foundational principle."
+        </h2>
+        <p className="text-xl text-slate-500 font-cairo">
+          السرية ليست خيارًا في عملنا — بل هي مبدأ أساسي.
+        </p>
+      </section>
+
+      {/* Contact / Request Consultation */}
+      <section className="py-24 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="text-3xl font-serif text-center mb-12">Request Confidential Consultation</h2>
+          
+          <Card className="p-8 shadow-sm border-slate-200 bg-white rounded-none">
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-slate-700">Full Name</label>
+                  <input type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-slate-700">Country</label>
+                  <input type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-slate-700">Medical Situation (Brief Description)</label>
+                <textarea className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50 h-32"></textarea>
+              </div>
+
+              <div className="pt-4">
+                <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-6 text-lg font-light tracking-wide">
+                  Submit Confidential Request
+                </Button>
+              </div>
+              
+              <p className="text-center text-xs text-slate-400 mt-4">
+                All inquiries are handled with strict confidentiality.
+              </p>
+            </form>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-white text-center border-t border-slate-100">
+        <p className="text-slate-400 text-sm font-serif">Berlin Medical Care © 2026</p>
+        <p className="text-slate-300 text-xs mt-2">Strategic Medical Authority • Berlin, Germany</p>
+      </footer>
+
     </div>
   );
 }

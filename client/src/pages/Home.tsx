@@ -44,8 +44,12 @@ export default function Home() {
             <div className="text-4xl">🏛️</div>
           </div>
           
-          <h1 className="text-3xl font-bold text-primary mb-2 font-cairo">Berlin Medical Care</h1>
-          <p className="text-muted-foreground text-lg font-medium">رعايتك الطبية في ألمانيا تبدأ من هنا</p>
+          <h1 className="text-2xl font-bold text-primary mb-2 font-cairo leading-tight">
+            A German Medical Gateway <br/>
+            <span className="text-lg font-normal text-primary/80">for Private & International Patients</span><br/>
+            <span className="text-sm font-normal text-muted-foreground mt-1 block">Operated by Berlin Medical Care</span>
+          </h1>
+          <p className="text-muted-foreground text-xl font-bold mt-2 text-primary">بوابة الطب الألماني للنخبة</p>
           <div className="flex items-center justify-center gap-2 mt-2">
             <span className="px-3 py-1 bg-secondary/30 text-primary text-xs rounded-full font-bold border border-secondary">🇩🇪 German Quality</span>
             <span className="px-3 py-1 bg-accent/20 text-accent-foreground text-xs rounded-full font-bold border border-accent/50">✨ Excellence</span>
@@ -63,7 +67,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <h3 className="font-bold text-xl">تواصل عبر واتساب</h3>
-                  <p className="text-white/90 text-sm">استشارة طبية فورية ومجانية</p>
+                  <p className="text-white/90 text-sm">طلب تقييم طبي خاص</p>
                 </div>
               </div>
               <ExternalLink className="opacity-70 group-hover:opacity-100 transition-opacity" />

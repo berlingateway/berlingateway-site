@@ -97,6 +97,11 @@ export default function Home() {
               <p className="text-slate-600 text-sm leading-relaxed">
                 Operating in alignment with German healthcare regulations and international patient standards.
               </p>
+              {/* PREPARED BUT INACTIVE: Governmental/Diplomatic Referral Pathways Statement */}
+              {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+              <p className="hidden text-slate-600 text-sm leading-relaxed mt-3">
+                Structured to support governmental, diplomatic, and private referral pathways requiring coordinated medical access within Germany.
+              </p>
             </div>
           </div>
         </div>

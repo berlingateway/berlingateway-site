@@ -172,3 +172,14 @@
 - [x] Objective: Increase perceived institutional selectivity without explicit exclusion language
 - [x] Status: PREPARED BUT INACTIVE until final approval
 - [x] Document activation instructions (selective-advisory-capacity-activation-instructions.md)
+
+## Governmental/Diplomatic Referral Pathways Sentence (PREPARED BUT INACTIVE)
+- [x] Insert sentence: "Structured to support governmental, diplomatic, and private referral pathways requiring coordinated medical access within Germany."
+- [x] Placement: Institutional Backing section (Home.tsx lines 100-104, naturally integrated, no visual separation)
+- [x] DO NOT highlight, no visual emphasis
+- [x] Must read as structural (NOT promotional)
+- [x] Avoid geopolitical implications
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 102)
+- [x] Intent: Quietly elevate institutional perception
+- [x] Status: STANDBY ONLY until final authorization
+- [x] Document activation instructions (governmental-diplomatic-pathways-activation-instructions.md)

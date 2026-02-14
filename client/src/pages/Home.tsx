@@ -53,6 +53,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PREPARED BUT INACTIVE: Selective Advisory Capacity Statement */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-4 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm text-slate-600 leading-relaxed">
+            Engagement operates within a selective advisory capacity based on case complexity and institutional alignment.
+          </p>
+        </div>
+      </section>
+
       {/* Authority Strip */}
       <section className="py-6 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto px-6 text-center">

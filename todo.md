@@ -162,3 +162,13 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 240)
 - [x] Status: PREPARED BUT INACTIVE until explicit final authorization
 - [x] Document activation instructions for future use (medical-advisory-network-activation-instructions.md)
+
+## Selective Advisory Capacity Sentence (PREPARED BUT INACTIVE)
+- [x] Insert sentence: "Engagement operates within a selective advisory capacity based on case complexity and institutional alignment."
+- [x] Placement: Upper strategic positioning area (after Hero Section, before Authority Strip - Home.tsx lines 56-64)
+- [x] One line only, no bold styling, no visual emphasis
+- [x] Avoid marketing tone
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 58)
+- [x] Objective: Increase perceived institutional selectivity without explicit exclusion language
+- [x] Status: PREPARED BUT INACTIVE until final approval
+- [x] Document activation instructions (selective-advisory-capacity-activation-instructions.md)

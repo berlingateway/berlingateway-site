@@ -117,6 +117,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PREPARED BUT INACTIVE: Structured Institutional Access */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-20 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Structured Institutional Access</h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p className="text-lg">
+              Medical Care Germany functions as a strategic medical advisory operating within institutional frameworks. Engagement is structured around case complexity, clinical urgency, and institutional alignment.
+            </p>
+            <p className="text-lg">
+              Cases are reviewed based on documentation integrity, treatment pathway requirements, and coordination feasibility within Germany's healthcare system.
+            </p>
+            <p className="text-base text-slate-600">
+              The advisory structure is suited for diplomatic channels, governmental sponsorship frameworks, and complex international referrals requiring coordinated medical access.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Institutional Foundations */}
       <section className="py-32 px-6 max-w-5xl mx-auto bg-slate-50 border-y border-slate-200">
         <div className="text-center mb-20">
@@ -180,6 +199,22 @@ export default function Home() {
           <p className="text-3xl font-serif text-slate-800 leading-relaxed italic">
             "A structured medical pathway is not created by chance — it is designed, governed, and supervised."
           </p>
+        </div>
+      </section>
+
+      {/* PREPARED BUT INACTIVE: Advisory Positioning */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-20 bg-white border-y border-slate-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Advisory Positioning</h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p className="text-lg text-center">
+              Medical Care Germany operates at the intersection of international patients, referring physicians, and advanced German medical institutions.
+            </p>
+            <p className="text-base text-slate-600 text-center">
+              Structured advisory reduces uncertainty in complex medical pathways.
+            </p>
+          </div>
         </div>
       </section>
 

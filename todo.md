@@ -183,3 +183,29 @@
 - [x] Intent: Quietly elevate institutional perception
 - [x] Status: STANDBY ONLY until final authorization
 - [x] Document activation instructions (governmental-diplomatic-pathways-activation-instructions.md)
+
+## Structured Institutional Access Section (PREPARED BUT INACTIVE)
+- [x] Create "Structured Institutional Access" section
+- [x] Position organization as Strategic Medical Advisor operating within institutional frameworks
+- [x] Communicate selective engagement based on case complexity (NOT exclusionary, NOT commercial)
+- [x] Use calm, governance-style phrasing (advisory firm tone, NO marketing language)
+- [x] Include statement: Cases reviewed based on clinical urgency, documentation integrity, institutional alignment
+- [x] Add micro-line: Suitability for diplomatic channels, governmental sponsorship structures, complex international referrals (NO claims)
+- [x] Tone: Institutional, controlled, high-trust
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 122)
+- [x] Placement: After "Decision-Level Support", before "Institutional Foundations" (Home.tsx lines 120-137)
+- [x] Status: PREPARED BUT INACTIVE until final command
+- [x] Document activation instructions (structured-institutional-access-and-advisory-positioning-activation-instructions.md)
+
+## Advisory Positioning Section (PREPARED BUT INACTIVE)
+- [x] Create "Advisory Positioning" section
+- [x] Objective: Elevate perceived institutional stature WITHOUT superiority claims
+- [x] Content: Organization operates at intersection of international patients, referring physicians, advanced German medical institutions
+- [x] NO promotional adjectives (leading, premier, world-class)
+- [x] Language: Structural legitimacy (NOT marketing strength)
+- [x] Add restrained line: Structured advisory reduces uncertainty in complex medical pathways
+- [x] Minimal design, no visual exaggeration
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 207)
+- [x] Placement: After "Institutional Foundations", before "Institutional Trust & Governance" (Home.tsx lines 205-219)
+- [x] Status: PREPARED BUT INACTIVE until final instruction
+- [x] Document activation instructions (structured-institutional-access-and-advisory-positioning-activation-instructions.md)

@@ -24,6 +24,7 @@ export default function Home() {
           <Link href="/physician-referral-clinical" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
           <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
           <Link href="/private-medical-advisory" className="hover:text-slate-900 transition-colors">Private Advisory</Link>
+          <Link href="/institutional-framework" className="hover:text-slate-900 transition-colors">Framework</Link>
           <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
         </div>
         <a href="#contact">

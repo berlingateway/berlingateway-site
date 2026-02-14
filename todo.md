@@ -112,3 +112,18 @@
 - [x] Ensure clinical, neutral, institutional, procedural tone
 - [x] Verify university medical coordination office feel
 - [x] Add route to App.tsx
+
+## Institutional Framework & Governance Page
+- [x] Create "Institutional Framework & Governance" page (InstitutionalFramework.tsx)
+- [x] Add Section 1: Structural Positioning (NOT hospital, NOT broker, NOT travel agency - declarative)
+- [x] Add Section 2: Clinical Alignment Principle (clinical indication, medical urgency, specialization, pathway suitability - no pricing)
+- [x] Add Section 3: Governance Model (structured oversight, procedural frameworks, clinical continuity)
+- [x] Add Section 4: Data Protection & Confidentiality (German data protection, controlled document flows)
+- [x] Add Section 5: Professional Interfaces (embassies, governmental sponsors, referring physicians, institutional administrators)
+- [x] Add Section 6: Medical Selectivity Statement (medically complex cases, structured coordination, clinical tone)
+- [x] Add Section 7: Operational Discretion (professional discretion for diplomatic and high-level medical referrals)
+- [x] Ensure formal, administrative, policy-level, non-promotional tone
+- [x] Verify minimal design: white space, serious typography, policy document feel
+- [x] No luxury signals, no wealth references, no VIP, no elite
+- [x] Add route to App.tsx
+- [x] Update navigation links across all pages

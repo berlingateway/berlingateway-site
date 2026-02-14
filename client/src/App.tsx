@@ -12,6 +12,7 @@ import PhysicianReferralClinical from "./pages/PhysicianReferralClinical";
 import CaseArchitectures from "./pages/CaseArchitectures";
 import AdvisoryAccess from "./pages/AdvisoryAccess";
 import PhysicianReferralInterface from "./pages/PhysicianReferralInterface";
+import InstitutionalFramework from "./pages/InstitutionalFramework";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -25,6 +26,7 @@ function Router() {
       <Route path={"/case-architectures"} component={CaseArchitectures} />
       <Route path={"/advisory-access"} component={AdvisoryAccess} />
       <Route path={"/physician-referral-interface"} component={PhysicianReferralInterface} />
+      <Route path={"/institutional-framework"} component={InstitutionalFramework} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -218,6 +218,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PREPARED BUT INACTIVE: Operational Interface with the German Healthcare System */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-20 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Operational Interface with the German Healthcare System</h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p className="text-lg">
+              Medical Care Germany coordinates through structured professional interfaces aligned with national healthcare frameworks. The organization operates within the regulatory and clinical standards of the German healthcare system.
+            </p>
+            <p className="text-lg font-medium text-slate-800">
+              The organization does not replace medical providers and does not deliver clinical treatment. Coordination is conducted through established institutional pathways.
+            </p>
+            <p className="text-base text-slate-600">
+              Operating from Berlin as a central European medical and diplomatic environment, the organization maintains structured access to Germany's advanced hospital system.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Institutional Trust & Governance */}
       <section className="py-32 px-6 max-w-5xl mx-auto bg-white">
         <div className="text-center mb-20">

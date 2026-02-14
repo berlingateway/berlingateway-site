@@ -209,3 +209,14 @@
 - [x] Placement: After "Institutional Foundations", before "Institutional Trust & Governance" (Home.tsx lines 205-219)
 - [x] Status: PREPARED BUT INACTIVE until final instruction
 - [x] Document activation instructions (structured-institutional-access-and-advisory-positioning-activation-instructions.md)
+
+## Operational Interface with the German Healthcare System Section (PREPARED BUT INACTIVE)
+- [x] Create "Operational Interface with the German Healthcare System" section
+- [x] Content: Coordination through structured professional interfaces aligned with national healthcare frameworks
+- [x] CRITICAL DISCLAIMER: Organization does NOT replace medical providers, does NOT deliver clinical treatment (essential for institutional credibility)
+- [x] Add one line: Operation from Berlin as central European medical and diplomatic environment (NOT emphasizing geography)
+- [x] Tone: Policy-level communication (NO marketing tone)
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 223)
+- [x] Placement: After "Advisory Positioning", before "Institutional Trust & Governance" (Home.tsx lines 221-238)
+- [x] Status: PREPARED BUT INACTIVE until explicitly authorized
+- [x] Document activation instructions (operational-interface-activation-instructions.md)

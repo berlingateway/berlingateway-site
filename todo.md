@@ -151,3 +151,14 @@
 - [x] 8. Ensure institutional voice only throughout
 - [x] 9. Authority perceived—never stated, never claimed
 - [x] NO redesigns, NO restructuring, NO marketing
+
+## Medical Advisory Network Section (PREPARED BUT INACTIVE)
+- [x] Create "Medical Advisory Network" section with institutional tone
+- [x] Text: "Cases are reviewed within a structured advisory framework in coordination with senior German medical specialists and institutional partners when clinically appropriate. The advisory structure supports complex decision-making pathways while maintaining alignment with established medical governance standards."
+- [x] NO physician names, NO hospital lists, NO employment relationships
+- [x] Maintain institutional tone (NOT promotional)
+- [x] Visually minimal design (NO icons, NO marketing styling)
+- [x] Placement: After "Confidentiality Infrastructure", before "Referral Ecosystem" (Home.tsx lines 238-248)
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 240)
+- [x] Status: PREPARED BUT INACTIVE until explicit final authorization
+- [x] Document activation instructions for future use (medical-advisory-network-activation-instructions.md)

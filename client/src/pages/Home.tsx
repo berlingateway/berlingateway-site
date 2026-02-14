@@ -235,6 +235,18 @@ export default function Home() {
             </p>
           </div>
 
+          {/* PREPARED BUT INACTIVE: Medical Advisory Network */}
+          {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+          <div className="hidden">
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Medical Advisory Network</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Cases are reviewed within a structured advisory framework in coordination with senior German medical specialists and institutional partners when clinically appropriate.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              The advisory structure supports complex decision-making pathways while maintaining alignment with established medical governance standards.
+            </p>
+          </div>
+
           {/* 5. Referral Ecosystem Signal */}
           <div>
             <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Referral Ecosystem</h3>

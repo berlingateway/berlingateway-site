@@ -3,13 +3,10 @@ import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Activity, Users, FileText, Lock } from "lucide-react";
+import { ShieldCheck, Activity, Users, FileText, Lock, Building2, CheckCircle2 } from "lucide-react";
 
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
+  const { user, loading, error, isAuthenticated, logout } = useAuth();
   const submitCase = trpc.case.submit.useMutation();
 
   const fadeIn = {
@@ -20,117 +17,218 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-200">
       
-      {/* Navigation (Minimal) */}
+      {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
-        <div className="text-xl font-serif font-bold tracking-tight text-slate-900">Berlin Medical Care</div>
+        <div className="text-xl font-serif font-bold tracking-tight text-slate-900">Medical Care Germany</div>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-          <span>Strategic Approach</span>
-          <span>Operations</span>
-          <span>Discretion</span>
+          <span>Advisory Services</span>
+          <span>Case Review</span>
+          <span>Contact</span>
         </div>
-        <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50">
-          Patient Portal
+        <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50 text-sm">
+          Confidential Inquiry
         </Button>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-32 px-6 md:px-12 max-w-5xl mx-auto text-center">
+      <section className="relative py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
         <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-          <h1 className="text-4xl md:text-6xl font-serif font-medium text-slate-900 leading-tight mb-6">
-            Strategic Medical Authority <br/> for Complex Cases
+          <div className="mb-4">
+            <p className="text-sm uppercase tracking-wider text-slate-400 font-medium">Berlin-Based Strategic Medical Advisory</p>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-serif font-medium text-slate-900 leading-tight mb-6">
+            Structured Access to Germany's<br/>Advanced Hospital System
           </h1>
-          <p className="text-xl md:text-2xl text-slate-500 font-light mb-8 max-w-3xl mx-auto">
-            Consulted before critical medical decisions are made.
-          </p>
-          <p className="text-lg text-slate-400 font-cairo font-light mb-12">
-            مرجعية طبية استراتيجية يُستشار رأيها قبل اتخاذ القرارات العلاجية الكبرى
+          <p className="text-lg md:text-xl text-slate-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
+            Medical Care Germany is an independent strategic medical advisory headquartered in Berlin, supporting international patients with structured access to Germany's advanced hospital system.
           </p>
           
-          <div className="flex justify-center">
-            <div className="h-16 w-[1px] bg-slate-200"></div>
+          <div className="flex justify-center mb-12">
+            <div className="h-12 w-[1px] bg-slate-200"></div>
           </div>
         </motion.div>
       </section>
 
-      {/* Positioning Statement */}
-      <section className="py-24 bg-slate-50">
+      {/* Elite Entry Filter */}
+      <section className="py-16 bg-slate-50 border-y border-slate-200">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-2xl md:text-3xl font-serif text-slate-800 leading-relaxed mb-6">
-            "Trusted with the direction of complex medical pathways across Germany."
-          </p>
-          <p className="text-xl text-slate-500 font-cairo">
-            نُؤتمن على توجيه المسارات الطبية المعقدة داخل ألمانيا.
+          <h2 className="text-2xl md:text-3xl font-serif text-slate-900 mb-4">
+            For High-Risk, Complex, and Time-Sensitive Medical Cases Only
+          </h2>
+          <p className="text-slate-600 text-lg">
+            Engagement is selective and based on strategic case evaluation.
           </p>
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl font-serif mb-6">Philosophy</h2>
-            <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              Serious medical cases require structured leadership. We do not facilitate tourism; we engineer medical pathways. Our role is to provide the strategic oversight necessary for high-stakes medical interventions.
-            </p>
-            <p className="text-lg text-slate-500 font-cairo leading-relaxed">
-              الحالات الطبية الجادة تحتاج إلى قيادة منظمة. نحن لا نسهل السياحة العلاجية؛ نحن نهندس المسارات الطبية. دورنا هو توفير الرقابة الاستراتيجية اللازمة للتدخلات الطبية الحاسمة.
-            </p>
-          </div>
-          <div className="bg-slate-100 h-96 w-full flex items-center justify-center">
-            {/* Abstract Architectural Visual Placeholder */}
-            <div className="text-slate-300">
-              <ShieldCheck size={64} strokeWidth={1} />
+      {/* Institutional Backing */}
+      <section className="py-20 px-6 max-w-5xl mx-auto">
+        <div className="bg-slate-50 border border-slate-200 p-8 md:p-12">
+          <div className="flex items-start gap-4 mb-6">
+            <Building2 className="text-slate-400 mt-1" size={28} strokeWidth={1.5} />
+            <div>
+              <h3 className="text-xl font-serif text-slate-900 mb-3">Institutional Backing</h3>
+              <p className="text-slate-700 leading-relaxed mb-4">
+                Medical Care Germany is part of Merlin Medical Care Group (BMC), a Berlin-based healthcare coordination organization.
+              </p>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Operating in alignment with German healthcare regulations and international patient standards.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How We Operate */}
+      {/* Geographic Trust Signal */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-lg text-slate-700 leading-relaxed">
+            Trusted by patients from the Gulf region, North Africa, and international locations seeking advanced care within Germany.
+          </p>
+        </div>
+      </section>
+
+      {/* Who We Typically Support */}
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-serif text-slate-900 mb-4">Who We Typically Support</h2>
+          <p className="text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Our advisory services are designed for medically complex situations requiring structured clinical coordination.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="space-y-3">
+            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
+            <h3 className="text-lg font-medium text-slate-900">Oncology</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Complex cancer cases requiring multidisciplinary evaluation and treatment planning.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
+            <h3 className="text-lg font-medium text-slate-900">Neurosurgery</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              High-risk neurological conditions requiring specialized surgical intervention.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
+            <h3 className="text-lg font-medium text-slate-900">Advanced Orthopedics</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Complex musculoskeletal conditions requiring advanced surgical techniques.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
+            <h3 className="text-lg font-medium text-slate-900">Multi-Specialty Conditions</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Cases requiring coordinated care across multiple medical disciplines.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
+            <h3 className="text-lg font-medium text-slate-900">Diagnostic Uncertainty</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Situations where diagnosis remains unclear despite prior medical evaluation.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
+            <h3 className="text-lg font-medium text-slate-900">Prior Treatment Failure</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Cases where previous treatment approaches have not achieved expected outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-slate-700 text-lg leading-relaxed max-w-3xl mx-auto">
+            We prioritize medically complex situations where structured oversight can significantly improve treatment direction.
+          </p>
+        </div>
+      </section>
+
+      {/* Role Clarity - 4 Pillars */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-serif mb-16 text-center">How We Operate</h2>
+          <h2 className="text-3xl font-serif mb-16 text-center">Our Role</h2>
           
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div className="space-y-4">
-              <Activity className="text-slate-400 mb-4" size={32} />
+              <Activity className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
               <h3 className="text-xl font-medium">Strategic Case Evaluation</h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Rigorous analysis of medical history and current status before any travel or treatment begins.
+              <p className="text-slate-400 font-light leading-relaxed text-sm">
+                Comprehensive review of medical documentation, diagnostic findings, and treatment history to establish clinical priorities.
               </p>
             </div>
             <div className="space-y-4">
-              <Users className="text-slate-400 mb-4" size={32} />
-              <h3 className="text-xl font-medium">Physician Coordination</h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Direct engagement with Germany's leading specialists to form a cohesive treatment team.
+              <Users className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
+              <h3 className="text-xl font-medium">Hospital & Specialist Alignment</h3>
+              <p className="text-slate-400 font-light leading-relaxed text-sm">
+                Identification and engagement of appropriate German medical institutions and specialists based on case requirements.
               </p>
             </div>
             <div className="space-y-4">
-              <FileText className="text-slate-400 mb-4" size={32} />
-              <h3 className="text-xl font-medium">Treatment Oversight</h3>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Continuous monitoring of the medical pathway to ensure adherence to the strategic plan.
+              <FileText className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
+              <h3 className="text-xl font-medium">Medical Coordination</h3>
+              <p className="text-slate-400 font-light leading-relaxed text-sm">
+                Structured coordination of clinical appointments, diagnostic procedures, and treatment planning across institutions.
               </p>
             </div>
+            <div className="space-y-4">
+              <ShieldCheck className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
+              <h3 className="text-xl font-medium">Strategic Oversight</h3>
+              <p className="text-slate-400 font-light leading-relaxed text-sm">
+                Ongoing monitoring of treatment progression to ensure adherence to established clinical pathways.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Narratives */}
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-serif text-slate-900 mb-4">Representative Case Pathways</h2>
+          <p className="text-slate-600">Anonymized examples of structured medical coordination.</p>
+        </div>
+
+        <div className="space-y-8">
+          <div className="border border-slate-200 p-8 bg-slate-50">
+            <p className="text-slate-700 leading-relaxed">
+              International patient with complex oncological diagnosis → strategic case evaluation → referral to German university-level oncology center → structured multidisciplinary treatment pathway established → ongoing clinical coordination.
+            </p>
+          </div>
+          <div className="border border-slate-200 p-8 bg-slate-50">
+            <p className="text-slate-700 leading-relaxed">
+              Patient with diagnostic uncertainty following multiple prior evaluations → comprehensive medical record review → alignment with specialized diagnostic institution in Germany → definitive diagnosis established → treatment plan coordinated with appropriate specialists.
+            </p>
+          </div>
+          <div className="border border-slate-200 p-8 bg-slate-50">
+            <p className="text-slate-700 leading-relaxed">
+              High-risk neurosurgical case requiring advanced intervention → strategic evaluation of surgical options → engagement with specialized neurosurgical center → pre-operative planning coordination → structured post-operative care pathway.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Discretion */}
-      <section className="py-32 px-6 text-center max-w-4xl mx-auto">
+      <section className="py-24 px-6 text-center max-w-4xl mx-auto bg-slate-50">
         <Lock className="mx-auto text-slate-300 mb-6" size={48} strokeWidth={1} />
-        <h2 className="text-3xl md:text-4xl font-serif text-slate-800 mb-6">
-          "Discretion is not a feature of our work — it is a foundational principle."
+        <h2 className="text-2xl md:text-3xl font-serif text-slate-800 mb-6">
+          Confidentiality as Foundational Principle
         </h2>
-        <p className="text-xl text-slate-500 font-cairo">
-          السرية ليست خيارًا في عملنا — بل هي مبدأ أساسي.
+        <p className="text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          All case evaluations and medical coordination activities are conducted under strict confidentiality protocols in accordance with German data protection standards.
         </p>
       </section>
 
-      {/* Contact / Request Consultation */}
-      <section className="py-24 bg-slate-50 border-t border-slate-200">
+      {/* Contact Form */}
+      <section className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl font-serif text-center mb-12">Request Confidential Consultation</h2>
+          <h2 className="text-3xl font-serif text-center mb-4">Request Strategic Medical Review</h2>
+          <p className="text-center text-slate-600 mb-12">Initial case evaluations are conducted on a selective basis.</p>
           
           <Card className="p-8 shadow-sm border-slate-200 bg-white rounded-none">
             <form className="space-y-6" onSubmit={async (e) => {
@@ -141,12 +239,11 @@ export default function Home() {
                   fullName: formData.get('fullName') as string,
                   country: formData.get('country') as string,
                   medicalSituation: formData.get('medicalSituation') as string,
+                  email: formData.get('email') as string,
                 };
                 
-                // Send to backend for email trigger
                 await submitCase.mutateAsync(data);
 
-                // Show success message
                 const card = form.closest('.p-8');
                 if (card) {
                   card.innerHTML = `
@@ -166,22 +263,27 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">Full Name</label>
-                  <input name="fullName" type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+                  <input name="fullName" type="text" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-700">Country</label>
-                  <input name="country" type="text" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+                  <label className="text-sm font-medium text-slate-700">Country of Origin</label>
+                  <input name="country" type="text" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
                 </div>
               </div>
               
               <div className="space-y-2">
+                <label className="text-sm font-medium text-slate-700">Email Address</label>
+                <input name="email" type="email" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
+              </div>
+              
+              <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700">Medical Situation (Brief Description)</label>
-                <textarea name="medicalSituation" className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50 h-32"></textarea>
+                <textarea name="medicalSituation" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50 h-32"></textarea>
               </div>
 
               <div className="pt-4">
-                <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-6 text-lg font-light tracking-wide">
-                  Submit Confidential Request
+                <Button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-6 text-base font-light tracking-wide">
+                  Submit for Review
                 </Button>
               </div>
               
@@ -194,9 +296,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-white text-center border-t border-slate-100">
-        <p className="text-slate-400 text-sm font-serif">Berlin Medical Care © 2026</p>
-        <p className="text-slate-300 text-xs mt-2">Strategic Medical Authority • Berlin, Germany</p>
+      <footer className="py-12 bg-slate-50 text-center border-t border-slate-200">
+        <p className="text-slate-500 text-sm font-serif mb-1">Medical Care Germany</p>
+        <p className="text-slate-400 text-xs">Independent Strategic Medical Advisory • Headquartered in Berlin</p>
+        <p className="text-slate-300 text-xs mt-4">© 2026 Medical Care Germany. Part of Merlin Medical Care Group (BMC).</p>
       </footer>
 
     </div>

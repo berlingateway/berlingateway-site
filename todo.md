@@ -19,3 +19,16 @@
 - [x] Replace regional trust signals with neutral institutional language
 - [x] Ensure no redesign, maintain institutional tone
 - [x] Verify referral-grade advisory presence
+
+## Institutional Pages & Sections Expansion
+- [x] Create "For Embassies & Sponsored Patients" page
+- [x] Create "Referring Physicians" page
+- [x] Add "Why Institutions Trust Structured Medical Advisors" section
+- [x] Add "Representative Clinical Pathways" section (3 pathways)
+- [x] Refine visual language: minimalist clinical aesthetics
+- [x] Update typography to institutional style
+- [x] Add generous white space throughout
+- [x] Implement diagram-inspired elements
+- [x] Remove any stock photography or tourism cues
+- [x] Update navigation to include new pages
+- [x] Ensure advisory-level medical institution tone throughout

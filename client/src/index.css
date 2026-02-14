@@ -43,27 +43,27 @@
 }
 
 :root {
-  /* Institutional Palette: Deep Medical Blue, Slate Grays, Pure White */
-  --primary: oklch(0.25 0.08 260); /* Deep Navy Blue */
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.96 0 0); /* Very Light Gray */
-  --secondary-foreground: oklch(0.25 0.08 260);
-  --muted: oklch(0.94 0 0);
-  --muted-foreground: oklch(0.45 0 0); /* Slate Gray */
-  --accent: oklch(0.92 0 0);
-  --accent-foreground: oklch(0.25 0.08 260);
-  --background: oklch(0.99 0 0); /* Pure White */
-  --foreground: oklch(0.20 0.02 260); /* Almost Black Blue */
+  /* Minimalist Clinical Palette: Institutional Grays, Pure White, Subtle Navy */
+  --primary: oklch(0.20 0.04 260); /* Deep Slate Navy */
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.97 0 0); /* Almost White */
+  --secondary-foreground: oklch(0.20 0.04 260);
+  --muted: oklch(0.96 0 0); /* Very Light Gray */
+  --muted-foreground: oklch(0.50 0 0); /* Medium Slate */
+  --accent: oklch(0.95 0 0); /* Subtle Gray */
+  --accent-foreground: oklch(0.20 0.04 260);
+  --background: oklch(1 0 0); /* Pure White - Maximum Whitespace */
+  --foreground: oklch(0.18 0.02 260); /* Near Black Slate */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.20 0.02 260);
+  --card-foreground: oklch(0.18 0.02 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0.02 260);
+  --popover-foreground: oklch(0.18 0.02 260);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.90 0 0);
-  --input: oklch(0.90 0 0);
-  --ring: oklch(0.25 0.08 260);
-  --radius: 0.2rem; /* Sharp, professional corners */
+  --border: oklch(0.92 0 0); /* Subtle borders */
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.20 0.04 260);
+  --radius: 0rem; /* Sharp institutional corners - no rounding */
 }
 
 .dark {
@@ -80,9 +80,15 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    letter-spacing: 0.01em; /* Subtle spacing for clinical precision */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight; /* Serif for authority */
+    @apply font-serif tracking-tight; /* Serif for institutional authority */
+    font-weight: 500; /* Medium weight - not bold, not light */
+    letter-spacing: -0.02em; /* Tight tracking for executive presence */
+  }
+  p {
+    line-height: 1.7; /* Generous line height for readability */
   }
 }
 
@@ -96,11 +102,24 @@
     max-width: 1200px;
   }
   
-  /* Institutional Typography Utility */
+  /* Institutional Typography Utilities */
   .text-institutional {
     font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
   }
-  .text-clean {
+  .text-clinical {
     font-family: 'Inter', sans-serif;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Diagram-Inspired Elements */
+  .diagram-line {
+    border-left: 2px solid oklch(0.85 0 0);
+  }
+  .diagram-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: oklch(0.60 0 0);
   }
 }

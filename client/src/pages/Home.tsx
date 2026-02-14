@@ -568,6 +568,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PREPARED BUT INACTIVE: Professional Interfaces */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-20 bg-white border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Professional Interfaces</h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p className="text-lg">
+              Medical Care Germany operates as a coordination interface for referring physicians, medical institutions, diplomatic channels, governmental sponsors, and complex private cases requiring structured access to Germany's healthcare system.
+            </p>
+            <p className="text-lg">
+              Professional access pathways are available for entities seeking structured coordination support for complex medical scenarios within Germany.
+            </p>
+            <p className="text-base text-slate-600">
+              All professional interactions are handled with discretion, procedural clarity, and respect for existing clinical relationships.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section id="contact" className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-2xl mx-auto px-6">

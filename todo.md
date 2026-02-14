@@ -239,3 +239,20 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 551)
 - [x] Status: HOLD — PREPARED BUT INACTIVE until explicit release command
 - [x] Document activation instructions (strategic-eligibility-activation-instructions.md)
+
+## Professional Interfaces Section (PREPARED BUT INACTIVE)
+- [x] Create "Professional Interfaces" section
+- [x] Purpose: Establish as Strategic Medical Advisor accessible through structured professional pathways (NOT commercial referral destination)
+- [x] Core Positioning: Coordination interface for referring physicians, medical institutions, diplomatic channels, governmental sponsors, complex private cases
+- [x] NO promotional language, NO partnerships/programs/recruitment suggestions
+- [x] Procedural, almost administrative tone (institutional policy page feel)
+- [x] Restrained language: "Professional access pathways are available for entities seeking structured coordination support for complex medical scenarios within Germany."
+- [x] Governance-style statement: "All professional interactions are handled with discretion, procedural clarity, and respect for existing clinical relationships."
+- [x] Critical Psychological Objective: Signal safety to referring physicians, eliminate fear of patient capture, reinforce advisory neutrality
+- [x] Tone: Institutional, calm, procedural, non-commercial, high-trust
+- [x] Design Constraints: NO icons, NO marketing blocks, NO call-to-action buttons, NO bright visual emphasis
+- [x] Placement: AFTER "Strategic Eligibility", BEFORE Contact Form - Home.tsx lines 571-588
+- [x] Function: Quiet authority signal (NOT conversion device)
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 573)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
+- [x] Document activation instructions (professional-interfaces-activation-instructions.md)

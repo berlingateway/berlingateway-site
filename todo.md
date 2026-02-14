@@ -90,3 +90,13 @@
 - [x] Replace with institutional medical terminology (Complex International Cases, Medically Advanced Travelers)
 - [x] Verify no wealth-signaling remains
 - [x] Ensure medically selective, NOT commercially selective positioning
+
+## Institutional Trust Layer
+- [x] Create "Institutional Alignment & Governance" section
+- [x] Add System Alignment Statement (clinical pathways, institutional protocols)
+- [x] Add Professional Network Positioning (accredited hospitals, university centers, no logos)
+- [x] Add Clinical Governance Language (documentation integrity, structured review)
+- [x] Add Confidentiality Infrastructure (German healthcare regulations)
+- [x] Add Referral Ecosystem Signal (embassies, governmental sponsors, referring physicians)
+- [x] Ensure administrative tone, NOT promotional
+- [x] Verify hospital governance page feel, NOT private company website

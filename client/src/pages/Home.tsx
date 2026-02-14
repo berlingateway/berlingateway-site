@@ -170,7 +170,7 @@ export default function Home() {
       {/* Institutional Trust & Governance */}
       <section className="py-32 px-6 max-w-5xl mx-auto bg-white">
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-serif text-slate-900 mb-8 font-normal">Institutional Trust & Governance</h2>
+          <h2 className="text-4xl font-serif text-slate-900 mb-8 font-normal">Institutional Alignment & Governance</h2>
           <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-6">
             Medical Care Germany operates within structured professional frameworks aligned with German healthcare standards and international patient coordination practices.
           </p>
@@ -181,61 +181,70 @@ export default function Home() {
 
         {/* Trust Blocks */}
         <div className="space-y-20">
-          {/* 1. Institutional Alignment */}
+          {/* 1. System Alignment Statement */}
           <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Institutional Alignment</h3>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">System Alignment</h3>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Medical Care Germany functions as an independent medical advisory operating in coordination with accredited German hospitals, specialized treatment centers, and licensed physicians.
+              Case coordination follows established clinical pathways and institutional protocols within the German healthcare system.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Medical Care Germany operates as a structured interface supporting access to advanced medical institutions.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
               The organization does not replace medical providers and does not deliver clinical treatment.
             </p>
+          </div>
+
+          {/* 2. Professional Network Positioning */}
+          <div>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Professional Network</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Collaboration occurs with accredited hospitals, university medical centers, and specialized physicians based on medical requirements.
+            </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              Its role is strategic alignment and structured coordination.
+              Institutional selection is determined by clinical appropriateness and treatment pathway compatibility.
             </p>
           </div>
 
-          {/* 2. Professional Discretion */}
+          {/* 3. Clinical Governance */}
           <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Professional Discretion</h3>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Clinical Governance</h3>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              All case discussions, documentation reviews, and coordination activities are conducted under strict confidentiality protocols.
+              Documentation integrity is maintained through structured review processes and adherence to medical decision frameworks.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Case coordination follows defined protocols to preserve accuracy, continuity, and secure information flow between institutions.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              Processes are designed to meet expectations commonly associated with diplomatic, governmental, and high-profile medical referrals.
+              All processes operate within established clinical governance standards.
             </p>
           </div>
 
-          {/* 3. Documentation Integrity */}
+          {/* 4. Confidentiality Infrastructure */}
           <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Documentation Integrity</h3>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Confidentiality Infrastructure</h3>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Medical documentation is handled through structured internal processes to preserve accuracy, continuity, and secure information flow between institutions.
+              Strict data protection standards aligned with German healthcare regulations govern all case handling.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Medical documentation is processed under confidentiality protocols designed for institutional and governmental coordination.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              Data handling aligns with German privacy principles.
+              Information flow is controlled and shared only with authorized medical entities involved in the treatment pathway.
             </p>
           </div>
 
-          {/* 4. Institutional Communication Channels */}
+          {/* 5. Referral Ecosystem Signal */}
           <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Institutional Communication Channels</h3>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Referral Ecosystem</h3>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Structured communication pathways support interaction between referring entities, German medical institutions, and case stakeholders.
+              The platform supports embassies, governmental sponsors, and referring physicians in navigating complex treatment pathways within Germany.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Coordination services facilitate structured access to advanced medical institutions for medically complex international cases.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              This framework reduces administrative friction while maintaining clinical clarity.
-            </p>
-          </div>
-
-          {/* 5. Strategic Case Acceptance */}
-          <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Strategic Case Acceptance</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Case engagement is selective.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Medical Care Germany prioritizes situations where structured advisory can meaningfully support treatment direction, institutional alignment, or diagnostic clarity.
+              Engagement operates within professional referral frameworks aligned with institutional healthcare practices.
             </p>
           </div>
 

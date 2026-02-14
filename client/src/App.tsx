@@ -7,6 +7,9 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import GovernmentalBodies from "./pages/GovernmentalBodies";
 import PhysicianReferral from "./pages/PhysicianReferral";
+import PrivateMedicalAdvisory from "./pages/PrivateMedicalAdvisory";
+import PhysicianReferralClinical from "./pages/PhysicianReferralClinical";
+import CaseArchitectures from "./pages/CaseArchitectures";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -15,6 +18,9 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/governmental-bodies"} component={GovernmentalBodies} />
       <Route path={"/physician-referral"} component={PhysicianReferral} />
+      <Route path={"/private-medical-advisory"} component={PrivateMedicalAdvisory} />
+      <Route path={"/physician-referral-clinical"} component={PhysicianReferralClinical} />
+      <Route path={"/case-architectures"} component={CaseArchitectures} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

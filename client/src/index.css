@@ -83,16 +83,22 @@
     letter-spacing: 0.015em; /* Elegant spacing for policy-like precision */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight; /* Elegant serif for governmental authority */
-    font-weight: 400; /* Regular weight - refined, not aggressive */
-    letter-spacing: -0.01em; /* Refined tracking for institutional presence */
+    @apply font-serif tracking-tight; /* Elegant serif for quiet authority */
+    font-weight: 300; /* Light weight - restraint signals power */
+    letter-spacing: -0.005em; /* Minimal tracking for institutional permanence */
   }
   p {
     line-height: 1.75; /* Generous line height for policy document readability */
   }
   section {
-    padding-top: 6rem; /* Significantly increased white space */
-    padding-bottom: 6rem;
+    padding-top: 8rem; /* Significantly increased white space - air creates authority */
+    padding-bottom: 8rem;
+  }
+  button {
+    transition: none; /* Stillness communicates confidence - no animations */
+  }
+  button:hover {
+    transition: background-color 0.15s ease; /* Minimal procedural feedback only */
   }
 }
 

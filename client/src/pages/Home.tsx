@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { motion } from "framer-motion";
+
 import { ShieldCheck, Activity, Users, FileText, Lock, Building2, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -10,10 +10,7 @@ export default function Home() {
   const { user, loading, error, isAuthenticated, logout } = useAuth();
   const submitCase = trpc.case.submit.useMutation();
 
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } as any }
-  };
+
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-200">
@@ -23,9 +20,10 @@ export default function Home() {
         <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
           Medical Care Germany
         </Link>
-        <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-          <Link href="/physician-referral" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
+        <div className="hidden md:flex gap-10 text-sm text-slate-500">
+          <Link href="/physician-referral-clinical" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
           <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
+          <Link href="/private-medical-advisory" className="hover:text-slate-900 transition-colors">Private Advisory</Link>
           <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
         </div>
         <a href="#contact">
@@ -37,7 +35,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
-        <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+        <div>
           <div className="mb-4">
             <p className="text-sm uppercase tracking-wider text-slate-400 font-medium">Berlin-Based Strategic Medical Advisory</p>
           </div>
@@ -51,7 +49,7 @@ export default function Home() {
           <div className="flex justify-center mb-12">
             <div className="h-12 w-[1px] bg-slate-200"></div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Authority Strip */}
@@ -166,6 +164,97 @@ export default function Home() {
           <p className="text-3xl font-serif text-slate-800 leading-relaxed italic">
             "A structured medical pathway is not created by chance — it is designed, governed, and supervised."
           </p>
+        </div>
+      </section>
+
+      {/* Institutional Trust & Governance */}
+      <section className="py-32 px-6 max-w-5xl mx-auto bg-white">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl font-serif text-slate-900 mb-8 font-normal">Institutional Trust & Governance</h2>
+          <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-6">
+            Medical Care Germany operates within structured professional frameworks aligned with German healthcare standards and international patient coordination practices.
+          </p>
+          <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
+            Engagement is guided by clinical appropriateness, institutional compatibility, and operational discretion.
+          </p>
+        </div>
+
+        {/* Trust Blocks */}
+        <div className="space-y-20">
+          {/* 1. Institutional Alignment */}
+          <div>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Institutional Alignment</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Medical Care Germany functions as an independent medical advisory operating in coordination with accredited German hospitals, specialized treatment centers, and licensed physicians.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              The organization does not replace medical providers and does not deliver clinical treatment.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Its role is strategic alignment and structured coordination.
+            </p>
+          </div>
+
+          {/* 2. Professional Discretion */}
+          <div>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Professional Discretion</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              All case discussions, documentation reviews, and coordination activities are conducted under strict confidentiality protocols.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Processes are designed to meet expectations commonly associated with diplomatic, governmental, and high-profile medical referrals.
+            </p>
+          </div>
+
+          {/* 3. Documentation Integrity */}
+          <div>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Documentation Integrity</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Medical documentation is handled through structured internal processes to preserve accuracy, continuity, and secure information flow between institutions.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Data handling aligns with German privacy principles.
+            </p>
+          </div>
+
+          {/* 4. Institutional Communication Channels */}
+          <div>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Institutional Communication Channels</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Structured communication pathways support interaction between referring entities, German medical institutions, and case stakeholders.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              This framework reduces administrative friction while maintaining clinical clarity.
+            </p>
+          </div>
+
+          {/* 5. Strategic Case Acceptance */}
+          <div>
+            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Strategic Case Acceptance</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Case engagement is selective.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Medical Care Germany prioritizes situations where structured advisory can meaningfully support treatment direction, institutional alignment, or diagnostic clarity.
+            </p>
+          </div>
+
+          {/* Institutional Backing */}
+          <div className="pt-12 border-t border-slate-300">
+            <h3 className="text-2xl font-serif text-slate-900 mb-8 font-normal">Institutional Backing</h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-8">
+              Medical Care Germany is powered by Merlin Medical Care (BMC), a Berlin-based healthcare coordination group.
+            </p>
+            <div className="bg-slate-50 border border-slate-200 p-8">
+              <p className="text-base text-slate-600 mb-2">Address:</p>
+              <p className="text-lg text-slate-900">Perleberger Str. 41</p>
+              <p className="text-lg text-slate-900">10559 Berlin</p>
+              <p className="text-lg text-slate-900 mb-6">Germany</p>
+              <p className="text-base text-slate-600 leading-relaxed">
+                This institutional foundation supports operational continuity and structured case governance.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

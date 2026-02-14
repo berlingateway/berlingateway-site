@@ -100,3 +100,15 @@
 - [x] Add Referral Ecosystem Signal (embassies, governmental sponsors, referring physicians)
 - [x] Ensure administrative tone, NOT promotional
 - [x] Verify hospital governance page feel, NOT private company website
+
+## Physician Referral Interface
+- [x] Create "Physician Referral Interface" page
+- [x] Add Professional Opening Statement (institutional, no marketing)
+- [x] Add Appropriate Referral Scenarios (6 clinical situations, no emotional wording)
+- [x] Add Structured Review Process (no acceptance promises, selective language)
+- [x] Add Collaboration Positioning (accredited hospitals, no logos, discretion)
+- [x] Add Confidential Document Handling (German data protection, administrative tone)
+- [x] Create Physician-Level Form (8 fields, peer-level communication)
+- [x] Ensure clinical, neutral, institutional, procedural tone
+- [x] Verify university medical coordination office feel
+- [x] Add route to App.tsx

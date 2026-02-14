@@ -256,3 +256,18 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 573)
 - [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
 - [x] Document activation instructions (professional-interfaces-activation-instructions.md)
+
+## Procedural Integrity Section (PREPARED BUT INACTIVE)
+- [x] Create "Procedural Integrity" section
+- [x] Purpose: Position as structurally safe coordination environment suitable for high-responsibility medical cases
+- [x] Core Message: Coordination activities operate within defined procedural frameworks designed to support discretion, documentation clarity, multi-party alignment
+- [x] NO marketing tone, NO superiority claims, NO legal language
+- [x] Restrained statement: "Operational processes are structured to support responsible medical coordination where clinical, institutional, and cross-border considerations intersect."
+- [x] Secondary micro-signal: "This environment is particularly suited for cases requiring elevated levels of procedural reliability."
+- [x] Psychological Objective: Create subconscious safety perception for embassies, government sponsors, referring physicians, complex private cases
+- [x] Tone: Policy-level, institutional, calm, non-promotional
+- [x] Design: Text only, NO icons, NO visual emphasis
+- [x] Placement: Near footer (BEFORE footer, AFTER Contact Form) - Home.tsx lines 664-678
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 666)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until explicitly authorized
+- [x] Document activation instructions (procedural-integrity-activation-instructions.md)

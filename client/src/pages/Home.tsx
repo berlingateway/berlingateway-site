@@ -661,6 +661,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PREPARED BUT INACTIVE: Procedural Integrity */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-16 bg-white border-t border-slate-200">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-xl font-serif text-slate-900 mb-6">Procedural Integrity</h2>
+          <div className="space-y-4 text-slate-700 leading-relaxed">
+            <p className="text-base">
+              Operational processes are structured to support responsible medical coordination where clinical, institutional, and cross-border considerations intersect.
+            </p>
+            <p className="text-sm text-slate-600">
+              This environment is particularly suited for cases requiring elevated levels of procedural reliability.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 bg-slate-50 text-center border-t border-slate-200">
         <p className="text-slate-500 text-sm font-serif mb-1">Medical Care Germany</p>

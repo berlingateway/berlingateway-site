@@ -43,27 +43,27 @@
 }
 
 :root {
-  /* Minimalist Clinical Palette: Institutional Grays, Pure White, Subtle Navy */
-  --primary: oklch(0.20 0.04 260); /* Deep Slate Navy */
+  /* Governmental Presence: Deep Navy, Soft Ivory, Muted Graphite */
+  --primary: oklch(0.18 0.08 260); /* Deep Navy - Institutional Authority */
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.97 0 0); /* Almost White */
-  --secondary-foreground: oklch(0.20 0.04 260);
-  --muted: oklch(0.96 0 0); /* Very Light Gray */
-  --muted-foreground: oklch(0.50 0 0); /* Medium Slate */
-  --accent: oklch(0.95 0 0); /* Subtle Gray */
-  --accent-foreground: oklch(0.20 0.04 260);
+  --secondary: oklch(0.98 0.01 60); /* Soft Ivory */
+  --secondary-foreground: oklch(0.18 0.08 260);
+  --muted: oklch(0.96 0.005 240); /* Muted Graphite Tint */
+  --muted-foreground: oklch(0.45 0.02 260); /* Muted Graphite */
+  --accent: oklch(0.94 0.01 240); /* Subtle Graphite */
+  --accent-foreground: oklch(0.18 0.08 260);
   --background: oklch(1 0 0); /* Pure White - Maximum Whitespace */
-  --foreground: oklch(0.18 0.02 260); /* Near Black Slate */
+  --foreground: oklch(0.16 0.04 260); /* Deep Navy Text */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 260);
+  --card-foreground: oklch(0.16 0.04 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 260);
+  --popover-foreground: oklch(0.16 0.04 260);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0 0); /* Subtle borders */
-  --input: oklch(0.92 0 0);
-  --ring: oklch(0.20 0.04 260);
-  --radius: 0rem; /* Sharp institutional corners - no rounding */
+  --border: oklch(0.90 0.005 240); /* Subtle graphite borders */
+  --input: oklch(0.90 0.005 240);
+  --ring: oklch(0.18 0.08 260);
+  --radius: 0rem; /* Flat buttons - no rounding */
 }
 
 .dark {
@@ -80,15 +80,19 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    letter-spacing: 0.01em; /* Subtle spacing for clinical precision */
+    letter-spacing: 0.015em; /* Elegant spacing for policy-like precision */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight; /* Serif for institutional authority */
-    font-weight: 500; /* Medium weight - not bold, not light */
-    letter-spacing: -0.02em; /* Tight tracking for executive presence */
+    @apply font-serif tracking-tight; /* Elegant serif for governmental authority */
+    font-weight: 400; /* Regular weight - refined, not aggressive */
+    letter-spacing: -0.01em; /* Refined tracking for institutional presence */
   }
   p {
-    line-height: 1.7; /* Generous line height for readability */
+    line-height: 1.75; /* Generous line height for policy document readability */
+  }
+  section {
+    padding-top: 6rem; /* Significantly increased white space */
+    padding-bottom: 6rem;
   }
 }
 

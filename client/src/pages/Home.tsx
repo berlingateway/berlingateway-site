@@ -24,8 +24,8 @@ export default function Home() {
           Medical Care Germany
         </Link>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-          <Link href="/referring-physicians" className="hover:text-slate-900 transition-colors">Referring Physicians</Link>
-          <Link href="/embassies-sponsored" className="hover:text-slate-900 transition-colors">Embassies & Sponsored Patients</Link>
+          <Link href="/physician-referral" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
+          <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
           <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
         </div>
         <a href="#contact">
@@ -99,6 +99,72 @@ export default function Home() {
           <h2 className="text-2xl font-serif text-slate-900 mb-6 text-center">Decision-Level Support</h2>
           <p className="text-lg text-slate-700 leading-relaxed text-center">
             We support embassies, governmental sponsors, and referring physicians in navigating complex treatment pathways within Germany.
+          </p>
+        </div>
+      </section>
+
+      {/* Institutional Foundations */}
+      <section className="py-32 px-6 max-w-5xl mx-auto bg-slate-50 border-y border-slate-200">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl font-serif text-slate-900 mb-16">Institutional Foundations</h2>
+        </div>
+
+        {/* Clinical Alignment */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Clinical Alignment</h3>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            Medical Care Germany operates in structured coordination with accredited German hospitals, university medical centers, and specialized treatment institutions in accordance with national healthcare frameworks.
+          </p>
+        </div>
+
+        {/* Operational Discipline */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Operational Discipline</h3>
+          <p className="text-lg text-slate-700 leading-relaxed mb-8">
+            Each case follows a defined advisory pathway:
+          </p>
+          <div className="space-y-4 mb-8">
+            <div className="border-l-2 border-slate-300 pl-6">
+              <p className="text-slate-700">Medical file intake</p>
+            </div>
+            <div className="border-l-2 border-slate-300 pl-6">
+              <p className="text-slate-700">Structured documentation review</p>
+            </div>
+            <div className="border-l-2 border-slate-300 pl-6">
+              <p className="text-slate-700">Specialist identification</p>
+            </div>
+            <div className="border-l-2 border-slate-300 pl-6">
+              <p className="text-slate-700">Treatment pathway formation</p>
+            </div>
+            <div className="border-l-2 border-slate-300 pl-6">
+              <p className="text-slate-700">Coordination oversight</p>
+            </div>
+          </div>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            The organization prioritizes clarity, risk awareness, and continuity of care.
+          </p>
+        </div>
+
+        {/* Confidential Case Handling */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Confidential Case Handling</h3>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            All medical documentation is processed under strict confidentiality protocols. Information flow is controlled and shared only with authorized medical entities involved in the treatment pathway.
+          </p>
+        </div>
+
+        {/* International Case Experience */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">International Case Experience</h3>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            Medical Care Germany supports patients originating from the Gulf region, North Africa, diplomatic channels, and private sponsorship structures through structured medical coordination within Germany's healthcare system.
+          </p>
+        </div>
+
+        {/* Strategic Positioning Line */}
+        <div className="text-center pt-12 border-t border-slate-300">
+          <p className="text-3xl font-serif text-slate-800 leading-relaxed italic">
+            "A structured medical pathway is not created by chance — it is designed, governed, and supervised."
           </p>
         </div>
       </section>
@@ -246,138 +312,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Representative Case Pathways */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-serif text-slate-900 mb-4">Representative Case Pathways</h2>
-          <p className="text-slate-600">Anonymized examples of structured medical coordination.</p>
+      {/* Representative Case Architectures */}
+      <section className="py-32 px-6 max-w-4xl mx-auto bg-slate-50 border-y border-slate-200">
+        <div className="mb-20">
+          <h2 className="text-4xl font-serif text-slate-900 mb-6">Representative Case Architectures</h2>
+          <p className="text-slate-600 leading-relaxed">Anonymized structural examples demonstrating advisory depth.</p>
         </div>
 
-        <div className="space-y-12">
-          {/* Pathway 1: Complex Oncology Referral */}
-          <div className="border-l-4 border-slate-300 pl-8">
-            <h3 className="text-lg font-medium text-slate-900 mb-6">Pathway 1: Complex Oncology Referral</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Initial Presentation</p>
-                  <p className="text-slate-600 text-sm">International patient with complex oncological diagnosis requiring multidisciplinary evaluation</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Strategic Case Evaluation</p>
-                  <p className="text-slate-600 text-sm">Comprehensive review of pathology, imaging, and treatment history</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Institutional Alignment</p>
-                  <p className="text-slate-600 text-sm">Referral to German university-level oncology center with relevant subspecialty expertise</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Treatment Pathway Coordination</p>
-                  <p className="text-slate-600 text-sm">Structured multidisciplinary treatment pathway established across surgical oncology, medical oncology, and radiation oncology</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Ongoing Clinical Coordination</p>
-                  <p className="text-slate-600 text-sm">Continuous monitoring and coordination throughout treatment progression</p>
-                </div>
-              </div>
-            </div>
+        <div className="space-y-16">
+          {/* Case 1 */}
+          <div className="space-y-3">
+            <p className="text-lg text-slate-700 leading-relaxed">
+              International patient with complex oncological presentation<br/>
+              <span className="text-slate-500">→ strategic documentation review</span><br/>
+              <span className="text-slate-500">→ alignment with German university oncology center</span><br/>
+              <span className="text-slate-500">→ multidisciplinary tumor board pathway</span><br/>
+              <span className="text-slate-500">→ coordinated treatment structure</span>
+            </p>
           </div>
 
-          {/* Pathway 2: Diagnostic Uncertainty */}
-          <div className="border-l-4 border-slate-300 pl-8">
-            <h3 className="text-lg font-medium text-slate-900 mb-6">Pathway 2: Diagnostic Uncertainty Requiring Tertiary Evaluation</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Initial Presentation</p>
-                  <p className="text-slate-600 text-sm">Patient with diagnostic uncertainty following multiple prior evaluations</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Comprehensive Medical Record Review</p>
-                  <p className="text-slate-600 text-sm">Structured analysis of previous diagnostic workup and clinical findings</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Institutional Alignment</p>
-                  <p className="text-slate-600 text-sm">Engagement with specialized diagnostic institution in Germany with relevant tertiary-level capabilities</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Diagnostic Resolution</p>
-                  <p className="text-slate-600 text-sm">Definitive diagnosis established through advanced diagnostic procedures</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Treatment Planning Coordination</p>
-                  <p className="text-slate-600 text-sm">Treatment plan coordinated with appropriate specialists based on confirmed diagnosis</p>
-                </div>
-              </div>
-            </div>
+          {/* Case 2 */}
+          <div className="space-y-3">
+            <p className="text-lg text-slate-700 leading-relaxed">
+              Patient presenting with unresolved diagnostic trajectory<br/>
+              <span className="text-slate-500">→ comprehensive medical record analysis</span><br/>
+              <span className="text-slate-500">→ referral to specialized diagnostic institution</span><br/>
+              <span className="text-slate-500">→ definitive diagnosis established</span><br/>
+              <span className="text-slate-500">→ treatment coordination implemented</span>
+            </p>
           </div>
 
-          {/* Pathway 3: High-Risk Neurosurgical Coordination */}
-          <div className="border-l-4 border-slate-300 pl-8">
-            <h3 className="text-lg font-medium text-slate-900 mb-6">Pathway 3: High-Risk Neurosurgical Coordination</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Initial Presentation</p>
-                  <p className="text-slate-600 text-sm">High-risk neurosurgical case requiring advanced intervention</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Strategic Evaluation of Surgical Options</p>
-                  <p className="text-slate-600 text-sm">Comprehensive review of neuroimaging, clinical status, and surgical risk factors</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Institutional Alignment</p>
-                  <p className="text-slate-600 text-sm">Engagement with specialized neurosurgical center with relevant subspecialty expertise and perioperative infrastructure</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Pre-Operative Planning Coordination</p>
-                  <p className="text-slate-600 text-sm">Structured coordination of pre-operative assessment, anesthesia consultation, and surgical planning</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-slate-400 mt-2"></div>
-                <div>
-                  <p className="text-slate-900 font-medium">Post-Operative Care Pathway</p>
-                  <p className="text-slate-600 text-sm">Coordination of intensive care, rehabilitation, and follow-up planning</p>
-                </div>
-              </div>
-            </div>
+          {/* Case 3 */}
+          <div className="space-y-3">
+            <p className="text-lg text-slate-700 leading-relaxed">
+              High-risk neurosurgical candidate<br/>
+              <span className="text-slate-500">→ surgical pathway evaluation</span><br/>
+              <span className="text-slate-500">→ engagement with specialized neurosurgical environment</span><br/>
+              <span className="text-slate-500">→ pre-operative structuring</span><br/>
+              <span className="text-slate-500">→ post-operative coordination</span>
+            </p>
           </div>
         </div>
       </section>

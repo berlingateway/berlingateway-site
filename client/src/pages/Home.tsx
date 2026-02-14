@@ -479,13 +479,10 @@ export default function Home() {
                 if (card) {
                   card.innerHTML = `
                     <div class="text-center py-12 space-y-6">
-                      <h3 class="text-2xl font-serif text-slate-900">Case Under Strategic Review</h3>
+                      <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
                       <div class="w-16 h-[1px] bg-slate-200 mx-auto"></div>
                       <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
-                        Your submission has been formally integrated into our clinical governance process and is currently undergoing preliminary strategic evaluation.
-                      </p>
-                      <p class="text-slate-500 text-sm">
-                        No further action is required at this stage.
+                        Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
                       </p>
                     </div>
                   `;

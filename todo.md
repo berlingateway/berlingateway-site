@@ -72,3 +72,15 @@
 - [x] Ensure flat professionalism, no glossy surfaces, no gradients
 - [x] Update navigation to include new pages
 - [x] Ensure critical outcome: "This organization operates at a serious institutional level"
+
+## Controlled-Entry Funnel Architecture
+- [x] Create Gateway Page: "International Medical Advisory Access"
+- [x] Add Silent Filter paragraph (limited case support)
+- [x] Create 3 Entry Pathways: Institutional/Embassy, Private Complex, Physician Referrals
+- [x] Add Pre-Qualification Layer (preliminary review notice)
+- [x] Create separate intake forms for each pathway
+- [x] Remove all Retail Signals (NO WhatsApp, instant calls, chat widgets, discounts)
+- [x] Add Confidentiality Reassurance (single powerful line)
+- [x] Create Post-Submission Experience (professional review message, no warmth)
+- [x] Ensure procedural feel, NOT promotional
+- [x] Verify strategic goal: reduce volume, increase seriousness, elevate institutional level

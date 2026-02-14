@@ -31,13 +31,10 @@ export default function PhysicianReferralClinical() {
       if (card) {
         card.innerHTML = `
           <div class="text-center py-16 space-y-8">
-            <h3 class="text-2xl font-serif text-slate-900">Referral Received</h3>
+            <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
             <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
-              Your clinical referral has been received and is under strategic review.
-            </p>
-            <p class="text-slate-500">
-              We will respond through the indicated communication channel.
+              Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
             </p>
           </div>
         `;
@@ -160,8 +157,15 @@ export default function PhysicianReferralClinical() {
         </p>
       </section>
 
-      {/* Form */}
-      <section className="py-40 px-6 max-w-3xl mx-auto bg-slate-50 border-y border-slate-200">
+            {/* Pre-Qualification Notice */}
+      <section className="py-32 px-6 max-w-4xl mx-auto bg-white border-y border-slate-200">
+        <p className="text-lg text-slate-700 leading-relaxed text-center">
+          Case submissions undergo preliminary review to determine advisory suitability.
+        </p>
+      </section>
+
+      {/* Referral Form */}
+      <section className="py-40 px-6 max-w-3xl mx-auto">
         <div className="referral-form-container">
           <h2 className="text-3xl font-serif text-slate-900 mb-16 text-center font-normal">Clinical Referral Submission</h2>
           

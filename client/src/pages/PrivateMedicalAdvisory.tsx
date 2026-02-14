@@ -30,13 +30,10 @@ export default function PrivateMedicalAdvisory() {
       if (card) {
         card.innerHTML = `
           <div class="text-center py-16 space-y-8">
-            <h3 class="text-2xl font-serif text-slate-900">Inquiry Under Review</h3>
+            <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
             <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
-              Your inquiry has been received and is currently under strategic medical evaluation.
-            </p>
-            <p class="text-slate-500">
-              No further action is required at this stage.
+              Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
             </p>
           </div>
         `;
@@ -135,6 +132,13 @@ export default function PrivateMedicalAdvisory() {
             Case information is reviewed within controlled medical-administrative channels.
           </p>
         </div>
+      </section>
+
+      {/* Pre-Qualification Notice */}
+      <section className="py-32 px-6 max-w-4xl mx-auto bg-white border-y border-slate-200">
+        <p className="text-lg text-slate-700 leading-relaxed text-center">
+          Case submissions undergo preliminary review to determine advisory suitability.
+        </p>
       </section>
 
       {/* Form */}

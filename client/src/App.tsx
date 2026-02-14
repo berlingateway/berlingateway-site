@@ -10,6 +10,7 @@ import PhysicianReferral from "./pages/PhysicianReferral";
 import PrivateMedicalAdvisory from "./pages/PrivateMedicalAdvisory";
 import PhysicianReferralClinical from "./pages/PhysicianReferralClinical";
 import CaseArchitectures from "./pages/CaseArchitectures";
+import AdvisoryAccess from "./pages/AdvisoryAccess";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -21,6 +22,7 @@ function Router() {
       <Route path={"/private-medical-advisory"} component={PrivateMedicalAdvisory} />
       <Route path={"/physician-referral-clinical"} component={PhysicianReferralClinical} />
       <Route path={"/case-architectures"} component={CaseArchitectures} />
+      <Route path={"/advisory-access"} component={AdvisoryAccess} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

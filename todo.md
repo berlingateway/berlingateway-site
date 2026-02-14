@@ -271,3 +271,19 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 666)
 - [x] Status: HOLD — PREPARED BUT INACTIVE until explicitly authorized
 - [x] Document activation instructions (procedural-integrity-activation-instructions.md)
+
+## Advanced Case Pathways Section (PREPARED BUT INACTIVE)
+- [x] Create "Advanced Case Pathways" section
+- [x] Purpose: Position as structured escalation environment for medical scenarios exceeding conventional coordination routes
+- [x] Core Messaging: Certain medical situations require elevated coordination frameworks beyond standard referral mechanisms
+- [x] Restrained statement: "In circumstances where conventional pathways prove insufficient, structured advisory access may support the navigation of complex medical environments."
+- [x] NO rescue implications, NO superiority, NO exclusivity
+- [x] NO marketing tone
+- [x] Subtle professional reassurance line: "This framework is particularly relevant for cases involving diagnostic ambiguity, multidisciplinary requirements, cross-border considerations, or time-sensitive treatment decisions."
+- [x] Critical Constraints: NO bold claims, NO emergency language, NO hero placement, NO conversion styling, NO dramatic wording
+- [x] Tone: Institutional policy (NOT service promotion)
+- [x] Psychological Objective: Create subconscious recognition as high-trust escalation node
+- [x] Placement: Within Institutional Foundations section (AFTER International Case Experience, BEFORE Strategic Positioning Line) - Home.tsx lines 197-207
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 199)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
+- [x] Document activation instructions (advanced-case-pathways-activation-instructions.md)

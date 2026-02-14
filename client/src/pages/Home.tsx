@@ -194,6 +194,18 @@ export default function Home() {
           </p>
         </div>
 
+        {/* PREPARED BUT INACTIVE: Advanced Case Pathways */}
+        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+        <div className="hidden mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Advanced Case Pathways</h3>
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+            In circumstances where conventional pathways prove insufficient, structured advisory access may support the navigation of complex medical environments.
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed">
+            This framework is particularly relevant for cases involving diagnostic ambiguity, multidisciplinary requirements, cross-border considerations, or time-sensitive treatment decisions.
+          </p>
+        </div>
+
         {/* Strategic Positioning Line */}
         <div className="text-center pt-12 border-t border-slate-300">
           <p className="text-3xl font-serif text-slate-800 leading-relaxed italic">

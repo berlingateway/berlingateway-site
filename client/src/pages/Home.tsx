@@ -20,12 +20,12 @@ export default function Home() {
       
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
-        <Link href="/">
-          <a className="text-xl font-serif font-bold tracking-tight text-slate-900">Medical Care Germany</a>
+        <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
+          Medical Care Germany
         </Link>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-          <Link href="/referring-physicians"><a className="hover:text-slate-900 transition-colors">Referring Physicians</a></Link>
-          <Link href="/embassies-sponsored"><a className="hover:text-slate-900 transition-colors">Embassies & Sponsored Patients</a></Link>
+          <Link href="/referring-physicians" className="hover:text-slate-900 transition-colors">Referring Physicians</Link>
+          <Link href="/embassies-sponsored" className="hover:text-slate-900 transition-colors">Embassies & Sponsored Patients</Link>
           <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
         </div>
         <a href="#contact">

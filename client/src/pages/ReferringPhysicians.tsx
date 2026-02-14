@@ -8,19 +8,19 @@ export default function ReferringPhysicians() {
       
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
-        <Link href="/">
-          <a className="text-xl font-serif font-bold tracking-tight text-slate-900">Medical Care Germany</a>
+        <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
+          Medical Care Germany
         </Link>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-          <Link href="/"><a>Home</a></Link>
-          <Link href="/referring-physicians"><a className="text-slate-900">Referring Physicians</a></Link>
-          <Link href="/embassies-sponsored"><a>Embassies & Sponsored Patients</a></Link>
+          <Link href="/">Home</Link>
+          <Link href="/referring-physicians" className="text-slate-900">Referring Physicians</Link>
+          <Link href="/embassies-sponsored">Embassies & Sponsored Patients</Link>
         </div>
-        <Link href="/#contact">
+        <a href="/#contact">
           <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50 text-sm">
             Confidential Inquiry
           </Button>
-        </Link>
+        </a>
       </nav>
 
       {/* Hero */}
@@ -197,11 +197,11 @@ export default function ReferringPhysicians() {
         <p className="text-slate-600 leading-relaxed mb-8">
           For case-specific coordination inquiries, please submit a confidential referral through our secure intake process.
         </p>
-        <Link href="/#contact">
+        <a href="/#contact">
           <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none px-8 py-6 text-base">
             Submit Confidential Referral
           </Button>
-        </Link>
+        </a>
       </section>
 
       {/* Footer */}

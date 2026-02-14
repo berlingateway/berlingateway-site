@@ -32,3 +32,9 @@
 - [x] Remove any stock photography or tourism cues
 - [x] Update navigation to include new pages
 - [x] Ensure advisory-level medical institution tone throughout
+
+## Bugfix: Nested Anchor Elements
+- [x] Fix nested anchor elements in Home.tsx navigation
+- [x] Fix nested anchor elements in EmbassiesSponsored.tsx navigation
+- [x] Fix nested anchor elements in ReferringPhysicians.tsx navigation
+- [x] Verify console is clean

@@ -44,7 +44,7 @@ export default function Home() {
             Structured Access to Germany's<br/>Advanced Hospital System
           </h1>
           <p className="text-lg md:text-xl text-slate-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-            Medical Care Germany is an independent strategic medical advisory headquartered in Berlin, supporting international patients with structured access to Germany's advanced hospital system.
+            Medical Care Germany is an independent strategic medical advisory headquartered in Berlin. International patients requiring structured access to Germany's advanced hospital system are reviewed for coordination eligibility.
           </p>
           
           <div className="flex justify-center mb-12">
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl font-serif text-slate-900 mb-6 text-center">Decision-Level Support</h2>
           <p className="text-lg text-slate-700 leading-relaxed text-center">
-            We support embassies, governmental sponsors, and referring physicians in navigating complex treatment pathways within Germany.
+            Embassies, governmental sponsors, and referring physicians are provided structured coordination for complex treatment pathways within Germany.
           </p>
         </div>
       </section>
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="mb-20">
           <h3 className="text-2xl font-serif text-slate-900 mb-6">International Case Experience</h3>
           <p className="text-lg text-slate-700 leading-relaxed">
-            Medical Care Germany supports patients originating from the Gulf region, North Africa, diplomatic channels, and private sponsorship structures through structured medical coordination within Germany's healthcare system.
+            International cases originating from diplomatic channels, governmental sponsorship structures, and institutional referrals are coordinated within Germany's healthcare system.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default function Home() {
               Case coordination follows established clinical pathways and institutional protocols within the German healthcare system.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Medical Care Germany operates as a structured interface supporting access to advanced medical institutions.
+              Clinical coordination is conducted through structured institutional interfaces with advanced medical institutions.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               The organization does not replace medical providers and does not deliver clinical treatment.
@@ -239,7 +239,7 @@ export default function Home() {
           <div>
             <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Referral Ecosystem</h3>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              The platform supports embassies, governmental sponsors, and referring physicians in navigating complex treatment pathways within Germany.
+              Structured coordination pathways are maintained for embassies, governmental sponsors, and referring physicians navigating complex treatment requirements within Germany.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
               Coordination services facilitate structured access to advanced medical institutions for medically complex international cases.
@@ -261,7 +261,7 @@ export default function Home() {
               <p className="text-lg text-slate-900">10559 Berlin</p>
               <p className="text-lg text-slate-900 mb-6">Germany</p>
               <p className="text-base text-slate-600 leading-relaxed">
-                This institutional foundation supports operational continuity and structured case governance.
+                Operational continuity and structured case governance are maintained through this institutional foundation.
               </p>
             </div>
           </div>
@@ -491,6 +491,9 @@ export default function Home() {
                     <div class="text-center py-12 space-y-6">
                       <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
                       <div class="w-16 h-[1px] bg-slate-200 mx-auto"></div>
+                      <p class="text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
+                        All submissions undergo structured administrative and clinical review prior to coordination acceptance.
+                      </p>
                       <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
                         Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
                       </p>

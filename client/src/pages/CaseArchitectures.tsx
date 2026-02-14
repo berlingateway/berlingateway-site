@@ -29,7 +29,7 @@ export default function CaseArchitectures() {
           Representative Case Architectures
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
-          Representative case architectures illustrate how structured medical advisory can support complex clinical pathways within Germany.
+          Representative case architectures illustrate how structured medical advisory facilitates complex clinical pathways within Germany.
         </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto mb-6">
           Each example reflects coordination logic rather than individual patient narratives.
@@ -88,7 +88,7 @@ export default function CaseArchitectures() {
       <section className="py-32 px-6 bg-slate-50 border-y border-slate-200">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xl text-slate-700 leading-relaxed mb-8">
-            Structured case architecture supports clarity in complex medical environments.
+            Structured case architecture provides clarity in complex medical environments.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed">
             Medical Care Germany operates within institutional frameworks to facilitate alignment between international patients, referring physicians, and advanced German medical centers.

@@ -30,7 +30,7 @@ export default function PhysicianReferral() {
           Physician Referral
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          Medical Care Germany supports referring physicians by structuring advanced treatment pathways within Germany's hospital system for medically complex cases requiring cross-border coordination.
+          Referring physicians are provided structured advanced treatment pathways within Germany's hospital system for medically complex cases requiring cross-border coordination.
         </p>
       </section>
 

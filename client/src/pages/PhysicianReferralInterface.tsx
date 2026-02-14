@@ -60,10 +60,13 @@ export default function PhysicianReferralInterface() {
         {/* 1. Professional Opening Statement */}
         <div className="prose prose-lg max-w-none">
           <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            The Physician Referral Interface supports referring physicians seeking structured access to German medical institutions for medically complex cases requiring advanced treatment pathways.
+            The Physician Referral Interface provides referring physicians with structured access to German medical institutions for medically complex cases requiring advanced treatment pathways.
           </p>
-          <p className="text-lg text-slate-700 leading-relaxed">
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
             This interface functions as a clinical coordination channel aligned with institutional medical standards and cross-border care protocols.
+          </p>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Due to coordination depth and cross-border clinical requirements, case intake is selectively limited.
           </p>
         </div>
       </section>
@@ -227,6 +230,7 @@ export default function PhysicianReferralInterface() {
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Document Upload</label>
+                <p className="text-xs text-slate-500 mb-2">Complete medical documentation enables efficient institutional evaluation.</p>
                 <input 
                   type="file" 
                   name="documentation"
@@ -256,6 +260,9 @@ export default function PhysicianReferralInterface() {
             <div className="space-y-6">
               <h3 className="text-2xl font-serif text-slate-900 font-normal">Professional Review Initiated</h3>
               <div className="w-16 h-[1px] bg-slate-300 mx-auto"></div>
+              <p className="text-lg text-slate-700 leading-relaxed max-w-md mx-auto mb-6">
+                All submissions undergo structured administrative and clinical review prior to coordination acceptance.
+              </p>
               <p className="text-lg text-slate-700 leading-relaxed max-w-md mx-auto">
                 Your submission has entered professional review.
               </p>

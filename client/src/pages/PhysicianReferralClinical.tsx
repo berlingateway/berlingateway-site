@@ -33,6 +33,9 @@ export default function PhysicianReferralClinical() {
           <div class="text-center py-16 space-y-8">
             <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
             <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
+            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
+              All submissions undergo structured administrative and clinical review prior to coordination acceptance.
+            </p>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
               Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
             </p>
@@ -72,7 +75,7 @@ export default function PhysicianReferralClinical() {
           Physician Referral & Clinical Coordination
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
-          Medical Care Germany supports referring physicians in establishing structured treatment pathways for patients requiring advanced medical care within Germany.
+          Referring physicians are provided support in establishing structured treatment pathways for patients requiring advanced medical care within Germany.
         </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto mb-6">
           Our role is to facilitate clinical alignment, institutional coordination, and continuity across providers.
@@ -115,7 +118,7 @@ export default function PhysicianReferralClinical() {
       {/* Clinical Communication Principle */}
       <section className="py-32 px-6 max-w-4xl mx-auto text-center">
         <p className="text-2xl font-serif text-slate-800 leading-relaxed">
-          "All clinical communication is conducted through structured channels that respect physician oversight, preserve medical context, and support continuity of care."
+          "All clinical communication is conducted through structured channels that respect physician oversight, preserve medical context, and maintain continuity of care."
         </p>
       </section>
 

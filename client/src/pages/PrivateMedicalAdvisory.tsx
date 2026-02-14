@@ -32,6 +32,9 @@ export default function PrivateMedicalAdvisory() {
           <div class="text-center py-16 space-y-8">
             <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
             <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
+            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
+              All submissions undergo structured administrative and clinical review prior to coordination acceptance.
+            </p>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
               Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
             </p>
@@ -71,7 +74,7 @@ export default function PrivateMedicalAdvisory() {
           Private Medical Advisory
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
-          Medical Care Germany supports a limited number of medically complex international cases requiring structured clinical coordination within Germany.
+          A limited number of medically complex international cases requiring structured clinical coordination within Germany are reviewed for coordination eligibility.
         </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
           Engagement is selective and based on strategic case evaluation.

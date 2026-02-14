@@ -30,7 +30,7 @@ export default function GovernmentalBodies() {
           For Embassies, Government Sponsors, and Official Referring Bodies
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          Medical Care Germany supports diplomatic missions and sponsoring authorities with structured access to Germany's advanced hospital system through coordinated medical advisory and oversight.
+          Diplomatic missions and sponsoring authorities are provided structured access to Germany's advanced hospital system through coordinated medical advisory and oversight.
         </p>
       </section>
 
@@ -113,7 +113,7 @@ export default function GovernmentalBodies() {
           </div>
         </div>
         <p className="text-lg text-slate-700 leading-relaxed mt-12">
-          Medical Care Germany supports these requirements through structured advisory frameworks.
+          These requirements are addressed through structured advisory frameworks.
         </p>
       </section>
 

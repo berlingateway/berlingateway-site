@@ -127,3 +127,15 @@
 - [x] No luxury signals, no wealth references, no VIP, no elite
 - [x] Add route to App.tsx
 - [x] Update navigation links across all pages
+
+## Silent Authority Signal Layer
+- [x] 1. Institutional Language Micro-Shift (replace service language with administrative clinical tone)
+- [x] 2. Add Capacity Boundary Signal to gateway page and physician referral page
+- [x] 3. Add Review Gravity after all form submissions
+- [x] 4. Remove Hidden Retail Behavior (urgency, emotional reassurance, hospitality tone)
+- [x] 5. Add Cross-Border Signal to Trust/Governance page
+- [x] 6. Add Documentation Culture micro-copy near upload areas
+- [x] 7. Maintain Visual Restraint (no badges, no icons, no decorative graphics)
+- [x] Verify university medical coordination office tone throughout
+- [x] Ensure procedural, almost governmental feel
+- [x] NO redesigns, NO structural changes, NO marketing language

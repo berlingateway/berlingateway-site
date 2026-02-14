@@ -35,8 +35,11 @@ export default function AdvisoryAccess() {
 
       {/* Silent Filter */}
       <section className="py-32 px-6 max-w-4xl mx-auto bg-slate-50 border-y border-slate-200">
-        <p className="text-lg text-slate-700 leading-relaxed text-center">
-          Medical Care Germany supports a limited number of medically complex cases where structured advisory can influence treatment direction.
+        <p className="text-lg text-slate-700 leading-relaxed text-center mb-6">
+          Due to coordination depth and cross-border clinical requirements, case intake is selectively limited.
+        </p>
+        <p className="text-lg text-slate-600 leading-relaxed text-center">
+          Medically complex cases where structured coordination materially influences treatment direction are prioritized for review.
         </p>
       </section>
 

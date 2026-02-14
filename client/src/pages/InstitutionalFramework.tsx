@@ -46,6 +46,9 @@ export default function InstitutionalFramework() {
           <p>
             The office operates as a medical coordination entity, aligning clinical requirements with institutional capabilities across Germany's healthcare infrastructure.
           </p>
+          <p>
+            Operating within the structural standards of the German healthcare system and international referral protocols.
+          </p>
         </div>
       </section>
 

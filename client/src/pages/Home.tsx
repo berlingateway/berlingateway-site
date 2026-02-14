@@ -49,6 +49,15 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Authority Strip */}
+      <section className="py-6 bg-slate-900 text-white">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm md:text-base text-slate-300 leading-relaxed">
+            Trusted for structured medical access by international patients, governmental sponsors, and diplomatic referrals. Operating within the German healthcare ecosystem.
+          </p>
+        </div>
+      </section>
+
       {/* Elite Entry Filter */}
       <section className="py-16 bg-slate-50 border-y border-slate-200">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -79,11 +88,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Geographic Trust Signal */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-lg text-slate-700 leading-relaxed">
-            Trusted by patients from the Gulf region, North Africa, and international locations seeking advanced care within Germany.
+      {/* Decision-Level Support */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-slate-900 mb-6 text-center">Decision-Level Support</h2>
+          <p className="text-lg text-slate-700 leading-relaxed text-center">
+            We support embassies, governmental sponsors, and referring physicians in navigating complex treatment pathways within Germany.
           </p>
         </div>
       </section>
@@ -93,7 +103,7 @@ export default function Home() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif text-slate-900 mb-4">Who We Typically Support</h2>
           <p className="text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Our advisory services are designed for medically complex situations requiring structured clinical coordination.
+            Supporting international referrals, diplomatic channels, and medically sponsored cases requiring structured clinical coordination.
           </p>
         </div>
 

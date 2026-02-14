@@ -12,3 +12,10 @@
 - [x] Update all contact buttons to "Request Strategic Medical Review"
 - [x] Ensure no marketing language (no "best", "leading", "top", etc.)
 - [x] Verify calm executive tone throughout
+
+## Website Refinement - Decision-Level Support
+- [x] Add Authority Strip below hero section
+- [x] Create "Decision-Level Support" section
+- [x] Replace regional trust signals with neutral institutional language
+- [x] Ensure no redesign, maintain institutional tone
+- [x] Verify referral-grade advisory presence

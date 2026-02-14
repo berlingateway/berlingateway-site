@@ -84,3 +84,9 @@
 - [x] Create Post-Submission Experience (professional review message, no warmth)
 - [x] Ensure procedural feel, NOT promotional
 - [x] Verify strategic goal: reduce volume, increase seriousness, elevate institutional level
+
+## Critical Terminology Adjustment
+- [x] Search for all wealth-associated terms (Ultra High Net Worth, High Net Worth, Elite Patients, Luxury, Affluent)
+- [x] Replace with institutional medical terminology (Complex International Cases, Medically Advanced Travelers)
+- [x] Verify no wealth-signaling remains
+- [x] Ensure medically selective, NOT commercially selective positioning

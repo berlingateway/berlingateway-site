@@ -139,3 +139,15 @@
 - [x] Verify university medical coordination office tone throughout
 - [x] Ensure procedural, almost governmental feel
 - [x] NO redesigns, NO structural changes, NO marketing language
+
+## Critical Pre-Launch Institutional Layer
+- [x] 1. Add discreet footer line across all pages: "Operating within the regulatory and clinical standards of the German healthcare environment." (no decoration, no bold, no highlight)
+- [x] 2. Insert micro-statement in contact/intake areas: "Case reviews are conducted in alignment with German clinical governance practices." (administrative notice tone)
+- [x] 3. Remove brokerage/facilitation agency/medical tourism/concierge medicine/luxury service language
+- [x] 4. Replace with "independent medical advisory" globally
+- [x] 5. Create minimal "Professional Interfaces" page (procedural, NOT informative)
+- [x] 6. List 3 interaction types: Referring Physicians, Embassies & Government Sponsors, International Patients with Complex Medical Needs (one sentence each max)
+- [x] 7. Global Language Restraint: Replace "We help/support/assist" with "Cases are reviewed/Submissions are evaluated/Coordination is initiated when appropriate"
+- [x] 8. Ensure institutional voice only throughout
+- [x] 9. Authority perceived—never stated, never claimed
+- [x] NO redesigns, NO restructuring, NO marketing

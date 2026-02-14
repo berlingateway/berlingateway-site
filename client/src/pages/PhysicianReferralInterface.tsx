@@ -252,6 +252,9 @@ export default function PhysicianReferralInterface() {
 
               <p className="text-center text-xs text-slate-500 mt-6">
                 All submissions are handled within structured confidential channels aligned with German data protection expectations.
+                <p className="text-center text-xs text-slate-500 mt-3">
+                  Case reviews are conducted in alignment with German clinical governance practices.
+                </p>
               </p>
             </form>
           </Card>

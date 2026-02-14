@@ -101,6 +101,7 @@ export default function CaseArchitectures() {
         <p className="text-slate-500 text-sm font-serif mb-1">Medical Care Germany</p>
         <p className="text-slate-400 text-xs">Independent Strategic Medical Advisory • Headquartered in Berlin</p>
         <p className="text-slate-300 text-xs mt-4">© 2026 Medical Care Germany. Part of Merlin Medical Care Group (BMC).</p>
+        <p className="text-slate-400 text-xs mt-6">Operating within the regulatory and clinical standards of the German healthcare environment.</p>
       </footer>
 
     </div>

@@ -220,3 +220,22 @@
 - [x] Placement: After "Advisory Positioning", before "Institutional Trust & Governance" (Home.tsx lines 221-238)
 - [x] Status: PREPARED BUT INACTIVE until explicitly authorized
 - [x] Document activation instructions (operational-interface-activation-instructions.md)
+
+## Strategic Eligibility Section (PREPARED BUT INACTIVE)
+- [x] Create "Strategic Eligibility" section
+- [x] Purpose: Position as Strategic Medical Advisor with selective engagement model
+- [x] Function: Psychological and institutional gate (NOT rejection mechanism)
+- [x] Core Messaging: Engagement structured around case complexity, medical urgency, documentation readiness, coordination feasibility
+- [x] Clear statement: Submission does NOT automatically establish advisory engagement
+- [x] NO financial capacity exclusivity language
+- [x] NOT commercial, NOT promotional, NOT defensive
+- [x] Calm institutional authority (policy-level advisory firm tone)
+- [x] Refined statement: "Advisory engagement is initiated following an internal eligibility review designed to ensure appropriate alignment between medical requirements and coordination pathways."
+- [x] Secondary micro-signal: Suitability for complex medical conditions, multidisciplinary care pathways, time-sensitive treatment scenarios, diplomatic/sponsored medical channels (NO formal affiliations implied)
+- [x] Critical Constraints: NO bold marketing typography, NO icons, NO visual dramatization, NO urgency language, NO conversion tactics
+- [x] Tone: Structured discretion
+- [x] Placement: Immediately BEFORE Contact Form (cognitive threshold) - Home.tsx lines 549-569
+- [x] Psychological Objective: Increase institutional gravity, reduce low-intent submissions, attract high-trust cases, elevate advisory stature
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 551)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until explicit release command
+- [x] Document activation instructions (strategic-eligibility-activation-instructions.md)

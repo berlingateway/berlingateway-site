@@ -546,6 +546,28 @@ export default function Home() {
         </p>
       </section>
 
+      {/* PREPARED BUT INACTIVE: Strategic Eligibility */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-20 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Strategic Eligibility</h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p className="text-lg">
+              Advisory engagement is structured around case complexity, medical urgency, documentation readiness, and coordination feasibility within Germany's healthcare system.
+            </p>
+            <p className="text-lg">
+              Advisory engagement is initiated following an internal eligibility review designed to ensure appropriate alignment between medical requirements and coordination pathways.
+            </p>
+            <p className="text-base text-slate-600">
+              The advisory structure is particularly suited for complex medical conditions, multidisciplinary care pathways, time-sensitive treatment scenarios, and diplomatic or sponsored medical channels.
+            </p>
+            <p className="text-base text-slate-500 italic">
+              Submission of medical documentation does not automatically establish advisory engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
       <section id="contact" className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-2xl mx-auto px-6">

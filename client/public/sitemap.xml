@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/contact</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Physician Referral Clinical Page -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/physician-referral-clinical</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Governmental Bodies Page -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/governmental-bodies</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Private Medical Advisory Page -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/private-medical-advisory</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

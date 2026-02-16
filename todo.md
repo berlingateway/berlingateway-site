@@ -552,3 +552,24 @@
 - [ ] SSL certificate automatic provisioning by Manus
 - [ ] Verify HTTPS enforcement and browser lock icon
 - [ ] Note: Domain configuration MUST be done via Management UI (NOT via code)
+
+## SEO Optimization & Custom Domain Preparation (COMPLETED)
+- [x] Add canonical URL meta-tag to index.html: `<link rel="canonical" href="https://www.medicalcaregermany.com" />`
+- [x] Add Open Graph meta-tags for social media (og:url, og:title, og:description, og:image, og:type)
+- [x] Add Twitter Card meta-tags (twitter:card, twitter:title, twitter:description, twitter:image)
+- [x] Create robots.txt with custom domain and sitemap reference
+- [x] Create sitemap.xml with custom domain URLs (all pages)
+- [x] Add structured data (JSON-LD) for medical organization (name, address, phone, email, url)
+- [x] Add meta description for SEO
+- [x] Verify all meta-tags point to medicalcaregermany.com (NOT manus.space)
+- [x] Objective: Prepare website for custom domain connection with optimal SEO
+
+## DNS Configuration Guide for Domain Registrar (COMPLETED)
+- [x] Create comprehensive DNS configuration guide with step-by-step instructions
+- [x] Include registrar-specific instructions (GoDaddy, Namecheap, Google Domains, Cloudflare, IONOS)
+- [x] Document A Record configuration for apex domain
+- [x] Document CNAME Record configuration for www subdomain
+- [x] Include SSL certificate verification steps
+- [x] Add troubleshooting section for common DNS issues
+- [x] Create robots.txt with custom domain
+- [x] Create sitemap.xml with all pages

@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 
 import { ShieldCheck, Activity, Users, FileText, Lock, Building2, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
+import ContactBar from "@/components/ContactBar";
+import PremiumFooter from "@/components/PremiumFooter";
 
 export default function Home() {
   const { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -14,6 +16,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-200">
+      
+      <ContactBar />
       
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
@@ -749,15 +753,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-slate-50 text-center border-t border-slate-200">
-        <p className="text-slate-600 text-sm mb-4">Operating within established clinical coordination frameworks.</p>
-        <p className="text-slate-500 text-xs mb-6">Structured advisory presence supporting complex medical pathways.</p>
-        <div className="text-slate-500 text-xs space-y-1">
-          <p>Perleberger Str. 41, 10559 Berlin</p>
-        </div>
-        <p className="text-slate-400 text-xs mt-6">© 2026 Medical Care Germany</p>
-      </footer>
+      <PremiumFooter />
 
     </div>
   );

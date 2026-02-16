@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Building2, FileText, Shield, Lock } from "lucide-react";
 import { Link } from "wouter";
+import ContactBar from "@/components/ContactBar";
+import PremiumFooter from "@/components/PremiumFooter";
 
 export default function GovernmentalBodies() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
+      
+      <ContactBar />
       
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
@@ -159,13 +163,7 @@ export default function GovernmentalBodies() {
         </a>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-white text-center border-t border-slate-200">
-        <p className="text-slate-500 text-sm font-serif mb-1">Medical Care Germany</p>
-        <p className="text-slate-400 text-xs">Independent Strategic Medical Advisory • Headquartered in Berlin</p>
-        <p className="text-slate-300 text-xs mt-4">© 2026 Medical Care Germany. Part of Merlin Medical Care Group (BMC).</p>
-        <p className="text-slate-400 text-xs mt-6">Operating within the regulatory and clinical standards of the German healthcare environment.</p>
-      </footer>
+      <PremiumFooter />
 
     </div>
   );

@@ -133,7 +133,7 @@ export default function Home() {
           
           {/* Subtext */}
           <p className="text-lg md:text-xl text-slate-600 font-light mb-8 max-w-2xl mx-auto">
-            Trusted clinical coordination with Germany's leading specialists.
+            Structured medical access to German clinical excellence for global patients.
           </p>
           
           {/* Primary CTA Button */}
@@ -177,15 +177,15 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center">
           {/* H1: Clear Authority Statement */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-6 tracking-tight">
-            Germany's Premier Medical Coordination Authority
+            Institutional Medical Authority for International Patients
           </h1>
           
           {/* Subheadline: Who We Serve + Outcomes */}
           <p className="text-lg md:text-xl text-slate-300 font-light mb-4 max-w-3xl mx-auto leading-relaxed">
-            Berlin-based clinical coordination for international patients requiring complex, high-priority medical interventions.
+            Trusted cross-border clinical coordination for global patients requiring complex, high-priority medical interventions.
           </p>
           <p className="text-base md:text-lg text-slate-400 font-light mb-10 max-w-2xl mx-auto">
-            Structured pathways to Germany's leading specialists and university hospitals.
+            Operating at the intersection of international medicine and German clinical excellence.
           </p>
           
           {/* Dual CTAs */}
@@ -232,10 +232,10 @@ export default function Home() {
       <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">
-            Clinical Coordination. Institutional Access.
+            Cross-Border Clinical Coordination. Global Patient Access.
           </h2>
           <p className="text-lg md:text-xl text-slate-600 font-light max-w-3xl mx-auto leading-relaxed">
-            Structured pathways into Germany's leading university hospitals and specialist networks.
+            Institutional medical gateway connecting international patients to German university hospitals and specialist networks.
           </p>
         </div>
       </section>
@@ -244,7 +244,7 @@ export default function Home() {
       <section className="py-12 md:py-16 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed">
-            For patients, families, and physicians seeking structured medical access in Germany.
+            For international patients, families, and referring physicians seeking structured access to German medical excellence.
           </p>
         </div>
       </section>
@@ -253,17 +253,17 @@ export default function Home() {
       <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">
-            A Structured Medical Gateway — Not a Referral Service
+            International Medical Gateway — Not a Referral Service
           </h2>
           <div className="prose prose-lg max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6">
             <p>
-              Medical Care Germany operates through structured physician networks and established hospital pathways within Germany's advanced healthcare infrastructure.
+              Medical Care Germany operates as an institutional medical authority, connecting global patients with structured physician networks and established hospital pathways across German clinical excellence.
             </p>
             <p>
-              The organization functions as a clinical coordination system, connecting international patients with appropriate specialist-level medical environments for complex diagnostic and treatment requirements.
+              The organization functions as a cross-border clinical coordination system, providing international patients with appropriate specialist-level medical environments for complex diagnostic and treatment requirements.
             </p>
             <p>
-              This framework is designed to reduce procedural uncertainty and ensure continuity across multi-phase medical interventions.
+              This framework is designed to reduce procedural uncertainty and ensure continuity across multi-phase international medical interventions.
             </p>
           </div>
           

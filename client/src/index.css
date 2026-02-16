@@ -80,6 +80,8 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    margin: 0; /* Reset browser default margin */
+    padding: 0; /* Reset browser default padding */
     letter-spacing: 0.015em; /* Elegant spacing for policy-like precision */
   }
   h1, h2, h3, h4, h5, h6 {

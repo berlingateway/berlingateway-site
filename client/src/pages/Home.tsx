@@ -65,7 +65,7 @@ export default function Home() {
       </div>
       
       {/* Navigation */}
-      <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100 bg-white">
+      <nav className="w-full py-4 px-8 flex justify-between items-center border-b border-slate-100 bg-white">
         <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
           Medical Care Germany
         </Link>
@@ -78,7 +78,7 @@ export default function Home() {
       </nav>
 
       {/* SECTION 1: HERO - Single CTA Only */}
-      <section id="hero" className="relative py-32 md:py-48 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section id="hero" className="relative py-20 md:py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-serif font-medium leading-tight mb-6">
             Structured Access to Germany's Most Advanced Medical System
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 2: INTRO BLOCK - Institutional Positioning */}
-      <section className="py-24 px-6 bg-white border-b border-slate-200">
+      <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">
             A Structured Medical Gateway — Not a Referral Service
@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: THE MEDICAL PATH (CRITICAL) */}
-      <section className="py-24 px-6 bg-slate-50 border-b border-slate-200">
+      <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">The Medical Path</h2>
           <div className="grid md:grid-cols-5 gap-8">
@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 4: CLINICAL CASE INSIGHTS (EXTREMELY IMPORTANT) */}
-      <section className="py-24 px-6 bg-white border-b border-slate-200">
+      <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Clinical Case Insights</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 5: DIFFERENTIATION BLOCK */}
-      <section className="py-24 px-6 bg-slate-50 border-b border-slate-200">
+      <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-12 text-center text-slate-900">
             Why Structured Medical Coordination Matters
@@ -269,7 +269,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 6: CONTACT (Simplified) */}
-      <section id="contact" className="py-24 px-6 bg-white">
+      <section id="contact" className="py-16 md:py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Submit Medical Reports</h2>
 
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER - Strong but Calm */}
-      <footer className="py-12 bg-slate-900 text-white text-center">
+      <footer className="py-10 bg-slate-900 text-white text-center">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
             <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">

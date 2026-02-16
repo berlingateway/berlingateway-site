@@ -231,11 +231,11 @@ export default function Home() {
       {/* INSTITUTIONAL POSITIONING BLOCK - Under Hero */}
       <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">
-            Cross-Border Clinical Coordination. Global Patient Access.
-          </h2>
-          <p className="text-lg md:text-xl text-slate-600 font-light max-w-3xl mx-auto leading-relaxed">
-            Institutional medical gateway connecting international patients to German university hospitals and specialist networks.
+          <p className="text-lg md:text-xl text-slate-700 font-light max-w-4xl mx-auto leading-relaxed mb-6">
+            Operating as a cross-border medical authority, we structure priority access to Germany's leading specialists, university hospitals, and advanced treatment pathways.
+          </p>
+          <p className="text-base md:text-lg text-slate-600 font-light max-w-4xl mx-auto leading-relaxed">
+            Trusted by international patients, referring physicians, and institutional partners seeking structured medical coordination.
           </p>
         </div>
       </section>

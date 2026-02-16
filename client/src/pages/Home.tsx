@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { trpc } from "@/lib/trpc";
 import { Link } from "wouter";
-import ContactBar from "@/components/ContactBar";
-import PremiumFooter from "@/components/PremiumFooter";
-import { Upload, FileText, CheckCircle2, Building2 } from "lucide-react";
+import { FileText, Activity, Network, Calendar, Heart } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
 
@@ -54,7 +52,17 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       
-      <ContactBar />
+      {/* Top Contact Bar - Minimal */}
+      <div className="w-full bg-slate-900 text-white py-3 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-sm">
+          <a href="mailto:info@medicalcaregermany.com" className="hover:text-slate-300 transition-colors">
+            info@medicalcaregermany.com
+          </a>
+          <a href="tel:+493025730875" className="hover:text-slate-300 transition-colors">
+            +49 30 25730875
+          </a>
+        </div>
+      </div>
       
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100 bg-white">
@@ -66,186 +74,201 @@ export default function Home() {
           <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
           <Link href="/private-medical-advisory" className="hover:text-slate-900 transition-colors">Private Advisory</Link>
           <Link href="/institutional-framework" className="hover:text-slate-900 transition-colors">Framework</Link>
-          <Link href="/contact" className="hover:text-slate-900 transition-colors">Contact</Link>
         </div>
-        <a href="#contact">
-          <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50 text-sm">
-            Submit Reports
-          </Button>
-        </a>
       </nav>
 
-      {/* SECTION 1: HERO */}
+      {/* SECTION 1: HERO - Single CTA Only */}
       <section id="hero" className="relative py-32 md:py-48 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-serif font-medium leading-tight mb-8">
             Structured Access to Germany's Most Advanced Medical System
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 font-light mb-6 max-w-4xl mx-auto leading-relaxed">
-            Strategic medical coordination for complex, high-risk, and time-sensitive cases — operated from Berlin.
-          </p>
-          <p className="text-sm text-slate-400 mb-12">
-            Trusted by international patients, medical referrers, and institutional partners.
+          <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-4xl mx-auto leading-relaxed">
+            Private medical coordination for complex, serious, and high-priority cases.
           </p>
           <a href="#contact">
-            <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-lg font-medium">
-              Submit Medical Reports for Specialist Review
+            <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-12 py-7 text-lg font-medium">
+              Submit Medical Reports
             </Button>
           </a>
-          <p className="text-xs text-slate-400 mt-6">
-            Confidential Case Evaluation • Physician-Led Review • Selective Acceptance
-          </p>
         </div>
       </section>
 
-      {/* SECTION 2: INSTITUTIONAL BACKING */}
-      <section id="backing" className="py-24 px-6 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-slate-900">Institutional Backing</h2>
-          <p className="text-lg text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto">
-            Medical Care Germany is powered by Berlin Medical Care (BMC), a Berlin-based healthcare coordination group. Operating in alignment with German healthcare regulations and international patient standards.
-          </p>
-          <Card className="inline-block p-6 bg-white border-slate-200 rounded-none">
-            <div className="flex items-start gap-3 text-slate-600">
-              <Building2 className="w-5 h-5 mt-1 flex-shrink-0" />
-              <div className="text-left">
-                <p className="font-medium text-slate-900 mb-1">Address</p>
-                <p className="text-sm">
-                  Perleberger Str. 41<br/>
-                  10559 Berlin, Germany
+      {/* SECTION 2: INTRO BLOCK - Institutional Positioning */}
+      <section className="py-24 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">
+            A Structured Medical Gateway — Not a Referral Service
+          </h2>
+          <div className="prose prose-lg max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6">
+            <p>
+              Medical Care Germany operates through structured physician networks and established hospital pathways within Germany's advanced healthcare infrastructure.
+            </p>
+            <p>
+              The organization functions as a clinical coordination system, connecting international patients with appropriate specialist-level medical environments for complex diagnostic and treatment requirements.
+            </p>
+            <p>
+              This framework is designed to reduce procedural uncertainty and ensure continuity across multi-phase medical interventions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: THE MEDICAL PATH (CRITICAL) */}
+      <section className="py-24 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">The Medical Path</h2>
+          <div className="grid md:grid-cols-5 gap-8">
+            
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
+                <FileText className="w-8 h-8 text-white" strokeWidth={1.5} />
+              </div>
+              <div className="text-4xl font-serif text-slate-300 mb-3">1</div>
+              <h3 className="text-lg font-serif text-slate-900 mb-3">Case Submission</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Confidential medical file review
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
+                <Activity className="w-8 h-8 text-white" strokeWidth={1.5} />
+              </div>
+              <div className="text-4xl font-serif text-slate-300 mb-3">2</div>
+              <h3 className="text-lg font-serif text-slate-900 mb-3">Physician Evaluation</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Specialist-level assessment within German hospital networks
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
+                <Network className="w-8 h-8 text-white" strokeWidth={1.5} />
+              </div>
+              <div className="text-4xl font-serif text-slate-300 mb-3">3</div>
+              <h3 className="text-lg font-serif text-slate-900 mb-3">Medical Strategy</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Defined treatment direction and clinical pathway
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
+                <Calendar className="w-8 h-8 text-white" strokeWidth={1.5} />
+              </div>
+              <div className="text-4xl font-serif text-slate-300 mb-3">4</div>
+              <h3 className="text-lg font-serif text-slate-900 mb-3">Treatment Coordination</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Hospital placement and timeline structuring
+              </p>
+            </div>
+
+            {/* Step 5 */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
+                <Heart className="w-8 h-8 text-white" strokeWidth={1.5} />
+              </div>
+              <div className="text-4xl font-serif text-slate-300 mb-3">5</div>
+              <h3 className="text-lg font-serif text-slate-900 mb-3">Continuity of Care</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Post-treatment medical alignment
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: CLINICAL CASE INSIGHTS (EXTREMELY IMPORTANT) */}
+      <section className="py-24 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Clinical Case Insights</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            {/* Case 1 */}
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Neurological Recovery — Complex Mobility Case</h3>
+              <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>International patient presenting severe mobility impairment.</p>
+                <p>Multidisciplinary evaluation conducted.</p>
+                <p>Advanced neuro-rehabilitation pathway initiated in Germany.</p>
+                <p className="font-medium text-slate-900">Outcome: Significant functional restoration.</p>
+              </div>
+            </Card>
+
+            {/* Case 2 */}
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Oncological Coordination — Multi-Phase Treatment</h3>
+              <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>Complex oncological diagnosis requiring specialized intervention.</p>
+                <p>Coordinated access to university hospital environment.</p>
+                <p>Structured treatment pathway across multiple clinical phases.</p>
+                <p className="font-medium text-slate-900">Outcome: Treatment protocol completed as planned.</p>
+              </div>
+            </Card>
+
+            {/* Case 3 */}
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Cardiovascular Intervention — High-Risk Assessment</h3>
+              <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>Time-sensitive cardiovascular situation requiring senior specialist review.</p>
+                <p>Rapid diagnostic pathway established.</p>
+                <p>Advanced interventional procedure coordinated.</p>
+                <p className="font-medium text-slate-900">Outcome: Successful procedural completion.</p>
+              </div>
+            </Card>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: DIFFERENTIATION BLOCK */}
+      <section className="py-24 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-12 text-center text-slate-900">
+            Why Structured Medical Coordination Matters
+          </h2>
+          <div className="space-y-8">
+            <div className="flex items-start gap-6">
+              <div className="w-2 h-2 bg-slate-900 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h3 className="text-lg font-medium text-slate-900 mb-2">Reduces Diagnostic Delay</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Structured pathways minimize procedural gaps between initial assessment and definitive diagnosis.
                 </p>
               </div>
             </div>
-          </Card>
-        </div>
-      </section>
-
-      {/* SECTION 3: WHO WE ACCEPT */}
-      <section id="acceptance" className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">Selective Case Acceptance</h2>
-          <p className="text-lg text-slate-600 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
-            Engagement is selective and based on strategic case evaluation.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-medium text-slate-900 mb-2">Complex Diagnoses</h3>
-                  <p className="text-sm text-slate-600">Requiring multi-specialty input</p>
-                </div>
+            <div className="flex items-start gap-6">
+              <div className="w-2 h-2 bg-slate-900 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h3 className="text-lg font-medium text-slate-900 mb-2">Connects to Advanced Treatment Environments</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Direct coordination with university hospitals and specialized medical centers across Germany.
+                </p>
               </div>
-            </Card>
-            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-medium text-slate-900 mb-2">High-Risk Cases</h3>
-                  <p className="text-sm text-slate-600">Needing senior specialist review</p>
-                </div>
+            </div>
+            <div className="flex items-start gap-6">
+              <div className="w-2 h-2 bg-slate-900 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h3 className="text-lg font-medium text-slate-900 mb-2">Ensures Physician-Level Oversight</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Medical coordination maintained through established clinical networks, not administrative channels.
+                </p>
               </div>
-            </Card>
-            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-medium text-slate-900 mb-2">Time-Sensitive Situations</h3>
-                  <p className="text-sm text-slate-600">Requiring structured access</p>
-                </div>
-              </div>
-            </Card>
-            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
-              <div className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-medium text-slate-900 mb-2">International Patients</h3>
-                  <p className="text-sm text-slate-600">Seeking coordinated pathways within Germany</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-          <div className="bg-slate-100 p-6 rounded-none border-l-4 border-slate-900">
-            <p className="text-sm text-slate-700 leading-relaxed">
-              We do not provide diagnosis via comments or instant chat. Emergency cases require local emergency services.
-            </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4: COORDINATION MODEL */}
-      <section id="model" className="py-24 px-6 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Coordination Model</h2>
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <Card className="p-8 bg-white border-slate-200 rounded-none">
-              <div className="text-4xl font-serif text-slate-300 mb-4">1</div>
-              <h3 className="text-xl font-serif text-slate-900 mb-4">Case Intake</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Reports, imaging, and a concise symptom timeline
-              </p>
-            </Card>
-            <Card className="p-8 bg-white border-slate-200 rounded-none">
-              <div className="text-4xl font-serif text-slate-300 mb-4">2</div>
-              <h3 className="text-xl font-serif text-slate-900 mb-4">Specialist Review</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Structured review and targeted questions
-              </p>
-            </Card>
-            <Card className="p-8 bg-white border-slate-200 rounded-none">
-              <div className="text-4xl font-serif text-slate-300 mb-4">3</div>
-              <h3 className="text-xl font-serif text-slate-900 mb-4">Proposed Treatment Pathway</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Recommended next diagnostics and treatment direction
-              </p>
-            </Card>
-            <Card className="p-8 bg-white border-slate-200 rounded-none">
-              <div className="text-4xl font-serif text-slate-300 mb-4">4</div>
-              <h3 className="text-xl font-serif text-slate-900 mb-4">Logistics & Admission Support</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Appointments, translation, travel timing, and inpatient/outpatient planning
-              </p>
-            </Card>
-          </div>
-          <div className="bg-slate-100 p-6 rounded-none border-l-4 border-slate-400">
-            <p className="text-sm text-slate-700 leading-relaxed">
-              A "treatment pathway" is a medical direction based on provided documentation and may evolve after in-person assessment.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: CONTACT */}
+      {/* SECTION 6: CONTACT (Simplified) */}
       <section id="contact" className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Contact</h2>
-          
-          {/* Contact Display */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center">
-              <p className="text-sm text-slate-500 mb-2">Email</p>
-              <a href="mailto:info@medicalcaregermany.com" className="text-slate-900 hover:underline">
-                info@medicalcaregermany.com
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-slate-500 mb-2">Phone</p>
-              <a href="tel:+493025730875" className="text-slate-900 hover:underline">
-                +49 30 25730875
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-sm text-slate-500 mb-2">Address</p>
-              <p className="text-slate-900">
-                Perleberger Str. 41<br/>
-                10559 Berlin, Germany
-              </p>
-            </div>
-          </div>
-
-          <p className="text-lg text-slate-600 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
-            Send your medical reports to receive a professional evaluation by our German medical coordination team.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Submit Medical Reports</h2>
 
           {/* Contact Form */}
           <Card className="p-10 bg-slate-50 border-slate-200 rounded-none contact-form-container">
@@ -290,15 +313,6 @@ export default function Home() {
                   className="w-full p-4 border border-slate-300 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900"
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Upload Medical Reports (Optional)</label>
-                <div className="border-2 border-dashed border-slate-300 p-8 text-center bg-white hover:border-slate-400 transition-colors cursor-pointer">
-                  <Upload className="w-8 h-8 text-slate-400 mx-auto mb-3" />
-                  <p className="text-sm text-slate-600 mb-1">Click to upload or drag and drop</p>
-                  <p className="text-xs text-slate-500">PDF, DICOM, JPG, PNG (Max 25MB)</p>
-                  <input type="file" className="hidden" accept=".pdf,.dcm,.jpg,.jpeg,.png" multiple />
-                </div>
-              </div>
               <Button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-6 text-lg font-medium">
                 Submit for Review
               </Button>
@@ -307,7 +321,21 @@ export default function Home() {
         </div>
       </section>
 
-      <PremiumFooter />
+      {/* FOOTER - Strong but Calm */}
+      <footer className="py-12 bg-slate-900 text-white text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="space-y-3">
+            <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
+              info@medicalcaregermany.com
+            </a>
+            <a href="tel:+493025730875" className="block text-lg hover:text-slate-300 transition-colors">
+              +49 30 25730875
+            </a>
+          </div>
+          <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
+          <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
+        </div>
+      </footer>
 
     </div>
   );

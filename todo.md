@@ -511,3 +511,17 @@
 - [x] Design: Charité/Mayo style, minimal/authoritative/selective tone, mobile-first layout, large typography, generous whitespace, minimal animations
 - [x] Technical: NO emojis, NO exaggerated promises, NO pricing, NO WhatsApp CTA in hero, NO stock "smiling doctor" imagery
 - [x] Brand: Medical Care Germany — powered by Berlin Medical Care
+
+## MASTER OBJECTIVE - Institutional Medical Authority Transformation (COMPLETED)
+- [x] Transform website into Institutional Medical Authority (Mayo Clinic/Charité/Swiss Medical Networks tone) - NOT service company
+- [x] Hero: Single CTA only ("Submit Medical Reports"), remove all secondary buttons, authority requires focus
+- [x] Hero Subline: "Private medical coordination for complex, serious, and high-priority cases."
+- [x] INTRO BLOCK - Institutional Positioning: Title "A Structured Medical Gateway — Not a Referral Service", clinical/calm/executive tone, explain structured physician networks and hospital pathways, NO marketing language, visitors must feel system → not company
+- [x] THE MEDICAL PATH section (CRITICAL): 5-step structured pathway (Step 1: Case Submission, Step 2: Physician Evaluation, Step 3: Medical Strategy, Step 4: Treatment Coordination, Step 5: Continuity of Care), minimal icons, no bright colors, Swiss-style layout
+- [x] CLINICAL CASE INSIGHTS section (EXTREMELY IMPORTANT): Institutional format case studies (NOT testimonials, NOT emotional stories), anonymous, clinical, measured, example: "Neurological Recovery — Complex Mobility Case", demonstrate pathways not promises
+- [x] DIFFERENTIATION BLOCK: Title "Why Structured Medical Coordination Matters", explain: reduces diagnostic delay, connects to advanced treatment environments, ensures physician-level oversight, NO exaggeration, precision language only
+- [x] REMOVE ALL NOISE: Delete WhatsApp floating buttons, multiple contact areas, repeated phone banners, marketing slogans - Luxury medicine is quiet
+- [x] Footer: Strong but calm, email + phone only (info@medicalcaregermany.com, +49 30 25730875), NO visual aggression
+- [x] Final Design Principle: Visitors must feel Institution → Structure → Medical Gravity (NOT Agency → Sales → Urgency)
+- [x] Avoid tourism language completely
+- [x] NO incremental edits afterward - ONE radical structural upgrade only

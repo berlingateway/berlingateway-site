@@ -32,6 +32,24 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
+  // Canonical URL Enforcement - 301 Redirects (SEO Authority Pack)
+  app.use((req, res, next) => {
+    const host = req.get('host') || '';
+    const protocol = req.protocol;
+    
+    // Enforce HTTPS in production
+    if (process.env.NODE_ENV === 'production' && protocol !== 'https') {
+      return res.redirect(301, `https://${host}${req.url}`);
+    }
+    
+    // Enforce www subdomain (canonical: www.medicalcaregermany.com)
+    if (process.env.NODE_ENV === 'production' && host === 'medicalcaregermany.com') {
+      return res.redirect(301, `https://www.medicalcaregermany.com${req.url}`);
+    }
+    
+    next();
+  });
+
   // Security Headers Middleware (Production-Grade)
   app.use((req, res, next) => {
     // HSTS - Force HTTPS for 1 year, include subdomains, allow preload
@@ -102,6 +120,10 @@ async function startServer() {
   });
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);
+  
+  // Sitemap.xml route (SEO Authority Pack)
+  const { handleSitemap } = await import('../sitemap');
+  app.get('/sitemap.xml', handleSitemap);
   // tRPC API
   app.use(
     "/api/trpc",

@@ -1,15 +1,56 @@
-# robots.txt for Medical Care Germany
+# Medical Care Germany - Robots.txt
+# Premium Medical Coordination Authority
 # https://www.medicalcaregermany.com
 
 User-agent: *
 Allow: /
 
-# Sitemap
+# Disallow admin and API endpoints
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_core/
+
+# Disallow search results and dynamic pages
+Disallow: /search?
+Disallow: /*?*utm_*
+
+# Allow crawling of static assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Sitemap location
 Sitemap: https://www.medicalcaregermany.com/sitemap.xml
 
-# Disallow admin/management areas (if any)
-Disallow: /admin/
-Disallow: /api/
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
-# Allow all search engines to crawl the site
-# Medical Care Germany - Berlin-based Clinical Coordination
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

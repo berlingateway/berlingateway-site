@@ -304,3 +304,50 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 183)
 - [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
 - [x] Document activation instructions (refined-institutional-positioning-activation-instructions.md)
+
+## Institutional Memory Signal (PREPARED BUT INACTIVE)
+- [x] Create Institutional Memory Signal
+- [x] Objective: Discreet institutional memory signal reflecting long-standing exposure to complex clinical environments WITHOUT historical boasting or numerical references
+- [x] Core Strategy: Allow readers to infer accumulated clinical familiarity through calm, matter-of-fact language
+- [x] Avoid: Anniversary phrasing, numerical timelines, celebratory tone, legacy marketing, claims of experience
+- [x] Primary Institutional Text: "The advisory environment has evolved through sustained involvement across diverse international medical coordination contexts, supporting procedural familiarity within complex and multidisciplinary care settings."
+- [x] Optional Secondary Signal: "This continuity contributes to a composed operational perspective when navigating medical situations that extend beyond routine pathways."
+- [x] Critical Constraints: NO mention of years, NO 'decades of excellence' language, NO storytelling, NO testimonials, NO institutional self-praise
+- [x] Tone: Understated, institutional, observational, non-celebratory
+- [x] Psychological Objective: Signal permanence, survivorship, exposure to clinical depth. Create perception of organization that has quietly operated across demanding medical landscapes.
+- [x] Placement: Within Institutional Foundations section (AFTER International Case Experience, BEFORE Advanced Case Pathways) - Home.tsx lines 215-225
+- [x] Section Title: "Operational Continuity"
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 217)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
+- [x] Document activation instructions (three-signals-activation-instructions.md)
+
+## Sovereign Operational Tone Signal (PREPARED BUT INACTIVE)
+- [x] Create Sovereign Operational Tone Signal
+- [x] Objective: Establish sovereign operational tone reflecting measured clinical composure, procedural precision, deliberate engagement pacing
+- [x] Core Strategy: Organization appears structurally unhurried
+- [x] Language communicates: Deliberateness, evaluation discipline, operational calm, professional distance
+- [x] Avoid: Immediacy language, rapid-response cues, urgency framing, hospitality tone, concierge implications
+- [x] Primary Institutional Signal: "Advisory processes are conducted with deliberate attention to clinical detail. Response intervals may reflect the care taken to appropriately review medical context prior to engagement."
+- [x] Secondary Micro-Signal: "This measured approach supports procedural clarity across complex medical coordination environments."
+- [x] Critical Constraints: NO apology for slower responses, NO service language, NO reassurance tone, NO warmth signaling
+- [x] Psychological Objective: Position organization as operating on institutional time (NOT transactional time)
+- [x] Placement: AFTER Professional Interfaces, BEFORE Contact Form - Home.tsx lines 632-645
+- [x] Section Title: (No title - embedded content section)
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 634)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until further notice
+- [x] Document activation instructions (three-signals-activation-instructions.md)
+
+## Clinical Selection Gravity Signal (PREPARED BUT INACTIVE)
+- [x] Create Clinical Selection Gravity Signal
+- [x] Objective: Discreet clinical selection gravity signal indicating structured engagement alignment WITHOUT implying exclusivity
+- [x] Core Strategy: Allow readers to sense that advisory bandwidth is intentionally preserved for medically substantial situations
+- [x] Avoid: Selective language, exclusivity cues, acceptance/rejection framing, financial filtering implications
+- [x] Primary Institutional Text: "Engagement capacity is thoughtfully aligned with medical situations where structured advisory involvement may contribute meaningful procedural clarity."
+- [x] Optional Micro-Signal: "This alignment supports a focused operational environment across complex care pathways."
+- [x] Critical Constraints: NO mention of criteria, NO reference to screening, NO high-threshold language, NO elitist undertones
+- [x] Psychological Objective: Create subconscious perception of institutional weight and finite advisory bandwidth
+- [x] Placement: Within Institutional Foundations section (AFTER Advanced Case Pathways, BEFORE Strategic Positioning Line) - Home.tsx lines 239-249
+- [x] Section Title: "Engagement Alignment"
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 241)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until authorization is provided
+- [x] Document activation instructions (three-signals-activation-instructions.md)

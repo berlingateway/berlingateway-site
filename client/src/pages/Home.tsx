@@ -212,6 +212,18 @@ export default function Home() {
           </p>
         </div>
 
+        {/* PREPARED BUT INACTIVE: Institutional Memory Signal */}
+        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+        <div className="hidden mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Operational Continuity</h3>
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+            The advisory environment has evolved through sustained involvement across diverse international medical coordination contexts, supporting procedural familiarity within complex and multidisciplinary care settings.
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed">
+            This continuity contributes to a composed operational perspective when navigating medical situations that extend beyond routine pathways.
+          </p>
+        </div>
+
         {/* PREPARED BUT INACTIVE: Advanced Case Pathways */}
         {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
         <div className="hidden mb-20">
@@ -221,6 +233,18 @@ export default function Home() {
           </p>
           <p className="text-base text-slate-600 leading-relaxed">
             This framework is particularly relevant for cases involving diagnostic ambiguity, multidisciplinary requirements, cross-border considerations, or time-sensitive treatment decisions.
+          </p>
+        </div>
+
+        {/* PREPARED BUT INACTIVE: Clinical Selection Gravity Signal */}
+        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+        <div className="hidden mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Engagement Alignment</h3>
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+            Engagement capacity is thoughtfully aligned with medical situations where structured advisory involvement may contribute meaningful procedural clarity.
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed">
+            This alignment supports a focused operational environment across complex care pathways.
           </p>
         </div>
 
@@ -612,6 +636,21 @@ export default function Home() {
             </p>
             <p className="text-base text-slate-600">
               All professional interactions are handled with discretion, procedural clarity, and respect for existing clinical relationships.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PREPARED BUT INACTIVE: Sovereign Operational Tone Signal */}
+      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+      <section className="hidden py-16 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="space-y-4 text-slate-700 leading-relaxed text-center">
+            <p className="text-lg">
+              Advisory processes are conducted with deliberate attention to clinical detail. Response intervals may reflect the care taken to appropriately review medical context prior to engagement.
+            </p>
+            <p className="text-base text-slate-600">
+              This measured approach supports procedural clarity across complex medical coordination environments.
             </p>
           </div>
         </div>

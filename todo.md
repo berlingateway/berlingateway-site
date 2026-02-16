@@ -500,3 +500,14 @@
 - [x] Verify premium medical positioning, clean spacing, high trust appearance
 - [x] Test mobile-first optimization
 - [x] Contact Data: Email: info@medicalcaregermany.com | Phone: +49 30 25730875 | Address: Perleberger Str. 41, 10559 Berlin, Germany
+
+## MANUS CODE COPY - Landing Page Rebuild (COMPLETED)
+- [x] Rebuild Home.tsx following exact section order: Hero → Institutional Backing → Who We Accept → Coordination Model → Contact
+- [x] Hero Section: Dark/charcoal background, H1 "Structured Access to Germany's Most Advanced Medical System", subheadline, trust line, primary CTA "Submit Medical Reports for Specialist Review", micro-line "Confidential Case Evaluation • Physician-Led Review • Selective Acceptance"
+- [x] Institutional Backing Section: Title, body text about BMC, address card (Perleberger Str. 41, 10559 Berlin, Germany)
+- [x] Who We Accept Section: Title "Selective Case Acceptance", lead text, 4 bullets (complex diagnoses, high-risk cases, time-sensitive situations, international patients), exclusions note
+- [x] Coordination Model Section: Title, 4 steps cards (Case Intake, Specialist Review, Proposed Treatment Pathway, Logistics & Admission Support), note about treatment pathway
+- [x] Contact Section: Title, display contact info (email, phone, address), instruction text, form fields (Full Name, Country of Origin, Email Address, Medical Situation, Upload Medical Reports), "Submit for Review" button
+- [x] Design: Charité/Mayo style, minimal/authoritative/selective tone, mobile-first layout, large typography, generous whitespace, minimal animations
+- [x] Technical: NO emojis, NO exaggerated promises, NO pricing, NO WhatsApp CTA in hero, NO stock "smiling doctor" imagery
+- [x] Brand: Medical Care Germany — powered by Berlin Medical Care

@@ -1,26 +1,63 @@
 import { useAuth } from "@/_core/hooks/useAuth";
-import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-
-import { ShieldCheck, Activity, Users, FileText, Lock, Building2, CheckCircle2 } from "lucide-react";
+import { trpc } from "@/lib/trpc";
 import { Link } from "wouter";
 import ContactBar from "@/components/ContactBar";
 import PremiumFooter from "@/components/PremiumFooter";
+import { Upload, FileText, CheckCircle2, Building2 } from "lucide-react";
+import { toast } from "sonner";
+import { useState } from "react";
 
 export default function Home() {
   const { user, loading, error, isAuthenticated, logout } = useAuth();
   const submitCase = trpc.case.submit.useMutation();
+  const [formData, setFormData] = useState({
+    fullName: "",
+    country: "",
+    email: "",
+    medicalSituation: "",
+  });
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      await submitCase.mutateAsync({
+        fullName: formData.fullName,
+        country: formData.country,
+        medicalSituation: `Email: ${formData.email}\n\nMedical Situation: ${formData.medicalSituation}`,
+      });
 
+      const form = e.target as HTMLFormElement;
+      const card = form.closest('.contact-form-container');
+      if (card) {
+        card.innerHTML = `
+          <div class="text-center py-16 space-y-8">
+            <h3 class="text-2xl font-serif text-slate-900">Case Under Professional Review</h3>
+            <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
+            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
+              Your submission has entered structured administrative and clinical review.
+            </p>
+            <p class="text-slate-500 text-sm">
+              Response intervals reflect the care taken to appropriately review medical context prior to engagement.
+            </p>
+          </div>
+        `;
+      }
+    } catch (error) {
+      toast.error("Submission failed. Please try again.");
+      console.error(error);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-200">
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
       
       <ContactBar />
       
       {/* Navigation */}
-      <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
+      <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100 bg-white">
         <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
           Medical Care Germany
         </Link>
@@ -29,727 +66,244 @@ export default function Home() {
           <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
           <Link href="/private-medical-advisory" className="hover:text-slate-900 transition-colors">Private Advisory</Link>
           <Link href="/institutional-framework" className="hover:text-slate-900 transition-colors">Framework</Link>
-          <a href="#contact" className="hover:text-slate-900 transition-colors">Contact</a>
+          <Link href="/contact" className="hover:text-slate-900 transition-colors">Contact</Link>
         </div>
         <a href="#contact">
           <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50 text-sm">
-            Confidential Inquiry
+            Submit Reports
           </Button>
         </a>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative py-24 px-6 md:px-12 max-w-5xl mx-auto text-center">
-        <div>
-          <div className="mb-4">
-            <p className="text-sm uppercase tracking-wider text-slate-400 font-medium">Berlin-Based Strategic Medical Advisory</p>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-medium text-slate-900 leading-tight mb-6">
-            Structured Access to Germany's<br/>Advanced Hospital System
+      {/* SECTION 1: HERO */}
+      <section id="hero" className="relative py-32 md:py-48 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-serif font-medium leading-tight mb-8">
+            Structured Access to Germany's Most Advanced Medical System
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-            Medical Care Germany operates as an independent strategic medical advisory headquartered in Berlin. International patients requiring structured access to Germany's advanced hospital system are evaluated for coordination eligibility.
+          <p className="text-xl md:text-2xl text-slate-300 font-light mb-6 max-w-4xl mx-auto leading-relaxed">
+            Strategic medical coordination for complex, high-risk, and time-sensitive cases — operated from Berlin.
           </p>
-          
-          <div className="flex justify-center mb-12">
-            <div className="h-12 w-[1px] bg-slate-200"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Selective Advisory Capacity Statement */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-4 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Engagement operates within a selective advisory capacity based on case complexity and institutional alignment.
+          <p className="text-sm text-slate-400 mb-12">
+            Trusted by international patients, medical referrers, and institutional partners.
+          </p>
+          <a href="#contact">
+            <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-lg font-medium">
+              Submit Medical Reports for Specialist Review
+            </Button>
+          </a>
+          <p className="text-xs text-slate-400 mt-6">
+            Confidential Case Evaluation • Physician-Led Review • Selective Acceptance
           </p>
         </div>
       </section>
 
-      {/* Authority Strip */}
-      <section className="py-6 bg-slate-900 text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-            Coordination pathways maintained for international patients, governmental sponsors, and diplomatic referrals within the German healthcare ecosystem.
+      {/* SECTION 2: INSTITUTIONAL BACKING */}
+      <section id="backing" className="py-24 px-6 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-slate-900">Institutional Backing</h2>
+          <p className="text-lg text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto">
+            Medical Care Germany is powered by Berlin Medical Care (BMC), a Berlin-based healthcare coordination group. Operating in alignment with German healthcare regulations and international patient standards.
           </p>
-        </div>
-      </section>
-
-      {/* Elite Entry Filter */}
-      <section className="py-16 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-serif text-slate-900 mb-4">
-            For High-Risk, Complex, and Time-Sensitive Medical Cases Only
-          </h2>
-          <p className="text-slate-600 text-lg">
-            Engagement is selective and based on strategic case evaluation.
-          </p>
-        </div>
-      </section>
-
-      {/* Institutional Backing */}
-      <section className="py-20 px-6 max-w-5xl mx-auto">
-        <div className="bg-slate-50 border border-slate-200 p-8 md:p-12">
-          <div className="flex items-start gap-4 mb-6">
-            <Building2 className="text-slate-400 mt-1" size={28} strokeWidth={1.5} />
-            <div>
-              <h3 className="text-xl font-serif text-slate-900 mb-3">Institutional Backing</h3>
-              <p className="text-slate-700 leading-relaxed mb-4">
-                Medical Care Germany is part of Merlin Medical Care Group (BMC), a Berlin-based healthcare coordination organization.
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Operating in alignment with German healthcare regulations and international patient standards.
-              </p>
-              {/* PREPARED BUT INACTIVE: Governmental/Diplomatic Referral Pathways Statement */}
-              {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-              <p className="hidden text-slate-600 text-sm leading-relaxed mt-3">
-                Structured to support governmental, diplomatic, and private referral pathways requiring coordinated medical access within Germany.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Decision-Level Support */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-serif text-slate-900 mb-6 text-center">Decision-Level Support</h2>
-          <p className="text-lg text-slate-700 leading-relaxed text-center">
-            Embassies, governmental sponsors, and referring physicians are provided structured coordination for complex treatment pathways within Germany.
-          </p>
-        </div>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Structured Institutional Access */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-20 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Structured Institutional Access</h2>
-          <div className="space-y-6 text-slate-700 leading-relaxed">
-            <p className="text-lg">
-              Medical Care Germany functions as a strategic medical advisory operating within institutional frameworks. Engagement is structured around case complexity, clinical urgency, and institutional alignment.
-            </p>
-            <p className="text-lg">
-              Cases are reviewed based on documentation integrity, treatment pathway requirements, and coordination feasibility within Germany's healthcare system.
-            </p>
-            <p className="text-base text-slate-600">
-              The advisory structure is suited for diplomatic channels, governmental sponsorship frameworks, and complex international referrals requiring coordinated medical access.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Institutional Foundations */}
-      <section className="py-32 px-6 max-w-5xl mx-auto bg-slate-50 border-y border-slate-200">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-serif text-slate-900 mb-16">Institutional Foundations</h2>
-        </div>
-
-        {/* Clinical Alignment */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Clinical Alignment</h3>
-          <p className="text-lg text-slate-700 leading-relaxed">
-            Medical Care Germany operates in structured coordination with accredited German hospitals, university medical centers, and specialized treatment institutions in accordance with national healthcare frameworks.
-          </p>
-        </div>
-
-        {/* Operational Discipline */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Operational Discipline</h3>
-          <p className="text-lg text-slate-700 leading-relaxed mb-8">
-            Each case follows a defined advisory pathway:
-          </p>
-          <div className="space-y-4 mb-8">
-            <div className="border-l-2 border-slate-300 pl-6">
-              <p className="text-slate-700">Medical file intake</p>
-            </div>
-            <div className="border-l-2 border-slate-300 pl-6">
-              <p className="text-slate-700">Structured documentation review</p>
-            </div>
-            <div className="border-l-2 border-slate-300 pl-6">
-              <p className="text-slate-700">Specialist identification</p>
-            </div>
-            <div className="border-l-2 border-slate-300 pl-6">
-              <p className="text-slate-700">Treatment pathway formation</p>
-            </div>
-            <div className="border-l-2 border-slate-300 pl-6">
-              <p className="text-slate-700">Coordination oversight</p>
-            </div>
-          </div>
-          <p className="text-lg text-slate-700 leading-relaxed">
-            The organization prioritizes clarity, risk awareness, and continuity of care.
-          </p>
-        </div>
-
-        {/* PREPARED BUT INACTIVE: Refined Institutional Positioning Layer */}
-        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-        <div className="hidden mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Clinical Pathway Stewardship</h3>
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            Clinical pathways are approached through a structured advisory process designed to support clarity across complex medical situations.
-          </p>
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            Each case is evaluated within its clinical context to help establish an appropriate coordination pathway aligned with the medical priorities involved.
-          </p>
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            This procedural approach has developed through sustained exposure to multifaceted care environments, where careful navigation across specialties, institutions, and treatment timelines is often required.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            Engagement typically centers on supporting well-aligned medical pathways where thoughtful coordination may contribute to overall treatment clarity.
-          </p>
-        </div>
-
-        {/* Confidential Case Handling */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Confidential Case Handling</h3>
-          <p className="text-lg text-slate-700 leading-relaxed">
-            All medical documentation is processed under strict confidentiality protocols. Information flow is controlled and shared only with authorized medical entities involved in the treatment pathway.
-          </p>
-        </div>
-
-        {/* International Case Experience */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">International Case Experience</h3>
-          <p className="text-lg text-slate-700 leading-relaxed">
-            International cases originating from diplomatic channels, governmental sponsorship structures, and institutional referrals are coordinated within Germany's healthcare system.
-          </p>
-        </div>
-
-        {/* PREPARED BUT INACTIVE: Institutional Memory Signal */}
-        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-        <div className="hidden mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Operational Continuity</h3>
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            The advisory environment has evolved through sustained involvement across diverse international medical coordination contexts, supporting procedural familiarity within complex and multidisciplinary care settings.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            This continuity contributes to a composed operational perspective when navigating medical situations that extend beyond routine pathways.
-          </p>
-        </div>
-
-        {/* PREPARED BUT INACTIVE: Advanced Case Pathways */}
-        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-        <div className="hidden mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Advanced Case Pathways</h3>
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            In circumstances where conventional pathways prove insufficient, structured advisory access may support the navigation of complex medical environments.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            This framework is particularly relevant for cases involving diagnostic ambiguity, multidisciplinary requirements, cross-border considerations, or time-sensitive treatment decisions.
-          </p>
-        </div>
-
-        {/* PREPARED BUT INACTIVE: Clinical Selection Gravity Signal */}
-        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-        <div className="hidden mb-20">
-          <h3 className="text-2xl font-serif text-slate-900 mb-6">Engagement Alignment</h3>
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
-            Engagement capacity is thoughtfully aligned with medical situations where structured advisory involvement may contribute meaningful procedural clarity.
-          </p>
-          <p className="text-base text-slate-600 leading-relaxed">
-            This alignment supports a focused operational environment across complex care pathways.
-          </p>
-        </div>
-
-        {/* Strategic Positioning Line */}
-        <div className="text-center pt-12 border-t border-slate-300">
-          <p className="text-3xl font-serif text-slate-800 leading-relaxed italic">
-            "A structured medical pathway is not created by chance — it is designed, governed, and supervised."
-          </p>
-        </div>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Advisory Positioning */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-20 bg-white border-y border-slate-100">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Advisory Positioning</h2>
-          <div className="space-y-6 text-slate-700 leading-relaxed">
-            <p className="text-lg text-center">
-              Medical Care Germany operates at the intersection of international patients, referring physicians, and advanced German medical institutions.
-            </p>
-            <p className="text-base text-slate-600 text-center">
-              Structured advisory reduces uncertainty in complex medical pathways.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Operational Interface with the German Healthcare System */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-20 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Operational Interface with the German Healthcare System</h2>
-          <div className="space-y-6 text-slate-700 leading-relaxed">
-            <p className="text-lg">
-              Medical Care Germany coordinates through structured professional interfaces aligned with national healthcare frameworks. The organization operates within the regulatory and clinical standards of the German healthcare system.
-            </p>
-            <p className="text-lg font-medium text-slate-800">
-              The organization does not replace medical providers and does not deliver clinical treatment. Coordination is conducted through established institutional pathways.
-            </p>
-            <p className="text-base text-slate-600">
-              Operating from Berlin as a central European medical and diplomatic environment, the organization maintains structured access to Germany's advanced hospital system.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Institutional Trust & Governance */}
-      <section className="py-32 px-6 max-w-5xl mx-auto bg-white">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl font-serif text-slate-900 mb-8 font-normal">Institutional Alignment & Governance</h2>
-          <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-6">
-            Medical Care Germany operates within structured professional frameworks aligned with German healthcare standards and international patient coordination practices.
-          </p>
-          <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
-            Engagement is guided by clinical appropriateness, institutional compatibility, and operational discretion.
-          </p>
-        </div>
-
-        {/* Trust Blocks */}
-        <div className="space-y-20">
-          {/* 1. System Alignment Statement */}
-          <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">System Alignment</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Case coordination follows established clinical pathways and institutional protocols within the German healthcare system.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Clinical coordination is conducted through structured institutional interfaces with advanced medical institutions.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              The organization does not replace medical providers and does not deliver clinical treatment.
-            </p>
-          </div>
-
-          {/* 2. Professional Network Positioning */}
-          <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Professional Network</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Collaboration occurs with accredited hospitals, university medical centers, and specialized physicians based on medical requirements.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Institutional selection is determined by clinical appropriateness and treatment pathway compatibility.
-            </p>
-          </div>
-
-          {/* 3. Clinical Governance */}
-          <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Clinical Governance</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Documentation integrity is maintained through structured review processes and adherence to medical decision frameworks.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Case coordination follows defined protocols to preserve accuracy, continuity, and secure information flow between institutions.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              All processes operate within established clinical governance standards.
-            </p>
-          </div>
-
-          {/* 4. Confidentiality Infrastructure */}
-          <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Confidentiality Infrastructure</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Strict data protection standards aligned with German healthcare regulations govern all case handling.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Medical documentation is processed under confidentiality protocols designed for institutional and governmental coordination.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Information flow is controlled and shared only with authorized medical entities involved in the treatment pathway.
-            </p>
-          </div>
-
-          {/* PREPARED BUT INACTIVE: Medical Advisory Network */}
-          {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-          <div className="hidden">
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Medical Advisory Network</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Cases are reviewed within a structured advisory framework in coordination with senior German medical specialists and institutional partners when clinically appropriate.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              The advisory structure supports complex decision-making pathways while maintaining alignment with established medical governance standards.
-            </p>
-          </div>
-
-          {/* 5. Referral Ecosystem Signal */}
-          <div>
-            <h3 className="text-2xl font-serif text-slate-900 mb-6 font-normal">Referral Ecosystem</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Structured coordination pathways are maintained for embassies, governmental sponsors, and referring physicians navigating complex treatment requirements within Germany.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">
-              Coordination services facilitate structured access to advanced medical institutions for medically complex international cases.
-            </p>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Engagement operates within professional referral frameworks aligned with institutional healthcare practices.
-            </p>
-          </div>
-
-          {/* Institutional Backing */}
-          <div className="pt-12 border-t border-slate-300">
-            <h3 className="text-2xl font-serif text-slate-900 mb-8 font-normal">Institutional Backing</h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-8">
-              Medical Care Germany is powered by Merlin Medical Care (BMC), a Berlin-based healthcare coordination group.
-            </p>
-            <div className="bg-slate-50 border border-slate-200 p-8">
-              <p className="text-base text-slate-600 mb-2">Address:</p>
-              <p className="text-lg text-slate-900">Perleberger Str. 41</p>
-              <p className="text-lg text-slate-900">10559 Berlin</p>
-              <p className="text-lg text-slate-900 mb-6">Germany</p>
-              <p className="text-base text-slate-600 leading-relaxed">
-                Operational continuity and structured case governance are maintained through this institutional foundation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Typically Support */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-serif text-slate-900 mb-4">Who We Typically Support</h2>
-          <p className="text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Coordination maintained for international referrals, diplomatic channels, and medically sponsored cases requiring structured clinical pathways.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="space-y-3">
-            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
-            <h3 className="text-lg font-medium text-slate-900">Oncology</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Complex cancer cases requiring multidisciplinary evaluation and treatment planning.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
-            <h3 className="text-lg font-medium text-slate-900">Neurosurgery</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              High-risk neurological conditions requiring specialized surgical intervention.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
-            <h3 className="text-lg font-medium text-slate-900">Advanced Orthopedics</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Complex musculoskeletal conditions requiring advanced surgical techniques.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
-            <h3 className="text-lg font-medium text-slate-900">Multi-Specialty Conditions</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Cases requiring coordinated care across multiple medical disciplines.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
-            <h3 className="text-lg font-medium text-slate-900">Diagnostic Uncertainty</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Situations where diagnosis remains unclear despite prior medical evaluation.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <CheckCircle2 className="text-slate-400" size={24} strokeWidth={1.5} />
-            <h3 className="text-lg font-medium text-slate-900">Prior Treatment Failure</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Cases where previous treatment approaches have not achieved expected outcomes.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <p className="text-slate-700 text-lg leading-relaxed max-w-3xl mx-auto">
-            Coordination is structured around medically complex situations where procedural oversight may contribute to treatment clarity.
-          </p>
-        </div>
-      </section>
-
-      {/* Role Clarity - 4 Pillars */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-serif mb-16 text-center">Coordination Role</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div className="space-y-4">
-              <Activity className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
-              <h3 className="text-xl font-medium">Strategic Case Evaluation</h3>
-              <p className="text-slate-400 font-light leading-relaxed text-sm">
-                Comprehensive review of medical documentation, diagnostic findings, and treatment history to establish clinical priorities.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <Users className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
-              <h3 className="text-xl font-medium">Hospital & Specialist Alignment</h3>
-              <p className="text-slate-400 font-light leading-relaxed text-sm">
-                Identification and engagement of appropriate German medical institutions and specialists based on case requirements.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <FileText className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
-              <h3 className="text-xl font-medium">Medical Coordination</h3>
-              <p className="text-slate-400 font-light leading-relaxed text-sm">
-                Structured coordination of clinical appointments, diagnostic procedures, and treatment planning across institutions.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <ShieldCheck className="text-slate-400 mb-4" size={32} strokeWidth={1.5} />
-              <h3 className="text-xl font-medium">Strategic Oversight</h3>
-              <p className="text-slate-400 font-light leading-relaxed text-sm">
-                Ongoing monitoring of treatment progression to ensure adherence to established clinical pathways.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Institutions Trust */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-serif text-slate-900 mb-16 text-center">Institutional Coordination Framework</h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-medium text-slate-900 mb-4">Clinical Pathway Governance</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Structured oversight ensures that treatment pathways adhere to established clinical protocols and institutional standards. Coordination activities are guided by medical evidence and institutional capacity rather than commercial considerations.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-medium text-slate-900 mb-4">Documentation Integrity</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Comprehensive management of medical records, diagnostic imaging, and treatment history ensures continuity of information across institutions. Documentation handling complies with German healthcare data protection standards.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-medium text-slate-900 mb-4">Coordination Across Providers</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Structured communication channels facilitate coordination between referring physicians, German specialists, and institutional administrators. This reduces operational burden while maintaining clinical oversight.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-medium text-slate-900 mb-4">Operational Discretion</h3>
-              <p className="text-slate-600 leading-relaxed">
-                All coordination activities are conducted under strict confidentiality protocols appropriate for diplomatic, governmental, and high-level medical referrals. Case management adheres to international privacy standards.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-medium text-slate-900 mb-4">Alignment with Advanced Healthcare Systems</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Operating within the German healthcare ecosystem enables structured access to university hospitals, specialized centers, and tertiary care facilities. Institutional relationships are based on clinical requirements rather than commercial arrangements.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Representative Case Architectures */}
-      <section className="py-32 px-6 max-w-4xl mx-auto bg-slate-50 border-y border-slate-200">
-        <div className="mb-20">
-          <h2 className="text-4xl font-serif text-slate-900 mb-6">Representative Case Architectures</h2>
-          <p className="text-slate-600 leading-relaxed">Anonymized structural examples demonstrating advisory depth.</p>
-        </div>
-
-        <div className="space-y-16">
-          {/* Case 1 */}
-          <div className="space-y-3">
-            <p className="text-lg text-slate-700 leading-relaxed">
-              International patient with complex oncological presentation<br/>
-              <span className="text-slate-500">→ strategic documentation review</span><br/>
-              <span className="text-slate-500">→ alignment with German university oncology center</span><br/>
-              <span className="text-slate-500">→ multidisciplinary tumor board pathway</span><br/>
-              <span className="text-slate-500">→ coordinated treatment structure</span>
-            </p>
-          </div>
-
-          {/* Case 2 */}
-          <div className="space-y-3">
-            <p className="text-lg text-slate-700 leading-relaxed">
-              Patient presenting with unresolved diagnostic trajectory<br/>
-              <span className="text-slate-500">→ comprehensive medical record analysis</span><br/>
-              <span className="text-slate-500">→ referral to specialized diagnostic institution</span><br/>
-              <span className="text-slate-500">→ definitive diagnosis established</span><br/>
-              <span className="text-slate-500">→ treatment coordination implemented</span>
-            </p>
-          </div>
-
-          {/* Case 3 */}
-          <div className="space-y-3">
-            <p className="text-lg text-slate-700 leading-relaxed">
-              High-risk neurosurgical candidate<br/>
-              <span className="text-slate-500">→ surgical pathway evaluation</span><br/>
-              <span className="text-slate-500">→ engagement with specialized neurosurgical environment</span><br/>
-              <span className="text-slate-500">→ pre-operative structuring</span><br/>
-              <span className="text-slate-500">→ post-operative coordination</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Discretion */}
-      <section className="py-24 px-6 text-center max-w-4xl mx-auto bg-slate-50">
-        <Lock className="mx-auto text-slate-300 mb-6" size={48} strokeWidth={1} />
-        <h2 className="text-2xl md:text-3xl font-serif text-slate-800 mb-6">
-          Confidentiality as Foundational Principle
-        </h2>
-        <p className="text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          All case evaluations and medical coordination activities are conducted under strict confidentiality protocols in accordance with German data protection standards.
-        </p>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Strategic Eligibility */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-20 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Strategic Eligibility</h2>
-          <div className="space-y-6 text-slate-700 leading-relaxed">
-            <p className="text-lg">
-              Advisory engagement is structured around case complexity, medical urgency, documentation readiness, and coordination feasibility within Germany's healthcare system.
-            </p>
-            <p className="text-lg">
-              Advisory engagement is initiated following an internal eligibility review designed to ensure appropriate alignment between medical requirements and coordination pathways.
-            </p>
-            <p className="text-base text-slate-600">
-              The advisory structure is particularly suited for complex medical conditions, multidisciplinary care pathways, time-sensitive treatment scenarios, and diplomatic or sponsored medical channels.
-            </p>
-            <p className="text-base text-slate-500 italic">
-              Submission of medical documentation does not automatically establish advisory engagement.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Professional Interfaces */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-20 bg-white border-y border-slate-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-serif text-slate-900 mb-8 text-center">Professional Interfaces</h2>
-          <div className="space-y-6 text-slate-700 leading-relaxed">
-            <p className="text-lg">
-              Medical Care Germany operates as a coordination interface for referring physicians, medical institutions, diplomatic channels, governmental sponsors, and complex private cases requiring structured access to Germany's healthcare system.
-            </p>
-            <p className="text-lg">
-              Professional access pathways are available for entities seeking structured coordination support for complex medical scenarios within Germany.
-            </p>
-            <p className="text-base text-slate-600">
-              All professional interactions are handled with discretion, procedural clarity, and respect for existing clinical relationships.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PREPARED BUT INACTIVE: Sovereign Operational Tone Signal */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-16 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="space-y-4 text-slate-700 leading-relaxed text-center">
-            <p className="text-lg">
-              Advisory processes are conducted with deliberate attention to clinical detail. Response intervals may reflect the care taken to appropriately review medical context prior to engagement.
-            </p>
-            <p className="text-base text-slate-600">
-              This measured approach supports procedural clarity across complex medical coordination environments.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section id="contact" className="py-24 bg-white border-t border-slate-200">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl font-serif text-center mb-4">Request Strategic Medical Review</h2>
-          <p className="text-center text-slate-600 mb-12">Professional inquiries are received within a structured advisory setting.</p>
-          
-          <Card className="p-8 shadow-sm border-slate-200 bg-white rounded-none">
-            <form className="space-y-6" onSubmit={async (e) => {
-                e.preventDefault();
-                const form = e.target as HTMLFormElement;
-                const formData = new FormData(form);
-                const data = {
-                  fullName: formData.get('fullName') as string,
-                  country: formData.get('country') as string,
-                  medicalSituation: formData.get('medicalSituation') as string,
-                  email: formData.get('email') as string,
-                };
-                
-                await submitCase.mutateAsync(data);
-
-                const card = form.closest('.p-8');
-                if (card) {
-                  card.innerHTML = `
-                    <div class="text-center py-12 space-y-6">
-                      <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
-                      <div class="w-16 h-[1px] bg-slate-200 mx-auto"></div>
-                      <p class="text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
-                        All submissions undergo structured administrative and clinical review prior to coordination acceptance.
-                      </p>
-                      <p class="text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
-                        Response intervals reflect the care taken to appropriately review medical context prior to engagement.
-                      </p>
-                      <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
-                        Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
-                      </p>
-                    </div>
-                  `;
-                }
-              }}>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-700">Full Name</label>
-                  <input name="fullName" type="text" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-700">Country of Origin</label>
-                  <input name="country" type="text" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
-                </div>
+          <Card className="inline-block p-6 bg-white border-slate-200 rounded-none">
+            <div className="flex items-start gap-3 text-slate-600">
+              <Building2 className="w-5 h-5 mt-1 flex-shrink-0" />
+              <div className="text-left">
+                <p className="font-medium text-slate-900 mb-1">Address</p>
+                <p className="text-sm">
+                  Perleberger Str. 41<br/>
+                  10559 Berlin, Germany
+                </p>
               </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700">Email Address</label>
-                <input name="email" type="email" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50" />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700">Medical Situation (Brief Description)</label>
-                <textarea name="medicalSituation" required className="w-full p-3 border border-slate-200 focus:border-slate-400 outline-none transition-colors bg-slate-50 h-32"></textarea>
-              </div>
-
-              <div className="pt-4">
-                <Button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-6 text-base font-light tracking-wide">
-                  Submit for Review
-                </Button>
-              </div>
-              
-              <p className="text-center text-xs text-slate-400 mt-4">
-                Communication is approached with deliberate attention to clinical context.
-              </p>
-              <p className="text-center text-xs text-slate-500 mt-3">
-                Case reviews are conducted in alignment with German clinical governance practices.
-              </p>
-            </form>
+            </div>
           </Card>
         </div>
       </section>
 
-      {/* PREPARED BUT INACTIVE: Procedural Integrity */}
-      {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
-      <section className="hidden py-16 bg-white border-t border-slate-200">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-xl font-serif text-slate-900 mb-6">Procedural Integrity</h2>
-          <div className="space-y-4 text-slate-700 leading-relaxed">
-            <p className="text-base">
-              Operational processes are structured to support responsible medical coordination where clinical, institutional, and cross-border considerations intersect.
-            </p>
-            <p className="text-sm text-slate-600">
-              This environment is particularly suited for cases requiring elevated levels of procedural reliability.
+      {/* SECTION 3: WHO WE ACCEPT */}
+      <section id="acceptance" className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">Selective Case Acceptance</h2>
+          <p className="text-lg text-slate-600 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
+            Engagement is selective and based on strategic case evaluation.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <div className="flex items-start gap-4">
+                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-medium text-slate-900 mb-2">Complex Diagnoses</h3>
+                  <p className="text-sm text-slate-600">Requiring multi-specialty input</p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <div className="flex items-start gap-4">
+                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-medium text-slate-900 mb-2">High-Risk Cases</h3>
+                  <p className="text-sm text-slate-600">Needing senior specialist review</p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <div className="flex items-start gap-4">
+                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-medium text-slate-900 mb-2">Time-Sensitive Situations</h3>
+                  <p className="text-sm text-slate-600">Requiring structured access</p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-8 bg-slate-50 border-slate-200 rounded-none">
+              <div className="flex items-start gap-4">
+                <CheckCircle2 className="w-6 h-6 text-slate-900 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-medium text-slate-900 mb-2">International Patients</h3>
+                  <p className="text-sm text-slate-600">Seeking coordinated pathways within Germany</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+          <div className="bg-slate-100 p-6 rounded-none border-l-4 border-slate-900">
+            <p className="text-sm text-slate-700 leading-relaxed">
+              We do not provide diagnosis via comments or instant chat. Emergency cases require local emergency services.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: COORDINATION MODEL */}
+      <section id="model" className="py-24 px-6 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Coordination Model</h2>
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <Card className="p-8 bg-white border-slate-200 rounded-none">
+              <div className="text-4xl font-serif text-slate-300 mb-4">1</div>
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Case Intake</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Reports, imaging, and a concise symptom timeline
+              </p>
+            </Card>
+            <Card className="p-8 bg-white border-slate-200 rounded-none">
+              <div className="text-4xl font-serif text-slate-300 mb-4">2</div>
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Specialist Review</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Structured review and targeted questions
+              </p>
+            </Card>
+            <Card className="p-8 bg-white border-slate-200 rounded-none">
+              <div className="text-4xl font-serif text-slate-300 mb-4">3</div>
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Proposed Treatment Pathway</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Recommended next diagnostics and treatment direction
+              </p>
+            </Card>
+            <Card className="p-8 bg-white border-slate-200 rounded-none">
+              <div className="text-4xl font-serif text-slate-300 mb-4">4</div>
+              <h3 className="text-xl font-serif text-slate-900 mb-4">Logistics & Admission Support</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Appointments, translation, travel timing, and inpatient/outpatient planning
+              </p>
+            </Card>
+          </div>
+          <div className="bg-slate-100 p-6 rounded-none border-l-4 border-slate-400">
+            <p className="text-sm text-slate-700 leading-relaxed">
+              A "treatment pathway" is a medical direction based on provided documentation and may evolve after in-person assessment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: CONTACT */}
+      <section id="contact" className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Contact</h2>
+          
+          {/* Contact Display */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <p className="text-sm text-slate-500 mb-2">Email</p>
+              <a href="mailto:info@medicalcaregermany.com" className="text-slate-900 hover:underline">
+                info@medicalcaregermany.com
+              </a>
+            </div>
+            <div className="text-center">
+              <p className="text-sm text-slate-500 mb-2">Phone</p>
+              <a href="tel:+493025730875" className="text-slate-900 hover:underline">
+                +49 30 25730875
+              </a>
+            </div>
+            <div className="text-center">
+              <p className="text-sm text-slate-500 mb-2">Address</p>
+              <p className="text-slate-900">
+                Perleberger Str. 41<br/>
+                10559 Berlin, Germany
+              </p>
+            </div>
+          </div>
+
+          <p className="text-lg text-slate-600 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
+            Send your medical reports to receive a professional evaluation by our German medical coordination team.
+          </p>
+
+          {/* Contact Form */}
+          <Card className="p-10 bg-slate-50 border-slate-200 rounded-none contact-form-container">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  className="w-full p-4 border border-slate-300 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Country of Origin</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.country}
+                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  className="w-full p-4 border border-slate-300 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full p-4 border border-slate-300 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Medical Situation (Brief Description)</label>
+                <textarea
+                  required
+                  rows={6}
+                  value={formData.medicalSituation}
+                  onChange={(e) => setFormData({ ...formData, medicalSituation: e.target.value })}
+                  className="w-full p-4 border border-slate-300 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Upload Medical Reports (Optional)</label>
+                <div className="border-2 border-dashed border-slate-300 p-8 text-center bg-white hover:border-slate-400 transition-colors cursor-pointer">
+                  <Upload className="w-8 h-8 text-slate-400 mx-auto mb-3" />
+                  <p className="text-sm text-slate-600 mb-1">Click to upload or drag and drop</p>
+                  <p className="text-xs text-slate-500">PDF, DICOM, JPG, PNG (Max 25MB)</p>
+                  <input type="file" className="hidden" accept=".pdf,.dcm,.jpg,.jpeg,.png" multiple />
+                </div>
+              </div>
+              <Button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-6 text-lg font-medium">
+                Submit for Review
+              </Button>
+            </form>
+          </Card>
         </div>
       </section>
 

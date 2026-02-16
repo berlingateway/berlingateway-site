@@ -90,10 +90,7 @@
   p {
     line-height: 1.75; /* Generous line height for policy document readability */
   }
-  section {
-    padding-top: 8rem; /* Significantly increased white space - air creates authority */
-    padding-bottom: 8rem;
-  }
+  /* Section padding removed - individual sections control their own spacing */
   button {
     transition: none; /* Stillness communicates confidence - no animations */
   }

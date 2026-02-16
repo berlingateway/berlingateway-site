@@ -724,6 +724,16 @@ export default function Home() {
                 By submitting, you consent to the processing of your medical information in accordance with GDPR regulations. Your data is encrypted and accessible only to authorized medical personnel.
               </p>
             </form>
+
+            {/* Temporary Contact Safety Line */}
+            <div className="mt-6 text-center">
+              <p className="text-sm text-slate-600 leading-relaxed">
+                If you experience any technical difficulty submitting the form, please contact us directly at:{' '}
+                <a href="mailto:info@medicalcaregermany.com" className="text-slate-900 hover:underline font-medium">
+                  info@medicalcaregermany.com
+                </a>
+              </p>
+            </div>
           </Card>
         </div>
       </section>

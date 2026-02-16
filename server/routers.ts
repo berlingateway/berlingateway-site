@@ -4,6 +4,8 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { nanoid } from "nanoid";
+import { sendCaseConfirmationEmail } from "./_core/email";
+import { notifyOwner } from "./_core/notification";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -23,12 +25,16 @@ export const appRouter = router({
   case: router({
     submit: publicProcedure
       .input(z.object({
-        fullName: z.string().optional(),
-        country: z.string().optional(),
-        medicalSituation: z.string().optional(),
+        fullName: z.string().min(1, "Full name is required"),
+        country: z.string().min(1, "Country is required"),
+        medicalSituation: z.string().min(10, "Please provide more details about your medical situation"),
       }))
       .mutation(async ({ input }) => {
         const referenceId = nanoid(12).toUpperCase();
+        
+        // Extract email from medicalSituation (format: "Email: xxx@xxx.com\nPhone: ...")
+        const emailMatch = input.medicalSituation.match(/Email:\s*([^\n]+)/);
+        const patientEmail = emailMatch ? emailMatch[1].trim() : null;
         
         // TODO: Store submission in database if needed
         // await db.insert(caseSubmissions).values({
@@ -39,22 +45,30 @@ export const appRouter = router({
         //   createdAt: new Date(),
         // });
 
-        // Send auto-response email (placeholder - requires email service integration)
-        // In production, integrate with your email service (e.g., SendGrid, AWS SES, Resend)
-        console.log('[Case Submission] Auto-response email would be sent:', {
-          referenceId,
-          subject: `Case Submission Confirmation — Reference ID: ${referenceId}`,
-          body: `Your case file has been formally received by the Senior Medical Leadership of Berlin Medical Care.
+        // Send auto-response email to patient
+        if (patientEmail) {
+          const emailSent = await sendCaseConfirmationEmail(
+            patientEmail,
+            referenceId,
+            input.fullName
+          );
+          
+          if (!emailSent) {
+            console.warn(`[Case Submission] Failed to send confirmation email to ${patientEmail}`);
+          }
+        } else {
+          console.warn('[Case Submission] No email found in submission - skipping patient confirmation');
+        }
 
-The submission has entered our structured clinical governance process and is currently undergoing preliminary strategic evaluation.
-
-A formal status notification will be issued within 24–48 hours.
-
-No further action is required at this stage.
-
-—
-This communication is system-generated to ensure the integrity of our case intake protocol.`,
+        // Notify owner about new case submission
+        const ownerNotified = await notifyOwner({
+          title: `New Case Submission — ${referenceId}`,
+          content: `**Reference ID:** ${referenceId}\n\n**Patient:** ${input.fullName}\n**Country:** ${input.country}\n\n**Medical Situation:**\n${input.medicalSituation}\n\n**Patient Email:** ${patientEmail || 'Not provided'}`,
         });
+
+        if (!ownerNotified) {
+          console.warn('[Case Submission] Failed to notify owner - notification service unavailable');
+        }
 
         return {
           success: true,

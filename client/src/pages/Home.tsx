@@ -44,7 +44,7 @@ export default function Home() {
             Structured Access to Germany's<br/>Advanced Hospital System
           </h1>
           <p className="text-lg md:text-xl text-slate-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-            Medical Care Germany is an independent strategic medical advisory headquartered in Berlin. International patients requiring structured access to Germany's advanced hospital system are reviewed for coordination eligibility.
+            Medical Care Germany operates as an independent strategic medical advisory headquartered in Berlin. International patients requiring structured access to Germany's advanced hospital system are evaluated for coordination eligibility.
           </p>
           
           <div className="flex justify-center mb-12">
@@ -67,7 +67,7 @@ export default function Home() {
       <section className="py-6 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-            Trusted for structured medical access by international patients, governmental sponsors, and diplomatic referrals. Operating within the German healthcare ecosystem.
+            Coordination pathways maintained for international patients, governmental sponsors, and diplomatic referrals within the German healthcare ecosystem.
           </p>
         </div>
       </section>
@@ -408,7 +408,7 @@ export default function Home() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif text-slate-900 mb-4">Who We Typically Support</h2>
           <p className="text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Supporting international referrals, diplomatic channels, and medically sponsored cases requiring structured clinical coordination.
+            Coordination maintained for international referrals, diplomatic channels, and medically sponsored cases requiring structured clinical pathways.
           </p>
         </div>
 
@@ -459,7 +459,7 @@ export default function Home() {
 
         <div className="text-center">
           <p className="text-slate-700 text-lg leading-relaxed max-w-3xl mx-auto">
-            We prioritize medically complex situations where structured oversight can significantly improve treatment direction.
+            Coordination is structured around medically complex situations where procedural oversight may contribute to treatment clarity.
           </p>
         </div>
       </section>
@@ -467,7 +467,7 @@ export default function Home() {
       {/* Role Clarity - 4 Pillars */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-serif mb-16 text-center">Our Role</h2>
+          <h2 className="text-3xl font-serif mb-16 text-center">Coordination Role</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div className="space-y-4">
@@ -505,7 +505,7 @@ export default function Home() {
       {/* Why Institutions Trust */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-serif text-slate-900 mb-16 text-center">Why Institutions Trust Structured Medical Advisors</h2>
+          <h2 className="text-3xl font-serif text-slate-900 mb-16 text-center">Institutional Coordination Framework</h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -660,7 +660,7 @@ export default function Home() {
       <section id="contact" className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-3xl font-serif text-center mb-4">Request Strategic Medical Review</h2>
-          <p className="text-center text-slate-600 mb-12">Initial case evaluations are conducted on a selective basis.</p>
+          <p className="text-center text-slate-600 mb-12">Professional inquiries are received within a structured advisory setting.</p>
           
           <Card className="p-8 shadow-sm border-slate-200 bg-white rounded-none">
             <form className="space-y-6" onSubmit={async (e) => {
@@ -684,6 +684,9 @@ export default function Home() {
                       <div class="w-16 h-[1px] bg-slate-200 mx-auto"></div>
                       <p class="text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
                         All submissions undergo structured administrative and clinical review prior to coordination acceptance.
+                      </p>
+                      <p class="text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
+                        Response intervals reflect the care taken to appropriately review medical context prior to engagement.
                       </p>
                       <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
                         Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
@@ -720,7 +723,7 @@ export default function Home() {
               </div>
               
               <p className="text-center text-xs text-slate-400 mt-4">
-                All inquiries are handled with strict confidentiality.
+                Communication is approached with deliberate attention to clinical context.
               </p>
               <p className="text-center text-xs text-slate-500 mt-3">
                 Case reviews are conducted in alignment with German clinical governance practices.
@@ -748,10 +751,12 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 bg-slate-50 text-center border-t border-slate-200">
-        <p className="text-slate-500 text-sm font-serif mb-1">Medical Care Germany</p>
-        <p className="text-slate-400 text-xs">Independent Strategic Medical Advisory • Headquartered in Berlin</p>
-        <p className="text-slate-300 text-xs mt-4">© 2026 Medical Care Germany. Part of Merlin Medical Care Group (BMC).</p>
-        <p className="text-slate-400 text-xs mt-6">Operating within the regulatory and clinical standards of the German healthcare environment.</p>
+        <p className="text-slate-600 text-sm mb-4">Operating within established clinical coordination frameworks.</p>
+        <p className="text-slate-500 text-xs mb-6">Structured advisory presence supporting complex medical pathways.</p>
+        <div className="text-slate-500 text-xs space-y-1">
+          <p>Perleberger Str. 41, 10559 Berlin</p>
+        </div>
+        <p className="text-slate-400 text-xs mt-6">© 2026 Medical Care Germany</p>
       </footer>
 
     </div>

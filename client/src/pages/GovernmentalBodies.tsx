@@ -30,7 +30,7 @@ export default function GovernmentalBodies() {
           For Embassies, Government Sponsors, and Official Referring Bodies
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          Diplomatic missions and sponsoring authorities are provided structured access to Germany's advanced hospital system through coordinated medical advisory and oversight.
+          Diplomatic missions and sponsoring authorities may coordinate structured access to Germany's advanced hospital system through established medical advisory channels.
         </p>
       </section>
 
@@ -39,7 +39,7 @@ export default function GovernmentalBodies() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif text-slate-900 mb-12">Operating Model</h2>
           <p className="text-lg text-slate-700 leading-relaxed mb-8">
-            Medical Care Germany functions as a Berlin-based strategic medical office providing:
+            Medical Care Germany operates as a Berlin-based strategic medical coordination office conducting:
           </p>
           <div className="space-y-4 mb-12">
             <div className="border-l-2 border-slate-300 pl-6">
@@ -65,7 +65,7 @@ export default function GovernmentalBodies() {
             Medical Care Germany does not replace hospitals or physicians.
           </p>
           <p className="text-lg text-slate-700 leading-relaxed">
-            It ensures clarity, structure, and continuity across complex international treatment pathways.
+            Coordination maintains clarity, structure, and continuity across complex international treatment pathways.
           </p>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function GovernmentalBodies() {
       <section className="py-24 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-serif text-slate-900 mb-12">Why Institutions Engage</h2>
         <p className="text-lg text-slate-700 leading-relaxed mb-12">
-          Institutional partners typically require:
+          Institutional coordination typically addresses:
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-6">

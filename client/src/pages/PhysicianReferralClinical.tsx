@@ -36,6 +36,9 @@ export default function PhysicianReferralClinical() {
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
               All submissions undergo structured administrative and clinical review prior to coordination acceptance.
             </p>
+            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
+              Response intervals reflect the care taken to appropriately review medical context prior to engagement.
+            </p>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
               Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
             </p>
@@ -75,16 +78,16 @@ export default function PhysicianReferralClinical() {
           Physician Referral & Clinical Coordination
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
-          Referring physicians are provided support in establishing structured treatment pathways for patients requiring advanced medical care within Germany.
+          Referring physicians may coordinate structured treatment pathways for patients requiring advanced medical care within Germany through established professional channels.
         </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto mb-6">
-          Our role is to facilitate clinical alignment, institutional coordination, and continuity across providers.
+          Coordination facilitates clinical alignment, institutional interfaces, and continuity across providers.
         </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto mb-6">
-          We do not interfere with medical decision-making.
+          Medical decision-making remains under physician oversight.
         </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto">
-          We structure the environment in which medical decisions can be executed efficiently.
+          Coordination structures the operational environment for efficient clinical execution.
         </p>
       </section>
 

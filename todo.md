@@ -351,3 +351,141 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 241)
 - [x] Status: HOLD — PREPARED BUT INACTIVE until authorization is provided
 - [x] Document activation instructions (three-signals-activation-instructions.md)
+
+## Institutional Gravity Signal / Organic Recognition (SYSTEM DIRECTIVE — HOLD)
+- [ ] Create Institutional Gravity Signal (Organic Recognition)
+- [ ] Objective: Embed discreet institutional gravity signal suggesting organic recognition within complex medical coordination environments
+- [ ] Core Strategy: Allow readers to sense that organization is often approached through professional awareness (NOT promotional outreach) WITHOUT explicitly stating reputation or referral strength
+- [ ] Avoid: Reputation claims, recognition language, "known for" statements, referral mentions, leadership positioning, prestige language, visibility claims, market positioning, implied dominance
+- [ ] Primary Institutional Text: "The advisory environment is frequently approached in contexts where thoughtful medical coordination is sought within complex care situations."
+- [ ] Secondary Micro-Signal: "This pattern reflects the importance of structured clinical navigation when medical circumstances extend beyond routine pathways."
+- [ ] Critical Constraints: NO prestige language, NO visibility claims, NO market positioning, NO implied dominance
+- [ ] Tone: Observational, institutional, non-promotional, calm
+- [ ] Psychological Objective: Create subconscious perception that engagement often begins through professional awareness already in motion
+- [ ] Placement: To be determined (likely within Institutional Foundations or near Clinical Pathway Stewardship)
+- [ ] Section Title: To be determined (possibly "Professional Awareness Pathway" or similar)
+- [ ] Implement as HIDDEN (Tailwind 'hidden' class)
+- [ ] Status: HOLD — DO NOT DEPLOY UNTIL FINAL CLEARANCE
+- [ ] Document activation instructions
+
+## Institutional Non-Visibility Signal (SYSTEM DIRECTIVE — HOLD)
+- [ ] Create Institutional Non-Visibility Signal
+- [ ] Objective: Embed subtle institutional non-visibility signal reflecting structurally grounded advisory environment that does NOT rely on promotional presence
+- [ ] Core Strategy: Allow readers to perceive operational substance WITHOUT visible self-assertion
+- [ ] Avoid: Visibility language, leadership claims, prestige positioning, reputation framing, market references, superiority tone, humility signaling, contrast language
+- [ ] Primary Institutional Text: "The advisory structure operates with a deliberate emphasis on clinical substance rather than outward visibility, supporting a composed environment for complex medical coordination."
+- [ ] Secondary Micro-Signal: "This orientation reflects a longstanding procedural focus within demanding care contexts."
+- [ ] Critical Constraints: NO superiority tone, NO humility signaling, NO contrast language
+- [ ] Tone: Functional, institutional, substance-focused, non-promotional
+- [ ] Psychological Objective: Create perception of organization whose presence is defined by function—NOT exposure
+- [ ] Placement: To be determined (likely within Institutional Foundations or near Clinical Pathway Stewardship)
+- [ ] Section Title: To be determined (possibly "Operational Substance" or "Functional Orientation" or similar)
+- [ ] Implement as HIDDEN (Tailwind 'hidden' class)
+- [ ] Status: HOLD — DO NOT EXECUTE UNTIL FINAL RELEASE
+- [ ] Document activation instructions
+
+## Decision-Calming Institutional Layer (SYSTEM DIRECTIVE — HOLD)
+- [ ] Create Decision-Calming Institutional Layer
+- [ ] Objective: Introduce decision-calming institutional layer suggesting that structured advisory environments contribute to clarity during medically complex situations
+- [ ] Core Strategy: Imply stabilizing influence WITHOUT claiming decision authority
+- [ ] Avoid: Control language, outcome promises, leadership framing, intervention terminology, performance claims, effectiveness language, reassurance tone
+- [ ] Primary Institutional Text: "A structured advisory setting may support procedural clarity when medical situations require carefully coordinated consideration across multiple clinical dimensions."
+- [ ] Optional Micro-Signal: "Such environments often help reduce ambiguity during advanced care deliberations."
+- [ ] Critical Constraints: NO performance claims, NO effectiveness language, NO reassurance tone
+- [ ] Tone: Stabilizing, institutional, clarity-focused, non-promissory
+- [ ] Psychological Objective: Position organization as stabilizing presence within complex medical decision landscapes
+- [ ] Placement: To be determined (likely within Institutional Foundations or near Clinical Pathway Stewardship)
+- [ ] Section Title: To be determined (possibly "Advisory Clarity Environment" or "Structured Deliberation Support" or similar)
+- [ ] Implement as HIDDEN (Tailwind 'hidden' class)
+- [ ] Status: HOLD — DO NOT EXECUTE UNTIL AUTHORIZED
+- [ ] Document activation instructions
+
+## Quiet Institutional Continuity Signal (SYSTEM DIRECTIVE — HOLD)
+- [ ] Create Quiet Institutional Continuity Signal
+- [ ] Objective: Establish quiet institutional continuity signal reflecting structural permanence WITHOUT referencing history or longevity
+- [ ] Core Strategy: Allow permanence to be inferred through operational tone
+- [ ] Avoid: Years of experience, legacy language, historical milestones, generational claims, durability claims, heritage positioning, temporal references
+- [ ] Primary Institutional Text: "The advisory framework is sustained through a consistent operational posture designed to support long-horizon medical coordination perspectives."
+- [ ] Secondary Micro-Signal: "This continuity contributes to a dependable institutional setting for complex clinical engagement."
+- [ ] Critical Constraints: NO durability claims, NO heritage positioning, NO temporal references
+- [ ] Tone: Permanent, institutional, continuity-focused, non-historical
+- [ ] Psychological Objective: Create subconscious recognition of structural permanence
+- [ ] Placement: To be determined (likely within Institutional Foundations or near Clinical Pathway Stewardship)
+- [ ] Section Title: To be determined (possibly "Structural Permanence" or "Operational Continuity Framework" or similar)
+- [ ] Implement as HIDDEN (Tailwind 'hidden' class)
+- [ ] Status: HOLD — DO NOT DEPLOY UNTIL FINAL CLEARANCE
+- [ ] Document activation instructions
+
+## Structural Composure Layer (SYSTEM DIRECTIVE — HOLD)
+- [ ] Create Structural Composure Layer
+- [ ] Objective: Create institutional layer that communicates structural composure suitable for professional observation WITHOUT requiring active persuasion
+- [ ] Core Strategy: Allow highly discerning readers to recognize procedural seriousness through environmental tone (NOT explicit statements)
+- [ ] Avoid: Persuasive language, emotional reassurance, hospitality cues, immediacy signals, marketing warmth, invitation tone, encouragement language, accessibility emphasis, trust claims
+- [ ] Primary Institutional Text: "The advisory setting is intentionally structured to support careful professional review, allowing medical considerations to be approached with appropriate deliberation."
+- [ ] Secondary Micro-Signal: "This composed environment reflects the importance of measured evaluation within complex clinical contexts."
+- [ ] Critical Constraints: NO invitation tone, NO encouragement language, NO accessibility emphasis, NO trust claims
+- [ ] Tone: Observational, institutional, measured, professionally distant
+- [ ] Psychological Objective: Ensure highly selective observers encounter environment that feels inherently serious, stable, procedurally grounded
+- [ ] Placement: To be determined (likely within Institutional Foundations or near Strategic Eligibility)
+- [ ] Section Title: To be determined (possibly "Professional Review Environment" or "Measured Evaluation Setting" or similar)
+- [ ] Implement as HIDDEN (Tailwind 'hidden' class)
+- [ ] Status: HOLD — DO NOT EXECUTE UNTIL FINAL AUTHORIZATION
+- [ ] Document activation instructions
+
+## Prior Professional Awareness Signal (SYSTEM DIRECTIVE — HOLD)
+- [ ] Create Prior Professional Awareness Signal
+- [ ] Objective: Embed subtle perception that engagement often occurs within already-established field of professional awareness
+- [ ] Core Strategy: Imply familiarity WITHOUT referencing reputation, referrals, or recognition
+- [ ] Avoid: "Known for" language, referral mentions, prestige cues, leadership positioning, market presence, reputation claims, recognition language, superiority signals
+- [ ] Primary Institutional Text: "Engagement frequently begins within a context of prior professional awareness, where structured medical coordination is already understood as part of the procedural landscape."
+- [ ] Secondary Micro-Signal: "This underlying familiarity supports a composed starting point for complex care discussions."
+- [ ] Critical Constraints: NO reputation claims, NO recognition language, NO superiority signals
+- [ ] Tone: Familiar, institutional, pre-established, non-promotional
+- [ ] Psychological Objective: Create sense that trust often precedes direct interaction
+- [ ] Placement: To be determined (likely within Institutional Foundations or near Professional Interfaces)
+- [ ] Section Title: To be determined (possibly "Established Professional Context" or "Pre-Existing Awareness Field" or similar)
+- [ ] Implement as HIDDEN (Tailwind 'hidden' class)
+- [ ] Status: HOLD — DO NOT EXECUTE UNTIL EXPLICIT CLEARANCE IS PROVIDED
+- [ ] Document activation instructions
+
+## Refined Footer - Quiet Institutional Anchor (SYSTEM DIRECTIVE — HOLD)
+- [ ] Refine Footer into quiet institutional anchor
+- [ ] Objective: Refine footer into quiet institutional anchor reflecting structural seriousness WITHOUT visual heaviness
+- [ ] Core Strategy: Footer should communicate procedural grounding (NOT informational density)
+- [ ] Avoid: Promotional statements, slogans, visibility language, trust claims, marketing phrases, decorative elements, bold authority language, institutional claims, location prestige highlighting
+- [ ] Primary Footer Line: "Operating within established clinical coordination frameworks."
+- [ ] Optional Micro-Line: "Structured advisory presence supporting complex medical pathways."
+- [ ] Address Handling: Display Berlin office address (Perleberger Str. 41, 10559 Berlin) in restrained, professional format WITHOUT emphasis, DO NOT highlight location prestige
+- [ ] Critical Constraints: NO decorative elements, NO bold authority language, NO institutional claims
+- [ ] Tone: Procedural, grounded, restrained, quiet institutional anchor
+- [ ] Psychological Objective: Ensure site closes with procedural gravity (NOT informational noise)
+- [ ] Placement: Global footer component across all pages
+- [ ] Implementation: Replace existing footer content with refined version
+- [ ] Status: HOLD — DO NOT EXECUTE UNTIL RELEASE
+- [ ] Document activation instructions
+
+## Full Website Language Audit - Tonal Restraint (SYSTEM DIRECTIVE — HOLD)
+- [ ] Conduct Full Website Language Audit for Tonal Restraint
+- [ ] Objective: Audit full website language to ensure tonal restraint aligned with sovereign institutional behavior
+- [ ] Core Strategy: Reduce linguistic energy wherever detected
+- [ ] Replace: Enthusiastic phrasing, reassurance language, service warmth, accessibility emphasis, exclamation dynamics, emotional framing, hospitality tone
+- [ ] With: Measured language, procedural language, composed language
+- [ ] Avoid: Exclamation dynamics, emotional framing, hospitality tone
+- [ ] Tone: Sovereign, restrained, procedural, composed, institutionally confident
+- [ ] Psychological Objective: Create environment that feels structurally confident (NOT eager to engage)
+- [ ] Scope: All pages, all components, all text content
+- [ ] Implementation Method: Systematic review and replacement of detected linguistic energy patterns
+- [ ] Status: HOLD — DO NOT EXECUTE UNTIL AUTHORIZATION
+- [ ] Document changes made during audit
+
+## FINAL SYSTEM DIRECTIVE - Sovereign Release Preparation (COMPLETED)
+- [x] 1. Full Tonal Audit - Replace eager/promotional/emotional/hospitality language with institutional/measured/procedural/composed language across ALL pages
+- [x] 2. Engagement Pacing Reinforcement - Subtly reinforce deliberate clinical review rhythms (institutional time, NO urgency, NO immediacy, NO responsiveness promises)
+- [x] 3. Micro-Language Standardization - Remove exclamation dynamics, emphasis phrasing, accessibility warmth, service enthusiasm
+- [x] 4. Contact Interface Verification - Ensure professional entry threshold (NOT open access channel, structured communication, procedurally significant)
+- [x] 5. Footer Refinement - Quiet procedural gravity (NO slogans, NO institutional claims, NO prestige language, structural seriousness)
+- [x] Critical Constraint: DO NOT amplify authority (allow authority to be inferred), DO NOT attempt to impress (stability itself is signal)
+- [x] Psychological Objective: Create environment suggesting institutional permanence, clinical composure, decision-calming presence, sovereign operational posture WITHOUT stating any of them
+- [x] Final Instruction: After implementing refinements - STOP (NO additional enhancements, NO optimizations, NO structural changes)
+- [x] Objective: Perceptual Finality
+- [x] Status: COMPLETED

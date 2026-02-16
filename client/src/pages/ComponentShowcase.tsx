@@ -872,7 +872,7 @@ export default function ComponentsShowcase() {
             <div className="space-y-4">
               <Alert>
                 <AlertCircle className="h-4 w-4" />
-                <AlertTitle>Heads up!</AlertTitle>
+                <AlertTitle>Heads up</AlertTitle>
                 <AlertDescription>
                   You can add components to your app using the cli.
                 </AlertDescription>
@@ -1378,7 +1378,7 @@ export default function ComponentsShowcase() {
                         );
                         sonnerToast.promise(promise, {
                           loading: "Processing...",
-                          success: "Processing complete!",
+                          success: "Processing complete",
                           error: "Processing failed",
                         });
                       }}

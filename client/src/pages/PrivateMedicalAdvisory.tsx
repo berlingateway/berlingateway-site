@@ -35,6 +35,9 @@ export default function PrivateMedicalAdvisory() {
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
               All submissions undergo structured administrative and clinical review prior to coordination acceptance.
             </p>
+            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
+              Response intervals reflect the care taken to appropriately review medical context prior to engagement.
+            </p>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
               Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
             </p>
@@ -86,7 +89,7 @@ export default function PrivateMedicalAdvisory() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif text-slate-900 mb-12 font-normal">Appropriate Clinical Situations</h2>
           <p className="text-lg text-slate-700 leading-relaxed mb-12">
-            This service is appropriate for patients who typically present with:
+            Coordination is structured for patients presenting with:
           </p>
           <div className="space-y-6 mb-16">
             <div className="border-l-2 border-slate-300 pl-8">

@@ -240,6 +240,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HIGH-TRUST MICRO-SECTION - Minimal */}
+      <section className="py-12 md:py-16 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed">
+            For patients, families, and physicians seeking structured medical access in Germany.
+          </p>
+        </div>
+      </section>
+
       {/* SECTION 2: INTRO BLOCK - Institutional Positioning */}
       <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">

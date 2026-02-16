@@ -7,7 +7,14 @@ import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+// Only include editor plugins in development mode
+const isDev = process.env.NODE_ENV === 'development';
+const plugins = [
+  react(),
+  tailwindcss(),
+  // Editor plugins excluded from production build
+  ...(isDev ? [jsxLocPlugin(), vitePluginManusRuntime()] : [])
+];
 
 export default defineConfig({
   plugins,

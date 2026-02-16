@@ -585,3 +585,24 @@
 - [ ] Temporarily disable strict validation if blocking submissions
 - [ ] Deploy fix and run live submission test
 - [ ] Confirm success
+
+## URGENT: Comprehensive Form Submission Fix
+- [ ] Add server-side logging with exact error messages and status codes
+- [ ] Return detailed error information in API response
+- [ ] Decouple email delivery from form submission success
+- [ ] Always accept submission if required fields present
+- [ ] Always generate Reference ID and return success
+- [ ] Wrap SendGrid in try/catch (non-blocking)
+- [ ] Configure FROM_EMAIL = info@medicalcaregermany.com
+- [ ] Configure OWNER_NOTIFY = info@medicalcaregermany.com
+- [ ] Set Reply-To to user's email from form
+- [ ] Add SENDGRID_API_KEY to production env
+- [ ] Add FROM_EMAIL to production env
+- [ ] Add OWNER_NOTIFY to production env
+- [ ] Update UI success message with Reference ID and fallback contact
+- [ ] Update UI error message with fallback contact
+- [ ] Deploy to production
+- [ ] Run live test submission (no file upload first)
+- [ ] Verify success message appears
+- [ ] Verify Reference ID is generated
+- [ ] Check server logs for any errors

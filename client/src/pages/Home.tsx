@@ -29,7 +29,7 @@ export default function Home() {
         ? `\n\nAttached Files (${uploadedFiles.length}): ${uploadedFiles.map(f => f.name).join(', ')}`
         : '';
       
-      await submitCase.mutateAsync({
+      const result = await submitCase.mutateAsync({
         fullName: formData.fullName,
         country: formData.country,
         medicalSituation: `Email: ${formData.email}\nPhone: ${formData.phone}\n\nMedical Situation: ${formData.medicalSituation}${fileInfo}`,
@@ -45,20 +45,23 @@ export default function Home() {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
             </div>
-            <h3 class="text-2xl font-serif text-slate-900">Case Under Physician Review</h3>
+            <h3 class="text-2xl font-serif text-slate-900">Submission Received</h3>
             <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
             <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
-              Your medical reports have been received and entered our structured clinical review process.
+              Reference ID: <strong>${result.referenceId}</strong>
+            </p>
+            <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
+              Your case has been received and entered our structured clinical review process.
             </p>
             <p class="text-slate-500 text-sm">
-              Priority cases are reviewed within 24–48 hours by senior specialists.
+              If you do not receive a confirmation email, please contact: <a href="mailto:info@medicalcaregermany.com" class="text-slate-900 underline">info@medicalcaregermany.com</a>
             </p>
           </div>
         `;
       }
     } catch (error) {
-      toast.error("Submission failed. Please verify your information and try again.");
-      console.error(error);
+      toast.error("Submission failed. Please contact us directly at info@medicalcaregermany.com");
+      console.error('[Form Submission Error]', error);
     }
   };
 

@@ -32,6 +32,14 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         const referenceId = nanoid(12).toUpperCase();
         
+        console.log('[Case Submission] New submission received:', {
+          referenceId,
+          fullName: input.fullName,
+          country: input.country,
+          medicalSituationLength: input.medicalSituation.length,
+          timestamp: new Date().toISOString(),
+        });
+        
         // Extract email from medicalSituation (format: "Email: xxx@xxx.com\nPhone: ...")
         const emailMatch = input.medicalSituation.match(/Email:\s*([^\n]+)/);
         const patientEmail = emailMatch ? emailMatch[1].trim() : null;
@@ -80,6 +88,12 @@ export const appRouter = router({
           // Continue anyway - don't block submission
         }
 
+        console.log('[Case Submission] Submission completed successfully:', {
+          referenceId,
+          patientEmail: patientEmail || 'Not provided',
+          timestamp: new Date().toISOString(),
+        });
+        
         return {
           success: true,
           referenceId,

@@ -27,7 +27,7 @@ export const appRouter = router({
       .input(z.object({
         fullName: z.string().min(1, "Full name is required"),
         country: z.string().min(1, "Country is required"),
-        medicalSituation: z.string().min(10, "Please provide more details about your medical situation"),
+        medicalSituation: z.string().min(1, "Medical situation is required"),
       }))
       .mutation(async ({ input }) => {
         const referenceId = nanoid(12).toUpperCase();
@@ -45,29 +45,39 @@ export const appRouter = router({
         //   createdAt: new Date(),
         // });
 
-        // Send auto-response email to patient
+        // Send auto-response email to patient (non-blocking)
         if (patientEmail) {
-          const emailSent = await sendCaseConfirmationEmail(
-            patientEmail,
-            referenceId,
-            input.fullName
-          );
-          
-          if (!emailSent) {
-            console.warn(`[Case Submission] Failed to send confirmation email to ${patientEmail}`);
+          try {
+            const emailSent = await sendCaseConfirmationEmail(
+              patientEmail,
+              referenceId,
+              input.fullName
+            );
+            
+            if (!emailSent) {
+              console.warn(`[Case Submission] Failed to send confirmation email to ${patientEmail}`);
+            }
+          } catch (error) {
+            console.error('[Case Submission] Email sending error:', error);
+            // Continue anyway - don't block submission
           }
         } else {
           console.warn('[Case Submission] No email found in submission - skipping patient confirmation');
         }
 
-        // Notify owner about new case submission
-        const ownerNotified = await notifyOwner({
-          title: `New Case Submission — ${referenceId}`,
-          content: `**Reference ID:** ${referenceId}\n\n**Patient:** ${input.fullName}\n**Country:** ${input.country}\n\n**Medical Situation:**\n${input.medicalSituation}\n\n**Patient Email:** ${patientEmail || 'Not provided'}`,
-        });
+        // Notify owner about new case submission (non-blocking)
+        try {
+          const ownerNotified = await notifyOwner({
+            title: `New Case Submission — ${referenceId}`,
+            content: `**Reference ID:** ${referenceId}\n\n**Patient:** ${input.fullName}\n**Country:** ${input.country}\n\n**Medical Situation:**\n${input.medicalSituation}\n\n**Patient Email:** ${patientEmail || 'Not provided'}`,
+          });
 
-        if (!ownerNotified) {
-          console.warn('[Case Submission] Failed to notify owner - notification service unavailable');
+          if (!ownerNotified) {
+            console.warn('[Case Submission] Failed to notify owner - notification service unavailable');
+          }
+        } catch (error) {
+          console.error('[Case Submission] Owner notification error:', error);
+          // Continue anyway - don't block submission
         }
 
         return {

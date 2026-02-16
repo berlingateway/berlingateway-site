@@ -573,3 +573,15 @@
 - [x] Add troubleshooting section for common DNS issues
 - [x] Create robots.txt with custom domain
 - [x] Create sitemap.xml with all pages
+
+## URGENT: Form Submission Debug
+- [ ] Run full backend diagnostic for form submission failure
+- [ ] Check form validation rules
+- [ ] Check API connection
+- [ ] Check SendGrid status and configuration
+- [ ] Check DNS records (SPF/DKIM)
+- [ ] Check required fields logic
+- [ ] Review server response logs
+- [ ] Temporarily disable strict validation if blocking submissions
+- [ ] Deploy fix and run live submission test
+- [ ] Confirm success

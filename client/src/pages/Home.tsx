@@ -64,8 +64,8 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Navigation */}
-      <nav className="w-full py-4 px-8 flex justify-between items-center border-b border-slate-100 bg-white">
+      {/* Navigation - Sticky Premium Header */}
+      <nav className="sticky top-0 z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm">
         <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
           Medical Care Germany
         </Link>
@@ -77,23 +77,59 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* SECTION 1: HERO - Single CTA Only */}
-      <section id="hero" className="relative py-20 md:py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* SECTION 1: HERO - Elite Medical Authority Landing */}
+      <section id="hero" className="relative py-16 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-medium leading-tight mb-6">
-            Structured Access to Germany's Most Advanced Medical System
+          {/* H1: Clear Authority Statement */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-6 tracking-tight">
+            Germany's Premier Medical Coordination Authority
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 font-light mb-8">
-            Berlin-based clinical coordination for international patients.
+          
+          {/* Subheadline: Who We Serve + Outcomes */}
+          <p className="text-lg md:text-xl text-slate-300 font-light mb-4 max-w-3xl mx-auto leading-relaxed">
+            Berlin-based clinical coordination for international patients requiring complex, high-priority medical interventions.
           </p>
-          <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Private medical coordination for complex, serious, and high-priority cases.
+          <p className="text-base md:text-lg text-slate-400 font-light mb-10 max-w-2xl mx-auto">
+            Structured pathways to Germany's leading specialists and university hospitals.
           </p>
-          <a href="#contact">
-            <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-12 py-7 text-lg font-medium">
-              Submit Medical Reports
-            </Button>
-          </a>
+          
+          {/* Dual CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a href="#contact">
+              <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg w-full sm:w-auto">
+                Submit Medical Reports
+              </Button>
+            </a>
+            <a href="tel:+493025730875">
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-none px-10 py-6 text-base font-medium w-full sm:w-auto">
+                Request Call
+              </Button>
+            </a>
+          </div>
+          
+          {/* Trust Strip - 5 Trust Signals */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto pt-8 border-t border-slate-700/50">
+            <div className="text-center">
+              <div className="text-sm font-medium text-slate-300 mb-1">Berlin-Based</div>
+              <div className="text-xs text-slate-400">Clinical Coordination</div>
+            </div>
+            <div className="text-center">
+              <div className="text-sm font-medium text-slate-300 mb-1">Senior Specialists</div>
+              <div className="text-xs text-slate-400">Network Access</div>
+            </div>
+            <div className="text-center">
+              <div className="text-sm font-medium text-slate-300 mb-1">Fast Triage</div>
+              <div className="text-xs text-slate-400">48-72h Response</div>
+            </div>
+            <div className="text-center">
+              <div className="text-sm font-medium text-slate-300 mb-1">Multilingual</div>
+              <div className="text-xs text-slate-400">AR • EN • DE</div>
+            </div>
+            <div className="text-center col-span-2 md:col-span-1">
+              <div className="text-sm font-medium text-slate-300 mb-1">Privacy-First</div>
+              <div className="text-xs text-slate-400">GDPR Compliant</div>
+            </div>
+          </div>
         </div>
       </section>
 

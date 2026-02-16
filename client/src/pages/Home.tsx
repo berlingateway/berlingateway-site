@@ -228,6 +228,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INSTITUTIONAL POSITIONING BLOCK - Under Hero */}
+      <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">
+            Clinical Coordination. Institutional Access.
+          </h2>
+          <p className="text-lg md:text-xl text-slate-600 font-light max-w-3xl mx-auto leading-relaxed">
+            Structured pathways into Germany's leading university hospitals and specialist networks.
+          </p>
+        </div>
+      </section>
+
       {/* SECTION 2: INTRO BLOCK - Institutional Positioning */}
       <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
@@ -245,11 +257,129 @@ export default function Home() {
               This framework is designed to reduce procedural uncertainty and ensure continuity across multi-phase medical interventions.
             </p>
           </div>
+          
+          {/* Strategic Positioning Sentence */}
+          <div className="mt-12 pt-8 border-t border-slate-200">
+            <p className="text-xl md:text-2xl font-serif text-slate-900 text-center leading-relaxed max-w-3xl mx-auto">
+              We operate within structured medical networks — not open marketplaces.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* SECTION 3: THE MEDICAL PATH (CRITICAL) */}
+      {/* WHO WE WORK WITH - Institutional Authority */}
       <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Who We Work With</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            
+            {/* University Hospitals */}
+            <div className="text-center">
+              <div className="mb-4">
+                <div className="text-6xl font-serif text-slate-300">01</div>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">University Hospitals</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Established coordination pathways within Germany's leading academic medical centers.
+              </p>
+            </div>
+
+            {/* Specialist Professors */}
+            <div className="text-center">
+              <div className="mb-4">
+                <div className="text-6xl font-serif text-slate-300">02</div>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Specialist Professors</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Direct access to senior-level physicians across complex medical disciplines.
+              </p>
+            </div>
+
+            {/* Certified Medical Centers */}
+            <div className="text-center">
+              <div className="mb-4">
+                <div className="text-6xl font-serif text-slate-300">03</div>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Certified Medical Centers</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Verified specialist environments for advanced diagnostic and treatment procedures.
+              </p>
+            </div>
+
+            {/* Government & Embassy Referrals */}
+            <div className="text-center">
+              <div className="mb-4">
+                <div className="text-6xl font-serif text-slate-300">04</div>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Government & Embassy Referrals</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Structured coordination for institutional and governmental medical cases.
+              </p>
+            </div>
+
+            {/* Complex International Cases */}
+            <div className="text-center col-span-full lg:col-span-1">
+              <div className="mb-4">
+                <div className="text-6xl font-serif text-slate-300">05</div>
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Complex International Cases</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Multi-phase medical interventions requiring cross-institutional coordination.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CLINICAL PROCESS STRIP - Horizontal, Minimal, Clinical */}
+      <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Clinical Process</h2>
+          
+          {/* Horizontal Process Strip */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 max-w-5xl mx-auto">
+            
+            {/* Step 1 */}
+            <div className="flex-1 text-center">
+              <div className="text-sm font-semibold text-slate-400 mb-2">STEP 1</div>
+              <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-1">Case Intelligence Review</h3>
+            </div>
+
+            {/* Arrow */}
+            <div className="hidden md:block text-slate-300 text-2xl">→</div>
+
+            {/* Step 2 */}
+            <div className="flex-1 text-center">
+              <div className="text-sm font-semibold text-slate-400 mb-2">STEP 2</div>
+              <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-1">Specialist Alignment</h3>
+            </div>
+
+            {/* Arrow */}
+            <div className="hidden md:block text-slate-300 text-2xl">→</div>
+
+            {/* Step 3 */}
+            <div className="flex-1 text-center">
+              <div className="text-sm font-semibold text-slate-400 mb-2">STEP 3</div>
+              <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-1">Treatment Pathway Design</h3>
+            </div>
+
+            {/* Arrow */}
+            <div className="hidden md:block text-slate-300 text-2xl">→</div>
+
+            {/* Step 4 */}
+            <div className="flex-1 text-center">
+              <div className="text-sm font-semibold text-slate-400 mb-2">STEP 4</div>
+              <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-1">Medical Entry Coordination</h3>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: THE MEDICAL PATH (LEGACY - HIDDEN) */}
+      <section className="hidden py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">The Medical Path</h2>
           <div className="grid md:grid-cols-5 gap-8">

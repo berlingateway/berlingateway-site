@@ -178,6 +178,24 @@ export default function Home() {
           </p>
         </div>
 
+        {/* PREPARED BUT INACTIVE: Refined Institutional Positioning Layer */}
+        {/* ACTIVATION INSTRUCTION: Remove 'hidden' class to make visible */}
+        <div className="hidden mb-20">
+          <h3 className="text-2xl font-serif text-slate-900 mb-6">Clinical Pathway Stewardship</h3>
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+            Clinical pathways are approached through a structured advisory process designed to support clarity across complex medical situations.
+          </p>
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+            Each case is evaluated within its clinical context to help establish an appropriate coordination pathway aligned with the medical priorities involved.
+          </p>
+          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+            This procedural approach has developed through sustained exposure to multifaceted care environments, where careful navigation across specialties, institutions, and treatment timelines is often required.
+          </p>
+          <p className="text-base text-slate-600 leading-relaxed">
+            Engagement typically centers on supporting well-aligned medical pathways where thoughtful coordination may contribute to overall treatment clarity.
+          </p>
+        </div>
+
         {/* Confidential Case Handling */}
         <div className="mb-20">
           <h3 className="text-2xl font-serif text-slate-900 mb-6">Confidential Case Handling</h3>

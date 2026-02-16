@@ -287,3 +287,20 @@
 - [x] Implement as HIDDEN (Tailwind 'hidden' class on line 199)
 - [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
 - [x] Document activation instructions (advanced-case-pathways-activation-instructions.md)
+
+## Refined Institutional Positioning Layer (PREPARED BUT INACTIVE)
+- [x] Create Refined Institutional Positioning Layer
+- [x] Objective: Communicate structured clinical pathway stewardship WITHOUT implying control, superiority, or decision dominance
+- [x] Core Strategy: Composed advisory environment supporting clarity across complex medical pathways (NOT claiming authority over clinical decisions)
+- [x] Avoid: Treatment design, physician selection control, case ownership, leadership claims, superiority
+- [x] Authority inferred through procedural maturity (NOT stated)
+- [x] Primary Institutional Text: "Clinical pathways are approached through a structured advisory process designed to support clarity across complex medical situations. Each case is evaluated within its clinical context to help establish an appropriate coordination pathway aligned with the medical priorities involved. This procedural approach has developed through sustained exposure to multifaceted care environments, where careful navigation across specialties, institutions, and treatment timelines is often required."
+- [x] Micro Authority Signal: "Engagement typically centers on supporting well-aligned medical pathways where thoughtful coordination may contribute to overall treatment clarity."
+- [x] Critical Constraints: NO promotional tone, NO expertise claims, NO complexity boasting, NO leadership language, NO marketing adjectives
+- [x] Tone: Institutional, clinical, composed, procedural
+- [x] Psychological Objective: Subconscious recognition as stabilizing pathway environment for medically complex scenarios
+- [x] Placement: Within Institutional Foundations section (AFTER Operational Discipline, BEFORE Confidential Case Handling) - Home.tsx lines 181-197
+- [x] Section Title: "Clinical Pathway Stewardship"
+- [x] Implement as HIDDEN (Tailwind 'hidden' class on line 183)
+- [x] Status: HOLD — PREPARED BUT INACTIVE until explicit authorization
+- [x] Document activation instructions (refined-institutional-positioning-activation-instructions.md)

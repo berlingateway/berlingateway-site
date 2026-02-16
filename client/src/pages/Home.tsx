@@ -80,9 +80,12 @@ export default function Home() {
       {/* SECTION 1: HERO - Single CTA Only */}
       <section id="hero" className="relative py-32 md:py-48 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-medium leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl font-serif font-medium leading-tight mb-6">
             Structured Access to Germany's Most Advanced Medical System
           </h1>
+          <p className="text-lg md:text-xl text-slate-400 font-light mb-8">
+            Berlin-based clinical coordination for international patients.
+          </p>
           <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-4xl mx-auto leading-relaxed">
             Private medical coordination for complex, serious, and high-priority cases.
           </p>

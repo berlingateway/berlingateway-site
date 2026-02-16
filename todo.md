@@ -537,3 +537,18 @@
 - [x] GDPR-Level Trust: Enterprise-level security trust validated
 - [x] Production Readiness: Website ready for custom domain connection (https://www.medicalcaregermany.com)
 - [x] Objective: Full HTTPS, lock icon, enterprise-level security trust on production launch - READY
+
+## Clickable Contact Links & Berlin-based Subheadline (COMPLETED)
+- [x] Convert phone number +49 30 25730875 to clickable tel link: `<a href="tel:+493025730875">+49 30 25730875</a>` - Already implemented
+- [x] Convert email info@medicalcaregermany.com to clickable mailto link: `<a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a>` - Already implemented
+- [x] Apply clickable links in: ContactBar component, PremiumFooter component, Home.tsx all sections, Contact.tsx - All already clickable
+- [x] Add Berlin-based subheadline below main headline: "Berlin-based clinical coordination for international patients." - Added to Hero section
+- [x] Verify all clickable links work correctly (tel and mailto) - All working
+
+## Domain Configuration - medicalcaregermany.com as Primary Domain
+- [ ] Set medicalcaregermany.com as primary domain via Management UI → Settings → Domains
+- [ ] Configure automatic www redirect: www.medicalcaregermany.com → https://medicalcaregermany.com (301 permanent redirect)
+- [ ] DNS Configuration at Domain Registrar: A Record (medicalcaregermany.com → Manus IP), CNAME Record (www.medicalcaregermany.com → medicalcaregermany.com)
+- [ ] SSL certificate automatic provisioning by Manus
+- [ ] Verify HTTPS enforcement and browser lock icon
+- [ ] Note: Domain configuration MUST be done via Management UI (NOT via code)

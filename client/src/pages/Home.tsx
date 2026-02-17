@@ -188,9 +188,9 @@ export default function Home() {
             Institutional Medical Authority for International Patients
           </h1>
           
-          {/* DOMINANCE LINE */}
+          {/* HERO AUTHORITY DECLARATION */}
           <p className="text-base md:text-lg text-slate-400 font-normal mb-12 max-w-4xl mx-auto leading-relaxed px-6">
-            Engaged by patients, families, and physicians when medical decisions carry irreversible consequences.
+            Engaged when medical decisions carry irreversible weight.
           </p>
           
           {/* Subheadline: Who We Serve + Outcomes */}
@@ -226,8 +226,8 @@ export default function Home() {
               <div className="text-xs text-slate-400">Network Access</div>
             </div>
             <div className="text-center">
-              <div className="text-sm font-medium text-slate-300 mb-1">Fast Triage</div>
-              <div className="text-xs text-slate-400">48-72h Response</div>
+              <div className="text-sm font-medium text-slate-300 mb-1">Clinical Urgency</div>
+              <div className="text-xs text-slate-400">Priority Review</div>
             </div>
             <div className="text-center">
               <div className="text-sm font-medium text-slate-300 mb-1">Multilingual</div>
@@ -280,9 +280,9 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Strategic Positioning Sentence */}
-          <div className="mt-12 pt-8 border-t border-slate-200">
-            <p className="text-xl md:text-2xl font-serif text-slate-900 text-center leading-relaxed max-w-3xl mx-auto">
+          {/* GATEKEEPER STATEMENT - Protected with whitespace */}
+          <div className="mt-20 pt-16 border-t border-slate-200">
+            <p className="text-xl md:text-2xl font-serif text-slate-900 text-center leading-relaxed max-w-3xl mx-auto mb-16">
               We operate within structured medical networks — not open marketplaces.
             </p>
           </div>

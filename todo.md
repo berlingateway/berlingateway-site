@@ -654,3 +654,10 @@
 - [x] 3️⃣ CONTENT: Formal medical Arabic tone, institutional positioning, no sales language
 - [x] 4️⃣ CANONICAL: Add canonical tag pointing to English homepage
 - [x] 5️⃣ GOAL: Appear globally institutional, remain selectively discoverable, avoid mass-market perception
+
+## Institutional Web Execution Engine - STRICT IMPLEMENTATION
+- [x] 1️⃣ HERO AUTHORITY DECLARATION: Place "Engaged when medical decisions carry irreversible weight." directly under main headline (standalone, no bold, no icons, large whitespace)
+- [x] 2️⃣ REMOVE OPERATIONAL TIME LANGUAGE: Delete "24-48h review" / "48-72h response", replace with "Priority cases are reviewed with clinical urgency."
+- [x] 3️⃣ STANDARDIZE ALL CTAs: Replace ALL submission buttons with "Submit Case for Clinical Review" (procedural, not promotional)
+- [x] 4️⃣ PRESERVE GATEKEEPER STATEMENT: Ensure "We operate within structured medical networks — not open marketplaces." has increased whitespace, no bold, quiet authority
+- [x] 5️⃣ MAINTAIN ENGLISH-ONLY PERCEPTION: Arabic content indexed/crawlable but hidden from navigation, not selectable, not visible in menus

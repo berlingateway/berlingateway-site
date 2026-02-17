@@ -115,9 +115,12 @@ export default function Home() {
       
       {/* Navigation - Sticky Premium Header */}
       <nav className="sticky top-0 z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm">
-        <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
-          Medical Care Germany
-        </Link>
+        <div className="flex flex-col">
+          <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
+            Medical Care Germany
+          </Link>
+          <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">Institutional Clinical Coordination Authority</span>
+        </div>
         <div className="hidden md:flex gap-10 text-sm text-slate-500">
           <Link href="/physician-referral-clinical" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
           <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
@@ -578,7 +581,7 @@ export default function Home() {
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                    placeholder="John Doe"
+                    placeholder="Faisal Al-Qahtani"
                   />
                 </div>
                 <div>
@@ -613,6 +616,7 @@ export default function Home() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
+                    defaultValue="+966 "
                     placeholder="+966 50 123 4567"
                   />
                 </div>

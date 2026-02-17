@@ -661,3 +661,8 @@
 - [x] 3️⃣ STANDARDIZE ALL CTAs: Replace ALL submission buttons with "Submit Case for Clinical Review" (procedural, not promotional)
 - [x] 4️⃣ PRESERVE GATEKEEPER STATEMENT: Ensure "We operate within structured medical networks — not open marketplaces." has increased whitespace, no bold, quiet authority
 - [x] 5️⃣ MAINTAIN ENGLISH-ONLY PERCEPTION: Arabic content indexed/crawlable but hidden from navigation, not selectable, not visible in menus
+
+## Global HTML Title Tag Replacement
+- [x] Replace primary title tag in client/index.html with EXACT specification: "Medical Care Germany | Strategic Medical Authority for Complex Cases"
+- [x] Ensure no variations, no location modifiers, no marketing phrases
+- [ ] Request Google re-indexing via Search Console after deployment

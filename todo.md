@@ -632,3 +632,10 @@
 - [x] PATCH C: Update discretion micro-copy under form
 - [x] PATCH D: Refine visual gravity in Authority Injection section
 - [x] Verify governance checklist (brand name, typography, palette, no marketing)
+
+## THE MASTER IMPLEMENTATION DIRECTIVE - Final Authority Upgrade
+- [x] 1️⃣ INSERT DOMINANCE LINE: Add "Engaged by patients, families, and physicians when medical decisions carry irreversible consequences." below main headline
+- [x] 2️⃣ INSERT AUTHORITY INJECTION: Create "Where Medical Complexity Meets Institutional Discipline" section after Philosophy with 3 bullet-less lines
+- [x] 3️⃣ UPGRADE INTAKE FILTER: Change form header to "Case Submission for Strategic Review", add Diagnosis Status and Treatment Objective dropdowns, update CTA to "SUBMIT CASE FOR CLINICAL REVIEW"
+- [x] 4️⃣ INSERT SILENT DOMINANCE: Add "Consulted by decision-makers seeking clarity before irreversible medical steps." in footer (smallest font, low contrast)
+- [x] 5️⃣ EXECUTE TONE CHECK: Remove marketing adjectives (excellent, best, outstanding), replace with institutional terms (rigorous, structured, aligned)

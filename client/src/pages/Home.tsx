@@ -15,6 +15,8 @@ export default function Home() {
     country: "",
     email: "",
     phone: "",
+    diagnosisStatus: "",
+    treatmentObjective: "",
     medicalSituation: "",
   });
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
@@ -32,7 +34,7 @@ export default function Home() {
       const result = await submitCase.mutateAsync({
         fullName: formData.fullName,
         country: formData.country,
-        medicalSituation: `Email: ${formData.email}\nPhone: ${formData.phone}\n\nMedical Situation: ${formData.medicalSituation}${fileInfo}`,
+        medicalSituation: `Email: ${formData.email}\nPhone: ${formData.phone}\nDiagnosis Status: ${formData.diagnosisStatus}\nTreatment Objective: ${formData.treatmentObjective}\n\nMedical Situation: ${formData.medicalSituation}${fileInfo}`,
       });
 
       const form = e.target as HTMLFormElement;
@@ -182,9 +184,14 @@ export default function Home() {
       <section id="hero" className="relative py-16 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
           {/* H1: Clear Authority Statement */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-8 tracking-tight">
             Institutional Medical Authority for International Patients
           </h1>
+          
+          {/* DOMINANCE LINE */}
+          <p className="text-base md:text-lg text-slate-400 font-normal mb-12 max-w-4xl mx-auto leading-relaxed px-6">
+            Engaged by patients, families, and physicians when medical decisions carry irreversible consequences.
+          </p>
           
           {/* Subheadline: Who We Serve + Outcomes */}
           <p className="text-lg md:text-xl text-slate-300 font-light mb-4 max-w-3xl mx-auto leading-relaxed">
@@ -238,7 +245,7 @@ export default function Home() {
       <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg md:text-xl text-slate-700 font-light max-w-4xl mx-auto leading-relaxed mb-6">
-            Operating as a cross-border medical authority, we structure priority access to Germany's leading specialists, university hospitals, and advanced treatment pathways.
+            Operating as a cross-border medical authority, we structure priority access to Germany's rigorous specialist networks, university hospitals, and aligned treatment pathways.
           </p>
           <p className="text-base md:text-lg text-slate-600 font-light max-w-4xl mx-auto leading-relaxed">
             Trusted by international patients, referring physicians, and institutional partners seeking structured medical coordination.
@@ -282,6 +289,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AUTHORITY INJECTION - Where Medical Complexity Meets Institutional Discipline */}
+      <section className="py-20 md:py-28 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-serif mb-16 text-center text-slate-900">
+            Where Medical Complexity Meets Institutional Discipline
+          </h2>
+          <div className="space-y-10 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed text-center">
+              Consulted before high-risk surgical or clinical interventions.
+            </p>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed text-center">
+              Coordinating cross-border care for patients requiring precision, discretion, and structured oversight.
+            </p>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed text-center">
+              Directing multidisciplinary alignment within Germany's rigorous university hospital systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* WHO WE WORK WITH - Institutional Authority */}
       <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-5xl mx-auto">
@@ -296,7 +323,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold text-slate-900 mb-2">University Hospitals</h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Established coordination pathways within Germany's leading academic medical centers.
+                Established coordination pathways within Germany's structured academic medical centers.
               </p>
             </div>
 
@@ -544,7 +571,7 @@ export default function Home() {
       {/* SECTION 6: CONTACT (Simplified) */}
       <section id="contact" className="py-16 md:py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Submit Medical Reports</h2>
+          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Case Submission for Strategic Review</h2>
 
           {/* Medical Submission Form - Frictionless Flow */}
           <Card className="p-10 bg-white border border-slate-200 shadow-sm rounded-none contact-form-container">
@@ -617,6 +644,38 @@ export default function Home() {
                     placeholder="+966 50 123 4567"
                   />
                 </div>
+              </div>
+
+              {/* Diagnosis Status */}
+              <div>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Diagnosis Status *</label>
+                <select
+                  required
+                  value={formData.diagnosisStatus}
+                  onChange={(e) => setFormData({ ...formData, diagnosisStatus: e.target.value })}
+                  className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
+                >
+                  <option value="">Select diagnosis status</option>
+                  <option value="formal_diagnosis">Formal diagnosis received</option>
+                  <option value="under_investigation">Currently under medical investigation</option>
+                  <option value="seeking_direction">Seeking diagnostic direction</option>
+                </select>
+              </div>
+
+              {/* Treatment Objective */}
+              <div>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Treatment Objective *</label>
+                <select
+                  required
+                  value={formData.treatmentObjective}
+                  onChange={(e) => setFormData({ ...formData, treatmentObjective: e.target.value })}
+                  className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
+                >
+                  <option value="">Select treatment objective</option>
+                  <option value="second_opinion">Independent medical second opinion</option>
+                  <option value="full_coordination">Full treatment coordination in Germany</option>
+                  <option value="pathway_review">Strategic pathway review</option>
+                </select>
               </div>
 
               {/* Medical Situation */}
@@ -755,6 +814,11 @@ export default function Home() {
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
+          
+          {/* SILENT DOMINANCE */}
+          <p className="text-xs text-slate-600 mt-6 max-w-2xl mx-auto leading-relaxed">
+            Consulted by decision-makers seeking clarity before irreversible medical steps.
+          </p>
         </div>
       </footer>
 

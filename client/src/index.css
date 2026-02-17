@@ -133,13 +133,3 @@
   }
 }
 
-/* Hide any link mentioning Manus - Platform Branding Removal */
-a[href*="manus"], 
-a[href*="Manus"] { 
-  display: none !important; 
-}
-
-/* Hide any element that contains Manus links */
-*:has(a[href*="manus"]) { 
-  display: none !important; 
-}

@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "path";
 import { defineConfig } from "vite";
-import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+// Platform runtime code removed
 
 // ============================================================================
 // STRICT PRODUCTION BUILD CONFIGURATION
@@ -45,8 +45,8 @@ if (!isDevelopment && (NODE_ENV !== 'production' && VITE_MODE !== 'production'))
 
 // Layer 6: Plugin Configuration (strict isolation)
 const editorPlugins = isDevelopment ? [
-  jsxLocPlugin(),
-  vitePluginManusRuntime()
+  jsxLocPlugin()
+  // Platform runtime code removed
 ] : [];
 
 // Layer 7: Core Plugins (always loaded)
@@ -73,7 +73,7 @@ console.log(`Disable Editor:     ${DISABLE_EDITOR}`);
 console.log(`Is Production:      ${isProduction}`);
 console.log(`Is Development:     ${isDevelopment}`);
 console.log(`Core Plugins:       ${corePlugins.length} (react, tailwindcss)`);
-console.log(`Editor Plugins:     ${editorPlugins.length} ${isDevelopment ? '(jsxLocPlugin, vitePluginManusRuntime)' : '(DISABLED)'}`);
+console.log(`Editor Plugins:     ${editorPlugins.length} ${isDevelopment ? '(jsxLocPlugin)' : '(DISABLED)'}`);
 console.log(`Total Plugins:      ${plugins.length}`);
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
@@ -113,13 +113,10 @@ export default defineConfig({
   server: {
     host: true,
     allowedHosts: [
-      ".manuspre.computer",
-      ".manus.computer",
-      ".manus-asia.computer",
-      ".manuscomputer.ai",
-      ".manusvm.computer",
       "localhost",
       "127.0.0.1",
+      "medicalcaregermany.com",
+      ".medicalcaregermany.com"
     ],
     fs: {
       strict: true,

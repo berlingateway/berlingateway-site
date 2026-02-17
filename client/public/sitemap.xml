@@ -7,9 +7,17 @@
   <!-- Home Page -->
   <url>
     <loc>https://www.medicalcaregermany.com/</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Hidden Arabic SEO Landing Page (Indexed but not in navigation) -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/ar</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Contact Page -->

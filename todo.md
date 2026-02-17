@@ -639,3 +639,18 @@
 - [x] 3️⃣ UPGRADE INTAKE FILTER: Change form header to "Case Submission for Strategic Review", add Diagnosis Status and Treatment Objective dropdowns, update CTA to "SUBMIT CASE FOR CLINICAL REVIEW"
 - [x] 4️⃣ INSERT SILENT DOMINANCE: Add "Consulted by decision-makers seeking clarity before irreversible medical steps." in footer (smallest font, low contrast)
 - [x] 5️⃣ EXECUTE TONE CHECK: Remove marketing adjectives (excellent, best, outstanding), replace with institutional terms (rigorous, structured, aligned)
+
+## Chief Institutional Web Architect - Authority & SEO Patches
+- [ ] PATCH 1: Replace "24-48 hours" timestamp with "Priority cases are reviewed with clinical urgency."
+- [ ] PATCH 2: Standardize ALL CTAs to "Submit Case for Clinical Review" (remove "Submit Medical Reports", "Send", "Contact")
+- [ ] PATCH 3: Elevate gatekeeper statement "We operate within structured medical networks" with increased whitespace (no bold, no enlargement)
+- [ ] PATCH 4: Insert "Trusted when medical decisions carry human weight." in strategic location (beneath hero OR above form OR end of Philosophy)
+- [ ] PATCH 5: Implement high-intent SEO foundation (long-tail keywords: medical second opinion Germany, complex case evaluation, cross-border coordination)
+- [ ] PATCH 6: Create hidden Arabic SEO landing page (not in main nav, formal medical tone, institutional CTA)
+
+## Institutional SEO Governor - Arabic Search Discoverability
+- [x] 1️⃣ VERIFY: No Arabic in main navigation, header menus, footer menus, or language switchers
+- [x] 2️⃣ CREATE: Hidden Arabic SEO landing page (crawlable, indexed, not in navigation)
+- [x] 3️⃣ CONTENT: Formal medical Arabic tone, institutional positioning, no sales language
+- [x] 4️⃣ CANONICAL: Add canonical tag pointing to English homepage
+- [x] 5️⃣ GOAL: Appear globally institutional, remain selectively discoverable, avoid mass-market perception

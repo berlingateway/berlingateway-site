@@ -148,7 +148,7 @@ export default function Home() {
           <div className="mb-8">
             <a href="#contact">
               <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none px-12 py-7 text-lg font-medium shadow-lg">
-                Submit Medical Reports
+                Submit Case for Clinical Review
               </Button>
             </a>
           </div>
@@ -175,7 +175,7 @@ export default function Home() {
           
           {/* Urgency Trigger */}
           <div className="mt-6 text-sm text-slate-500 font-light">
-            Priority cases reviewed within 24–48 hours.
+            Priority cases are reviewed with clinical urgency.
           </div>
         </div>
       </section>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a href="#contact">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg w-full sm:w-auto">
-                Submit Medical Reports
+                Submit Case for Clinical Review
               </Button>
             </a>
             <a href="tel:+493025730875">

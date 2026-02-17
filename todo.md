@@ -606,3 +606,22 @@
 - [ ] Verify success message appears
 - [ ] Verify Reference ID is generated
 - [ ] Check server logs for any errors
+
+## Dashboard UI Issues
+- [ ] Investigate non-clickable tabs in Management UI (Backend, Database, Settings)
+- [ ] Check for JavaScript overlay or z-index blocking issues
+- [ ] Verify no CSS conflicts preventing tab clicks
+- [ ] Test dashboard after clearing browser cache
+- [ ] Ensure no React errors blocking UI interactions
+
+## CORS Fix & Form Submission (COMPLETED)
+- [x] Install cors package (@types/cors)
+- [x] Add CORS middleware to server/_core/index.ts
+- [x] Configure allowed origins (www.medicalcaregermany.com, medicalcaregermany.com, dev domains)
+- [x] Enable credentials for authentication cookies
+- [x] Configure allowed methods and headers
+- [x] Create test file for case submission endpoint (server/case.submit.test.ts)
+- [x] Run tests and verify all pass (6/6 tests passed)
+- [x] Test form submission on dev preview
+- [x] Verify no CORS errors in console
+- [x] Confirm successful submission with Reference ID

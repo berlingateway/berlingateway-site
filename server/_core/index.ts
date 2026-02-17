@@ -3,6 +3,7 @@ import express from "express";
 import { createServer } from "http";
 import net from "net";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
@@ -97,6 +98,25 @@ async function startServer() {
   
   // Cookie parser for CSRF token handling
   app.use(cookieParser());
+
+  // CORS Configuration - Allow custom domain and development origins
+  const allowedOrigins: (string | RegExp)[] = [
+    'https://www.medicalcaregermany.com',
+    'https://medicalcaregermany.com',
+  ];
+  
+  if (process.env.NODE_ENV === 'development') {
+    allowedOrigins.push('http://localhost:3000');
+    allowedOrigins.push(/\.manus\.computer$/); // Allow Manus dev preview domains
+  }
+
+  app.use(cors({
+    origin: allowedOrigins,
+    credentials: true, // Allow cookies for authentication
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie', 'X-Requested-With'],
+    exposedHeaders: ['Set-Cookie'],
+  }));
   
   // CSRF Protection Middleware (for non-API routes)
   // Note: tRPC handles its own security through superjson and type-safe procedures

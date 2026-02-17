@@ -625,3 +625,10 @@
 - [x] Test form submission on dev preview
 - [x] Verify no CORS errors in console
 - [x] Confirm successful submission with Reference ID
+
+## Final Micro-Surgery Upgrades - Institutional Authority
+- [x] PATCH A: Update form CTA to "Submit Case for Clinical Review"
+- [x] PATCH B: Add institution-to-institution signal on Professional Referrals page
+- [x] PATCH C: Update discretion micro-copy under form
+- [x] PATCH D: Refine visual gravity in Authority Injection section
+- [x] Verify governance checklist (brand name, typography, palette, no marketing)

@@ -84,6 +84,9 @@ export default function PhysicianReferralClinical() {
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
           Referring physicians may coordinate structured treatment pathways for patients requiring advanced medical care within Germany through established professional channels.
         </p>
+        <p className="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto mb-8">
+          We act as the clinical bridge between international decision-makers and Germany's university-hospital infrastructure.
+        </p>
         <p className="text-lg text-slate-500 leading-relaxed max-w-3xl mx-auto mb-6">
           Coordination facilitates clinical alignment, institutional interfaces, and continuity across providers.
         </p>

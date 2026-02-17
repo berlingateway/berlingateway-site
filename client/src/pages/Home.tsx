@@ -507,14 +507,13 @@ export default function Home() {
       </section>
 
       {/* SECTION 5: DIFFERENTIATION BLOCK */}
-      <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
+      <section className="py-24 md:py-32 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-12 text-center text-slate-900">
             Why Structured Medical Coordination Matters
           </h2>
-          <div className="space-y-8">
-            <div className="flex items-start gap-6">
-              <div className="w-2 h-2 bg-slate-900 rounded-full mt-2 flex-shrink-0"></div>
+          <div className="space-y-12">
+            <div>
               <div>
                 <h3 className="text-lg font-medium text-slate-900 mb-2">Reduces Diagnostic Delay</h3>
                 <p className="text-slate-600 leading-relaxed">
@@ -522,8 +521,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-6">
-              <div className="w-2 h-2 bg-slate-900 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
               <div>
                 <h3 className="text-lg font-medium text-slate-900 mb-2">Connects to Advanced Treatment Environments</h3>
                 <p className="text-slate-600 leading-relaxed">
@@ -531,8 +529,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-6">
-              <div className="w-2 h-2 bg-slate-900 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
               <div>
                 <h3 className="text-lg font-medium text-slate-900 mb-2">Ensures Physician-Level Oversight</h3>
                 <p className="text-slate-600 leading-relaxed">
@@ -723,12 +720,12 @@ export default function Home() {
                 disabled={submitCase.isPending}
                 className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-7 text-lg font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {submitCase.isPending ? 'Submitting...' : 'Submit for Physician Review'}
+                {submitCase.isPending ? 'Submitting...' : 'Submit Case for Clinical Review'}
               </Button>
 
               {/* Privacy Notice */}
               <p className="text-xs text-slate-500 text-center leading-relaxed">
-                By submitting, you consent to the processing of your medical information in accordance with GDPR regulations. Your data is encrypted and accessible only to authorized medical personnel.
+                All submissions are handled under strict clinical confidentiality protocols.
               </p>
             </form>
 

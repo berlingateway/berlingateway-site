@@ -674,3 +674,17 @@
 - [ ] Check form submission endpoint actively calls SendGrid
 - [ ] Analyze server logs for SendGrid response errors
 - [ ] Identify exact failure point (no assumptions)
+
+## Institutional Authority Upgrade - Precision Implementation
+- [ ] 1) DOMINANCE LINE: Verify "Engaged by patients, families, and physicians when medical decisions carry irreversible consequences." exists under hero headline
+- [ ] 2) AUTHORITY SIGNALS: Add bullet block (Complex Neurological Pathways, High-Risk Surgical Decisions, Cross-Border Treatment Governance) to "How We Operate" section
+- [ ] 3) SERIOUSNESS FILTER: Add "Current Diagnosis Stage" and "Primary Objective" dropdowns to contact form, change submit to "SUBMIT CASE FOR CLINICAL REVIEW"
+- [ ] 4) NAVIGATION STRUCTURE: Add menu (Home, Governance, How We Operate, Submit Case, Contact) with smooth scroll anchors
+- [ ] 5) SOVEREIGN SIGNATURE: Add "Consulted by decision-makers seeking clarity before irreversible medical steps." above footer copyright
+
+## Institutional Authority Upgrade - Precision Implementation ✅
+- [x] 1️⃣ DOMINANCE LINE: "Engaged by patients, families, and physicians when medical decisions carry irreversible consequences." (directly under main headline, smaller font, subtle)
+- [x] 2️⃣ AUTHORITY SIGNALS: Add bullet block in "How We Operate" section (Complex Neurological Pathways, High-Risk Surgical Decisions, Cross-Border Treatment Governance)
+- [x] 3️⃣ SERIOUSNESS FILTER: Add "Current Diagnosis Stage" and "Primary Objective" dropdowns to contact form, change submit button to "SUBMIT CASE FOR CLINICAL REVIEW"
+- [x] 4️⃣ NAVIGATION STRUCTURE: Add top menu anchors (Home, Governance, How We Operate, Submit Case, Contact) with smooth scroll
+- [x] 5️⃣ SOVEREIGN SIGNATURE: Add "Consulted by decision-makers seeking clarity before irreversible medical steps." in footer (small font, light grey, non-promotional)

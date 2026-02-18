@@ -124,10 +124,11 @@ export default function Home() {
           <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">Institutional Clinical Coordination Authority</span>
         </div>
         <div className="hidden md:flex gap-10 text-sm text-slate-500">
-          <Link href="/physician-referral-clinical" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
-          <Link href="/governmental-bodies" className="hover:text-slate-900 transition-colors">Embassies & Government</Link>
-          <Link href="/private-medical-advisory" className="hover:text-slate-900 transition-colors">Private Advisory</Link>
-          <Link href="/institutional-framework" className="hover:text-slate-900 transition-colors">Framework</Link>
+          <a href="#home" className="hover:text-slate-900 transition-colors cursor-pointer">Home</a>
+          <a href="#governance" className="hover:text-slate-900 transition-colors cursor-pointer">Governance</a>
+          <a href="#how-we-operate" className="hover:text-slate-900 transition-colors cursor-pointer">How We Operate</a>
+          <a href="#submit-case" className="hover:text-slate-900 transition-colors cursor-pointer">Submit Case</a>
+          <a href="#contact" className="hover:text-slate-900 transition-colors cursor-pointer">Contact</a>
         </div>
       </nav>
 
@@ -181,7 +182,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 1: HERO - Elite Medical Authority Landing */}
-      <section id="hero" className="relative py-16 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section id="home" className="relative py-16 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
           {/* H1: Clear Authority Statement */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-8 tracking-tight">
@@ -190,7 +191,7 @@ export default function Home() {
           
           {/* HERO AUTHORITY DECLARATION */}
           <p className="text-base md:text-lg text-slate-400 font-normal mb-12 max-w-4xl mx-auto leading-relaxed px-6">
-            Engaged when medical decisions carry irreversible weight.
+            Engaged by patients, families, and physicians when medical decisions carry irreversible consequences.
           </p>
           
           {/* Subheadline: Who We Serve + Outcomes */}
@@ -290,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* AUTHORITY INJECTION - Where Medical Complexity Meets Institutional Discipline */}
-      <section className="py-20 md:py-28 px-6 bg-slate-50 border-b border-slate-200">
+      <section id="governance" className="py-20 md:py-28 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-serif mb-16 text-center text-slate-900">
             Where Medical Complexity Meets Institutional Discipline
@@ -376,9 +377,16 @@ export default function Home() {
       </section>
 
       {/* CLINICAL PROCESS STRIP - Horizontal, Minimal, Clinical */}
-      <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
+      <section id="how-we-operate" className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Clinical Process</h2>
+          <h2 className="text-3xl md:text-4xl font-serif mb-12 text-center text-slate-900">Clinical Process</h2>
+          
+          {/* AUTHORITY SIGNALS */}
+          <div className="max-w-3xl mx-auto mb-16 space-y-2 text-center">
+            <p className="text-sm text-slate-600">• Complex Neurological Pathways</p>
+            <p className="text-sm text-slate-600">• High-Risk Surgical Decisions</p>
+            <p className="text-sm text-slate-600">• Cross-Border Treatment Governance</p>
+          </div>
           
           {/* Horizontal Process Strip */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 max-w-5xl mx-auto">
@@ -568,9 +576,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 6: CONTACT (Simplified) */}
-      <section id="contact" className="py-16 md:py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+      {/* SECTION 6:      {/* CONTACT FORM */}
+      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white">        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Case Submission for Strategic Review</h2>
 
           {/* Medical Submission Form - Frictionless Flow */}
@@ -648,33 +655,35 @@ export default function Home() {
 
               {/* Diagnosis Status */}
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Diagnosis Status *</label>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Current Diagnosis Stage *</label>
                 <select
                   required
                   value={formData.diagnosisStatus}
                   onChange={(e) => setFormData({ ...formData, diagnosisStatus: e.target.value })}
                   className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
                 >
-                  <option value="">Select diagnosis status</option>
-                  <option value="formal_diagnosis">Formal diagnosis received</option>
-                  <option value="under_investigation">Currently under medical investigation</option>
-                  <option value="seeking_direction">Seeking diagnostic direction</option>
+                  <option value="">Select diagnosis stage</option>
+                  <option value="confirmed_diagnosis">Confirmed Diagnosis</option>
+                  <option value="suspected_condition">Suspected Condition</option>
+                  <option value="second_opinion_required">Second Opinion Required</option>
+                  <option value="undiagnosed">Undiagnosed</option>
                 </select>
               </div>
 
               {/* Treatment Objective */}
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Treatment Objective *</label>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Primary Objective *</label>
                 <select
                   required
                   value={formData.treatmentObjective}
                   onChange={(e) => setFormData({ ...formData, treatmentObjective: e.target.value })}
                   className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
                 >
-                  <option value="">Select treatment objective</option>
-                  <option value="second_opinion">Independent medical second opinion</option>
-                  <option value="full_coordination">Full treatment coordination in Germany</option>
-                  <option value="pathway_review">Strategic pathway review</option>
+                  <option value="">Select primary objective</option>
+                  <option value="treatment_planning">Treatment Planning</option>
+                  <option value="surgical_evaluation">Surgical Evaluation</option>
+                  <option value="advanced_diagnostics">Advanced Diagnostics</option>
+                  <option value="cross_border_transfer">Cross-Border Transfer</option>
                 </select>
               </div>
 

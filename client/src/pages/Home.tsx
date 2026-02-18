@@ -126,7 +126,7 @@ export default function Home() {
         <div className="hidden md:flex gap-10 text-sm text-slate-500">
           <a href="#home" className="hover:text-slate-900 transition-colors cursor-pointer">Home</a>
           <a href="#governance" className="hover:text-slate-900 transition-colors cursor-pointer">Governance</a>
-          <a href="#how-we-operate" className="hover:text-slate-900 transition-colors cursor-pointer">How We Operate</a>
+          <a href="#operations" className="hover:text-slate-900 transition-colors cursor-pointer">How We Operate</a>
           <a href="#submit-case" className="hover:text-slate-900 transition-colors cursor-pointer">Submit Case</a>
           <a href="#contact" className="hover:text-slate-900 transition-colors cursor-pointer">Contact</a>
         </div>
@@ -291,7 +291,7 @@ export default function Home() {
       </section>
 
       {/* AUTHORITY INJECTION - Where Medical Complexity Meets Institutional Discipline */}
-      <section id="governance" className="py-20 md:py-28 px-6 bg-slate-50 border-b border-slate-200">
+      <section id="governance" className="py-20 md:py-28 px-6 bg-slate-50 border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-serif mb-16 text-center text-slate-900">
             Where Medical Complexity Meets Institutional Discipline
@@ -377,7 +377,7 @@ export default function Home() {
       </section>
 
       {/* CLINICAL PROCESS STRIP - Horizontal, Minimal, Clinical */}
-      <section id="how-we-operate" className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
+      <section id="operations" className="py-16 md:py-20 px-6 bg-white border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-12 text-center text-slate-900">Clinical Process</h2>
           
@@ -576,8 +576,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 6:      {/* CONTACT FORM */}
-      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white">        <div className="max-w-4xl mx-auto">
+      {/* SECTION 6: CONTACT FORM */}
+      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Case Submission for Strategic Review</h2>
 
           {/* Medical Submission Form - Frictionless Flow */}

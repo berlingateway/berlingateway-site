@@ -700,3 +700,10 @@
 - [x] B3) VALIDATION: Add required validation for both dropdowns (HTML5 required attribute)
 - [x] B4) BACKEND: Payload already includes diagnosisStatus and treatmentObjective fields in medicalSituation string
 - [x] B5) TESTING: Form validation working with HTML5 required attributes, payload structure verified
+
+## Institutional Anchor Navigation - One-Page Jump Links ✅
+- [x] Add smooth scroll CSS (scroll-behavior: smooth on html element) - already present
+- [x] Add section IDs: #governance, #operations, #submit-case
+- [x] Add scroll-margin-top: 90px to each section for sticky header offset
+- [x] Update navigation links to anchor hrefs (#governance, #operations, #submit-case)
+- [x] Test anchor navigation on desktop and mobile - verified in dev preview

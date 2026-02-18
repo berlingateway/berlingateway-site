@@ -692,3 +692,11 @@
 ## Institutional Typography Adjustment - Legal Sub-Statement Style ✅
 - [x] Dominance Line typography: Update to exact specification (font-weight 400, color #5F6368, letter-spacing 0.4px, max-width 720px, margin-top 12px, center aligned, legal sub-statement feel)
 - [x] Sovereign Footer Line typography: Update to exact specification (font-size 13px, color #6B7280, opacity 0.85, no uppercase, no decoration, institutional seal statement feel)
+
+## CTA Upgrade + Form Seriousness Filtering ✅
+- [x] A) CTA UPGRADE: Change primary form submit button to "SUBMIT CASE FOR CLINICAL REVIEW" (exact text, uppercase)
+- [x] B1) DROPDOWN #1: Add "Diagnosis status" dropdown (required) with 5 options (Not yet diagnosed, Preliminary diagnosis, Confirmed diagnosis, Post-treatment/recurrence, Second opinion requested)
+- [x] B2) DROPDOWN #2: Add "Purpose of request" dropdown (required) with 5 options (Second opinion on diagnosis, Treatment strategy & hospital pathway, Surgical decision review, Urgent case escalation, Medical visa & logistics)
+- [x] B3) VALIDATION: Add required validation for both dropdowns (HTML5 required attribute)
+- [x] B4) BACKEND: Payload already includes diagnosisStatus and treatmentObjective fields in medicalSituation string
+- [x] B5) TESTING: Form validation working with HTML5 required attributes, payload structure verified

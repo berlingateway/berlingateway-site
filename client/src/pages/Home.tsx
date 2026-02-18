@@ -653,37 +653,39 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Diagnosis Status */}
+              {/* Diagnosis Status - SERIOUSNESS FILTER */}
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Current Diagnosis Stage *</label>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Diagnosis status *</label>
                 <select
                   required
                   value={formData.diagnosisStatus}
                   onChange={(e) => setFormData({ ...formData, diagnosisStatus: e.target.value })}
                   className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
                 >
-                  <option value="">Select diagnosis stage</option>
-                  <option value="confirmed_diagnosis">Confirmed Diagnosis</option>
-                  <option value="suspected_condition">Suspected Condition</option>
-                  <option value="second_opinion_required">Second Opinion Required</option>
-                  <option value="undiagnosed">Undiagnosed</option>
+                  <option value="">Select one</option>
+                  <option value="not_yet_diagnosed">Not yet diagnosed</option>
+                  <option value="preliminary_diagnosis">Preliminary diagnosis</option>
+                  <option value="confirmed_diagnosis">Confirmed diagnosis</option>
+                  <option value="post_treatment_recurrence">Post-treatment / recurrence</option>
+                  <option value="second_opinion_requested">Second opinion requested</option>
                 </select>
               </div>
 
-              {/* Treatment Objective */}
+              {/* Purpose of Request - SERIOUSNESS FILTER */}
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Primary Objective *</label>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Purpose of request *</label>
                 <select
                   required
                   value={formData.treatmentObjective}
                   onChange={(e) => setFormData({ ...formData, treatmentObjective: e.target.value })}
                   className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
                 >
-                  <option value="">Select primary objective</option>
-                  <option value="treatment_planning">Treatment Planning</option>
-                  <option value="surgical_evaluation">Surgical Evaluation</option>
-                  <option value="advanced_diagnostics">Advanced Diagnostics</option>
-                  <option value="cross_border_transfer">Cross-Border Transfer</option>
+                  <option value="">Select one</option>
+                  <option value="second_opinion_diagnosis">Second opinion on diagnosis</option>
+                  <option value="treatment_strategy_pathway">Treatment strategy & hospital pathway</option>
+                  <option value="surgical_decision_review">Surgical decision review</option>
+                  <option value="urgent_case_escalation">Urgent case escalation</option>
+                  <option value="medical_visa_logistics">Medical visa & logistics (after clinical review)</option>
                 </select>
               </div>
 
@@ -788,7 +790,7 @@ export default function Home() {
                 disabled={submitCase.isPending}
                 className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-7 text-lg font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {submitCase.isPending ? 'Submitting...' : 'Submit Case for Clinical Review'}
+                {submitCase.isPending ? 'SUBMITTING...' : 'SUBMIT CASE FOR CLINICAL REVIEW'}
               </Button>
 
               {/* Privacy Notice */}

@@ -688,3 +688,7 @@
 - [x] 3️⃣ SERIOUSNESS FILTER: Add "Current Diagnosis Stage" and "Primary Objective" dropdowns to contact form, change submit button to "SUBMIT CASE FOR CLINICAL REVIEW"
 - [x] 4️⃣ NAVIGATION STRUCTURE: Add top menu anchors (Home, Governance, How We Operate, Submit Case, Contact) with smooth scroll
 - [x] 5️⃣ SOVEREIGN SIGNATURE: Add "Consulted by decision-makers seeking clarity before irreversible medical steps." in footer (small font, light grey, non-promotional)
+
+## Institutional Typography Adjustment - Legal Sub-Statement Style ✅
+- [x] Dominance Line typography: Update to exact specification (font-weight 400, color #5F6368, letter-spacing 0.4px, max-width 720px, margin-top 12px, center aligned, legal sub-statement feel)
+- [x] Sovereign Footer Line typography: Update to exact specification (font-size 13px, color #6B7280, opacity 0.85, no uppercase, no decoration, institutional seal statement feel)

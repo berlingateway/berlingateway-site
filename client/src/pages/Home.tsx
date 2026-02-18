@@ -189,8 +189,8 @@ export default function Home() {
             Institutional Medical Authority for International Patients
           </h1>
           
-          {/* HERO AUTHORITY DECLARATION */}
-          <p className="text-base md:text-lg text-slate-400 font-normal mb-12 max-w-4xl mx-auto leading-relaxed px-6">
+          {/* HERO AUTHORITY DECLARATION - Legal Sub-Statement Style */}
+          <p className="text-base md:text-lg font-normal mb-12 mx-auto leading-relaxed" style={{ color: '#5F6368', letterSpacing: '0.4px', maxWidth: '720px', marginTop: '12px' }}>
             Engaged by patients, families, and physicians when medical decisions carry irreversible consequences.
           </p>
           
@@ -824,8 +824,8 @@ export default function Home() {
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
           
-          {/* SILENT DOMINANCE */}
-          <p className="text-xs text-slate-600 mt-6 max-w-2xl mx-auto leading-relaxed">
+          {/* SOVEREIGN SIGNATURE - Institutional Seal Statement */}
+          <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85 }}>
             Consulted by decision-makers seeking clarity before irreversible medical steps.
           </p>
         </div>

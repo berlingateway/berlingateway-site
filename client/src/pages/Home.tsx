@@ -105,7 +105,7 @@ export default function Home() {
   // Active section tracking based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'governance', 'operations', 'submit-case'];
+      const sections = ['home', 'governance', 'operations', 'submit-case', 'contact'];
       const scrollPosition = window.scrollY + 150; // Offset for sticky header
 
       for (const sectionId of sections) {
@@ -869,7 +869,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER - Strong but Calm */}
-      <footer className="py-10 bg-slate-900 text-white text-center">
+      <footer id="contact" className="py-10 bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
             <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">

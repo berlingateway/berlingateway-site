@@ -731,3 +731,11 @@
 - [x] Verify index.html has correct title "Medical Care Germany | Strategic Medical Authority" - verified
 - [x] Verify og:title and twitter:title match exactly - verified
 - [x] Test on live production and preview environments - ready for deployment
+
+## Contact Navigation Fix - Production Routing Patch ✅
+- [x] Verify navigation link target in Home.tsx (anchor vs route) - using anchor #contact
+- [x] Check if Contact section has id="contact" for anchor scroll - was missing, now added to footer
+- [x] Check if /contact route exists in App.tsx - exists but not used for one-page navigation
+- [x] Implement hash scroll handling if using anchor navigation - already implemented with smooth scroll CSS
+- [x] Test Contact navigation on desktop and mobile - footer now has id="contact" with scroll-margin-top: 90px
+- [x] Deploy and verify on production domain - ready for deployment

@@ -5,7 +5,7 @@ import { trpc } from "@/lib/trpc";
 import { Link } from "wouter";
 import { FileText, Activity, Network, Calendar, Heart } from "lucide-react";
 import { toast } from "sonner";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const { user, loading, error, isAuthenticated, logout } = useAuth();
@@ -21,6 +21,8 @@ export default function Home() {
   });
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
   const [isDragging, setIsDragging] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -100,6 +102,29 @@ export default function Home() {
     setUploadedFiles(prev => prev.filter((_, i) => i !== index));
   };
 
+  // Active section tracking based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'governance', 'operations', 'submit-case'];
+      const scrollPosition = window.scrollY + 150; // Offset for sticky header
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       
@@ -123,17 +148,48 @@ export default function Home() {
           </Link>
           <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">Institutional Clinical Coordination Authority</span>
         </div>
-        <div className="hidden md:flex gap-10 text-sm text-slate-500">
-          <a href="#home" className="hover:text-slate-900 transition-colors cursor-pointer">Home</a>
-          <a href="#governance" className="hover:text-slate-900 transition-colors cursor-pointer">Governance</a>
-          <a href="#operations" className="hover:text-slate-900 transition-colors cursor-pointer">How We Operate</a>
-          <a href="#submit-case" className="hover:text-slate-900 transition-colors cursor-pointer">Submit Case</a>
-          <a href="#contact" className="hover:text-slate-900 transition-colors cursor-pointer">Contact</a>
+        
+        {/* Desktop Navigation */}
+        <div className="desktop-nav flex gap-10 text-sm text-slate-500">
+          <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
+          <a href="#governance" className={`nav-link ${activeSection === 'governance' ? 'active' : ''}`}>Governance</a>
+          <a href="#operations" className={`nav-link ${activeSection === 'operations' ? 'active' : ''}`}>How We Operate</a>
+          <a href="#submit-case" className={`nav-link ${activeSection === 'submit-case' ? 'active' : ''}`}>Submit Case</a>
+          <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
         </div>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className="mobile-menu-button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </nav>
+      
+      {/* Mobile Menu Panel */}
+      <div className={`mobile-menu-panel ${mobileMenuOpen ? 'open' : ''}`}>
+        <button 
+          onClick={() => setMobileMenuOpen(false)}
+          className="absolute top-5 right-5 text-slate-900"
+          aria-label="Close menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
+        <a href="#governance" onClick={() => setMobileMenuOpen(false)}>Governance</a>
+        <a href="#operations" onClick={() => setMobileMenuOpen(false)}>How We Operate</a>
+        <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>Submit Case</a>
+        <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+      </div>
 
       {/* DOMINANT CTA SECTION - Priority Medical Evaluation */}
-      <section className="relative py-12 md:py-16 px-6 bg-slate-50 border-b border-slate-200">
+      <section id="home" className="relative py-12 md:py-16 px-6 bg-slate-50 border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto text-center">
           {/* Headline */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 mb-4 leading-tight">

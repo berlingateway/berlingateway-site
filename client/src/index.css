@@ -138,3 +138,74 @@ html {
   }
 }
 
+/* ===============================
+   INSTITUTIONAL NAVIGATION SYSTEM
+   =============================== */
+
+/* Base Navigation */
+.nav-link {
+  font-weight: 400;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* Active State – Minimal Authority Indicator */
+.nav-link.active {
+  opacity: 1;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* ===============================
+   MOBILE HAMBURGER MENU
+   =============================== */
+
+.mobile-menu-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 60px 30px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.05);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu-panel.open {
+  right: 0;
+}
+
+.mobile-menu-panel a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  color: #1a1a1a;
+  opacity: 0.8;
+}
+
+.mobile-menu-panel a:hover {
+  opacity: 1;
+}
+
+/* Responsive Trigger */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+}

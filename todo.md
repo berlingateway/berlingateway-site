@@ -707,3 +707,12 @@
 - [x] Add scroll-margin-top: 90px to each section for sticky header offset
 - [x] Update navigation links to anchor hrefs (#governance, #operations, #submit-case)
 - [x] Test anchor navigation on desktop and mobile - verified in dev preview
+
+## Institutional Navigation System - Active State + Mobile Menu ✅
+- [x] Add CSS for nav-link base styles (font-weight 400, opacity 0.75, hover opacity 1)
+- [x] Add CSS for active state indicator (opacity 1, border-bottom 1px solid #1a1a1a)
+- [x] Add CSS for mobile hamburger menu (fixed panel, 280px width, slide-in animation)
+- [x] Implement active state detection with scroll position tracking (useEffect with scroll listener)
+- [x] Implement mobile hamburger menu with open/close functionality (mobileMenuOpen state)
+- [x] Add responsive breakpoint (@media max-width 1024px)
+- [x] Test navigation system on desktop and mobile - verified active state indicator working

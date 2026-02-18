@@ -15,7 +15,7 @@ import PhysicianReferralInterface from "./pages/PhysicianReferralInterface";
 import InstitutionalFramework from "./pages/InstitutionalFramework";
 import ProfessionalInterfaces from "./pages/ProfessionalInterfaces";
 import Contact from "./pages/Contact";
-import ArabicSEO from "./pages/ArabicSEO";
+
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -32,8 +32,7 @@ function Router() {
       <Route path={"/institutional-framework"} component={InstitutionalFramework} />
       <Route path={"/professional-interfaces"} component={ProfessionalInterfaces} />
       <Route path={"/contact"} component={Contact} />
-      {/* Hidden Arabic SEO Landing Page - Not in navigation, indexed by Google only */}
-      <Route path={"/ar"} component={ArabicSEO} />
+
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

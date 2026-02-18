@@ -666,3 +666,11 @@
 - [x] Replace primary title tag in client/index.html with EXACT specification: "Medical Care Germany | Strategic Medical Authority for Complex Cases"
 - [x] Ensure no variations, no location modifiers, no marketing phrases
 - [ ] Request Google re-indexing via Search Console after deployment
+
+## Live Transactional Email Test - Production Server
+- [ ] Submit test form on production site (www.medicalcaregermany.com)
+- [ ] Monitor email delivery to info@medicalcaregermany.com
+- [ ] Verify SendGrid API key in environment variables
+- [ ] Check form submission endpoint actively calls SendGrid
+- [ ] Analyze server logs for SendGrid response errors
+- [ ] Identify exact failure point (no assumptions)

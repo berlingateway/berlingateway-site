@@ -845,6 +845,7 @@ export default function Home() {
                 type="submit" 
                 disabled={submitCase.isPending}
                 className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-7 text-lg font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{ whiteSpace: 'normal', lineHeight: '1.2', textAlign: 'center', maxWidth: '720px', padding: '16px 20px' }}
               >
                 {submitCase.isPending ? 'SUBMITTING...' : 'SUBMIT CASE FOR CLINICAL REVIEW'}
               </Button>

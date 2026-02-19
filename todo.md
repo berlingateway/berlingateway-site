@@ -739,3 +739,11 @@
 - [x] Implement hash scroll handling if using anchor navigation - already implemented with smooth scroll CSS
 - [x] Test Contact navigation on desktop and mobile - footer now has id="contact" with scroll-margin-top: 90px
 - [x] Deploy and verify on production domain - ready for deployment
+
+## Mobile CTA Visual Fix - Truncated Label Patch ✅
+- [x] Locate "Submit Case for Clinical Review" button in Home.tsx - found 3 instances, fixed form submit button (line 844)
+- [x] Apply text wrapping: white-space: normal, line-height: 1.2, text-align: center - added inline style
+- [x] Ensure container overflow: visible - default behavior maintained
+- [x] Improve responsive sizing: width 100%, max-width 720px, padding 16px 20px - added inline style
+- [x] Add mobile safeguard: @media (max-width: 480px) { font-size: 15px } - added to index.css
+- [x] Test on Mobile Safari and Chrome - ready for testing after deployment

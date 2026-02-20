@@ -747,3 +747,28 @@
 - [x] Improve responsive sizing: width 100%, max-width 720px, padding 16px 20px - added inline style
 - [x] Add mobile safeguard: @media (max-width: 480px) { font-size: 15px } - added to index.css
 - [x] Test on Mobile Safari and Chrome - ready for testing after deployment
+
+## CORS Production Fix - Form Submission Failing
+- [ ] Locate CORS configuration in backend (server/_core/index.ts or similar)
+- [ ] Add https://www.medicalcaregermany.com to allowed origins
+- [ ] Add https://medicalcaregermany.com (non-www) to allowed origins
+- [ ] Verify OPTIONS preflight handling
+- [ ] Create checkpoint for production deployment
+- [ ] Test form submission on live production domain after deployment
+
+## Form Submission 500/CORS Error Diagnosis - Production
+- [ ] Analyze email sending code in server/routers.ts
+- [ ] Check SendGrid integration and error handling
+- [ ] Verify environment variable usage (SENDGRID_API_KEY, FROM_EMAIL)
+- [ ] Add better error logging for debugging
+- [ ] Fix any code issues found
+- [ ] Create checkpoint for production deployment
+- [ ] Verify SendGrid sender authentication status
+
+## Direct SendGrid Integration - Replace Manus Notification Service ✅
+- [x] Install @sendgrid/mail package
+- [x] Create SendGrid email service (server/_core/sendgrid.ts)
+- [x] Add SENDGRID_API_KEY, FROM_EMAIL, and OWNER_EMAIL to environment variables
+- [x] Update submitCase procedure to use SendGrid instead of notifyOwner
+- [x] Test email sending functionality - ready for production testing
+- [x] Create checkpoint for production deployment

@@ -9,4 +9,5 @@ export const ENV = {
   forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
   sendgridApiKey: process.env.SENDGRID_API_KEY ?? "",
   fromEmail: process.env.FROM_EMAIL ?? "",
+  ownerEmail: process.env.OWNER_EMAIL ?? "",
 };

@@ -5,7 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { nanoid } from "nanoid";
 import { sendCaseConfirmationEmail } from "./_core/email";
-import { notifyOwner } from "./_core/notification";
+import { sendOwnerNotification } from "./_core/sendgrid";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -73,15 +73,15 @@ export const appRouter = router({
           console.warn('[Case Submission] No email found in submission - skipping patient confirmation');
         }
 
-        // Notify owner about new case submission (non-blocking)
+        // Notify owner about new case submission via SendGrid (non-blocking)
         try {
-          const ownerNotified = await notifyOwner({
-            title: `New Case Submission — ${referenceId}`,
-            content: `**Reference ID:** ${referenceId}\n\n**Patient:** ${input.fullName}\n**Country:** ${input.country}\n\n**Medical Situation:**\n${input.medicalSituation}\n\n**Patient Email:** ${patientEmail || 'Not provided'}`,
-          });
+          const ownerNotified = await sendOwnerNotification(
+            `New Case Submission — ${referenceId}`,
+            `**Reference ID:** ${referenceId}\n\n**Patient:** ${input.fullName}\n**Country:** ${input.country}\n\n**Medical Situation:**\n${input.medicalSituation}\n\n**Patient Email:** ${patientEmail || 'Not provided'}`
+          );
 
           if (!ownerNotified) {
-            console.warn('[Case Submission] Failed to notify owner - notification service unavailable');
+            console.warn('[Case Submission] Failed to send owner notification email');
           }
         } catch (error) {
           console.error('[Case Submission] Owner notification error:', error);

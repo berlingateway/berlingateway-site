@@ -100,6 +100,51 @@ export const appRouter = router({
         };
       }),
   }),
+
+  // Test endpoint to diagnose SendGrid integration
+  test: router({
+    sendEmail: publicProcedure.mutation(async () => {
+      try {
+        console.log('[Test Email] Starting SendGrid test...');
+        
+        const result = await sendOwnerNotification(
+          'SendGrid Test Email',
+          'This is a test email to verify SendGrid integration. If you receive this, the API key and sender are correctly configured.'
+        );
+        
+        console.log('[Test Email] SendGrid test completed successfully');
+        
+        return {
+          success: true,
+          message: 'Test email sent successfully! Check OWNER_EMAIL inbox.',
+          result,
+        };
+      } catch (error: any) {
+        console.error('[Test Email] SendGrid test failed:', error);
+        
+        // Extract detailed error information
+        const errorDetails = {
+          message: error.message || 'Unknown error',
+          code: error.code || 'No code',
+          statusCode: error.response?.statusCode || error.statusCode || 'No status code',
+          body: error.response?.body || error.body || 'No body',
+          stack: error.stack,
+        };
+        
+        console.error('[Test Email] Error details:', JSON.stringify(errorDetails, null, 2));
+        
+        return {
+          success: false,
+          error: errorDetails,
+          diagnosis: errorDetails.statusCode === 401 
+            ? '401 Unauthorized - Wrong SendGrid API Key' 
+            : errorDetails.statusCode === 403 
+            ? '403 Forbidden - Sender email not verified in SendGrid'
+            : `Unknown error (Status: ${errorDetails.statusCode})`,
+        };
+      }
+    }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

@@ -772,3 +772,10 @@
 - [x] Update submitCase procedure to use SendGrid instead of notifyOwner
 - [x] Test email sending functionality - ready for production testing
 - [x] Create checkpoint for production deployment
+
+## SendGrid Test Endpoint - Diagnose API Integration ✅
+- [x] Create /api/test-email endpoint in server/routers.ts (test.sendEmail)
+- [x] Send hardcoded test email to OWNER_EMAIL
+- [x] Capture and display exact SendGrid SDK error message
+- [x] Diagnose if 401 (Wrong Key) or 403 (Sender not verified)
+- [x] Test result: SUCCESS - Email sent successfully, no errors

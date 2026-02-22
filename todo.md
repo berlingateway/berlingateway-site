@@ -779,3 +779,15 @@
 - [x] Capture and display exact SendGrid SDK error message
 - [x] Diagnose if 401 (Wrong Key) or 403 (Sender not verified)
 - [x] Test result: SUCCESS - Email sent successfully, no errors
+
+## Production CORS/Preflight Error - tRPC Batch Request Diagnosis
+- [ ] Analyze tRPC batch request `case.submit?batch=1` CORS error on production
+- [ ] Verify backend CORS configuration includes medicalcaregermany.com and www.medicalcaregermany.com
+- [ ] Check if production is using latest checkpoint (7d0ff874) with SendGrid integration
+- [ ] Verify tRPC endpoint `/api/trpc` is accessible from production domain
+- [ ] Add detailed error logging to submitCase procedure for production debugging
+- [ ] Test production deployment and verify Network tab shows successful POST to /api/trpc
+
+## Trigger New Checkpoint for Fresh Deployment ✅
+- [x] Add minor code change to trigger new build (deployment timestamp comment in sendgrid.ts)
+- [x] Create new checkpoint to enable Veröffentlichen button

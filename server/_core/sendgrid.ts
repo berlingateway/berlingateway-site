@@ -1,3 +1,4 @@
+// Production deployment: 2026-02-22 - SendGrid direct integration
 import sgMail from '@sendgrid/mail';
 import { ENV } from './env';
 

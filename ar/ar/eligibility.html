@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التقييم الأولي | Berlin Gateway</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#0f172a;
+--text:#334155;
+--muted:#64748b;
+--bg:#ffffff;
+--panel:#f8fafc;
+--line:#f1f5f9;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:'IBM Plex Sans Arabic','Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:4rem 5%;
+}
+
+h1{
+color:var(--primary);
+font-size:2.2rem;
+margin-bottom:1rem;
+}
+
+p{
+color:var(--muted);
+margin-bottom:2rem;
+}
+
+form{
+background:var(--panel);
+padding:2rem;
+border-radius:8px;
+border:1px solid var(--line);
+}
+
+label{
+display:block;
+margin-top:1.2rem;
+font-weight:600;
+}
+
+input,select,textarea{
+width:100%;
+padding:0.8rem;
+margin-top:0.4rem;
+border:1px solid #d1d5db;
+border-radius:6px;
+font-family:inherit;
+}
+
+button{
+margin-top:2rem;
+background:var(--primary);
+color:#fff;
+padding:1rem;
+border:none;
+border-radius:6px;
+font-size:1rem;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>ابدأ التقييم الأولي</h1>
+<p>
+املأ البيانات التالية بدقة. سيتم مراجعة ملفك خلال 24–48 ساعة وإرسال توصية مبدئية على بريدك الإلكتروني.
+</p>
+
+<form action="https://formsubmit.co/formsubmit.co/info@berlingateway.de" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Eligibility Request - Berlin Gateway">
+<input type="hidden" name="_next" value="https://berlingateway.de/ar/thankyou.html">
+
+<label>الاسم الكامل</label>
+<input type="text" name="الاسم" required>
+
+<label>البريد الإلكتروني</label>
+<input type="email" name="البريد" required>
+
+<label>الدولة الحالية</label>
+<input type="text" name="الدولة" required>
+
+<label>أعلى مؤهل دراسي</label>
+<select name="المؤهل" required>
+<option value="">اختر</option>
+<option>ثانوي</option>
+<option>دبلوم</option>
+<option>بكالوريوس</option>
+<option>ماجستير</option>
+<option>دكتوراه</option>
+</select>
+
+<label>التخصص</label>
+<input type="text" name="التخصص" required>
+
+<label>مستوى اللغة الألمانية</label>
+<select name="اللغة">
+<option>لا يوجد</option>
+<option>A1</option>
+<option>A2</option>
+<option>B1</option>
+<option>B2</option>
+<option>C1</option>
+</select>
+
+<label>سنوات الخبرة</label>
+<input type="number" name="الخبرة">
+
+<label>ملاحظات إضافية</label>
+<textarea name="ملاحظات" rows="4"></textarea>
+
+<button type="submit">إرسال التقييم</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

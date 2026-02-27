@@ -1,235 +1,65 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>التقييم الأولي | Berlin Gateway</title>
-  <meta name="description" content="نموذج التقييم الأولي — Berlin Gateway." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --primary:#0f172a;
-      --accent:#2563eb;
-      --text:#334155;
-      --muted:#64748b;
-      --bg:#ffffff;
-      --panel:#f8fafc;
-      --line:#e2e8f0;
-      --radius:14px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:var(--panel);
-      color:var(--text);
-      font-family:"IBM Plex Sans Arabic","Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height:1.7;
-    }
-    header{
-      padding:18px 5%;
-      background:#fff;
-      border-bottom:1px solid var(--line);
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-    .brand{
-      font-weight:600;
-      color:var(--primary);
-      letter-spacing:.5px;
-    }
-    .back{
-      text-decoration:none;
-      color:var(--muted);
-      font-size:14px;
-      border:1px solid var(--line);
-      padding:8px 12px;
-      border-radius:12px;
-      background:#fff;
-    }
-    .wrap{
-      max-width:980px;
-      margin:0 auto;
-      padding:26px 5% 40px;
-    }
-    .box{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-    }
-    h1{
-      margin:0 0 10px;
-      color:var(--primary);
-      font-size:26px;
-    }
-    .hint{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    form{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-    label{
-      display:block;
-      font-size:14px;
-      color:var(--primary);
-      margin-bottom:6px;
-      font-weight:600;
-    }
-    input, select, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      font-family:inherit;
-      font-size:15px;
-      background:#fff;
-      color:var(--text);
-      outline:none;
-    }
-    textarea{ min-height:110px; resize:vertical; }
-    .full{ grid-column:1 / -1; }
-    .row-actions{
-      grid-column:1 / -1;
-      display:flex;
-      justify-content:flex-start;
-      gap:10px;
-      margin-top:6px;
-    }
-    button{
-      background:var(--primary);
-      color:#fff;
-      border:none;
-      padding:14px 18px;
-      border-radius:14px;
-      font-size:16px;
-      cursor:pointer;
-      transition:opacity .18s ease;
-    }
-    button:hover{opacity:.92}
-    .note{
-      grid-column:1 / -1;
-      margin-top:8px;
-      font-size:12px;
-      color:#94a3b8;
-    }
-    @media (max-width:720px){
-      form{grid-template-columns:1fr}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berlin Gateway | التقييم الأولي</title>
+<style>
+body{font-family:Arial;padding:30px;background:#f8fafc;}
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+button{
+    padding:12px;
+    background:#0f172a;
+    color:white;
+    border:none;
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <a class="back" href="/ar/">رجوع</a>
-    <div class="brand">BERLIN GATEWAY</div>
-  </header>
 
-  <main class="wrap">
-    <div class="box">
-      <h1>التقييم الأولي</h1>
-      <p class="hint">املأ البيانات بدقة. سيتم إرسالها مباشرة إلى بريدنا: <strong>info@berlingateway.de</strong></p>
+<h2>التقييم الأولي</h2>
 
-      <!-- ✅ FormSubmit: الرابط الصحيح بدون تكرار -->
-      <form action="https://formsubmit.co/info@berlingateway.de" method="POST">
+<form action="https://formsubmit.co/info@berlingateway.de" method="POST">
 
-        <!-- ✅ إعدادات مهمة -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Berlin Gateway | New Eligibility Submission">
-        <input type="hidden" name="_next" value="https://berlingateway.de/ar/thankyou.html">
+<input type="hidden" name="_subject" value="Berlin Gateway | New Eligibility Submission">
+<input type="hidden" name="_next" value="https://berlingateway.de/ar/thankyou.html">
+<input type="hidden" name="_captcha" value="false">
 
-        <!-- ✅ بيانات العميل -->
-        <div>
-          <label>الاسم الكامل</label>
-          <input name="full_name" type="text" placeholder="مثال: أحمد محمد" required>
-        </div>
+<label>الاسم الكامل</label>
+<input type="text" name="Full Name" required>
 
-        <div>
-          <label>البريد الإلكتروني</label>
-          <input name="email" type="email" placeholder="name@example.com" required>
-        </div>
+<label>البريد الإلكتروني</label>
+<input type="email" name="Email" required>
 
-        <div>
-          <label>رقم واتساب (مع كود الدولة)</label>
-          <input name="whatsapp" type="text" placeholder="+218xxxxxxxxx" required>
-        </div>
+<label>المهنة</label>
+<input type="text" name="Profession" required>
 
-        <div>
-          <label>الدولة الحالية</label>
-          <input name="country" type="text" placeholder="مثال: ليبيا / الجزائر / مصر" required>
-        </div>
+<label>سنوات الخبرة</label>
+<input type="text" name="Experience">
 
-        <div>
-          <label>أعلى مؤهل دراسي</label>
-          <select name="education" required>
-            <option value="" selected disabled>اختر</option>
-            <option>ثانوي</option>
-            <option>دبلوم/معهد</option>
-            <option>بكالوريوس</option>
-            <option>ماجستير</option>
-            <option>دكتوراه</option>
-            <option>أخرى</option>
-          </select>
-        </div>
+<label>مستوى اللغة الألمانية</label>
+<select name="German Level">
+<option>A1</option>
+<option>A2</option>
+<option>B1</option>
+<option>B2</option>
+<option>C1</option>
+<option>None</option>
+</select>
 
-        <div>
-          <label>التخصص</label>
-          <input name="field" type="text" placeholder="مثال: تمريض / هندسة / طب / IT" required>
-        </div>
+<label>ملاحظات إضافية</label>
+<textarea name="Notes"></textarea>
 
-        <div>
-          <label>مستوى اللغة الألمانية</label>
-          <select name="german_level" required>
-            <option value="" selected disabled>اختر</option>
-            <option>لا يوجد</option>
-            <option>A1</option>
-            <option>A2</option>
-            <option>B1</option>
-            <option>B2</option>
-            <option>C1</option>
-            <option>C2</option>
-          </select>
-        </div>
+<button type="submit">إرسال التقييم</button>
 
-        <div>
-          <label>سنوات الخبرة</label>
-          <input name="experience_years" type="number" min="0" step="1" placeholder="مثال: 3" required>
-        </div>
+</form>
 
-        <div class="full">
-          <label>الهدف الأساسي</label>
-          <select name="goal" required>
-            <option value="" selected disabled>اختر</option>
-            <option>عمل كـ Fachkraft (اعتراف/توظيف)</option>
-            <option>Ausbildung (تكوين مهني)</option>
-            <option>Umschulung (إعادة تأهيل/تحويل مسار)</option>
-            <option>غير متأكد — أريد توصية مسار</option>
-          </select>
-        </div>
+<br>
+<a href="/framework.html">المنهج</a>
 
-        <div class="full">
-          <label>ملاحظات إضافية</label>
-          <textarea name="notes" placeholder="اكتب أي تفاصيل تساعدنا: وضع الشهادة، اسم الجامعة، خبرة، وضع الفيزا..."></textarea>
-        </div>
-
-        <div class="row-actions">
-          <button type="submit">إرسال التقييم</button>
-        </div>
-
-        <div class="note">
-          بإرسال النموذج، أنت توافق على استخدام بياناتك فقط لأغراض التقييم والرد عليك. (لا يتم بيع البيانات).
-        </div>
-      </form>
-    </div>
-  </main>
 </body>
 </html>

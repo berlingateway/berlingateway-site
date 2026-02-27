@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Berlin Gateway | إطار التأهيل والدخول إلى ألمانيا</title>
-  <meta name="description" content="Berlin Gateway: إطار مؤسسي لتأهيل الكفاءات العربية للدخول المهني إلى ألمانيا عبر مسارات منظمة (Fachkräfte, Ausbildung, Umschulung) مع منهجية تقييم أولي رقمي." />
+  <title>Berlin Gateway | إطار تقييم ومسارات مهنية إلى ألمانيا</title>
+  <meta name="description" content="Berlin Gateway: إطار تقييم أولي ومسارات مهنية منظمة إلى ألمانيا للكفاءات (Anerkennung, Ausbildung, Umschulung) قبل أي التزام." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,233 +12,186 @@
 
   <style>
     :root{
-      --primary:#0f172a; /* Navy/Charcoal */
+      --primary:#0f172a;
+      --accent:#2563eb;
       --text:#334155;
       --muted:#64748b;
       --bg:#ffffff;
       --panel:#f8fafc;
       --line:#f1f5f9;
+      --radius:14px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       background:var(--bg);
       color:var(--text);
-      line-height:1.9;
-      font-family:"IBM Plex Sans Arabic", Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      line-height:1.7;
+      font-family:"IBM Plex Sans Arabic","Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
-    a{color:inherit}
     header{
-      padding:2rem 5%;
+      padding:20px 5%;
       display:flex;
+      align-items:center;
       justify-content:space-between;
-      align-items:center;
       border-bottom:1px solid var(--line);
-      gap:1rem;
     }
-    .logo{
+    .brand{
       font-weight:600;
-      font-size:1.15rem;
+      letter-spacing:.5px;
       color:var(--primary);
-      letter-spacing:-.3px;
-      white-space:nowrap;
+      font-size:18px;
     }
-    nav{
+    .nav{
       display:flex;
-      gap:1rem;
+      gap:10px;
       align-items:center;
-      font-size:.95rem;
     }
-    nav a{
+    .lang-pill{
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--primary);
+      padding:8px 12px;
+      border-radius:10px;
       text-decoration:none;
-      color:var(--muted);
-      padding:.35rem .6rem;
-      border-radius:6px;
+      font-size:14px;
     }
-    nav a:hover{background:var(--panel); color:var(--primary)}
-    .wrap{max-width:980px; margin:0 auto}
-    .hero{
-      padding:6rem 5% 3.5rem;
+    .wrap{
+      padding:56px 5% 24px;
+      max-width:980px;
+      margin:0 auto;
     }
     h1{
-      margin:0 0 1.5rem;
-      font-size:3rem;
-      line-height:1.15;
+      margin:0 0 18px;
+      font-size:52px;
+      line-height:1.12;
       color:var(--primary);
       font-weight:600;
-      letter-spacing:-.6px;
     }
-    .sub{
-      margin:0 0 2.2rem;
-      font-size:1.15rem;
+    .lead{
+      margin:0 0 26px;
+      max-width:820px;
+      font-size:18px;
       color:var(--text);
       font-weight:300;
-      max-width:820px;
     }
     .cta-row{
       display:flex;
-      gap:1rem;
+      gap:12px;
       flex-wrap:wrap;
-      align-items:center;
-      margin-top:1.6rem;
+      margin-top:18px;
     }
     .btn{
-      display:inline-block;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
+      border-radius:12px;
       text-decoration:none;
-      padding:1rem 2.2rem;
-      border-radius:6px;
-      font-weight:400;
-      transition:opacity .18s, transform .18s;
+      font-size:16px;
+      border:1px solid transparent;
+      transition:opacity .18s ease;
     }
-    .btn-primary{
-      background:var(--primary);
-      color:#fff;
-    }
-    .btn-secondary{
-      background:transparent;
-      border:1px solid #e2e8f0;
-      color:var(--primary);
-    }
-    .btn:hover{opacity:.92; transform:translateY(-1px)}
-    .micro{
-      margin-top:1.4rem;
-      font-size:.9rem;
-      color:var(--muted);
-    }
-
-    .panel{
-      background:var(--panel);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      padding:3.5rem 5%;
-    }
+    .btn-primary{ background:var(--primary); color:#fff; }
+    .btn-ghost{ background:#fff; color:var(--primary); border-color:var(--line); }
+    .btn:hover{opacity:.92}
     .grid{
+      margin-top:34px;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:1.4rem;
-      margin-top:1.6rem;
+      gap:14px;
     }
     .card{
-      background:#fff;
-      border:1px solid #eef2f7;
-      border-radius:10px;
-      padding:1.4rem 1.4rem 1.2rem;
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
     }
-    .kicker{
-      font-size:.9rem;
-      color:var(--muted);
-      letter-spacing:.2px;
-      margin:0 0 .5rem;
-    }
-    h2{
-      margin:0 0 1rem;
-      font-size:1.25rem;
+    .card h3{
+      margin:0 0 10px;
       color:var(--primary);
-      font-weight:600;
+      font-size:18px;
     }
-    .list{
-      margin:.7rem 0 0;
-      padding:0 1.1rem 0 0;
-      color:var(--text);
-    }
-    .list li{margin:.35rem 0}
-    .datafoot{
-      margin-top:1.6rem;
-      font-size:.8rem;
-      color:#94a3b8;
-    }
+    .card ul{ margin:0; padding:0 18px 0 0; color:var(--text); }
+    .card li{ margin:8px 0; }
     footer{
-      padding:2rem 5%;
-      font-size:.85rem;
+      margin-top:40px;
+      padding:18px 5%;
+      border-top:1px solid var(--line);
       color:#94a3b8;
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
     }
-    .footer-links a{color:#94a3b8; text-decoration:none}
-    .footer-links a:hover{text-decoration:underline}
+    footer a{ color:#94a3b8; text-decoration:none; }
+    footer a:hover{ text-decoration:underline; }
+    @media (max-width:560px){
+      h1{font-size:38px}
+      .wrap{padding-top:36px}
+    }
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="brand">BERLIN GATEWAY</div>
+    <div class="nav">
+      <a class="lang-pill" href="/ar/">العربية</a>
+      <a class="lang-pill" href="/">DE</a>
+    </div>
+  </header>
 
-<header>
-  <div class="logo">BERLIN GATEWAY</div>
-  <nav>
-    <a href="/" title="Deutsch">DE</a>
-    <a href="/ar/" style="color:var(--primary); background:var(--panel);" aria-current="page">العربية</a>
-  </nav>
-</header>
+  <main class="wrap">
+    <h1>مسارات مهنية منظمة إلى ألمانيا — بإطار تقييم مؤسسي.</h1>
+    <p class="lead">
+      Berlin Gateway ليست “مدرسة لغة” ولا “مكتب توظيف”. نحن إطار عمل لتأهيل الكفاءات عبر مسارات
+      <strong>Anerkennung</strong> (عند الحاجة) و<strong>Ausbildung</strong> و<strong>Umschulung</strong>،
+      يبدأ بـ <strong>تقييم أولي</strong> ثم توجيه منهجي لما يلزم قبل أي التزام.
+    </p>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <h1>مسارات مهنية منظمة إلى ألمانيا — بإطار تقييم مؤسسي.</h1>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/ar/eligibility.html">ابدأ التقييم الأولي</a>
+      <a class="btn btn-ghost" href="/impressum.html">Impressum</a>
+    </div>
 
-      <p class="sub">
-        Berlin Gateway ليست “مدرسة لغة” ولا “مكتب توظيف”.
-        نحن إطار عمل لتأهيل الكفاءات (Fachkräfte) ومسارات الـ Ausbildung وUmschulung عبر تقييم أولي رقمي،
-        ثم توجيه منهجي لما يلزم قبل أي التزام.
-      </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/ar/eligibility/">ابدأ التقييم الأولي</a>
-        <a class="btn btn-secondary" href="/impressum/">Impressum</a>
+    <section class="grid" aria-label="Value blocks">
+      <div class="card">
+        <h3>توجيه منهجي</h3>
+        <ul>
+          <li>Recognition / Anerkennung (عند الحاجة)</li>
+          <li>اللغة كعامل داعم لا كمنتج</li>
+          <li>Ausbildung / Umschulung عند ملاءمتها</li>
+        </ul>
       </div>
 
-      <div class="micro">
-        مبدأنا: <strong>Assessment &gt; Enrollment</strong> — الدخول يبدأ بالملف، وليس بالوعود.
-      </div>
-    </div>
-  </section>
-
-  <section class="panel">
-    <div class="wrap">
-      <p class="kicker">إطار العمل</p>
-      <h2>كيف نعمل — بدون ضجيج تسويقي</h2>
-
-      <div class="grid">
-        <div class="card">
-          <p class="kicker">01</p>
-          <h2>تقييم أولي رقمي</h2>
-          <ul class="list">
-            <li>تخصصك المستهدف في ألمانيا</li>
-            <li>مستواك الحالي (لغة/وثائق/خبرة)</li>
-            <li>تحديد المسار الأقرب للواقع</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <p class="kicker">02</p>
-          <h2>توجيه منهجي</h2>
-          <ul class="list">
-            <li>Recognition / Anerkennung (عند الحاجة)</li>
-            <li>لغة (كعامل داعم لا كمنتج)</li>
-            <li>Ausbildung / Umschulung عند ملاءمتها</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <p class="kicker">03</p>
-          <h2>خطوة تنفيذ واضحة</h2>
-          <ul class="list">
-            <li>خطة عمل واقعية على مراحل</li>
-            <li>تقليل الأخطاء المكلفة</li>
-            <li>مخرجات قابلة للتنفيذ فوراً</li>
-          </ul>
-        </div>
+      <div class="card">
+        <h3>خطوة تنفيذ واضحة</h3>
+        <ul>
+          <li>خطة عمل واقعية على مراحل</li>
+          <li>تقليل الأخطاء المكلفة</li>
+          <li>مخرجات قابلة للتنفيذ فوراً</li>
+        </ul>
       </div>
 
-      <p class="datafoot">Datenstand: Februar 2026 | صياغة مرجعية: سوق العمل الألماني ومسارات التأهيل النظامية.</p>
-    </div>
-  </section>
-</main>
+      <div class="card">
+        <h3>فلتر قبل التواصل</h3>
+        <ul>
+          <li>جمع بيانات دقيقة من البداية</li>
+          <li>تصنيف المسار المناسب بسرعة</li>
+          <li>تحديد التالي: وثائق / لغة / مسار</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <div class="wrap">
-    © 2026 Berlin Gateway — Qualification & Access Framework.
-    <div class="footer-links" style="margin-top:.5rem;">
-      <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a>
+  <footer>
+    <div>Berlin Gateway — Qualification &amp; Access 2026 ©</div>
+    <div>
+      <a href="/impressum.html">Impressum</a> ·
+      <a href="/datenschutz.html">Datenschutz</a>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>

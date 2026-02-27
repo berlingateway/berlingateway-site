@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تم استلام طلبك | Berlin Gateway</title>
-<style>
-body{
-margin:0;
-font-family:sans-serif;
-background:#f8fafc;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-text-align:center;
-}
-.box{
-background:white;
-padding:3rem;
-border-radius:8px;
-max-width:600px;
-}
-h1{color:#0f172a;}
-p{color:#64748b;}
-a{
-display:inline-block;
-margin-top:1.5rem;
-text-decoration:none;
-background:#0f172a;
-color:white;
-padding:0.8rem 1.5rem;
-border-radius:6px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تم الاستلام | Berlin Gateway</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0f172a;
+      --text:#334155;
+      --muted:#64748b;
+      --panel:#f8fafc;
+      --line:#e2e8f0;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--panel);
+      color:var(--text);
+      font-family:"IBM Plex Sans Arabic","Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.8;
+      display:flex;
+      min-height:100vh;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .box{
+      max-width:720px;
+      width:100%;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      text-align:center;
+    }
+    h1{ margin:0 0 10px; color:var(--primary); font-size:28px; }
+    p{ margin:0 0 18px; color:var(--muted); font-size:15px; }
+    a{
+      display:inline-block;
+      text-decoration:none;
+      background:var(--primary);
+      color:#fff;
+      padding:12px 16px;
+      border-radius:14px;
+      font-size:15px;
+    }
+    a:hover{opacity:.92}
+  </style>
 </head>
+
 <body>
-
-<div class="box">
-<h1>تم استلام طلبك بنجاح</h1>
-<p>
-سيتم مراجعة ملفك خلال 24–48 ساعة.
-يرجى متابعة بريدك الإلكتروني.
-</p>
-<a href="https://berlingateway.de">العودة إلى الصفحة الرئيسية</a>
-</div>
-
+  <div class="box">
+    <h1>تم استلام التقييم بنجاح.</h1>
+    <p>وصلتنا بياناتك. سيتم مراجعتها والرد عليك عبر البريد/واتساب حسب المعلومات التي أدخلتها.</p>
+    <a href="/ar/">العودة للصفحة الرئيسية</a>
+  </div>
 </body>
 </html>

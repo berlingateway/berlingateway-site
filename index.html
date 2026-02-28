@@ -8,101 +8,116 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
 
   <style>
-    :root{
-      --navy:#0b1220;
-      --ink:#0f172a;
-      --muted:#64748b;
-      --line:#e2e8f0;
-      --bg:#f6f8fb;
-      --card:#ffffff;
-      --radius:18px;
-      --shadow:0 14px 40px rgba(2,6,23,.10);
+    /* Page-specific styles (hero, cards, etc.) */
+    .hero {
+      margin-top: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px 26px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--ink);
-      background:radial-gradient(900px 400px at 50% -120px, rgba(11,18,32,.10), transparent 70%), var(--bg);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1040px;margin:0 auto;padding:22px 18px 40px}
-    header{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 0;
-    }
-    .brand{
-      font-weight:800;letter-spacing:-.02em;
-      display:flex;gap:10px;align-items:center;
-    }
-    .dot{width:10px;height:10px;border-radius:99px;background:var(--navy)}
-    nav{display:flex;gap:14px;color:var(--muted);font-size:.95rem}
-    nav a{padding:8px 10px;border-radius:10px}
-    nav a:hover{background:rgba(2,6,23,.06)}
-    .hero{
-      margin-top:10px;
-      background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:34px 26px;
-    }
-    .kicker{color:var(--muted);font-weight:600;font-size:.95rem}
-    h1{margin:10px 0 10px;font-size:44px;letter-spacing:-.03em;line-height:1.06}
-    .sub{color:var(--muted);max-width:70ch;line-height:1.7;margin:0}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 18px;border-radius:14px;
-      border:1px solid var(--line);
-      font-weight:700;
-      background:var(--card);
-      min-width:210px;
-    }
-    .btn.primary{background:var(--navy);color:#fff;border-color:transparent}
-    .btn:hover{transform:translateY(-1px)}
-    .grid{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:16px 16px 14px;
-      box-shadow:0 10px 26px rgba(2,6,23,.06);
-    }
-    .card h3{margin:0 0 6px;font-size:15px}
-    .card p{margin:0;color:var(--muted);line-height:1.6;font-size:.95rem}
-    footer{
-      margin-top:22px;
-      color:var(--muted);
-      font-size:.92rem;
-      display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
-    }
-    .footlinks{display:flex;gap:12px;flex-wrap:wrap}
-    .footlinks a{text-decoration:underline;text-underline-offset:3px}
 
-    @media (max-width:900px){
-      h1{font-size:36px}
-      .grid{grid-template-columns:1fr}
-      .btn{min-width:100%}
-      nav{display:none}
+    .kicker {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      margin: 10px 0 10px;
+      font-size: 44px;
+      letter-spacing: -0.03em;
+      line-height: 1.06;
+    }
+
+    .sub {
+      color: var(--muted);
+      max-width: 70ch;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      font-weight: 700;
+      background: var(--card);
+      min-width: 210px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .btn.primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      box-shadow: 0 10px 26px rgba(2, 6, 23, 0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        min-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="brand"><span class="dot"></span> Berlin Gateway</div>
-      <nav>
-        <a href="/framework.html">Framework</a>
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/eligibility.html">العربية</a>
-      </nav>
-    </header>
+    <!-- Header will be inserted by layout.js -->
 
     <section class="hero">
       <div class="kicker">Qualification & Access Framework</div>
@@ -134,13 +149,17 @@
       </div>
     </section>
 
-    <footer>
-      <div>© Berlin Gateway — Germany</div>
-      <div class="footlinks">
-        <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
-        <a href="/framework.html">Framework</a>
-      </div>
-    </footer>
+    <!-- Footer will be inserted by layout.js -->
   </div>
+
+  <script src="/layout.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      BGLayout.initializeLayout({
+        lang: 'en',
+        currentPage: '/index.html'
+      });
+    });
+  </script>
 </body>
 </html>

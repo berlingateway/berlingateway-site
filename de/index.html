@@ -1,105 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Berlin Gateway — Deutsch</title>
-  <meta name="description" content="Berlin Gateway — Qualification & Access Framework für Fachkräfte." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
-
-  <style>
-    /* Page-specific styles (panel, CTA, etc.) */
-    .panel {
-      background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px 22px;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-      letter-spacing: -0.03em;
-      font-weight: 700;
-    }
-
-    p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.75;
-      max-width: 80ch;
-    }
-
-    .cta {
-      margin-top: 18px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #fff;
-      font-weight: 800;
-      min-width: 240px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .btn.primary {
-      background: var(--navy);
-      color: #fff;
-      border-color: transparent;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    @media (max-width: 900px) {
-      .btn {
-        min-width: 100%;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berlin Gateway – Strukturierter Zugang nach Deutschland</title>
+  <meta name="description" content="Anerkennung zuerst. Sprache danach. Strukturierter Zugang für Fachkräfte nach Deutschland.">
+  <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 <body>
-  <div class="wrap">
-    <!-- Header will be inserted by layout.js -->
 
-    <section class="panel">
-      <h1>Qualification & Access Framework</h1>
-      <p>
-        Berlin Gateway unterstützt Fachkräfte dabei, den richtigen Weg zu Anerkennung, Sprachstrategie und Integration in Deutschland zu planen —
-        strukturiert, realistisch und umsetzbar.
-      </p>
-
-      <div class="cta">
-        <a class="btn primary" href="/framework.html">Framework ansehen</a>
-        <a class="btn" href="mailto:info@berlingateway.de">Kontakt: info@berlingateway.de</a>
-      </div>
-    </section>
-
-    <!-- Footer will be inserted by layout.js -->
+<header>
+  <div class="nav">
+    <div><strong>Berlin Gateway</strong></div>
+    <div>
+      <a href="/de/framework.html">Framework</a>
+      <a href="/de/apply.html">Bewerbung</a>
+      <a href="/ar/index.html">العربية</a>
+    </div>
   </div>
+</header>
 
-  <script src="/layout.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      BGLayout.initializeLayout({
-        lang: 'de',
-        currentPage: '/de/'
-      });
-    });
-  </script>
+<div class="container">
+  <h1>Anerkennung zuerst. Sprache danach.</h1>
+  <p>Wir entwickeln strukturierte Zugangsstrategien nach Deutschland – basierend auf rechtlicher Kategorie, Anerkennungslogik und klarer Umsetzungsplanung.</p>
+
+  <a href="/de/apply.html" class="button">Strukturierte Bewertung starten</a>
+  <a href="/de/framework.html" class="button secondary">Framework ansehen</a>
+
+  <div class="section">
+    <h2>Warum Berlin Gateway?</h2>
+    <ul>
+      <li>Keine zufällige Sprachstrategie</li>
+      <li>Klare Kategorisierung (Anerkennung / Visa / Weiterbildung)</li>
+      <li>Konkreter 30/60/90-Tage-Plan</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التقييم المنظم – Berlin Gateway</title>
+  <meta name="description" content="ابدأ تقييمك المنظم للوصول إلى ألمانيا.">
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div><strong>Berlin Gateway</strong></div>
+    <div>
+      <a href="/ar/index.html">الرئيسية</a>
+      <a href="/ar/framework.html">المنهج</a>
+      <a href="/de/apply.html">Deutsch</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h1>التقييم الأولي المنظم</h1>
+
+  <div class="section">
+    <form action="https://formsubmit.co/info@berlingateway.de" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Berlin Gateway | تقييم جديد (AR)">
+      <input type="hidden" name="_next" value="https://berlingateway.de/ar/thankyou.html">
+
+      <label for="full_name">الاسم الكامل</label>
+      <input type="text" id="full_name" name="full_name" placeholder="أحمد محمد" required>
+
+      <label for="email">البريد الإلكتروني</label>
+      <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+      <label for="current_country">الدولة الحالية</label>
+      <input type="text" id="current_country" name="current_country" placeholder="مثال: سوريا، مصر، ألمانيا" required>
+
+      <label for="field">المجال المهني</label>
+      <input type="text" id="field" name="field" placeholder="مثال: طب، هندسة، تقنية" required>
+
+      <label for="german_level">مستوى اللغة الألمانية</label>
+      <select id="german_level" name="german_level" required>
+        <option value="">اختر</option>
+        <option>لا يوجد</option>
+        <option>A1</option>
+        <option>A2</option>
+        <option>B1</option>
+        <option>B2</option>
+        <option>C1+</option>
+      </select>
+
+      <label for="notes">معلومات إضافية (اختياري)</label>
+      <textarea id="notes" name="notes" placeholder="تفاصيل إضافية، أسئلة، إلخ..."></textarea>
+
+      <button type="submit" class="button">إرسال التقييم</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+</footer>
+
+</body>
+</html>

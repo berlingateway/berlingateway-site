@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strukturierte Bewertung – Berlin Gateway</title>
+  <meta name="description" content="Starten Sie Ihre strukturierte Bewertung für den Zugang nach Deutschland.">
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div><strong>Berlin Gateway</strong></div>
+    <div>
+      <a href="/de/index.html">Start</a>
+      <a href="/de/framework.html">Framework</a>
+      <a href="/ar/apply.html">العربية</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h1>Strukturierte Bewertung</h1>
+
+  <div class="section">
+    <form action="https://formsubmit.co/info@berlingateway.de" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Berlin Gateway | Neue Bewertung (DE)">
+      <input type="hidden" name="_next" value="https://berlingateway.de/de/thankyou.html">
+
+      <label for="full_name">Vollständiger Name</label>
+      <input type="text" id="full_name" name="full_name" placeholder="Max Mustermann" required>
+
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+      <label for="current_country">Aktuelles Land</label>
+      <input type="text" id="current_country" name="current_country" placeholder="z.B. Syrien, Ägypten, Deutschland" required>
+
+      <label for="field">Berufliches Feld</label>
+      <input type="text" id="field" name="field" placeholder="z.B. Medizin, Ingenieurwesen, IT" required>
+
+      <label for="german_level">Deutschkenntnisse</label>
+      <select id="german_level" name="german_level" required>
+        <option value="">Wählen Sie</option>
+        <option>Keine</option>
+        <option>A1</option>
+        <option>A2</option>
+        <option>B1</option>
+        <option>B2</option>
+        <option>C1+</option>
+      </select>
+
+      <label for="notes">Zusätzliche Informationen (optional)</label>
+      <textarea id="notes" name="notes" placeholder="Weitere Details, Fragen, etc."></textarea>
+
+      <button type="submit" class="button">Bewertung einreichen</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+</footer>
+
+</body>
+</html>

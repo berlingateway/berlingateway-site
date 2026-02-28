@@ -1,34 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Berlin Gateway | Framework</title>
-<style>
-body{font-family:Arial;padding:40px;background:#f8fafc;}
-h1{color:#0f172a;}
-a{color:#0f172a;text-decoration:none;font-weight:bold;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berlin Gateway — Framework</title>
+  <meta name="description" content="Berlin Gateway Framework: eligibility, qualification mapping, language strategy, and placement path." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{
+      --navy:#0b1220;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;
+      --bg:#f6f8fb;--card:#ffffff;--radius:18px;--shadow:0 14px 40px rgba(2,6,23,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:radial-gradient(900px 400px at 50% -120px, rgba(11,18,32,.10), transparent 70%), var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1040px;margin:0 auto;padding:22px 18px 40px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{font-weight:800;letter-spacing:-.02em;display:flex;gap:10px;align-items:center}
+    .dot{width:10px;height:10px;border-radius:99px;background:var(--navy)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .nav a{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .nav a.primary{background:var(--navy);color:#fff;border-color:transparent}
+    .panel{
+      background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 22px;
+    }
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:-.03em}
+    .sub{margin:0 0 16px;color:var(--muted);line-height:1.7;max-width:80ch}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px 16px 14px;
+      box-shadow:0 10px 26px rgba(2,6,23,.06);
+    }
+    .k{font-weight:800;color:var(--navy);margin:0 0 6px}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.65}
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 16px;border-radius:14px;
+      border:1px solid var(--line);background:#fff;font-weight:800;
+      min-width:220px;
+    }
+    .btn.primary{background:var(--navy);color:#fff;border-color:transparent}
+    footer{margin-top:18px;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .btn{min-width:100%}
+    }
+  </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="dot"></span> Berlin Gateway</div>
+      <div class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/de/">Deutsch</a>
+        <a class="primary" href="/ar/eligibility.html">Start (Arabic)</a>
+      </div>
+    </header>
 
-<h1>Berlin Gateway Framework</h1>
+    <section class="panel">
+      <h1>Berlin Gateway Framework</h1>
+      <p class="sub">
+        A structured Qualification & Access Model designed to move candidates from eligibility assessment to a clear recognition + language + placement path.
+      </p>
 
-<p>
-Berlin Gateway operates under a structured Qualification & Access Model
-designed to guide candidates from eligibility assessment to integration in Germany.
-</p>
+      <div class="grid">
+        <div class="card">
+          <div class="k">1) Initial Eligibility Review</div>
+          <ul>
+            <li>Profile snapshot (country, degree, field, experience)</li>
+            <li>Target route selection (recognition / visa / training / job-search)</li>
+            <li>Document readiness check</li>
+          </ul>
+        </div>
 
-<h3>Execution Plan</h3>
-<ul>
-<li>Initial Eligibility Review</li>
-<li>Qualification Mapping</li>
-<li>German Language Strategy</li>
-<li>Recognition & Placement Path</li>
-</ul>
+        <div class="card">
+          <div class="k">2) Qualification Mapping</div>
+          <ul>
+            <li>Recognition logic (Anerkennung) — where applicable</li>
+            <li>Correct category and next steps, based on the case</li>
+            <li>Risk flags and bottlenecks (early detection)</li>
+          </ul>
+        </div>
 
-<br>
-<a href="/index.html">← Back to Home</a>
+        <div class="card">
+          <div class="k">3) German Language Strategy</div>
+          <ul>
+            <li>Language milestones aligned with route</li>
+            <li>Practical exam plan (if needed)</li>
+            <li>Timeboxing: what to do first, what to postpone</li>
+          </ul>
+        </div>
 
+        <div class="card">
+          <div class="k">4) Recognition & Placement Path</div>
+          <ul>
+            <li>Execution plan with milestones</li>
+            <li>Work/education integration roadmap</li>
+            <li>Follow-up checkpoints</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="/ar/eligibility.html">Start Free Eligibility Review</a>
+        <a class="btn" href="mailto:info@berlingateway.de">Contact: info@berlingateway.de</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Berlin Gateway — Germany</div>
+      <div>Framework page (global)</div>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تم الاستلام</title>
-<style>
-body{font-family:Arial;text-align:center;padding:50px;background:#f8fafc;}
-a{display:inline-block;margin-top:20px;padding:12px 24px;background:#0f172a;color:white;text-decoration:none;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berlin Gateway | تم الاستلام</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{--navy:#0b1220;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--bg:#f6f8fb;--card:#fff;--radius:18px;--shadow:0 14px 40px rgba(2,6,23,.10);}
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:"IBM Plex Sans Arabic", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:radial-gradient(900px 400px at 50% -120px, rgba(11,18,32,.10), transparent 70%), var(--bg);
+      min-height:100vh;display:flex;align-items:center;justify-content:center;padding:18px;
+    }
+    .card{
+      width:min(720px,100%);
+      background:linear-gradient(180deg,#fff 0%,#fbfdff 100%);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:26px 20px;
+      text-align:center;
+    }
+    h1{margin:0 0 10px;font-size:30px}
+    p{margin:0;color:var(--muted);line-height:1.9}
+    .btn{
+      margin-top:16px;display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 16px;border-radius:14px;border:1px solid var(--line);
+      background:var(--navy);color:#fff;font-weight:900;min-width:240px;
+      text-decoration:none;
+    }
+    .small{margin-top:10px;font-size:.92rem;color:var(--muted)}
+  </style>
 </head>
 <body>
-
-<h2>تم استلام التقييم بنجاح</h2>
-<p>سيتم مراجعة بياناتك والتواصل معك عبر البريد الإلكتروني.</p>
-
-<a href="/index.html">العودة للرئيسية</a>
-
+  <div class="card">
+    <h1>تم استلام التقييم بنجاح.</h1>
+    <p>وصلتنا بياناتك. سيتم مراجعتها والرد عليك عبر البريد/واتساب حسب المعلومات التي أدخلتها.</p>
+    <a class="btn" href="/index.html">العودة للصفحة الرئيسية</a>
+    <div class="small">للتواصل: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a></div>
+  </div>
 </body>
 </html>

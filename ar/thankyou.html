@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="ar" dir="rtl" class="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>تأكيد | Berlin Gateway</title>
   <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
-<body>
+<body class="rtl">
 <header class="header">
   <div class="container wrap">
-    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
     <nav class="nav">
       <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/thankyou.html">DE</a>
       <span class="sep">·</span><a href="/ar/system.html">منطق النظام</a>
@@ -21,16 +21,16 @@
 <main class="container">
   <section class="hero">
     <p class="kicker">Confirmation</p>
-    <h1 class="h1">تم تسجيل الاستقبال.</h1>
-    <p class="sub" id="line1">تم تفعيل تسلسل الفحص الداخلي.</p>
+    <h1 class="h1">تم تسجيل الدخول.</h1>
+    <p class="sub">تم تفعيل التسلسل الداخلي.</p>
     <div class="note" id="akten"></div>
-    <p class="small" style="margin-top:12px;">هذا الإشعار مؤتمت.</p>
+    <p class="small" style="margin-top:12px;">Diese Mitteilung erfolgt automatisiert.</p>
   </section>
 </main>
 
 <footer class="footer">
   <div class="container wrap">
-    <div><b>Berlin Gateway</b> — معمارية الدخول الهيكلية للعاملين المهرة</div>
+    <div><b>Berlin Gateway</b> — بنية دخول هيكلية للكفاءات</div>
     <div>info@berlingateway.de</div>
   </div>
 </footer>
@@ -39,8 +39,8 @@
   const qs = new URLSearchParams(location.search);
   const id = qs.get('id');
   document.getElementById('akten').innerHTML = id
-    ? `<b>رقم الملف:</b> ${id}`
-    : `<b>رقم الملف:</b> (سيتم تأكيده عبر البريد الإلكتروني)`;
+    ? `<b>Aktenzeichen:</b> ${id}`
+    : `<b>Aktenzeichen:</b> (سيصل عبر البريد)`;
 </script>
 </body>
 </html>

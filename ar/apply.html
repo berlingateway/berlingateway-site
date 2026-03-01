@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="ar" dir="rtl" class="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>الفحص الهيكلي | Berlin Gateway</title>
+  <title>التدقيق الهيكلي | Berlin Gateway</title>
   <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
-<body>
+<body class="rtl">
 <header class="header">
   <div class="container wrap">
-    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
     <nav class="nav">
       <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/apply.html">DE</a>
       <span class="sep">·</span><a href="/ar/system.html">منطق النظام</a>
@@ -21,10 +21,10 @@
 <main class="container">
   <section class="hero">
     <p class="kicker">Decision Gateway</p>
-    <h1 class="h1">التصنيف الهيكلي (رقمي)</h1>
+    <h1 class="h1">تصنيف هيكلي (رقمي)</h1>
     <div class="note">
-      هذا الفحص لا يحل محل الاستشارة.<br/>
-      يخدم التصنيف الهيكلي في نظام العاملين المهرة الألماني.
+      هذا الفحص ليس استشارة.<br/>
+      هدفه التصنيف الهيكلي داخل نظام الكفاءات الألماني.
     </div>
   </section>
 
@@ -34,77 +34,70 @@
       <span class="pip" id="p2"></span>
       <span class="pip" id="p3"></span>
       <span class="pip" id="p4"></span>
-      <span style="margin-left:8px">تسلسل الفحص الداخلي</span>
+      <span style="margin-right:8px">تسلسل داخلي</span>
     </div>
 
-    <!-- FormSubmit (no backend) -->
     <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
-      <!-- FormSubmit controls -->
       <input type="hidden" name="_subject" id="subj" value="">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" id="nextUrl" value="">
       <input type="hidden" name="Aktenzeichen" id="aktenzeichen" value="">
       <input type="hidden" name="Interne_Pruefsequenz" value="aktiviert">
-      <input type="hidden" name="Automated_Notice" value="هذا الإشعار مؤتمت.">
-      <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — معمارية الدخول الهيكلية للعاملين المهرة">
+      <input type="hidden" name="Automated_Notice" value="Diese Mitteilung erfolgt automatisiert.">
+      <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — Strukturelle Eintrittsarchitektur für Fachkräfte">
 
-      <!-- STEP 1 -->
       <div class="step active" id="s1">
-        <label>1) فئة المؤهل</label>
+        <label>1) اختر فئة مؤهلك المهني</label>
         <select name="Kategorie" required>
-          <option value="" selected disabled>يرجى الاختيار…</option>
-          <option value="A — Regulated (الصحة/الطب/الصيدلة)">أ — منظم (الصحة/الطب/الصيدلة)</option>
-          <option value="B — Academic STEM (الهندسة/تقنية المعلومات/العمارة)">ب — أكاديمي STEM (الهندسة/تقنية المعلومات/العمارة)</option>
-          <option value="C — Vocational (التقنية/الحرف)">ج — مهني (التقنية/الحرف)</option>
-          <option value="D — Academic Non-Regulated (الأعمال/العلوم الإنسانية)">د — أكاديمي غير منظم (الأعمال/العلوم الإنسانية)</option>
+          <option value="" selected disabled>اختر…</option>
+          <option value="A — مهن منظمة (صحة/طب/صيدلة)">A — مهن منظمة (صحة/طب/صيدلة)</option>
+          <option value="B — STEM أكاديمي (هندسة/IT/عمارة)">B — STEM أكاديمي (هندسة/IT/عمارة)</option>
+          <option value="C — مهني (تقني/حِرف)">C — مهني (تقني/حِرف)</option>
+          <option value="D — أكاديمي غير منظم (إدارة/أعمال)">D — أكاديمي غير منظم (إدارة/أعمال)</option>
         </select>
-
         <div class="actions">
           <button class="btn primary wide" type="button" onclick="nextStep(2)">التالي</button>
         </div>
       </div>
 
-      <!-- STEP 2 -->
       <div class="step" id="s2">
-        <label>2) إشارات الاعتراف (موجزة)</label>
+        <label>2) إشارات الاعتراف (مختصر)</label>
         <select name="Anerkennung_Status" required>
-          <option value="" selected disabled>يرجى الاختيار…</option>
-          <option value="مهنة منظمة (الاعتراف مطلوب)">مهنة منظمة (الاعتراف مطلوب)</option>
-          <option value="Anabin H+ / موجود ومطابق">Anabin H+ / موجود ومطابق</option>
-          <option value="غير واضح / يجب فحصه">غير واضح / يجب فحصه</option>
+          <option value="" selected disabled>اختر…</option>
+          <option value="مهنة منظمة (اعتراف مطلوب)">مهنة منظمة (اعتراف مطلوب)</option>
+          <option value="Anabin H+ / entspricht موجود">Anabin H+ / entspricht موجود</option>
+          <option value="غير واضح / يحتاج فحص">غير واضح / يحتاج فحص</option>
         </select>
 
-        <label>السيرة الذاتية + المؤهلات (PDF)</label>
+        <label>CV + الشهادة (PDF)</label>
         <input type="file" name="Dossier_PDF" accept="application/pdf" required />
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(1)">السابق</button>
+          <button class="btn" type="button" onclick="nextStep(1)">رجوع</button>
           <button class="btn primary wide" type="button" onclick="nextStep(3)">التالي</button>
         </div>
       </div>
 
-      <!-- STEP 3 -->
       <div class="step" id="s3">
-        <label>3) اللغة / الخبرة</label>
+        <label>3) اللغة والخبرة</label>
         <select name="Deutsch_Level" required>
           <option value="" selected disabled>مستوى الألمانية…</option>
           <option>A0/A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1/C2</option>
         </select>
 
-        <label>سنوات الخبرة المهنية</label>
+        <label>سنوات الخبرة</label>
         <input type="number" name="Erfahrung_Jahre" min="0" max="60" placeholder="مثال: 5" required />
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(2)">السابق</button>
+          <button class="btn" type="button" onclick="nextStep(2)">رجوع</button>
           <button class="btn primary wide" type="button" onclick="nextStep(4)">التالي</button>
         </div>
       </div>
 
-      <!-- STEP 4 -->
       <div class="step" id="s4">
-        <label>4) المنطقة المستهدفة / الاتصال</label>
-        <input type="text" name="Zielregion" placeholder="الولاية/المدينة (مثال: برلين، NRW)" required />
+        <label>4) المدينة/الولاية + بيانات الاتصال</label>
+        <input type="text" name="Zielregion" placeholder="برلين / NRW / …" required />
 
         <label>الاسم الكامل</label>
         <input type="text" name="Name" required />
@@ -112,16 +105,16 @@
         <label>البريد الإلكتروني</label>
         <input type="email" name="Email" required />
 
-        <label>ملاحظة موجزة (اختياري)</label>
-        <textarea name="Hinweis" placeholder="اختياري: الدور المستهدف / الجدول الزمني / ملاحظات خاصة"></textarea>
+        <label>ملاحظة مختصرة (اختياري)</label>
+        <textarea name="Hinweis" placeholder="اختياري: هدف وظيفي / زمن / تفاصيل"></textarea>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(3)">السابق</button>
+          <button class="btn" type="button" onclick="nextStep(3)">رجوع</button>
           <button class="btn primary wide" type="submit">إرسال</button>
         </div>
 
         <p class="small" style="margin-top:12px;">
-          النتيجة: عبر البريد الإلكتروني فقط بعد المراجعة الداخلية.
+          النتيجة تُرسل عبر البريد بعد مراجعة داخلية.
         </p>
       </div>
     </form>
@@ -130,7 +123,7 @@
 
 <footer class="footer">
   <div class="container wrap">
-    <div><b>Berlin Gateway</b> — معمارية الدخول الهيكلية للعاملين المهرة</div>
+    <div><b>Berlin Gateway</b> — بنية دخول هيكلية للكفاءات</div>
     <div>info@berlingateway.de</div>
   </div>
 </footer>
@@ -149,7 +142,6 @@
     setPips(n);
     window.scrollTo({top:0,behavior:'smooth'});
   }
-
   function randomDigits(len){
     let s='';
     for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
@@ -166,8 +158,6 @@
   form.addEventListener('submit', function(){
     const id = makeAktenzeichen();
     document.getElementById('aktenzeichen').value = id;
-
-    // Subject + Redirect
     document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
     document.getElementById('nextUrl').value = `${location.origin}/ar/thankyou.html?id=${encodeURIComponent(id)}`;
   });

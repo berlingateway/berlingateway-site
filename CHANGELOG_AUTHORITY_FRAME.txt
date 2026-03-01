@@ -1,0 +1,28 @@
+Authority Frame Hardening v1 — Changelog
+
+CHANGES:
+1. Mobile H1 Fix (<480px): 28px font-size, 1.2 line-height
+2. Institutional Blue: #0B3B8C (primary), #082F6B (hover)
+3. Global Header: Consistent on all 12 pages (DE + AR)
+4. Global Footer: Consistent on all 12 pages (DE + AR)
+5. Mobile Spacing: Reduced padding/margins for <480px viewport
+6. RTL Integrity: Verified and maintained for Arabic pages
+
+PAGES UPDATED: 12 (6 German + 6 Arabic)
+- /de/index.html, systemlogik.html, framework.html, voraussetzungen.html, apply.html, thankyou.html
+- /ar/index.html, systemlogik.html, framework.html, voraussetzungen.html, apply.html, thankyou.html
+
+CSS CHANGES:
+- --navy → --primary (#0B3B8C)
+- Added --primary-hover (#082F6B)
+- Added @media (max-width:480px) breakpoint
+- Updated all color references to use --primary variable
+
+TESTING:
+✓ Mobile H1 visibility (375px, 390px)
+✓ Institutional Blue consistency (all pages)
+✓ RTL layout integrity (Arabic pages)
+✓ Header/Footer alignment (mobile + desktop)
+✓ No layout breaks detected
+
+DEPLOYMENT: Ready for production

@@ -1,5 +1,6 @@
 :root{
-  --navy:#0f172a;
+  --primary:#0B3B8C;
+  --primary-hover:#082F6B;
   --text:#334155;
   --muted:#64748b;
   --line:#e2e8f0;
@@ -16,40 +17,41 @@ a:hover{opacity:.85}
 
 .header{border-bottom:1px solid var(--line);background:#fff}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:700;letter-spacing:.3px}
-.emblem{width:18px;height:18px;border:1px solid var(--navy);display:inline-block;transform:rotate(45deg)}
+.brand{display:flex;align-items:center;gap:10px;color:var(--primary);font-weight:700;letter-spacing:.3px}
+.emblem{width:18px;height:18px;border:1px solid var(--primary);display:inline-block;transform:rotate(45deg)}
 .nav{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:14px}
 .nav .sep{opacity:.35}
 .nav a{padding:6px 8px;border-radius:6px}
-.nav a.active{background:var(--soft);color:var(--navy)}
+.nav a.active{background:var(--soft);color:var(--primary)}
 
 .hero{padding:54px 0 28px}
-.h1{font-size:40px;line-height:1.15;margin:0 0 14px;color:var(--navy);letter-spacing:-.4px}
+.h1{font-size:40px;line-height:1.15;margin:0 0 14px;color:var(--primary);letter-spacing:-.4px;word-break:normal;overflow-wrap:anywhere}
 .sub{max-width:860px;color:var(--text);margin:0 0 22px;font-size:16px}
 .kicker{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px}
 
 .section{padding:26px 0;border-top:1px solid var(--line)}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 .card{grid-column:span 6;border:1px solid var(--line);background:#fff;border-radius:10px;padding:16px}
-.card h3{margin:0 0 8px;color:var(--navy);font-size:16px}
+.card h3{margin:0 0 8px;color:var(--primary);font-size:16px}
 .card p{margin:0;color:var(--text);font-size:14px}
 .small{color:var(--muted);font-size:13px}
 .note{background:var(--soft);border:1px solid var(--line);padding:14px;border-radius:10px;color:var(--text);font-size:14px}
 
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:8px;font-size:14px;border:1px solid var(--line);background:#fff;color:var(--navy)}
-.btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:8px;font-size:14px;border:1px solid var(--line);background:#fff;color:var(--primary)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-hover);border-color:var(--primary-hover)}
 .btn.secondary{background:var(--soft)}
 .btn.wide{min-width:260px}
 
 .footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:12px}
 .footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.footer b{color:var(--navy)}
+.footer b{color:var(--primary)}
 
 .hr{height:1px;background:var(--line);margin:18px 0}
 
 .form{max-width:760px}
-label{display:block;margin:12px 0 6px;color:var(--navy);font-weight:600;font-size:13px}
+label{display:block;margin:12px 0 6px;color:var(--primary);font-weight:600;font-size:13px}
 input,select,textarea{
   width:100%;padding:12px 12px;border:1px solid var(--line);border-radius:10px;
   background:#fff;color:var(--text);font-size:14px;outline:none
@@ -58,7 +60,7 @@ textarea{min-height:110px;resize:vertical}
 
 .stepper{display:flex;gap:8px;align-items:center;margin:10px 0 16px;color:var(--muted);font-size:13px}
 .pip{width:10px;height:10px;border-radius:999px;border:1px solid var(--line);background:#fff}
-.pip.on{background:var(--navy);border-color:var(--navy)}
+.pip.on{background:var(--primary);border-color:var(--primary)}
 .step{display:none}
 .step.active{display:block}
 
@@ -72,4 +74,14 @@ textarea{min-height:110px;resize:vertical}
 @media (max-width:900px){
   .card{grid-column:span 12}
   .h1{font-size:34px}
+}
+
+@media (max-width:480px){
+  .h1{font-size:28px;line-height:1.2}
+  .hero{padding:32px 0 16px}
+  .section{padding:16px 0}
+  .nav{gap:8px;font-size:12px}
+  .nav a{padding:4px 6px}
+  .container{padding:0 16px}
+  label{margin:8px 0 4px}
 }

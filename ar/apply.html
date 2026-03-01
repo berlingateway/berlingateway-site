@@ -206,28 +206,29 @@
 
 
 <script>
-  function setStepActive(n){
+  // ---------- Step navigation + disable inactive inputs ----------
+  function setStep(n){
     for(let i=1;i<=5;i++){
       const step = document.getElementById('s'+i);
-      const isActive = (i===n);
-      step.classList.toggle('active', isActive);
+      const active = (i === n);
+      step.classList.toggle('active', active);
 
-      // Disable inputs in inactive steps so required doesn't block submit
+      // Disable inputs in inactive steps so "required" won't block submit
       step.querySelectorAll('input, select, textarea, button').forEach(el=>{
-        if(el.type === 'button') return; // navigation buttons
-        el.disabled = !isActive;
+        // keep step navigation buttons clickable only in active step
+        if(el.type === 'button') return;
+        el.disabled = !active;
       });
     }
     window.scrollTo({top:0,behavior:'smooth'});
   }
 
-  function nextStep(n){
-    setStepActive(n);
-  }
+  function nextStep(n){ setStep(n); }
 
+  // ---------- ID / Aktenzeichen ----------
   function randomDigits(len){
     let s='';
-    for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
+    for(let i=0;i<len;i++) s += Math.floor(Math.random()*10);
     return s;
   }
 
@@ -235,31 +236,55 @@
     const now = new Date();
     const y = now.getFullYear();
     const m = String(now.getMonth()+1).padStart(2,'0');
-    const block = randomDigits(5);
-    return `BG-${y}${m}-${block}`;
+    return `BG-${y}${m}-${randomDigits(5)}`;
   }
 
-  // On submit: enable all inputs temporarily so values are submitted
+  // ---------- Text normalization (safe) ----------
+  function normalizeText(v){
+    if(!v) return v;
+    v = v.trim().replace(/\s+/g,' ');
+    // Capitalize first letter only if latin; leave Arabic as-is
+    if(/^[A-Za-z]/.test(v)) v = v.charAt(0).toUpperCase() + v.slice(1);
+    return v;
+  }
+
+  function normalizeField(form, name){
+    const el = form.querySelector(`[name="${name}"]`);
+    if(el && typeof el.value === 'string') el.value = normalizeText(el.value);
+  }
+
+  // ---------- Submit handler ----------
   const form = document.getElementById('bgForm');
-  form.addEventListener('submit', function(e){
-    // Enable all inputs/selects/textareas so their values are included in submission
+
+  // Initialize: activate step 1 and disable others
+  setStep(1);
+
+  form.addEventListener('submit', function(){
+    // Normalize only these text fields (do NOT touch Email)
+    normalizeField(form, 'Abschlussland');
+    normalizeField(form, 'Abschlussname');
+    normalizeField(form, 'Zielregion');
+    normalizeField(form, 'Name');
+    normalizeField(form, 'WhatsApp');
+    normalizeField(form, 'Notiz');
+
+    // Before submit, temporarily enable all fields so they get sent
     for(let i=1;i<=5;i++){
-      const step = document.getElementById('s'+i);
-      if(!step) continue;
-      step.querySelectorAll('input, select, textarea').forEach(el=>{
-        el.disabled = false;
-      });
+      document.getElementById('s'+i)
+        .querySelectorAll('input, select, textarea')
+        .forEach(el=> el.disabled = false);
     }
 
-    // Generate and inject Aktenzeichen
     const id = makeAktenzeichen();
     document.getElementById('aktenzeichen').value = id;
     document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
-    document.getElementById('nextUrl').value = `${location.origin}/ar/thankyou.html?id=${encodeURIComponent(id)}`;
-  });
 
-  // Initialize: show step 1
-  document.addEventListener('DOMContentLoaded', ()=> setStepActive(1));
+    const next = `${location.origin}/ar/thankyou.html?id=${encodeURIComponent(id)}`;
+    document.getElementById('nextUrl').value = next;
+
+    // Fallback redirect (covers cases where _next doesn't fire)
+    setTimeout(()=>{ window.location.href = next; }, 1200);
+  });
 
   // Set year
   const y = document.getElementById('year');

@@ -206,56 +206,25 @@
 
 
 <script>
-  // --- Helpers ---
-  function setActiveStep(n){
+  function setStepActive(n){
     for(let i=1;i<=5;i++){
-      const el = document.getElementById('s'+i);
-      if(!el) continue;
-      el.classList.toggle('active', i === n);
+      const step = document.getElementById('s'+i);
+      const isActive = (i===n);
+      step.classList.toggle('active', isActive);
+
+      // Disable inputs in inactive steps so required doesn't block submit
+      step.querySelectorAll('input, select, textarea, button').forEach(el=>{
+        if(el.type === 'button') return; // navigation buttons
+        el.disabled = !isActive;
+      });
     }
     window.scrollTo({top:0,behavior:'smooth'});
   }
 
-  function validateStep(stepNumber){
-    const step = document.getElementById('s' + stepNumber);
-    if(!step) return true;
-
-    // validate only visible step inputs
-    const fields = step.querySelectorAll('input, select, textarea');
-    for (const f of fields){
-      // reportValidity will show native browser message
-      if (typeof f.reportValidity === "function" && !f.reportValidity()){
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function validateAllSteps(){
-    for(let i=1;i<=5;i++){
-      if(!validateStep(i)){
-        setActiveStep(i);
-        return false;
-      }
-    }
-    return true;
-  }
-
-  // --- Step Navigation ---
   function nextStep(n){
-    // if moving forward, validate current active step first
-    const active = document.querySelector('.step.active');
-    if(active){
-      const id = active.id; // s1..s5
-      const current = parseInt(id.replace('s',''), 10);
-      if (n > current){
-        if(!validateStep(current)) return;
-      }
-    }
-    setActiveStep(n);
+    setStepActive(n);
   }
 
-  // --- Aktenzeichen ---
   function randomDigits(len){
     let s='';
     for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
@@ -270,24 +239,29 @@
     return `BG-${y}${m}-${block}`;
   }
 
-  // --- Submit Handler ---
+  // On submit: enable all inputs temporarily so values are submitted
   const form = document.getElementById('bgForm');
-
   form.addEventListener('submit', function(e){
-    // validate all steps before allowing submit
-    if(!validateAllSteps()){
-      e.preventDefault();
-      return;
+    // Enable all inputs/selects/textareas so their values are included in submission
+    for(let i=1;i<=5;i++){
+      const step = document.getElementById('s'+i);
+      if(!step) continue;
+      step.querySelectorAll('input, select, textarea').forEach(el=>{
+        el.disabled = false;
+      });
     }
 
-    // inject ID + subject + redirect
+    // Generate and inject Aktenzeichen
     const id = makeAktenzeichen();
     document.getElementById('aktenzeichen').value = id;
     document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
     document.getElementById('nextUrl').value = `${location.origin}/de/thankyou.html?id=${encodeURIComponent(id)}`;
   });
 
-  // year once (remove duplicates)
+  // Initialize: show step 1
+  document.addEventListener('DOMContentLoaded', ()=> setStepActive(1));
+
+  // Set year
   const y = document.getElementById('year');
   if(y) y.textContent = new Date().getFullYear();
 </script>

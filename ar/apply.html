@@ -1,68 +1,176 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="ar" dir="rtl" class="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>التقييم المنظم – Berlin Gateway</title>
-  <meta name="description" content="ابدأ تقييمك المنظم للوصول إلى ألمانيا.">
-  <link rel="stylesheet" href="/assets/css/app.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الفحص الهيكلي | Berlin Gateway</title>
+  <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
 <body>
-
-<header>
-  <div class="nav">
-    <div><strong>Berlin Gateway</strong></div>
-    <div>
-      <a href="/ar/index.html">الرئيسية</a>
-      <a href="/ar/framework.html">المنهج</a>
-      <a href="/de/apply.html">Deutsch</a>
-    </div>
+<header class="header">
+  <div class="container wrap">
+    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <nav class="nav">
+      <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/apply.html">DE</a>
+      <span class="sep">·</span><a href="/ar/system.html">منطق النظام</a>
+      <a href="/ar/framework.html">الإطار</a>
+    </nav>
   </div>
 </header>
 
-<div class="container">
-  <h1>التقييم الأولي المنظم</h1>
+<main class="container">
+  <section class="hero">
+    <p class="kicker">Decision Gateway</p>
+    <h1 class="h1">التصنيف الهيكلي (رقمي)</h1>
+    <div class="note">
+      هذا الفحص لا يحل محل الاستشارة.<br/>
+      يخدم التصنيف الهيكلي في نظام العاملين المهرة الألماني.
+    </div>
+  </section>
 
-  <div class="section">
-    <form action="https://formsubmit.co/info@berlingateway.de" method="POST">
+  <section class="section form">
+    <div class="stepper" aria-hidden="true">
+      <span class="pip on" id="p1"></span>
+      <span class="pip" id="p2"></span>
+      <span class="pip" id="p3"></span>
+      <span class="pip" id="p4"></span>
+      <span style="margin-left:8px">تسلسل الفحص الداخلي</span>
+    </div>
+
+    <!-- FormSubmit (no backend) -->
+    <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
+      <!-- FormSubmit controls -->
+      <input type="hidden" name="_subject" id="subj" value="">
+      <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Berlin Gateway | تقييم جديد (AR)">
-      <input type="hidden" name="_next" value="https://berlingateway.de/ar/thankyou.html">
+      <input type="hidden" name="_next" id="nextUrl" value="">
+      <input type="hidden" name="Aktenzeichen" id="aktenzeichen" value="">
+      <input type="hidden" name="Interne_Pruefsequenz" value="aktiviert">
+      <input type="hidden" name="Automated_Notice" value="هذا الإشعار مؤتمت.">
+      <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — معمارية الدخول الهيكلية للعاملين المهرة">
 
-      <label for="full_name">الاسم الكامل</label>
-      <input type="text" id="full_name" name="full_name" placeholder="أحمد محمد" required>
+      <!-- STEP 1 -->
+      <div class="step active" id="s1">
+        <label>1) فئة المؤهل</label>
+        <select name="Kategorie" required>
+          <option value="" selected disabled>يرجى الاختيار…</option>
+          <option value="A — Regulated (الصحة/الطب/الصيدلة)">أ — منظم (الصحة/الطب/الصيدلة)</option>
+          <option value="B — Academic STEM (الهندسة/تقنية المعلومات/العمارة)">ب — أكاديمي STEM (الهندسة/تقنية المعلومات/العمارة)</option>
+          <option value="C — Vocational (التقنية/الحرف)">ج — مهني (التقنية/الحرف)</option>
+          <option value="D — Academic Non-Regulated (الأعمال/العلوم الإنسانية)">د — أكاديمي غير منظم (الأعمال/العلوم الإنسانية)</option>
+        </select>
 
-      <label for="email">البريد الإلكتروني</label>
-      <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        <div class="actions">
+          <button class="btn primary wide" type="button" onclick="nextStep(2)">التالي</button>
+        </div>
+      </div>
 
-      <label for="current_country">الدولة الحالية</label>
-      <input type="text" id="current_country" name="current_country" placeholder="مثال: سوريا، مصر، ألمانيا" required>
+      <!-- STEP 2 -->
+      <div class="step" id="s2">
+        <label>2) إشارات الاعتراف (موجزة)</label>
+        <select name="Anerkennung_Status" required>
+          <option value="" selected disabled>يرجى الاختيار…</option>
+          <option value="مهنة منظمة (الاعتراف مطلوب)">مهنة منظمة (الاعتراف مطلوب)</option>
+          <option value="Anabin H+ / موجود ومطابق">Anabin H+ / موجود ومطابق</option>
+          <option value="غير واضح / يجب فحصه">غير واضح / يجب فحصه</option>
+        </select>
 
-      <label for="field">المجال المهني</label>
-      <input type="text" id="field" name="field" placeholder="مثال: طب، هندسة، تقنية" required>
+        <label>السيرة الذاتية + المؤهلات (PDF)</label>
+        <input type="file" name="Dossier_PDF" accept="application/pdf" required />
 
-      <label for="german_level">مستوى اللغة الألمانية</label>
-      <select id="german_level" name="german_level" required>
-        <option value="">اختر</option>
-        <option>لا يوجد</option>
-        <option>A1</option>
-        <option>A2</option>
-        <option>B1</option>
-        <option>B2</option>
-        <option>C1+</option>
-      </select>
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(1)">السابق</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(3)">التالي</button>
+        </div>
+      </div>
 
-      <label for="notes">معلومات إضافية (اختياري)</label>
-      <textarea id="notes" name="notes" placeholder="تفاصيل إضافية، أسئلة، إلخ..."></textarea>
+      <!-- STEP 3 -->
+      <div class="step" id="s3">
+        <label>3) اللغة / الخبرة</label>
+        <select name="Deutsch_Level" required>
+          <option value="" selected disabled>مستوى الألمانية…</option>
+          <option>A0/A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1/C2</option>
+        </select>
 
-      <button type="submit" class="button">إرسال التقييم</button>
+        <label>سنوات الخبرة المهنية</label>
+        <input type="number" name="Erfahrung_Jahre" min="0" max="60" placeholder="مثال: 5" required />
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(2)">السابق</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(4)">التالي</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step" id="s4">
+        <label>4) المنطقة المستهدفة / الاتصال</label>
+        <input type="text" name="Zielregion" placeholder="الولاية/المدينة (مثال: برلين، NRW)" required />
+
+        <label>الاسم الكامل</label>
+        <input type="text" name="Name" required />
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="Email" required />
+
+        <label>ملاحظة موجزة (اختياري)</label>
+        <textarea name="Hinweis" placeholder="اختياري: الدور المستهدف / الجدول الزمني / ملاحظات خاصة"></textarea>
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(3)">السابق</button>
+          <button class="btn primary wide" type="submit">إرسال</button>
+        </div>
+
+        <p class="small" style="margin-top:12px;">
+          النتيجة: عبر البريد الإلكتروني فقط بعد المراجعة الداخلية.
+        </p>
+      </div>
     </form>
-  </div>
-</div>
+  </section>
+</main>
 
-<footer>
-  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+<footer class="footer">
+  <div class="container wrap">
+    <div><b>Berlin Gateway</b> — معمارية الدخول الهيكلية للعاملين المهرة</div>
+    <div>info@berlingateway.de</div>
+  </div>
 </footer>
 
+<script>
+  function setPips(n){
+    for(let i=1;i<=4;i++){
+      document.getElementById('p'+i).classList.toggle('on', i<=n);
+    }
+  }
+  function nextStep(n){
+    for(let i=1;i<=4;i++){
+      document.getElementById('s'+i).classList.remove('active');
+    }
+    document.getElementById('s'+n).classList.add('active');
+    setPips(n);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function randomDigits(len){
+    let s='';
+    for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
+    return s;
+  }
+  function makeAktenzeichen(){
+    const y = new Date().getFullYear();
+    const block = randomDigits(4);
+    const seq = randomDigits(5);
+    return `BG-${y}-${block}-${seq}`;
+  }
+
+  const form = document.getElementById('bgForm');
+  form.addEventListener('submit', function(){
+    const id = makeAktenzeichen();
+    document.getElementById('aktenzeichen').value = id;
+
+    // Subject + Redirect
+    document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
+    document.getElementById('nextUrl').value = `${location.origin}/ar/thankyou.html?id=${encodeURIComponent(id)}`;
+  });
+</script>
 </body>
 </html>

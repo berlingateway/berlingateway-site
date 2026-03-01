@@ -1,68 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strukturierte Bewertung – Berlin Gateway</title>
-  <meta name="description" content="Starten Sie Ihre strukturierte Bewertung für den Zugang nach Deutschland.">
-  <link rel="stylesheet" href="/assets/css/app.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Strukturelle Prüfung | Berlin Gateway</title>
+  <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
 <body>
-
-<header>
-  <div class="nav">
-    <div><strong>Berlin Gateway</strong></div>
-    <div>
-      <a href="/de/index.html">Start</a>
+<header class="header">
+  <div class="container wrap">
+    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <nav class="nav">
+      <a href="/de/">DE</a><span class="sep">·</span><a href="/ar/apply.html">AR</a>
+      <span class="sep">·</span><a href="/de/system.html">Systemlogik</a>
       <a href="/de/framework.html">Framework</a>
-      <a href="/ar/apply.html">العربية</a>
-    </div>
+    </nav>
   </div>
 </header>
 
-<div class="container">
-  <h1>Strukturierte Bewertung</h1>
+<main class="container">
+  <section class="hero">
+    <p class="kicker">Decision Gateway</p>
+    <h1 class="h1">Strukturelle Einordnung (digital)</h1>
+    <div class="note">
+      Diese Prüfung ersetzt keine Beratung.<br/>
+      Sie dient der strukturellen Einordnung in das deutsche Fachkräftesystem.
+    </div>
+  </section>
 
-  <div class="section">
-    <form action="https://formsubmit.co/info@berlingateway.de" method="POST">
+  <section class="section form">
+    <div class="stepper" aria-hidden="true">
+      <span class="pip on" id="p1"></span>
+      <span class="pip" id="p2"></span>
+      <span class="pip" id="p3"></span>
+      <span class="pip" id="p4"></span>
+      <span style="margin-left:8px">Interne Prüfsequenz</span>
+    </div>
+
+    <!-- FormSubmit (no backend) -->
+    <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
+      <!-- FormSubmit controls -->
+      <input type="hidden" name="_subject" id="subj" value="">
+      <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Berlin Gateway | Neue Bewertung (DE)">
-      <input type="hidden" name="_next" value="https://berlingateway.de/de/thankyou.html">
+      <input type="hidden" name="_next" id="nextUrl" value="">
+      <input type="hidden" name="Aktenzeichen" id="aktenzeichen" value="">
+      <input type="hidden" name="Interne_Pruefsequenz" value="aktiviert">
+      <input type="hidden" name="Automated_Notice" value="Diese Mitteilung erfolgt automatisiert.">
+      <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — Strukturelle Eintrittsarchitektur für Fachkräfte">
 
-      <label for="full_name">Vollständiger Name</label>
-      <input type="text" id="full_name" name="full_name" placeholder="Max Mustermann" required>
+      <!-- STEP 1 -->
+      <div class="step active" id="s1">
+        <label>1) Qualifikationskategorie</label>
+        <select name="Kategorie" required>
+          <option value="" selected disabled>Bitte auswählen…</option>
+          <option value="A — Regulated (Gesundheit/Medizin/Apotheke)">A — Reguliert (Healthcare/Medizin/Pharmazie)</option>
+          <option value="B — Academic STEM (Engineering/IT/Architektur)">B — Akademisch STEM (Engineering/IT/Architektur)</option>
+          <option value="C — Vocational (Technik/Handwerk)">C — Beruflich (Technik/Handwerk)</option>
+          <option value="D — Academic Non-Regulated (Business/Humanities)">D — Akademisch nicht reguliert (Business/Humanities)</option>
+        </select>
 
-      <label for="email">E-Mail</label>
-      <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        <div class="actions">
+          <button class="btn primary wide" type="button" onclick="nextStep(2)">Weiter</button>
+        </div>
+      </div>
 
-      <label for="current_country">Aktuelles Land</label>
-      <input type="text" id="current_country" name="current_country" placeholder="z.B. Syrien, Ägypten, Deutschland" required>
+      <!-- STEP 2 -->
+      <div class="step" id="s2">
+        <label>2) Anerkennungssignale (kurz)</label>
+        <select name="Anerkennung_Status" required>
+          <option value="" selected disabled>Bitte auswählen…</option>
+          <option value="Regulierter Beruf (Anerkennung erforderlich)">Regulierter Beruf (Anerkennung erforderlich)</option>
+          <option value="Anabin H+ / entspricht vorhanden">Anabin H+ / entspricht vorhanden</option>
+          <option value="Unklar / muss geprüft werden">Unklar / muss geprüft werden</option>
+        </select>
 
-      <label for="field">Berufliches Feld</label>
-      <input type="text" id="field" name="field" placeholder="z.B. Medizin, Ingenieurwesen, IT" required>
+        <label>CV + Abschluss (PDF)</label>
+        <input type="file" name="Dossier_PDF" accept="application/pdf" required />
 
-      <label for="german_level">Deutschkenntnisse</label>
-      <select id="german_level" name="german_level" required>
-        <option value="">Wählen Sie</option>
-        <option>Keine</option>
-        <option>A1</option>
-        <option>A2</option>
-        <option>B1</option>
-        <option>B2</option>
-        <option>C1+</option>
-      </select>
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(1)">Zurück</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(3)">Weiter</button>
+        </div>
+      </div>
 
-      <label for="notes">Zusätzliche Informationen (optional)</label>
-      <textarea id="notes" name="notes" placeholder="Weitere Details, Fragen, etc."></textarea>
+      <!-- STEP 3 -->
+      <div class="step" id="s3">
+        <label>3) Sprache / Erfahrung</label>
+        <select name="Deutsch_Level" required>
+          <option value="" selected disabled>Deutsch-Level…</option>
+          <option>A0/A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1/C2</option>
+        </select>
 
-      <button type="submit" class="button">Bewertung einreichen</button>
+        <label>Berufserfahrung (Jahre)</label>
+        <input type="number" name="Erfahrung_Jahre" min="0" max="60" placeholder="z.B. 5" required />
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(2)">Zurück</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(4)">Weiter</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step" id="s4">
+        <label>4) Zielraum / Kontakt</label>
+        <input type="text" name="Zielregion" placeholder="Bundesland/Stadt (z.B. Berlin, NRW)" required />
+
+        <label>Vollständiger Name</label>
+        <input type="text" name="Name" required />
+
+        <label>E-Mail</label>
+        <input type="email" name="Email" required />
+
+        <label>Kurzer Hinweis (optional)</label>
+        <textarea name="Hinweis" placeholder="Optional: Zielrolle / Zeitraum / Besonderheiten"></textarea>
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(3)">Zurück</button>
+          <button class="btn primary wide" type="submit">Einreichen</button>
+        </div>
+
+        <p class="small" style="margin-top:12px;">
+          Ergebnis: ausschließlich per E-Mail nach interner Sichtung.
+        </p>
+      </div>
     </form>
-  </div>
-</div>
+  </section>
+</main>
 
-<footer>
-  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+<footer class="footer">
+  <div class="container wrap">
+    <div><b>Berlin Gateway</b> — Strukturelle Eintrittsarchitektur für Fachkräfte</div>
+    <div>info@berlingateway.de</div>
+  </div>
 </footer>
 
+<script>
+  function setPips(n){
+    for(let i=1;i<=4;i++){
+      document.getElementById('p'+i).classList.toggle('on', i<=n);
+    }
+  }
+  function nextStep(n){
+    for(let i=1;i<=4;i++){
+      document.getElementById('s'+i).classList.remove('active');
+    }
+    document.getElementById('s'+n).classList.add('active');
+    setPips(n);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function randomDigits(len){
+    let s='';
+    for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
+    return s;
+  }
+  function makeAktenzeichen(){
+    const y = new Date().getFullYear();
+    const block = randomDigits(4);
+    const seq = randomDigits(5);
+    return `BG-${y}-${block}-${seq}`;
+  }
+
+  const form = document.getElementById('bgForm');
+  form.addEventListener('submit', function(){
+    const id = makeAktenzeichen();
+    document.getElementById('aktenzeichen').value = id;
+
+    // Subject + Redirect
+    document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
+    document.getElementById('nextUrl').value = `${location.origin}/de/thankyou.html?id=${encodeURIComponent(id)}`;
+  });
+</script>
 </body>
 </html>

@@ -1,35 +1,46 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="ar" dir="rtl" class="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شكراً – Berlin Gateway</title>
-  <link rel="stylesheet" href="/assets/css/app.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تأكيد | Berlin Gateway</title>
+  <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
 <body>
-
-<header>
-  <div class="nav">
-    <div><strong>Berlin Gateway</strong></div>
-    <div>
-      <a href="/ar/index.html">الرئيسية</a>
-      <a href="/ar/framework.html">المنهج</a>
-      <a href="/de/index.html">Deutsch</a>
-    </div>
+<header class="header">
+  <div class="container wrap">
+    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <nav class="nav">
+      <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/thankyou.html">DE</a>
+      <span class="sep">·</span><a href="/ar/system.html">منطق النظام</a>
+      <a href="/ar/framework.html">الإطار</a>
+    </nav>
   </div>
 </header>
 
-<div class="container">
-  <div class="section">
-    <h1>شكراً لك!</h1>
-    <p>تم استلام تقييمك بنجاح. سنراجع معلوماتك وسنتواصل معك قريباً.</p>
-    <a href="/ar/index.html" class="button">العودة إلى الصفحة الرئيسية</a>
-  </div>
-</div>
+<main class="container">
+  <section class="hero">
+    <p class="kicker">Confirmation</p>
+    <h1 class="h1">تم تسجيل الاستقبال.</h1>
+    <p class="sub" id="line1">تم تفعيل تسلسل الفحص الداخلي.</p>
+    <div class="note" id="akten"></div>
+    <p class="small" style="margin-top:12px;">هذا الإشعار مؤتمت.</p>
+  </section>
+</main>
 
-<footer>
-  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+<footer class="footer">
+  <div class="container wrap">
+    <div><b>Berlin Gateway</b> — معمارية الدخول الهيكلية للعاملين المهرة</div>
+    <div>info@berlingateway.de</div>
+  </div>
 </footer>
 
+<script>
+  const qs = new URLSearchParams(location.search);
+  const id = qs.get('id');
+  document.getElementById('akten').innerHTML = id
+    ? `<b>رقم الملف:</b> ${id}`
+    : `<b>رقم الملف:</b> (سيتم تأكيده عبر البريد الإلكتروني)`;
+</script>
 </body>
 </html>

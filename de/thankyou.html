@@ -1,35 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danke – Berlin Gateway</title>
-  <link rel="stylesheet" href="/assets/css/app.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bestätigung | Berlin Gateway</title>
+  <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
 <body>
-
-<header>
-  <div class="nav">
-    <div><strong>Berlin Gateway</strong></div>
-    <div>
-      <a href="/de/index.html">Start</a>
+<header class="header">
+  <div class="container wrap">
+    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <nav class="nav">
+      <a href="/de/">DE</a><span class="sep">·</span><a href="/ar/thankyou.html">AR</a>
+      <span class="sep">·</span><a href="/de/system.html">Systemlogik</a>
       <a href="/de/framework.html">Framework</a>
-      <a href="/ar/index.html">العربية</a>
-    </div>
+    </nav>
   </div>
 </header>
 
-<div class="container">
-  <div class="section">
-    <h1>Vielen Dank!</h1>
-    <p>Ihre Bewertung wurde erfolgreich eingereicht. Wir werden Ihre Informationen überprüfen und uns bald mit Ihnen in Verbindung setzen.</p>
-    <a href="/de/index.html" class="button">Zurück zur Startseite</a>
-  </div>
-</div>
+<main class="container">
+  <section class="hero">
+    <p class="kicker">Confirmation</p>
+    <h1 class="h1">Eingang registriert.</h1>
+    <p class="sub" id="line1">Interne Prüfsequenz aktiviert.</p>
+    <div class="note" id="akten"></div>
+    <p class="small" style="margin-top:12px;">Diese Mitteilung erfolgt automatisiert.</p>
+  </section>
+</main>
 
-<footer>
-  © Berlin Gateway – Germany | <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+<footer class="footer">
+  <div class="container wrap">
+    <div><b>Berlin Gateway</b> — Strukturelle Eintrittsarchitektur für Fachkräfte</div>
+    <div>info@berlingateway.de</div>
+  </div>
 </footer>
 
+<script>
+  const qs = new URLSearchParams(location.search);
+  const id = qs.get('id');
+  document.getElementById('akten').innerHTML = id
+    ? `<b>Aktenzeichen:</b> ${id}`
+    : `<b>Aktenzeichen:</b> (wird per E-Mail bestätigt)`;
+</script>
 </body>
 </html>

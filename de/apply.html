@@ -99,10 +99,38 @@
         </select>
 
         <label style="margin-top:16px;"><b>Abschlussland</b></label>
-        <input type="text" name="Abschlussland" placeholder="z.B. Syrien, Ägypten, Indien" required />
+        <select name="Abschlussland" required>
+          <option value="" disabled selected>Bitte wählen…</option>
+          <option>Ägypten</option>
+          <option>Jordanien</option>
+          <option>Libanon</option>
+          <option>Marokko</option>
+          <option>Tunesien</option>
+          <option>Algerien</option>
+          <option>Syrien</option>
+          <option>Irak</option>
+          <option>Saudi-Arabien</option>
+          <option>Vereinigte Arabische Emirate</option>
+          <option>Türkei</option>
+          <option>Indien</option>
+          <option>Pakistan</option>
+          <option>EU-Länder (Bitte angeben)</option>
+          <option>Andere (Bitte angeben)</option>
+        </select>
 
         <label><b>Abschlussname (auf Deutsch oder Englisch)</b></label>
-        <input type="text" name="Abschlussname" placeholder="z.B. Bachelor of Engineering" required />
+        <input type="text" name="Abschlussname" placeholder="z.B. M.Sc. Elektrotechnik / Humanmedizin / B.Eng. Maschinenbau" required />
+
+        <label style="margin-top:16px;"><b>Abschlussart</b></label>
+        <select name="Abschlussart" required>
+          <option value="" disabled selected>Bitte wählen…</option>
+          <option>Bachelor</option>
+          <option>Master</option>
+          <option>Diplom</option>
+          <option>Berufsausbildung</option>
+          <option>Technischer Abschluss</option>
+          <option>Andere</option>
+        </select>
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(1)">Zurück</button>
@@ -150,7 +178,17 @@
         </select>
 
         <label style="margin-top:16px;">Zielregion (Bundesland/Stadt)</label>
-        <input type="text" name="Zielregion" placeholder="z.B. Berlin, Bayern, NRW" required />
+        <select name="Zielregion" required>
+          <option value="" disabled selected>Bitte wählen…</option>
+          <option>Berlin</option>
+          <option>Bayern</option>
+          <option>NRW</option>
+          <option>Baden-Württemberg</option>
+          <option>Hamburg</option>
+          <option>Hessen</option>
+          <option>Sachsen</option>
+          <option>Offen / noch unklar</option>
+        </select>
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(3)">Zurück</button>

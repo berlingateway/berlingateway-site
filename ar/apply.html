@@ -99,10 +99,38 @@
         </select>
 
         <label style="margin-top:16px;"><b>دولة الشهادة</b></label>
-        <input type="text" name="Abschlussland" placeholder="مثال: سوريا، مصر، الهند" required />
+        <select name="Abschlussland" required>
+          <option value="" disabled selected>يرجى الاختيار…</option>
+          <option>مصر</option>
+          <option>الأردن</option>
+          <option>لبنان</option>
+          <option>المغرب</option>
+          <option>تونس</option>
+          <option>الجزائر</option>
+          <option>سوريا</option>
+          <option>العراق</option>
+          <option>السعودية</option>
+          <option>الإمارات</option>
+          <option>تركيا</option>
+          <option>الهند</option>
+          <option>باكستان</option>
+          <option>دول الاتحاد الأوروبي (يرجى التحديد)</option>
+          <option>أخرى (يرجى التحديد)</option>
+        </select>
 
         <label><b>اسم الشهادة (بالألمانية أو الإنجليزية)</b></label>
-        <input type="text" name="Abschlussname" placeholder="مثال: Bachelor of Engineering" required />
+        <input type="text" name="Abschlussname" placeholder="مثال: ماجستير هندسة كهربائية / الطب البشري / بكالوريوس هندسة ميكانيكية" required />
+
+        <label style="margin-top:16px;"><b>نوع الشهادة</b></label>
+        <select name="Abschlussart" required>
+          <option value="" disabled selected>يرجى الاختيار…</option>
+          <option>بكالوريوس</option>
+          <option>ماجستير</option>
+          <option>دبلوم</option>
+          <option>تكوين مهني</option>
+          <option>مؤهل تقني</option>
+          <option>أخرى</option>
+        </select>
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(1)">رجوع</button>
@@ -150,7 +178,17 @@
         </select>
 
         <label style="margin-top:16px;">المنطقة المستهدفة (ولاية/مدينة)</label>
-        <input type="text" name="Zielregion" placeholder="مثال: برلين، بافاريا، شمال الراين" required />
+        <select name="Zielregion" required>
+          <option value="" disabled selected>يرجى الاختيار…</option>
+          <option>Berlin</option>
+          <option>Bayern</option>
+          <option>NRW</option>
+          <option>Baden-Württemberg</option>
+          <option>Hamburg</option>
+          <option>Hessen</option>
+          <option>Sachsen</option>
+          <option>غير محدد بعد</option>
+        </select>
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(3)">رجوع</button>

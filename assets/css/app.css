@@ -53,6 +53,7 @@ a:hover{opacity:.85}
 .footer-contact{font-size:12px;color:var(--muted)}
 .footer-contact a{color:var(--muted);text-decoration:none}
 .footer-contact a:hover{text-decoration:underline}
+.footer-closing{font-size:11px;color:var(--muted);padding-top:10px;margin-top:10px;border-top:1px solid var(--line);font-weight:400;letter-spacing:.5px}
 
 .hr{height:1px;background:var(--line);margin:18px 0}
 

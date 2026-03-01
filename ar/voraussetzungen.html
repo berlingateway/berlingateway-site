@@ -9,7 +9,7 @@
 <body class="rtl">
 <header class="header">
   <div class="container wrap">
-    <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
+    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
     <nav class="nav">
       <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/voraussetzungen.html">DE</a>
       <span class="sep">·</span><a href="/ar/systemlogik.html">منطق النظام</a>
@@ -56,8 +56,14 @@
 <footer class="footer">
   <div class="container wrap">
     <div><b>Berlin Gateway</b> — بنية دخول هيكلية للكفاءات</div>
-    <div>info@berlingateway.de</div>
+    <div class="footer-contact">التواصل: info@berlingateway.de · هاتف: <a href="tel:+4930123456789">+49 30 123456789</a> · واتساب: <a href="https://wa.me/4930123456789">+49 30 123456789</a></div>
+  </div>
+  <div class="container">
+    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. جميع الحقوق محفوظة.</div>
   </div>
 </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

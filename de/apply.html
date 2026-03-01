@@ -9,7 +9,7 @@
 <body>
 <header class="header">
   <div class="container wrap">
-    <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
+    <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
     <nav class="nav">
       <a href="/de/">DE</a><span class="sep">·</span><a href="/ar/apply.html">AR</a>
       <span class="sep">·</span><a href="/de/systemlogik.html">Systemlogik</a>
@@ -160,9 +160,15 @@
 <footer class="footer">
   <div class="container wrap">
     <div><b>Berlin Gateway</b> — Strukturelle Eintrittsarchitektur für Fachkräfte</div>
-    <div>info@berlingateway.de</div>
+    <div class="footer-contact">Kontakt: info@berlingateway.de · Telefon: <a href="tel:+4930123456789">+49 30 123456789</a> · WhatsApp: <a href="https://wa.me/4930123456789">+49 30 123456789</a></div>
+  </div>
+  <div class="container">
+    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. Alle Rechte vorbehalten.</div>
   </div>
 </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 <script>
   function nextStep(n){

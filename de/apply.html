@@ -203,31 +203,65 @@
     <div class="footer-closing">Strukturiert. Selektiv. Systemisch.</div>
   </div>
 </footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+
 
 <script>
-  function nextStep(n){
+  // --- Helpers ---
+  function setActiveStep(n){
     for(let i=1;i<=5;i++){
-      document.getElementById('s'+i).classList.remove('active');
+      const el = document.getElementById('s'+i);
+      if(!el) continue;
+      el.classList.toggle('active', i === n);
     }
-    document.getElementById('s'+n).classList.add('active');
     window.scrollTo({top:0,behavior:'smooth'});
   }
-  
+
+  function validateStep(stepNumber){
+    const step = document.getElementById('s' + stepNumber);
+    if(!step) return true;
+
+    // validate only visible step inputs
+    const fields = step.querySelectorAll('input, select, textarea');
+    for (const f of fields){
+      // reportValidity will show native browser message
+      if (typeof f.reportValidity === "function" && !f.reportValidity()){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function validateAllSteps(){
+    for(let i=1;i<=5;i++){
+      if(!validateStep(i)){
+        setActiveStep(i);
+        return false;
+      }
+    }
+    return true;
+  }
+
+  // --- Step Navigation ---
+  function nextStep(n){
+    // if moving forward, validate current active step first
+    const active = document.querySelector('.step.active');
+    if(active){
+      const id = active.id; // s1..s5
+      const current = parseInt(id.replace('s',''), 10);
+      if (n > current){
+        if(!validateStep(current)) return;
+      }
+    }
+    setActiveStep(n);
+  }
+
+  // --- Aktenzeichen ---
   function randomDigits(len){
     let s='';
     for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
     return s;
   }
-  
+
   function makeAktenzeichen(){
     const now = new Date();
     const y = now.getFullYear();
@@ -236,13 +270,26 @@
     return `BG-${y}${m}-${block}`;
   }
 
+  // --- Submit Handler ---
   const form = document.getElementById('bgForm');
-  form.addEventListener('submit', function(){
+
+  form.addEventListener('submit', function(e){
+    // validate all steps before allowing submit
+    if(!validateAllSteps()){
+      e.preventDefault();
+      return;
+    }
+
+    // inject ID + subject + redirect
     const id = makeAktenzeichen();
     document.getElementById('aktenzeichen').value = id;
     document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
     document.getElementById('nextUrl').value = `${location.origin}/de/thankyou.html?id=${encodeURIComponent(id)}`;
   });
+
+  // year once (remove duplicates)
+  const y = document.getElementById('year');
+  if(y) y.textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Strukturelle Prüfung | Berlin Gateway</title>
+  <title>Strukturelle Eignungsprüfung | Berlin Gateway</title>
   <link rel="stylesheet" href="/assets/css/app.css" />
 </head>
 <body>
 <header class="header">
   <div class="container wrap">
-    <div class="brand"><span class="emblem"></span> BERLIN GATEWAY</div>
+    <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
     <nav class="nav">
       <a href="/de/">DE</a><span class="sep">·</span><a href="/ar/apply.html">AR</a>
-      <span class="sep">·</span><a href="/de/system.html">Systemlogik</a>
+      <span class="sep">·</span><a href="/de/systemlogik.html">Systemlogik</a>
       <a href="/de/framework.html">Framework</a>
+      <a href="/de/voraussetzungen.html">Voraussetzungen</a>
     </nav>
   </div>
 </header>
@@ -21,7 +22,7 @@
 <main class="container">
   <section class="hero">
     <p class="kicker">Decision Gateway</p>
-    <h1 class="h1">Strukturelle Einordnung (digital)</h1>
+    <h1 class="h1">Strukturelle Eignungsprüfung</h1>
     <div class="note">
       Diese Prüfung ersetzt keine Beratung.<br/>
       Sie dient der strukturellen Einordnung in das deutsche Fachkräftesystem.
@@ -29,17 +30,7 @@
   </section>
 
   <section class="section form">
-    <div class="stepper" aria-hidden="true">
-      <span class="pip on" id="p1"></span>
-      <span class="pip" id="p2"></span>
-      <span class="pip" id="p3"></span>
-      <span class="pip" id="p4"></span>
-      <span style="margin-left:8px">Interne Prüfsequenz</span>
-    </div>
-
-    <!-- FormSubmit (no backend) -->
     <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
-      <!-- FormSubmit controls -->
       <input type="hidden" name="_subject" id="subj" value="">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -49,34 +40,37 @@
       <input type="hidden" name="Automated_Notice" value="Diese Mitteilung erfolgt automatisiert.">
       <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — Strukturelle Eintrittsarchitektur für Fachkräfte">
 
-      <!-- STEP 1 -->
       <div class="step active" id="s1">
-        <label>1) Qualifikationskategorie</label>
+        <label><b>1) Berufliche Kategorie</b></label>
+        <p style="font-size:13px;color:#666;margin-bottom:16px;">
+          Welche Kategorie passt zu Ihrem Abschluss/Beruf?
+        </p>
         <select name="Kategorie" required>
-          <option value="" selected disabled>Bitte auswählen…</option>
-          <option value="A — Regulated (Gesundheit/Medizin/Apotheke)">A — Reguliert (Healthcare/Medizin/Pharmazie)</option>
-          <option value="B — Academic STEM (Engineering/IT/Architektur)">B — Akademisch STEM (Engineering/IT/Architektur)</option>
-          <option value="C — Vocational (Technik/Handwerk)">C — Beruflich (Technik/Handwerk)</option>
-          <option value="D — Academic Non-Regulated (Business/Humanities)">D — Akademisch nicht reguliert (Business/Humanities)</option>
+          <option value="" selected disabled>Wählen Sie…</option>
+          <option value="A — Regulierte Berufe (Medizin, Pflege, Pharmazie)">A — Regulierte Berufe (Medizin, Pflege, Pharmazie)</option>
+          <option value="B — Akademische MINT (Ingenieurwesen, IT, Architektur)">B — Akademische MINT (Ingenieurwesen, IT, Architektur)</option>
+          <option value="C — Beruflich/Handwerk (Technik, Gewerke)">C — Beruflich/Handwerk (Technik, Gewerke)</option>
+          <option value="D — Akademisch nicht-reguliert (Wirtschaft, Management)">D — Akademisch nicht-reguliert (Wirtschaft, Management)</option>
         </select>
-
         <div class="actions">
           <button class="btn primary wide" type="button" onclick="nextStep(2)">Weiter</button>
         </div>
       </div>
 
-      <!-- STEP 2 -->
       <div class="step" id="s2">
-        <label>2) Anerkennungssignale (kurz)</label>
+        <label><b>2) Anerkennung / Anabin Status</b></label>
         <select name="Anerkennung_Status" required>
-          <option value="" selected disabled>Bitte auswählen…</option>
-          <option value="Regulierter Beruf (Anerkennung erforderlich)">Regulierter Beruf (Anerkennung erforderlich)</option>
+          <option value="" selected disabled>Wählen Sie…</option>
+          <option value="Regulierte Berufe (Anerkennung erforderlich)">Regulierte Berufe (Anerkennung erforderlich)</option>
           <option value="Anabin H+ / entspricht vorhanden">Anabin H+ / entspricht vorhanden</option>
-          <option value="Unklar / muss geprüft werden">Unklar / muss geprüft werden</option>
+          <option value="Unklar / benötigt Prüfung">Unklar / benötigt Prüfung</option>
         </select>
 
-        <label>CV + Abschluss (PDF)</label>
-        <input type="file" name="Dossier_PDF" accept="application/pdf" required />
+        <label style="margin-top:16px;"><b>Abschlussland</b></label>
+        <input type="text" name="Abschlussland" placeholder="z.B. Syrien, Ägypten, Indien" required />
+
+        <label><b>Abschlussname (auf Deutsch oder Englisch)</b></label>
+        <input type="text" name="Abschlussname" placeholder="z.B. Bachelor of Engineering" required />
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(1)">Zurück</button>
@@ -84,16 +78,27 @@
         </div>
       </div>
 
-      <!-- STEP 3 -->
       <div class="step" id="s3">
-        <label>3) Sprache / Erfahrung</label>
-        <select name="Deutsch_Level" required>
-          <option value="" selected disabled>Deutsch-Level…</option>
-          <option>A0/A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1/C2</option>
+        <label><b>3) Berufserfahrung & Sprache</b></label>
+        <label>Berufserfahrung (Jahre)</label>
+        <select name="Berufserfahrung" required>
+          <option value="" selected disabled>Wählen Sie…</option>
+          <option value="0–1 Jahr">0–1 Jahr</option>
+          <option value="2–4 Jahre">2–4 Jahre</option>
+          <option value="5–9 Jahre">5–9 Jahre</option>
+          <option value="10+ Jahre">10+ Jahre</option>
         </select>
 
-        <label>Berufserfahrung (Jahre)</label>
-        <input type="number" name="Erfahrung_Jahre" min="0" max="60" placeholder="z.B. 5" required />
+        <label style="margin-top:16px;">Deutschniveau</label>
+        <select name="Deutschniveau" required>
+          <option value="" selected disabled>Wählen Sie…</option>
+          <option value="A0/A1">A0/A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="C1/C2">C1/C2</option>
+          <option value="Ohne Nachweis">Ohne Nachweis</option>
+        </select>
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(2)">Zurück</button>
@@ -101,27 +106,51 @@
         </div>
       </div>
 
-      <!-- STEP 4 -->
       <div class="step" id="s4">
-        <label>4) Zielraum / Kontakt</label>
-        <input type="text" name="Zielregion" placeholder="Bundesland/Stadt (z.B. Berlin, NRW)" required />
+        <label><b>4) Zielkorridor & Region</b></label>
+        <label>Berufliches Ziel in Deutschland</label>
+        <select name="Zielkorridor" required>
+          <option value="" selected disabled>Wählen Sie…</option>
+          <option value="Anerkennung">Anerkennung</option>
+          <option value="Arbeit">Arbeit</option>
+          <option value="Ausbildung">Ausbildung</option>
+          <option value="Jobsuche">Jobsuche</option>
+        </select>
 
+        <label style="margin-top:16px;">Zielregion (Bundesland/Stadt)</label>
+        <input type="text" name="Zielregion" placeholder="z.B. Berlin, Bayern, NRW" required />
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(3)">Zurück</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(5)">Weiter</button>
+        </div>
+      </div>
+
+      <div class="step" id="s5">
+        <label><b>5) Kontaktdaten</b></label>
         <label>Vollständiger Name</label>
         <input type="text" name="Name" required />
 
         <label>E-Mail</label>
         <input type="email" name="Email" required />
 
-        <label>Kurzer Hinweis (optional)</label>
-        <textarea name="Hinweis" placeholder="Optional: Zielrolle / Zeitraum / Besonderheiten"></textarea>
+        <label>WhatsApp (optional)</label>
+        <input type="text" name="WhatsApp" placeholder="z.B. +49 1234 567890" />
+
+        <label style="margin-top:16px;">Kurze Notiz (optional)</label>
+        <textarea name="Notiz" placeholder="Berufliches Ziel, Zeitrahmen, Besonderheiten"></textarea>
+
+        <p style="font-size:12px;color:#999;margin-top:12px;">
+          Unterlagen (CV, Abschluss als PDF) können Sie nach Erhalt des Aktenzeichens per E-Mail nachreichen.
+        </p>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(3)">Zurück</button>
+          <button class="btn" type="button" onclick="nextStep(4)">Zurück</button>
           <button class="btn primary wide" type="submit">Einreichen</button>
         </div>
 
         <p class="small" style="margin-top:12px;">
-          Ergebnis: ausschließlich per E-Mail nach interner Sichtung.
+          Rückmeldung nach interner Sichtung innerhalb von 24–72 Stunden.
         </p>
       </div>
     </form>
@@ -136,38 +165,32 @@
 </footer>
 
 <script>
-  function setPips(n){
-    for(let i=1;i<=4;i++){
-      document.getElementById('p'+i).classList.toggle('on', i<=n);
-    }
-  }
   function nextStep(n){
-    for(let i=1;i<=4;i++){
+    for(let i=1;i<=5;i++){
       document.getElementById('s'+i).classList.remove('active');
     }
     document.getElementById('s'+n).classList.add('active');
-    setPips(n);
     window.scrollTo({top:0,behavior:'smooth'});
   }
-
+  
   function randomDigits(len){
     let s='';
     for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
     return s;
   }
+  
   function makeAktenzeichen(){
-    const y = new Date().getFullYear();
-    const block = randomDigits(4);
-    const seq = randomDigits(5);
-    return `BG-${y}-${block}-${seq}`;
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth()+1).padStart(2,'0');
+    const block = randomDigits(5);
+    return `BG-${y}${m}-${block}`;
   }
 
   const form = document.getElementById('bgForm');
   form.addEventListener('submit', function(){
     const id = makeAktenzeichen();
     document.getElementById('aktenzeichen').value = id;
-
-    // Subject + Redirect
     document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
     document.getElementById('nextUrl').value = `${location.origin}/de/thankyou.html?id=${encodeURIComponent(id)}`;
   });

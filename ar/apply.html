@@ -12,8 +12,9 @@
     <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
     <nav class="nav">
       <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/apply.html">DE</a>
-      <span class="sep">·</span><a href="/ar/system.html">منطق النظام</a>
+      <span class="sep">·</span><a href="/ar/systemlogik.html">منطق النظام</a>
       <a href="/ar/framework.html">الإطار</a>
+      <a href="/ar/voraussetzungen.html">الشروط</a>
     </nav>
   </div>
 </header>
@@ -21,22 +22,14 @@
 <main class="container">
   <section class="hero">
     <p class="kicker">Decision Gateway</p>
-    <h1 class="h1">تصنيف هيكلي (رقمي)</h1>
+    <h1 class="h1">التدقيق الهيكلي للأهلية</h1>
     <div class="note">
-      هذا الفحص ليس استشارة.<br/>
-      هدفه التصنيف الهيكلي داخل نظام الكفاءات الألماني.
+      هذا التدقيق لا يُعدّ استشارة.<br/>
+      هدفه تصنيفك هيكليًا داخل منظومة الكفاءات في ألمانيا.
     </div>
   </section>
 
   <section class="section form">
-    <div class="stepper" aria-hidden="true">
-      <span class="pip on" id="p1"></span>
-      <span class="pip" id="p2"></span>
-      <span class="pip" id="p3"></span>
-      <span class="pip" id="p4"></span>
-      <span style="margin-right:8px">تسلسل داخلي</span>
-    </div>
-
     <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" id="subj" value="">
       <input type="hidden" name="_template" value="table">
@@ -48,13 +41,16 @@
       <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — Strukturelle Eintrittsarchitektur für Fachkräfte">
 
       <div class="step active" id="s1">
-        <label>1) اختر فئة مؤهلك المهني</label>
+        <label><b>1) الفئة المهنية</b></label>
+        <p style="font-size:13px;color:#666;margin-bottom:16px;">
+          أي فئة تناسب شهادتك/مهنتك؟
+        </p>
         <select name="Kategorie" required>
           <option value="" selected disabled>اختر…</option>
-          <option value="A — مهن منظمة (صحة/طب/صيدلة)">A — مهن منظمة (صحة/طب/صيدلة)</option>
-          <option value="B — STEM أكاديمي (هندسة/IT/عمارة)">B — STEM أكاديمي (هندسة/IT/عمارة)</option>
-          <option value="C — مهني (تقني/حِرف)">C — مهني (تقني/حِرف)</option>
-          <option value="D — أكاديمي غير منظم (إدارة/أعمال)">D — أكاديمي غير منظم (إدارة/أعمال)</option>
+          <option value="A — مهن منظمة (طب، تمريض، صيدلة)">A — مهن منظمة (طب، تمريض، صيدلة)</option>
+          <option value="B — أكاديمي STEM (هندسة، IT، عمارة)">B — أكاديمي STEM (هندسة، IT، عمارة)</option>
+          <option value="C — مهني/حرفي (تقني، صنائع)">C — مهني/حرفي (تقني، صنائع)</option>
+          <option value="D — أكاديمي غير منظم (أعمال، إدارة)">D — أكاديمي غير منظم (أعمال، إدارة)</option>
         </select>
         <div class="actions">
           <button class="btn primary wide" type="button" onclick="nextStep(2)">التالي</button>
@@ -62,16 +58,19 @@
       </div>
 
       <div class="step" id="s2">
-        <label>2) إشارات الاعتراف (مختصر)</label>
+        <label><b>2) حالة الاعتراف / Anabin</b></label>
         <select name="Anerkennung_Status" required>
           <option value="" selected disabled>اختر…</option>
           <option value="مهنة منظمة (اعتراف مطلوب)">مهنة منظمة (اعتراف مطلوب)</option>
-          <option value="Anabin H+ / entspricht موجود">Anabin H+ / entspricht موجود</option>
+          <option value="Anabin H+ / يوجد معادل">Anabin H+ / يوجد معادل</option>
           <option value="غير واضح / يحتاج فحص">غير واضح / يحتاج فحص</option>
         </select>
 
-        <label>CV + الشهادة (PDF)</label>
-        <input type="file" name="Dossier_PDF" accept="application/pdf" required />
+        <label style="margin-top:16px;"><b>دولة الشهادة</b></label>
+        <input type="text" name="Abschlussland" placeholder="مثال: سوريا، مصر، الهند" required />
+
+        <label><b>اسم الشهادة (بالألمانية أو الإنجليزية)</b></label>
+        <input type="text" name="Abschlussname" placeholder="مثال: Bachelor of Engineering" required />
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(1)">رجوع</button>
@@ -80,14 +79,26 @@
       </div>
 
       <div class="step" id="s3">
-        <label>3) اللغة والخبرة</label>
-        <select name="Deutsch_Level" required>
-          <option value="" selected disabled>مستوى الألمانية…</option>
-          <option>A0/A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1/C2</option>
+        <label><b>3) الخبرة المهنية واللغة</b></label>
+        <label>سنوات الخبرة المهنية</label>
+        <select name="Berufserfahrung" required>
+          <option value="" selected disabled>اختر…</option>
+          <option value="0–1 سنة">0–1 سنة</option>
+          <option value="2–4 سنوات">2–4 سنوات</option>
+          <option value="5–9 سنوات">5–9 سنوات</option>
+          <option value="10+ سنوات">10+ سنوات</option>
         </select>
 
-        <label>سنوات الخبرة</label>
-        <input type="number" name="Erfahrung_Jahre" min="0" max="60" placeholder="مثال: 5" required />
+        <label style="margin-top:16px;">مستوى اللغة الألمانية</label>
+        <select name="Deutschniveau" required>
+          <option value="" selected disabled>اختر…</option>
+          <option value="A0/A1">A0/A1</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="C1/C2">C1/C2</option>
+          <option value="بدون شهادة">بدون شهادة</option>
+        </select>
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(2)">رجوع</button>
@@ -96,25 +107,50 @@
       </div>
 
       <div class="step" id="s4">
-        <label>4) المدينة/الولاية + بيانات الاتصال</label>
-        <input type="text" name="Zielregion" placeholder="برلين / NRW / …" required />
+        <label><b>4) الهدف المهني والمنطقة</b></label>
+        <label>الهدف المهني في ألمانيا</label>
+        <select name="Zielkorridor" required>
+          <option value="" selected disabled>اختر…</option>
+          <option value="اعتراف">اعتراف</option>
+          <option value="عمل">عمل</option>
+          <option value="تدريب">تدريب</option>
+          <option value="البحث عن وظيفة">البحث عن وظيفة</option>
+        </select>
 
+        <label style="margin-top:16px;">المنطقة المستهدفة (ولاية/مدينة)</label>
+        <input type="text" name="Zielregion" placeholder="مثال: برلين، بافاريا، شمال الراين" required />
+
+        <div class="actions">
+          <button class="btn" type="button" onclick="nextStep(3)">رجوع</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(5)">التالي</button>
+        </div>
+      </div>
+
+      <div class="step" id="s5">
+        <label><b>5) بيانات الاتصال</b></label>
         <label>الاسم الكامل</label>
         <input type="text" name="Name" required />
 
         <label>البريد الإلكتروني</label>
         <input type="email" name="Email" required />
 
-        <label>ملاحظة مختصرة (اختياري)</label>
-        <textarea name="Hinweis" placeholder="اختياري: هدف وظيفي / زمن / تفاصيل"></textarea>
+        <label>WhatsApp (اختياري)</label>
+        <input type="text" name="WhatsApp" placeholder="مثال: +49 1234 567890" />
+
+        <label style="margin-top:16px;">ملاحظة قصيرة (اختياري)</label>
+        <textarea name="Notiz" placeholder="الهدف الوظيفي، الإطار الزمني، ملاحظات خاصة"></textarea>
+
+        <p style="font-size:12px;color:#999;margin-top:12px;">
+          يمكنك إرسال الوثائق (CV، الشهادة PDF) بعد استلام رقم الملف عبر البريد الإلكتروني.
+        </p>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(3)">رجوع</button>
+          <button class="btn" type="button" onclick="nextStep(4)">رجوع</button>
           <button class="btn primary wide" type="submit">إرسال</button>
         </div>
 
         <p class="small" style="margin-top:12px;">
-          النتيجة تُرسل عبر البريد بعد مراجعة داخلية.
+          الرد بعد المراجعة الداخلية خلال 24–72 ساعة.
         </p>
       </div>
     </form>
@@ -129,29 +165,26 @@
 </footer>
 
 <script>
-  function setPips(n){
-    for(let i=1;i<=4;i++){
-      document.getElementById('p'+i).classList.toggle('on', i<=n);
-    }
-  }
   function nextStep(n){
-    for(let i=1;i<=4;i++){
+    for(let i=1;i<=5;i++){
       document.getElementById('s'+i).classList.remove('active');
     }
     document.getElementById('s'+n).classList.add('active');
-    setPips(n);
     window.scrollTo({top:0,behavior:'smooth'});
   }
+  
   function randomDigits(len){
     let s='';
     for(let i=0;i<len;i++) s+=Math.floor(Math.random()*10);
     return s;
   }
+  
   function makeAktenzeichen(){
-    const y = new Date().getFullYear();
-    const block = randomDigits(4);
-    const seq = randomDigits(5);
-    return `BG-${y}-${block}-${seq}`;
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth()+1).padStart(2,'0');
+    const block = randomDigits(5);
+    return `BG-${y}${m}-${block}`;
   }
 
   const form = document.getElementById('bgForm');

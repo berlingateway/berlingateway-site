@@ -12,8 +12,9 @@
     <div class="brand">BERLIN GATEWAY <span class="emblem"></span></div>
     <nav class="nav">
       <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/thankyou.html">DE</a>
-      <span class="sep">·</span><a href="/ar/system.html">منطق النظام</a>
+      <span class="sep">·</span><a href="/ar/systemlogik.html">منطق النظام</a>
       <a href="/ar/framework.html">الإطار</a>
+      <a href="/ar/voraussetzungen.html">الشروط</a>
     </nav>
   </div>
 </header>
@@ -21,10 +22,12 @@
 <main class="container">
   <section class="hero">
     <p class="kicker">Confirmation</p>
-    <h1 class="h1">تم تسجيل الدخول.</h1>
-    <p class="sub">تم تفعيل التسلسل الداخلي.</p>
+    <h1 class="h1">تم تسجيل الاستقبال.</h1>
+    <p class="sub">التسلسل الداخلي نشط.</p>
     <div class="note" id="akten"></div>
-    <p class="small" style="margin-top:12px;">Diese Mitteilung erfolgt automatisiert.</p>
+    <p class="small" style="margin-top:12px;">
+      النتيجة عبر البريد بعد المراجعة الداخلية.
+    </p>
   </section>
 </main>
 
@@ -39,8 +42,8 @@
   const qs = new URLSearchParams(location.search);
   const id = qs.get('id');
   document.getElementById('akten').innerHTML = id
-    ? `<b>Aktenzeichen:</b> ${id}`
-    : `<b>Aktenzeichen:</b> (سيصل عبر البريد)`;
+    ? `<b>رقم الملف:</b> ${id}`
+    : `<b>رقم الملف:</b> (سيتم تأكيده عبر البريد)`;
 </script>
 </body>
 </html>

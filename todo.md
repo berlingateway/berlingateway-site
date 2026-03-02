@@ -791,3 +791,26 @@
 ## Trigger New Checkpoint for Fresh Deployment ✅
 - [x] Add minor code change to trigger new build (deployment timestamp comment in sendgrid.ts)
 - [x] Create new checkpoint to enable Veröffentlichen button
+
+## Fallback Contact Message Below Form
+- [ ] Add visible fallback message: "Bei technischen Schwierigkeiten mit dem Formular kontaktieren Sie uns bitte direkt unter: info@medicalcaregermany.com"
+- [ ] Style message professionally and discreetly (same typography, no warning colors)
+- [ ] Place below form submission button
+
+## FormSubmit.co Migration - Replace SendGrid/tRPC Form Submission
+- [ ] Rewrite form to use FormSubmit.co AJAX endpoint with fetch()
+- [ ] Add hidden control fields (_subject, _template, _captcha, _next, _autoresponse)
+- [ ] Ensure email input field has name="email" for auto-responder
+- [ ] Create /thankyou.html page for _next redirect
+- [ ] Remove old tRPC submitCase handler from form onSubmit
+- [ ] Test form submission end-to-end
+
+## FormSubmit.co Migration (Production Form Fix)
+- [x] Remove tRPC case.submit dependency from contact form
+- [x] Implement FormSubmit.co AJAX submission with fetch()
+- [x] Add hidden control fields (_subject, _template, _captcha, _autoresponse)
+- [x] Set email target to info@medicalcaregermany.de
+- [x] Add auto-response message for patient confirmation
+- [x] Create /thankyou.html page for FormSubmit.co redirect fallback
+- [x] Remove unused trpc/useAuth imports from Home.tsx
+- [x] Verify TypeScript build passes with no errors

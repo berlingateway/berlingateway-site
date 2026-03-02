@@ -1,15 +1,12 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { trpc } from "@/lib/trpc";
 import { Link } from "wouter";
 import { FileText, Activity, Network, Calendar, Heart } from "lucide-react";
 import { toast } from "sonner";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const { user, loading, error, isAuthenticated, logout } = useAuth();
-  const submitCase = trpc.case.submit.useMutation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     country: "",
@@ -26,46 +23,66 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
-      // In production, upload files to S3 first, then submit case with file URLs
       const fileInfo = uploadedFiles.length > 0 
-        ? `\n\nAttached Files (${uploadedFiles.length}): ${uploadedFiles.map(f => f.name).join(', ')}`
-        : '';
-      
-      const result = await submitCase.mutateAsync({
-        fullName: formData.fullName,
-        country: formData.country,
-        medicalSituation: `Email: ${formData.email}\nPhone: ${formData.phone}\nDiagnosis Status: ${formData.diagnosisStatus}\nTreatment Objective: ${formData.treatmentObjective}\n\nMedical Situation: ${formData.medicalSituation}${fileInfo}`,
+        ? `Attached Files (${uploadedFiles.length}): ${uploadedFiles.map(f => f.name).join(', ')}`
+        : 'No files attached';
+
+      // Build FormData for FormSubmit.co AJAX submission
+      const data = new FormData();
+      data.append('_subject', 'Medical Care Germany — Clinical Review Request');
+      data.append('_template', 'table');
+      data.append('_captcha', 'false');
+      data.append('_autoresponse', 'Thank you for choosing Medical Care Germany. Our coordination team has received your medical inquiry and will contact you within 24–48 hours after a physician-level review.');
+      data.append('Full Name', formData.fullName);
+      data.append('Country', formData.country);
+      data.append('email', formData.email);
+      data.append('Phone', formData.phone || 'Not provided');
+      data.append('Diagnosis Status', formData.diagnosisStatus);
+      data.append('Purpose of Request', formData.treatmentObjective);
+      data.append('Medical Situation', formData.medicalSituation);
+      data.append('Attached Files', fileInfo);
+
+      const response = await fetch('https://formsubmit.co/ajax/info@medicalcaregermany.de', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data,
       });
 
-      const form = e.target as HTMLFormElement;
-      const card = form.closest('.contact-form-container');
-      if (card) {
-            card.innerHTML = `
-          <div class="text-center py-16 space-y-8">
-            <div class="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
+      const result = await response.json();
+
+      if (result.success === 'true' || result.success === true) {
+        const form = e.target as HTMLFormElement;
+        const card = form.closest('.contact-form-container');
+        if (card) {
+          card.innerHTML = `
+            <div class="text-center py-16 space-y-8">
+              <div class="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-serif text-slate-900">Submission Received</h3>
+              <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
+              <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
+                Your case has been received and entered our structured clinical review process. A confirmation has been sent to your email address.
+              </p>
+              <p class="text-slate-500 text-sm">
+                If you do not receive a confirmation, please contact: <a href="mailto:info@medicalcaregermany.com" class="text-slate-900 underline">info@medicalcaregermany.com</a>
+              </p>
             </div>
-            <h3 class="text-2xl font-serif text-slate-900">Submission Received</h3>
-            <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
-              Reference ID: <strong>${result.referenceId}</strong>
-            </p>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
-              Your case has been received and entered our structured clinical review process.
-            </p>
-            <p class="text-slate-500 text-sm">
-              If you do not receive a confirmation email, please contact: <a href="mailto:info@medicalcaregermany.com" class="text-slate-900 underline">info@medicalcaregermany.com</a>
-            </p>
-          </div>
-        `;
+          `;
+        }
+      } else {
+        throw new Error('FormSubmit returned failure');
       }
     } catch (error) {
       toast.error("Submission failed. Please contact us directly at info@medicalcaregermany.com");
       console.error('[Form Submission Error]', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -843,11 +860,11 @@ export default function Home() {
               {/* Submit Button */}
               <Button 
                 type="submit" 
-                disabled={submitCase.isPending}
+                disabled={isSubmitting}
                 className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-7 text-lg font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{ whiteSpace: 'normal', lineHeight: '1.2', textAlign: 'center', maxWidth: '720px', padding: '16px 20px' }}
               >
-                {submitCase.isPending ? 'SUBMITTING...' : 'SUBMIT CASE FOR CLINICAL REVIEW'}
+                {isSubmitting ? 'SUBMITTING...' : 'SUBMIT CASE FOR CLINICAL REVIEW'}
               </Button>
 
               {/* Privacy Notice */}

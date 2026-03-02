@@ -62,15 +62,8 @@
     <p style="color:#334155; font-weight:bold; margin-bottom:24px; font-size:14px;">
       Ablauf der Prüfaufnahme
     </p>
-    <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" id="subj" value="">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" id="nextUrl" value="">
-      <input type="hidden" name="Aktenzeichen" id="aktenzeichen" value="">
-      <input type="hidden" name="Interne_Pruefsequenz" value="aktiviert">
-      <input type="hidden" name="Automated_Notice" value="Diese Mitteilung erfolgt automatisiert.">
-      <input type="hidden" name="Institutional_Signature" value="Berlin Gateway — Strukturelle Eintrittsarchitektur für Fachkräfte">
+    <form id="bgForm" action="https://api.berlingateway.de/submit" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="Lang" value="de">
 
       <div class="step active" id="s1">
         <label><b>1) Berufliche Kategorie</b></label>
@@ -302,13 +295,6 @@
     return s;
   }
 
-  function makeAktenzeichen(){
-    const now = new Date();
-    const y = now.getFullYear();
-    const m = String(now.getMonth()+1).padStart(2,'0');
-    return `BG-${y}${m}-${randomDigits(5)}`;
-  }
-
   // ---------- Text normalization (safe) ----------
   function normalizeText(v){
     if(!v) return v;
@@ -329,6 +315,7 @@
   // Initialize: activate step 1 and disable others
   setStep(1);
 
+  // Enable all fields before submit (Worker handles Aktenzeichen + redirect)
   form.addEventListener('submit', function(){
     // Normalize only these text fields (do NOT touch Email)
     normalizeField(form, 'Abschlussland');
@@ -344,16 +331,6 @@
         .querySelectorAll('input, select, textarea')
         .forEach(el=> el.disabled = false);
     }
-
-    const id = makeAktenzeichen();
-    document.getElementById('aktenzeichen').value = id;
-    document.getElementById('subj').value = `Berlin Gateway | Aktenzeichen ${id} | Interne Prüfsequenz`;
-
-    const next = `${location.origin}/de/thankyou.html?id=${encodeURIComponent(id)}`;
-    document.getElementById('nextUrl').value = next;
-
-    // Fallback redirect (covers cases where _next doesn't fire)
-    setTimeout(()=>{ window.location.href = next; }, 1200);
   });
 
   // Set year

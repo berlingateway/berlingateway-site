@@ -52,8 +52,8 @@ export default function Contact() {
                   <Mail className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-serif mb-4 text-slate-900">Email</h3>
-                <a href="mailto:info@medicalcaregermany.de" className="text-slate-600 hover:text-slate-900 transition-colors hover:underline">
-                  info@medicalcaregermany.de
+                <a href="mailto:info@medicalcaregermany.com" className="text-slate-600 hover:text-slate-900 transition-colors hover:underline">
+                  info@medicalcaregermany.com
                 </a>
                 <p className="text-sm text-slate-500 mt-4">
                   Send your medical reports for professional evaluation

@@ -69,8 +69,8 @@ export default function Home() {
       {/* Top Contact Bar - Minimal */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
         <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
-          <a href="mailto:info@medicalcaregermany.de" className="hover:text-slate-300 transition-colors">
-            info@medicalcaregermany.de
+          <a href="mailto:info@medicalcaregermany.com" className="hover:text-slate-300 transition-colors">
+            info@medicalcaregermany.com
           </a>
         </div>
       </div>
@@ -576,7 +576,7 @@ export default function Home() {
 
           </div>
           <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed">
-            All submissions are handled under strict clinical confidentiality protocols. Direct inquiries: <a href="mailto:info@medicalcaregermany.de" className="text-slate-600 hover:underline">info@medicalcaregermany.de</a>
+            All submissions are handled under strict clinical confidentiality protocols. Direct inquiries: <a href="mailto:info@medicalcaregermany.com" className="text-slate-600 hover:underline">info@medicalcaregermany.com</a>
           </p>
         </div>
       </section>
@@ -585,8 +585,8 @@ export default function Home() {
       <footer id="contact" className="py-10 bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
-            <a href="mailto:info@medicalcaregermany.de" className="block text-lg hover:text-slate-300 transition-colors">
-              info@medicalcaregermany.de
+            <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
+              info@medicalcaregermany.com
             </a>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>

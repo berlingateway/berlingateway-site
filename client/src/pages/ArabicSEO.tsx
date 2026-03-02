@@ -129,8 +129,8 @@ export default function ArabicSEO() {
           <div className="text-center mt-12 pt-8 border-t border-slate-200">
             <p className="text-sm text-slate-600 mb-4">للاستفسارات المباشرة:</p>
             <div className="space-y-2">
-              <a href="mailto:info@medicalcaregermany.de" className="block text-slate-900 hover:text-slate-700">
-                info@medicalcaregermany.de
+              <a href="mailto:info@medicalcaregermany.com" className="block text-slate-900 hover:text-slate-700">
+                info@medicalcaregermany.com
               </a>
             </div>
           </div>

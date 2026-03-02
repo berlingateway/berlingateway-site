@@ -217,7 +217,7 @@
         <input type="text" name="Name" required />
 
         <label>البريد الإلكتروني</label>
-        <input type="email" name="Email" required />
+        <input type="email" name="email" required />
 
         <label>WhatsApp (اختياري)</label>
         <input type="text" name="WhatsApp" placeholder="مثال: +49 1234 567890" />
@@ -245,6 +245,8 @@
             </ul>
           </div>
         </details>
+
+        <input type="hidden" name="_autoresponse" value="شكرًا لتقديم طلبكم عبر Berlin Gateway. لقد استلمنا بياناتكم بنجاح, ويقوم فريقنا حاليًا بمراجعتها. سنتواصل معكم في أقرب وقت ممكن.">
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(4)">رجوع</button>

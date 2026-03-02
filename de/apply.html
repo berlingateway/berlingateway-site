@@ -217,7 +217,7 @@
         <input type="text" name="Name" required />
 
         <label>E-Mail</label>
-        <input type="email" name="Email" required />
+        <input type="email" name="email" required />
 
         <label>WhatsApp (optional)</label>
         <input type="text" name="WhatsApp" placeholder="z.B. +49 1234 567890" />
@@ -245,6 +245,8 @@
             </ul>
           </div>
         </details>
+
+        <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihren Antrag bei Berlin Gateway. Wir haben Ihre Unterlagen erhalten und unser Team wird diese prüfen. Sie hören in Kürze von uns.">
 
         <div class="actions">
           <button class="btn" type="button" onclick="nextStep(4)">Zurück</button>

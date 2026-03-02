@@ -814,3 +814,20 @@
 - [x] Create /thankyou.html page for FormSubmit.co redirect fallback
 - [x] Remove unused trpc/useAuth imports from Home.tsx
 - [x] Verify TypeScript build passes with no errors
+
+## Sovereign Form Implementation — Self-Hosted iframe
+- [x] Create sovereign HTML intake form (client/public/intake-form.html)
+- [x] Form fields: Patient Name, Country, Email, Diagnosis Status, Purpose, Medical History, File Upload
+- [x] Form sends directly to FormSubmit.co → info@medicalcaregermany.de (no React, no tRPC, no backend)
+- [x] Auto-response email to patient configured
+- [x] Embed as iframe in Home.tsx with dynamic height via postMessage
+- [x] Replace broken React form entirely — no more tRPC/SendGrid dependency
+- [x] Remove all phone numbers from Home.tsx (top bar, hero CTA, footer)
+- [x] Remove phone number from ContactBar.tsx
+- [x] Remove phone number from PremiumFooter.tsx
+- [x] Remove phone number from Contact.tsx
+- [x] Remove phone number from ArabicSEO.tsx
+- [x] Remove WhatsApp links from all pages (none found)
+- [x] Update all email references to info@medicalcaregermany.de
+- [x] Iframe is fully responsive (100% width, auto-height via postMessage)
+- [x] TypeScript: zero errors

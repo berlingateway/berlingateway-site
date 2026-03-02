@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import ContactBar from "@/components/ContactBar";
 import PremiumFooter from "@/components/PremiumFooter";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -52,27 +52,11 @@ export default function Contact() {
                   <Mail className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-serif mb-4 text-slate-900">Email</h3>
-                <a href="mailto:info@medicalcaregermany.com" className="text-slate-600 hover:text-slate-900 transition-colors hover:underline">
-                  info@medicalcaregermany.com
+                <a href="mailto:info@medicalcaregermany.de" className="text-slate-600 hover:text-slate-900 transition-colors hover:underline">
+                  info@medicalcaregermany.de
                 </a>
                 <p className="text-sm text-slate-500 mt-4">
                   Send your medical reports for professional evaluation
-                </p>
-              </div>
-            </Card>
-
-            {/* Phone */}
-            <Card className="p-8 bg-white border-slate-200 rounded-none">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mb-6">
-                  <Phone className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-lg font-serif mb-4 text-slate-900">Phone</h3>
-                <a href="tel:+493025730875" className="text-slate-600 hover:text-slate-900 transition-colors hover:underline">
-                  +49 30 25730875
-                </a>
-                <p className="text-sm text-slate-500 mt-4">
-                  Direct line to our Berlin coordination office
                 </p>
               </div>
             </Card>

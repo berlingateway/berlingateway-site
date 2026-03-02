@@ -2,122 +2,43 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { FileText, Activity, Network, Calendar, Heart } from "lucide-react";
-import { toast } from "sonner";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+// Sovereign iframe form — completely independent of React/tRPC/backend
+function IframeForm() {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [iframeHeight, setIframeHeight] = useState(720);
+
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (event.data?.type === 'form-height' && typeof event.data.height === 'number') {
+        setIframeHeight(Math.max(600, event.data.height + 32));
+      }
+      if (event.data?.type === 'form-success') {
+        setIframeHeight(360);
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
+  return (
+    <iframe
+      ref={iframeRef}
+      src="/intake-form.html"
+      title="Clinical Case Submission"
+      width="100%"
+      height={iframeHeight}
+      style={{ border: 'none', display: 'block', width: '100%' }}
+      scrolling="no"
+      loading="lazy"
+    />
+  );
+}
 
 export default function Home() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    country: "",
-    email: "",
-    phone: "",
-    diagnosisStatus: "",
-    treatmentObjective: "",
-    medicalSituation: "",
-  });
-  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const fileInfo = uploadedFiles.length > 0 
-        ? `Attached Files (${uploadedFiles.length}): ${uploadedFiles.map(f => f.name).join(', ')}`
-        : 'No files attached';
-
-      // Build FormData for FormSubmit.co AJAX submission
-      const data = new FormData();
-      data.append('_subject', 'Medical Care Germany — Clinical Review Request');
-      data.append('_template', 'table');
-      data.append('_captcha', 'false');
-      data.append('_autoresponse', 'Thank you for choosing Medical Care Germany. Our coordination team has received your medical inquiry and will contact you within 24–48 hours after a physician-level review.');
-      data.append('Full Name', formData.fullName);
-      data.append('Country', formData.country);
-      data.append('email', formData.email);
-      data.append('Phone', formData.phone || 'Not provided');
-      data.append('Diagnosis Status', formData.diagnosisStatus);
-      data.append('Purpose of Request', formData.treatmentObjective);
-      data.append('Medical Situation', formData.medicalSituation);
-      data.append('Attached Files', fileInfo);
-
-      const response = await fetch('https://formsubmit.co/ajax/info@medicalcaregermany.de', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: data,
-      });
-
-      const result = await response.json();
-
-      if (result.success === 'true' || result.success === true) {
-        const form = e.target as HTMLFormElement;
-        const card = form.closest('.contact-form-container');
-        if (card) {
-          card.innerHTML = `
-            <div class="text-center py-16 space-y-8">
-              <div class="w-16 h-16 mx-auto mb-6 bg-slate-900 rounded-full flex items-center justify-center">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <h3 class="text-2xl font-serif text-slate-900">Submission Received</h3>
-              <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
-              <p class="text-slate-600 leading-relaxed max-w-md mx-auto">
-                Your case has been received and entered our structured clinical review process. A confirmation has been sent to your email address.
-              </p>
-              <p class="text-slate-500 text-sm">
-                If you do not receive a confirmation, please contact: <a href="mailto:info@medicalcaregermany.com" class="text-slate-900 underline">info@medicalcaregermany.com</a>
-              </p>
-            </div>
-          `;
-        }
-      } else {
-        throw new Error('FormSubmit returned failure');
-      }
-    } catch (error) {
-      toast.error("Submission failed. Please contact us directly at info@medicalcaregermany.com");
-      console.error('[Form Submission Error]', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleFileUpload = (files: FileList | null) => {
-    if (!files) return;
-    const fileArray = Array.from(files);
-    const validFiles = fileArray.filter(file => {
-      const validTypes = ['application/pdf', 'image/jpeg', 'image/png', 'image/jpg', 'application/dicom'];
-      const maxSize = 16 * 1024 * 1024; // 16MB
-      return validTypes.includes(file.type) && file.size <= maxSize;
-    });
-    setUploadedFiles(prev => [...prev, ...validFiles]);
-    if (validFiles.length < fileArray.length) {
-      toast.error('Some files were rejected. Only PDF, JPEG, PNG, and DICOM files under 16MB are accepted.');
-    }
-  };
-
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    handleFileUpload(e.dataTransfer.files);
-  };
-
-  const removeFile = (index: number) => {
-    setUploadedFiles(prev => prev.filter((_, i) => i !== index));
-  };
 
   // Active section tracking based on scroll position
   useEffect(() => {
@@ -147,12 +68,9 @@ export default function Home() {
       
       {/* Top Contact Bar - Minimal */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-sm">
-          <a href="mailto:info@medicalcaregermany.com" className="hover:text-slate-300 transition-colors">
-            info@medicalcaregermany.com
-          </a>
-          <a href="tel:+493025730875" className="hover:text-slate-300 transition-colors">
-            +49 30 25730875
+        <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
+          <a href="mailto:info@medicalcaregermany.de" className="hover:text-slate-300 transition-colors">
+            info@medicalcaregermany.de
           </a>
         </div>
       </div>
@@ -275,16 +193,11 @@ export default function Home() {
             Operating at the intersection of international medicine and German clinical excellence.
           </p>
           
-          {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a href="#contact">
-              <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg w-full sm:w-auto">
+          {/* CTA */}
+          <div className="flex justify-center items-center mb-12">
+            <a href="#submit-case">
+              <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg">
                 Submit Case for Clinical Review
-              </Button>
-            </a>
-            <a href="tel:+493025730875">
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-none px-10 py-6 text-base font-medium w-full sm:w-auto">
-                Request Call
               </Button>
             </a>
           </div>
@@ -650,239 +563,21 @@ export default function Home() {
       </section>
 
       {/* SECTION 6: CONTACT FORM */}
-      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-16 text-center text-slate-900">Case Submission for Strategic Review</h2>
+      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-center text-slate-900">Case Submission for Strategic Review</h2>
+          <p className="text-center text-slate-500 text-sm mb-12 leading-relaxed">
+            Case reviews are conducted in alignment with German clinical governance practices.
+          </p>
 
-          {/* Medical Submission Form - Frictionless Flow */}
-          <Card className="p-10 bg-white border border-slate-200 shadow-sm rounded-none contact-form-container">
-            
-            {/* Medical-Grade Confidentiality Notice */}
-            <div className="mb-8 p-6 bg-slate-50 border-l-4 border-slate-900">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-slate-900 mb-1">Medical-Grade Confidentiality</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    All medical reports are encrypted, GDPR-compliant, and reviewed exclusively by senior physicians. Your information is never shared without explicit consent.
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* SOVEREIGN IFRAME FORM — No React, No tRPC, No backend dependency */}
+          <div className="border border-slate-200 bg-white shadow-sm">
+            <IframeForm />
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              
-              {/* Patient Information */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Full Name *</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.fullName}
-                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                    placeholder="Faisal Al-Qahtani"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Country of Origin *</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.country}
-                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                    className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                    placeholder="Saudi Arabia"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Email Address *</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                    placeholder="john.doe@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Phone Number (Optional)</label>
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                    defaultValue="+966 "
-                    placeholder="+966 50 123 4567"
-                  />
-                </div>
-              </div>
-
-              {/* Diagnosis Status - SERIOUSNESS FILTER */}
-              <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Diagnosis status *</label>
-                <select
-                  required
-                  value={formData.diagnosisStatus}
-                  onChange={(e) => setFormData({ ...formData, diagnosisStatus: e.target.value })}
-                  className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                >
-                  <option value="">Select one</option>
-                  <option value="not_yet_diagnosed">Not yet diagnosed</option>
-                  <option value="preliminary_diagnosis">Preliminary diagnosis</option>
-                  <option value="confirmed_diagnosis">Confirmed diagnosis</option>
-                  <option value="post_treatment_recurrence">Post-treatment / recurrence</option>
-                  <option value="second_opinion_requested">Second opinion requested</option>
-                </select>
-              </div>
-
-              {/* Purpose of Request - SERIOUSNESS FILTER */}
-              <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Purpose of request *</label>
-                <select
-                  required
-                  value={formData.treatmentObjective}
-                  onChange={(e) => setFormData({ ...formData, treatmentObjective: e.target.value })}
-                  className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                >
-                  <option value="">Select one</option>
-                  <option value="second_opinion_diagnosis">Second opinion on diagnosis</option>
-                  <option value="treatment_strategy_pathway">Treatment strategy & hospital pathway</option>
-                  <option value="surgical_decision_review">Surgical decision review</option>
-                  <option value="urgent_case_escalation">Urgent case escalation</option>
-                  <option value="medical_visa_logistics">Medical visa & logistics (after clinical review)</option>
-                </select>
-              </div>
-
-              {/* Medical Situation */}
-              <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Medical Situation *</label>
-                <textarea
-                  required
-                  rows={6}
-                  value={formData.medicalSituation}
-                  onChange={(e) => setFormData({ ...formData, medicalSituation: e.target.value })}
-                  className="w-full p-4 border-2 border-slate-200 focus:border-slate-900 outline-none transition-colors bg-white text-slate-900 text-base"
-                  placeholder="Brief description of medical condition, current diagnosis, and treatment goals..."
-                />
-                <p className="text-xs text-slate-500 mt-2">Provide a concise summary. Detailed medical history can be uploaded below.</p>
-              </div>
-
-              {/* File Upload Section */}
-              <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-3">Medical Reports & Imaging (Optional)</label>
-                
-                {/* Drag & Drop Zone */}
-                <div
-                  onDragOver={handleDragOver}
-                  onDragLeave={handleDragLeave}
-                  onDrop={handleDrop}
-                  className={`border-2 border-dashed rounded-sm p-8 text-center transition-all ${
-                    isDragging 
-                      ? 'border-slate-900 bg-slate-50' 
-                      : 'border-slate-300 bg-white hover:border-slate-400'
-                  }`}
-                >
-                  <div className="flex flex-col items-center gap-4">
-                    <svg className="w-12 h-12 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                    </svg>
-                    <div>
-                      <p className="text-base text-slate-900 font-medium mb-1">Drag & drop files here</p>
-                      <p className="text-sm text-slate-500 mb-3">or click to browse</p>
-                      <input
-                        type="file"
-                        multiple
-                        accept=".pdf,.jpg,.jpeg,.png,.dcm"
-                        onChange={(e) => handleFileUpload(e.target.files)}
-                        className="hidden"
-                        id="file-upload"
-                      />
-                      <label htmlFor="file-upload">
-                        <Button type="button" variant="outline" className="border-2 border-slate-300 text-slate-900 hover:bg-slate-50 rounded-none px-6 py-3 text-sm" onClick={() => document.getElementById('file-upload')?.click()}>
-                          Select Files
-                        </Button>
-                      </label>
-                    </div>
-                    <p className="text-xs text-slate-500">Accepted: PDF, JPEG, PNG, DICOM • Max 16MB per file</p>
-                  </div>
-                </div>
-
-                {/* Uploaded Files List */}
-                {uploadedFiles.length > 0 && (
-                  <div className="mt-4 space-y-2">
-                    {uploadedFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-slate-50 border border-slate-200">
-                        <div className="flex items-center gap-3">
-                          <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                          </svg>
-                          <div>
-                            <p className="text-sm font-medium text-slate-900">{file.name}</p>
-                            <p className="text-xs text-slate-500">{(file.size / 1024 / 1024).toFixed(2)} MB</p>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => removeFile(index)}
-                          className="text-slate-400 hover:text-slate-900 transition-colors"
-                        >
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Physician Review Indicator */}
-              <div className="p-4 bg-slate-50 border border-slate-200">
-                <div className="flex items-center gap-3">
-                  <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-sm text-slate-600">
-                    <span className="font-semibold text-slate-900">Physician-Level Review:</span> All submissions are reviewed by senior medical specialists within our German hospital network.
-                  </p>
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-none py-7 text-lg font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                style={{ whiteSpace: 'normal', lineHeight: '1.2', textAlign: 'center', maxWidth: '720px', padding: '16px 20px' }}
-              >
-                {isSubmitting ? 'SUBMITTING...' : 'SUBMIT CASE FOR CLINICAL REVIEW'}
-              </Button>
-
-              {/* Privacy Notice */}
-              <p className="text-xs text-slate-500 text-center leading-relaxed">
-                All submissions are handled under strict clinical confidentiality protocols.
-              </p>
-            </form>
-
-            {/* Temporary Contact Safety Line */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-slate-600 leading-relaxed">
-                If you experience any technical difficulty submitting the form, please contact us directly at:{' '}
-                <a href="mailto:info@medicalcaregermany.com" className="text-slate-900 hover:underline font-medium">
-                  info@medicalcaregermany.com
-                </a>
-              </p>
-            </div>
-          </Card>
+          </div>
+          <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed">
+            All submissions are handled under strict clinical confidentiality protocols. Direct inquiries: <a href="mailto:info@medicalcaregermany.de" className="text-slate-600 hover:underline">info@medicalcaregermany.de</a>
+          </p>
         </div>
       </section>
 
@@ -890,11 +585,8 @@ export default function Home() {
       <footer id="contact" className="py-10 bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
-            <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
-              info@medicalcaregermany.com
-            </a>
-            <a href="tel:+493025730875" className="block text-lg hover:text-slate-300 transition-colors">
-              +49 30 25730875
+            <a href="mailto:info@medicalcaregermany.de" className="block text-lg hover:text-slate-300 transition-colors">
+              info@medicalcaregermany.de
             </a>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>

@@ -1,32 +1,8 @@
-import { useAuth } from "@/_core/hooks/useAuth";
-import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { useState } from "react";
 
 export default function PhysicianReferralInterface() {
-  const { user, loading, error, isAuthenticated, logout } = useAuth();
-  const submitReferral = trpc.case.submit.useMutation();
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData);
-
-    try {
-      await submitReferral.mutateAsync({
-        fullName: data.physicianName as string,
-        country: data.country as string,
-        medicalSituation: `Specialty: ${data.specialty}\n\nCase Summary: ${data.caseSummary}\n\nUrgency: ${data.urgency}\n\nProfessional Email: ${data.professionalEmail}`,
-      });
-      setFormSubmitted(true);
-    } catch (error) {
-      console.error("Referral submission error:", error);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       
@@ -149,135 +125,82 @@ export default function PhysicianReferralInterface() {
       <section className="py-20 px-6 max-w-3xl mx-auto" id="referral-form">
         <h2 className="text-3xl font-serif text-slate-900 mb-12 font-normal text-center">Professional Referral Submission</h2>
         
-        {!formSubmitted ? (
           <Card className="p-10 shadow-sm border-slate-200 bg-white">
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form
+              action="https://formsubmit.co/info@medicalcaregermany.com"
+              method="POST"
+              encType="multipart/form-data"
+              className="space-y-8"
+            >
+              {/* FormSubmit.co control fields */}
+              <input type="hidden" name="_subject" value="Medical Care Germany — Professional Referral Submission" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://medicalcaregermany.com/thankyou.html" />
+              <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Referring Physician Name *</label>
-                <input 
-                  type="text" 
-                  name="physicianName"
-                  required
-                  className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                />
+                <input type="text" name="Physician Name" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Medical Institution *</label>
-                <input 
-                  type="text" 
-                  name="institution"
-                  required
-                  className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                />
+                <input type="text" name="Institution" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700 block">Country *</label>
-                  <input 
-                    type="text" 
-                    name="country"
-                    required
-                    className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                  />
+                  <input type="text" name="Country" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
                 </div>
-
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700 block">Specialty *</label>
-                  <input 
-                    type="text" 
-                    name="specialty"
-                    required
-                    className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                  />
+                  <input type="text" name="Specialty" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Professional Email *</label>
-                <input 
-                  type="email" 
-                  name="professionalEmail"
-                  required
-                  className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                />
+                <input type="email" name="email" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Case Summary *</label>
-                <textarea 
-                  name="caseSummary"
-                  required
-                  className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-40"
-                  placeholder="Clinical presentation, diagnostic findings, treatment history, and referral rationale"
-                ></textarea>
+                <textarea name="Case Summary" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-40" placeholder="Clinical presentation, diagnostic findings, treatment history, and referral rationale" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Urgency Level *</label>
-                <select 
-                  name="urgency"
-                  required
-                  className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                >
-                  <option value="">Select urgency level</option>
-                  <option value="routine">Routine</option>
-                  <option value="urgent">Urgent</option>
-                  <option value="time-sensitive">Time-Sensitive</option>
+                <select name="Urgency" required defaultValue="" className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900">
+                  <option value="" disabled>Select urgency level</option>
+                  <option value="Routine">Routine</option>
+                  <option value="Urgent">Urgent</option>
+                  <option value="Time-Sensitive">Time-Sensitive</option>
                 </select>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-700 block">Document Upload</label>
                 <p className="text-xs text-slate-500 mb-2">Complete medical documentation enables efficient institutional evaluation.</p>
-                <input 
-                  type="file" 
-                  name="documentation"
-                  accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                  className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-                />
+                <input type="file" name="Medical Documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
                 <p className="text-xs text-slate-500">Accepted formats: PDF, DOC, DOCX, JPG, PNG</p>
               </div>
 
               <div className="pt-6">
-                <Button 
-                  type="submit"
-                  disabled={submitReferral.isPending}
-                  className="w-full bg-slate-900 text-white hover:bg-slate-800 py-6 text-base font-normal tracking-wide"
-                >
-                  {submitReferral.isPending ? "Processing..." : "Submit Professional Referral"}
+                <Button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 py-6 text-base font-normal tracking-wide">
+                  Submit Professional Referral
                 </Button>
               </div>
 
               <p className="text-center text-xs text-slate-500 mt-6">
                 All submissions are handled within structured confidential channels aligned with German data protection expectations.
-                <p className="text-center text-xs text-slate-500 mt-3">
-                  Case reviews are conducted in alignment with German clinical governance practices.
-                </p>
+              </p>
+              <p className="text-center text-xs text-slate-500 mt-3">
+                Case reviews are conducted in alignment with German clinical governance practices.
               </p>
             </form>
           </Card>
-        ) : (
-          <Card className="p-12 shadow-sm border-slate-200 bg-white text-center">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-serif text-slate-900 font-normal">Professional Review Initiated</h3>
-              <div className="w-16 h-[1px] bg-slate-300 mx-auto"></div>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-md mx-auto mb-6">
-                All submissions undergo structured administrative and clinical review prior to coordination acceptance.
-              </p>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-md mx-auto">
-                Your submission has entered professional review.
-              </p>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-md mx-auto">
-                Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
-              </p>
-              <p className="text-sm text-slate-500 mt-8">
-                No further action is required at this stage.
-              </p>
-            </div>
-          </Card>
-        )}
       </section>
 
       {/* Footer */}

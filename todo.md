@@ -848,3 +848,27 @@
 ## Patient Auto-Confirmation Email (intake-form.html)
 - [x] Inject Reference ID into _autoresponse field dynamically before submission
 - [x] Include thank-you message, Reference ID, and 24-48 hour response notice in auto-response
+
+## Pure HTML POST Form Conversion (intake-form.html)
+- [ ] Convert form from AJAX/fetch to native HTML POST (action=formsubmit.co, method=POST, enctype=multipart/form-data)
+- [ ] Remove all JavaScript submit handlers (fetch, FormData, AJAX)
+- [ ] Remove double-submit guard JS (no longer needed with native POST)
+- [ ] Remove dynamic _autoresponse injection JS (set static value in hidden field instead)
+- [ ] Keep Reference ID generation but embed it via hidden field on page load
+- [ ] Keep email validation JS (client-side only, no server involvement)
+- [ ] Redirect to /thankyou.html via _next hidden field after submission
+- [ ] Verify zero /api/trpc or manus.space server calls in the form flow
+
+## Pure HTML POST Form — Full Backend Detach (ALL PAGES)
+- [x] Rewrite intake-form.html as pure HTML POST (action=formsubmit.co, method=POST, enctype=multipart/form-data)
+- [x] Remove all fetch/AJAX/JS submit logic from intake-form.html
+- [x] Keep Reference ID JS (client-side only, injected into hidden field on page load)
+- [x] Keep email validation JS (client-side only, no server call)
+- [x] Remove trpc.case.submit from PrivateMedicalAdvisory.tsx
+- [x] Remove trpc.case.submit from PhysicianReferralClinical.tsx
+- [x] Remove trpc.case.submit from PhysicianReferralInterface.tsx
+- [x] All 4 forms now POST directly to formsubmit.co/info@medicalcaregermany.com
+- [x] Zero /api/trpc calls remain in any form flow
+- [x] Zero manus.space server processing for any form submission
+- [x] TypeScript: zero errors
+- [x] All 7 tests pass

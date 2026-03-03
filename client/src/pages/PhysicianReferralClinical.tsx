@@ -1,58 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { trpc } from "@/lib/trpc";
-import { toast } from "sonner";
 import ContactBar from "@/components/ContactBar";
 import PremiumFooter from "@/components/PremiumFooter";
 
 export default function PhysicianReferralClinical() {
-  const submitReferral = trpc.case.submit.useMutation();
-  const [formData, setFormData] = useState({
-    physicianName: "",
-    institution: "",
-    specialty: "",
-    country: "",
-    clinicalSummary: "",
-    clinicalQuestion: "",
-    communicationMethod: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      await submitReferral.mutateAsync({
-        fullName: formData.physicianName,
-        country: formData.country,
-        medicalSituation: `Institution: ${formData.institution}\nSpecialty: ${formData.specialty}\nClinical Summary: ${formData.clinicalSummary}\nClinical Question: ${formData.clinicalQuestion}\nCommunication Method: ${formData.communicationMethod}`,
-      });
-
-      const form = e.target as HTMLFormElement;
-      const card = form.closest('.referral-form-container');
-      if (card) {
-        card.innerHTML = `
-          <div class="text-center py-16 space-y-8">
-            <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
-            <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
-              All submissions undergo structured administrative and clinical review prior to coordination acceptance.
-            </p>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
-              Response intervals reflect the care taken to appropriately review medical context prior to engagement.
-            </p>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
-              Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
-            </p>
-          </div>
-        `;
-      }
-    } catch (error) {
-      toast.error("Submission failed. Please try again.");
-      console.error(error);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       
@@ -182,98 +133,65 @@ export default function PhysicianReferralClinical() {
         <div className="referral-form-container">
           <h2 className="text-3xl font-serif text-slate-900 mb-16 text-center font-normal">Clinical Referral Submission</h2>
           
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form
+            action="https://formsubmit.co/info@medicalcaregermany.com"
+            method="POST"
+            encType="multipart/form-data"
+            className="space-y-8"
+          >
+            {/* FormSubmit.co control fields */}
+            <input type="hidden" name="_subject" value="Medical Care Germany — Clinical Referral Submission" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://medicalcaregermany.com/thankyou.html" />
+            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Referring Physician Name</label>
-              <input
-                type="text"
-                required
-                value={formData.physicianName}
-                onChange={(e) => setFormData({ ...formData, physicianName: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-              />
+              <input type="text" name="Physician Name" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
             </div>
 
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Medical Institution / Practice</label>
-              <input
-                type="text"
-                required
-                value={formData.institution}
-                onChange={(e) => setFormData({ ...formData, institution: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-              />
+              <input type="text" name="Institution" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
             </div>
 
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Specialty</label>
-              <input
-                type="text"
-                required
-                value={formData.specialty}
-                onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-              />
+              <input type="text" name="Specialty" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
             </div>
 
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Country</label>
-              <input
-                type="text"
-                required
-                value={formData.country}
-                onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-              />
+              <input type="text" name="Country" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
             </div>
 
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Patient Clinical Summary</label>
-              <textarea
-                required
-                value={formData.clinicalSummary}
-                onChange={(e) => setFormData({ ...formData, clinicalSummary: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-32"
-              />
+              <textarea name="Clinical Summary" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-32" />
             </div>
 
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Specific Clinical Question</label>
-              <textarea
-                required
-                value={formData.clinicalQuestion}
-                onChange={(e) => setFormData({ ...formData, clinicalQuestion: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-32"
-              />
+              <textarea name="Clinical Question" required className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-32" />
             </div>
 
             <div className="space-y-3">
-              <label className="text-sm text-slate-600 uppercase tracking-wide">Preferred Communication Method</label>
-              <input
-                type="email"
-                required
-                placeholder="Email address"
-                value={formData.communicationMethod}
-                onChange={(e) => setFormData({ ...formData, communicationMethod: e.target.value })}
-                className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
-              />
+              <label className="text-sm text-slate-600 uppercase tracking-wide">Email Address</label>
+              <input type="email" name="email" required placeholder="your@email.com" className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900" />
             </div>
 
             <div className="pt-8">
-              <Button
-                type="submit"
-                disabled={submitReferral.isPending}
-                className="w-full bg-slate-900 text-white hover:bg-slate-800 py-6 text-base"
-              >
-                {submitReferral.isPending ? "Submitting..." : "Submit Clinical Referral"}
+              <Button type="submit" className="w-full bg-slate-900 text-white hover:bg-slate-800 py-6 text-base">
+                Submit Clinical Referral
               </Button>
             </div>
 
             <p className="text-center text-xs text-slate-400 mt-6">
               All referrals are handled with professional discretion.
+            </p>
             <p className="text-center text-xs text-slate-500 mt-3">
               Case reviews are conducted in alignment with German clinical governance practices.
-            </p>
             </p>
           </form>
         </div>

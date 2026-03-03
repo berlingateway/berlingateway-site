@@ -1,57 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { trpc } from "@/lib/trpc";
-import { toast } from "sonner";
 import ContactBar from "@/components/ContactBar";
 import PremiumFooter from "@/components/PremiumFooter";
 
 export default function PrivateMedicalAdvisory() {
-  const submitInquiry = trpc.case.submit.useMutation();
-  const [formData, setFormData] = useState({
-    fullName: "",
-    country: "",
-    abilityToTravel: "",
-    medicalUrgency: "",
-    priorTreatments: "",
-    preferredCommunication: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    try {
-      await submitInquiry.mutateAsync({
-        fullName: formData.fullName,
-        country: formData.country,
-        medicalSituation: `Ability to travel: ${formData.abilityToTravel}\nMedical urgency: ${formData.medicalUrgency}\nPrior treatments: ${formData.priorTreatments}\nPreferred communication: ${formData.preferredCommunication}`,
-      });
-
-      const form = e.target as HTMLFormElement;
-      const card = form.closest('.inquiry-form-container');
-      if (card) {
-        card.innerHTML = `
-          <div class="text-center py-16 space-y-8">
-            <h3 class="text-2xl font-serif text-slate-900">Your submission has entered professional review.</h3>
-            <div class="w-20 h-[1px] bg-slate-300 mx-auto"></div>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
-              All submissions undergo structured administrative and clinical review prior to coordination acceptance.
-            </p>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg mb-6">
-              Response intervals reflect the care taken to appropriately review medical context prior to engagement.
-            </p>
-            <p class="text-slate-600 leading-relaxed max-w-md mx-auto text-lg">
-              Medical Care Germany will revert through appropriate coordination channels should advisory alignment be established.
-            </p>
-          </div>
-        `;
-      }
-    } catch (error) {
-      toast.error("Submission failed. Please try again.");
-      console.error(error);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       
@@ -156,14 +108,25 @@ export default function PrivateMedicalAdvisory() {
         <div className="inquiry-form-container">
           <h2 className="text-3xl font-serif text-slate-900 mb-16 text-center font-normal">Private Medical Inquiry</h2>
           
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form
+            action="https://formsubmit.co/info@medicalcaregermany.com"
+            method="POST"
+            encType="multipart/form-data"
+            className="space-y-8"
+          >
+            {/* FormSubmit.co control fields */}
+            <input type="hidden" name="_subject" value="Medical Care Germany — Private Medical Inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://medicalcaregermany.com/thankyou.html" />
+            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Full Name</label>
               <input
                 type="text"
+                name="Full Name"
                 required
-                value={formData.fullName}
-                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
               />
             </div>
@@ -172,9 +135,8 @@ export default function PrivateMedicalAdvisory() {
               <label className="text-sm text-slate-600 uppercase tracking-wide">Country of Residence</label>
               <input
                 type="text"
+                name="Country"
                 required
-                value={formData.country}
-                onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                 className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
               />
             </div>
@@ -182,12 +144,12 @@ export default function PrivateMedicalAdvisory() {
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Ability to Travel to Germany</label>
               <select
+                name="Ability to Travel"
                 required
-                value={formData.abilityToTravel}
-                onChange={(e) => setFormData({ ...formData, abilityToTravel: e.target.value })}
+                defaultValue=""
                 className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
               >
-                <option value="">Select</option>
+                <option value="" disabled>Select</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
                 <option value="Under evaluation">Under evaluation</option>
@@ -197,12 +159,12 @@ export default function PrivateMedicalAdvisory() {
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Medical Urgency</label>
               <select
+                name="Medical Urgency"
                 required
-                value={formData.medicalUrgency}
-                onChange={(e) => setFormData({ ...formData, medicalUrgency: e.target.value })}
+                defaultValue=""
                 className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
               >
-                <option value="">Select</option>
+                <option value="" disabled>Select</option>
                 <option value="Routine">Routine</option>
                 <option value="Urgent">Urgent</option>
                 <option value="Time-sensitive">Time-sensitive</option>
@@ -212,21 +174,19 @@ export default function PrivateMedicalAdvisory() {
             <div className="space-y-3">
               <label className="text-sm text-slate-600 uppercase tracking-wide">Prior Treatments Performed</label>
               <textarea
+                name="Prior Treatments"
                 required
-                value={formData.priorTreatments}
-                onChange={(e) => setFormData({ ...formData, priorTreatments: e.target.value })}
                 className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900 h-32"
               />
             </div>
 
             <div className="space-y-3">
-              <label className="text-sm text-slate-600 uppercase tracking-wide">Preferred Communication Channel</label>
+              <label className="text-sm text-slate-600 uppercase tracking-wide">Email Address</label>
               <input
                 type="email"
+                name="email"
                 required
-                placeholder="Email address"
-                value={formData.preferredCommunication}
-                onChange={(e) => setFormData({ ...formData, preferredCommunication: e.target.value })}
+                placeholder="your@email.com"
                 className="w-full p-4 border border-slate-300 focus:border-slate-500 outline-none transition-colors bg-white text-slate-900"
               />
             </div>
@@ -234,10 +194,9 @@ export default function PrivateMedicalAdvisory() {
             <div className="pt-8">
               <Button
                 type="submit"
-                disabled={submitInquiry.isPending}
                 className="w-full bg-slate-900 text-white hover:bg-slate-800 py-6 text-base"
               >
-                {submitInquiry.isPending ? "Submitting..." : "Submit for Medical Consideration"}
+                Submit for Medical Consideration
               </Button>
             </div>
 

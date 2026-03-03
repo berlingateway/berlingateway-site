@@ -117,20 +117,10 @@
       cursor: pointer;
       transition: border-color 0.15s;
       border-radius: 2px;
-      position: relative;
     }
 
     .file-upload-area:hover {
       border-color: #9ca3af;
-    }
-
-    .file-upload-area input[type="file"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
     }
 
     .file-upload-icon {
@@ -150,36 +140,13 @@
       font-weight: 500;
     }
 
-    .file-list {
+    input[type="file"] {
+      display: block;
+      width: 100%;
       margin-top: 10px;
-      text-align: left;
-    }
-
-    .file-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      margin-bottom: 4px;
-      font-size: 12px;
+      font-size: 13px;
       color: #374151;
-      border-radius: 2px;
     }
-
-    .file-item button {
-      margin-left: auto;
-      background: none;
-      border: none;
-      color: #9ca3af;
-      cursor: pointer;
-      font-size: 14px;
-      line-height: 1;
-      padding: 0 2px;
-    }
-
-    .file-item button:hover { color: #374151; }
 
     .confidentiality-notice {
       background: #f9fafb;
@@ -217,97 +184,6 @@
       cursor: not-allowed;
     }
 
-    .success-state {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .success-icon {
-      width: 48px;
-      height: 48px;
-      background: #111827;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-    }
-
-    .success-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: #ffffff;
-    }
-
-    .success-state h3 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 20px;
-      font-weight: 400;
-      color: #111827;
-      margin-bottom: 12px;
-    }
-
-    .success-divider {
-      width: 40px;
-      height: 1px;
-      background: #d1d5db;
-      margin: 0 auto 16px;
-    }
-
-    .success-state p {
-      font-size: 14px;
-      color: #4b5563;
-      line-height: 1.6;
-      max-width: 360px;
-      margin: 0 auto 12px;
-    }
-
-    .success-state .fallback {
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .success-state .fallback a {
-      color: #374151;
-      text-decoration: underline;
-    }
-
-    .ref-id-box {
-      display: inline-block;
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      padding: 10px 20px;
-      margin: 16px auto;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      color: #111827;
-      border-radius: 2px;
-      user-select: all;
-    }
-
-    .ref-id-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #9ca3af;
-      margin-bottom: 4px;
-    }
-
-    .error-msg {
-      display: none;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      color: #991b1b;
-      padding: 10px 14px;
-      font-size: 13px;
-      margin-bottom: 16px;
-      border-radius: 2px;
-    }
-
     .field-error {
       display: none;
       font-size: 12px;
@@ -326,173 +202,158 @@
       border-color: #f87171 !important;
       background: #fff8f8;
     }
+
+    .fallback-contact {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    .fallback-contact a {
+      color: #374151;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <div id="form-container">
-    <div class="form-header">
-      <h2>Clinical Case Submission</h2>
-      <p>All submissions are handled under strict clinical confidentiality protocols. Case reviews are conducted in alignment with German clinical governance practices.</p>
-    </div>
-
-    <div class="error-msg" id="error-msg">
-      Submission could not be completed. Please contact us directly at <a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a>
-    </div>
-
-    <form id="intake-form" novalidate>
-      <!-- Hidden FormSubmit.co control fields -->
-      <input type="hidden" name="_subject" value="Medical Care Germany — Clinical Review Request" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_autoresponse" id="autoresponse-field" value="" />
-
-      <div class="two-col">
-        <div class="field-group">
-          <label>Patient Name <span class="required">*</span></label>
-          <input type="text" name="Patient Name" placeholder="Full name" required />
-        </div>
-        <div class="field-group">
-          <label>Country of Residence <span class="required">*</span></label>
-          <input type="text" name="Country" placeholder="Country" required />
-        </div>
-      </div>
-
-      <div class="field-group">
-        <label>Email Address <span class="required">*</span></label>
-        <input type="email" name="email" id="email-field" placeholder="your@email.com" required autocomplete="email" />
-        <span class="field-error" id="email-error">A valid email address is required to receive your case confirmation.</span>
-      </div>
-
-      <div class="two-col">
-        <div class="field-group">
-          <label>Diagnosis Status <span class="required">*</span></label>
-          <select name="Diagnosis Status" required>
-            <option value="" disabled selected>Select status</option>
-            <option value="Not yet diagnosed">Not yet diagnosed</option>
-            <option value="Preliminary diagnosis">Preliminary diagnosis</option>
-            <option value="Confirmed diagnosis">Confirmed diagnosis</option>
-            <option value="Post-treatment / Recurrence">Post-treatment / Recurrence</option>
-            <option value="Second opinion requested">Second opinion requested</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label>Purpose of Request <span class="required">*</span></label>
-          <select name="Purpose of Request" required>
-            <option value="" disabled selected>Select purpose</option>
-            <option value="Second opinion on diagnosis">Second opinion on diagnosis</option>
-            <option value="Treatment strategy & hospital pathway">Treatment strategy & hospital pathway</option>
-            <option value="Surgical decision review">Surgical decision review</option>
-            <option value="Urgent case escalation">Urgent case escalation</option>
-            <option value="Medical visa & logistics coordination">Medical visa & logistics coordination</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="field-group">
-        <label>Medical History Summary <span class="required">*</span></label>
-        <textarea name="Medical History Summary" placeholder="Please provide a brief summary of the patient's medical history, current condition, and any relevant prior treatments or diagnoses." required></textarea>
-      </div>
-
-      <div class="field-group">
-        <label>Medical Documents</label>
-        <div class="file-upload-area" id="drop-zone">
-          <input type="file" id="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.dcm" />
-          <svg class="file-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-          </svg>
-          <p class="file-upload-text"><strong>Upload reports, scans, or DICOM files</strong><br />PDF, JPEG, PNG, DICOM — max 10 MB per file</p>
-        </div>
-        <div class="file-list" id="file-list"></div>
-        <input type="hidden" name="Attached Documents" id="attached-docs-field" value="None" />
-      </div>
-
-      <div class="confidentiality-notice">
-        <p>This submission is encrypted in transit and handled in accordance with German data protection regulations. Your information will not be shared with third parties outside the clinical coordination process.</p>
-      </div>
-
-      <button type="submit" class="submit-btn" id="submit-btn">SUBMIT CASE FOR CLINICAL REVIEW</button>
-    </form>
+  <div class="form-header">
+    <h2>Clinical Case Submission</h2>
+    <p>All submissions are handled under strict clinical confidentiality protocols. Case reviews are conducted in alignment with German clinical governance practices.</p>
   </div>
 
-  <div class="success-state" id="success-state">
-    <div class="success-icon">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-      </svg>
+  <!--
+    PURE HTML POST FORM — no JavaScript fetch, no AJAX, no server-side processing on manus.space.
+    Submission goes directly from the browser to FormSubmit.co → info@medicalcaregermany.com.
+  -->
+  <form
+    id="intake-form"
+    action="https://formsubmit.co/info@medicalcaregermany.com"
+    method="POST"
+    enctype="multipart/form-data"
+    novalidate
+  >
+    <!-- FormSubmit.co control fields -->
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://medicalcaregermany.com/thankyou.html" />
+    <!-- _subject and _autoresponse are set dynamically by JS on page load (no server involved) -->
+    <input type="hidden" name="_subject" id="field-subject" value="Medical Care Germany — Clinical Review Request" />
+    <input type="hidden" name="_autoresponse" id="field-autoresponse" value="Thank you for choosing Medical Care Germany. Our coordination team has received your submission and will conduct a preliminary clinical review. You will be contacted within 24–48 hours through the appropriate professional channel. Please retain your case reference number for any future correspondence. — Medical Care Germany | info@medicalcaregermany.com" />
+    <!-- Reference ID generated client-side and embedded as a visible field -->
+    <input type="hidden" name="Reference ID" id="field-ref-id" value="" />
+    <!-- Honeypot spam protection -->
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <div class="two-col">
+      <div class="field-group">
+        <label>Patient Name <span class="required">*</span></label>
+        <input type="text" name="Patient Name" placeholder="Full name" required />
+      </div>
+      <div class="field-group">
+        <label>Country of Residence <span class="required">*</span></label>
+        <input type="text" name="Country" placeholder="Country" required />
+      </div>
     </div>
-    <h3>Submission Received</h3>
-    <div class="success-divider"></div>
-    <p class="ref-id-label">Case Reference</p>
-    <div class="ref-id-box" id="ref-id-display">MCG---------</div>
-    <p style="margin-top:16px;">Your case has been entered into our structured clinical review process. Please retain the reference number above for any future correspondence.</p>
-    <p>A confirmation has been sent to your email address. The coordination team will respond through the appropriate professional channel.</p>
-    <p class="fallback">If you do not receive a confirmation within 24 hours, contact: <a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a></p>
-  </div>
+
+    <div class="field-group">
+      <label>Email Address <span class="required">*</span></label>
+      <input type="email" name="email" id="email-field" placeholder="your@email.com" required autocomplete="email" />
+      <span class="field-error" id="email-error">A valid email address is required to receive your case confirmation.</span>
+    </div>
+
+    <div class="two-col">
+      <div class="field-group">
+        <label>Diagnosis Status <span class="required">*</span></label>
+        <select name="Diagnosis Status" required>
+          <option value="" disabled selected>Select status</option>
+          <option value="Not yet diagnosed">Not yet diagnosed</option>
+          <option value="Preliminary diagnosis">Preliminary diagnosis</option>
+          <option value="Confirmed diagnosis">Confirmed diagnosis</option>
+          <option value="Post-treatment / Recurrence">Post-treatment / Recurrence</option>
+          <option value="Second opinion requested">Second opinion requested</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label>Purpose of Request <span class="required">*</span></label>
+        <select name="Purpose of Request" required>
+          <option value="" disabled selected>Select purpose</option>
+          <option value="Second medical opinion">Second medical opinion</option>
+          <option value="Treatment strategy & hospital pathway">Treatment strategy &amp; hospital pathway</option>
+          <option value="Surgical decision review">Surgical decision review</option>
+          <option value="Urgent case escalation">Urgent case escalation</option>
+          <option value="Medical visa & logistics coordination">Medical visa &amp; logistics coordination</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Medical History Summary <span class="required">*</span></label>
+      <textarea name="Medical History Summary" placeholder="Please provide a brief summary of the patient's medical history, current condition, and any relevant prior treatments or diagnoses." required></textarea>
+    </div>
+
+    <div class="field-group">
+      <label>Medical Documents</label>
+      <div class="file-upload-area">
+        <svg class="file-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+        </svg>
+        <p class="file-upload-text"><strong>Upload reports, scans, or DICOM files</strong><br />PDF, JPEG, PNG, DICOM — max 10 MB per file</p>
+        <input type="file" name="Medical Documents" multiple accept=".pdf,.jpg,.jpeg,.png,.dcm" />
+      </div>
+    </div>
+
+    <div class="confidentiality-notice">
+      <p>This submission is encrypted in transit and handled in accordance with German data protection regulations. Your information will not be shared with third parties outside the clinical coordination process.</p>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">SUBMIT CASE FOR CLINICAL REVIEW</button>
+  </form>
+
+  <p class="fallback-contact">
+    If you experience any technical difficulty, contact us directly at:
+    <a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a>
+  </p>
 
   <script>
-    const form = document.getElementById('intake-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const errorMsg = document.getElementById('error-msg');
-    const successState = document.getElementById('success-state');
-    const formContainer = document.getElementById('form-container');
-    const fileInput = document.getElementById('file-input');
-    const fileList = document.getElementById('file-list');
-    const attachedDocsField = document.getElementById('attached-docs-field');
-    let selectedFiles = [];
+    // ─── Reference ID: generated once on page load, embedded in hidden field ───
+    // Format: MCG-YYYYMMDD-XXXXX
+    // No server call — pure client-side, injected before the native POST.
+    (function() {
+      var now = new Date();
+      var date = now.toISOString().slice(0, 10).replace(/-/g, '');
+      var rand = Math.random().toString(36).substring(2, 7).toUpperCase();
+      var refId = 'MCG-' + date + '-' + rand;
 
-    // File handling
-    fileInput.addEventListener('change', function() {
-      addFiles(Array.from(this.files));
-      this.value = '';
-    });
+      // Embed Reference ID as a visible form field
+      document.getElementById('field-ref-id').value = refId;
 
-    function addFiles(files) {
-      files.forEach(file => {
-        if (file.size > 10 * 1024 * 1024) return; // 10MB limit
-        selectedFiles.push(file);
-      });
-      renderFileList();
-    }
+      // Personalise subject line with Reference ID
+      document.getElementById('field-subject').value =
+        '[' + refId + '] Medical Care Germany \u2014 Clinical Review Request';
 
-    function renderFileList() {
-      fileList.innerHTML = '';
-      selectedFiles.forEach((file, index) => {
-        const item = document.createElement('div');
-        item.className = 'file-item';
-        item.innerHTML = `<span>${file.name} (${(file.size / 1024).toFixed(0)} KB)</span><button type="button" onclick="removeFile(${index})">×</button>`;
-        fileList.appendChild(item);
-      });
-      attachedDocsField.value = selectedFiles.length > 0
-        ? selectedFiles.map(f => f.name).join(', ')
-        : 'None';
-    }
+      // Personalise auto-response with Reference ID
+      document.getElementById('field-autoresponse').value =
+        'Thank you for choosing Medical Care Germany.\n\n' +
+        'Your case reference number is: ' + refId + '\n\n' +
+        'Our coordination team has received your submission and will conduct a preliminary clinical review. ' +
+        'You will be contacted within 24\u201348 hours through the appropriate professional channel.\n\n' +
+        'Please retain your reference number for any future correspondence.\n\n' +
+        'Medical Care Germany\n' +
+        'info@medicalcaregermany.com';
+    })();
 
-    window.removeFile = function(index) {
-      selectedFiles.splice(index, 1);
-      renderFileList();
-    };
+    // ─── Client-side email validation only — no server involved ───
+    var emailField = document.getElementById('email-field');
+    var emailError = document.getElementById('email-error');
 
-    // Drag and drop
-    const dropZone = document.getElementById('drop-zone');
-    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.style.borderColor = '#374151'; });
-    dropZone.addEventListener('dragleave', () => { dropZone.style.borderColor = '#d1d5db'; });
-    dropZone.addEventListener('drop', e => {
-      e.preventDefault();
-      dropZone.style.borderColor = '#d1d5db';
-      addFiles(Array.from(e.dataTransfer.files));
-    });
-
-    // Email validation helpers
-    const emailField = document.getElementById('email-field');
-    const emailError = document.getElementById('email-error');
-
-    function isValidEmail(value) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
+    function isValidEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
     }
 
     function validateEmail() {
-      const val = emailField.value.trim();
+      var val = emailField.value.trim();
       if (!val) {
         emailField.classList.add('invalid');
         emailError.textContent = 'Email address is required. A confirmation will be sent to this address.';
@@ -510,41 +371,18 @@
       return true;
     }
 
-    // Live validation: clear error as soon as input becomes valid
     emailField.addEventListener('input', function() {
-      if (emailField.classList.contains('invalid')) {
-        validateEmail();
-      }
+      if (emailField.classList.contains('invalid')) validateEmail();
     });
+    emailField.addEventListener('blur', validateEmail);
 
-    emailField.addEventListener('blur', function() {
-      validateEmail();
-    });
+    // ─── Pre-submit validation: block native POST if required fields are empty ───
+    document.getElementById('intake-form').addEventListener('submit', function(e) {
+      var emailOk = validateEmail();
 
-    // Reference ID generator: MCG-YYYYMMDD-XXXXX
-    function generateRefId() {
-      const now = new Date();
-      const date = now.toISOString().slice(0, 10).replace(/-/g, '');
-      const rand = Math.random().toString(36).substring(2, 7).toUpperCase();
-      return `MCG-${date}-${rand}`;
-    }
-
-    // Double-submission guard
-    let submitted = false;
-
-    // Form submission
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      if (submitted) return;  // hard guard against double-submit
-      errorMsg.style.display = 'none';
-
-      // Validate email first (dedicated, with clear message)
-      const emailOk = validateEmail();
-
-      // Validate remaining required fields
-      const required = form.querySelectorAll('[required]:not(#email-field)');
-      let otherValid = true;
-      required.forEach(field => {
+      var required = this.querySelectorAll('[required]:not(#email-field)');
+      var otherValid = true;
+      required.forEach(function(field) {
         if (!field.value.trim()) {
           field.classList.add('invalid');
           otherValid = false;
@@ -554,85 +392,26 @@
       });
 
       if (!emailOk || !otherValid) {
-        // Scroll to first invalid field
-        const firstInvalid = form.querySelector('.invalid');
+        e.preventDefault();
+        var firstInvalid = this.querySelector('.invalid');
         if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
 
-      // Generate Reference ID and inject into form data
-      const refId = generateRefId();
-
-      // Build personalised auto-response email with Reference ID
-      const autoresponseText =
-        `Thank you for choosing Medical Care Germany.\n\n` +
-        `Your case reference number is: ${refId}\n\n` +
-        `Our coordination team has received your submission and will conduct a preliminary clinical review. ` +
-        `You will be contacted within 24\u201348 hours through the appropriate professional channel.\n\n` +
-        `Please retain your reference number for any future correspondence.\n\n` +
-        `Medical Care Germany\n` +
-        `info@medicalcaregermany.com`;
-
-      // Inject into the hidden _autoresponse field before FormData is collected
-      document.getElementById('autoresponse-field').value = autoresponseText;
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'SUBMITTING...';
-
-      try {
-        const data = new FormData(form);
-        // Override subject to include Reference ID for traceability
-        data.set('_subject', `[${refId}] Medical Care Germany \u2014 Clinical Review Request`);
-        // Also send the Reference ID as a visible field
-        data.set('Reference ID', refId);
-
-        const response = await fetch('https://formsubmit.co/ajax/info@medicalcaregermany.com', {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: data,
-        });
-
-        const result = await response.json();
-
-        if (result.success === 'true' || result.success === true) {
-          // Mark as submitted — prevents any further submissions
-          submitted = true;
-
-          // Display Reference ID in confirmation panel
-          document.getElementById('ref-id-display').textContent = refId;
-
-          // Clear the form
-          form.reset();
-          selectedFiles = [];
-          renderFileList();
-
-          // Show confirmation, hide form
-          formContainer.style.display = 'none';
-          successState.style.display = 'block';
-
-          // Notify parent iframe to resize
-          if (window.parent !== window) {
-            window.parent.postMessage({ type: 'form-success', height: 420 }, '*');
-          }
-        } else {
-          throw new Error('FormSubmit returned failure');
-        }
-      } catch (err) {
-        errorMsg.style.display = 'block';
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'SUBMIT CASE FOR CLINICAL REVIEW';
-        console.error('[Form Error]', err);
-      }
+      // Disable submit button to prevent accidental double-click during page navigation
+      var btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'SUBMITTING...';
+      // Native POST proceeds — browser navigates to _next (thankyou.html)
     });
 
-    // Auto-resize iframe height
+    // ─── Auto-resize iframe height (for parent page postMessage) ───
     function reportHeight() {
       if (window.parent !== window) {
         window.parent.postMessage({ type: 'form-height', height: document.body.scrollHeight }, '*');
       }
     }
-
-    const observer = new ResizeObserver(reportHeight);
+    var observer = new ResizeObserver(reportHeight);
     observer.observe(document.body);
     reportHeight();
   </script>

@@ -273,6 +273,30 @@
       text-decoration: underline;
     }
 
+    .ref-id-box {
+      display: inline-block;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      padding: 10px 20px;
+      margin: 16px auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #111827;
+      border-radius: 2px;
+      user-select: all;
+    }
+
+    .ref-id-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
     .error-msg {
       display: none;
       background: #fef2f2;
@@ -399,7 +423,10 @@
     </div>
     <h3>Submission Received</h3>
     <div class="success-divider"></div>
-    <p>Your case has been received and entered our structured clinical review process. A confirmation has been sent to your email address.</p>
+    <p class="ref-id-label">Case Reference</p>
+    <div class="ref-id-box" id="ref-id-display">MCG---------</div>
+    <p style="margin-top:16px;">Your case has been entered into our structured clinical review process. Please retain the reference number above for any future correspondence.</p>
+    <p>A confirmation has been sent to your email address. The coordination team will respond through the appropriate professional channel.</p>
     <p class="fallback">If you do not receive a confirmation within 24 hours, contact: <a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a></p>
   </div>
 
@@ -494,9 +521,21 @@
       validateEmail();
     });
 
+    // Reference ID generator: MCG-YYYYMMDD-XXXXX
+    function generateRefId() {
+      const now = new Date();
+      const date = now.toISOString().slice(0, 10).replace(/-/g, '');
+      const rand = Math.random().toString(36).substring(2, 7).toUpperCase();
+      return `MCG-${date}-${rand}`;
+    }
+
+    // Double-submission guard
+    let submitted = false;
+
     // Form submission
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
+      if (submitted) return;  // hard guard against double-submit
       errorMsg.style.display = 'none';
 
       // Validate email first (dedicated, with clear message)
@@ -521,11 +560,19 @@
         return;
       }
 
+      // Generate Reference ID and inject into form data
+      const refId = generateRefId();
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'SUBMITTING...';
 
       try {
         const data = new FormData(form);
+        // Override subject to include Reference ID for traceability
+        data.set('_subject', `[${refId}] Medical Care Germany — Clinical Review Request`);
+        // Also send the Reference ID as a visible field
+        data.set('Reference ID', refId);
+
         const response = await fetch('https://formsubmit.co/ajax/info@medicalcaregermany.com', {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
@@ -535,11 +582,24 @@
         const result = await response.json();
 
         if (result.success === 'true' || result.success === true) {
+          // Mark as submitted — prevents any further submissions
+          submitted = true;
+
+          // Display Reference ID in confirmation panel
+          document.getElementById('ref-id-display').textContent = refId;
+
+          // Clear the form
+          form.reset();
+          selectedFiles = [];
+          renderFileList();
+
+          // Show confirmation, hide form
           formContainer.style.display = 'none';
           successState.style.display = 'block';
-          // Notify parent frame to resize
+
+          // Notify parent iframe to resize
           if (window.parent !== window) {
-            window.parent.postMessage({ type: 'form-success', height: 320 }, '*');
+            window.parent.postMessage({ type: 'form-success', height: 420 }, '*');
           }
         } else {
           throw new Error('FormSubmit returned failure');

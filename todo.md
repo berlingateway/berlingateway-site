@@ -837,3 +837,10 @@
 - [x] Add email format validation (regex check)
 - [x] Show clear inline error message under the email field
 - [x] Prevent form submission until email is valid
+
+## Post-Submission UX (intake-form.html)
+- [x] Generate unique Reference ID client-side (MCG-YYYYMMDD-XXXXX format)
+- [x] Show professional confirmation state with Reference ID prominently displayed
+- [x] Clear the form fields after successful submission
+- [x] Prevent double submission (disable button + set submitted flag)
+- [x] Pass Reference ID in FormSubmit subject line for traceability

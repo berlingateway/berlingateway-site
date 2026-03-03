@@ -831,3 +831,9 @@
 - [x] Update all email references to info@medicalcaregermany.com
 - [x] Iframe is fully responsive (100% width, auto-height via postMessage)
 - [x] TypeScript: zero errors
+
+## Email Field Validation (intake-form.html)
+- [x] Make email field required (block submission if empty)
+- [x] Add email format validation (regex check)
+- [x] Show clear inline error message under the email field
+- [x] Prevent form submission until email is valid

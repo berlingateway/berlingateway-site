@@ -283,6 +283,25 @@
       margin-bottom: 16px;
       border-radius: 2px;
     }
+
+    .field-error {
+      display: none;
+      font-size: 12px;
+      color: #991b1b;
+      margin-top: 5px;
+      letter-spacing: 0.01em;
+    }
+
+    .field-error.visible {
+      display: block;
+    }
+
+    input.invalid,
+    select.invalid,
+    textarea.invalid {
+      border-color: #f87171 !important;
+      background: #fff8f8;
+    }
   </style>
 </head>
 <body>
@@ -317,7 +336,8 @@
 
       <div class="field-group">
         <label>Email Address <span class="required">*</span></label>
-        <input type="email" name="email" placeholder="your@email.com" required />
+        <input type="email" name="email" id="email-field" placeholder="your@email.com" required autocomplete="email" />
+        <span class="field-error" id="email-error">A valid email address is required to receive your case confirmation.</span>
       </div>
 
       <div class="two-col">
@@ -436,23 +456,70 @@
       addFiles(Array.from(e.dataTransfer.files));
     });
 
+    // Email validation helpers
+    const emailField = document.getElementById('email-field');
+    const emailError = document.getElementById('email-error');
+
+    function isValidEmail(value) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
+    }
+
+    function validateEmail() {
+      const val = emailField.value.trim();
+      if (!val) {
+        emailField.classList.add('invalid');
+        emailError.textContent = 'Email address is required. A confirmation will be sent to this address.';
+        emailError.classList.add('visible');
+        return false;
+      }
+      if (!isValidEmail(val)) {
+        emailField.classList.add('invalid');
+        emailError.textContent = 'Please enter a valid email address (e.g. name@domain.com).';
+        emailError.classList.add('visible');
+        return false;
+      }
+      emailField.classList.remove('invalid');
+      emailError.classList.remove('visible');
+      return true;
+    }
+
+    // Live validation: clear error as soon as input becomes valid
+    emailField.addEventListener('input', function() {
+      if (emailField.classList.contains('invalid')) {
+        validateEmail();
+      }
+    });
+
+    emailField.addEventListener('blur', function() {
+      validateEmail();
+    });
+
     // Form submission
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
       errorMsg.style.display = 'none';
 
-      // Basic validation
-      const required = form.querySelectorAll('[required]');
-      let valid = true;
+      // Validate email first (dedicated, with clear message)
+      const emailOk = validateEmail();
+
+      // Validate remaining required fields
+      const required = form.querySelectorAll('[required]:not(#email-field)');
+      let otherValid = true;
       required.forEach(field => {
         if (!field.value.trim()) {
-          field.style.borderColor = '#f87171';
-          valid = false;
+          field.classList.add('invalid');
+          otherValid = false;
         } else {
-          field.style.borderColor = '#d1d5db';
+          field.classList.remove('invalid');
         }
       });
-      if (!valid) return;
+
+      if (!emailOk || !otherValid) {
+        // Scroll to first invalid field
+        const firstInvalid = form.querySelector('.invalid');
+        if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'SUBMITTING...';

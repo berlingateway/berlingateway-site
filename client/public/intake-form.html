@@ -345,7 +345,7 @@
       <input type="hidden" name="_subject" value="Medical Care Germany — Clinical Review Request" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_autoresponse" value="Thank you for submitting your case to Medical Care Germany. Our coordination team has received your inquiry and will conduct a preliminary clinical review. You will be contacted through the appropriate professional channel." />
+      <input type="hidden" name="_autoresponse" id="autoresponse-field" value="" />
 
       <div class="two-col">
         <div class="field-group">
@@ -563,13 +563,26 @@
       // Generate Reference ID and inject into form data
       const refId = generateRefId();
 
+      // Build personalised auto-response email with Reference ID
+      const autoresponseText =
+        `Thank you for choosing Medical Care Germany.\n\n` +
+        `Your case reference number is: ${refId}\n\n` +
+        `Our coordination team has received your submission and will conduct a preliminary clinical review. ` +
+        `You will be contacted within 24\u201348 hours through the appropriate professional channel.\n\n` +
+        `Please retain your reference number for any future correspondence.\n\n` +
+        `Medical Care Germany\n` +
+        `info@medicalcaregermany.com`;
+
+      // Inject into the hidden _autoresponse field before FormData is collected
+      document.getElementById('autoresponse-field').value = autoresponseText;
+
       submitBtn.disabled = true;
       submitBtn.textContent = 'SUBMITTING...';
 
       try {
         const data = new FormData(form);
         // Override subject to include Reference ID for traceability
-        data.set('_subject', `[${refId}] Medical Care Germany — Clinical Review Request`);
+        data.set('_subject', `[${refId}] Medical Care Germany \u2014 Clinical Review Request`);
         // Also send the Reference ID as a visible field
         data.set('Reference ID', refId);
 

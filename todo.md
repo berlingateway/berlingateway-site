@@ -844,3 +844,7 @@
 - [x] Clear the form fields after successful submission
 - [x] Prevent double submission (disable button + set submitted flag)
 - [x] Pass Reference ID in FormSubmit subject line for traceability
+
+## Patient Auto-Confirmation Email (intake-form.html)
+- [x] Inject Reference ID into _autoresponse field dynamically before submission
+- [x] Include thank-you message, Reference ID, and 24-48 hour response notice in auto-response

@@ -81,6 +81,7 @@ a:hover{opacity:.85}
 .footer-contact a{color:var(--muted);text-decoration:none}
 .footer-contact a:hover{text-decoration:underline}
 .phone{direction:ltr;unicode-bidi:embed}
+span[dir="ltr"]{direction:ltr;unicode-bidi:embed;display:inline-block}
 .footer-closing{font-size:11px;color:var(--muted);padding-top:10px;margin-top:10px;border-top:1px solid var(--line);font-weight:400;letter-spacing:.5px}
 
 .hr{height:1px;background:var(--line);margin:18px 0}
@@ -108,6 +109,7 @@ textarea{min-height:110px;resize:vertical}
 .rtl .footer .wrap{flex-direction:column}
 .rtl .footer-copyright{text-align:right}
 .rtl .phone{direction:ltr;unicode-bidi:embed}
+span[dir="ltr"]{direction:ltr;unicode-bidi:embed;display:inline-block}
 
 @media (max-width:900px){
   .card{grid-column:span 12}

@@ -912,3 +912,33 @@
 - [x] OG title and Twitter title updated to match
 - [x] Meta description consistent and professional
 - [x] IBM Plex Sans Arabic added to Google Fonts in index.html
+
+## Incremental Improvements — Batch 2 (March 2026)
+
+### WhatsApp Number
+- [x] Replace XXXXXXXXXXX placeholder with 493025730875 in Home.tsx footer and secondary CTA
+- [x] WhatsApp link updated in ArabicHome.tsx secondary CTA
+
+### Geo-Detection Arabic Banner
+- [x] Add Arabic suggestion banner to Home.tsx (detect MENA region via timezone/language)
+- [x] Banner text: "هل تفضل عرض هذه الصفحة باللغة العربية؟" + "فتح النسخة العربية" button → /ar
+- [x] Minimal design, dismissible (sessionStorage), does not disrupt layout
+
+### Targeting Line + Cases-Examples Box (Homepage EN)
+- [x] Add targeting line above main CTA: "Designed for complex or unresolved medical cases seeking specialist review in Germany."
+- [x] Add "Examples of cases we review" box (persistent unexplained symptoms, complex neurosurgery, oncology, rare diseases)
+
+### Document Upload Instruction Box
+- [x] Add instruction box above file upload in intake-form.html (EN)
+  - Title: "Recommended Medical Documents"
+  - List: hospital reports, MRI/CT reports, laboratory results, previous diagnosis/treatment plans
+  - Note: PDF files or clear photos are acceptable
+- [x] Add equivalent Arabic instruction box in intake-form-ar.html
+
+### Arabic Hero Targeting Line (ArabicHome.tsx)
+- [x] Add targeting line in Arabic above CTA button in ArabicHome.tsx
+- [x] Add "Examples of cases we review" box in Arabic (RTL layout)
+- [x] WhatsApp link updated to wa.me/493025730875
+
+### Arabic Page — AR | EN Switch
+- [x] AR | EN language switch already present in ArabicHome.tsx header (link EN → /)

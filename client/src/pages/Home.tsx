@@ -36,9 +36,48 @@ function IframeForm() {
   );
 }
 
+// Geo-detection: detect Arabic-speaking regions via browser language / timezone
+function useArabicBanner() {
+  const [show, setShow] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if already dismissed in this session
+    if (sessionStorage.getItem('arabic-banner-dismissed')) return;
+
+    const lang = navigator.language || '';
+    const langs = navigator.languages || [];
+    const isArabicLang = lang.startsWith('ar') || langs.some(l => l.startsWith('ar'));
+
+    // MENA timezones
+    const menaTimezones = [
+      'Asia/Riyadh', 'Asia/Dubai', 'Asia/Kuwait', 'Asia/Qatar', 'Asia/Bahrain',
+      'Asia/Muscat', 'Asia/Aden', 'Africa/Cairo', 'Africa/Tripoli', 'Africa/Tunis',
+      'Africa/Algiers', 'Africa/Casablanca', 'Asia/Baghdad', 'Asia/Amman',
+      'Asia/Beirut', 'Asia/Damascus', 'Asia/Gaza', 'Asia/Hebron',
+      'Africa/Khartoum', 'Africa/Mogadishu', 'Asia/Sanaa',
+    ];
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const isMenaTz = menaTimezones.includes(tz);
+
+    if (isArabicLang || isMenaTz) {
+      setShow(true);
+    }
+  }, []);
+
+  const dismiss = () => {
+    setShow(false);
+    setDismissed(true);
+    sessionStorage.setItem('arabic-banner-dismissed', '1');
+  };
+
+  return { show: show && !dismissed, dismiss };
+}
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { show: showArabicBanner, dismiss: dismissArabicBanner } = useArabicBanner();
 
   // Active section tracking based on scroll position
   useEffect(() => {
@@ -65,7 +104,35 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
-      
+
+      {/* Arabic Language Suggestion Banner — shown to MENA visitors */}
+      {showArabicBanner && (
+        <div
+          role="banner"
+          className="w-full bg-slate-800 text-white py-2 px-4 flex items-center justify-between gap-3 text-sm"
+          style={{ fontFamily: 'IBM Plex Sans Arabic, Cairo, sans-serif' }}
+        >
+          <span className="flex-1 text-center" dir="rtl">
+            هل تفضل عرض هذه الصفحة باللغة العربية؟
+          </span>
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <Link
+              href="/ar"
+              className="bg-white text-slate-900 hover:bg-slate-100 px-3 py-1 text-xs font-medium rounded-none transition-colors"
+            >
+              فتح النسخة العربية
+            </Link>
+            <button
+              onClick={dismissArabicBanner}
+              aria-label="Dismiss"
+              className="text-slate-400 hover:text-white transition-colors text-base leading-none"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Top Contact Bar - Minimal */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
         <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
@@ -203,18 +270,34 @@ export default function Home() {
             International medical case review within 24–48 hours.
           </p>
           
+          {/* Targeting Line */}
+          <p className="text-xs text-slate-400 font-light mb-6 max-w-xl mx-auto tracking-wide uppercase" style={{ letterSpacing: '0.06em' }}>
+            Designed for complex or unresolved medical cases seeking specialist review in Germany.
+          </p>
+
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <a href="#submit-case">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg">
                 Submit Case for Clinical Review
               </Button>
             </a>
-            <a href="mailto:info@medicalcaregermany.com">
+            <a href="https://wa.me/493025730875" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent">
                 Speak with a Medical Coordinator
               </Button>
             </a>
+          </div>
+
+          {/* Examples of cases we review */}
+          <div className="max-w-2xl mx-auto mb-10 border border-slate-700/60 rounded-none px-6 py-4 text-left bg-slate-800/40">
+            <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Examples of cases we review</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm text-slate-300 font-light">
+              <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">—</span>Persistent or unexplained symptoms</li>
+              <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">—</span>Complex neurosurgery cases</li>
+              <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">—</span>Oncology requiring specialist review</li>
+              <li className="flex items-start gap-2"><span className="text-slate-500 mt-0.5">—</span>Rare or undiagnosed diseases</li>
+            </ul>
           </div>
           
           {/* Trust Strip - 5 Trust Signals */}
@@ -726,9 +809,8 @@ export default function Home() {
             <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
               info@medicalcaregermany.com
             </a>
-            {/* WhatsApp — replace XXXXXXXXXXX with the actual number (no + or spaces) */}
             <a
-              href="https://wa.me/XXXXXXXXXXX"
+              href="https://wa.me/493025730875"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-green-400 transition-colors"

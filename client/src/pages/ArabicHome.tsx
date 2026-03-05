@@ -141,18 +141,34 @@ export default function ArabicHome() {
             مراجعة أولية للحالة خلال 24 – 48 ساعة
           </p>
 
+          {/* Arabic Targeting Line */}
+          <p className="text-xs text-slate-400 font-light mb-6 max-w-xl mx-auto tracking-wide" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+            مخصص للحالات الطبية المعقدة أو غير المشخصة التي تحتاج مراجعة تخصصية في ألمانيا.
+          </p>
+
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <a href="#submit-case">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
                 إرسال التقارير الطبية للمراجعة
               </Button>
             </a>
-            <a href="mailto:info@medicalcaregermany.com">
+            <a href="https://wa.me/493025730875" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
                 التحدث مع منسق طبي
               </Button>
             </a>
+          </div>
+
+          {/* Arabic Cases Examples Box */}
+          <div className="max-w-2xl mx-auto mb-10 border border-slate-700/60 rounded-none px-6 py-4 text-right bg-slate-800/40" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+            <p className="text-xs text-slate-400 tracking-widest mb-3 font-medium">أمثلة على الحالات التي نراجعها</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm text-slate-300 font-light">
+              <li className="flex items-start gap-2 flex-row-reverse"><span className="text-slate-500 mt-0.5">—</span>أعراض مستمرة أو غير مفسرة</li>
+              <li className="flex items-start gap-2 flex-row-reverse"><span className="text-slate-500 mt-0.5">—</span>حالات جراحة المخ والأعصاب المعقدة</li>
+              <li className="flex items-start gap-2 flex-row-reverse"><span className="text-slate-500 mt-0.5">—</span>أورام تتطلب مراجعة متخصصة</li>
+              <li className="flex items-start gap-2 flex-row-reverse"><span className="text-slate-500 mt-0.5">—</span>أمراض نادرة أو غير مشخصة</li>
+            </ul>
           </div>
 
           {/* Trust Strip */}

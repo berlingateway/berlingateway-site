@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.berlingateway.de/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+
+  <!-- German Pages -->
+  <url>
+    <loc>https://www.berlingateway.de/de/systemlogik.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/systemlogik.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/systemlogik.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+
+  <url>
+    <loc>https://www.berlingateway.de/de/framework.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/framework.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/framework.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+
+  <url>
+    <loc>https://www.berlingateway.de/de/voraussetzungen.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/voraussetzungen.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/voraussetzungen.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+
+  <!-- Arabic Pages -->
+  <url>
+    <loc>https://www.berlingateway.de/ar/systemlogik.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/systemlogik.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/systemlogik.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+
+  <url>
+    <loc>https://www.berlingateway.de/ar/framework.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/framework.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/framework.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+
+  <url>
+    <loc>https://www.berlingateway.de/ar/voraussetzungen.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/voraussetzungen.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/voraussetzungen.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+  </url>
+</urlset>

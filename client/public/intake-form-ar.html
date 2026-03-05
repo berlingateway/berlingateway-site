@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clinical Case Submission — Medical Care Germany</title>
+  <title>تقديم الحالة الطبية — Medical Care Germany</title>
   <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'IBM Plex Sans Arabic', Cairo, 'Segoe UI', sans-serif;
       background: #ffffff;
       color: #1a1a1a;
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.7;
+      direction: rtl;
     }
 
     body {
@@ -27,10 +30,9 @@
     }
 
     .form-header h2 {
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: 'IBM Plex Sans Arabic', Cairo, sans-serif;
       font-size: 20px;
-      font-weight: 400;
-      letter-spacing: 0.02em;
+      font-weight: 500;
       color: #111827;
       margin-bottom: 6px;
     }
@@ -38,7 +40,7 @@
     .form-header p {
       font-size: 13px;
       color: #6b7280;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .field-group {
@@ -49,15 +51,14 @@
       display: block;
       font-size: 12px;
       font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      letter-spacing: 0.02em;
       color: #374151;
       margin-bottom: 6px;
     }
 
     label .required {
       color: #9ca3af;
-      margin-left: 3px;
+      margin-right: 3px;
     }
 
     input[type="text"],
@@ -70,12 +71,13 @@
       background: #f9fafb;
       color: #111827;
       font-size: 14px;
-      font-family: inherit;
+      font-family: 'IBM Plex Sans Arabic', Cairo, sans-serif;
       outline: none;
       transition: border-color 0.15s ease;
       border-radius: 2px;
       appearance: none;
       -webkit-appearance: none;
+      text-align: right;
     }
 
     input[type="text"]:focus,
@@ -89,8 +91,8 @@
     select {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: right 12px center;
-      padding-right: 36px;
+      background-position: left 12px center;
+      padding-left: 36px;
       cursor: pointer;
     }
 
@@ -146,6 +148,7 @@
       margin-top: 10px;
       font-size: 13px;
       color: #374151;
+      direction: rtl;
     }
 
     .confidentiality-notice {
@@ -159,7 +162,7 @@
     .confidentiality-notice p {
       font-size: 12px;
       color: #6b7280;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .submit-btn {
@@ -168,11 +171,9 @@
       background: #111827;
       color: #ffffff;
       border: none;
-      font-family: inherit;
-      font-size: 13px;
+      font-family: 'IBM Plex Sans Arabic', Cairo, sans-serif;
+      font-size: 14px;
       font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
       cursor: pointer;
       transition: background 0.15s;
       border-radius: 2px;
@@ -189,7 +190,6 @@
       font-size: 12px;
       color: #991b1b;
       margin-top: 5px;
-      letter-spacing: 0.01em;
     }
 
     .field-error.visible {
@@ -214,18 +214,32 @@
       color: #374151;
       text-decoration: underline;
     }
+
+    .security-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .security-badge {
+      font-size: 11px;
+      color: #9ca3af;
+      letter-spacing: 0.02em;
+    }
   </style>
 </head>
 <body>
 
   <div class="form-header">
-    <h2>Clinical Case Submission</h2>
-    <p>All submissions are handled under strict clinical confidentiality protocols. Case reviews are conducted in alignment with German clinical governance practices.</p>
+    <h2>تقديم الحالة الطبية</h2>
+    <p>يتم التعامل مع جميع الطلبات بسرية تامة وفق بروتوكولات الحوكمة السريرية الألمانية.</p>
   </div>
 
   <!--
-    PURE HTML POST FORM — no JavaScript fetch, no AJAX, no server-side processing on manus.space.
-    Submission goes directly from the browser to FormSubmit.co → info@medicalcaregermany.com.
+    نموذج HTML POST نقي — لا JavaScript fetch، لا AJAX، لا معالجة على الخادم.
+    يُرسل الطلب مباشرة من المتصفح إلى FormSubmit.co → info@medicalcaregermany.com
   -->
   <form
     id="intake-form"
@@ -234,100 +248,95 @@
     enctype="multipart/form-data"
     novalidate
   >
-    <!-- FormSubmit.co control fields -->
+    <!-- حقول التحكم في FormSubmit.co -->
     <input type="hidden" name="_template" value="table" />
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_next" value="https://medicalcaregermany.com/thankyou.html" />
-    <!-- _subject and _autoresponse are set dynamically by JS on page load (no server involved) -->
-    <input type="hidden" name="_subject" id="field-subject" value="Medical Care Germany — Clinical Review Request" />
-    <input type="hidden" name="_autoresponse" id="field-autoresponse" value="Thank you for choosing Medical Care Germany. Our coordination team has received your submission and will conduct a preliminary clinical review. You will be contacted within 24–48 hours through the appropriate professional channel. Please retain your case reference number for any future correspondence. — Medical Care Germany | info@medicalcaregermany.com" />
-    <!-- Reference ID generated client-side and embedded as a visible field -->
+    <input type="hidden" name="_subject" id="field-subject" value="Medical Care Germany — طلب مراجعة سريرية" />
+    <input type="hidden" name="_autoresponse" id="field-autoresponse" value="شكراً لاختياركم Medical Care Germany. استلم فريق التنسيق لدينا طلبكم وسيجري مراجعة أولية للحالة. سيتم التواصل معكم خلال 24–48 ساعة. يرجى الاحتفاظ برقم مرجع الحالة للمراسلات المستقبلية. — Medical Care Germany | info@medicalcaregermany.com" />
     <input type="hidden" name="Reference ID" id="field-ref-id" value="" />
-    <!-- Honeypot spam protection -->
+    <input type="hidden" name="Language" value="Arabic" />
+    <!-- حماية من البريد المزعج -->
     <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
     <div class="two-col">
       <div class="field-group">
-        <label>Patient Name <span class="required">*</span></label>
-        <input type="text" name="Patient Name" placeholder="Full name" required />
+        <label>اسم المريض <span class="required">*</span></label>
+        <input type="text" name="Patient Name" placeholder="الاسم الكامل" required />
       </div>
       <div class="field-group">
-        <label>Country of Residence <span class="required">*</span></label>
-        <input type="text" name="Country" placeholder="Country" required />
+        <label>بلد الإقامة <span class="required">*</span></label>
+        <input type="text" name="Country" placeholder="البلد" required />
       </div>
     </div>
 
     <div class="field-group">
-      <label>Email Address <span class="required">*</span></label>
-      <input type="email" name="email" id="email-field" placeholder="your@email.com" required autocomplete="email" />
-      <span class="field-error" id="email-error">A valid email address is required to receive your case confirmation.</span>
+      <label>البريد الإلكتروني <span class="required">*</span></label>
+      <input type="email" name="email" id="email-field" placeholder="your@email.com" required autocomplete="email" style="direction:ltr; text-align:left;" />
+      <span class="field-error" id="email-error">البريد الإلكتروني مطلوب لاستلام تأكيد الحالة.</span>
     </div>
 
     <div class="field-group">
-      <label>Medical Condition / Symptoms <span class="required">*</span></label>
-      <textarea name="Medical Condition" placeholder="Please describe the patient's medical condition, symptoms, or diagnosis. Include any relevant prior treatments." required></textarea>
+      <label>الحالة الطبية / الأعراض <span class="required">*</span></label>
+      <textarea name="Medical Condition" placeholder="يرجى وصف الحالة الطبية للمريض أو الأعراض أو التشخيص. أضف أي علاجات سابقة ذات صلة." required></textarea>
     </div>
 
     <div class="field-group">
-      <label>Medical Documents</label>
+      <label>الوثائق الطبية</label>
       <div class="file-upload-area">
         <svg class="file-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
         </svg>
-        <p class="file-upload-text"><strong>Upload reports, scans, or DICOM files</strong><br />PDF, JPEG, PNG, DICOM — max 10 MB per file</p>
+        <p class="file-upload-text"><strong>رفع التقارير والصور والملفات الطبية</strong><br />PDF، JPEG، PNG، DICOM — حد أقصى 10 ميجابايت لكل ملف</p>
         <input type="file" name="Medical Documents" multiple accept=".pdf,.jpg,.jpeg,.png,.dcm" />
       </div>
     </div>
 
     <div class="confidentiality-notice">
-      <p>This submission is encrypted in transit and handled in accordance with German data protection regulations. Your information will not be shared with third parties outside the clinical coordination process.</p>
+      <p>يتم تشفير هذا الطلب أثناء الإرسال ومعالجته وفقاً لأنظمة حماية البيانات الألمانية. لن تتم مشاركة معلوماتكم مع أطراف خارج عملية التنسيق السريري.</p>
     </div>
 
-    <button type="submit" class="submit-btn" id="submit-btn">Submit Case for Clinical Review</button>
+    <button type="submit" class="submit-btn" id="submit-btn">تقديم الحالة للمراجعة الطبية</button>
 
-    <p style="text-align:center; font-size:12px; color:#6b7280; margin-top:12px; line-height:1.5;">
-      All submissions are handled under strict clinical confidentiality protocols.
+    <p style="text-align:center; font-size:12px; color:#6b7280; margin-top:12px; line-height:1.6;">
+      يتم التعامل مع جميع الطلبات بسرية سريرية تامة.
     </p>
-    <div style="display:flex; justify-content:center; gap:20px; margin-top:10px; flex-wrap:wrap;">
-      <span style="font-size:11px; color:#9ca3af; letter-spacing:0.04em;">&#x2713; GDPR Compliant</span>
-      <span style="font-size:11px; color:#9ca3af; letter-spacing:0.04em;">&#x2713; Encrypted Transmission</span>
-      <span style="font-size:11px; color:#9ca3af; letter-spacing:0.04em;">&#x2713; Secure Medical Document Handling</span>
+    <div class="security-badges">
+      <span class="security-badge">✓ متوافق مع GDPR</span>
+      <span class="security-badge">✓ إرسال مشفر</span>
+      <span class="security-badge">✓ حماية الوثائق الطبية</span>
     </div>
   </form>
 
   <p class="fallback-contact">
-    Direct inquiries: <a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a>
+    للتواصل المباشر: <a href="mailto:info@medicalcaregermany.com">info@medicalcaregermany.com</a>
   </p>
 
   <script>
-    // ─── Reference ID: generated once on page load, embedded in hidden field ───
-    // Format: MCG-YYYYMMDD-XXXXX
-    // No server call — pure client-side, injected before the native POST.
+    // ─── Reference ID: يُنشأ مرة واحدة عند تحميل الصفحة ───
+    // الصيغة: MCG-YYYYMMDD-XXXXX
     (function() {
       var now = new Date();
       var date = now.toISOString().slice(0, 10).replace(/-/g, '');
       var rand = Math.random().toString(36).substring(2, 7).toUpperCase();
       var refId = 'MCG-' + date + '-' + rand;
 
-      // Embed Reference ID as a visible form field
       document.getElementById('field-ref-id').value = refId;
 
-      // Personalise subject line with Reference ID
       document.getElementById('field-subject').value =
-        '[' + refId + '] Medical Care Germany \u2014 Clinical Review Request';
+        '[' + refId + '] Medical Care Germany \u2014 طلب مراجعة سريرية';
 
-      // Personalise auto-response with Reference ID
       document.getElementById('field-autoresponse').value =
-        'Thank you for choosing Medical Care Germany.\n\n' +
-        'Your case reference number is: ' + refId + '\n\n' +
-        'Our coordination team has received your submission and will conduct a preliminary clinical review. ' +
-        'You will be contacted within 24\u201348 hours through the appropriate professional channel.\n\n' +
-        'Please retain your reference number for any future correspondence.\n\n' +
+        'شكراً لاختياركم Medical Care Germany.\n\n' +
+        'رقم مرجع حالتكم: ' + refId + '\n\n' +
+        'استلم فريق التنسيق لدينا طلبكم وسيجري مراجعة أولية للحالة. ' +
+        'سيتم التواصل معكم خلال 24–48 ساعة عبر القناة المهنية المناسبة.\n\n' +
+        'يرجى الاحتفاظ برقم المرجع للمراسلات المستقبلية.\n\n' +
         'Medical Care Germany\n' +
         'info@medicalcaregermany.com';
     })();
 
-    // ─── Client-side email validation only — no server involved ───
+    // ─── التحقق من صحة البريد الإلكتروني ───
     var emailField = document.getElementById('email-field');
     var emailError = document.getElementById('email-error');
 
@@ -339,13 +348,13 @@
       var val = emailField.value.trim();
       if (!val) {
         emailField.classList.add('invalid');
-        emailError.textContent = 'Email address is required. A confirmation will be sent to this address.';
+        emailError.textContent = 'البريد الإلكتروني مطلوب لاستلام تأكيد الحالة.';
         emailError.classList.add('visible');
         return false;
       }
       if (!isValidEmail(val)) {
         emailField.classList.add('invalid');
-        emailError.textContent = 'Please enter a valid email address (e.g. name@domain.com).';
+        emailError.textContent = 'يرجى إدخال بريد إلكتروني صحيح (مثال: name@domain.com).';
         emailError.classList.add('visible');
         return false;
       }
@@ -359,7 +368,7 @@
     });
     emailField.addEventListener('blur', validateEmail);
 
-    // ─── Pre-submit validation: block native POST if required fields are empty ───
+    // ─── التحقق قبل الإرسال ───
     document.getElementById('intake-form').addEventListener('submit', function(e) {
       var emailOk = validateEmail();
 
@@ -381,14 +390,13 @@
         return;
       }
 
-      // Disable submit button to prevent accidental double-click during page navigation
+      // تعطيل الزر لمنع الإرسال المزدوج
       var btn = document.getElementById('submit-btn');
       btn.disabled = true;
-      btn.textContent = 'SUBMITTING...';
-      // Native POST proceeds — browser navigates to _next (thankyou.html)
+      btn.textContent = 'جارٍ الإرسال...';
     });
 
-    // ─── Auto-resize iframe height (for parent page postMessage) ───
+    // ─── إرسال ارتفاع الـ iframe للصفحة الأم ───
     function reportHeight() {
       if (window.parent !== window) {
         window.parent.postMessage({ type: 'form-height', height: document.body.scrollHeight }, '*');

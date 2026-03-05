@@ -15,6 +15,7 @@ import PhysicianReferralInterface from "./pages/PhysicianReferralInterface";
 import InstitutionalFramework from "./pages/InstitutionalFramework";
 import ProfessionalInterfaces from "./pages/ProfessionalInterfaces";
 import Contact from "./pages/Contact";
+import ArabicHome from "./pages/ArabicHome";
 
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
       <Route path={"/institutional-framework"} component={InstitutionalFramework} />
       <Route path={"/professional-interfaces"} component={ProfessionalInterfaces} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/ar"} component={ArabicHome} />
 
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

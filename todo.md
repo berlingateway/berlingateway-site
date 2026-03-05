@@ -872,3 +872,43 @@
 - [x] Zero manus.space server processing for any form submission
 - [x] TypeScript: zero errors
 - [x] All 7 tests pass
+
+## Conversion & Trust Upgrade + Arabic Localization
+
+### A) Homepage EN — Conversion + Trust
+- [x] Add reassurance line under hero: "International medical case review within 24–48 hours."
+- [x] Add Institutional Metrics bar (4 items: University Hospital Network 15+, Professors 150+, Cases 500+, Review Time 24–48h)
+- [x] Add secondary CTA "Speak with a Medical Coordinator" (mailto fallback — WhatsApp number pending)
+- [x] Add "Clinical Focus Areas" section (4 items with icons)
+- [x] Add "Why Germany" micro-section (3 factual bullets)
+- [x] Add 3 professional images (physician portrait, university hospital, MRI equipment)
+
+### B) Submit Case Form — Reduce Friction
+- [x] Simplify required fields to: Name, Country, Medical condition/symptoms, File upload
+- [x] Change submit button to "Submit Case for Clinical Review"
+- [x] Add micro-copy under button: "All submissions are handled under strict clinical confidentiality protocols."
+- [x] Add security indicators: GDPR Compliant, Encrypted Transmission, Secure Medical Document Handling
+- [x] Confirm success message: "Your medical case has been received. A medical coordinator will contact you within 24–48 hours."
+
+### C) Footer / Contact Clarity
+- [x] Footer shows: email (info@medicalcaregermany.com), WhatsApp link (placeholder — number pending), Location: Berlin, Germany
+
+### D) Arabic Version — Full Homepage + Submit Case (RTL)
+- [x] Create Arabic homepage page (ArabicHome.tsx) with RTL layout
+- [x] Add EN | AR language switch in header (Home.tsx)
+- [x] Implement IBM Plex Sans Arabic / Cairo font for Arabic pages
+- [x] Arabic hero: exact copy provided
+- [x] Arabic metrics bar: same numbers, Arabic labels
+- [x] Arabic Clinical Focus Areas: exact copy provided
+- [x] Arabic Why Germany: 3 bullets in Arabic
+- [x] Arabic Process Timeline: 3 steps
+- [x] Arabic Logistics section: 4 items
+- [x] Arabic Submit Case page (intake-form-ar.html) with Arabic button label, micro-copy, and confirmation message
+- [x] Proper RTL direction, alignment, menu order
+- [x] Route /ar registered in App.tsx
+
+### E) SEO / Title Consistency
+- [x] HTML title updated: "Medical Care Germany | Strategic Medical Authority for Complex Cases"
+- [x] OG title and Twitter title updated to match
+- [x] Meta description consistent and professional
+- [x] IBM Plex Sans Arabic added to Google Fonts in index.html

@@ -210,9 +210,9 @@ export default function Home() {
           
           {/* Primary CTA Button */}
           <div className="mb-8">
-            <a href="#contact">
+            <a href="#submit-case">
               <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none px-12 py-7 text-lg font-medium shadow-lg">
-                Submit Case for Clinical Review
+                Submit Medical File
               </Button>
             </a>
           </div>
@@ -249,25 +249,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center">
           {/* H1: Clear Authority Statement */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-8 tracking-tight">
-            Institutional Medical Authority for International Patients
+            When medical cases become complex, the decision requires greater expertise.
           </h1>
           
-          {/* HERO AUTHORITY DECLARATION - Legal Sub-Statement Style */}
-          <p className="text-base md:text-lg font-normal mb-12 mx-auto leading-relaxed" style={{ color: '#5F6368', letterSpacing: '0.4px', maxWidth: '720px', marginTop: '12px' }}>
-            Engaged by patients, families, and physicians when medical decisions carry irreversible consequences.
-          </p>
-          
-          {/* Subheadline: Who We Serve + Outcomes */}
-          <p className="text-lg md:text-xl text-slate-300 font-light mb-4 max-w-3xl mx-auto leading-relaxed">
-            Trusted cross-border clinical coordination for global patients requiring complex, high-priority medical interventions.
-          </p>
-          <p className="text-base md:text-lg text-slate-400 font-light mb-6 max-w-2xl mx-auto">
-            Operating at the intersection of international medicine and German clinical excellence.
-          </p>
-
-          {/* Reassurance Line */}
-          <p className="text-sm text-slate-300 font-light mb-10 tracking-wide">
-            International medical case review within 24–48 hours.
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl text-slate-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
+            We help international patients access specialized doctors and hospitals in Germany, with an initial medical case review before any travel decision.
           </p>
           
           {/* Targeting Line */}
@@ -279,10 +266,10 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <a href="#submit-case">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg">
-                Submit Case for Clinical Review
+                Submit Medical File
               </Button>
             </a>
-            <a href="https://wa.me/493025730875" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent">
                 Speak with a Medical Coordinator
               </Button>
@@ -783,6 +770,101 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOW CASE REVIEW WORKS */}
+      <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-serif mb-12 text-center text-slate-900">How Your Case Is Reviewed</h2>
+          <div className="flex flex-col md:flex-row items-start justify-between gap-8 max-w-3xl mx-auto">
+            <div className="flex-1 text-center">
+              <div className="text-3xl font-serif text-slate-300 mb-3">01</div>
+              <h3 className="text-base font-semibold text-slate-900 mb-2">Submit Reports</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">Upload your medical documents — hospital reports, MRI/CT scans, laboratory results, or previous diagnoses.</p>
+            </div>
+            <div className="hidden md:flex items-center pt-6 text-slate-300 text-2xl">→</div>
+            <div className="flex-1 text-center">
+              <div className="text-3xl font-serif text-slate-300 mb-3">02</div>
+              <h3 className="text-base font-semibold text-slate-900 mb-2">Medical Review</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">An initial clinical review is conducted to assess the case, identify the relevant specialty, and determine the appropriate next step.</p>
+            </div>
+            <div className="hidden md:flex items-center pt-6 text-slate-300 text-2xl">→</div>
+            <div className="flex-1 text-center">
+              <div className="text-3xl font-serif text-slate-300 mb-3">03</div>
+              <h3 className="text-base font-semibold text-slate-900 mb-2">Coordination with Specialists</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">We coordinate directly with the appropriate specialist or university hospital in Germany and communicate the pathway to the patient.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INITIAL MEDICAL REVIEW */}
+      <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-serif mb-6 text-slate-900">Initial Medical Review</h2>
+              <p className="text-base text-slate-600 leading-relaxed mb-6">
+                Before traveling, medical reports can be reviewed to help determine the appropriate specialty and next diagnostic step. This avoids unnecessary travel and ensures the patient reaches the right specialist from the outset.
+              </p>
+              <p className="text-sm text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-4">
+                Clinical example: A patient presenting with persistent dizziness and balance disturbances may have an underlying cervical spine involvement — a finding that redirects the case from general neurology to spine surgery before any appointment is scheduled.
+              </p>
+            </div>
+            <div className="bg-slate-50 border border-slate-200 p-8">
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-4 font-medium">What the review covers</p>
+              <ul className="space-y-3 text-sm text-slate-700">
+                <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">—</span>Identification of the relevant medical specialty</li>
+                <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">—</span>Assessment of diagnostic completeness</li>
+                <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">—</span>Recommendation on next clinical step</li>
+                <li className="flex items-start gap-2"><span className="text-slate-400 mt-0.5">—</span>Guidance on whether travel for treatment is appropriate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* REAL CASE EXAMPLES */}
+      <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-serif mb-12 text-center text-slate-900">Examples of Reviewed Cases</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white border border-slate-200 p-6">
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Neurology / Vestibular</p>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Patient from North Africa presenting with chronic dizziness and unsteady gait for over 18 months. Multiple local assessments inconclusive. Review identified cervical spine compression as primary contributor — redirected to spine specialist in Germany.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 p-6">
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Spine / Neurosurgery</p>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Patient with progressive neck pain and arm numbness. Imaging review indicated cervical disc herniation with nerve root involvement. Case coordinated with university neurosurgery department for structured surgical evaluation.
+              </p>
+            </div>
+            <div className="bg-white border border-slate-200 p-6">
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Vestibular / ENT</p>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Recurring vertigo episodes unresponsive to standard treatment. Review suggested central vestibular disorder requiring MRI and specialist ENT evaluation. Pathway established with a university hospital ENT and neurology team.
+              </p>
+            </div>
+          </div>
+          <p className="text-center text-xs text-slate-400 mt-8">All case summaries are anonymised. No patient identifiers are included.</p>
+        </div>
+      </section>
+
+      {/* MEDICAL DECISION GATEWAY */}
+      <section className="py-16 md:py-20 px-6 bg-slate-900 text-white border-b border-slate-800">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-serif mb-6">Before Traveling for Treatment</h2>
+          <p className="text-base text-slate-300 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+            Submitting your medical file allows an initial review to determine whether treatment in Germany is appropriate and which specialty is required. This step prevents unnecessary travel and ensures the correct clinical pathway from the outset.
+          </p>
+          <a href="#submit-case">
+            <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium">
+              Submit Your Medical File
+            </Button>
+          </a>
+        </div>
+      </section>
+
       {/* SECTION 6: CONTACT FORM */}
       <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">
@@ -809,8 +891,14 @@ export default function Home() {
             <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
               info@medicalcaregermany.com
             </a>
+            {/* Landline — office number, not WhatsApp */}
+            <p className="text-sm text-slate-400">
+              <span className="text-slate-500 text-xs uppercase tracking-wide mr-2">Office</span>
+              <a href="tel:+493025730875" className="hover:text-slate-300 transition-colors">+49 30 25730875</a>
+            </p>
+            {/* WhatsApp mobile */}
             <a
-              href="https://wa.me/493025730875"
+              href="https://wa.me/4915781497451"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-green-400 transition-colors"
@@ -818,7 +906,7 @@ export default function Home() {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
-              WhatsApp
+              WhatsApp: +49 1578 1497451
             </a>
             <p className="text-sm text-slate-500">Berlin, Germany</p>
           </div>

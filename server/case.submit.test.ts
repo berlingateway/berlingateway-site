@@ -7,6 +7,10 @@ vi.mock('./_core/email', () => ({
   sendCaseConfirmationEmail: vi.fn().mockResolvedValue(true),
 }));
 
+vi.mock('./_core/sendgrid', () => ({
+  sendOwnerNotification: vi.fn().mockResolvedValue(true),
+}));
+
 vi.mock('./_core/notification', () => ({
   notifyOwner: vi.fn().mockResolvedValue(true),
 }));
@@ -35,7 +39,7 @@ describe('Case Submission Endpoint', () => {
     expect(result.success).toBe(true);
     expect(result.referenceId).toBeDefined();
     expect(result.referenceId).toHaveLength(12);
-  });
+  }, 15000);
 
   it('should reject submission with missing full name', async () => {
     const caller = appRouter.createCaller(mockContext);

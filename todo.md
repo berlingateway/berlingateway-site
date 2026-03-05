@@ -942,3 +942,43 @@
 
 ### Arabic Page — AR | EN Switch
 - [x] AR | EN language switch already present in ArabicHome.tsx header (link EN → /)
+
+## Homepage Refinement — Batch 3 (March 2026)
+
+### WhatsApp Number Update
+- [x] Update "Speak with a Medical Coordinator" button to wa.me/4915781497451 (mobile WhatsApp)
+- [x] Keep office landline +49 30 25730875 in footer only (not as WhatsApp)
+- [x] Add WhatsApp mobile +49 1578 1497451 as separate contact in footer
+
+### Hero Section
+- [x] Update headline: "When medical cases become complex, the decision requires greater expertise."
+- [x] Update subtext: "We help international patients access specialized doctors and hospitals in Germany, with an initial medical case review before any travel decision."
+- [x] Update primary button: "Submit Medical File"
+- [x] Update secondary button: "Speak with a Medical Coordinator" → wa.me/4915781497451
+
+### Section: How Case Review Works
+- [x] Title: "How Your Case Is Reviewed"
+- [x] 3 steps: Submit reports → Medical review → Coordination with specialists
+
+### Section: Initial Medical Review
+- [x] Title: "Initial Medical Review"
+- [x] Clinical example: dizziness/neurological symptoms → cervical spine involvement
+- [x] "What the review covers" info box
+
+### Section: Real Case Examples
+- [x] Title: "Examples of Reviewed Cases"
+- [x] 3 case summaries (North Africa dizziness, neck pain/arm numbness, vestibular disorder)
+- [x] Anonymisation disclaimer
+
+### Section: Medical Decision Gateway (before form)
+- [x] Title: "Before Traveling for Treatment"
+- [x] Primary button: "Submit Your Medical File"
+
+### Footer Update
+- [x] Phone (landline): +49 30 25730875 (visible, not WhatsApp)
+- [x] WhatsApp: +49 1578 1497451 (separate, clickable wa.me link)
+- [x] Email and office address remain visible
+
+### Tests
+- [x] Fixed test timeout: added sendgrid mock + 15s timeout for successful submission test
+- [x] All 7 tests passing

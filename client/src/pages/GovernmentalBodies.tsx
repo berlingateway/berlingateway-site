@@ -13,7 +13,7 @@ export default function GovernmentalBodies() {
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
         <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
-          Medical Care Germany
+          Berlin Medical Care
         </Link>
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-500">
           <Link href="/">Home</Link>
@@ -126,9 +126,9 @@ export default function GovernmentalBodies() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif text-slate-900 mb-12">Berlin Office</h2>
           <div className="space-y-4 text-lg text-slate-700">
-            <p className="font-medium text-slate-900">Medical Care Germany</p>
-            <p>Perleberger Str. 41</p>
-            <p>10559 Berlin – Moabit</p>
+            <p className="font-medium text-slate-900">Berlin Medical Care</p>
+            <p>Sachsendamm 79</p>
+            <p>10829 Berlin</p>
             <p>Germany</p>
           </div>
           <p className="text-slate-600 leading-relaxed mt-8">

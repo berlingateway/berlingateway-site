@@ -205,7 +205,7 @@ export default function PhysicianReferralInterface() {
 
       {/* Footer */}
       <footer className="py-16 bg-white text-center border-t border-slate-100 mt-20">
-        <p className="text-slate-400 text-sm font-serif">Medical Care Germany © 2026</p>
+        <p className="text-slate-400 text-sm font-serif">Berlin Medical Care © 2026</p>
         <p className="text-slate-300 text-xs mt-2">Strategic Medical Advisory • Berlin, Germany</p>
       </footer>
 

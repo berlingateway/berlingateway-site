@@ -100,7 +100,7 @@ export default function CaseArchitectures() {
       <footer className="py-16 bg-white text-center border-t border-slate-200">
         <p className="text-slate-500 text-sm font-serif mb-1">Medical Care Germany</p>
         <p className="text-slate-400 text-xs">Independent Strategic Medical Advisory • Headquartered in Berlin</p>
-        <p className="text-slate-300 text-xs mt-4">© 2026 Medical Care Germany</p>
+        <p className="text-slate-300 text-xs mt-4">© 2026 Berlin Medical Care</p>
         <p className="text-slate-400 text-xs mt-6">Operating within the regulatory and clinical standards of the German healthcare environment.</p>
       </footer>
 

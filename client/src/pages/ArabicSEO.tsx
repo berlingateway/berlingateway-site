@@ -139,7 +139,7 @@ export default function ArabicSEO() {
 
       {/* Minimal Footer */}
       <footer className="py-8 bg-slate-50 text-center border-t border-slate-200">
-        <p className="text-sm text-slate-500">Medical Care Germany © 2026</p>
+        <p className="text-sm text-slate-500">Berlin Medical Care © 2026</p>
         <p className="text-xs text-slate-400 mt-2">برلين، ألمانيا</p>
       </footer>
 

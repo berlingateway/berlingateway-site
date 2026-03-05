@@ -995,3 +995,26 @@
 - [x] Section 6 (Medical Decision Gateway): title and text match spec
 - [x] Section 7 (Footer): landline, WhatsApp, email all visible
 - [x] TypeScript: 0 errors | Tests: 7/7 passed
+
+## Company Name & Address Update (March 2026)
+- [ ] Update company name to "Berlin Medical Care" in footer (Home.tsx)
+- [ ] Update address to "Sachsendamm 79, 10829 Berlin, Germany" in footer (Home.tsx)
+- [ ] Update company name and address in Contact.tsx
+- [ ] Update company name and address in PremiumFooter.tsx (if used)
+- [ ] Update Schema.org JSON-LD markup in index.html with new name and address
+- [ ] Update SEO meta description if it references the company name
+- [ ] Update copyright line in footer to "Berlin Medical Care © 2026"
+- [ ] Update Arabic homepage footer/contact with new name and address
+- [ ] Verify no old address references remain anywhere
+
+## Company Name & Address Update (March 2026)
+- [x] Replace Schema.org MedicalOrganization with exact MedicalBusiness JSON-LD provided by client
+- [x] Schema.org: name="Berlin Medical Care", address=Sachsendamm 79, 10829 Berlin
+- [x] Home.tsx footer: address Sachsendamm 79 · 10829 Berlin · Germany, copyright Berlin Medical Care
+- [x] Contact.tsx: company name and address updated
+- [x] PremiumFooter.tsx: address and copyright updated to Berlin Medical Care
+- [x] ArabicHome.tsx footer: address in Arabic + copyright Berlin Medical Care
+- [x] GovernmentalBodies.tsx: company name and address in Berlin Office section
+- [x] Bulk replace all remaining copyright lines across all source files
+- [x] Zero old address (Perleberger Str. 41 / 10559) references remain
+- [x] TypeScript: 0 errors | Tests: 7/7 passed

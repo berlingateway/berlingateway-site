@@ -14,7 +14,7 @@ export default function Contact() {
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">
         <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
-          Medical Care Germany
+          Berlin Medical Care
         </Link>
         <div className="hidden md:flex gap-10 text-sm text-slate-500">
           <Link href="/physician-referral-clinical" className="hover:text-slate-900 transition-colors">Physician Referral</Link>
@@ -34,7 +34,7 @@ export default function Contact() {
       <section className="py-32 px-6 max-w-4xl mx-auto text-center">
         <p className="text-sm uppercase tracking-widest text-slate-400 mb-8">Get in Touch</p>
         <h1 className="text-4xl md:text-5xl font-serif text-slate-900 mb-12 leading-tight">
-          Contact Medical Care Germany
+          Contact Berlin Medical Care
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
           Professional inquiries are received within a structured advisory setting. Our German medical coordination team evaluates all submissions with deliberate attention to clinical context.
@@ -69,12 +69,12 @@ export default function Contact() {
                 </div>
                 <h3 className="text-lg font-serif mb-4 text-slate-900">Address</h3>
                 <p className="text-slate-600">
-                  Perleberger Str. 41<br/>
-                  10559 Berlin<br/>
+                  Sachsendamm 79<br/>
+                  10829 Berlin<br/>
                   Germany
                 </p>
                 <p className="text-sm text-slate-500 mt-4">
-                  Berlin-based strategic medical advisory
+                  International medical coordination for patients
                 </p>
               </div>
             </Card>

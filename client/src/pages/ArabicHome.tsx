@@ -399,10 +399,10 @@ export default function ArabicHome() {
             <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
               info@medicalcaregermany.com
             </a>
-            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>برلين، ألمانيا</p>
+            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Sachsendamm 79 · 10829 برلين · ألمانيا</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
-          <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
+          <p className="text-sm text-slate-400">Berlin Medical Care © 2026</p>
           <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85, fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
             يُستشار رأيه قبل اتخاذ القرارات الطبية الحاسمة.
           </p>

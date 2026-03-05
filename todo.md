@@ -1018,3 +1018,15 @@
 - [x] Bulk replace all remaining copyright lines across all source files
 - [x] Zero old address (Perleberger Str. 41 / 10559) references remain
 - [x] TypeScript: 0 errors | Tests: 7/7 passed
+
+## SEO Fix: Google Soft 404 for /submit-case
+- [x] Create dedicated SubmitCase.tsx page at route /submit-case
+- [x] Add H1 "Submit Your Medical Case" at top of page
+- [x] Add Paragraph 1: Berlin Medical Care introduction and form purpose
+- [x] Add Paragraph 2: Coordination and evaluation description
+- [x] Add address block: Berlin Medical Care, Sachsendamm 79, 10829 Berlin, Germany (semantic <address> tag)
+- [x] All text rendered as static semantic HTML (not JS-only)
+- [x] Existing form unchanged, placed after explanatory text
+- [x] Consistent site styling maintained
+- [x] Route /submit-case registered in App.tsx
+- [x] TypeScript: 0 errors | Tests: 7/7 passed

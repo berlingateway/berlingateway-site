@@ -982,3 +982,16 @@
 ### Tests
 - [x] Fixed test timeout: added sendgrid mock + 15s timeout for successful submission test
 - [x] All 7 tests passing
+
+## Homepage Refinement — Batch 4 (March 2026)
+
+- [x] WhatsApp button "Speak with a Medical Coordinator" → wa.me/4915781497451 (confirmed, NOT landline)
+- [x] Office landline +49 30 25730875 in footer only (confirmed)
+- [x] Section 1 (Hero): headline, subtext, button labels match exact spec
+- [x] Section 2: "Treatment in Germany for Patients from the Arab World" with natural SEO keywords (treatment abroad, treatment in Germany, treatment in Berlin)
+- [x] Section 3 (How Case Review Works): 3 steps updated to exact spec wording
+- [x] Section 4 (Initial Medical Review): clinical example updated to exact spec
+- [x] Section 5 (Examples of Cases Reviewed): 3 short factual examples, no names, no storytelling
+- [x] Section 6 (Medical Decision Gateway): title and text match spec
+- [x] Section 7 (Footer): landline, WhatsApp, email all visible
+- [x] TypeScript: 0 errors | Tests: 7/7 passed

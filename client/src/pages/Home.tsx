@@ -358,28 +358,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2: INTRO BLOCK - Institutional Positioning */}
+      {/* SECTION 2: Treatment in Germany for Patients from the Arab World */}
       <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">
-            International Medical Gateway — Not a Referral Service
+            Treatment in Germany for Patients from the Arab World
           </h2>
-          <div className="prose prose-lg max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6">
+          <div className="max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6 text-base md:text-lg">
             <p>
-              Medical Care Germany operates as an institutional medical authority, connecting global patients with structured physician networks and established hospital pathways across German clinical excellence.
+              Many patients from the Arab world search for <strong className="font-medium text-slate-800">treatment abroad</strong> when medical cases become complex or when specialized expertise is required.
             </p>
             <p>
-              The organization functions as a cross-border clinical coordination system, providing international patients with appropriate specialist-level medical environments for complex diagnostic and treatment requirements.
+              Germany — especially Berlin — is home to advanced hospitals and specialized medical centers that receive international patients seeking <strong className="font-medium text-slate-800">treatment in Germany</strong>.
             </p>
             <p>
-              This framework is designed to reduce procedural uncertainty and ensure continuity across multi-phase international medical interventions.
-            </p>
-          </div>
-          
-          {/* GATEKEEPER STATEMENT - Protected with whitespace */}
-          <div className="mt-20 pt-16 border-t border-slate-200">
-            <p className="text-xl md:text-2xl font-serif text-slate-900 text-center leading-relaxed max-w-3xl mx-auto mb-16">
-              We operate within structured medical networks — not open marketplaces.
+              We help coordinate access to the appropriate specialists depending on the medical condition, and facilitate structured pathways for patients considering <strong className="font-medium text-slate-800">treatment in Berlin</strong> and across Germany.
             </p>
           </div>
         </div>
@@ -777,20 +770,20 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start justify-between gap-8 max-w-3xl mx-auto">
             <div className="flex-1 text-center">
               <div className="text-3xl font-serif text-slate-300 mb-3">01</div>
-              <h3 className="text-base font-semibold text-slate-900 mb-2">Submit Reports</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">Upload your medical documents — hospital reports, MRI/CT scans, laboratory results, or previous diagnoses.</p>
+              <h3 className="text-base font-semibold text-slate-900 mb-2">Submit Medical Reports</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">Submit medical reports and imaging for initial review.</p>
             </div>
             <div className="hidden md:flex items-center pt-6 text-slate-300 text-2xl">→</div>
             <div className="flex-1 text-center">
               <div className="text-3xl font-serif text-slate-300 mb-3">02</div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">Medical Review</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">An initial clinical review is conducted to assess the case, identify the relevant specialty, and determine the appropriate next step.</p>
+              <p className="text-sm text-slate-600 leading-relaxed">Medical review to determine the appropriate specialty.</p>
             </div>
             <div className="hidden md:flex items-center pt-6 text-slate-300 text-2xl">→</div>
             <div className="flex-1 text-center">
               <div className="text-3xl font-serif text-slate-300 mb-3">03</div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">Coordination with Specialists</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">We coordinate directly with the appropriate specialist or university hospital in Germany and communicate the pathway to the patient.</p>
+              <p className="text-sm text-slate-600 leading-relaxed">Coordination with specialists or hospitals in Germany.</p>
             </div>
           </div>
         </div>
@@ -803,10 +796,10 @@ export default function Home() {
             <div>
               <h2 className="text-2xl md:text-3xl font-serif mb-6 text-slate-900">Initial Medical Review</h2>
               <p className="text-base text-slate-600 leading-relaxed mb-6">
-                Before traveling, medical reports can be reviewed to help determine the appropriate specialty and next diagnostic step. This avoids unnecessary travel and ensures the patient reaches the right specialist from the outset.
+                Before traveling, medical reports can be reviewed to help determine the appropriate specialty and next diagnostic step.
               </p>
               <p className="text-sm text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-4">
-                Clinical example: A patient presenting with persistent dizziness and balance disturbances may have an underlying cervical spine involvement — a finding that redirects the case from general neurology to spine surgery before any appointment is scheduled.
+                Patient suffering from persistent dizziness and neurological symptoms. Preliminary medical review in Germany suggested possible cervical spine involvement requiring neurological evaluation.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-8">
@@ -828,21 +821,21 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-serif mb-12 text-center text-slate-900">Examples of Reviewed Cases</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-slate-200 p-6">
-              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Neurology / Vestibular</p>
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Example 1</p>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Patient from North Africa presenting with chronic dizziness and unsteady gait for over 18 months. Multiple local assessments inconclusive. Review identified cervical spine compression as primary contributor — redirected to spine specialist in Germany.
+                Patient from North Africa suffering from chronic dizziness and imbalance. German review recommended neurological and cervical spine evaluation in Berlin.
               </p>
             </div>
             <div className="bg-white border border-slate-200 p-6">
-              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Spine / Neurosurgery</p>
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Example 2</p>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Patient with progressive neck pain and arm numbness. Imaging review indicated cervical disc herniation with nerve root involvement. Case coordinated with university neurosurgery department for structured surgical evaluation.
+                Patient with persistent neck pain and arm numbness. Imaging review indicated possible cervical nerve compression.
               </p>
             </div>
             <div className="bg-white border border-slate-200 p-6">
-              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Vestibular / ENT</p>
+              <p className="text-xs text-slate-400 uppercase tracking-widest mb-3 font-medium">Example 3</p>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Recurring vertigo episodes unresponsive to standard treatment. Review suggested central vestibular disorder requiring MRI and specialist ENT evaluation. Pathway established with a university hospital ENT and neurology team.
+                Patient previously diagnosed with vestibular disorder. German specialists suggested broader neurological evaluation.
               </p>
             </div>
           </div>

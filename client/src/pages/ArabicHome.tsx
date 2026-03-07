@@ -262,8 +262,8 @@ export default function ArabicHome() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/zsxSWgGUyfwoRHBh.jpg"
-                alt="حرم المستشفى الجامعي الألماني"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663074485748/JqQAhVtqiy55V3DmpshfM9/historic-university-courtyard-dK5oZvyC3Ux2zXKDKdYE7N.webp"
+                alt="حرم الجامعة الأوروبية التاريخية"
                 className="w-full h-64 object-cover"
                 loading="lazy"
               />

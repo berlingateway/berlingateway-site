@@ -380,8 +380,8 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/LPUecVFcwwsBwuUn.jpg"
-                alt="German University Hospital Building"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663074485748/JqQAhVtqiy55V3DmpshfM9/historic-medical-faculty-facade-UPAeMR5JhiGBtHxAznYHAp.webp"
+                alt="Historic European university medical faculty building"
                 className="w-full h-80 object-cover"
                 loading="lazy"
               />
@@ -657,8 +657,8 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/zsxSWgGUyfwoRHBh.jpg"
-                alt="German University Hospital Campus"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663074485748/JqQAhVtqiy55V3DmpshfM9/historic-university-courtyard-dK5oZvyC3Ux2zXKDKdYE7N.webp"
+                alt="Historic European university courtyard"
                 className="w-full h-64 object-cover"
                 loading="lazy"
               />

@@ -904,7 +904,8 @@ export default function Home() {
             <p className="text-sm text-slate-500">Sachsendamm 79 · 10829 Berlin · Germany</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
-          <p className="text-sm text-slate-400">Berlin Medical Care © 2026</p>
+          <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
+          <p className="text-xs text-slate-500 mt-1">Powered by Berlin Medical Care</p>
           <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85 }}>
             Consulted by decision-makers seeking clarity before irreversible medical steps.
           </p>

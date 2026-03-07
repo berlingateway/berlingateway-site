@@ -402,7 +402,7 @@ export default function ArabicHome() {
             <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Sachsendamm 79 · 10829 برلين · ألمانيا</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
-          <p className="text-sm text-slate-400">Berlin Medical Care © 2026</p>
+          <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
           <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85, fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
             يُستشار رأيه قبل اتخاذ القرارات الطبية الحاسمة.
           </p>

@@ -104,7 +104,7 @@ export default function SubmitCase() {
           </a>
           <p className="text-sm text-slate-500">Sachsendamm 79 · 10829 Berlin · Germany</p>
           <div className="w-16 h-[1px] bg-slate-700 mx-auto"></div>
-          <p className="text-sm text-slate-400">Berlin Medical Care © 2026</p>
+          <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
         </div>
       </footer>
 

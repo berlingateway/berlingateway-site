@@ -42,7 +42,7 @@ export default function PremiumFooter() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>Operating within established clinical coordination frameworks.</p>
-          <p>© 2026 Berlin Medical Care</p>
+          <p>© 2026 Medical Care Germany</p>
         </div>
       </div>
     </footer>

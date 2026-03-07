@@ -262,8 +262,8 @@ export default function ArabicHome() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/kkYOGTpHHPOyfzBG.jpg"
-                alt="مستشفى جامعي ألماني"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/zsxSWgGUyfwoRHBh.jpg"
+                alt="حرم المستشفى الجامعي الألماني"
                 className="w-full h-64 object-cover"
                 loading="lazy"
               />
@@ -351,8 +351,8 @@ export default function ArabicHome() {
               </p>
               <div className="relative">
                 <img
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/lWGLcpyoGHOzOzEg.jpg"
-                  alt="معدات التصوير بالرنين المغناطيسي"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/vKzMUrxQnyIZoHoi.jpg"
+                  alt="تقنية التصوير التشخيصي المتقدمة — الرنين المغناطيسي والأشعة المقطعية"
                   className="w-full h-40 object-cover"
                   loading="lazy"
                 />
@@ -363,8 +363,8 @@ export default function ArabicHome() {
             </div>
             <div>
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/mPPrgswEzDQzOnFG.jpg"
-                alt="طبيب متخصص"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/CKOERCSkJxQAYnsX.jpg"
+                alt="مجلس المراجعة الطبية — أطباء يراجعون صور التشخيص"
                 className="w-full h-72 object-cover object-top"
                 loading="lazy"
               />

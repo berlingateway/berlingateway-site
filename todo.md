@@ -1030,3 +1030,24 @@
 - [x] Consistent site styling maintained
 - [x] Route /submit-case registered in App.tsx
 - [x] TypeScript: 0 errors | Tests: 7/7 passed
+
+## AI Image Integration — March 2026
+- [ ] Generate Image 1: German university hospital building exterior (hero/intro section)
+- [ ] Generate Image 2: Medical review board — doctors reviewing MRI scans together
+- [ ] Generate Image 3: Advanced diagnostics — doctor reviewing CT/MRI on high-tech monitors
+- [ ] Generate Image 4: University medical campus — wide exterior view
+- [ ] Upload all 4 images to CDN
+- [ ] Replace/insert images in Home.tsx at appropriate sections
+- [ ] Mirror same images in ArabicHome.tsx (/ar page)
+- [ ] Verify images load correctly on both EN and AR pages
+- [ ] No layout, spacing, or responsiveness changes
+
+## AI Image Integration — March 2026
+- [x] Generate Image 1: University Hospital Building (hero/intro section)
+- [x] Generate Image 2: Medical Review Board (case evaluation section)
+- [x] Generate Image 3: Advanced Diagnostics (clinical specialties section)
+- [x] Generate Image 4: University Medical Campus (Why Germany section)
+- [x] Upload all 4 images to CDN (manuscdn.com)
+- [x] Replace/insert images in Home.tsx: hospital building in Section 2, medical review board in Physician-Level Coordination, advanced diagnostics below review board, university campus in Why Germany
+- [x] Update ArabicHome.tsx with same 4 CDN images (Arabic alt text)
+- [x] TypeScript: 0 errors

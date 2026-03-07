@@ -360,20 +360,35 @@ export default function Home() {
 
       {/* SECTION 2: Treatment in Germany for Patients from the Arab World */}
       <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center text-slate-900">
-            Treatment in Germany for Patients from the Arab World
-          </h2>
-          <div className="max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6 text-base md:text-lg">
-            <p>
-              Many patients from the Arab world search for <strong className="font-medium text-slate-800">treatment abroad</strong> when medical cases become complex or when specialized expertise is required.
-            </p>
-            <p>
-              Germany — especially Berlin — is home to advanced hospitals and specialized medical centers that receive international patients seeking <strong className="font-medium text-slate-800">treatment in Germany</strong>.
-            </p>
-            <p>
-              We help coordinate access to the appropriate specialists depending on the medical condition, and facilitate structured pathways for patients considering <strong className="font-medium text-slate-800">treatment in Berlin</strong> and across Germany.
-            </p>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-serif mb-8 text-slate-900">
+                Treatment in Germany for Patients from the Arab World
+              </h2>
+              <div className="text-slate-600 leading-relaxed space-y-6 text-base md:text-lg">
+                <p>
+                  Many patients from the Arab world search for <strong className="font-medium text-slate-800">treatment abroad</strong> when medical cases become complex or when specialized expertise is required.
+                </p>
+                <p>
+                  Germany — especially Berlin — is home to advanced hospitals and specialized medical centers that receive international patients seeking <strong className="font-medium text-slate-800">treatment in Germany</strong>.
+                </p>
+                <p>
+                  We help coordinate access to the appropriate specialists depending on the medical condition, and facilitate structured pathways for patients considering <strong className="font-medium text-slate-800">treatment in Berlin</strong> and across Germany.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/LPUecVFcwwsBwuUn.jpg"
+                alt="German University Hospital Building"
+                className="w-full h-80 object-cover"
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-slate-900/50 text-white text-xs px-3 py-2">
+                German university hospital environment
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -642,8 +657,8 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/kkYOGTpHHPOyfzBG.jpg"
-                alt="University Hospital Germany"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/zsxSWgGUyfwoRHBh.jpg"
+                alt="German University Hospital Campus"
                 className="w-full h-64 object-cover"
                 loading="lazy"
               />
@@ -658,8 +673,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 md:order-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/mPPrgswEzDQzOnFG.jpg"
-                alt="Senior Medical Specialist"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/CKOERCSkJxQAYnsX.jpg"
+                alt="Medical Review Board — Physicians Reviewing Diagnostic Imaging"
                 className="w-full h-72 object-cover object-top"
                 loading="lazy"
               />
@@ -671,8 +686,8 @@ export default function Home() {
               </p>
               <div className="relative">
                 <img
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/lWGLcpyoGHOzOzEg.jpg"
-                  alt="Advanced MRI Imaging Equipment"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663074485748/vKzMUrxQnyIZoHoi.jpg"
+                  alt="Advanced Diagnostic Imaging — MRI and CT Technology"
                   className="w-full h-40 object-cover"
                   loading="lazy"
                 />

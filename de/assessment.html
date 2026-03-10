@@ -431,13 +431,22 @@
           <div class="lead-form">
             <div class="lead-form-title">Erhalten Sie Ihren strategischen Chancenkarte-Bericht</div>
             <div class="lead-form-description">Wir senden Ihnen eine detaillierte Analyse mit nächsten Schritten</div>
-            <form onsubmit="submitLead(event)">
+            <form action="https://formsubmit.co/info@berlingateway.de" method="POST" onsubmit="submitLead(event)">
               <div class="form-group">
                 <label>E-Mail oder WhatsApp</label>
-                <input type="text" id="leadContact" placeholder="E-Mail oder +49..." required>
+                <input type="email" name="email" id="leadContact" placeholder="E-Mail oder +49..." required>
               </div>
+              <input type="hidden" name="_subject" value="New Chancenkarte Assessment Lead">
+              <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_autoresponse" value="Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="score" id="formScore" value="0">
+              <input type="hidden" name="status" id="formStatus" value="">
+              <input type="hidden" name="language" value="de">
+              <input type="hidden" name="timestamp" id="formTimestamp" value="">
               <button type="submit" class="form-submit">Bericht erhalten</button>
               <div class="form-message">Ihre Daten werden sicher behandelt und nicht weitergegeben.</div>
+              <div id="successMessage" style="display:none; margin-top: 16px; padding: 12px; background: #d1fae5; border: 1px solid #6ee7b7; border-radius: 6px; color: #065f46; text-align: center; font-size: 14px;">Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.</div>
             </form>
           </div>
 
@@ -563,6 +572,12 @@
     function submitLead(event) {
       event.preventDefault();
       const contact = document.getElementById('leadContact').value;
+      const form = event.target;
+      
+      // Update hidden fields with current data
+      document.getElementById('formScore').value = document.getElementById('resultScore').textContent;
+      document.getElementById('formStatus').value = document.getElementById('resultStatus').textContent;
+      document.getElementById('formTimestamp').value = new Date().toISOString();
       
       // Simple validation
       if (!contact) {
@@ -570,10 +585,14 @@
         return;
       }
 
-      // Here you would typically send the data to a backend
-      // For now, we'll show a success message
-      alert('Vielen Dank! Wir werden Sie in Kürze kontaktieren.');
+      // Show success message
+      document.getElementById('successMessage').style.display = 'block';
       document.getElementById('leadContact').value = '';
+      
+      // Submit form to FormSubmit after 1 second
+      setTimeout(() => {
+        form.submit();
+      }, 1000);
     }
 
     function resetAssessment() {

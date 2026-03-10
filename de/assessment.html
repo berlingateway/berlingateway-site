@@ -433,11 +433,15 @@
             <div class="lead-form-description">Wir senden Ihnen eine detaillierte Analyse mit nächsten Schritten</div>
             <form action="https://formsubmit.co/info@berlingateway.de" method="POST" onsubmit="submitLead(event)">
               <div class="form-group">
-                <label>E-Mail oder WhatsApp</label>
-                <input type="text" name="email" id="leadContact" placeholder="E-Mail oder +49..." required>
+                <label>E-Mail</label>
+                <input type="email" name="email" id="leadEmail" placeholder="Ihre E-Mail-Adresse">
+              </div>
+              <div class="form-group">
+                <label>WhatsApp (optional)</label>
+                <input type="text" name="whatsapp" id="leadWhatsApp" placeholder="+49 ...">
               </div>
               <input type="hidden" name="_subject" value="New Chancenkarte Assessment Lead">
-              <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_replyto" id="formReplyTo" value="">
               <input type="hidden" name="_autoresponse" value="Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_next" value="https://www.berlingateway.de/de/assessment.html">
@@ -572,7 +576,8 @@
 
     function submitLead(event) {
       event.preventDefault();
-      const contact = document.getElementById('leadContact').value;
+      const email = document.getElementById('leadEmail').value.trim();
+      const whatsapp = document.getElementById('leadWhatsApp').value.trim();
       const form = event.target;
       
       // Update hidden fields with current data
@@ -580,20 +585,22 @@
       document.getElementById('formStatus').value = document.getElementById('resultStatus').textContent;
       document.getElementById('formTimestamp').value = new Date().toISOString();
       
-      // Simple validation
-      if (!contact) {
-        alert('Bitte geben Sie Ihre E-Mail oder WhatsApp-Nummer ein.');
+      // Validation: at least one field must be filled
+      if (!email && !whatsapp) {
+        alert('Bitte geben Sie mindestens eine E-Mail oder WhatsApp-Nummer ein.');
         return;
+      }
+      
+      // Set reply-to email if provided (for autoresponse)
+      if (email) {
+        document.getElementById('formReplyTo').value = email;
       }
 
       // Show success message
       document.getElementById('successMessage').style.display = 'block';
-      document.getElementById('leadContact').value = '';
       
-      // Submit form to FormSubmit after 1 second
-      setTimeout(() => {
-        form.submit();
-      }, 1000);
+      // Submit form to FormSubmit immediately (do NOT clear fields before submit)
+      form.submit();
     }
 
     function resetAssessment() {

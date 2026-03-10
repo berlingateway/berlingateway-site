@@ -448,7 +448,7 @@
                 <input type="text" name="email" id="leadContact" placeholder="البريد الإلكتروني أو +49..." required>
               </div>
               <input type="hidden" name="_subject" value="New Chancenkarte Assessment Lead">
-              <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_replyto" id="formReplyTo" value="">
               <input type="hidden" name="_autoresponse" value="شكراً لك! تم استلام طلبك وسيتواصل معك فريق Berlin Gateway قريباً.">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_next" value="https://www.berlingateway.de/ar/assessment.html">
@@ -583,7 +583,8 @@
 
     function submitLead(event) {
       event.preventDefault();
-      const contact = document.getElementById('leadContact').value;
+      const email = document.getElementById('leadEmail').value.trim();
+      const whatsapp = document.getElementById('leadWhatsApp').value.trim();
       const form = event.target;
       
       // Update hidden fields with current data
@@ -591,20 +592,22 @@
       document.getElementById('formStatus').value = document.getElementById('resultStatus').textContent;
       document.getElementById('formTimestamp').value = new Date().toISOString();
       
-      // Simple validation
-      if (!contact) {
+      // Validation: at least one field must be filled
+      if (!email && !whatsapp) {
         alert('يرجى إدخال بريدك الإلكتروني أو رقم WhatsApp.');
         return;
+      }
+      
+      // Set reply-to email if provided (for autoresponse)
+      if (email) {
+        document.getElementById('formReplyTo').value = email;
       }
 
       // Show success message
       document.getElementById('successMessage').style.display = 'block';
-      document.getElementById('leadContact').value = '';
       
-      // Submit form to FormSubmit after 1 second
-      setTimeout(() => {
-        form.submit();
-      }, 1000);
+      // Submit form to FormSubmit immediately (do NOT clear fields before submit)
+      form.submit();
     }
 
     function resetAssessment() {

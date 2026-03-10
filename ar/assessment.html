@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>تقييم بطاقة الفرص — اختبر فرصك للعمل في ألمانيا</title>
+  <meta name="description" content="اختبر فرصك للعمل في ألمانيا باستخدام أداة التقييم المجانية. احصل على تقييم استراتيجي في 5 خطوات فقط." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="author" content="Berlin Gateway" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://berlingateway.de/ar/assessment.html" />
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/assessment.html" />
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/assessment.html" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <style>
+    body.rtl {
+      direction: rtl;
+      text-align: right;
+    }
+    .assessment-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      margin-bottom: 32px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #0B3B8C;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    .step {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .step.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .step-title {
+      color: #0B3B8C;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .step-description {
+      color: #64748b;
+      font-size: 16px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .option-group {
+      margin-bottom: 24px;
+    }
+    .option-label {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 12px;
+      flex-direction: row-reverse;
+    }
+    .option-label:hover {
+      border-color: #0B3B8C;
+      background: #f8fafc;
+    }
+    .option-label input[type="radio"] {
+      margin-left: 12px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+    .option-text {
+      flex: 1;
+      text-align: right;
+    }
+    .option-points {
+      color: #0B3B8C;
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 12px;
+    }
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+    }
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #0B3B8C;
+      color: white;
+      flex: 1;
+    }
+    .btn-primary:hover {
+      background: #082a5c;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #334155;
+      padding: 14px 28px;
+    }
+    .btn-secondary:hover {
+      background: #cbd5e1;
+    }
+    .result-section {
+      display: none;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .result-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    .result-score {
+      font-size: 64px;
+      font-weight: 700;
+      color: #0B3B8C;
+      margin-bottom: 12px;
+    }
+    .result-status {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .result-status.excellent {
+      color: #10b981;
+    }
+    .result-status.good {
+      color: #f59e0b;
+    }
+    .result-status.early {
+      color: #ef4444;
+    }
+    .result-message {
+      color: #64748b;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lead-form {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 32px;
+    }
+    .lead-form-title {
+      color: #0B3B8C;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .lead-form-description {
+      color: #64748b;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      color: #334155;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+      text-align: right;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+      text-align: right;
+      direction: rtl;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #0B3B8C;
+      box-shadow: 0 0 0 3px rgba(11, 59, 140, 0.1);
+    }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: #0B3B8C;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .form-submit:hover {
+      background: #082a5c;
+    }
+    .form-message {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #64748b;
+    }
+    @media (max-width: 480px) {
+      .assessment-container {
+        padding: 16px;
+        margin: 20px auto;
+      }
+      .step-title {
+        font-size: 20px;
+      }
+      .result-score {
+        font-size: 48px;
+      }
+      .button-group {
+        flex-direction: column-reverse;
+      }
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="rtl">
+  <header class="header">
+  <div class="container wrap">
+    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
+    <nav class="nav">
+      <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/">DE</a>
+      <span class="sep">·</span><a href="/ar/monitor.html">مرصد سوق العمل</a>
+      <a href="/ar/systemlogik.html">منطق النظام</a>
+      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
+    </nav>
+  </div>
+</header>
+
+  <main style="padding: 40px 20px;">
+    <div class="container">
+      <!-- HERO SECTION -->
+      <section style="text-align: center; margin-bottom: 48px;">
+        <h1 style="color: #0B3B8C; font-size: 36px; margin-bottom: 12px; font-weight: 600;">اختبر فرصك للعمل في ألمانيا</h1>
+        <p style="color: #64748b; font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          احصل على تقييم استراتيجي أولي لنقاط بطاقة الفرص. أجب على 5 أسئلة بسيطة واكتشف مدى قوة فرصك.
+        </p>
+      </section>
+
+      <!-- ASSESSMENT TOOL -->
+      <div class="assessment-container">
+        <!-- PROGRESS BAR -->
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- STEP 1: QUALIFICATION -->
+        <div class="step active" id="step1">
+          <div class="step-title">الخطوة 1: مؤهلاتك</div>
+          <div class="step-description">ما هو مستوى تعليمك الأكاديمي؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="qualification" value="4" onchange="updateProgress()">
+              <div class="option-text">
+                <div>درجة جامعية معترف بها (بكالوريوس/ماجستير)</div>
+              </div>
+              <div class="option-points">حتى 4 نقاط</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="qualification" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>تدريب مهني أو شهادة معهد متخصص</div>
+              </div>
+              <div class="option-points">حتى 2 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="qualification" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>بدون مؤهل رسمي</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: EXPERIENCE -->
+        <div class="step" id="step2">
+          <div class="step-title">الخطوة 2: الخبرة المهنية</div>
+          <div class="step-description">كم سنة من الخبرة المهنية لديك؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="experience" value="3" onchange="updateProgress()">
+              <div class="option-text">
+                <div>أكثر من 3 سنوات خبرة في ألمانيا</div>
+              </div>
+              <div class="option-points">حتى 3 نقاط</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="experience" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>1-3 سنوات خبرة في ألمانيا أو دولياً</div>
+              </div>
+              <div class="option-points">حتى 2 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="experience" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>أقل من سنة أو بدون خبرة</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
+            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: LANGUAGE -->
+        <div class="step" id="step3">
+          <div class="step-title">الخطوة 3: اللغة الألمانية</div>
+          <div class="step-description">ما هو مستوى اللغة الألمانية لديك؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="language" value="3" onchange="updateProgress()">
+              <div class="option-text">
+                <div>B2 أو أعلى (طلاقة)</div>
+              </div>
+              <div class="option-points">حتى 3 نقاط</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="language" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>B1 (مستوى متوسط)</div>
+              </div>
+              <div class="option-points">حتى 2 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="language" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>A1-A2 أو بدون معرفة</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
+            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: AGE -->
+        <div class="step" id="step4">
+          <div class="step-title">الخطوة 4: العمر</div>
+          <div class="step-description">هل أنت أقل من 35 سنة؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="age" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>نعم، أنا أقل من 35 سنة</div>
+              </div>
+              <div class="option-points">حتى 2 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="age" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>لا، أنا 35 سنة أو أكبر</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
+            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+          </div>
+        </div>
+
+        <!-- STEP 5: CONNECTION -->
+        <div class="step" id="step5">
+          <div class="step-title">الخطوة 5: الصلة بألمانيا</div>
+          <div class="step-description">هل لديك اتصالات أو علاقات في ألمانيا؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="connection" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>نعم، لدي عائلة أو أصدقاء أو اتصالات مهنية في ألمانيا</div>
+              </div>
+              <div class="option-points">1 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="connection" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>لا، ليس لدي اتصالات في ألمانيا</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="calculateResult()">عرض النتيجة</button>
+            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+          </div>
+        </div>
+
+        <!-- RESULT SECTION -->
+        <div class="result-section" id="resultSection">
+          <div class="result-score" id="resultScore">0</div>
+          <div class="result-status" id="resultStatus">النتيجة</div>
+          <div class="result-message" id="resultMessage">سيتم عرض تقييمك الاستراتيجي هنا.</div>
+          
+          <!-- LEAD CAPTURE FORM -->
+          <div class="lead-form">
+            <div class="lead-form-title">احصل على تقرير تقييم فرصك</div>
+            <div class="lead-form-description">سنرسل لك تحليلاً مفصلاً مع الخطوات التالية</div>
+            <form onsubmit="submitLead(event)">
+              <div class="form-group">
+                <label>البريد الإلكتروني أو WhatsApp</label>
+                <input type="text" id="leadContact" placeholder="البريد الإلكتروني أو +49..." required>
+              </div>
+              <button type="submit" class="form-submit">الحصول على التقرير</button>
+              <div class="form-message">سيتم التعامل مع بيانات آمنة ولن يتم مشاركتها.</div>
+            </form>
+          </div>
+
+          <div class="button-group" style="margin-top: 32px;">
+            <button class="btn btn-primary" onclick="window.location.href='/ar/chancenkarte.html'">إلى بطاقة الفرص</button>
+            <button class="btn btn-secondary" onclick="resetAssessment()">ابدأ من جديد</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer style="background: #0f172a; color: #cbd5e1; padding: 40px 20px; text-align: center; font-size: 14px; margin-top: 60px;">
+    <div class="container">
+      <p style="margin-bottom: 12px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
+      <p style="margin: 0;">
+        <a href="mailto:info@berlingateway.de" style="color: #cbd5e1; text-decoration: none;">info@berlingateway.de</a> · 
+        <a href="/ar/" style="color: #cbd5e1; text-decoration: none;">خريطة الموقع</a> · 
+        <a href="/de/" style="color: #cbd5e1; text-decoration: none;">Deutsch</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    function updateProgress() {
+      const progress = (currentStep / totalSteps) * 100;
+      document.getElementById('progressFill').style.width = progress + '%';
+    }
+
+    function showStep(step) {
+      // Hide all steps
+      for (let i = 1; i <= totalSteps; i++) {
+        document.getElementById('step' + i).classList.remove('active');
+      }
+      // Show current step
+      document.getElementById('step' + step).classList.add('active');
+      updateProgress();
+      window.scrollTo(0, 0);
+    }
+
+    function nextStep() {
+      // Validate current step
+      const stepInputs = document.querySelectorAll(`input[name="${getStepName(currentStep)}"]`);
+      const isSelected = Array.from(stepInputs).some(input => input.checked);
+      
+      if (!isSelected) {
+        alert('يرجى اختيار خيار.');
+        return;
+      }
+
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function getStepName(step) {
+      const names = ['qualification', 'experience', 'language', 'age', 'connection'];
+      return names[step - 1];
+    }
+
+    function calculateResult() {
+      // Validate step 5
+      const stepInputs = document.querySelectorAll(`input[name="connection"]`);
+      const isSelected = Array.from(stepInputs).some(input => input.checked);
+      
+      if (!isSelected) {
+        alert('يرجى اختيار خيار.');
+        return;
+      }
+
+      // Calculate total points
+      let totalPoints = 0;
+      for (let i = 1; i <= totalSteps; i++) {
+        const stepName = getStepName(i);
+        const selected = document.querySelector(`input[name="${stepName}"]:checked`);
+        if (selected) {
+          totalPoints += parseInt(selected.value);
+        }
+      }
+
+      // Determine status
+      let status, message, statusClass;
+      if (totalPoints >= 10) {
+        status = 'فرص ممتازة';
+        statusClass = 'excellent';
+        message = 'أنت تستوفي المعايير بشكل ممتاز. فرصك في الاعتراف الناجح ممتازة. نوصيك بمناقشة الخطوات التالية مع مستشار.';
+      } else if (totalPoints >= 6) {
+        status = 'إمكانية جيدة';
+        statusClass = 'good';
+        message = 'لديك إمكانية جيدة للحصول على بطاقة الفرص. مع التحسينات المستهدفة، يمكنك زيادة فرصك بشكل أكبر.';
+      } else {
+        status = 'مرحلة مبكرة';
+        statusClass = 'early';
+        message = 'أنت لا تزال في مرحلة مبكرة. ركز على تحسين مهاراتك في اللغة الألمانية وخبرتك المهنية.';
+      }
+
+      // Display result
+      document.getElementById('resultScore').textContent = totalPoints;
+      document.getElementById('resultStatus').textContent = status;
+      document.getElementById('resultStatus').className = 'result-status ' + statusClass;
+      document.getElementById('resultMessage').textContent = message;
+      document.getElementById('resultSection').classList.add('active');
+
+      // Hide steps
+      for (let i = 1; i <= totalSteps; i++) {
+        document.getElementById('step' + i).classList.remove('active');
+      }
+
+      window.scrollTo(0, 0);
+    }
+
+    function submitLead(event) {
+      event.preventDefault();
+      const contact = document.getElementById('leadContact').value;
+      
+      // Simple validation
+      if (!contact) {
+        alert('يرجى إدخال بريدك الإلكتروني أو رقم WhatsApp.');
+        return;
+      }
+
+      // Here you would typically send the data to a backend
+      // For now, we'll show a success message
+      alert('شكراً لك! سنتصل بك قريباً.');
+      document.getElementById('leadContact').value = '';
+    }
+
+    function resetAssessment() {
+      // Reset all inputs
+      document.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.checked = false;
+      });
+      
+      // Reset to step 1
+      currentStep = 1;
+      showStep(1);
+      
+      // Hide result
+      document.getElementById('resultSection').classList.remove('active');
+    }
+
+    // Initialize
+    updateProgress();
+  </script>
+</body>
+</html>

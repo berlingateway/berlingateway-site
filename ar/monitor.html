@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>مرصد سوق العمل في برلين جيتواي 2026</title>
+  <meta name="description" content="بيانات سوق العمل في الوقت الفعلي لألمانيا. تقييم بطاقة الفرص، الرواتب، الطلب على المهن." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="author" content="Berlin Gateway" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://berlingateway.de/ar/monitor.html" />
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/monitor.html" />
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/monitor.html" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+  <style>
+    body.rtl {
+      direction: rtl;
+      text-align: right;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 32px;
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 480px) {
+      .chart-container {
+        height: 250px;
+        padding: 12px;
+      }
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+    }
+    .data-table thead tr {
+      border-bottom: 2px solid #0B3B8C;
+    }
+    .data-table th {
+      text-align: right;
+      padding: 12px;
+      color: #0B3B8C;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .data-table td {
+      padding: 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      font-size: 14px;
+      text-align: right;
+    }
+    .data-table tbody tr:hover {
+      background: #f8fafc;
+    }
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 24px;
+    }
+    .cta-button {
+      background: #0B3B8C;
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      font-size: 16px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #082a5c;
+    }
+    .cta-section {
+      text-align: center;
+      margin: 48px 0;
+    }
+  </style>
+</head>
+<body class="rtl">
+<header class="header">
+  <div class="container wrap">
+    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
+    <nav class="nav">
+      <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/">DE</a>
+      <span class="sep">·</span><a href="/ar/systemlogik.html">منطق النظام</a>
+      <a href="/ar/framework.html">الإطار</a>
+      <a href="/ar/voraussetzungen.html">المتطلبات</a>
+      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
+      <a href="/ar/monitor.html">مرصد العمل</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO SECTION -->
+  <section class="section" style="text-align: center; margin-bottom: 48px;">
+    <h1 style="color: #0B3B8C; font-size: 36px; margin-bottom: 16px;">مرصد سوق العمل في برلين جيتواي 2026</h1>
+    <p style="color: #64748b; font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+      بيانات سوق العمل في الوقت الفعلي لألمانيا. تقييم بطاقة الفرص، الرواتب، الطلب على المهن والتركيزات الإقليمية.
+    </p>
+  </section>
+
+  <!-- DATA SECTION 1: WORKFORCE DEMAND CHART -->
+  <section class="section">
+    <h2 style="color: #0B3B8C; margin-bottom: 24px;">الطلب على القوى العاملة حسب المجموعات المهنية</h2>
+    <div class="chart-container">
+      <canvas id="demandChart"></canvas>
+    </div>
+    <p style="color: #64748b; font-size: 13px; margin-top: 12px;">
+      المصدر: وكالة العمل الاتحادية، تحليلات الاختناقات 2026
+    </p>
+  </section>
+
+  <!-- DATA SECTION 2: SALARY COMPARISON TABLE -->
+  <section class="section">
+    <h2 style="color: #0B3B8C; margin-bottom: 24px;">الرواتب حسب المجموعات المهنية (الراتب الإجمالي السنوي)</h2>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>مستوى الخبرة</th>
+            <th>الطلب</th>
+            <th>الراتب العالي</th>
+            <th>الراتب المتوسط</th>
+            <th>راتب البداية</th>
+            <th>المجموعة المهنية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: #dc2626;">جداً مرتفع</td>
+            <td>€95.000+</td>
+            <td>€65.000</td>
+            <td>€45.000</td>
+            <td><strong>تكنولوجيا المعلومات والبرمجيات</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="color: #dc2626;">جداً مرتفع</td>
+            <td>€55.000+</td>
+            <td>€42.000</td>
+            <td>€32.000</td>
+            <td><strong>التمريض والصحة</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="color: #f59e0b;">مرتفع</td>
+            <td>€105.000+</td>
+            <td>€72.000</td>
+            <td>€50.000</td>
+            <td><strong>الهندسة</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="color: #f59e0b;">مرتفع</td>
+            <td>€52.000+</td>
+            <td>€38.000</td>
+            <td>€28.000</td>
+            <td><strong>الحرف والمهن اليدوية</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td style="color: #10b981;">متوسط</td>
+            <td>€68.000+</td>
+            <td>€48.000</td>
+            <td>€35.000</td>
+            <td><strong>الإدارة والخدمات</strong></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: #64748b; font-size: 13px; margin-top: 12px;">
+      رواتب استدلالية. آخر تحديث: فبراير 2026. المصدر: قواعد بيانات الرواتب، وكالة العمل الاتحادية.
+    </p>
+  </section>
+
+  <!-- DATA SECTION 3: CHANCENKARTE REFERENCE TABLE -->
+  <section class="section">
+    <h2 style="color: #0B3B8C; margin-bottom: 24px;">تقييم بطاقة الفرص - مرجع سريع</h2>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>الوصف</th>
+            <th>النقاط</th>
+            <th>المعيار</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الاعتراف بالمؤهل الأكاديمي</td>
+            <td><strong>حتى 4</strong></td>
+            <td>🎓 المؤهل العلمي</td>
+          </tr>
+          <tr>
+            <td>الخبرة المهنية ذات الصلة في ألمانيا</td>
+            <td><strong>حتى 3</strong></td>
+            <td>💼 الخبرة المهنية</td>
+          </tr>
+          <tr>
+            <td>مهارات اللغة الألمانية (B2 أو أعلى)</td>
+            <td><strong>حتى 3</strong></td>
+            <td>🇩🇪 اللغة الألمانية</td>
+          </tr>
+          <tr>
+            <td>مهارات اللغة الإنجليزية (B1 أو أعلى)</td>
+            <td><strong>1</strong></td>
+            <td>🇬🇧 اللغة الإنجليزية</td>
+          </tr>
+          <tr>
+            <td>العمر أقل من 35 سنة</td>
+            <td><strong>حتى 2</strong></td>
+            <td>🎂 العمر</td>
+          </tr>
+          <tr>
+            <td>الاتصالات القائمة بألمانيا</td>
+            <td><strong>1</strong></td>
+            <td>🇩🇪 الصلة بألمانيا</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background: #fff; border-right: 3px solid #0B3B8C; padding: 16px; border-radius: 4px; margin-top: 24px; text-align: right;">
+      <p style="color: #0B3B8C; font-weight: 600; margin: 0 0 8px;">مطلوب: 6 نقاط على الأقل</p>
+      <p style="color: #64748b; font-size: 14px; margin: 0;">للحصول على تصنيف منظم، تحتاج إلى 6 نقاط على الأقل في التقييم الإجمالي.</p>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <h2 style="color: #0B3B8C; margin-bottom: 24px;">هل أنت مستعد للخطوة التالية؟</h2>
+    <a href="/ar/chancenkarte.html" class="cta-button">تحقق من بطاقة الفرص الآن</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container wrap">
+    <div><b>Berlin Gateway</b> — بنية دخول هيكلية للعاملين بالمهن</div>
+    <div class="footer-contact">التواصل: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a> · الهاتف: <a href="tel:+493025730875">+49 30 25730875</a></div>
+  </div>
+  <div class="container">
+    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. جميع الحقوق محفوظة. · <a href="/sitemap.html" style="color: #0B3B8C; text-decoration: none;">خريطة الموقع</a></div>
+    <div class="footer-closing">منظم. انتقائي. نظامي.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  
+  // Workforce Demand Chart
+  const ctx = document.getElementById('demandChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['تكنولوجيا المعلومات', 'التمريض والصحة', 'الهندسة', 'الحرف', 'الإدارة'],
+      datasets: [{
+        label: 'الطلب (وحدات نسبية)',
+        data: [95, 92, 75, 68, 52],
+        backgroundColor: ['#0B3B8C', '#1e40af', '#3b82f6', '#60a5fa', '#93c5fd'],
+        borderRadius: 6,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            color: '#64748b',
+            font: {
+              size: 12
+            }
+          },
+          grid: {
+            color: '#e2e8f0'
+          }
+        },
+        y: {
+          ticks: {
+            color: '#334155',
+            font: {
+              size: 13,
+              weight: 600
+            }
+          },
+          grid: {
+            display: false
+          }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>

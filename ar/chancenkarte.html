@@ -30,17 +30,18 @@
 </script>
 </head>
 <body class="rtl">
-  <header style="background:#fff; border-bottom:1px solid #e2e8f0; padding:16px 0; position:sticky; top:0; z-index:100;">
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <a href="/ar/" style="color:#0B3B8C; font-weight:600; text-decoration:none; font-size:18px;">Berlin Gateway</a>
-      <nav style="display:flex; gap:24px;">
-        <a href="/ar/monitor.html" style="color:#334155; text-decoration:none; font-size:14px;">مرصد العمل</a>
-        <a href="/ar/systemlogik.html" style="color:#334155; text-decoration:none; font-size:14px;">منطق النظام</a>
-        <a href="/ar/chancenkarte.html" style="color:#0B3B8C; font-weight:600; text-decoration:none; font-size:14px;">بطاقة الفرص</a>
-        <a href="/de/chancenkarte.html" style="color:#334155; text-decoration:none; font-size:14px;">Deutsch</a>
-      </nav>
-    </div>
-  </header>
+  <header class="header">
+  <div class="container wrap">
+    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
+    <nav class="nav">
+      <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/">DE</a>
+      <span class="sep">·</span><a href="/ar/monitor.html">مرصد سوق العمل</a>
+      <a href="/ar/systemlogik.html">منطق النظام</a>
+      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
+    </nav>
+  </div>
+</header>
+
 
   <main style="padding:40px 20px;">
     <div class="container">
@@ -53,7 +54,7 @@
 
       <section style="background:#f8fafc; border-radius:8px; padding:32px; margin-bottom:40px;">
         <h2 style="color:#0B3B8C; font-size:20px; margin-bottom:24px; text-align:center;">معايير التقييم</h2>
-        <table style="width:100%; border-collapse:collapse; margin-bottom:24px;">
+        <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;"><table style="width:100%; border-collapse:collapse; margin-bottom:24px;">
           <thead>
             <tr style="border-bottom:2px solid #0B3B8C;">
               <th style="text-align:right; padding:12px; color:#0B3B8C; font-weight:600;">المعيار</th>

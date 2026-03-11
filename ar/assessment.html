@@ -512,6 +512,26 @@
           <div class="result-status" id="resultStatus">النتيجة</div>
           <div class="result-message" id="resultMessage">سيتم عرض تقييمك الاستراتيجي هنا.</div>
           
+          <!-- SCORE VISUALIZATION BLOCK (RTL) -->
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center; direction: rtl;">
+            <div style="margin-bottom: 24px;">
+              <div style="color: #64748b; font-size: 14px; font-weight: 600; margin-bottom: 8px;">نقاط بطاقة الفرص الخاصة بك</div>
+              <div style="font-size: 32px; font-weight: 700; color: #0B3B8C;">
+                <span id="scoreDisplayValue">0</span> / 10
+              </div>
+            </div>
+            
+            <!-- PROGRESS BAR -->
+            <div style="width: 100%; height: 12px; background: #e2e8f0; border-radius: 6px; overflow: hidden; margin-bottom: 24px;">
+              <div id="scoreBar" style="height: 100%; width: 0%; background: #ef4444; transition: width 0.3s ease, background 0.3s ease; border-radius: 6px;"></div>
+            </div>
+            
+            <!-- STATUS MESSAGE -->
+            <div id="scoreStatusMessage" style="color: #64748b; font-size: 14px; line-height: 1.6; max-width: 500px; margin: 0 auto;">
+              سيتم عرض تقييمك هنا.
+            </div>
+          </div>
+          
           <!-- LEAD CAPTURE FORM -->
           <div class="lead-form">
             <div class="lead-form-title">احصل على تقرير تقييم فرصك</div>
@@ -645,6 +665,33 @@
       document.getElementById('resultStatus').textContent = status;
       document.getElementById('resultStatus').className = 'result-status ' + statusClass;
       document.getElementById('resultMessage').textContent = message;
+      
+      // Update score visualization
+      const scorePercentage = (totalPoints / 10) * 100;
+      const scoreBar = document.getElementById('scoreBar');
+      const scoreDisplayValue = document.getElementById('scoreDisplayValue');
+      const scoreStatusMessage = document.getElementById('scoreStatusMessage');
+      
+      // Set score display
+      scoreDisplayValue.textContent = totalPoints;
+      
+      // Set progress bar color and width
+      if (totalPoints >= 8) {
+        scoreBar.style.background = '#10b981'; // Green
+      } else if (totalPoints >= 6) {
+        scoreBar.style.background = '#0B3B8C'; // Blue
+      } else {
+        scoreBar.style.background = '#f59e0b'; // Orange
+      }
+      scoreBar.style.width = scorePercentage + '%';
+      
+      // Set status message
+      if (totalPoints >= 6) {
+        scoreStatusMessage.textContent = 'لقد وصلت إلى الحد الأدنى المطلوب لبطاقة الفرص.';
+      } else {
+        scoreStatusMessage.textContent = 'لم تصل بعد إلى الحد الأدنى للنقاط. يمكن تحسين فرصك من خلال التحضير المناسب.';
+      }
+      
       document.getElementById('resultSection').classList.add('active');
 
       // Hide steps

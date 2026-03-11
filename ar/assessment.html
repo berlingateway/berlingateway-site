@@ -325,26 +325,26 @@
         <!-- STEP 2: EXPERIENCE -->
         <div class="step" id="step2">
           <div class="step-title">الخطوة 2: الخبرة المهنية</div>
-          <div class="step-description">كم سنة من الخبرة المهنية لديك؟</div>
+          <div class="step-description">كم سنة من الخبرة المهنية المرتبطة لديك؟</div>
           <div class="option-group">
             <label class="option-label">
               <input type="radio" name="experience" value="3" onchange="updateProgress()">
               <div class="option-text">
-                <div>أكثر من 3 سنوات خبرة في ألمانيا</div>
+                <div>على الأقل 5 سنوات خبرة مهنية ذات صلة خلال آخر 7 سنوات</div>
               </div>
-              <div class="option-points">حتى 3 نقاط</div>
+              <div class="option-points">3 نقاط</div>
             </label>
             <label class="option-label">
               <input type="radio" name="experience" value="2" onchange="updateProgress()">
               <div class="option-text">
-                <div>1-3 سنوات خبرة في ألمانيا أو دولياً</div>
+                <div>على الأقل سنتان خبرة مهنية ذات صلة خلال آخر 5 سنوات</div>
               </div>
-              <div class="option-points">حتى 2 نقطة</div>
+              <div class="option-points">2 نقطة</div>
             </label>
             <label class="option-label">
               <input type="radio" name="experience" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>أقل من سنة أو بدون خبرة</div>
+                <div>أقل من سنتين من الخبرة</div>
               </div>
               <div class="option-points">0 نقطة</div>
             </label>
@@ -365,19 +365,26 @@
               <div class="option-text">
                 <div>B2 أو أعلى (طلاقة)</div>
               </div>
-              <div class="option-points">حتى 3 نقاط</div>
+              <div class="option-points">3 نقاط</div>
             </label>
             <label class="option-label">
               <input type="radio" name="language" value="2" onchange="updateProgress()">
               <div class="option-text">
                 <div>B1 (مستوى متوسط)</div>
               </div>
-              <div class="option-points">حتى 2 نقطة</div>
+              <div class="option-points">2 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="language" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>A2 (أساسيات)</div>
+              </div>
+              <div class="option-points">1 نقطة</div>
             </label>
             <label class="option-label">
               <input type="radio" name="language" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>A1-A2 أو بدون معرفة</div>
+                <div>A1 أو بدون معرفة</div>
               </div>
               <div class="option-points">0 نقطة</div>
             </label>
@@ -391,19 +398,26 @@
         <!-- STEP 4: AGE -->
         <div class="step" id="step4">
           <div class="step-title">الخطوة 4: العمر</div>
-          <div class="step-description">هل أنت أقل من 35 سنة؟</div>
+          <div class="step-description">كم عمرك الحالي؟</div>
           <div class="option-group">
             <label class="option-label">
               <input type="radio" name="age" value="2" onchange="updateProgress()">
               <div class="option-text">
-                <div>نعم، أنا أقل من 35 سنة</div>
+                <div>أنا 35 سنة أو أصغر</div>
               </div>
-              <div class="option-points">حتى 2 نقطة</div>
+              <div class="option-points">2 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="age" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>أنا بين 36-40 سنة</div>
+              </div>
+              <div class="option-points">1 نقطة</div>
             </label>
             <label class="option-label">
               <input type="radio" name="age" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>لا، أنا 35 سنة أو أكبر</div>
+                <div>أنا أكبر من 40 سنة</div>
               </div>
               <div class="option-points">0 نقطة</div>
             </label>
@@ -414,22 +428,74 @@
           </div>
         </div>
 
-        <!-- STEP 5: CONNECTION -->
+        <!-- STEP 5: ENGLISH -->
         <div class="step" id="step5">
-          <div class="step-title">الخطوة 5: الصلة بألمانيا</div>
-          <div class="step-description">هل لديك اتصالات أو علاقات في ألمانيا؟</div>
+          <div class="step-title">الخطوة 5: اللغة الإنجليزية</div>
+          <div class="step-description">هل تتحدث الإنجليزية بمستوى C1 أو أعلى؟</div>
           <div class="option-group">
             <label class="option-label">
-              <input type="radio" name="connection" value="1" onchange="updateProgress()">
+              <input type="radio" name="english" value="1" onchange="updateProgress()">
               <div class="option-text">
-                <div>نعم، لدي عائلة أو أصدقاء أو اتصالات مهنية في ألمانيا</div>
+                <div>نعم، أتحدث C1 أو أعلى (طلاقة)</div>
               </div>
               <div class="option-points">1 نقطة</div>
             </label>
             <label class="option-label">
-              <input type="radio" name="connection" value="0" onchange="updateProgress()">
+              <input type="radio" name="english" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>لا، ليس لدي اتصالات في ألمانيا</div>
+                <div>لا، أتحدث أقل من C1</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
+            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+          </div>
+        </div>
+
+        <!-- STEP 6: RESIDENCE -->
+        <div class="step" id="step6">
+          <div class="step-title">الخطوة 6: الإقامة في ألمانيا</div>
+          <div class="step-description">هل كان لديك على الأقل 6 أشهر إقامة قانونية في ألمانيا خلال آخر 5 سنوات؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="residence" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>نعم، كان لدي على الأقل 6 أشهر إقامة قانونية (بدون تأشيرة سياحية)</div>
+              </div>
+              <div class="option-points">1 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="residence" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>لا، كان لدي أقل من 6 أشهر أو بدون إقامة</div>
+              </div>
+              <div class="option-points">0 نقطة</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
+            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+          </div>
+        </div>
+
+        <!-- STEP 7: SPOUSE -->
+        <div class="step" id="step7">
+          <div class="step-title">الخطوة 7: الزوج/الزوجة</div>
+          <div class="step-description">هل يستوفي زوجك أيضاً شروط بطاقة الفرص؟</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="spouse" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>نعم، زوجي يستوفي الشروط</div>
+              </div>
+              <div class="option-points">1 نقطة</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="spouse" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>لا أو غير متزوج</div>
               </div>
               <div class="option-points">0 نقطة</div>
             </label>
@@ -492,7 +558,7 @@
 
   <script>
     let currentStep = 1;
-    const totalSteps = 5;
+    const totalSteps = 7;
 
     function updateProgress() {
       const progress = (currentStep / totalSteps) * 100;
@@ -534,13 +600,13 @@
     }
 
     function getStepName(step) {
-      const names = ['qualification', 'experience', 'language', 'age', 'connection'];
+      const names = ['qualification', 'experience', 'language', 'age', 'english', 'residence', 'spouse'];
       return names[step - 1];
     }
 
     function calculateResult() {
-      // Validate step 5
-      const stepInputs = document.querySelectorAll(`input[name="connection"]`);
+      // Validate step 7
+      const stepInputs = document.querySelectorAll(`input[name="spouse"]`);
       const isSelected = Array.from(stepInputs).some(input => input.checked);
       
       if (!isSelected) {

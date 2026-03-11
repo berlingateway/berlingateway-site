@@ -428,81 +428,29 @@
           </div>
         </div>
 
-        <!-- STEP 5: ENGLISH -->
+        <!-- STEP 5: GERMANY CONNECTION -->
         <div class="step" id="step5">
-          <div class="step-title">الخطوة 5: اللغة الإنجليزية</div>
-          <div class="step-description">هل تتحدث الإنجليزية بمستوى C1 أو أعلى؟</div>
+          <div class="step-title">الخطوة 5: الصلة بألمانيا</div>
+          <div class="step-description">هل لديك إقامة أو عمل سابق في ألمانيا؟</div>
           <div class="option-group">
             <label class="option-label">
-              <input type="radio" name="english" value="1" onchange="updateProgress()">
+              <input type="radio" name="connection" value="1" onchange="updateProgress()">
               <div class="option-text">
-                <div>نعم، أتحدث C1 أو أعلى (طلاقة)</div>
+                <div>نعم، أقمت 6 أشهر على الأقل في آخر 5 سنوات</div>
               </div>
               <div class="option-points">1 نقطة</div>
             </label>
             <label class="option-label">
-              <input type="radio" name="english" value="0" onchange="updateProgress()">
+              <input type="radio" name="connection" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>لا، أتحدث أقل من C1</div>
-              </div>
-              <div class="option-points">0 نقطة</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
-            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
-          </div>
-        </div>
-
-        <!-- STEP 6: RESIDENCE -->
-        <div class="step" id="step6">
-          <div class="step-title">الخطوة 6: الإقامة في ألمانيا</div>
-          <div class="step-description">هل كان لديك على الأقل 6 أشهر إقامة قانونية في ألمانيا خلال آخر 5 سنوات؟</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="residence" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>نعم، كان لدي على الأقل 6 أشهر إقامة قانونية (بدون تأشيرة سياحية)</div>
-              </div>
-              <div class="option-points">1 نقطة</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="residence" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>لا، كان لدي أقل من 6 أشهر أو بدون إقامة</div>
-              </div>
-              <div class="option-points">0 نقطة</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-primary" onclick="nextStep()">التالي</button>
-            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
-          </div>
-        </div>
-
-        <!-- STEP 7: SPOUSE -->
-        <div class="step" id="step7">
-          <div class="step-title">الخطوة 7: الزوج/الزوجة</div>
-          <div class="step-description">هل يستوفي زوجك أيضاً شروط بطاقة الفرص؟</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="spouse" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>نعم، زوجي يستوفي الشروط</div>
-              </div>
-              <div class="option-points">1 نقطة</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="spouse" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>لا أو غير متزوج</div>
+                <div>لا أو أقل من 6 أشهر</div>
               </div>
               <div class="option-points">0 نقطة</div>
             </label>
           </div>
           <div class="button-group">
             <button class="btn btn-primary" onclick="calculateResult()">عرض النتيجة</button>
-            <button class="btn btn-secondary" onclick="prevStep()">رجوع</button>
+            <button class="btn btn-secondary" onclick="prevStep()">السابق</button>
           </div>
         </div>
 
@@ -578,7 +526,7 @@
 
   <script>
     let currentStep = 1;
-    const totalSteps = 7;
+    const totalSteps = 5;
 
     function updateProgress() {
       const progress = (currentStep / totalSteps) * 100;
@@ -620,13 +568,13 @@
     }
 
     function getStepName(step) {
-      const names = ['qualification', 'experience', 'language', 'age', 'english', 'residence', 'spouse'];
+      const names = ['qualification', 'experience', 'language', 'age', 'connection'];
       return names[step - 1];
     }
 
     function calculateResult() {
-      // Validate step 7
-      const stepInputs = document.querySelectorAll(`input[name="spouse"]`);
+      // Validate step 5
+      const stepInputs = document.querySelectorAll(`input[name="connection"]`);
       const isSelected = Array.from(stepInputs).some(input => input.checked);
       
       if (!isSelected) {
@@ -647,17 +595,17 @@
       // Determine status
       let status, message, statusClass;
       if (totalPoints >= 10) {
-        status = 'فرص ممتازة';
+        status = 'فرص ممتازة!';
         statusClass = 'excellent';
-        message = 'أنت تستوفي المعايير بشكل ممتاز. فرصك في الاعتراف الناجح ممتازة. نوصيك بمناقشة الخطوات التالية مع مستشار.';
+        message = 'أنت تستوفي المتطلبات بشكل ممتاز. فرصك في الحصول على بطاقة الفرص ممتازة جداً. تواصل معنا للخطوات التالية.';
       } else if (totalPoints >= 6) {
-        status = 'إمكانية جيدة';
+        status = 'بطاقة الفرص ممكنة!';
         statusClass = 'good';
-        message = 'لديك إمكانية جيدة للحصول على بطاقة الفرص. مع التحسينات المستهدفة، يمكنك زيادة فرصك بشكل أكبر.';
+        message = 'أنت تستوفي الحد الأدنى المطلوب. يمكنك التقدم بطلب للحصول على بطاقة الفرص. نحن هنا لمساعدتك في الخطوات التالية.';
       } else {
-        status = 'مرحلة مبكرة';
+        status = 'التحضير مستحسن';
         statusClass = 'early';
-        message = 'أنت لا تزال في مرحلة مبكرة. ركز على تحسين مهاراتك في اللغة الألمانية وخبرتك المهنية.';
+        message = 'أنت لا تستوفي الحد الأدنى من 6 نقاط حالياً. حسّن مهاراتك اللغوية أو خبرتك المهنية وحاول مرة أخرى.';
       }
 
       // Display result
@@ -667,7 +615,7 @@
       document.getElementById('resultMessage').textContent = message;
       
       // Update score visualization
-      const scorePercentage = (totalPoints / 10) * 100;
+      const scorePercentage = (totalPoints / 13) * 100;
       const scoreBar = document.getElementById('scoreBar');
       const scoreDisplayValue = document.getElementById('scoreDisplayValue');
       const scoreStatusMessage = document.getElementById('scoreStatusMessage');
@@ -696,7 +644,10 @@
 
       // Hide steps
       for (let i = 1; i <= totalSteps; i++) {
-        document.getElementById('step' + i).classList.remove('active');
+        const stepEl = document.getElementById('step' + i);
+        if (stepEl) {
+          stepEl.classList.remove('active');
+        }
       }
 
       window.scrollTo(0, 0);

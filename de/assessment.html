@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Chancenkarte Selbstbewertung — Testen Sie Ihre Chancen für Deutschland</title>
-  <meta name="description" content="Testen Sie Ihre Chancen für Deutschland mit unserem kostenlosen Chancenkarte Selbstbewertungs-Tool. Erhalten Sie eine strategische Einschätzung in 5 Schritten." />
+  <title>Chancenkarte Punkte Rechner — Testen Sie Ihre Chancen für Deutschland</title>
+  <meta name="description" content="Chancenkarte Punkte Rechner: Berechnen Sie Ihre Punkte für die Chancenkarte. Kostenlos und in 5 Schritten. Erfahren Sie, ob Sie die Mindestanforderung erfüllen." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -221,6 +221,57 @@
       font-size: 13px;
       color: #64748b;
     }
+    .score-display {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .score-value {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0B3B8C;
+      margin-bottom: 8px;
+    }
+    .score-label {
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .score-bar {
+      width: 100%;
+      height: 12px;
+      background: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .score-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #ef4444;
+      transition: width 0.3s ease, background 0.3s ease;
+      border-radius: 6px;
+    }
+    .score-message {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .success-message {
+      background: #d1fae5;
+      border: 1px solid #6ee7b7;
+      border-radius: 6px;
+      color: #065f46;
+      padding: 12px;
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+      display: none;
+    }
     @media (max-width: 480px) {
       .assessment-container {
         padding: 16px;
@@ -243,32 +294,25 @@
 </head>
 <body>
   <header class="header">
-  <div class="container wrap">
-    <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
-      <a href="/de/systemlogik.html">Systemlogik</a>
-      <a href="/de/chancenkarte.html">Chancenkarte</a>
-    </nav>
-    <div class="lang-switcher">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 Deutsch</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/">العربية</a>
-      </div>
+    <div class="container wrap">
+      <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
+      <nav class="nav">
+        <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
+        <a href="/de/systemlogik.html">Systemlogik</a>
+        <a href="/de/chancenkarte.html">Chancenkarte</a>
+        <a href="/de/insights.html">Insights</a>
+      </nav>
+      <button class="language-toggle">🌐 Deutsch</button>
     </div>
-  </div>
-</header>
-
-
+  </header>
 
   <main style="padding: 40px 20px;">
     <div class="container">
       <!-- HERO SECTION -->
       <section style="text-align: center; margin-bottom: 48px;">
-        <h1 style="color: #0B3B8C; font-size: 36px; margin-bottom: 12px; font-weight: 600;">Testen Sie Ihre Chancen für Deutschland</h1>
+        <h1 style="color: #0B3B8C; font-size: 36px; margin-bottom: 12px; font-weight: 600;">Chancenkarte Punkte Rechner</h1>
         <p style="color: #64748b; font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
-          Erhalten Sie eine erste strategische Einschätzung Ihrer Chancenkarte-Punkte. Beantworten Sie 5 einfache Fragen und erfahren Sie, wie gut Ihre Chancen stehen.
+          Berechnen Sie Ihre Chancenkarte-Punkte in 5 einfachen Schritten. Erfahren Sie sofort, ob Sie die Mindestanforderung von 6 Punkten erfüllen.
         </p>
       </section>
 
@@ -281,22 +325,22 @@
 
         <!-- STEP 1: QUALIFICATION -->
         <div class="step active" id="step1">
-          <div class="step-title">Schritt 1: Ihr Abschluss</div>
-          <div class="step-description">Welcher akademische Abschluss liegt vor?</div>
+          <div class="step-title">Schritt 1: Qualifikation</div>
+          <div class="step-description">Welcher Abschluss liegt vor?</div>
           <div class="option-group">
             <label class="option-label">
               <input type="radio" name="qualification" value="4" onchange="updateProgress()">
               <div class="option-text">
-                <div>Anerkannter Hochschulabschluss (Bachelor/Master)</div>
+                <div>Hochschulabschluss (Bachelor/Master)</div>
               </div>
-              <div class="option-points">bis zu 4 Punkte</div>
+              <div class="option-points">4 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="qualification" value="2" onchange="updateProgress()">
               <div class="option-text">
-                <div>Berufsausbildung oder Fachschulabschluss</div>
+                <div>Berufsausbildung oder Fachschule</div>
               </div>
-              <div class="option-points">bis zu 2 Punkte</div>
+              <div class="option-points">2 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="qualification" value="0" onchange="updateProgress()">
@@ -319,21 +363,21 @@
             <label class="option-label">
               <input type="radio" name="experience" value="3" onchange="updateProgress()">
               <div class="option-text">
-                <div>Mindestens 5 Jahre relevante Berufserfahrung innerhalb der letzten 7 Jahre</div>
+                <div>5+ Jahre in den letzten 7 Jahren</div>
               </div>
               <div class="option-points">3 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="experience" value="2" onchange="updateProgress()">
               <div class="option-text">
-                <div>Mindestens 2 Jahre relevante Berufserfahrung innerhalb der letzten 5 Jahre</div>
+                <div>2-4 Jahre in den letzten 5 Jahren</div>
               </div>
               <div class="option-points">2 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="experience" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>Weniger als 2 Jahre Berufserfahrung</div>
+                <div>Weniger als 2 Jahre</div>
               </div>
               <div class="option-points">0 Punkte</div>
             </label>
@@ -346,27 +390,27 @@
 
         <!-- STEP 3: LANGUAGE -->
         <div class="step" id="step3">
-          <div class="step-title">Schritt 3: Deutschkenntnisse</div>
-          <div class="step-description">Welches Sprachniveau haben Sie?</div>
+          <div class="step-title">Schritt 3: Sprachkenntnisse</div>
+          <div class="step-description">Welches Deutsch- oder Englischniveau haben Sie?</div>
           <div class="option-group">
             <label class="option-label">
               <input type="radio" name="language" value="3" onchange="updateProgress()">
               <div class="option-text">
-                <div>B2 oder höher (Fließend)</div>
+                <div>Deutsch B2+ oder Englisch C1+</div>
               </div>
               <div class="option-points">3 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="language" value="2" onchange="updateProgress()">
               <div class="option-text">
-                <div>B1 (Mittelstufe)</div>
+                <div>Deutsch B1 oder Englisch B2</div>
               </div>
               <div class="option-points">2 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="language" value="1" onchange="updateProgress()">
               <div class="option-text">
-                <div>A2 (Grundlagen)</div>
+                <div>Deutsch A2 oder Englisch B1</div>
               </div>
               <div class="option-points">1 Punkt</div>
             </label>
@@ -392,21 +436,21 @@
             <label class="option-label">
               <input type="radio" name="age" value="2" onchange="updateProgress()">
               <div class="option-text">
-                <div>Ich bin 35 Jahre oder jünger</div>
+                <div>35 Jahre oder jünger</div>
               </div>
               <div class="option-points">2 Punkte</div>
             </label>
             <label class="option-label">
               <input type="radio" name="age" value="1" onchange="updateProgress()">
               <div class="option-text">
-                <div>Ich bin 36-40 Jahre alt</div>
+                <div>36-40 Jahre</div>
               </div>
               <div class="option-points">1 Punkt</div>
             </label>
             <label class="option-label">
               <input type="radio" name="age" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>Ich bin älter als 40 Jahre</div>
+                <div>Älter als 40 Jahre</div>
               </div>
               <div class="option-points">0 Punkte</div>
             </label>
@@ -417,74 +461,22 @@
           </div>
         </div>
 
-        <!-- STEP 5: ENGLISH -->
+        <!-- STEP 5: GERMANY CONNECTION -->
         <div class="step" id="step5">
-          <div class="step-title">Schritt 5: Englischkenntnisse</div>
-          <div class="step-description">Sprechen Sie Englisch auf C1-Niveau oder höher?</div>
+          <div class="step-title">Schritt 5: Bezug zu Deutschland</div>
+          <div class="step-description">Hatten Sie Aufenthalt oder Arbeit in Deutschland?</div>
           <div class="option-group">
             <label class="option-label">
-              <input type="radio" name="english" value="1" onchange="updateProgress()">
+              <input type="radio" name="connection" value="1" onchange="updateProgress()">
               <div class="option-text">
-                <div>Ja, ich spreche C1 oder höher (Fließend)</div>
+                <div>Ja, mindestens 6 Monate Aufenthalt in den letzten 5 Jahren</div>
               </div>
               <div class="option-points">1 Punkt</div>
             </label>
             <label class="option-label">
-              <input type="radio" name="english" value="0" onchange="updateProgress()">
+              <input type="radio" name="connection" value="0" onchange="updateProgress()">
               <div class="option-text">
-                <div>Nein, ich spreche unter C1-Niveau</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
-            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-          </div>
-        </div>
-
-        <!-- STEP 6: RESIDENCE -->
-        <div class="step" id="step6">
-          <div class="step-title">Schritt 6: Aufenthalt in Deutschland</div>
-          <div class="step-description">Hatten Sie mindestens 6 Monate rechtmäßigen Aufenthalt in Deutschland innerhalb der letzten 5 Jahre?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="residence" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Ja, ich hatte mindestens 6 Monate rechtmäßigen Aufenthalt (kein Touristenvisum)</div>
-              </div>
-              <div class="option-points">1 Punkt</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="residence" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Nein, ich hatte weniger als 6 Monate oder keinen Aufenthalt</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
-            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-          </div>
-        </div>
-
-        <!-- STEP 7: SPOUSE -->
-        <div class="step" id="step7">
-          <div class="step-title">Schritt 7: Ehepartner</div>
-          <div class="step-description">Erfüllt Ihr Ehepartner ebenfalls die Chancenkarte-Voraussetzungen?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="spouse" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Ja, mein Ehepartner erfüllt die Voraussetzungen</div>
-              </div>
-              <div class="option-points">1 Punkt</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="spouse" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Nein oder nicht verheiratet</div>
+                <div>Nein oder weniger als 6 Monate</div>
               </div>
               <div class="option-points">0 Punkte</div>
             </label>
@@ -497,81 +489,74 @@
 
         <!-- RESULT SECTION -->
         <div class="result-section" id="resultSection">
-          <div class="result-score" id="resultScore">0</div>
-          <div class="result-status" id="resultStatus">Ergebnis</div>
-          <div class="result-message" id="resultMessage">Ihre strategische Einschätzung wird angezeigt.</div>
-          
-          <!-- SCORE VISUALIZATION BLOCK -->
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; margin: 32px 0; text-align: center;">
-            <div style="margin-bottom: 24px;">
-              <div style="color: #64748b; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Ihre Chancenkarte-Punkte</div>
-              <div style="font-size: 32px; font-weight: 700; color: #0B3B8C;">
-                <span id="scoreDisplayValue">0</span> / 10
-              </div>
+          <div class="score-display">
+            <div class="score-label">Ihre geschätzte Punktezahl</div>
+            <div class="score-value"><span id="resultScore">0</span> Punkte</div>
+            <div style="color: #64748b; font-size: 14px; margin-bottom: 16px;">Mindestanforderung: 6 Punkte</div>
+            
+            <div class="score-bar">
+              <div class="score-bar-fill" id="scoreBar"></div>
             </div>
             
-            <!-- PROGRESS BAR -->
-            <div style="width: 100%; height: 12px; background: #e2e8f0; border-radius: 6px; overflow: hidden; margin-bottom: 24px;">
-              <div id="scoreBar" style="height: 100%; width: 0%; background: #ef4444; transition: width 0.3s ease, background 0.3s ease; border-radius: 6px;"></div>
-            </div>
-            
-            <!-- STATUS MESSAGE -->
-            <div id="scoreStatusMessage" style="color: #64748b; font-size: 14px; line-height: 1.6; max-width: 500px; margin: 0 auto;">
-              Ihre Einschätzung wird angezeigt.
-            </div>
+            <div id="resultStatus" class="result-status"></div>
+            <div id="resultMessage" class="result-message"></div>
           </div>
-          
+
           <!-- LEAD CAPTURE FORM -->
           <div class="lead-form">
-            <div class="lead-form-title">Erhalten Sie Ihren strategischen Chancenkarte-Bericht</div>
-            <div class="lead-form-description">Wir senden Ihnen eine detaillierte Analyse mit nächsten Schritten</div>
+            <div class="lead-form-title">Kostenlose Erstberatung anfragen</div>
+            <div class="lead-form-description">Erhalten Sie eine persönliche Beratung zu Ihren nächsten Schritten</div>
             <form action="https://formsubmit.co/info@berlingateway.de" method="POST" onsubmit="submitLead(event)">
               <div class="form-group">
                 <label>E-Mail</label>
-                <input type="email" name="email" id="leadEmail" placeholder="Ihre E-Mail-Adresse">
+                <input type="email" name="email" id="leadEmail" placeholder="Ihre E-Mail-Adresse" required>
               </div>
               <div class="form-group">
                 <label>WhatsApp (optional)</label>
                 <input type="text" name="whatsapp" id="leadWhatsApp" placeholder="+49 ...">
               </div>
-              <input type="hidden" name="_subject" value="New Chancenkarte Assessment Lead">
+              <input type="hidden" name="_subject" value="Chancenkarte Assessment - Kostenlose Beratung">
               <input type="hidden" name="_replyto" id="formReplyTo" value="">
-              <input type="hidden" name="_autoresponse" value="Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.">
+              <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage! Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen.">
               <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://www.berlingateway.de/de/assessment.html">
+              <input type="hidden" name="_next" value="https://berlingateway.de/de/assessment.html">
               <input type="hidden" name="score" id="formScore" value="0">
               <input type="hidden" name="status" id="formStatus" value="">
               <input type="hidden" name="language" value="de">
-              <input type="hidden" name="timestamp" id="formTimestamp" value="">
-              <button type="submit" class="form-submit">Bericht erhalten</button>
+              <button type="submit" class="form-submit">Beratung anfragen</button>
               <div class="form-message">Ihre Daten werden sicher behandelt und nicht weitergegeben.</div>
-              <div id="successMessage" style="display:none; margin-top: 16px; padding: 12px; background: #d1fae5; border: 1px solid #6ee7b7; border-radius: 6px; color: #065f46; text-align: center; font-size: 14px;">Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.</div>
+              <div class="success-message" id="successMessage">Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.</div>
             </form>
           </div>
 
           <div class="button-group" style="margin-top: 32px;">
             <button class="btn btn-secondary" onclick="resetAssessment()">Neu beginnen</button>
-            <button class="btn btn-primary" onclick="window.location.href='/de/chancenkarte.html'">Zur Chancenkarte</button>
+            <button class="btn btn-primary" onclick="window.location.href='/de/chancenkarte-deutschland.html'">Mehr erfahren</button>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <footer style="background: #0f172a; color: #cbd5e1; padding: 40px 20px; text-align: center; font-size: 14px; margin-top: 60px;">
-    <div class="container">
-      <p style="margin-bottom: 12px;">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
-      <p style="margin: 0;">
-        <a href="mailto:info@berlingateway.de" style="color: #cbd5e1; text-decoration: none;">info@berlingateway.de</a> · 
-        <a href="/de/" style="color: #cbd5e1; text-decoration: none;">Sitemap</a> · 
-        <a href="/ar/" style="color: #cbd5e1; text-decoration: none;">العربية</a>
-      </p>
+  <footer class="footer">
+    <div class="container wrap">
+      <div>
+        <p><strong>Berlin Gateway</strong></p>
+        <p>Perleberger Str 41, 10559 Berlin</p>
+      </div>
+      <div>
+        <p><a href="mailto:info@berlingateway.de">info@berlingateway.de</a></p>
+        <p><a href="tel:+493025730875">+49 30 25730875</a></p>
+      </div>
+      <div>
+        <p><a href="/sitemap.xml">Sitemap</a></p>
+      </div>
     </div>
   </footer>
 
   <script>
     let currentStep = 1;
-    const totalSteps = 7;
+    const totalSteps = 5;
 
     function updateProgress() {
       const progress = (currentStep / totalSteps) * 100;
@@ -579,18 +564,15 @@
     }
 
     function showStep(step) {
-      // Hide all steps
       for (let i = 1; i <= totalSteps; i++) {
         document.getElementById('step' + i).classList.remove('active');
       }
-      // Show current step
       document.getElementById('step' + step).classList.add('active');
       updateProgress();
       window.scrollTo(0, 0);
     }
 
     function nextStep() {
-      // Validate current step
       const stepInputs = document.querySelectorAll(`input[name="${getStepName(currentStep)}"]`);
       const isSelected = Array.from(stepInputs).some(input => input.checked);
       
@@ -613,13 +595,12 @@
     }
 
     function getStepName(step) {
-      const names = ['qualification', 'experience', 'language', 'age', 'english', 'residence', 'spouse'];
+      const names = ['qualification', 'experience', 'language', 'age', 'connection'];
       return names[step - 1];
     }
 
     function calculateResult() {
-      // Validate step 7
-      const stepInputs = document.querySelectorAll(`input[name="spouse"]`);
+      const stepInputs = document.querySelectorAll(`input[name="connection"]`);
       const isSelected = Array.from(stepInputs).some(input => input.checked);
       
       if (!isSelected) {
@@ -637,20 +618,20 @@
         }
       }
 
-      // Determine status
+      // Determine status and message
       let status, message, statusClass;
       if (totalPoints >= 10) {
-        status = 'Ausgezeichnete Chancen';
+        status = 'Ausgezeichnete Chancen!';
         statusClass = 'excellent';
-        message = 'Sie erfüllen die Kriterien sehr gut. Ihre Chancen auf eine erfolgreiche Anerkennung sind ausgezeichnet. Wir empfehlen, die nächsten Schritte mit einem Berater zu besprechen.';
+        message = 'Sie erfüllen die Anforderungen sehr gut. Ihre Chancen auf die Chancenkarte sind ausgezeichnet. Kontaktieren Sie uns für die nächsten Schritte.';
       } else if (totalPoints >= 6) {
-        status = 'Gutes Potenzial';
+        status = 'Chancenkarte möglich!';
         statusClass = 'good';
-        message = 'Sie haben ein gutes Potenzial für die Chancenkarte. Mit gezielten Verbesserungen können Sie Ihre Chancen weiter erhöhen.';
+        message = 'Sie erfüllen die Mindestanforderung. Sie können die Chancenkarte beantragen. Wir helfen Ihnen gerne bei den nächsten Schritten.';
       } else {
-        status = 'Frühe Phase';
+        status = 'Vorbereitung empfohlen';
         statusClass = 'early';
-        message = 'Sie befinden sich noch in einer frühen Phase. Konzentrieren Sie sich auf die Verbesserung Ihrer Deutschkenntnisse und Berufserfahrung.';
+        message = 'Sie erreichen derzeit nicht die Mindestpunktzahl von 6. Verbessern Sie Ihre Deutschkenntnisse oder Berufserfahrung und versuchen Sie es erneut.';
       }
 
       // Display result
@@ -659,35 +640,25 @@
       document.getElementById('resultStatus').className = 'result-status ' + statusClass;
       document.getElementById('resultMessage').textContent = message;
       
-      // Update score visualization
-      const scorePercentage = (totalPoints / 10) * 100;
+      // Update score bar
+      const scorePercentage = (totalPoints / 13) * 100; // Max points is 13
       const scoreBar = document.getElementById('scoreBar');
-      const scoreDisplayValue = document.getElementById('scoreDisplayValue');
-      const scoreStatusMessage = document.getElementById('scoreStatusMessage');
       
-      // Set score display
-      scoreDisplayValue.textContent = totalPoints;
-      
-      // Set progress bar color and width
-      if (totalPoints >= 8) {
+      if (totalPoints >= 10) {
         scoreBar.style.background = '#10b981'; // Green
       } else if (totalPoints >= 6) {
         scoreBar.style.background = '#0B3B8C'; // Blue
       } else {
         scoreBar.style.background = '#f59e0b'; // Orange
       }
-      scoreBar.style.width = scorePercentage + '%';
+      scoreBar.style.width = Math.min(scorePercentage, 100) + '%';
       
-      // Set status message
-      if (totalPoints >= 6) {
-        scoreStatusMessage.textContent = 'Sie erreichen die Mindestpunktzahl für die Chancenkarte.';
-      } else {
-        scoreStatusMessage.textContent = 'Sie erreichen derzeit nicht die Mindestpunktzahl. Eine bessere Vorbereitung kann Ihre Chancen erhöhen.';
-      }
+      // Update form hidden fields
+      document.getElementById('formScore').value = totalPoints;
+      document.getElementById('formStatus').value = status;
       
       document.getElementById('resultSection').classList.add('active');
 
-      // Hide steps
       for (let i = 1; i <= totalSteps; i++) {
         document.getElementById('step' + i).classList.remove('active');
       }
@@ -698,65 +669,37 @@
     function submitLead(event) {
       event.preventDefault();
       const email = document.getElementById('leadEmail').value.trim();
-      const whatsapp = document.getElementById('leadWhatsApp').value.trim();
       const form = event.target;
       
-      // Update hidden fields with current data
-      document.getElementById('formScore').value = document.getElementById('resultScore').textContent;
-      document.getElementById('formStatus').value = document.getElementById('resultStatus').textContent;
-      document.getElementById('formTimestamp').value = new Date().toISOString();
-      
-      // Validation: at least one field must be filled
-      if (!email && !whatsapp) {
-        alert('Bitte geben Sie mindestens eine E-Mail oder WhatsApp-Nummer ein.');
+      if (!email) {
+        alert('Bitte geben Sie Ihre E-Mail-Adresse ein.');
         return;
       }
       
-      // Set reply-to email if provided (for autoresponse)
-      if (email) {
-        document.getElementById('formReplyTo').value = email;
-      }
-
-      // Show success message
+      document.getElementById('formReplyTo').value = email;
       document.getElementById('successMessage').style.display = 'block';
       
-      // Submit form to FormSubmit immediately (do NOT clear fields before submit)
       form.submit();
     }
 
     function resetAssessment() {
-      // Reset all inputs
       document.querySelectorAll('input[type="radio"]').forEach(input => {
         input.checked = false;
       });
       
-      // Reset to step 1
       currentStep = 1;
       showStep(1);
       
-      // Hide result
       document.getElementById('resultSection').classList.remove('active');
     }
 
-    // Initialize
     updateProgress();
   </script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
-  }
-}
 
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
-});
-</script>
+  <script>
+    document.querySelector('.language-toggle').addEventListener('click', function() {
+      window.location.href = '/ar/assessment.html';
+    });
+  </script>
 </body>
 </html>

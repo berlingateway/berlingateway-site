@@ -62,6 +62,9 @@
 
       <section style="background:#f8fafc; border-radius:8px; padding:32px; margin-bottom:40px;">
         <h2 style="color:#0B3B8C; font-size:20px; margin-bottom:24px; text-align:center;">معايير التقييم</h2>
+        
+        <!-- DESKTOP TABLE (hidden on mobile) -->
+        <div style="display:none;" class="desktop-table">
         <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;"><table style="width:100%; border-collapse:collapse; margin-bottom:24px; min-width: 500px;">
           <thead>
             <tr style="border-bottom:2px solid #0B3B8C;">
@@ -103,6 +106,65 @@
             </tr>
           </tbody>
         </table>
+        </div>
+        </div>
+        
+        <!-- MOBILE STACKED CARDS (shown on mobile) -->
+        <div class="mobile-cards" style="display:block;">
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; flex-direction:row-reverse;">
+              <span style="color:#334155; font-weight:600; font-size:15px;">🎓 المؤهل العلمي</span>
+              <span style="background:#0B3B8C; color:#fff; padding:4px 12px; border-radius:4px; font-weight:600; font-size:13px;">حتى 4</span>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin:0; line-height:1.5; text-align:right;">الاعتراف بالمؤهل الأكاديمي</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; flex-direction:row-reverse;">
+              <span style="color:#334155; font-weight:600; font-size:15px;">💼 الخبرة المهنية</span>
+              <span style="background:#0B3B8C; color:#fff; padding:4px 12px; border-radius:4px; font-weight:600; font-size:13px;">حتى 3</span>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin:0; line-height:1.5; text-align:right;">أكثر من 3 سنوات خبرة مهنية ذات صلة (ألمانيا أو دولياً)</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; flex-direction:row-reverse;">
+              <span style="color:#334155; font-weight:600; font-size:15px;">🇩🇪 اللغة الألمانية</span>
+              <span style="background:#0B3B8C; color:#fff; padding:4px 12px; border-radius:4px; font-weight:600; font-size:13px;">حتى 3</span>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin:0; line-height:1.5; text-align:right;">مهارات اللغة الألمانية (B2 أو أعلى)</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; flex-direction:row-reverse;">
+              <span style="color:#334155; font-weight:600; font-size:15px;">🇬🇧 اللغة الإنجليزية</span>
+              <span style="background:#0B3B8C; color:#fff; padding:4px 12px; border-radius:4px; font-weight:600; font-size:13px;">1</span>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin:0; line-height:1.5; text-align:right;">مهارات اللغة الإنجليزية (B1 أو أعلى)</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; flex-direction:row-reverse;">
+              <span style="color:#334155; font-weight:600; font-size:15px;">🎂 العمر</span>
+              <span style="background:#0B3B8C; color:#fff; padding:4px 12px; border-radius:4px; font-weight:600; font-size:13px;">حتى 2</span>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin:0; line-height:1.5; text-align:right;">العمر أقل من 35 سنة</p>
+          </div>
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; flex-direction:row-reverse;">
+              <span style="color:#334155; font-weight:600; font-size:15px;">🇩🇪 الصلة بألمانيا</span>
+              <span style="background:#0B3B8C; color:#fff; padding:4px 12px; border-radius:4px; font-weight:600; font-size:13px;">1</span>
+            </div>
+            <p style="color:#64748b; font-size:14px; margin:0; line-height:1.5; text-align:right;">الاتصالات القائمة بألمانيا</p>
+          </div>
+        </div>
+        
+        <style>
+          @media (min-width: 481px) {
+            .desktop-table { display:block !important; }
+            .mobile-cards { display:none !important; }
+          }
+          @media (max-width: 480px) {
+            .desktop-table { display:none !important; }
+            .mobile-cards { display:block !important; }
+          }
+        </style>
 
         <div style="background:#fff; border-right:3px solid #0B3B8C; padding:16px; border-radius:4px; margin-top:24px;">
           <p style="color:#0B3B8C; font-weight:600; margin:0 0 8px;">مطلوب: 6 نقاط على الأقل</p>

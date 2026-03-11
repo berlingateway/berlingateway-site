@@ -377,5 +377,22 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script>
+function toggleLangDropdown(event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown) {
+    dropdown.classList.toggle('active');
+  }
+}
+
+document.addEventListener('click', function(event) {
+  const langSwitcher = document.querySelector('.lang-switcher');
+  const dropdown = document.getElementById('langDropdown');
+  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
+    dropdown.classList.remove('active');
+  }
+});
+</script>
 </body>
 </html>

@@ -30,17 +30,24 @@
 </script>
 </head>
 <body class="rtl">
-  <header class="header">
+  <header class="header" dir="rtl">
   <div class="container wrap">
     <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
     <nav class="nav">
-      <a href="/ar/">AR</a><span class="sep">·</span><a href="/de/">DE</a>
-      <span class="sep">·</span><a href="/ar/monitor.html">مرصد سوق العمل</a>
+      <a href="/ar/monitor.html">مرصد سوق العمل</a>
       <a href="/ar/systemlogik.html">منطق النظام</a>
       <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
     </nav>
+    <div class="lang-switcher">
+      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 العربية</button>
+      <div class="lang-dropdown" id="langDropdown">
+        <a href="/de/">Deutsch</a>
+        <a href="/ar/">العربية</a>
+      </div>
+    </div>
   </div>
 </header>
+
 
 
   <main style="padding:40px 20px;">

@@ -140,3 +140,20 @@ span[dir="ltr"]{direction:ltr;unicode-bidi:embed;display:inline-block}
   .jobs-container{grid-template-columns:1fr}
   .jobs-image{height:250px}
 }
+
+/* Language Switcher Styling */
+.lang-switcher{position:relative;display:flex;align-items:center}
+.lang-toggle{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--line);background:#fff;color:var(--text);font-size:14px;border-radius:6px;cursor:pointer;transition:all .2s ease}
+.lang-toggle:hover{background:var(--soft);border-color:var(--primary)}
+.lang-dropdown{display:none;position:absolute;top:100%;right:0;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:1000;min-width:140px;margin-top:4px}
+.lang-dropdown.active{display:block}
+.lang-dropdown a{display:block;padding:10px 16px;color:var(--text);font-size:14px;border-bottom:1px solid var(--line);transition:all .2s ease}
+.lang-dropdown a:last-child{border-bottom:none}
+.lang-dropdown a:hover{background:var(--soft);color:var(--primary)}
+
+/* Mobile adjustments */
+@media(max-width:768px){
+  .lang-toggle{font-size:13px;padding:6px 10px}
+  .lang-dropdown{min-width:120px}
+  .lang-dropdown a{padding:8px 12px;font-size:13px}
+}

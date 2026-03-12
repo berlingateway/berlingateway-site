@@ -6,6 +6,9 @@ import { z } from "zod";
 import { nanoid } from "nanoid";
 import { sendCaseConfirmationEmail } from "./_core/email";
 import { sendOwnerNotification } from "./_core/sendgrid";
+import { storagePut } from "./storage";
+import { insertMedicalReport } from "./db";
+import { notifyOwner } from "./_core/notification";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -98,6 +101,61 @@ export const appRouter = router({
           success: true,
           referenceId,
         };
+      }),
+  }),
+
+  // Medical reports submission — file upload + DB + owner notification
+  medicalReports: router({
+    submit: publicProcedure
+      .input(z.object({
+        patientName: z.string().min(1, "Name is required"),
+        country: z.string().min(1, "Country is required"),
+        medicalCondition: z.string().min(1, "Medical condition is required"),
+        files: z.array(z.object({
+          name: z.string(),
+          mimeType: z.string(),
+          base64: z.string(), // base64-encoded file content
+        })).max(10, "Maximum 10 files allowed"),
+      }))
+      .mutation(async ({ input }) => {
+        const referenceId = nanoid(12).toUpperCase();
+
+        // Upload each file to S3
+        const uploadedFiles: { key: string; url: string; name: string }[] = [];
+        for (const file of input.files) {
+          const buffer = Buffer.from(file.base64, "base64");
+          const ext = file.name.split(".").pop() ?? "bin";
+          const key = `medical-reports/${referenceId}/${nanoid(8)}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
+          const { url } = await storagePut(key, buffer, file.mimeType);
+          uploadedFiles.push({ key, url, name: file.name });
+        }
+
+        // Persist to DB
+        await insertMedicalReport({
+          referenceId,
+          patientName: input.patientName,
+          country: input.country,
+          medicalCondition: input.medicalCondition,
+          fileKeys: JSON.stringify(uploadedFiles.map(f => f.key)),
+          fileUrls: JSON.stringify(uploadedFiles.map(f => f.url)),
+        });
+
+        // Notify owner (non-blocking)
+        const fileList = uploadedFiles.length > 0
+          ? uploadedFiles.map(f => `• ${f.name}`).join("\n")
+          : "No files attached";
+        notifyOwner({
+          title: `New Medical Report Submission — ${referenceId}`,
+          content: `Reference: ${referenceId}\nPatient: ${input.patientName}\nCountry: ${input.country}\nCondition: ${input.medicalCondition}\n\nFiles:\n${fileList}`,
+        }).catch(err => console.warn("[MedicalReports] Owner notification failed:", err));
+
+        // Also notify via SendGrid if available
+        sendOwnerNotification(
+          `New Medical Report Submission — ${referenceId}`,
+          `**Reference:** ${referenceId}\n\n**Patient:** ${input.patientName}\n**Country:** ${input.country}\n**Condition:** ${input.medicalCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
+        ).catch(err => console.warn("[MedicalReports] SendGrid notification failed:", err));
+
+        return { success: true, referenceId };
       }),
   }),
 

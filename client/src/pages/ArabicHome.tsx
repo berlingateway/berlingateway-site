@@ -92,8 +92,15 @@ export default function ArabicHome() {
           <a href="#submit-case" className={`hover:text-slate-900 transition-colors ${activeSection === 'submit-case' ? 'text-slate-900 font-medium' : ''}`}>تقديم الحالة</a>
         </div>
 
-        {/* Language Switch */}
+        {/* Send Medical Reports CTA + Language Switch */}
         <div className="flex items-center gap-3">
+          <a
+            href="/send-medical-reports"
+            className="hidden md:inline-block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            إرسال التقارير الطبية
+          </a>
           <a href="/" className="text-xs text-slate-400 hover:text-slate-700 transition-colors">EN</a>
           <span className="text-slate-300 text-xs">|</span>
           <span className="text-xs text-slate-900 font-medium">AR</span>
@@ -123,6 +130,14 @@ export default function ArabicHome() {
           <a href="#focus" onClick={() => setMobileMenuOpen(false)}>مجالات التخصص</a>
           <a href="#why-germany" onClick={() => setMobileMenuOpen(false)}>لماذا ألمانيا</a>
           <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>تقديم الحالة</a>
+          <a
+            href="/send-medical-reports"
+            onClick={() => setMobileMenuOpen(false)}
+            className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors w-full"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            إرسال التقارير الطبية
+          </a>
         </div>
       )}
 

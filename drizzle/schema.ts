@@ -26,3 +26,17 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
 // TODO: Add your tables here
+
+export const medicalReports = mysqlTable("medicalReports", {
+  id: int("id").autoincrement().primaryKey(),
+  referenceId: varchar("referenceId", { length: 32 }).notNull().unique(),
+  patientName: text("patientName").notNull(),
+  country: text("country").notNull(),
+  medicalCondition: text("medicalCondition").notNull(),
+  fileKeys: text("fileKeys").notNull(), // JSON array of S3 keys
+  fileUrls: text("fileUrls").notNull(), // JSON array of public URLs
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type MedicalReport = typeof medicalReports.$inferSelect;
+export type InsertMedicalReport = typeof medicalReports.$inferInsert;

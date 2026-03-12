@@ -8,6 +8,13 @@
       "when": 1769960796235,
       "tag": "0000_jittery_scarlet_witch",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1773304575170,
+      "tag": "0001_careless_kate_bishop",
+      "breakpoints": true
     }
   ]
 }

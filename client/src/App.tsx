@@ -17,6 +17,7 @@ import ProfessionalInterfaces from "./pages/ProfessionalInterfaces";
 import Contact from "./pages/Contact";
 import ArabicHome from "./pages/ArabicHome";
 import SubmitCase from "./pages/SubmitCase";
+import SendMedicalReports from "./pages/SendMedicalReports";
 
 
 function Router() {
@@ -36,6 +37,7 @@ function Router() {
       <Route path={"/contact"} component={Contact} />
       <Route path={"/ar"} component={ArabicHome} />
       <Route path={"/submit-case"} component={SubmitCase} />
+      <Route path={"/send-medical-reports"} component={SendMedicalReports} />
 
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

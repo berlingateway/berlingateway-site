@@ -1051,3 +1051,14 @@
 - [x] Replace/insert images in Home.tsx: hospital building in Section 2, medical review board in Physician-Level Coordination, advanced diagnostics below review board, university campus in Why Germany
 - [x] Update ArabicHome.tsx with same 4 CDN images (Arabic alt text)
 - [x] TypeScript: 0 errors
+
+## Send Medical Reports Page
+- [x] Add medicalReports table to drizzle/schema.ts
+- [x] Push DB migration with pnpm db:push
+- [x] Add medicalReports.uploadUrl tRPC procedure (multipart file upload to S3)
+- [x] Add medicalReports.submit tRPC procedure (save record + notify owner)
+- [x] Create /send-medical-reports page (SendMedicalReports.tsx)
+- [x] Add route to App.tsx
+- [x] Add "Send Medical Reports" primary button to EN navigation (Home.tsx)
+- [x] Add "إرسال التقارير الطبية" primary button to AR navigation (ArabicHome.tsx)
+- [x] Write vitest tests for new procedures

@@ -160,8 +160,14 @@ export default function Home() {
           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
         </div>
         
-        {/* Language Switch + Mobile Menu Button */}
-        <div className="flex items-center gap-3">
+        {/* Send Medical Reports CTA + Language Switch */}
+        <div className="flex items-center gap-4">
+          <Link
+            href="/send-medical-reports"
+            className="hidden md:inline-block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
+          >
+            Send Medical Reports
+          </Link>
           <span className="text-xs text-slate-900 font-medium">EN</span>
           <span className="text-slate-300 text-xs">|</span>
           <a href="/ar" className="text-xs text-slate-400 hover:text-slate-700 transition-colors">AR</a>
@@ -193,6 +199,13 @@ export default function Home() {
         <a href="#operations" onClick={() => setMobileMenuOpen(false)}>How We Operate</a>
         <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>Submit Case</a>
         <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+        <Link
+          href="/send-medical-reports"
+          onClick={() => setMobileMenuOpen(false)}
+          className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors"
+        >
+          Send Medical Reports
+        </Link>
       </div>
 
       {/* DOMINANT CTA SECTION - Priority Medical Evaluation */}

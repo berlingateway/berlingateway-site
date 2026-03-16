@@ -1062,3 +1062,11 @@
 - [x] Add "Send Medical Reports" primary button to EN navigation (Home.tsx)
 - [x] Add "إرسال التقارير الطبية" primary button to AR navigation (ArabicHome.tsx)
 - [x] Write vitest tests for new procedures
+
+## 30 SEO Medical Condition Pages
+- [x] Create shared MedicalConditionPage component
+- [x] Generate all 30 condition page files
+- [x] Register all 30 routes in App.tsx
+- [x] Add Medical Conditions nav section to Home.tsx
+- [x] Add Medical Conditions nav section to ArabicHome.tsx
+- [x] Update sitemap.xml with all 30 new routes

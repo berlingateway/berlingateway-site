@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { FileText, Activity, Network, Calendar, Heart } from "lucide-react";
+import { FileText, Activity, Network, Calendar, Heart, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 // Sovereign iframe form — completely independent of React/tRPC/backend
@@ -77,6 +77,19 @@ function useArabicBanner() {
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [conditionsOpen, setConditionsOpen] = useState(false);
+  const [mobileConditionsOpen, setMobileConditionsOpen] = useState(false);
+  const conditionsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (conditionsRef.current && !conditionsRef.current.contains(e.target as Node)) {
+        setConditionsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
   const { show: showArabicBanner, dismiss: dismissArabicBanner } = useArabicBanner();
 
   // Active section tracking based on scroll position
@@ -152,10 +165,59 @@ export default function Home() {
         </div>
         
         {/* Desktop Navigation */}
-        <div className="desktop-nav flex gap-10 text-sm text-slate-500">
+        <div className="desktop-nav flex gap-10 text-sm text-slate-500 items-center">
           <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
           <a href="#governance" className={`nav-link ${activeSection === 'governance' ? 'active' : ''}`}>Governance</a>
           <a href="#operations" className={`nav-link ${activeSection === 'operations' ? 'active' : ''}`}>How We Operate</a>
+          {/* Medical Conditions Dropdown */}
+          <div className="relative" ref={conditionsRef}>
+            <button
+              onClick={() => setConditionsOpen(v => !v)}
+              className="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-none p-0"
+            >
+              Medical Conditions <ChevronDown className={`w-3 h-3 transition-transform ${conditionsOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {conditionsOpen && (
+              <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-slate-200 shadow-lg z-50 py-2">
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-slate-100 mb-1">Neurology</div>
+                <Link href="/brain-tumor-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Brain Tumor Treatment</Link>
+                <Link href="/trigeminal-neuralgia-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Trigeminal Neuralgia</Link>
+                <Link href="/brain-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Brain Surgery</Link>
+                <Link href="/neurology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Neurology Treatment</Link>
+                <Link href="/parkinson-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Parkinson's Disease</Link>
+                <Link href="/multiple-sclerosis-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Multiple Sclerosis</Link>
+                <Link href="/epilepsy-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Epilepsy</Link>
+                <Link href="/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Pediatric Neurology</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">Spine</div>
+                <Link href="/spine-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Spine Surgery</Link>
+                <Link href="/herniated-disc-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Herniated Disc</Link>
+                <Link href="/scoliosis-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Scoliosis</Link>
+                <Link href="/spinal-stenosis-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Spinal Stenosis</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">Oncology</div>
+                <Link href="/lung-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Lung Cancer</Link>
+                <Link href="/breast-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Breast Cancer</Link>
+                <Link href="/prostate-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Prostate Cancer</Link>
+                <Link href="/colon-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Colon Cancer</Link>
+                <Link href="/liver-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Liver Cancer</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">Orthopedics</div>
+                <Link href="/orthopedic-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Orthopedic Surgery</Link>
+                <Link href="/knee-replacement-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Knee Replacement</Link>
+                <Link href="/hip-replacement-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Hip Replacement</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">Cardiology</div>
+                <Link href="/cardiology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Cardiology</Link>
+                <Link href="/heart-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Heart Surgery</Link>
+                <Link href="/arrhythmia-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Arrhythmia</Link>
+                <Link href="/congenital-heart-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Congenital Heart</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">Advisory Services</div>
+                <Link href="/advanced-diagnostics-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Advanced Diagnostics</Link>
+                <Link href="/second-opinion-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Second Opinion</Link>
+                <Link href="/complex-medical-cases-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Complex Cases</Link>
+                <Link href="/treatment-in-germany-for-international-patients" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">International Patients</Link>
+                <Link href="/specialist-referral-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">Specialist Referral</Link>
+                <Link href="/university-hospital-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">University Hospital</Link>
+              </div>
+            )}
+          </div>
           <a href="#submit-case" className={`nav-link ${activeSection === 'submit-case' ? 'active' : ''}`}>Submit Case</a>
           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
         </div>
@@ -199,6 +261,47 @@ export default function Home() {
         <a href="#operations" onClick={() => setMobileMenuOpen(false)}>How We Operate</a>
         <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>Submit Case</a>
         <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+        {/* Mobile Medical Conditions */}
+        <button
+          onClick={() => setMobileConditionsOpen(v => !v)}
+          className="flex items-center justify-between w-full text-left text-slate-700 font-medium text-sm py-2 border-t border-slate-100"
+        >
+          Medical Conditions <ChevronDown className={`w-4 h-4 transition-transform ${mobileConditionsOpen ? 'rotate-180' : ''}`} />
+        </button>
+        {mobileConditionsOpen && (
+          <div className="flex flex-col gap-1 pl-3 pb-2">
+            <Link href="/brain-tumor-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Brain Tumor Treatment</Link>
+            <Link href="/trigeminal-neuralgia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Trigeminal Neuralgia</Link>
+            <Link href="/spine-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Spine Surgery</Link>
+            <Link href="/herniated-disc-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Herniated Disc</Link>
+            <Link href="/brain-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Brain Surgery</Link>
+            <Link href="/neurology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Neurology</Link>
+            <Link href="/parkinson-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Parkinson's Disease</Link>
+            <Link href="/multiple-sclerosis-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Multiple Sclerosis</Link>
+            <Link href="/epilepsy-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Epilepsy</Link>
+            <Link href="/pediatric-neurology-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Pediatric Neurology</Link>
+            <Link href="/lung-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Lung Cancer</Link>
+            <Link href="/breast-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Breast Cancer</Link>
+            <Link href="/prostate-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Prostate Cancer</Link>
+            <Link href="/colon-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Colon Cancer</Link>
+            <Link href="/liver-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Liver Cancer</Link>
+            <Link href="/orthopedic-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Orthopedic Surgery</Link>
+            <Link href="/knee-replacement-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Knee Replacement</Link>
+            <Link href="/hip-replacement-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Hip Replacement</Link>
+            <Link href="/scoliosis-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Scoliosis</Link>
+            <Link href="/spinal-stenosis-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Spinal Stenosis</Link>
+            <Link href="/cardiology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Cardiology</Link>
+            <Link href="/heart-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Heart Surgery</Link>
+            <Link href="/arrhythmia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Arrhythmia</Link>
+            <Link href="/congenital-heart-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Congenital Heart</Link>
+            <Link href="/advanced-diagnostics-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Advanced Diagnostics</Link>
+            <Link href="/second-opinion-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Second Opinion</Link>
+            <Link href="/complex-medical-cases-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Complex Cases</Link>
+            <Link href="/treatment-in-germany-for-international-patients" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">International Patients</Link>
+            <Link href="/specialist-referral-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">Specialist Referral</Link>
+            <Link href="/university-hospital-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">University Hospital</Link>
+          </div>
+        )}
         <Link
           href="/send-medical-reports"
           onClick={() => setMobileMenuOpen(false)}

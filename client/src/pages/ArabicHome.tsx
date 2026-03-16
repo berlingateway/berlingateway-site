@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "wouter";
 
 // Sovereign iframe form — Arabic version
 function ArabicIframeForm() {
@@ -36,6 +37,19 @@ function ArabicIframeForm() {
 export default function ArabicHome() {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [conditionsOpen, setConditionsOpen] = useState(false);
+  const [mobileConditionsOpen, setMobileConditionsOpen] = useState(false);
+  const conditionsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (conditionsRef.current && !conditionsRef.current.contains(e.target as Node)) {
+        setConditionsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,10 +99,60 @@ export default function ArabicHome() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8 text-sm text-slate-500">
+        <div className="hidden md:flex gap-8 text-sm text-slate-500 items-center">
           <a href="#home" className={`hover:text-slate-900 transition-colors ${activeSection === 'home' ? 'text-slate-900 font-medium' : ''}`}>الرئيسية</a>
           <a href="#focus" className={`hover:text-slate-900 transition-colors ${activeSection === 'focus' ? 'text-slate-900 font-medium' : ''}`}>مجالات التخصص</a>
           <a href="#why-germany" className={`hover:text-slate-900 transition-colors ${activeSection === 'why-germany' ? 'text-slate-900 font-medium' : ''}`}>لماذا ألمانيا</a>
+          {/* Medical Conditions Dropdown (Arabic) */}
+          <div className="relative" ref={conditionsRef}>
+            <button
+              onClick={() => setConditionsOpen(v => !v)}
+              className="hover:text-slate-900 transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none p-0 text-sm text-slate-500"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              الحالات الطبية <span className={`text-xs transition-transform inline-block ${conditionsOpen ? 'rotate-180' : ''}`}>▾</span>
+            </button>
+            {conditionsOpen && (
+              <div className="absolute top-full right-0 mt-2 w-72 bg-white border border-slate-200 shadow-lg z-50 py-2 max-h-96 overflow-y-auto" dir="rtl">
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-slate-100 mb-1">أمراض الأعصاب</div>
+                <Link href="/brain-tumor-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">أورام المخ</Link>
+                <Link href="/trigeminal-neuralgia-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">ألم العصب الخامس</Link>
+                <Link href="/brain-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">جراحة المخ</Link>
+                <Link href="/neurology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">علاج الأمراض العصبية</Link>
+                <Link href="/parkinson-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">مرض باركنسون</Link>
+                <Link href="/multiple-sclerosis-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">التصلب المتعدد</Link>
+                <Link href="/epilepsy-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">الصرع</Link>
+                <Link href="/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">طب أعصاب الأطفال</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">العمود الفقري</div>
+                <Link href="/spine-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">جراحة العمود الفقري</Link>
+                <Link href="/herniated-disc-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">الانزلاق الغضروفي</Link>
+                <Link href="/scoliosis-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">الجنف</Link>
+                <Link href="/spinal-stenosis-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">تضيق القناة الشوكية</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">الأورام</div>
+                <Link href="/lung-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">سرطان الرئة</Link>
+                <Link href="/breast-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">سرطان الثدي</Link>
+                <Link href="/prostate-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">سرطان البروستاتا</Link>
+                <Link href="/colon-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">سرطان القولون</Link>
+                <Link href="/liver-cancer-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">سرطان الكبد</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">العظام والمفاصل</div>
+                <Link href="/orthopedic-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">جراحة العظام</Link>
+                <Link href="/knee-replacement-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">تركيب مفصل الركبة</Link>
+                <Link href="/hip-replacement-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">تركيب مفصل الورك</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">القلب والأوعية</div>
+                <Link href="/cardiology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">أمراض القلب</Link>
+                <Link href="/heart-surgery-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">جراحة القلب</Link>
+                <Link href="/arrhythmia-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">اضطرابات ضربات القلب</Link>
+                <Link href="/congenital-heart-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">أمراض القلب الخلقية</Link>
+                <div className="px-4 py-2 text-[10px] text-slate-400 uppercase tracking-widest font-medium border-b border-t border-slate-100 my-1">خدمات استشارية</div>
+                <Link href="/advanced-diagnostics-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">التشخيص المتقدم</Link>
+                <Link href="/second-opinion-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">الرأي الطبي الثاني</Link>
+                <Link href="/complex-medical-cases-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">الحالات المعقدة</Link>
+                <Link href="/treatment-in-germany-for-international-patients" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">المرضى الدوليون</Link>
+                <Link href="/specialist-referral-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">الإحالة للمختصين</Link>
+                <Link href="/university-hospital-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-slate-900">المستشفيات الجامعية</Link>
+              </div>
+            )}
+          </div>
           <a href="#submit-case" className={`hover:text-slate-900 transition-colors ${activeSection === 'submit-case' ? 'text-slate-900 font-medium' : ''}`}>تقديم الحالة</a>
         </div>
 
@@ -130,6 +194,48 @@ export default function ArabicHome() {
           <a href="#focus" onClick={() => setMobileMenuOpen(false)}>مجالات التخصص</a>
           <a href="#why-germany" onClick={() => setMobileMenuOpen(false)}>لماذا ألمانيا</a>
           <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>تقديم الحالة</a>
+          {/* Mobile Medical Conditions (Arabic) */}
+          <button
+            onClick={() => setMobileConditionsOpen(v => !v)}
+            className="flex items-center justify-between w-full text-right text-slate-700 font-medium text-sm py-2 border-t border-slate-100"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            الحالات الطبية <span className={`text-xs transition-transform inline-block ${mobileConditionsOpen ? 'rotate-180' : ''}`}>▾</span>
+          </button>
+          {mobileConditionsOpen && (
+            <div className="flex flex-col gap-1 pr-3 pb-2" dir="rtl">
+              <Link href="/brain-tumor-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">أورام المخ</Link>
+              <Link href="/trigeminal-neuralgia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">ألم العصب الخامس</Link>
+              <Link href="/spine-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">جراحة العمود الفقري</Link>
+              <Link href="/herniated-disc-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الانزلاق الغضروفي</Link>
+              <Link href="/brain-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">جراحة المخ</Link>
+              <Link href="/neurology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الأمراض العصبية</Link>
+              <Link href="/parkinson-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">باركنسون</Link>
+              <Link href="/multiple-sclerosis-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">التصلب المتعدد</Link>
+              <Link href="/epilepsy-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الصرع</Link>
+              <Link href="/pediatric-neurology-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">طب أعصاب الأطفال</Link>
+              <Link href="/lung-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">سرطان الرئة</Link>
+              <Link href="/breast-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">سرطان الثدي</Link>
+              <Link href="/prostate-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">سرطان البروستاتا</Link>
+              <Link href="/colon-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">سرطان القولون</Link>
+              <Link href="/liver-cancer-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">سرطان الكبد</Link>
+              <Link href="/orthopedic-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">جراحة العظام</Link>
+              <Link href="/knee-replacement-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">مفصل الركبة</Link>
+              <Link href="/hip-replacement-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">مفصل الورك</Link>
+              <Link href="/scoliosis-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الجنف</Link>
+              <Link href="/spinal-stenosis-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">تضيق القناة الشوكية</Link>
+              <Link href="/cardiology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">أمراض القلب</Link>
+              <Link href="/heart-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">جراحة القلب</Link>
+              <Link href="/arrhythmia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">اضطرابات القلب</Link>
+              <Link href="/congenital-heart-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">القلب الخلقي</Link>
+              <Link href="/advanced-diagnostics-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">التشخيص المتقدم</Link>
+              <Link href="/second-opinion-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الرأي الطبي الثاني</Link>
+              <Link href="/complex-medical-cases-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الحالات المعقدة</Link>
+              <Link href="/treatment-in-germany-for-international-patients" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">المرضى الدوليون</Link>
+              <Link href="/specialist-referral-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الإحالة للمختصين</Link>
+              <Link href="/university-hospital-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">المستشفيات الجامعية</Link>
+            </div>
+          )}
           <a
             href="/send-medical-reports"
             onClick={() => setMobileMenuOpen(false)}

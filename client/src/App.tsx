@@ -19,6 +19,38 @@ import ArabicHome from "./pages/ArabicHome";
 import SubmitCase from "./pages/SubmitCase";
 import SendMedicalReports from "./pages/SendMedicalReports";
 
+// Medical Condition Pages
+import BrainTumor from "./pages/conditions/BrainTumor";
+import TrigeminalNeuralgia from "./pages/conditions/TrigeminalNeuralgia";
+import SpineSurgery from "./pages/conditions/SpineSurgery";
+import HerniatedDisc from "./pages/conditions/HerniatedDisc";
+import BrainSurgery from "./pages/conditions/BrainSurgery";
+import NeurologyTreatment from "./pages/conditions/NeurologyTreatment";
+import ParkinsonTreatment from "./pages/conditions/ParkinsonTreatment";
+import MultipleSclerosis from "./pages/conditions/MultipleSclerosis";
+import EpilepsyTreatment from "./pages/conditions/EpilepsyTreatment";
+import PediatricNeurology from "./pages/conditions/PediatricNeurology";
+import LungCancer from "./pages/conditions/LungCancer";
+import BreastCancer from "./pages/conditions/BreastCancer";
+import ProstateCancer from "./pages/conditions/ProstateCancer";
+import ColonCancer from "./pages/conditions/ColonCancer";
+import LiverCancer from "./pages/conditions/LiverCancer";
+import OrthopedicSurgery from "./pages/conditions/OrthopedicSurgery";
+import KneeReplacement from "./pages/conditions/KneeReplacement";
+import HipReplacement from "./pages/conditions/HipReplacement";
+import ScoliosisTreatment from "./pages/conditions/ScoliosisTreatment";
+import SpinalStenosis from "./pages/conditions/SpinalStenosis";
+import CardiologyTreatment from "./pages/conditions/CardiologyTreatment";
+import HeartSurgery from "./pages/conditions/HeartSurgery";
+import ArrhythmiaTreatment from "./pages/conditions/ArrhythmiaTreatment";
+import CongenitalHeart from "./pages/conditions/CongenitalHeart";
+import AdvancedDiagnostics from "./pages/conditions/AdvancedDiagnostics";
+import SecondOpinion from "./pages/conditions/SecondOpinion";
+import ComplexMedicalCases from "./pages/conditions/ComplexMedicalCases";
+import TreatmentInternationalPatients from "./pages/conditions/TreatmentInternationalPatients";
+import SpecialistReferral from "./pages/conditions/SpecialistReferral";
+import UniversityHospitalTreatment from "./pages/conditions/UniversityHospitalTreatment";
+
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -38,6 +70,38 @@ function Router() {
       <Route path={"/ar"} component={ArabicHome} />
       <Route path={"/submit-case"} component={SubmitCase} />
       <Route path={"/send-medical-reports"} component={SendMedicalReports} />
+
+      {/* Medical Condition Pages */}
+      <Route path={"/brain-tumor-treatment-germany"} component={BrainTumor} />
+      <Route path={"/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgia} />
+      <Route path={"/spine-surgery-germany"} component={SpineSurgery} />
+      <Route path={"/herniated-disc-treatment-germany"} component={HerniatedDisc} />
+      <Route path={"/brain-surgery-germany"} component={BrainSurgery} />
+      <Route path={"/neurology-treatment-germany"} component={NeurologyTreatment} />
+      <Route path={"/parkinson-treatment-germany"} component={ParkinsonTreatment} />
+      <Route path={"/multiple-sclerosis-treatment-germany"} component={MultipleSclerosis} />
+      <Route path={"/epilepsy-treatment-germany"} component={EpilepsyTreatment} />
+      <Route path={"/pediatric-neurology-germany"} component={PediatricNeurology} />
+      <Route path={"/lung-cancer-treatment-germany"} component={LungCancer} />
+      <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
+      <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />
+      <Route path={"/colon-cancer-treatment-germany"} component={ColonCancer} />
+      <Route path={"/liver-cancer-treatment-germany"} component={LiverCancer} />
+      <Route path={"/orthopedic-surgery-germany"} component={OrthopedicSurgery} />
+      <Route path={"/knee-replacement-germany"} component={KneeReplacement} />
+      <Route path={"/hip-replacement-germany"} component={HipReplacement} />
+      <Route path={"/scoliosis-treatment-germany"} component={ScoliosisTreatment} />
+      <Route path={"/spinal-stenosis-treatment-germany"} component={SpinalStenosis} />
+      <Route path={"/cardiology-treatment-germany"} component={CardiologyTreatment} />
+      <Route path={"/heart-surgery-germany"} component={HeartSurgery} />
+      <Route path={"/arrhythmia-treatment-germany"} component={ArrhythmiaTreatment} />
+      <Route path={"/congenital-heart-treatment-germany"} component={CongenitalHeart} />
+      <Route path={"/advanced-diagnostics-germany"} component={AdvancedDiagnostics} />
+      <Route path={"/second-opinion-germany"} component={SecondOpinion} />
+      <Route path={"/complex-medical-cases-germany"} component={ComplexMedicalCases} />
+      <Route path={"/treatment-in-germany-for-international-patients"} component={TreatmentInternationalPatients} />
+      <Route path={"/specialist-referral-germany"} component={SpecialistReferral} />
+      <Route path={"/university-hospital-treatment-germany"} component={UniversityHospitalTreatment} />
 
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

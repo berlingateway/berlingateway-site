@@ -1070,3 +1070,8 @@
 - [x] Add Medical Conditions nav section to Home.tsx
 - [x] Add Medical Conditions nav section to ArabicHome.tsx
 - [x] Update sitemap.xml with all 30 new routes
+
+## Floating WhatsApp Button
+- [x] Create FloatingWhatsApp component (fixed lower-right corner, all pages)
+- [x] Add to App.tsx so it appears globally on every route
+- [x] Number: +49 1578 1497451, Label: Medical Coordinator

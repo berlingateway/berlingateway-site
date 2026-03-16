@@ -18,6 +18,7 @@ import Contact from "./pages/Contact";
 import ArabicHome from "./pages/ArabicHome";
 import SubmitCase from "./pages/SubmitCase";
 import SendMedicalReports from "./pages/SendMedicalReports";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 // Medical Condition Pages
 import BrainTumor from "./pages/conditions/BrainTumor";
@@ -125,6 +126,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <FloatingWhatsApp />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

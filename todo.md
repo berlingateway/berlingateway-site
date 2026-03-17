@@ -1107,3 +1107,11 @@
 - [x] Fix 1: Register all 6 hub routes in App.tsx + update sitemap
 - [x] Fix 2: Fix Arabic locale persistence — add Arabic back link on all condition pages
 - [x] Fix 3: Add [TEST] prefix to test submission notifications (medicalReports + referringDoctors)
+
+## Arabic Navigation Rebuild (Mirror English 1:1)
+- [ ] Read English Home.tsx navigation structure completely
+- [ ] Rewrite ArabicHome.tsx desktop navigation as full mega-menu (RTL, no scroll)
+- [ ] Ensure all 6 header items: الرئيسية, الحوكمة, كيف نعمل, الحالات الطبية, تقديم الحالة, تواصل
+- [ ] Remove all overflow-y scroll and max-height constraints from Arabic dropdown
+- [ ] Multi-column mega-menu layout matching English
+- [ ] Verify all links intact, TypeScript 0 errors

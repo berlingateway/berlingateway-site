@@ -1083,3 +1083,10 @@
 - [x] Create ReferringDoctors.tsx page (Doctor Name, Clinic/Hospital, Country, Patient Condition, Upload Reports)
 - [x] Register /referring-doctors route in App.tsx
 - [x] Update sitemap.xml
+
+## 5 SEO Specialty Pages (March 2026)
+- [x] Create /cancer-treatment-germany page (CancerTreatment.tsx)
+- [x] Create /orthopedic-treatment-germany page (OrthopedicTreatment.tsx)
+- [x] Register both new routes in App.tsx
+- [x] Verify 3 existing routes accessible: /brain-tumor-treatment-germany, /neurology-treatment-germany, /spine-surgery-germany
+- [x] Update sitemap.xml with 2 new URLs

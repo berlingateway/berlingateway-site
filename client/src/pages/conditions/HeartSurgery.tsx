@@ -21,6 +21,7 @@ export default function HeartSurgery() {
         "about": { "@type": "MedicalCondition", "name": "Cardiac Surgical Condition" },
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
+      arabicSummary="جراحة القلب تشمل طيفاً واسعاً من التدخلات، منها عمليات القسطرة التاجية، وإصلاح أو استبدال الصمامات، وجراحة الشريان الأبهر، وعيوب القلب الخلقية. تعتمد طريقة التدخل على طبيعة الحالة وتشريح المريض وخبرة الفريق الجراحي. تتميز مراكز جراحة القلب في ألمانيا بأعداد جراحية عالية ونتائج خاضعة لرقابة جودة مستمرة. يبدأ التقييم بمراجعة نتائج القسطرة والموجات فوق الصوتية وصور الأشعة لتحديد أنسب أسلوب جراحي."
     />
   );
 }

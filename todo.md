@@ -1095,3 +1095,8 @@
 - [x] Create InternationalPatients.tsx page with institutional content and Send Medical Reports CTA
 - [x] Register /international-patients route in App.tsx
 - [x] Update sitemap.xml
+
+## Arabic Summary Block on All Condition Pages
+- [x] Extend MedicalConditionPage component with optional arabicSummary prop
+- [x] Add Arabic summaries to 10 priority condition pages (batch 1 of 2)
+- [x] Verify TypeScript zero errors (0 errors after batch 1)

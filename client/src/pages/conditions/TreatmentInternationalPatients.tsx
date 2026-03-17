@@ -21,6 +21,7 @@ export default function TreatmentInternationalPatients() {
         "about": { "@type": "MedicalCondition", "name": "International Patient Medical Access" },
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
+      arabicSummary="يستقبل النظام الصحي في ألمانيا مرضى من جميع أنحاء العالم، سواء كانوا مرضى خاصين، أو حالات ممولة حكومياً، أو إحالات دبلوماسية. كل مسار له متطلبات إدارية وسريرية خاصة يجب تنسيقها مسبقاً. يبدأ الوصول إلى النظام بمراجعة سريرية لتحديد المتخصص والمؤسسة المناسبة، ويدير منسق طبي في برلين عملية التحويل والتوثيق اللازمة. يمكن إرسال التقارير الطبية للتقييم الأولي."
     />
   );
 }

@@ -22,6 +22,8 @@ export interface MedicalConditionPageProps {
   specialistEvaluation: string;
   /** Optional structured data JSON-LD string */
   structuredData?: string;
+  /** Optional Arabic summary shown above the English content */
+  arabicSummary?: string;
 }
 
 export default function MedicalConditionPage({
@@ -35,6 +37,7 @@ export default function MedicalConditionPage({
   whyGermany,
   specialistEvaluation,
   structuredData,
+  arabicSummary,
 }: MedicalConditionPageProps) {
   const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
 
@@ -109,6 +112,18 @@ export default function MedicalConditionPage({
 
       {/* Main content */}
       <main className="max-w-3xl mx-auto px-6 py-14 md:py-20 space-y-14">
+
+        {/* Arabic Summary Block */}
+        {arabicSummary && (
+          <section dir="rtl" lang="ar" className="bg-slate-50 border-r-4 border-slate-300 px-6 py-6">
+            <h2 className="text-base font-semibold text-slate-800 mb-3 font-sans">
+              ما هو هذا المرض؟
+            </h2>
+            <p className="text-sm text-slate-700 leading-loose font-sans">{arabicSummary}</p>
+          </section>
+        )}
+
+        {arabicSummary && <div className="h-px bg-slate-100" />}
 
         {/* Introduction */}
         <section>

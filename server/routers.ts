@@ -116,6 +116,7 @@ export const appRouter = router({
           mimeType: z.string(),
           base64: z.string(), // base64-encoded file content
         })).max(10, "Maximum 10 files allowed"),
+        isTest: z.boolean().optional().default(false), // If true, prefixes [TEST] to notification subjects
       }))
       .mutation(async ({ input }) => {
         const referenceId = nanoid(12).toUpperCase();
@@ -144,15 +145,16 @@ export const appRouter = router({
         const fileList = uploadedFiles.length > 0
           ? uploadedFiles.map(f => `• ${f.name}`).join("\n")
           : "No files attached";
+        const testPrefix = input.isTest ? "[TEST] " : "";
         notifyOwner({
-          title: `New Medical Report Submission — ${referenceId}`,
-          content: `Reference: ${referenceId}\nPatient: ${input.patientName}\nCountry: ${input.country}\nCondition: ${input.medicalCondition}\n\nFiles:\n${fileList}`,
+          title: `${testPrefix}New Medical Report Submission — ${referenceId}`,
+          content: `${input.isTest ? "⚠️ THIS IS A TEST SUBMISSION — NOT A REAL PATIENT\n\n" : ""}Reference: ${referenceId}\nPatient: ${input.patientName}\nCountry: ${input.country}\nCondition: ${input.medicalCondition}\n\nFiles:\n${fileList}`,
         }).catch(err => console.warn("[MedicalReports] Owner notification failed:", err));
 
         // Also notify via SendGrid if available
         sendOwnerNotification(
-          `New Medical Report Submission — ${referenceId}`,
-          `**Reference:** ${referenceId}\n\n**Patient:** ${input.patientName}\n**Country:** ${input.country}\n**Condition:** ${input.medicalCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
+          `${testPrefix}New Medical Report Submission — ${referenceId}`,
+          `${input.isTest ? "⚠️ **THIS IS A TEST SUBMISSION — NOT A REAL PATIENT**\n\n" : ""}**Reference:** ${referenceId}\n\n**Patient:** ${input.patientName}\n**Country:** ${input.country}\n**Condition:** ${input.medicalCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
         ).catch(err => console.warn("[MedicalReports] SendGrid notification failed:", err));
 
         return { success: true, referenceId };
@@ -172,6 +174,7 @@ export const appRouter = router({
           mimeType: z.string(),
           base64: z.string(),
         })).max(10, "Maximum 10 files allowed"),
+        isTest: z.boolean().optional().default(false), // If true, prefixes [TEST] to notification subjects
       }))
       .mutation(async ({ input }) => {
         const referenceId = nanoid(12).toUpperCase();
@@ -199,16 +202,17 @@ export const appRouter = router({
         const fileList = uploadedFiles.length > 0
           ? uploadedFiles.map(f => `• ${f.name}`).join("\n")
           : "No files attached";
+        const testPrefixRef = input.isTest ? "[TEST] " : "";
 
         // Notify owner
         notifyOwner({
-          title: `New Physician Referral — ${referenceId}`,
-          content: `Reference: ${referenceId}\nDoctor: ${input.doctorName}\nClinic/Hospital: ${input.clinicOrHospital}\nCountry: ${input.country}\nPatient Condition: ${input.patientCondition}\n\nFiles:\n${fileList}`,
+          title: `${testPrefixRef}New Physician Referral — ${referenceId}`,
+          content: `${input.isTest ? "⚠️ THIS IS A TEST SUBMISSION — NOT A REAL REFERRAL\n\n" : ""}Reference: ${referenceId}\nDoctor: ${input.doctorName}\nClinic/Hospital: ${input.clinicOrHospital}\nCountry: ${input.country}\nPatient Condition: ${input.patientCondition}\n\nFiles:\n${fileList}`,
         }).catch(err => console.warn("[ReferringDoctors] Owner notification failed:", err));
 
         sendOwnerNotification(
-          `New Physician Referral — ${referenceId}`,
-          `**Reference:** ${referenceId}\n\n**Doctor:** ${input.doctorName}\n**Clinic/Hospital:** ${input.clinicOrHospital}\n**Country:** ${input.country}\n**Patient Condition:** ${input.patientCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
+          `${testPrefixRef}New Physician Referral — ${referenceId}`,
+          `${input.isTest ? "⚠️ **THIS IS A TEST SUBMISSION — NOT A REAL REFERRAL**\n\n" : ""}**Reference:** ${referenceId}\n\n**Doctor:** ${input.doctorName}\n**Clinic/Hospital:** ${input.clinicOrHospital}\n**Country:** ${input.country}\n**Patient Condition:** ${input.patientCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
         ).catch(err => console.warn("[ReferringDoctors] SendGrid notification failed:", err));
 
         return { success: true, referenceId };

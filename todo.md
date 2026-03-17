@@ -1100,3 +1100,10 @@
 - [x] Extend MedicalConditionPage component with optional arabicSummary prop
 - [x] Add Arabic summaries to 10 priority condition pages (batch 1 of 2)
 - [x] Verify TypeScript zero errors (0 errors after batch 1)
+
+## Bug Fix Batch (3 Issues)
+- [x] Fix 1: Create 6 category hub pages (/neurology-germany, /spine-treatment-germany, /oncology-germany, /orthopedics-germany, /cardiology-germany, /consultation-services-germany)
+- [x] Fix 1: Wire Arabic dropdown category headings as clickable links to hub pages
+- [x] Fix 1: Register all 6 hub routes in App.tsx + update sitemap
+- [x] Fix 2: Fix Arabic locale persistence — add Arabic back link on all condition pages
+- [x] Fix 3: Add [TEST] prefix to test submission notifications (medicalReports + referringDoctors)

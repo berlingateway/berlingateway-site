@@ -89,6 +89,13 @@ export default function MedicalConditionPage({
             ← Home
           </Link>
           <Link
+            href="/ar"
+            className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            العربية
+          </Link>
+          <Link
             href="/send-medical-reports"
             className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
           >

@@ -56,6 +56,14 @@ import CancerTreatment from "./pages/conditions/CancerTreatment";
 import OrthopedicTreatment from "./pages/conditions/OrthopedicTreatment";
 import InternationalPatients from "./pages/InternationalPatients";
 
+// Category Hub Pages
+import NeurologyHub from "./pages/hubs/NeurologyHub";
+import SpineHub from "./pages/hubs/SpineHub";
+import OncologyHub from "./pages/hubs/OncologyHub";
+import OrthopedicsHub from "./pages/hubs/OrthopedicsHub";
+import CardiologyHub from "./pages/hubs/CardiologyHub";
+import ConsultationHub from "./pages/hubs/ConsultationHub";
+
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -111,6 +119,14 @@ function Router() {
       <Route path={"/cancer-treatment-germany"} component={CancerTreatment} />
       <Route path={"/orthopedic-treatment-germany"} component={OrthopedicTreatment} />
       <Route path={"/international-patients"} component={InternationalPatients} />
+
+      {/* Category Hub Pages */}
+      <Route path={"/neurology-germany"} component={NeurologyHub} />
+      <Route path={"/spine-treatment-germany"} component={SpineHub} />
+      <Route path={"/oncology-germany"} component={OncologyHub} />
+      <Route path={"/orthopedics-germany"} component={OrthopedicsHub} />
+      <Route path={"/cardiology-germany"} component={CardiologyHub} />
+      <Route path={"/consultation-services-germany"} component={ConsultationHub} />
 
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

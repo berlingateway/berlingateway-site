@@ -54,6 +54,7 @@ import SpecialistReferral from "./pages/conditions/SpecialistReferral";
 import UniversityHospitalTreatment from "./pages/conditions/UniversityHospitalTreatment";
 import CancerTreatment from "./pages/conditions/CancerTreatment";
 import OrthopedicTreatment from "./pages/conditions/OrthopedicTreatment";
+import InternationalPatients from "./pages/InternationalPatients";
 
 
 function Router() {
@@ -109,6 +110,7 @@ function Router() {
       <Route path={"/university-hospital-treatment-germany"} component={UniversityHospitalTreatment} />
       <Route path={"/cancer-treatment-germany"} component={CancerTreatment} />
       <Route path={"/orthopedic-treatment-germany"} component={OrthopedicTreatment} />
+      <Route path={"/international-patients"} component={InternationalPatients} />
 
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

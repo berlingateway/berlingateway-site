@@ -1090,3 +1090,8 @@
 - [x] Register both new routes in App.tsx
 - [x] Verify 3 existing routes accessible: /brain-tumor-treatment-germany, /neurology-treatment-germany, /spine-surgery-germany
 - [x] Update sitemap.xml with 2 new URLs
+
+## International Patients Page (/international-patients)
+- [x] Create InternationalPatients.tsx page with institutional content and Send Medical Reports CTA
+- [x] Register /international-patients route in App.tsx
+- [x] Update sitemap.xml

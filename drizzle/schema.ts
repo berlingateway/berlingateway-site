@@ -40,3 +40,18 @@ export const medicalReports = mysqlTable("medicalReports", {
 
 export type MedicalReport = typeof medicalReports.$inferSelect;
 export type InsertMedicalReport = typeof medicalReports.$inferInsert;
+
+export const referringDoctors = mysqlTable("referringDoctors", {
+  id: int("id").autoincrement().primaryKey(),
+  referenceId: varchar("referenceId", { length: 32 }).notNull().unique(),
+  doctorName: text("doctorName").notNull(),
+  clinicOrHospital: text("clinicOrHospital").notNull(),
+  country: text("country").notNull(),
+  patientCondition: text("patientCondition").notNull(),
+  fileKeys: text("fileKeys").notNull(), // JSON array of S3 keys
+  fileUrls: text("fileUrls").notNull(), // JSON array of public URLs
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type ReferringDoctor = typeof referringDoctors.$inferSelect;
+export type InsertReferringDoctor = typeof referringDoctors.$inferInsert;

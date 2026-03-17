@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, InsertMedicalReport, medicalReports, users } from "../drizzle/schema";
+import { InsertUser, InsertMedicalReport, InsertReferringDoctor, medicalReports, referringDoctors, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -98,4 +98,13 @@ export async function insertMedicalReport(record: InsertMedicalReport): Promise<
     return;
   }
   await db.insert(medicalReports).values(record);
+}
+
+export async function insertReferringDoctor(record: InsertReferringDoctor): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot insert referring doctor: database not available");
+    return;
+  }
+  await db.insert(referringDoctors).values(record);
 }

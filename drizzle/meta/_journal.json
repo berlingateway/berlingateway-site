@@ -15,6 +15,13 @@
       "when": 1773304575170,
       "tag": "0001_careless_kate_bishop",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1773715464246,
+      "tag": "0002_elite_lilandra",
+      "breakpoints": true
     }
   ]
 }

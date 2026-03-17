@@ -19,6 +19,7 @@ import ArabicHome from "./pages/ArabicHome";
 import SubmitCase from "./pages/SubmitCase";
 import SendMedicalReports from "./pages/SendMedicalReports";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import ReferringDoctors from "./pages/ReferringDoctors";
 
 // Medical Condition Pages
 import BrainTumor from "./pages/conditions/BrainTumor";
@@ -71,6 +72,7 @@ function Router() {
       <Route path={"/ar"} component={ArabicHome} />
       <Route path={"/submit-case"} component={SubmitCase} />
       <Route path={"/send-medical-reports"} component={SendMedicalReports} />
+      <Route path={"/referring-doctors"} component={ReferringDoctors} />
 
       {/* Medical Condition Pages */}
       <Route path={"/brain-tumor-treatment-germany"} component={BrainTumor} />

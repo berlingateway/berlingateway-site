@@ -1075,3 +1075,11 @@
 - [x] Create FloatingWhatsApp component (fixed lower-right corner, all pages)
 - [x] Add to App.tsx so it appears globally on every route
 - [x] Number: +49 1578 1497451, Label: Medical Coordinator
+
+## Referring Doctors Page (/referring-doctors)
+- [x] Add referringDoctors table to drizzle/schema.ts
+- [x] Push DB migration
+- [x] Add referringDoctors.submit tRPC procedure (S3 upload + DB insert + owner notify)
+- [x] Create ReferringDoctors.tsx page (Doctor Name, Clinic/Hospital, Country, Patient Condition, Upload Reports)
+- [x] Register /referring-doctors route in App.tsx
+- [x] Update sitemap.xml

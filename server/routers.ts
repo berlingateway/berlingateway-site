@@ -7,7 +7,7 @@ import { nanoid } from "nanoid";
 import { sendCaseConfirmationEmail } from "./_core/email";
 import { sendOwnerNotification } from "./_core/sendgrid";
 import { storagePut } from "./storage";
-import { insertMedicalReport } from "./db";
+import { insertMedicalReport, insertReferringDoctor } from "./db";
 import { notifyOwner } from "./_core/notification";
 
 export const appRouter = router({
@@ -154,6 +154,62 @@ export const appRouter = router({
           `New Medical Report Submission — ${referenceId}`,
           `**Reference:** ${referenceId}\n\n**Patient:** ${input.patientName}\n**Country:** ${input.country}\n**Condition:** ${input.medicalCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
         ).catch(err => console.warn("[MedicalReports] SendGrid notification failed:", err));
+
+        return { success: true, referenceId };
+      }),
+  }),
+
+  // Referring doctors — physician-to-physician referral with file upload
+  referringDoctors: router({
+    submit: publicProcedure
+      .input(z.object({
+        doctorName: z.string().min(1, "Doctor name is required"),
+        clinicOrHospital: z.string().min(1, "Clinic or hospital is required"),
+        country: z.string().min(1, "Country is required"),
+        patientCondition: z.string().min(1, "Patient condition is required"),
+        files: z.array(z.object({
+          name: z.string(),
+          mimeType: z.string(),
+          base64: z.string(),
+        })).max(10, "Maximum 10 files allowed"),
+      }))
+      .mutation(async ({ input }) => {
+        const referenceId = nanoid(12).toUpperCase();
+
+        // Upload each file to S3
+        const uploadedFiles: { key: string; url: string; name: string }[] = [];
+        for (const file of input.files) {
+          const buffer = Buffer.from(file.base64, "base64");
+          const key = `referring-doctors/${referenceId}/${nanoid(8)}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
+          const { url } = await storagePut(key, buffer, file.mimeType);
+          uploadedFiles.push({ key, url, name: file.name });
+        }
+
+        // Persist to DB
+        await insertReferringDoctor({
+          referenceId,
+          doctorName: input.doctorName,
+          clinicOrHospital: input.clinicOrHospital,
+          country: input.country,
+          patientCondition: input.patientCondition,
+          fileKeys: JSON.stringify(uploadedFiles.map(f => f.key)),
+          fileUrls: JSON.stringify(uploadedFiles.map(f => f.url)),
+        });
+
+        const fileList = uploadedFiles.length > 0
+          ? uploadedFiles.map(f => `• ${f.name}`).join("\n")
+          : "No files attached";
+
+        // Notify owner
+        notifyOwner({
+          title: `New Physician Referral — ${referenceId}`,
+          content: `Reference: ${referenceId}\nDoctor: ${input.doctorName}\nClinic/Hospital: ${input.clinicOrHospital}\nCountry: ${input.country}\nPatient Condition: ${input.patientCondition}\n\nFiles:\n${fileList}`,
+        }).catch(err => console.warn("[ReferringDoctors] Owner notification failed:", err));
+
+        sendOwnerNotification(
+          `New Physician Referral — ${referenceId}`,
+          `**Reference:** ${referenceId}\n\n**Doctor:** ${input.doctorName}\n**Clinic/Hospital:** ${input.clinicOrHospital}\n**Country:** ${input.country}\n**Patient Condition:** ${input.patientCondition}\n\n**Files (${uploadedFiles.length}):**\n${fileList}`,
+        ).catch(err => console.warn("[ReferringDoctors] SendGrid notification failed:", err));
 
         return { success: true, referenceId };
       }),

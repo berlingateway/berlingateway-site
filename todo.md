@@ -1115,3 +1115,14 @@
 - [ ] Remove all overflow-y scroll and max-height constraints from Arabic dropdown
 - [ ] Multi-column mega-menu layout matching English
 - [ ] Verify all links intact, TypeScript 0 errors
+
+## Condition Page Content Upgrade (Soft 404 Fix)
+- [ ] Extend MedicalConditionPage component with rich content section support
+- [ ] Upgrade 8 Neurology pages with 800-1200 word authoritative content
+- [ ] Upgrade 4 Spine pages with 800-1200 word authoritative content
+- [ ] Upgrade 5 Oncology pages with 800-1200 word authoritative content
+- [ ] Upgrade 3 Orthopedic pages with 800-1200 word authoritative content
+- [ ] Upgrade 4 Cardiology pages with 800-1200 word authoritative content
+- [ ] Upgrade 6 Advisory pages with 800-1200 word authoritative content
+- [ ] Verify TypeScript zero errors
+- [ ] Save checkpoint

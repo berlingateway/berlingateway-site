@@ -2,27 +2,23 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 
 export interface MedicalConditionPageProps {
-  /** SEO meta title */
   metaTitle: string;
-  /** SEO meta description */
   metaDescription: string;
-  /** Canonical URL path, e.g. "/brain-tumor-treatment-germany" */
   canonicalPath: string;
-  /** Page headline shown to the visitor */
   headline: string;
-  /** Short subtitle below the headline */
   subtitle: string;
-  /** Introduction paragraph */
   introduction: string;
-  /** About the condition section */
   aboutCondition: string;
-  /** Why Germany section */
+  symptoms?: string[];
+  causes?: string;
+  diagnosticProcess?: string;
+  treatmentOptions?: string;
+  treatmentList?: string[];
   whyGermany: string;
-  /** Specialist evaluation section */
   specialistEvaluation: string;
-  /** Optional structured data JSON-LD string */
+  patientPathway?: string[];
+  relatedLinks?: Array<{ href: string; label: string }>;
   structuredData?: string;
-  /** Optional Arabic summary shown above the English content */
   arabicSummary?: string;
 }
 
@@ -34,8 +30,15 @@ export default function MedicalConditionPage({
   subtitle,
   introduction,
   aboutCondition,
+  symptoms,
+  causes,
+  diagnosticProcess,
+  treatmentOptions,
+  treatmentList,
   whyGermany,
   specialistEvaluation,
+  patientPathway,
+  relatedLinks,
   structuredData,
   arabicSummary,
 }: MedicalConditionPageProps) {
@@ -59,10 +62,7 @@ export default function MedicalConditionPage({
       {/* Top Contact Bar */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
         <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
-          <a
-            href="mailto:info@medicalcaregermany.com"
-            className="hover:text-slate-300 transition-colors"
-          >
+          <a href="mailto:info@medicalcaregermany.com" className="hover:text-slate-300 transition-colors">
             info@medicalcaregermany.com
           </a>
         </div>
@@ -71,10 +71,7 @@ export default function MedicalConditionPage({
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm">
         <div className="flex flex-col">
-          <Link
-            href="/"
-            className="text-xl font-serif font-bold tracking-tight text-slate-900"
-          >
+          <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
             Medical Care Germany
           </Link>
           <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">
@@ -82,10 +79,7 @@ export default function MedicalConditionPage({
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <Link
-            href="/"
-            className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline"
-          >
+          <Link href="/" className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline">
             ← Home
           </Link>
           <Link
@@ -141,19 +135,78 @@ export default function MedicalConditionPage({
 
         {/* About the condition */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
-            About the Condition
-          </h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">About the Condition</h2>
           <p className="text-base text-slate-700 leading-relaxed">{aboutCondition}</p>
         </section>
+
+        {/* Symptoms */}
+        {symptoms && symptoms.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Common Symptoms</h2>
+              <ul className="space-y-2">
+                {symptoms.map((symptom, i) => (
+                  <li key={i} className="flex items-start gap-3 text-base text-slate-700">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                    <span>{symptom}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
+
+        {/* Causes */}
+        {causes && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Causes and Risk Factors</h2>
+              <p className="text-base text-slate-700 leading-relaxed">{causes}</p>
+            </section>
+          </>
+        )}
+
+        {/* Diagnostic Process */}
+        {diagnosticProcess && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Diagnostic Process in Germany</h2>
+              <p className="text-base text-slate-700 leading-relaxed">{diagnosticProcess}</p>
+            </section>
+          </>
+        )}
+
+        {/* Treatment Options */}
+        {(treatmentOptions || (treatmentList && treatmentList.length > 0)) && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Treatment Options in Germany</h2>
+              {treatmentOptions && (
+                <p className="text-base text-slate-700 leading-relaxed mb-4">{treatmentOptions}</p>
+              )}
+              {treatmentList && treatmentList.length > 0 && (
+                <ul className="space-y-2 mt-3">
+                  {treatmentList.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-base text-slate-700">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          </>
+        )}
 
         <div className="h-px bg-slate-100" />
 
         {/* Why Germany */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
-            Why Treatment in Germany
-          </h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Why Treatment in Germany</h2>
           <p className="text-base text-slate-700 leading-relaxed">{whyGermany}</p>
         </section>
 
@@ -161,27 +214,62 @@ export default function MedicalConditionPage({
 
         {/* Specialist evaluation */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
-            Specialist Evaluation
-          </h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Specialist Evaluation</h2>
           <p className="text-base text-slate-700 leading-relaxed">{specialistEvaluation}</p>
         </section>
+
+        {/* Patient Pathway */}
+        {patientPathway && patientPathway.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">Patient Pathway</h2>
+              <ol className="space-y-4">
+                {patientPathway.map((step, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-slate-900 text-white text-xs font-medium flex items-center justify-center">
+                      {i + 1}
+                    </span>
+                    <p className="text-base text-slate-700 leading-relaxed pt-0.5">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          </>
+        )}
+
+        {/* Related Conditions / Internal Links */}
+        {relatedLinks && relatedLinks.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Related Conditions and Services</h2>
+              <div className="flex flex-wrap gap-3">
+                {relatedLinks.map((link, i) => (
+                  <Link
+                    key={i}
+                    href={link.href}
+                    className="text-sm text-slate-600 border border-slate-200 px-4 py-2 hover:border-slate-400 hover:text-slate-900 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
 
         <div className="h-px bg-slate-100" />
 
         {/* Call to action */}
         <section className="bg-slate-50 border border-slate-200 px-8 py-10">
-          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">
-            Next Step
-          </p>
+          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">Next Step</p>
           <h2 className="text-xl font-serif font-medium text-slate-900 mb-3">
             Submit Your Medical Reports for Review
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed mb-6">
-            Medical documentation may be submitted for preliminary review by a
-            clinical coordinator in Berlin. Complex cases are directed to the
-            appropriate specialist or university hospital within the German
-            healthcare system.
+            Medical documentation may be submitted for preliminary review by a clinical coordinator in Berlin.
+            Complex cases are directed to the appropriate specialist or university hospital within the German healthcare system.
           </p>
           <Link
             href="/send-medical-reports"
@@ -190,8 +278,7 @@ export default function MedicalConditionPage({
             Send Medical Reports
           </Link>
           <p className="text-xs text-slate-400 mt-4">
-            All documentation is handled in accordance with German data
-            protection regulations.
+            All documentation is handled in accordance with German data protection regulations.
           </p>
         </section>
       </main>

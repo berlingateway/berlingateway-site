@@ -3,12 +3,19 @@ import { X } from "lucide-react";
 
 const BANNER_DISMISSED_KEY = "mcg_banner_dismissed_eid_2026";
 const BANNER_HEIGHT = 44;
-const BANNER_TEXT = "Eid Mubarak — Wishing you health and recovery.";
+
+const BANNER_EN = "Eid Mubarak — Wishing you health and recovery.";
+const BANNER_AR = "عيد فطر مبارك — نسأل الله لكم الصحة والعافية";
 
 export default function TopBanner() {
   const [visible, setVisible] = useState(false);
+  const [isArabic, setIsArabic] = useState(false);
 
   useEffect(() => {
+    // Detect Arabic route
+    const arabic = window.location.pathname.startsWith("/ar");
+    setIsArabic(arabic);
+
     const dismissed = sessionStorage.getItem(BANNER_DISMISSED_KEY);
     if (!dismissed) {
       setVisible(true);
@@ -29,9 +36,17 @@ export default function TopBanner() {
 
   if (!visible) return null;
 
+  const text = isArabic ? BANNER_AR : BANNER_EN;
+  const dir = isArabic ? "rtl" : "ltr";
+  // Close button: right side for LTR, left side for RTL
+  const closeButtonStyle: React.CSSProperties = isArabic
+    ? { left: "16px", right: "auto" }
+    : { right: "16px", left: "auto" };
+
   return (
     <div
       id="top-notification-banner"
+      dir={dir}
       style={{
         position: "fixed",
         top: 0,
@@ -52,9 +67,11 @@ export default function TopBanner() {
         style={{
           color: "#FFFFFF",
           fontSize: "13px",
-          fontFamily: "inherit",
+          fontFamily: isArabic
+            ? "'IBM Plex Sans Arabic', Cairo, sans-serif"
+            : "inherit",
           fontWeight: 400,
-          letterSpacing: "0.05em",
+          letterSpacing: isArabic ? "0" : "0.05em",
           margin: 0,
           textAlign: "center",
           lineHeight: 1,
@@ -63,16 +80,15 @@ export default function TopBanner() {
           textOverflow: "ellipsis",
         }}
       >
-        {BANNER_TEXT}
+        {text}
       </p>
 
-      {/* Close button */}
+      {/* Close button — left for RTL, right for LTR */}
       <button
         onClick={handleClose}
         aria-label="Dismiss notification"
         style={{
           position: "absolute",
-          right: "16px",
           top: "50%",
           transform: "translateY(-50%)",
           background: "none",
@@ -85,6 +101,7 @@ export default function TopBanner() {
           color: "rgba(255,255,255,0.55)",
           lineHeight: 1,
           flexShrink: 0,
+          ...closeButtonStyle,
         }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF";

@@ -876,7 +876,7 @@ export default function Home() {
           {/* YouTube embed — centered, clean, no black margins */}
           <div className="flex justify-center">
             <div
-              className="w-full bg-slate-50 rounded-sm overflow-hidden shadow-sm"
+              className="w-full bg-slate-50 rounded-sm overflow-hidden shadow-sm border-t-2 border-[#C9A646]"
               style={{ maxWidth: '720px' }}
             >
               {/* 16:9 wrapper — forces YouTube to fill without black bars */}

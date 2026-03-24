@@ -541,7 +541,7 @@ export default function ArabicHome() {
           {/* YouTube embed — centered, clean, no black margins */}
           <div className="flex justify-center">
             <div
-              className="w-full bg-slate-50 rounded-sm overflow-hidden shadow-sm"
+              className="w-full bg-slate-50 rounded-sm overflow-hidden shadow-sm border-t-2 border-[#C9A646]"
               style={{ maxWidth: '720px' }}
             >
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>

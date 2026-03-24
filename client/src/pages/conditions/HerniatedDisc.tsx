@@ -101,6 +101,47 @@ export default function HerniatedDisc() {
         {/* Divider */}
         <div className="h-px bg-slate-100" />
 
+        {/* Video Card 2 */}
+        <section>
+          <a
+            href="https://youtube.com/shorts/lnxXzDQ8dts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden shadow-md border border-slate-100 bg-white hover:shadow-lg transition-shadow"
+          >
+            {/* Thumbnail */}
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <img
+                src="https://i.ytimg.com/vi/lnxXzDQ8dts/hqdefault.jpg"
+                alt="الاستعداد للعملية الثانية"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-black/60 rounded-full w-12 h-12 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white mr-[-2px]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            {/* Card Body */}
+            <div className="p-4 space-y-2">
+              <span className="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                بعد العملية الأولى
+              </span>
+              <h3 className="text-base font-semibold text-slate-900 leading-snug">
+                الاستعداد للعملية الثانية
+              </h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                تجربة المريض بعد العملية الأولى والتحضير للجراحة التالية
+              </p>
+            </div>
+          </a>
+        </section>
+
+        {/* Divider */}
+        <div className="h-px bg-slate-100" />
+
         {/* CTA */}
         <section className="space-y-4">
           <p className="text-base text-slate-700">

@@ -516,6 +516,76 @@ export default function ArabicHome() {
         </div>
       </section>
 
+      {/* FEATURED VIDEO SECTION — Arabic */}
+      <section className="py-16 md:py-24 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-3xl mx-auto" dir="rtl">
+          {/* Section header */}
+          <div className="mb-8 text-center">
+            <p className="text-xs uppercase tracking-widest text-slate-400 mb-3" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", letterSpacing: '0' }}>
+              توثيق سريري
+            </p>
+            <h2
+              className="text-2xl md:text-3xl text-slate-900 mb-4"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", fontWeight: 500 }}
+            >
+              تجربة واقعية: مسار العلاج في ألمانيا
+            </h2>
+            <p
+              className="text-slate-500 text-base leading-relaxed max-w-xl mx-auto"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              توثيق واقعي لمسار علاجي في ألمانيا، من التقييم السريري الأولي إلى القرار العلاجي والمتابعة.
+            </p>
+          </div>
+
+          {/* YouTube embed — 16:9 responsive */}
+          <div
+            className="relative w-full bg-slate-100"
+            style={{ paddingBottom: '56.25%' }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/iLMZmn82_DE?rel=0&modestbranding=1"
+              title="تجربة واقعية: مسار العلاج في ألمانيا"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none',
+              }}
+            />
+          </div>
+
+          {/* Secondary text link */}
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.youtube.com/watch?v=iLMZmn82_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 hover:text-slate-700 transition-colors underline underline-offset-4"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              مشاهدة الفيديو الكامل
+            </a>
+          </div>
+
+          {/* CTA button */}
+          <div className="mt-10 text-center">
+            <a
+              href="/send-medical-reports"
+              className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm hover:bg-slate-700 transition-colors"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              أرسل ملفك الطبي للمراجعة السريرية
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* SUBMIT CASE FORM */}
       <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">

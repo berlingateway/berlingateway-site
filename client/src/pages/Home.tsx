@@ -859,6 +859,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FEATURED VIDEO SECTION — Real Treatment Pathway */}
+      <section className="py-16 md:py-24 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          {/* Section header */}
+          <div className="mb-8 text-center">
+            <p className="text-xs uppercase tracking-widest text-slate-400 mb-3">Clinical Documentation</p>
+            <h2 className="text-2xl md:text-3xl font-serif text-slate-900 mb-4">
+              Real Experience: The Treatment Pathway in Germany
+            </h2>
+            <p className="text-slate-500 text-base leading-relaxed max-w-xl mx-auto">
+              A real clinical treatment pathway in Germany, from initial assessment to treatment decision and follow-up.
+            </p>
+          </div>
+
+          {/* YouTube embed — 16:9 responsive */}
+          <div
+            className="relative w-full bg-slate-100"
+            style={{ paddingBottom: '56.25%' }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/iLMZmn82_DE?rel=0&modestbranding=1"
+              title="Real Experience: The Treatment Pathway in Germany"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none',
+              }}
+            />
+          </div>
+
+          {/* Secondary text link — full video */}
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.youtube.com/watch?v=iLMZmn82_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 hover:text-slate-700 transition-colors tracking-wide underline underline-offset-4"
+            >
+              Watch the Full Video
+            </a>
+          </div>
+
+          {/* CTA button */}
+          <div className="mt-10 text-center">
+            <a
+              href="/send-medical-reports"
+              className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm tracking-wide hover:bg-slate-700 transition-colors"
+            >
+              Submit Your Medical File for Clinical Review
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 5: DIFFERENTIATION BLOCK */}
       <section className="py-24 md:py-32 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">

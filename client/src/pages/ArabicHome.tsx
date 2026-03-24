@@ -229,7 +229,7 @@ export default function ArabicHome() {
               <Link href="/brain-tumor-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">أورام المخ</Link>
               <Link href="/trigeminal-neuralgia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">ألم العصب الخامس</Link>
               <Link href="/spine-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">جراحة العمود الفقري</Link>
-              <Link href="/herniated-disc-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الانزلاق الغضروفي</Link>
+              <Link href="/ar/herniated-disc" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الانزلاق الغضروفي</Link>
               <Link href="/brain-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">جراحة المخ</Link>
               <Link href="/neurology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الأمراض العصبية</Link>
               <Link href="/parkinson-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">باركنسون</Link>

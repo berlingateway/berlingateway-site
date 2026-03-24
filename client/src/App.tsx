@@ -90,7 +90,7 @@ function Router() {
       <Route path={"/brain-tumor-treatment-germany"} component={BrainTumor} />
       <Route path={"/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgia} />
       <Route path={"/spine-surgery-germany"} component={SpineSurgery} />
-      <Route path={"/herniated-disc-treatment-germany"} component={HerniatedDisc} />
+      <Route path={"/ar/herniated-disc-treatment-germany"} component={HerniatedDisc} />
       <Route path={"/brain-surgery-germany"} component={BrainSurgery} />
       <Route path={"/neurology-treatment-germany"} component={NeurologyTreatment} />
       <Route path={"/parkinson-treatment-germany"} component={ParkinsonTreatment} />

@@ -873,26 +873,32 @@ export default function Home() {
             </p>
           </div>
 
-          {/* YouTube embed — 16:9 responsive */}
-          <div
-            className="relative w-full bg-slate-100"
-            style={{ paddingBottom: '56.25%' }}
-          >
-            <iframe
-              src="https://www.youtube.com/embed/iLMZmn82_DE?rel=0&modestbranding=1"
-              title="Real Experience: The Treatment Pathway in Germany"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                border: 'none',
-              }}
-            />
+          {/* YouTube embed — centered, clean, no black margins */}
+          <div className="flex justify-center">
+            <div
+              className="w-full bg-slate-50 rounded-sm overflow-hidden shadow-sm"
+              style={{ maxWidth: '720px' }}
+            >
+              {/* 16:9 wrapper — forces YouTube to fill without black bars */}
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/iLMZmn82_DE?rel=0&modestbranding=1&color=white"
+                  title="Real Experience: The Treatment Pathway in Germany"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                    display: 'block',
+                  }}
+                />
+              </div>
+            </div>
           </div>
 
           {/* Secondary text link — full video */}

@@ -1151,3 +1151,7 @@
 
 ## Video Thumbnail Fix
 - [x] Replace YouTube thumbnail logic with static image paths (patient-1.jpg / patient-2.jpg)
+
+## Video Thumbnail Path Fix
+- [x] Update thumbnail paths to /videos/patient1.jpg and /videos/patient2.jpg
+- [x] Verify public/videos/ folder exists and contains the images

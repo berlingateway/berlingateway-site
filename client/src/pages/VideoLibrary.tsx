@@ -185,7 +185,7 @@ function ArabicPageHeader() {
 const thoracicVideos: VideoCard[] = [
   {
     videoId: "iLMZmn82_DE",
-    thumbnail: "/images/videos/patient-1.jpg",
+    thumbnail: "/videos/patient1.jpg",
     tag: "التشخيص السريري",
     tagStyle: "bg-[#0B1C2C]/10 text-[#0B1C2C] border border-[#0B1C2C]/20",
     title: "التشخيص الدقيق والقرار الجراحي (أورام الصدر)",
@@ -193,7 +193,7 @@ const thoracicVideos: VideoCard[] = [
   },
   {
     videoId: "lnxXzDQ8dts",
-    thumbnail: "/images/videos/patient-1.jpg",
+    thumbnail: "/videos/patient1.jpg",
     tag: "نتيجة جراحية",
     tagStyle: "bg-[#0B1C2C]/10 text-[#0B1C2C] border border-[#0B1C2C]/20",
     title: "نتائج التدخل الجراحي في برلين",
@@ -205,7 +205,7 @@ const thoracicVideos: VideoCard[] = [
 const immuneVideos: VideoCard[] = [
   {
     videoId: "UMzijBy0pQ4",
-    thumbnail: "/images/videos/patient-2.jpg",
+    thumbnail: "/videos/patient2.jpg",
     tag: "رحلة المريض",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "قصة المعاناة والوصول إلى ألمانيا (مرض مناعي نادر)",
@@ -214,7 +214,7 @@ const immuneVideos: VideoCard[] = [
   },
   {
     videoId: "K9v4u6HT-YM",
-    thumbnail: "/images/videos/patient-2.jpg",
+    thumbnail: "/videos/patient2.jpg",
     tag: "تعافي",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "تحسن الحالة والنتائج بعد العلاج الدقيق",

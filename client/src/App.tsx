@@ -28,6 +28,7 @@ import TrigeminalNeuralgia from "./pages/conditions/TrigeminalNeuralgia";
 import SpineSurgery from "./pages/conditions/SpineSurgery";
 import HerniatedDisc from "./pages/conditions/HerniatedDisc";
 import HerniatedDiscEN from "./pages/conditions/HerniatedDiscEN";
+import VideoLibrary from "./pages/VideoLibrary";
 import BrainSurgery from "./pages/conditions/BrainSurgery";
 import NeurologyTreatment from "./pages/conditions/NeurologyTreatment";
 import ParkinsonTreatment from "./pages/conditions/ParkinsonTreatment";
@@ -92,6 +93,7 @@ function Router() {
       <Route path={"/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgia} />
       <Route path={"/spine-surgery-germany"} component={SpineSurgery} />
       <Route path={"/ar/herniated-disc"} component={HerniatedDisc} />
+      <Route path={"/ar/videos"} component={VideoLibrary} />
       <Route path={"/herniated-disc-treatment-germany"} component={HerniatedDiscEN} />
       <Route path={"/brain-surgery-germany"} component={BrainSurgery} />
       <Route path={"/neurology-treatment-germany"} component={NeurologyTreatment} />

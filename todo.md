@@ -1126,3 +1126,10 @@
 - [ ] Upgrade 6 Advisory pages with 800-1200 word authoritative content
 - [ ] Verify TypeScript zero errors
 - [ ] Save checkpoint
+
+## Arabic Video Library Page
+- [x] Create VideoLibrary.tsx at /ar/videos with 3 sections: العمود الفقري, الأورام, تجربة العلاج في ألمانيا
+- [x] Register /ar/videos route in App.tsx
+- [x] Add navigation link from ArabicHome.tsx to /ar/videos
+- [x] Full RTL layout, IBM Plex Sans Arabic font, banner offset, sticky nav with back button
+- [x] Video cards: thumbnail, play overlay, tag, title, description (migrando.de style)

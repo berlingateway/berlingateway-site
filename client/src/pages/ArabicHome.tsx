@@ -576,6 +576,14 @@ export default function ArabicHome() {
             >
               مشاهدة الفيديو الكامل
             </a>
+            <span className="text-slate-300 mx-2">|</span>
+            <a
+              href="/ar/videos"
+              className="text-xs text-slate-400 hover:text-slate-700 transition-colors underline underline-offset-4"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              مكتبة الفيديو الطبي
+            </a>
           </div>
 
           {/* CTA button */}

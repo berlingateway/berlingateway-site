@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
 
 const arFont: React.CSSProperties = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
@@ -26,7 +26,11 @@ function ThumbnailSkeleton() {
 
 function VideoCardItem({ video }: { video: VideoCard }) {
   const [loaded, setLoaded] = useState(false);
-  const thumbnailUrl = `https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg`;
+  // For Shorts, sddefault gives a cropped portrait frame; maxresdefault may be grey.
+  // Fallback chain: maxresdefault → sddefault → hqdefault
+  const thumbnailUrl = video.isShort
+    ? `https://img.youtube.com/vi/${video.videoId}/sddefault.jpg`
+    : `https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg`;
   const videoUrl = video.isShort
     ? `https://www.youtube.com/shorts/${video.videoId}`
     : `https://www.youtube.com/watch?v=${video.videoId}`;
@@ -48,7 +52,9 @@ function VideoCardItem({ video }: { video: VideoCard }) {
           onLoad={() => setLoaded(true)}
           onError={(e) => {
             const img = e.currentTarget;
-            if (!img.src.includes("hqdefault")) {
+            if (img.src.includes("maxresdefault")) {
+              img.src = `https://img.youtube.com/vi/${video.videoId}/sddefault.jpg`;
+            } else if (img.src.includes("sddefault")) {
               img.src = `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`;
             }
             setLoaded(true);

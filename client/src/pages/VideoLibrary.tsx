@@ -25,7 +25,7 @@ function ThumbnailSkeleton() {
 
 // ─── Video card ───────────────────────────────────────────────────────────────
 
-function VideoCardItem({ video }: { video: VideoCard }) {
+function VideoCardItem({ video, zoomed }: { video: VideoCard; zoomed?: boolean }) {
   const [loaded, setLoaded] = useState(false);
   const videoUrl = video.isShort
     ? `https://www.youtube.com/shorts/${video.videoId}`
@@ -47,7 +47,7 @@ function VideoCardItem({ video }: { video: VideoCard }) {
           alt={video.title}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}
-          className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${zoomed ? "scale-[1.05] object-top" : "object-center"}`}
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
@@ -263,7 +263,7 @@ export default function VideoLibrary() {
 
           <div className="flex flex-wrap gap-5">
             {thoracicVideos.map((video, idx) => (
-              <VideoCardItem key={idx} video={video} />
+              <VideoCardItem key={idx} video={video} zoomed={idx === 1} />
             ))}
           </div>
 
@@ -293,7 +293,7 @@ export default function VideoLibrary() {
 
           <div className="flex flex-wrap gap-5">
             {immuneVideos.map((video, idx) => (
-              <VideoCardItem key={idx} video={video} />
+              <VideoCardItem key={idx} video={video} zoomed={idx === 1} />
             ))}
           </div>
 

@@ -1133,3 +1133,12 @@
 - [x] Add navigation link from ArabicHome.tsx to /ar/videos
 - [x] Full RTL layout, IBM Plex Sans Arabic font, banner offset, sticky nav with back button
 - [x] Video cards: thumbnail, play overlay, tag, title, description (migrando.de style)
+
+## Video Library Restructure
+- [x] Add 3 tabs: الحالات الطبية والأورام / قصص النجاح وتسهيلات الفيزا / رحلة التعافي
+- [x] Color-coded tags: Medical=Blue, Visa/Logistics=Green, Recovery=Gold
+- [x] Section headers with brief descriptions
+- [x] CTA under Medical: "أرسل ملفك الطبي لتقييم البروفيسور"
+- [x] CTA under Visa: "هل تواجه صعوبة في الحصول على تأشيرة علاجية؟ تواصل معنا الآن"
+- [x] Move Thoracic/PET-CT video to Medical tab under أورام الصدر
+- [x] Move Visa struggle videos to Visa/Logistics tab

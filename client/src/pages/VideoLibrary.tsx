@@ -141,12 +141,21 @@ const medicalVideos: VideoCard[] = [
 
 const journeyVideos: VideoCard[] = [
   {
-    videoId: "lnxXzDQ8dts",
-    tag: "قصة نجاح",
+    videoId: "UMzijBy0pQ4",
+    tag: "قبل العلاج",
     // Warm Gold tag — #C8A96A
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
-    title: "ماذا حدث بعد الجراحة؟",
-    description: "مريض يشارك تجربته الحقيقية بعد إجراء العملية في برلين والعودة إلى حياته الطبيعية.",
+    title: "مرض نادر… معاناة قبل العلاج",
+    description: "شهادة مريض عن المعاناة قبل الوصول إلى العلاج والتعرف على Medical Care Germany.",
+    isShort: true,
+  },
+  {
+    videoId: "K9v4u6HT-YM",
+    tag: "بعد العلاج",
+    // Warm Gold tag — #C8A96A
+    tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
+    title: "بعد العلاج… ماذا تغير؟",
+    description: "شهادة مريض عن التحسن بعد العلاج وبداية العودة إلى الحياة الطبيعية.",
     isShort: true,
   },
 ];

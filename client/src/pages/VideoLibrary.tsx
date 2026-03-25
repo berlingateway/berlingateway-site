@@ -9,6 +9,7 @@ const WA_RARE = encodeURIComponent("مرحباً، أودّ الاستفسار �
 
 interface VideoCard {
   videoId: string;
+  thumbnail: string;
   tag: string;
   tagStyle: string;
   title: string;
@@ -26,11 +27,6 @@ function ThumbnailSkeleton() {
 
 function VideoCardItem({ video }: { video: VideoCard }) {
   const [loaded, setLoaded] = useState(false);
-  // For Shorts, sddefault gives a cropped portrait frame; maxresdefault may be grey.
-  // Fallback chain: maxresdefault → sddefault → hqdefault
-  const thumbnailUrl = video.isShort
-    ? `https://img.youtube.com/vi/${video.videoId}/sddefault.jpg`
-    : `https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg`;
   const videoUrl = video.isShort
     ? `https://www.youtube.com/shorts/${video.videoId}`
     : `https://www.youtube.com/watch?v=${video.videoId}`;
@@ -47,18 +43,10 @@ function VideoCardItem({ video }: { video: VideoCard }) {
       <div className="relative w-full aspect-video bg-slate-100 overflow-hidden">
         {!loaded && <ThumbnailSkeleton />}
         <img
-          src={thumbnailUrl}
+          src={video.thumbnail}
           alt={video.title}
           onLoad={() => setLoaded(true)}
-          onError={(e) => {
-            const img = e.currentTarget;
-            if (img.src.includes("maxresdefault")) {
-              img.src = `https://img.youtube.com/vi/${video.videoId}/sddefault.jpg`;
-            } else if (img.src.includes("sddefault")) {
-              img.src = `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`;
-            }
-            setLoaded(true);
-          }}
+          onError={() => setLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
@@ -197,6 +185,7 @@ function ArabicPageHeader() {
 const thoracicVideos: VideoCard[] = [
   {
     videoId: "iLMZmn82_DE",
+    thumbnail: "/images/videos/patient-1.jpg",
     tag: "التشخيص السريري",
     tagStyle: "bg-[#0B1C2C]/10 text-[#0B1C2C] border border-[#0B1C2C]/20",
     title: "التشخيص الدقيق والقرار الجراحي (أورام الصدر)",
@@ -204,6 +193,7 @@ const thoracicVideos: VideoCard[] = [
   },
   {
     videoId: "lnxXzDQ8dts",
+    thumbnail: "/images/videos/patient-1.jpg",
     tag: "نتيجة جراحية",
     tagStyle: "bg-[#0B1C2C]/10 text-[#0B1C2C] border border-[#0B1C2C]/20",
     title: "نتائج التدخل الجراحي في برلين",
@@ -215,6 +205,7 @@ const thoracicVideos: VideoCard[] = [
 const immuneVideos: VideoCard[] = [
   {
     videoId: "UMzijBy0pQ4",
+    thumbnail: "/images/videos/patient-2.jpg",
     tag: "رحلة المريض",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "قصة المعاناة والوصول إلى ألمانيا (مرض مناعي نادر)",
@@ -223,6 +214,7 @@ const immuneVideos: VideoCard[] = [
   },
   {
     videoId: "K9v4u6HT-YM",
+    thumbnail: "/images/videos/patient-2.jpg",
     tag: "تعافي",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "تحسن الحالة والنتائج بعد العلاج الدقيق",

@@ -1148,3 +1148,6 @@
 - [x] Shelf B: أمراض مناعية ونادرة — 2 videos (UMzijBy0pQ4 + K9v4u6HT-YM), gold tags, CTA to WhatsApp
 - [x] Move floating WhatsApp button to bottom-left (RTL)
 - [x] Ensure global Arabic nav header is visible on /ar/videos
+
+## Video Thumbnail Fix
+- [x] Replace YouTube thumbnail logic with static image paths (patient-1.jpg / patient-2.jpg)

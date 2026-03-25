@@ -1142,3 +1142,9 @@
 - [x] CTA under Visa: "هل تواجه صعوبة في الحصول على تأشيرة علاجية؟ تواصل معنا الآن"
 - [x] Move Thoracic/PET-CT video to Medical tab under أورام الصدر
 - [x] Move Visa struggle videos to Visa/Logistics tab
+
+## Video Library Final Restructure (2 Shelves)
+- [x] Shelf A: أورام الصدر — 2 videos (iLMZmn82_DE + lnxXzDQ8dts), blue tags, CTA to /ar/send-medical-reports
+- [x] Shelf B: أمراض مناعية ونادرة — 2 videos (UMzijBy0pQ4 + K9v4u6HT-YM), gold tags, CTA to WhatsApp
+- [x] Move floating WhatsApp button to bottom-left (RTL)
+- [x] Ensure global Arabic nav header is visible on /ar/videos

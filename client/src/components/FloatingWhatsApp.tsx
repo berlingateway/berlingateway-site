@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact Medical Coordinator via WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] text-white text-sm font-medium px-4 py-3 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-colors"
+      className="fixed bottom-6 left-6 z-50 flex items-center gap-2 bg-[#25D366] text-white text-sm font-medium px-4 py-3 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-colors"
       style={{ fontFamily: "'IBM Plex Sans', sans-serif" }}
     >
       {/* WhatsApp SVG icon */}

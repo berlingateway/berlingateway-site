@@ -1155,3 +1155,9 @@
 ## Video Thumbnail Path Fix
 - [x] Update thumbnail paths to /videos/patient1.jpg and /videos/patient2.jpg
 - [x] Verify public/videos/ folder exists and contains the images
+
+## Video Poster Image Replacement (Mar 25)
+- [x] Copy IMG_3780.jpeg → patient1.jpg (Patient 1, jacket/indoor)
+- [x] Copy IMG_3767.png → patient2.jpg (Patient 2, beard/dark bg)
+- [x] Remove zoom/scale tricks from VideoCardItem
+- [x] Set object-position: center 20% for face-safe framing on both cards

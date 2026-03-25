@@ -25,7 +25,7 @@ function ThumbnailSkeleton() {
 
 // ─── Video card ───────────────────────────────────────────────────────────────
 
-function VideoCardItem({ video, zoomed }: { video: VideoCard; zoomed?: boolean }) {
+function VideoCardItem({ video }: { video: VideoCard }) {
   const [loaded, setLoaded] = useState(false);
   const videoUrl = video.isShort
     ? `https://www.youtube.com/shorts/${video.videoId}`
@@ -47,7 +47,8 @@ function VideoCardItem({ video, zoomed }: { video: VideoCard; zoomed?: boolean }
           alt={video.title}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${zoomed ? "scale-[1.05] object-top" : "object-center"}`}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          style={{ objectPosition: "center 20%" }}
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
@@ -205,7 +206,7 @@ const thoracicVideos: VideoCard[] = [
 const immuneVideos: VideoCard[] = [
   {
     videoId: "UMzijBy0pQ4",
-    thumbnail: "/videos/patient2.jpg",
+    thumbnail: "https://d2xsxph8kpxj0f.cloudfront.net/310519663074485748/JqQAhVtqiy55V3DmpshfM9/patient2_7abc9dc1.jpg",
     tag: "رحلة المريض",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "قصة المعاناة والوصول إلى ألمانيا (مرض مناعي نادر)",
@@ -214,7 +215,7 @@ const immuneVideos: VideoCard[] = [
   },
   {
     videoId: "K9v4u6HT-YM",
-    thumbnail: "/videos/patient2.jpg",
+    thumbnail: "https://d2xsxph8kpxj0f.cloudfront.net/310519663074485748/JqQAhVtqiy55V3DmpshfM9/patient2_7abc9dc1.jpg",
     tag: "تعافي",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "تحسن الحالة والنتائج بعد العلاج الدقيق",
@@ -263,7 +264,7 @@ export default function VideoLibrary() {
 
           <div className="flex flex-wrap gap-5">
             {thoracicVideos.map((video, idx) => (
-              <VideoCardItem key={idx} video={video} zoomed={idx === 1} />
+              <VideoCardItem key={idx} video={video} />
             ))}
           </div>
 
@@ -293,7 +294,7 @@ export default function VideoLibrary() {
 
           <div className="flex flex-wrap gap-5">
             {immuneVideos.map((video, idx) => (
-              <VideoCardItem key={idx} video={video} zoomed={idx === 1} />
+              <VideoCardItem key={idx} video={video} />
             ))}
           </div>
 

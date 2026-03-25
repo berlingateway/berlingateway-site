@@ -103,6 +103,7 @@ export default function ArabicHome() {
           <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>الرئيسية</a>
           <a href="#focus" className={`nav-link ${activeSection === 'focus' ? 'active' : ''}`}>الحوكمة</a>
           <a href="#why-germany" className={`nav-link ${activeSection === 'why-germany' ? 'active' : ''}`}>كيف نعمل</a>
+          <a href="/ar/videos" className="nav-link">مكتبة الفيديو</a>
           {/* Medical Conditions Mega-Menu (Arabic) — no scroll, full visibility */}
           <div className="relative" ref={conditionsRef}>
             <button
@@ -215,6 +216,7 @@ export default function ArabicHome() {
           <a href="#home" onClick={() => setMobileMenuOpen(false)}>الرئيسية</a>
           <a href="#focus" onClick={() => setMobileMenuOpen(false)}>مجالات التخصص</a>
           <a href="#why-germany" onClick={() => setMobileMenuOpen(false)}>لماذا ألمانيا</a>
+          <a href="/ar/videos" onClick={() => setMobileMenuOpen(false)}>مكتبة الفيديو</a>
           <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>تقديم الحالة</a>
           {/* Mobile Medical Conditions (Arabic) */}
           <button

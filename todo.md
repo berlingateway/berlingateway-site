@@ -1161,3 +1161,10 @@
 - [x] Copy IMG_3767.png → patient2.jpg (Patient 2, beard/dark bg)
 - [x] Remove zoom/scale tricks from VideoCardItem
 - [x] Set object-position: center 20% for face-safe framing on both cards
+
+## Video Card 4-Image Mapping (Final)
+- [ ] A1 (iLMZmn82_DE): IMG_3748 → /videos/thorax-a1.jpg (black t-shirt, yellow curtain)
+- [ ] A2 (lnxXzDQ8dts): IMG_3767 → /videos/thorax-a2.jpg (beard close-up, dark bg)
+- [ ] B1 (UMzijBy0pQ4): IMG_3727 → /videos/immune-b1.jpg (hooded winter jacket)
+- [ ] B2 (K9v4u6HT-YM): IMG_3781 → /videos/immune-b2.jpg (neat jacket, indoors)
+- [ ] Switch to object-cover + object-position:center for all 4 cards

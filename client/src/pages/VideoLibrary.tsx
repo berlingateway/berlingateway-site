@@ -47,7 +47,7 @@ function VideoCardItem({ video }: { video: VideoCard }) {
           alt={video.title}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}
-          className="absolute inset-0 w-full h-full object-contain"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
@@ -185,18 +185,19 @@ function ArabicPageHeader() {
 const thoracicVideos: VideoCard[] = [
   {
     videoId: "iLMZmn82_DE",
-    thumbnail: "/videos/patient1.jpg",
+    thumbnail: "/videos/thorax-a1.jpg",
     tag: "التشخيص السريري",
     tagStyle: "bg-[#0B1C2C]/10 text-[#0B1C2C] border border-[#0B1C2C]/20",
-    title: "التشخيص الدقيق والقرار الجراحي (أورام الصدر)",
+    title: "أورام الصدر والجراحات الدقيقة",
     description: "كيف كشف فحص PET-CT عن ورم في الصدر وأدى إلى قرار علاجي دقيق في ألمانيا.",
+    isShort: true,
   },
   {
     videoId: "lnxXzDQ8dts",
-    thumbnail: "/videos/patient1.jpg",
+    thumbnail: "/videos/thorax-a2.jpg",
     tag: "نتيجة جراحية",
     tagStyle: "bg-[#0B1C2C]/10 text-[#0B1C2C] border border-[#0B1C2C]/20",
-    title: "نتائج التدخل الجراحي في برلين",
+    title: "التشخيص الدقيق والقرار الجراحي (أورام الصدر)",
     description: "توثيق نتائج العملية الجراحية لأورام الصدر وتقييم المسار العلاجي بعد التدخل.",
     isShort: true,
   },
@@ -205,7 +206,7 @@ const thoracicVideos: VideoCard[] = [
 const immuneVideos: VideoCard[] = [
   {
     videoId: "UMzijBy0pQ4",
-    thumbnail: "/videos/patient2.jpg",
+    thumbnail: "/videos/immune-b1.jpg",
     tag: "رحلة المريض",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "قصة المعاناة والوصول إلى ألمانيا (مرض مناعي نادر)",
@@ -214,7 +215,7 @@ const immuneVideos: VideoCard[] = [
   },
   {
     videoId: "K9v4u6HT-YM",
-    thumbnail: "/videos/patient2.jpg",
+    thumbnail: "/videos/immune-b2.jpg",
     tag: "تعافي",
     tagStyle: "bg-[#C8A96A]/15 text-[#8B6914] border border-[#C8A96A]/30",
     title: "تحسن الحالة والنتائج بعد العلاج الدقيق",

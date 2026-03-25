@@ -12,17 +12,19 @@ export default function TopBanner() {
   const [isArabic, setIsArabic] = useState(false);
 
   useEffect(() => {
-    // Detect Arabic route
     const arabic = window.location.pathname.startsWith("/ar");
     setIsArabic(arabic);
 
     const dismissed = sessionStorage.getItem(BANNER_DISMISSED_KEY);
     if (!dismissed) {
       setVisible(true);
-      document.documentElement.style.setProperty(
-        "--banner-height",
-        `${BANNER_HEIGHT}px`
-      );
+      // Use requestAnimationFrame to avoid layout thrashing
+      requestAnimationFrame(() => {
+        document.documentElement.style.setProperty(
+          "--banner-height",
+          `${BANNER_HEIGHT}px`
+        );
+      });
     } else {
       document.documentElement.style.setProperty("--banner-height", "0px");
     }
@@ -31,17 +33,15 @@ export default function TopBanner() {
   const handleClose = () => {
     sessionStorage.setItem(BANNER_DISMISSED_KEY, "1");
     setVisible(false);
-    document.documentElement.style.setProperty("--banner-height", "0px");
+    requestAnimationFrame(() => {
+      document.documentElement.style.setProperty("--banner-height", "0px");
+    });
   };
 
   if (!visible) return null;
 
   const text = isArabic ? BANNER_AR : BANNER_EN;
   const dir = isArabic ? "rtl" : "ltr";
-  // Close button: right side for LTR, left side for RTL
-  const closeButtonStyle: React.CSSProperties = isArabic
-    ? { left: "16px", right: "auto" }
-    : { right: "16px", left: "auto" };
 
   return (
     <div
@@ -60,9 +60,11 @@ export default function TopBanner() {
         alignItems: "center",
         justifyContent: "center",
         padding: "0 48px",
+        // Performance: promote to own compositor layer, avoid repaints
+        contain: "layout style",
+        willChange: "auto",
       }}
     >
-      {/* Centered message */}
       <p
         style={{
           color: "#FFFFFF",
@@ -91,6 +93,7 @@ export default function TopBanner() {
           position: "absolute",
           top: "50%",
           transform: "translateY(-50%)",
+          ...(isArabic ? { left: "16px", right: "auto" } : { right: "16px", left: "auto" }),
           background: "none",
           border: "none",
           cursor: "pointer",
@@ -101,14 +104,12 @@ export default function TopBanner() {
           color: "rgba(255,255,255,0.55)",
           lineHeight: 1,
           flexShrink: 0,
-          ...closeButtonStyle,
         }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF";
         }}
         onMouseLeave={(e) => {
-          (e.currentTarget as HTMLButtonElement).style.color =
-            "rgba(255,255,255,0.55)";
+          (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.55)";
         }}
       >
         <X size={14} strokeWidth={2} />

@@ -2,6 +2,181 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 
+// ─── Diagnostic Entry Layer ──────────────────────────────────────────────────
+
+const AR_FONT: React.CSSProperties = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
+const WA_PHONE = "493025730875";
+
+interface DiagCategory {
+  id: string;
+  label: string;
+  subs?: string[];
+}
+
+const DIAG_CATEGORIES: DiagCategory[] = [
+  {
+    id: "tumors",
+    label: "أورام",
+    subs: ["أورام الدماغ", "أورام العمود الفقري", "أورام الرئة", "أورام الجهاز الهضمي", "غير محدد"],
+  },
+  {
+    id: "dizziness",
+    label: "دوخة وعدم توازن",
+  },
+  {
+    id: "numbness",
+    label: "تنميل في الأطراف",
+  },
+  {
+    id: "bones",
+    label: "العظام والمفاصل",
+    subs: ["انزلاق غضروفي", "آلام العمود الفقري", "مشاكل الركبة", "مشاكل المفاصل", "إصابات رياضية"],
+  },
+  {
+    id: "nerves",
+    label: "الأعصاب",
+    subs: ["أورام المخ", "الصرع", "التصلب المتعدد", "مرض باركنسون", "ألم العصب الخامس", "حالة غير واضحة"],
+  },
+  {
+    id: "undiagnosed",
+    label: "حالة غير مشخصة",
+  },
+];
+
+function DiagnosticLayer() {
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [selectedSub, setSelectedSub] = useState<string | null>(null);
+  const [showCTA, setShowCTA] = useState(false);
+  const subRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+
+  function handlePrimary(cat: DiagCategory) {
+    if (activeId === cat.id) {
+      // toggle off
+      setActiveId(null);
+      setSelectedSub(null);
+      setShowCTA(false);
+      return;
+    }
+    setActiveId(cat.id);
+    setSelectedSub(null);
+    setShowCTA(!cat.subs); // direct CTA for categories without subs
+    setTimeout(() => subRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 80);
+  }
+
+  function handleSub(sub: string) {
+    setSelectedSub(sub);
+    setShowCTA(true);
+    setTimeout(() => ctaRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 80);
+  }
+
+  const activeCategory = DIAG_CATEGORIES.find(c => c.id === activeId);
+  const waText = encodeURIComponent(
+    selectedSub
+      ? `أود التحدث مع منسق طبي حول حالة: ${selectedSub}`
+      : activeCategory
+        ? `أود التحدث مع منسق طبي حول حالة: ${activeCategory.label}`
+        : `أود التحدث مع منسق طبي`
+  );
+
+  return (
+    <section className="py-14 px-6 bg-slate-50 border-b border-slate-200" dir="rtl">
+      <div className="max-w-3xl mx-auto">
+
+        {/* Section title */}
+        <h2
+          className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-8"
+          style={AR_FONT}
+        >
+          ما الحالة التي تعاني منها؟
+        </h2>
+
+        {/* Level 1 — Primary grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          {DIAG_CATEGORIES.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => handlePrimary(cat)}
+              className={`w-full py-4 px-4 text-sm font-medium text-center rounded-sm border transition-all duration-200 ${
+                activeId === cat.id
+                  ? "bg-[#0B1C2C] text-white border-[#0B1C2C] shadow-sm"
+                  : "bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50"
+              }`}
+              style={AR_FONT}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Level 2 — Sub-categories (animated) */}
+        <div
+          ref={subRef}
+          className="overflow-hidden transition-all duration-300"
+          style={{
+            maxHeight: activeCategory?.subs ? "400px" : "0px",
+            opacity: activeCategory?.subs ? 1 : 0,
+            marginTop: activeCategory?.subs ? "20px" : "0px",
+          }}
+        >
+          {activeCategory?.subs && (
+            <div className="bg-white border border-slate-200 rounded-sm p-5">
+              <p className="text-xs text-slate-400 mb-4 text-right" style={AR_FONT}>
+                حدد الحالة بشكل أدق
+              </p>
+              <div className="flex flex-wrap gap-2 justify-end">
+                {activeCategory.subs.map((sub) => (
+                  <button
+                    key={sub}
+                    onClick={() => handleSub(sub)}
+                    className={`px-4 py-2 text-xs rounded-sm border transition-all duration-150 ${
+                      selectedSub === sub
+                        ? "bg-[#C8A96A] text-white border-[#C8A96A]"
+                        : "bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-400 hover:bg-white"
+                    }`}
+                    style={AR_FONT}
+                  >
+                    {sub}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* CTA — appears after selection */}
+        <div
+          ref={ctaRef}
+          className="overflow-hidden transition-all duration-300"
+          style={{
+            maxHeight: showCTA ? "160px" : "0px",
+            opacity: showCTA ? 1 : 0,
+            marginTop: showCTA ? "20px" : "0px",
+          }}
+        >
+          {showCTA && (
+            <div className="text-center py-2">
+              <a
+                href={`https://wa.me/${WA_PHONE}?text=${waText}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm hover:bg-slate-700 transition-colors"
+                style={AR_FONT}
+              >
+                تحدث مع منسق طبي
+              </a>
+              <p className="mt-3 text-xs text-slate-400" style={AR_FONT}>
+                يمكنك إرسال ملفاتك الطبية لاحقاً بعد التقييم الأولي
+              </p>
+            </div>
+          )}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 // Sovereign iframe form — Arabic version
 function ArabicIframeForm() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -365,6 +540,9 @@ export default function ArabicHome() {
           </div>
         </div>
       </section>
+
+      {/* DIAGNOSTIC ENTRY LAYER */}
+      <DiagnosticLayer />
 
       {/* CLINICAL FOCUS AREAS */}
       <section id="focus" className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>

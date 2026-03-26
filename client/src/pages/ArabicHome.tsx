@@ -2,172 +2,184 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 
-// ─── Diagnostic Entry Layer ──────────────────────────────────────────────────
+// ─── Diagnostic Entry Layer (v2) ─────────────────────────────────────────────
 
 const AR_FONT: React.CSSProperties = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const WA_PHONE = "493025730875";
 
 interface DiagCategory {
   id: string;
-  label: string;
-  subs?: string[];
+  label: string;        // shown on primary button
+  ctaLabel: string;     // dynamic CTA text
+  subs: string[];       // always present; empty = direct CTA
 }
 
 const DIAG_CATEGORIES: DiagCategory[] = [
   {
     id: "tumors",
     label: "أورام",
-    subs: ["أورام الدماغ", "أورام العمود الفقري", "أورام الرئة", "أورام الجهاز الهضمي", "غير محدد"],
+    ctaLabel: "إرسال تقارير الأورام للمراجعة",
+    subs: ["أورام الدماغ", "أورام الرئة", "أورام الجهاز الهضمي", "أورام العمود الفقري", "غير محدد"],
   },
   {
     id: "dizziness",
     label: "دوخة وعدم توازن",
+    ctaLabel: "إرسال تقارير الدوخة للمراجعة",
+    subs: ["دوخة مستمرة", "فقدان توازن", "دوار مفاجئ"],
   },
   {
     id: "numbness",
     label: "تنميل في الأطراف",
+    ctaLabel: "إرسال تقارير التنميل للمراجعة",
+    subs: ["اليدين", "القدمين", "نصف الجسم"],
   },
   {
     id: "bones",
     label: "العظام والمفاصل",
-    subs: ["انزلاق غضروفي", "آلام العمود الفقري", "مشاكل الركبة", "مشاكل المفاصل", "إصابات رياضية"],
+    ctaLabel: "إرسال تقارير العظام للمراجعة",
+    subs: ["العمود الفقري", "الركبة", "المفاصل"],
   },
   {
     id: "nerves",
     label: "الأعصاب",
-    subs: ["أورام المخ", "الصرع", "التصلب المتعدد", "مرض باركنسون", "ألم العصب الخامس", "حالة غير واضحة"],
+    ctaLabel: "إرسال تقارير الأعصاب للمراجعة",
+    subs: ["الصداع", "الأعصاب الطرفية", "أمراض الدماغ"],
   },
   {
     id: "undiagnosed",
     label: "حالة غير مشخصة",
+    ctaLabel: "إرسال التقارير الطبية للمراجعة",
+    subs: [],
   },
 ];
 
 function DiagnosticLayer() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [selectedSub, setSelectedSub] = useState<string | null>(null);
-  const [showCTA, setShowCTA] = useState(false);
-  const subRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const ctaRef   = useRef<HTMLDivElement>(null);
+
+  const activeCategory = DIAG_CATEGORIES.find(c => c.id === activeId) ?? null;
+  // CTA is visible once a primary is chosen (direct) or a sub is chosen
+  const showCTA = activeId !== null && (activeCategory?.subs.length === 0 || selectedSub !== null);
 
   function handlePrimary(cat: DiagCategory) {
     if (activeId === cat.id) {
-      // toggle off
       setActiveId(null);
       setSelectedSub(null);
-      setShowCTA(false);
       return;
     }
     setActiveId(cat.id);
     setSelectedSub(null);
-    setShowCTA(!cat.subs); // direct CTA for categories without subs
-    setTimeout(() => subRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 80);
+    // scroll sub-panel into view
+    setTimeout(() => panelRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 100);
   }
 
   function handleSub(sub: string) {
     setSelectedSub(sub);
-    setShowCTA(true);
-    setTimeout(() => ctaRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 80);
+    setTimeout(() => ctaRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 100);
   }
 
-  const activeCategory = DIAG_CATEGORIES.find(c => c.id === activeId);
-  const waText = encodeURIComponent(
-    selectedSub
-      ? `أود التحدث مع منسق طبي حول حالة: ${selectedSub}`
-      : activeCategory
-        ? `أود التحدث مع منسق طبي حول حالة: ${activeCategory.label}`
-        : `أود التحدث مع منسق طبي`
-  );
+  // Dynamic CTA label
+  const ctaLabel = activeCategory?.ctaLabel ?? "إرسال التقارير الطبية للمراجعة";
+
+  // Sub-panel is open when active category has subs
+  const subPanelOpen = activeCategory !== null && activeCategory.subs.length > 0;
 
   return (
     <section className="py-14 px-6 bg-slate-50 border-b border-slate-200" dir="rtl">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
 
-        {/* Section title */}
+        {/* ── Title ── */}
         <h2
-          className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-8"
+          className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-10"
           style={AR_FONT}
         >
           ما الحالة التي تعاني منها؟
         </h2>
 
-        {/* Level 1 — Primary grid */}
+        {/* ── Level 1: 6 equal boxes ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          {DIAG_CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => handlePrimary(cat)}
-              className={`w-full py-4 px-4 text-sm font-medium text-center rounded-sm border transition-all duration-200 ${
-                activeId === cat.id
-                  ? "bg-[#0B1C2C] text-white border-[#0B1C2C] shadow-sm"
-                  : "bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50"
-              }`}
-              style={AR_FONT}
-            >
-              {cat.label}
-            </button>
-          ))}
+          {DIAG_CATEGORIES.map((cat) => {
+            const isActive = activeId === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => handlePrimary(cat)}
+                className={
+                  "w-full py-5 px-4 text-sm font-medium text-center border cursor-pointer " +
+                  "transition-all duration-200 select-none " +
+                  (isActive
+                    ? "bg-[#0B1C2C] text-white border-[#0B1C2C] shadow-md"
+                    : "bg-white text-slate-700 border-slate-200 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A]")
+                }
+                style={AR_FONT}
+              >
+                {cat.label}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Level 2 — Sub-categories (animated) */}
+        {/* ── Level 2: Sub-selection panel (CSS transition) ── */}
         <div
-          ref={subRef}
-          className="overflow-hidden transition-all duration-300"
+          ref={panelRef}
           style={{
-            maxHeight: activeCategory?.subs ? "400px" : "0px",
-            opacity: activeCategory?.subs ? 1 : 0,
-            marginTop: activeCategory?.subs ? "20px" : "0px",
+            maxHeight: subPanelOpen ? "320px" : "0px",
+            opacity:   subPanelOpen ? 1 : 0,
+            marginTop: subPanelOpen ? "16px" : "0px",
+            overflow:  "hidden",
+            transition: "max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease",
           }}
         >
-          {activeCategory?.subs && (
-            <div className="bg-white border border-slate-200 rounded-sm p-5">
-              <p className="text-xs text-slate-400 mb-4 text-right" style={AR_FONT}>
-                حدد الحالة بشكل أدق
+          {activeCategory && activeCategory.subs.length > 0 && (
+            <div className="bg-white border border-slate-200 p-5">
+              <p className="text-xs text-slate-400 mb-4" style={AR_FONT}>
+                حدد الحالة بشكل أدق:
               </p>
               <div className="flex flex-wrap gap-2 justify-end">
-                {activeCategory.subs.map((sub) => (
-                  <button
-                    key={sub}
-                    onClick={() => handleSub(sub)}
-                    className={`px-4 py-2 text-xs rounded-sm border transition-all duration-150 ${
-                      selectedSub === sub
-                        ? "bg-[#C8A96A] text-white border-[#C8A96A]"
-                        : "bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-400 hover:bg-white"
-                    }`}
-                    style={AR_FONT}
-                  >
-                    {sub}
-                  </button>
-                ))}
+                {activeCategory.subs.map((sub) => {
+                  const isSubActive = selectedSub === sub;
+                  return (
+                    <button
+                      key={sub}
+                      onClick={() => handleSub(sub)}
+                      className={
+                        "px-4 py-2 text-xs border cursor-pointer transition-all duration-150 " +
+                        (isSubActive
+                          ? "bg-[#1E4A7A] text-white border-[#1E4A7A]"
+                          : "bg-slate-50 text-slate-600 border-slate-200 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A]")
+                      }
+                      style={AR_FONT}
+                    >
+                      {sub}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
         </div>
 
-        {/* CTA — appears after selection */}
+        {/* ── CTA block (fade in) ── */}
         <div
           ref={ctaRef}
-          className="overflow-hidden transition-all duration-300"
           style={{
             maxHeight: showCTA ? "160px" : "0px",
-            opacity: showCTA ? 1 : 0,
-            marginTop: showCTA ? "20px" : "0px",
+            opacity:   showCTA ? 1 : 0,
+            marginTop: showCTA ? "24px" : "0px",
+            overflow:  "hidden",
+            transition: "max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease",
           }}
         >
           {showCTA && (
-            <div className="text-center py-2">
-              <a
-                href={`https://wa.me/${WA_PHONE}?text=${waText}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm hover:bg-slate-700 transition-colors"
+            <div className="text-center">
+              <Link
+                href="/ar/send-medical-reports"
+                className="inline-block px-10 py-4 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-[#1E3A5A] transition-colors"
                 style={AR_FONT}
               >
-                تحدث مع منسق طبي
-              </a>
-              <p className="mt-3 text-xs text-slate-400" style={AR_FONT}>
-                يمكنك إرسال ملفاتك الطبية لاحقاً بعد التقييم الأولي
-              </p>
+                {ctaLabel}
+              </Link>
             </div>
           )}
         </div>

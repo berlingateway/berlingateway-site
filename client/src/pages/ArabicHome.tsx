@@ -173,13 +173,16 @@ function DiagnosticLayer() {
         >
           {showCTA && (
             <div className="text-center">
-              <Link
-                href="/ar/send-medical-reports"
-                className="inline-block px-10 py-4 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-[#1E3A5A] transition-colors"
+              <button
+                onClick={() => {
+                  const el = document.getElementById('intake-form');
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+                className="inline-block px-10 py-4 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-[#1E3A5A] transition-colors cursor-pointer"
                 style={AR_FONT}
               >
                 {ctaLabel}
-              </Link>
+              </button>
             </div>
           )}
         </div>
@@ -809,6 +812,8 @@ export default function ArabicHome() {
 
       {/* SUBMIT CASE FORM */}
       <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
+        {/* intake-form anchor — targeted by DiagnosticLayer CTA */}
+        <span id="intake-form" style={{ display: 'block', marginTop: '-90px', paddingTop: '90px', pointerEvents: 'none' }} aria-hidden="true" />
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
             تقديم الحالة للمراجعة الطبية

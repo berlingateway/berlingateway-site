@@ -530,7 +530,7 @@ export default function ArabicHome() {
               className="text-2xl md:text-3xl text-slate-900 mb-4"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", fontWeight: 500 }}
             >
-              تجربة واقعية: مسار العلاج في ألمانيا
+              حالة واقعية: كيف غيّر التقييم الطبي المسار العلاجي
             </h2>
             <p
               className="text-slate-500 text-base leading-relaxed max-w-xl mx-auto"
@@ -540,6 +540,14 @@ export default function ArabicHome() {
             </p>
           </div>
 
+          {/* Micro text above video */}
+          <p
+            className="text-xs text-slate-400 text-center mb-5 leading-relaxed"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            ليست كل الأعراض بسيطة… بعض الحالات تحتاج تقييم دقيق.
+          </p>
+
           {/* YouTube embed — centered, clean, no black margins */}
           <div className="flex justify-center">
             <div
@@ -548,8 +556,8 @@ export default function ArabicHome() {
             >
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
-                  src="https://www.youtube.com/embed/iLMZmn82_DE?rel=0&modestbranding=1&color=white"
-                  title="تجربة واقعية: مسار العلاج في ألمانيا"
+                  src="https://www.youtube.com/embed/ooHPXMqzlbU?rel=0&modestbranding=1&color=white"
+                  title="حالة واقعية: كيف غيّر التقييم الطبي المسار العلاجي"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   loading="lazy"
@@ -570,7 +578,7 @@ export default function ArabicHome() {
           {/* Secondary text link */}
           <div className="mt-4 text-center">
             <a
-              href="https://www.youtube.com/watch?v=iLMZmn82_DE"
+              href="https://www.youtube.com/watch?v=ooHPXMqzlbU"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-slate-400 hover:text-slate-700 transition-colors underline underline-offset-4"
@@ -591,12 +599,20 @@ export default function ArabicHome() {
           {/* CTA button */}
           <div className="mt-10 text-center">
             <a
-              href="/send-medical-reports"
+              href="https://wa.me/493025730875?text=%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D8%AB%20%D9%85%D8%B9%20%D9%85%D9%86%D8%B3%D9%82%20%D8%B7%D8%A8%D9%8A%20%D8%AD%D9%88%D9%84%20%D8%AD%D8%A7%D9%84%D8%AA%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm hover:bg-slate-700 transition-colors"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
-              أرسل ملفك الطبي للمراجعة السريرية
+              تحدث مع منسق طبي
             </a>
+            <p
+              className="mt-3 text-xs text-slate-400"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              يمكنك إرسال ملفاتك الطبية لاحقاً بعد التقييم الأولي
+            </p>
           </div>
         </div>
       </section>

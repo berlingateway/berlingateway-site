@@ -207,7 +207,7 @@ const thoracicVideos: VideoCard[] = [
 const successVideos: VideoCard[] = [
   {
     videoId: "M4jB5D4wZ1k",
-    thumbnail: "https://i.ytimg.com/vi/M4jB5D4wZ1k/hqdefault.jpg",
+    thumbnail: "https://d2xsxph8kpxj0f.cloudfront.net/310519663074485748/JqQAhVtqiy55V3DmpshfM9/morocco-success_a2f931bc.jpg",
     tag: "نجاح واستقرار",
     tagStyle: "bg-emerald-50 text-emerald-700 border border-emerald-200",
     title: "من رحلة علاج إلى استقرار: قصة نجاح من المغرب",

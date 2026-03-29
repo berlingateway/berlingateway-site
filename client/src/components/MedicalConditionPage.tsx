@@ -26,6 +26,19 @@ export interface MedicalConditionPageProps {
   ctaTitle?: string;
   ctaText?: string;
   ctaButton?: string;
+  sectionLabels?: {
+    aboutCondition?: string;
+    symptoms?: string;
+    causes?: string;
+    diagnosticProcess?: string;
+    treatmentOptions?: string;
+    whyGermany?: string;
+    specialistEvaluation?: string;
+    patientPathway?: string;
+    relatedLinks?: string;
+    footerNote?: string;
+  };
+  pageDir?: "rtl" | "ltr";
 }
 
 export default function MedicalConditionPage({
@@ -53,11 +66,13 @@ export default function MedicalConditionPage({
   ctaTitle,
   ctaText,
   ctaButton,
+  sectionLabels,
+  pageDir,
 }: MedicalConditionPageProps) {
   const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans">
+    <div className="min-h-screen bg-white text-slate-900 font-sans" dir={pageDir}>
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -160,7 +175,7 @@ export default function MedicalConditionPage({
 
         {/* About the condition */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">About the Condition</h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.aboutCondition || "About the Condition"}</h2>
           {Array.isArray(aboutCondition)
             ? aboutCondition.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{aboutCondition}</p>}
@@ -171,7 +186,7 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Common Symptoms</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.symptoms || "Common Symptoms"}</h2>
               <ul className="space-y-2">
                 {symptoms.map((symptom, i) => (
                   <li key={i} className="flex items-start gap-3 text-base text-slate-700">
@@ -189,7 +204,7 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Causes and Risk Factors</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.causes || "Causes and Risk Factors"}</h2>
               <p className="text-base text-slate-700 leading-relaxed">{causes}</p>
             </section>
           </>
@@ -200,7 +215,7 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Diagnostic Process in Germany</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.diagnosticProcess || "Diagnostic Process in Germany"}</h2>
               <p className="text-base text-slate-700 leading-relaxed">{diagnosticProcess}</p>
             </section>
           </>
@@ -211,7 +226,7 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Treatment Options in Germany</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.treatmentOptions || "Treatment Options in Germany"}</h2>
               {treatmentOptions && (
                 <p className="text-base text-slate-700 leading-relaxed mb-4">{treatmentOptions}</p>
               )}
@@ -233,7 +248,7 @@ export default function MedicalConditionPage({
 
         {/* Why Germany */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Why Treatment in Germany</h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.whyGermany || "Why Treatment in Germany"}</h2>
           {Array.isArray(whyGermany)
             ? whyGermany.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{whyGermany}</p>}
@@ -243,7 +258,7 @@ export default function MedicalConditionPage({
 
         {/* Specialist evaluation */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Specialist Evaluation</h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.specialistEvaluation || "Specialist Evaluation"}</h2>
           {Array.isArray(specialistEvaluation)
             ? specialistEvaluation.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{specialistEvaluation}</p>}
@@ -254,7 +269,7 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">Patient Pathway</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">{sectionLabels?.patientPathway || "Patient Pathway"}</h2>
               <ol className="space-y-4">
                 {patientPathway.map((step, i) => (
                   <li key={i} className="flex items-start gap-4">
@@ -274,7 +289,7 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Related Conditions and Services</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.relatedLinks || "Related Conditions and Services"}</h2>
               <div className="flex flex-wrap gap-3">
                 {relatedLinks.map((link, i) => (
                   <Link
@@ -310,7 +325,7 @@ export default function MedicalConditionPage({
             {ctaButton || "Send Medical Reports"}
           </Link>
           <p className="text-xs text-slate-400 mt-4">
-            All documentation is handled in accordance with German data protection regulations.
+            {sectionLabels?.footerNote || "All documentation is handled in accordance with German data protection regulations."}
           </p>
         </section>
       </main>

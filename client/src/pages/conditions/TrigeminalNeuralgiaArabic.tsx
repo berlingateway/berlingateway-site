@@ -124,7 +124,7 @@ export default function TrigeminalNeuralgiaArabic() {
       <nav className="sticky top-0 z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm">
         <div className="flex flex-col">
           <Link href="/ar" className="text-xl font-serif font-bold tracking-tight text-slate-900">
-            Medical Care Germany
+            ميديكال كير جيرماني
           </Link>
           <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">
             سلطة التنسيق الطبي الدولي
@@ -138,7 +138,7 @@ export default function TrigeminalNeuralgiaArabic() {
             href="/trigeminal-neuralgia-treatment-germany"
             className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline"
           >
-            EN
+            النسخة الإنجليزية
           </Link>
           <button
             onClick={scrollToIntake}
@@ -155,7 +155,7 @@ export default function TrigeminalNeuralgiaArabic() {
       <header className="bg-slate-50 border-b border-slate-200 py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs text-slate-400 uppercase tracking-widest mb-4">
-            Medical Care Germany · برلين
+            ميديكال كير جيرماني · برلين
           </p>
           <h1 className="text-3xl md:text-4xl font-serif font-medium text-slate-900 leading-tight mb-4">
             علاج ألم العصب ثلاثي التوائم في ألمانيا
@@ -397,7 +397,7 @@ export default function TrigeminalNeuralgiaArabic() {
       {/* ── Footer ── */}
       <footer className="py-10 border-t border-slate-100 text-center">
         <p className="text-xs text-slate-400">إطار تنسيق طبي منظم ضمن المنظومة الصحية الألمانية.</p>
-        <p className="text-xs text-slate-300 mt-1">Medical Care Germany · برلين، ألمانيا</p>
+        <p className="text-xs text-slate-300 mt-1">ميديكال كير جيرماني · برلين، ألمانيا</p>
       </footer>
 
       {/* ── زر WhatsApp العائم ── */}

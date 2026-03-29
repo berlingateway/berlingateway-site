@@ -20,6 +20,9 @@ export interface MedicalConditionPageProps {
   relatedLinks?: Array<{ href: string; label: string }>;
   structuredData?: string;
   arabicSummary?: string;
+  arabicSummaryTitle?: string;
+  trustLine?: string;
+  ctaLabel?: string;
 }
 
 export default function MedicalConditionPage({
@@ -41,6 +44,9 @@ export default function MedicalConditionPage({
   relatedLinks,
   structuredData,
   arabicSummary,
+  arabicSummaryTitle,
+  trustLine,
+  ctaLabel,
 }: MedicalConditionPageProps) {
   const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
 
@@ -108,6 +114,19 @@ export default function MedicalConditionPage({
             {headline}
           </h1>
           <p className="text-lg text-slate-600 font-light">{subtitle}</p>
+          {trustLine && (
+            <p className="text-xs text-slate-400 mt-4 tracking-wide">{trustLine}</p>
+          )}
+          {ctaLabel && (
+            <div className="mt-6">
+              <a
+                href="/ar#intake-form"
+                className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
+              >
+                {ctaLabel}
+              </a>
+            </div>
+          )}
         </div>
       </header>
 
@@ -118,9 +137,9 @@ export default function MedicalConditionPage({
         {arabicSummary && (
           <section dir="rtl" lang="ar" className="bg-slate-50 border-r-4 border-slate-300 px-6 py-6">
             <h2 className="text-base font-semibold text-slate-800 mb-3 font-sans">
-              ما هو هذا المرض؟
+              {arabicSummaryTitle || "ما هو هذا المرض؟"}
             </h2>
-            <p className="text-sm text-slate-700 leading-loose font-sans">{arabicSummary}</p>
+            <p className="text-sm text-slate-700 leading-loose font-sans whitespace-pre-line">{arabicSummary}</p>
           </section>
         )}
 

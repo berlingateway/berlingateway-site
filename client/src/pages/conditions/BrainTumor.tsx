@@ -6,8 +6,10 @@ export default function BrainTumor() {
       metaTitle="Brain Tumor Treatment in Germany | Specialist Neurosurgery"
       metaDescription="Structured access to neurosurgical and neuro-oncological expertise at German university hospitals for brain tumor diagnosis and treatment planning."
       canonicalPath="/brain-tumor-treatment-germany"
-      headline="Brain Tumor Treatment in Germany"
-      subtitle="Structured access to neurosurgical and neuro-oncological expertise at German university hospitals."
+      headline="عندما يكون الورم في المخ… القرار لا يحتمل الخطأ."
+      subtitle="ليست كل أورام المخ متشابهة، ولا كل خطة علاج مناسبة لكل مريض. التقييم الدقيق يحدد الفرق بين مسار صحيح وقرار قد يصعب التراجع عنه."
+      trustLine="مراجعة طبية منظمة ضمن شبكة المستشفيات الجامعية في ألمانيا."
+      ctaLabel="إرسال التقارير الطبية"
       introduction="Brain tumors represent one of the most complex categories of neurological disease, requiring a precise convergence of diagnostic imaging, molecular pathology, neurosurgery, radiation oncology, and systemic treatment. German university hospitals operate dedicated neuro-oncology units where these disciplines intersect within structured multidisciplinary tumor boards. Each case is reviewed collectively before any treatment decision is finalized, ensuring that the selected pathway reflects the full clinical picture rather than a single specialist perspective."
       aboutCondition="Brain tumors encompass a broad spectrum of intracranial neoplasms. They may be primary — arising directly from brain tissue, meninges, or cranial nerves — or secondary, representing metastases from cancers originating in the lung, breast, kidney, or other organ systems. Primary brain tumors are further classified by cell type and malignancy grade according to the World Health Organization (WHO) classification system, which ranges from Grade I (slow-growing, often benign) to Grade IV (rapidly progressive, such as glioblastoma multiforme). Molecular profiling, including IDH mutation status, MGMT promoter methylation, and 1p/19q codeletion analysis, has become integral to both prognosis and treatment selection in modern neuro-oncology."
       symptoms={[
@@ -60,7 +62,8 @@ export default function BrainTumor() {
         "about": { "@type": "MedicalCondition", "name": "Brain Tumor" },
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
-      arabicSummary="أورام المخ هي نمو غير طبيعي للخلايا داخل الجمجمة، وقد تكون ابتدائية نشأت في أنسجة المخ، أو ثانوية انتقلت من عضو آخر في الجسم. تتفاوت الأعراض بحسب موقع الورم وقد تشمل الصداع المستمر، أو ضعف في الحركة، أو تغيرات في الكلام والذاكرة. في ألمانيا، تُعالج هذه الحالات ضمن فرق طبية متخصصة تضم جراحي الأعصاب وأطباء الأورام وأخصائيي الأشعة، مما يتيح وضع خطة علاجية دقيقة تناسب كل حالة على حدة. يمكن إرسال التقارير الطبية للتقييم الأولي قبل اتخاذ أي قرار علاجي."
+      arabicSummaryTitle="متى تحتاج الحالة إلى مراجعة متخصصة؟"
+      arabicSummary="أورام المخ ليست تشخيصًا واحدًا، بل مجموعة معقدة من الحالات تختلف في النوع، الموقع، وسرعة النمو.\nفي بعض الحالات، قد يكون القرار العلاجي واضحًا. لكن في حالات أخرى، يكون التقييم غير كافٍ أو الخطة غير مكتملة.\n\nتحتاج الحالة إلى مراجعة متخصصة إذا كان هناك:\n• تضارب في التشخيص أو عدم وضوح نوع الورم\n• اقتراحات علاج متعددة دون مسار واضح\n• أعراض مستمرة أو متزايدة رغم بدء العلاج\n• توصية بجراحة دقيقة أو علاج إشعاعي متقدم\n• رغبة في التأكد قبل اتخاذ قرار علاجي نهائي\n\nفي هذه الحالات، التقييم المنظم من فريق متخصص قد يغيّر مسار العلاج بالكامل.\n\nيمكن إرسال التقارير الطبية للحصول على تقييم أولي قبل اتخاذ أي قرار علاجي."
     />
   );
 }

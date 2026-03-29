@@ -8,14 +8,14 @@ export interface MedicalConditionPageProps {
   headline: string;
   subtitle: string;
   introduction: string;
-  aboutCondition: string;
+  aboutCondition: string | string[];
   symptoms?: string[];
   causes?: string;
   diagnosticProcess?: string;
   treatmentOptions?: string;
   treatmentList?: string[];
-  whyGermany: string;
-  specialistEvaluation: string;
+  whyGermany: string | string[];
+  specialistEvaluation: string | string[];
   patientPathway?: string[];
   relatedLinks?: Array<{ href: string; label: string }>;
   structuredData?: string;
@@ -23,6 +23,9 @@ export interface MedicalConditionPageProps {
   arabicSummaryTitle?: string;
   trustLine?: string;
   ctaLabel?: string;
+  ctaTitle?: string;
+  ctaText?: string;
+  ctaButton?: string;
 }
 
 export default function MedicalConditionPage({
@@ -47,6 +50,9 @@ export default function MedicalConditionPage({
   arabicSummaryTitle,
   trustLine,
   ctaLabel,
+  ctaTitle,
+  ctaText,
+  ctaButton,
 }: MedicalConditionPageProps) {
   const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
 
@@ -155,7 +161,9 @@ export default function MedicalConditionPage({
         {/* About the condition */}
         <section>
           <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">About the Condition</h2>
-          <p className="text-base text-slate-700 leading-relaxed">{aboutCondition}</p>
+          {Array.isArray(aboutCondition)
+            ? aboutCondition.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
+            : <p className="text-base text-slate-700 leading-relaxed">{aboutCondition}</p>}
         </section>
 
         {/* Symptoms */}
@@ -226,7 +234,9 @@ export default function MedicalConditionPage({
         {/* Why Germany */}
         <section>
           <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Why Treatment in Germany</h2>
-          <p className="text-base text-slate-700 leading-relaxed">{whyGermany}</p>
+          {Array.isArray(whyGermany)
+            ? whyGermany.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
+            : <p className="text-base text-slate-700 leading-relaxed">{whyGermany}</p>}
         </section>
 
         <div className="h-px bg-slate-100" />
@@ -234,7 +244,9 @@ export default function MedicalConditionPage({
         {/* Specialist evaluation */}
         <section>
           <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">Specialist Evaluation</h2>
-          <p className="text-base text-slate-700 leading-relaxed">{specialistEvaluation}</p>
+          {Array.isArray(specialistEvaluation)
+            ? specialistEvaluation.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
+            : <p className="text-base text-slate-700 leading-relaxed">{specialistEvaluation}</p>}
         </section>
 
         {/* Patient Pathway */}
@@ -282,19 +294,20 @@ export default function MedicalConditionPage({
 
         {/* Call to action */}
         <section className="bg-slate-50 border border-slate-200 px-8 py-10">
-          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">Next Step</p>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-3">
-            Submit Your Medical Reports for Review
+          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">{ctaTitle || "Next Step"}</p>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-3" dir={ctaTitle ? "rtl" : undefined} lang={ctaTitle ? "ar" : undefined}>
+            {ctaTitle ? ctaTitle : "Submit Your Medical Reports for Review"}
           </h2>
-          <p className="text-sm text-slate-600 leading-relaxed mb-6">
-            Medical documentation may be submitted for preliminary review by a clinical coordinator in Berlin.
-            Complex cases are directed to the appropriate specialist or university hospital within the German healthcare system.
+          <p className="text-sm text-slate-600 leading-relaxed mb-6" dir={ctaText ? "rtl" : undefined} lang={ctaText ? "ar" : undefined}>
+            {ctaText
+              ? ctaText
+              : "Medical documentation may be submitted for preliminary review by a clinical coordinator in Berlin. Complex cases are directed to the appropriate specialist or university hospital within the German healthcare system."}
           </p>
           <Link
             href="/send-medical-reports"
             className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
           >
-            Send Medical Reports
+            {ctaButton || "Send Medical Reports"}
           </Link>
           <p className="text-xs text-slate-400 mt-4">
             All documentation is handled in accordance with German data protection regulations.

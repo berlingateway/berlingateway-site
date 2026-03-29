@@ -26,6 +26,7 @@ export interface MedicalConditionPageProps {
   ctaTitle?: string;
   ctaText?: string;
   ctaButton?: string;
+  ctaHref?: string;
   sectionLabels?: {
     aboutCondition?: string;
     symptoms?: string;
@@ -38,6 +39,23 @@ export interface MedicalConditionPageProps {
     relatedLinks?: string;
     footerNote?: string;
   };
+  /** Override navigation strings — if omitted, English defaults are shown */
+  navLabels?: {
+    tagline?: string;
+    homeLink?: string;
+    langLink?: string;
+    langHref?: string;
+    ctaButton?: string;
+    ctaHref?: string;
+    topBarEmail?: string;
+  };
+  /** Override footer strings — if omitted, English defaults are shown */
+  footerLabels?: {
+    line1?: string;
+    line2?: string;
+  };
+  /** Hero eyebrow line (e.g. "Medical Care Germany · Berlin") — omit to hide */
+  heroEyebrow?: string;
   pageDir?: "rtl" | "ltr";
 }
 
@@ -66,10 +84,42 @@ export default function MedicalConditionPage({
   ctaTitle,
   ctaText,
   ctaButton,
+  ctaHref,
   sectionLabels,
+  navLabels,
+  footerLabels,
+  heroEyebrow,
   pageDir,
 }: MedicalConditionPageProps) {
   const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
+
+  // When pageDir is rtl and no explicit English fallback is desired, suppress defaults
+  const isArabic = pageDir === "rtl";
+
+  // Nav strings — use navLabels if provided, otherwise English defaults (hidden on Arabic if not set)
+  const navTagline = navLabels?.tagline ?? (isArabic ? null : "Institutional Clinical Coordination Authority");
+  const navHomeLink = navLabels?.homeLink ?? (isArabic ? null : "← Home");
+  const navLangLink = navLabels?.langLink ?? (isArabic ? "EN" : "العربية");
+  const navLangHref = navLabels?.langHref ?? (isArabic ? "/" : "/ar");
+  const navCtaButton = navLabels?.ctaButton ?? (isArabic ? null : "Send Medical Reports");
+  const navCtaHref = navLabels?.ctaHref ?? "/send-medical-reports";
+
+  // Hero eyebrow
+  const eyebrow = heroEyebrow !== undefined ? heroEyebrow : (isArabic ? null : "Medical Care Germany · Berlin");
+
+  // CTA section — hide English defaults on Arabic pages unless explicitly provided
+  const resolvedCtaTitle = ctaTitle ?? (isArabic ? null : "Next Step");
+  const resolvedCtaH2 = ctaTitle ?? (isArabic ? null : "Submit Your Medical Reports for Review");
+  const resolvedCtaText = ctaText ?? (isArabic ? null : "Medical documentation may be submitted for preliminary review by a clinical coordinator in Berlin. Complex cases are directed to the appropriate specialist or university hospital within the German healthcare system.");
+  const resolvedCtaButton = ctaButton ?? (isArabic ? null : "Send Medical Reports");
+  const resolvedCtaHref = ctaHref ?? (isArabic ? "/ar#intake-form" : "/send-medical-reports");
+
+  // Footer strings
+  const footerLine1 = footerLabels?.line1 ?? (isArabic ? null : "Operating within established clinical coordination frameworks.");
+  const footerLine2 = footerLabels?.line2 ?? (isArabic ? "Medical Care Germany · برلين، ألمانيا" : "Medical Care Germany · Berlin, Germany");
+
+  // Footer note in CTA box
+  const footerNote = sectionLabels?.footerNote ?? (isArabic ? null : "All documentation is handled in accordance with German data protection regulations.");
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans" dir={pageDir}>
@@ -90,7 +140,7 @@ export default function MedicalConditionPage({
       <div className="w-full bg-slate-900 text-white py-3 px-6">
         <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
           <a href="mailto:info@medicalcaregermany.com" className="hover:text-slate-300 transition-colors">
-            info@medicalcaregermany.com
+            {navLabels?.topBarEmail ?? "info@medicalcaregermany.com"}
           </a>
         </div>
       </div>
@@ -98,39 +148,47 @@ export default function MedicalConditionPage({
       {/* Navigation */}
       <nav className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm" style={{ top: 'var(--banner-height, 0px)' }}>
         <div className="flex flex-col">
-          <Link href="/" className="text-xl font-serif font-bold tracking-tight text-slate-900">
+          <Link href={isArabic ? "/ar" : "/"} className="text-xl font-serif font-bold tracking-tight text-slate-900">
             Medical Care Germany
           </Link>
-          <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">
-            Institutional Clinical Coordination Authority
-          </span>
+          {navTagline && (
+            <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">
+              {navTagline}
+            </span>
+          )}
         </div>
         <div className="flex items-center gap-4">
-          <Link href="/" className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline">
-            ← Home
-          </Link>
+          {navHomeLink && (
+            <Link href={isArabic ? "/ar" : "/"} className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline">
+              {navHomeLink}
+            </Link>
+          )}
           <Link
-            href="/ar"
+            href={navLangHref}
             className="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:inline"
-            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            style={isArabic ? undefined : { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
           >
-            العربية
+            {navLangLink}
           </Link>
-          <Link
-            href="/send-medical-reports"
-            className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
-          >
-            Send Medical Reports
-          </Link>
+          {navCtaButton && (
+            <Link
+              href={navCtaHref}
+              className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
+            >
+              {navCtaButton}
+            </Link>
+          )}
         </div>
       </nav>
 
       {/* Hero */}
       <header className="bg-slate-50 border-b border-slate-200 py-14 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs text-slate-400 uppercase tracking-widest mb-4">
-            Medical Care Germany · Berlin
-          </p>
+          {eyebrow && (
+            <p className="text-xs text-slate-400 uppercase tracking-widest mb-4">
+              {eyebrow}
+            </p>
+          )}
           <h1 className="text-3xl md:text-4xl font-serif font-medium text-slate-900 leading-tight mb-4">
             {headline}
           </h1>
@@ -141,7 +199,7 @@ export default function MedicalConditionPage({
           {ctaLabel && (
             <div className="mt-6">
               <a
-                href="/ar#intake-form"
+                href={resolvedCtaHref}
                 className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
               >
                 {ctaLabel}
@@ -175,7 +233,9 @@ export default function MedicalConditionPage({
 
         {/* About the condition */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.aboutCondition || "About the Condition"}</h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+            {sectionLabels?.aboutCondition || (isArabic ? "عن الحالة" : "About the Condition")}
+          </h2>
           {Array.isArray(aboutCondition)
             ? aboutCondition.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{aboutCondition}</p>}
@@ -186,7 +246,9 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.symptoms || "Common Symptoms"}</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+                {sectionLabels?.symptoms || (isArabic ? "الأعراض الشائعة" : "Common Symptoms")}
+              </h2>
               <ul className="space-y-2">
                 {symptoms.map((symptom, i) => (
                   <li key={i} className="flex items-start gap-3 text-base text-slate-700">
@@ -204,7 +266,9 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.causes || "Causes and Risk Factors"}</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+                {sectionLabels?.causes || (isArabic ? "الأسباب وعوامل الخطر" : "Causes and Risk Factors")}
+              </h2>
               <p className="text-base text-slate-700 leading-relaxed">{causes}</p>
             </section>
           </>
@@ -215,7 +279,9 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.diagnosticProcess || "Diagnostic Process in Germany"}</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+                {sectionLabels?.diagnosticProcess || (isArabic ? "مسار التشخيص في ألمانيا" : "Diagnostic Process in Germany")}
+              </h2>
               <p className="text-base text-slate-700 leading-relaxed">{diagnosticProcess}</p>
             </section>
           </>
@@ -226,7 +292,9 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.treatmentOptions || "Treatment Options in Germany"}</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+                {sectionLabels?.treatmentOptions || (isArabic ? "الخيارات العلاجية" : "Treatment Options in Germany")}
+              </h2>
               {treatmentOptions && (
                 <p className="text-base text-slate-700 leading-relaxed mb-4">{treatmentOptions}</p>
               )}
@@ -248,7 +316,9 @@ export default function MedicalConditionPage({
 
         {/* Why Germany */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.whyGermany || "Why Treatment in Germany"}</h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+            {sectionLabels?.whyGermany || (isArabic ? "لماذا ألمانيا؟" : "Why Treatment in Germany")}
+          </h2>
           {Array.isArray(whyGermany)
             ? whyGermany.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{whyGermany}</p>}
@@ -258,7 +328,9 @@ export default function MedicalConditionPage({
 
         {/* Specialist evaluation */}
         <section>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.specialistEvaluation || "Specialist Evaluation"}</h2>
+          <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+            {sectionLabels?.specialistEvaluation || (isArabic ? "مراجعة متخصصة" : "Specialist Evaluation")}
+          </h2>
           {Array.isArray(specialistEvaluation)
             ? specialistEvaluation.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{specialistEvaluation}</p>}
@@ -269,7 +341,9 @@ export default function MedicalConditionPage({
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">{sectionLabels?.patientPathway || "Patient Pathway"}</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">
+                {sectionLabels?.patientPathway || (isArabic ? "مسار المريض" : "Patient Pathway")}
+              </h2>
               <ol className="space-y-4">
                 {patientPathway.map((step, i) => (
                   <li key={i} className="flex items-start gap-4">
@@ -284,12 +358,14 @@ export default function MedicalConditionPage({
           </>
         )}
 
-        {/* Related Conditions / Internal Links */}
+        {/* Related Conditions / Internal Links — hidden on Arabic pages unless relatedLinks provided */}
         {relatedLinks && relatedLinks.length > 0 && (
           <>
             <div className="h-px bg-slate-100" />
             <section>
-              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{sectionLabels?.relatedLinks || "Related Conditions and Services"}</h2>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
+                {sectionLabels?.relatedLinks || (isArabic ? "حالات وخدمات مرتبطة" : "Related Conditions and Services")}
+              </h2>
               <div className="flex flex-wrap gap-3">
                 {relatedLinks.map((link, i) => (
                   <Link
@@ -305,39 +381,48 @@ export default function MedicalConditionPage({
           </>
         )}
 
-        <div className="h-px bg-slate-100" />
-
-        {/* Call to action */}
-        <section className="bg-slate-50 border border-slate-200 px-8 py-10">
-          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">{ctaTitle || "Next Step"}</p>
-          <h2 className="text-xl font-serif font-medium text-slate-900 mb-3" dir={ctaTitle ? "rtl" : undefined} lang={ctaTitle ? "ar" : undefined}>
-            {ctaTitle ? ctaTitle : "Submit Your Medical Reports for Review"}
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed mb-6" dir={ctaText ? "rtl" : undefined} lang={ctaText ? "ar" : undefined}>
-            {ctaText
-              ? ctaText
-              : "Medical documentation may be submitted for preliminary review by a clinical coordinator in Berlin. Complex cases are directed to the appropriate specialist or university hospital within the German healthcare system."}
-          </p>
-          <Link
-            href="/send-medical-reports"
-            className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
-          >
-            {ctaButton || "Send Medical Reports"}
-          </Link>
-          <p className="text-xs text-slate-400 mt-4">
-            {sectionLabels?.footerNote || "All documentation is handled in accordance with German data protection regulations."}
-          </p>
-        </section>
+        {/* Call to action — hidden entirely on Arabic pages if no explicit Arabic strings provided */}
+        {(resolvedCtaH2 || resolvedCtaText || resolvedCtaButton) && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section className="bg-slate-50 border border-slate-200 px-8 py-10">
+              {resolvedCtaTitle && (
+                <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">{resolvedCtaTitle}</p>
+              )}
+              {resolvedCtaH2 && (
+                <h2 className="text-xl font-serif font-medium text-slate-900 mb-3">
+                  {resolvedCtaH2}
+                </h2>
+              )}
+              {resolvedCtaText && (
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                  {resolvedCtaText}
+                </p>
+              )}
+              {resolvedCtaButton && (
+                <Link
+                  href={resolvedCtaHref}
+                  className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
+                >
+                  {resolvedCtaButton}
+                </Link>
+              )}
+              {footerNote && (
+                <p className="text-xs text-slate-400 mt-4">{footerNote}</p>
+              )}
+            </section>
+          </>
+        )}
       </main>
 
       {/* Footer */}
       <footer className="py-10 border-t border-slate-100 text-center">
-        <p className="text-xs text-slate-400">
-          Operating within established clinical coordination frameworks.
-        </p>
-        <p className="text-xs text-slate-300 mt-1">
-          Medical Care Germany · Berlin, Germany
-        </p>
+        {footerLine1 && (
+          <p className="text-xs text-slate-400">{footerLine1}</p>
+        )}
+        {footerLine2 && (
+          <p className="text-xs text-slate-300 mt-1">{footerLine2}</p>
+        )}
       </footer>
     </div>
   );

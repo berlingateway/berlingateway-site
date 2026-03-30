@@ -15,7 +15,7 @@ export interface MedicalConditionPageProps {
   symptomsPreviewCount?: number;
   causes?: string;
   diagnosticProcess?: string;
-  treatmentOptions?: string;
+  treatmentOptions?: string | string[];
   treatmentList?: string[];
   whyGermany: string | string[];
   specialistEvaluation: string | string[];
@@ -32,28 +32,45 @@ export interface MedicalConditionPageProps {
   ctaHref?: string;
   /** Mid-page CTA shown between specialistEvaluation and patientPathway */
   midPageCta?: { label: string; href: string };
-  /** Expandable deep-dive block shown after treatmentOptions */
-  deepDive?: { title: string; content: string | string[] };
+  /** Expandable deep-dive block shown after treatmentOptions.
+   * Provide either `content` (string | string[]) OR `sections` (array of {heading, content}) */
+  deepDive?: {
+    title: string;
+    content?: string | string[];
+    sections?: Array<{ heading: string; content: string }>;
+  };
   /** GDPR / data protection note shown at bottom of CTA box */
   gdprNote?: string;
   sectionLabels?: {
+    about?: string;
     aboutCondition?: string;
     symptoms?: string;
     showMoreSymptoms?: string;
     showLessSymptoms?: string;
+    showMore?: string;
+    showLess?: string;
     causes?: string;
     diagnosticProcess?: string;
+    treatment?: string;
     treatmentOptions?: string;
     whyGermany?: string;
+    evaluation?: string;
     specialistEvaluation?: string;
+    pathway?: string;
     patientPathway?: string;
+    related?: string;
     relatedLinks?: string;
+    nextStep?: string;
+    deepDiveToggle?: string;
+    deepDiveClose?: string;
     footerNote?: string;
   };
   /** Override navigation strings — if omitted, English defaults are shown */
   navLabels?: {
     tagline?: string;
     homeLink?: string;
+    backLink?: string;
+    backHref?: string;
     langLink?: string;
     langHref?: string;
     ctaButton?: string;
@@ -66,10 +83,16 @@ export interface MedicalConditionPageProps {
   footerLabels?: {
     line1?: string;
     line2?: string;
+    /** Arabic-friendly aliases */
+    brand?: string;
+    location?: string;
+    trustLine?: string;
   };
   /** Hero eyebrow line — omit to hide */
   heroEyebrow?: string;
   pageDir?: "rtl" | "ltr";
+  /** Pre-filled WhatsApp message (URL-encoded). If omitted, the global FloatingWhatsApp handles it. */
+  whatsappMessage?: string;
 }
 
 export default function MedicalConditionPage({
@@ -135,8 +158,8 @@ export default function MedicalConditionPage({
   const resolvedCtaHref = ctaHref ?? (isArabic ? "/ar#intake-form" : "/send-medical-reports");
 
   // ── Footer strings ───────────────────────────────────────────────────────
-  const footerLine1 = footerLabels?.line1 ?? (isArabic ? null : "Operating within established clinical coordination frameworks.");
-  const footerLine2 = footerLabels?.line2 ?? (isArabic ? null : "Medical Care Germany · Berlin, Germany");
+  const footerLine1 = footerLabels?.line1 ?? footerLabels?.trustLine ?? (isArabic ? null : "Operating within established clinical coordination frameworks.");
+  const footerLine2 = footerLabels?.line2 ?? (footerLabels?.brand && footerLabels?.location ? `${footerLabels.brand} · ${footerLabels.location}` : null) ?? (isArabic ? null : "Medical Care Germany · Berlin, Germany");
 
   // ── Footer note in CTA box ───────────────────────────────────────────────
   const footerNote = sectionLabels?.footerNote ?? (isArabic ? null : "All documentation is handled in accordance with German data protection regulations.");
@@ -260,7 +283,7 @@ export default function MedicalConditionPage({
         {/* About the condition */}
         <section>
           <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">
-            {sectionLabels?.aboutCondition || (isArabic ? "عن الحالة" : "About the Condition")}
+            {sectionLabels?.aboutCondition ?? sectionLabels?.about ?? (isArabic ? "عن الحالة" : "About the Condition")}
           </h2>
           {Array.isArray(aboutCondition)
             ? aboutCondition.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
@@ -365,9 +388,16 @@ export default function MedicalConditionPage({
               </button>
               {deepDiveExpanded && (
                 <div className="mt-4 space-y-3 animate-in fade-in duration-200">
-                  {Array.isArray(deepDive.content)
-                    ? deepDive.content.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed">{p}</p>)
-                    : <p className="text-base text-slate-700 leading-relaxed">{deepDive.content}</p>}
+                  {deepDive.sections && deepDive.sections.length > 0
+                    ? deepDive.sections.map((sec, i) => (
+                        <div key={i} className="mb-5">
+                          <h3 className="text-base font-semibold text-slate-800 mb-2">{sec.heading}</h3>
+                          <p className="text-base text-slate-700 leading-relaxed">{sec.content}</p>
+                        </div>
+                      ))
+                    : Array.isArray(deepDive.content)
+                      ? deepDive.content.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed">{p}</p>)
+                      : <p className="text-base text-slate-700 leading-relaxed">{deepDive.content}</p>}
                 </div>
               )}
             </section>

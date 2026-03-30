@@ -25,7 +25,6 @@ import ReferringDoctors from "./pages/ReferringDoctors";
 // Medical Condition Pages
 import BrainTumor from "./pages/conditions/BrainTumor";
 import BrainTumorTreatmentArabic from "./pages/conditions/BrainTumorTreatmentArabic";
-import TrigeminalNeuralgiaArabic from "./pages/conditions/TrigeminalNeuralgiaArabic";
 import TrigeminalNeuralgia from "./pages/conditions/TrigeminalNeuralgia";
 import SpineSurgery from "./pages/conditions/SpineSurgery";
 import HerniatedDisc from "./pages/conditions/HerniatedDisc";
@@ -95,7 +94,6 @@ function Router() {
       <Route path={"/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgia} />
       <Route path={"/spine-surgery-germany"} component={SpineSurgery} />
       <Route path={"/ar/brain-tumor-treatment-germany"} component={BrainTumorTreatmentArabic} />
-      <Route path={"/ar/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgiaArabic} />
       <Route path={"/ar/herniated-disc"} component={HerniatedDisc} />
       <Route path={"/ar/videos"} component={VideoLibrary} />
       <Route path={"/herniated-disc-treatment-germany"} component={HerniatedDiscEN} />

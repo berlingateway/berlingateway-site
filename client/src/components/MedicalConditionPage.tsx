@@ -8,7 +8,7 @@ export interface MedicalConditionPageProps {
   canonicalPath: string;
   headline: string;
   subtitle: string;
-  introduction: string;
+  introduction?: string;
   aboutCondition: string | string[];
   symptoms?: string[];
   /** How many symptoms to show before "show more" button. Default: all */
@@ -93,6 +93,12 @@ export interface MedicalConditionPageProps {
   pageDir?: "rtl" | "ltr";
   /** Pre-filled WhatsApp message (URL-encoded). If omitted, the global FloatingWhatsApp handles it. */
   whatsappMessage?: string;
+  /** Optional checklist section rendered between Hero and 'About' — ideal for 'هل هذه حالتك؟' blocks */
+  checklistSection?: {
+    title: string;
+    items: string[];
+    footer?: string;
+  };
 }
 
 export default function MedicalConditionPage({
@@ -131,6 +137,7 @@ export default function MedicalConditionPage({
   footerLabels,
   heroEyebrow,
   pageDir,
+  checklistSection,
 }: MedicalConditionPageProps) {
   const [symptomsExpanded, setSymptomsExpanded] = useState(false);
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
@@ -273,10 +280,34 @@ export default function MedicalConditionPage({
 
         {arabicSummary && <div className="h-px bg-slate-100" />}
 
+        {/* Checklist Section (e.g. هل هذه حالتك؟) */}
+        {checklistSection && (
+          <section className="bg-slate-50 border border-slate-200 px-6 py-6 rounded-sm">
+            <h2 className="text-base font-semibold text-slate-800 mb-4">
+              {checklistSection.title}
+            </h2>
+            <ul className="space-y-3">
+              {checklistSection.items.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                  <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold">{i + 1}</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            {checklistSection.footer && (
+              <p className="mt-4 text-xs text-slate-500 leading-relaxed border-t border-slate-200 pt-3">
+                {checklistSection.footer}
+              </p>
+            )}
+          </section>
+        )}
+
         {/* Introduction */}
-        <section>
-          <p className="text-base text-slate-700 leading-relaxed">{introduction}</p>
-        </section>
+        {introduction && (
+          <section>
+            <p className="text-base text-slate-700 leading-relaxed">{introduction}</p>
+          </section>
+        )}
 
         <div className="h-px bg-slate-100" />
 

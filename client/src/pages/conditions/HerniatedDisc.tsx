@@ -1,160 +1,145 @@
-import { Link } from "wouter";
+import MedicalConditionPage from "@/components/MedicalConditionPage";
 
 export default function HerniatedDisc() {
   return (
-    <div dir="rtl" className="min-h-screen bg-white text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', sans-serif" }}>
+    <MedicalConditionPage
+      pageDir="rtl"
+      metaTitle="علاج الانزلاق الغضروفي في ألمانيا | ميديكال كير جيرماني"
+      metaDescription="تقييم متخصص للانزلاق الغضروفي في ألمانيا — بين العلاج التحفظي والجراحة الميكروسكوبية. نحدد المسار الأكثر أماناً لاستعادة حركتك بدون ألم."
+      canonicalPath="/ar/herniated-disc"
+      navBrandName="ميديكال كير جيرماني"
+      navLabels={{
+        langLink: "الإنجليزية",
+        langHref: "/spine-surgery-germany",
+        ctaButton: "إرسال التقارير الطبية",
+        ctaHref: "/ar#intake-form",
+        topBarEmail: "info@medicalcaregermany.com",
+      }}
+      footerLabels={{
+        brand: "ميديكال كير جيرماني",
+        location: "برلين، ألمانيا",
+        trustLine: "يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR).",
+      }}
 
-      {/* Page Content */}
-      <main className="max-w-2xl mx-auto px-5 py-12 space-y-10">
+      headline="علاج الانزلاق الغضروفي في ألمانيا: القرار الصحيح لتجنب العجز"
+      subtitle="بين العلاج التحفظي والجراحة الميكروسكوبية.. نحن نحدد لك المسار الأكثر أماناً لاستعادة حركتك بدون ألم، بناءً على تقييم أدق الكفاءات الألمانية."
+      ctaLabel="احصل على تقييم طبي أولي لحالتك"
 
-        {/* Headline */}
-        <div className="space-y-2">
-          <h1 className="text-2xl font-bold text-slate-900 leading-snug">
-            علاج الانزلاق الغضروفي في ألمانيا
-          </h1>
-          <p className="text-base text-slate-500 font-medium">
-            تشخيص دقيق. قرار علاجي واضح. علاج مناسب للحالة.
-          </p>
-        </div>
+      checklistSection={{
+        title: "هل هذه حالتك؟",
+        items: [
+          "ألم حاد في أسفل الظهر يمتد إلى الساق (عرق النسا).",
+          "تنميل، وخز، أو ضعف في القدم يعيق الحركة الطبيعية.",
+          "عدم استجابة الألم للعلاجات التقليدية والمسكنات لفترة طويلة.",
+          "تخوف من إجراء جراحة غير ضرورية أو البحث عن بدائل جراحية دقيقة.",
+        ],
+        footer: "في هذه الحالات، التقييم الدقيق هو المفتاح لتجنب التلف العصبي الدائم.",
+      }}
 
-        {/* Divider */}
-        <div className="h-px bg-slate-100" />
+      aboutCondition="الانزلاق الغضروفي يحدث عندما يخرج النواة اللبية للقرص الفقري من مكانها ويضغط على الأعصاب المجاورة. هذا الضغط هو ما يسبب الألم الحاد الذي ينتشر من الظهر إلى الساق. في ألمانيا، يتم تقييم الحالة بدقة عبر صور الرنين المغناطيسي (MRI) لتحديد موقع الانزلاق ودرجة الضغط على الأعصاب، قبل اتخاذ أي قرار علاجي."
 
-        {/* Intro */}
-        <section className="space-y-3">
-          <p className="text-base text-slate-700 leading-relaxed">
-            ألم في أسفل الظهر يمتد إلى الساق، أو تنميل وضعف في القدم؟ قد تشير هذه الأعراض إلى ضغط على الأعصاب بسبب انزلاق غضروفي.
-          </p>
-          <p className="text-base text-slate-700 leading-relaxed">
-            في ألمانيا، يتم تقييم كل حالة بشكل فردي بناءً على صور الرنين المغناطيسي والفحص السريري من قبل أطباء متخصصين في جراحة العمود الفقري.
-          </p>
-        </section>
+      symptoms={[
+        "ألم حاد في أسفل الظهر يمتد إلى الساق أو القدم.",
+        "تنميل أو وخز في الساق أو القدم.",
+        "ضعف في العضلات يُصعّب المشي أو الوقوف.",
+        "ألم يزداد عند الجلوس أو السعال أو العطس.",
+        "صعوبة في التحكم في المثانة أو الأمعاء (في الحالات الشديدة).",
+        "ألم يتحسن عند الاستلقاء ويزداد عند الحركة.",
+        "إحساس بالحرارة أو الخدر على امتداد مسار العصب.",
+      ]}
+      symptomsPreviewCount={3}
 
-        {/* Divider */}
-        <div className="h-px bg-slate-100" />
+      treatmentOptions="ليس كل انزلاق غضروفي يحتاج لمشرط الجراح. نحن نركز أولاً على التقنيات غير الجراحية، وإذا لزم الأمر، نلجأ للجراحات الميكروسكوبية (Minimal Invasive) التي تضمن سرعة التعافي والحد الأدنى من التدخل الجراحي."
+      treatmentList={[
+        "العلاج الطبيعي المتخصص وإعادة التأهيل الوظيفي.",
+        "حقن الكورتيزون الموجّهة بالأشعة لتخفيف الضغط على الأعصاب.",
+        "الجراحة الميكروسكوبية (Microdiscectomy) عند الضرورة.",
+        "تقنيات التنظير الجراحي (Endoscopic Spine Surgery) للحالات المعقدة.",
+        "جراحة استبدال القرص الفقري الاصطناعي للحفاظ على الحركة.",
+      ]}
 
-        {/* Treatment */}
-        <section className="space-y-3">
-          <h2 className="text-lg font-semibold text-slate-800">العلاج</h2>
-          <p className="text-base text-slate-700 leading-relaxed">
-            معظم الحالات تُعالج بدون جراحة.
-          </p>
-          <p className="text-base text-slate-700 leading-relaxed">
-            إذا استمرت الأعراض أو ظهر ضعف عصبي، يمكن اللجوء إلى تقنيات دقيقة مثل الجراحة الميكروسكوبية أو المنظار.
-          </p>
-        </section>
+      deepDive={{
+        title: "التفاصيل الجراحية والتقنية المتقدمة",
+        sections: [
+          {
+            heading: "بروتوكول التشخيص الألماني",
+            content: "يعتمد التشخيص في ألمانيا على رنين مغناطيسي عالي الدقة (3T MRI) مع تسلسلات متخصصة لتحديد درجة الانزلاق وموقعه بدقة ملليمترية. يُكمَّل التشخيص بفحص عصبي سريري شامل وتقييم وظيفي للأعصاب.",
+          },
+          {
+            heading: "الجراحة الميكروسكوبية (Microdiscectomy)",
+            content: "تُجرى تحت تكبير ميكروسكوبي عالٍ عبر شق صغير (2-3 سم). تُزال الجزء المنفتق من القرص الذي يضغط على العصب مع الحفاظ الكامل على الهياكل العظمية والأربطة المحيطة. معدل النجاح يتجاوز 90% في تخفيف ألم الساق.",
+          },
+          {
+            heading: "الجراحة بالمنظار (Endoscopic Discectomy)",
+            content: "تقنية أحدث تستخدم كاميرا مصغرة وأدوات متخصصة عبر شق أصغر من 1 سم. تُتيح العودة للمشي في نفس اليوم وخروجاً من المستشفى خلال 24 ساعة في معظم الحالات.",
+          },
+          {
+            heading: "استبدال القرص الفقري الاصطناعي",
+            content: "بديل لعملية الإدماج الفقري (Fusion) يحافظ على الحركة الطبيعية للعمود الفقري. يُستخدم في الحالات التي لا تزال الحركة فيها ممكنة وعمر المريض مناسب. يُقلّل من خطر تدهور الأقراص المجاورة على المدى البعيد.",
+          },
+          {
+            heading: "إعادة التأهيل بعد الجراحة",
+            content: "برنامج إعادة تأهيل متكامل يبدأ في اليوم الأول بعد الجراحة، يشمل العلاج الطبيعي المتخصص، وتمارين تقوية عضلات الظهر، وإرشادات وضعية الجسم. الهدف: العودة للحياة الطبيعية خلال 4-6 أسابيع.",
+          },
+        ],
+      }}
 
-        {/* Divider */}
-        <div className="h-px bg-slate-100" />
+      whyGermany="في ألمانيا، يتم تقييم حالات الانزلاق الغضروفي ضمن فرق متعددة التخصصات تشمل جراحة العمود الفقري، وطب الألم، والعلاج الطبيعي، والأشعة التداخلية. هذا التكامل يضمن أن القرار العلاجي لا يعتمد على رأي واحد، بل على تقييم شامل وعلمي من عدة تخصصات لضمان أفضل النتائج المستدامة وتجنب الجراحة غير الضرورية."
 
-        {/* Decision Box */}
-        <section>
-          <div className="border-r-4 border-slate-800 pr-4 py-1">
-            <p className="text-base text-slate-800 font-medium leading-relaxed">
-              الأهم ليس إجراء العملية، بل تحديد الحاجة إليها بدقة.
-            </p>
-          </div>
-        </section>
+      specialistEvaluation="يتضمن التقييم المتخصص في ألمانيا مراجعة صور الرنين المغناطيسي من قِبل جراح عمود فقري ذي خبرة، وتقييم الحالة العصبية بشكل كامل، وتحديد ما إذا كانت الجراحة ضرورية أم يمكن تجنبها. هذا التقييم هو الخطوة الأولى نحو القرار العلاجي الصحيح."
 
-        {/* Divider */}
-        <div className="h-px bg-slate-100" />
+      midPageCta={{
+        label: "احصل على تقييم طبي أولي لحالتك",
+        href: "/ar#intake-form",
+      }}
 
-        {/* Video Card */}
-        <section>
-          <a
-            href="https://youtube.com/shorts/lnxXzDQ8dts"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-xl overflow-hidden shadow-md border border-slate-100 bg-white hover:shadow-lg transition-shadow"
-          >
-            {/* Thumbnail */}
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <img
-                src="https://i.ytimg.com/vi/lnxXzDQ8dts/hqdefault.jpg"
-                alt="فيديو تجربة المريض بعد الجراحة"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              {/* Play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-black/60 rounded-full w-12 h-12 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white mr-[-2px]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            {/* Card Body */}
-            <div className="p-4 space-y-2">
-              <span className="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
-                بعد العملية
-              </span>
-              <h3 className="text-base font-semibold text-slate-900 leading-snug">
-                ماذا حدث بعد الجراحة؟
-              </h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                نتيجة العملية وتجربة المريض بعد العلاج في برلين
-              </p>
-            </div>
-          </a>
-        </section>
+      patientPathway={[
+        "إرسال التقارير الطبية والصور الإشعاعية عبر النموذج الآمن.",
+        "مراجعة أولية من قِبل المنسق الطبي خلال 24-48 ساعة.",
+        "تحديد التخصصات المطلوبة وإعداد ملف الحالة.",
+        "التواصل مع الفريق الطبي المتخصص في ألمانيا.",
+        "الحصول على خطة علاجية مفصّلة مع الخيارات المتاحة.",
+        "تنسيق موعد التقييم أو العلاج في المستشفى الألماني.",
+      ]}
 
-        {/* Divider */}
-        <div className="h-px bg-slate-100" />
+      patientVideos={[
+        {
+          youtubeId: "lnxXzDQ8dts",
+          title: "ماذا حدث بعد الجراحة؟ تجربة مريض حقيقية في برلين",
+          tag: "تجربة مريض",
+          description: "مريض يشارك تجربته الكاملة من التشخيص حتى التعافي بعد جراحة الانزلاق الغضروفي في برلين.",
+        },
+        {
+          youtubeId: "lnxXzDQ8dts",
+          title: "الاستعداد للمرحلة التالية من التعافي",
+          tag: "إعادة التأهيل",
+          description: "كيف تستعد للمرحلة التالية من التعافي بعد جراحة العمود الفقري في ألمانيا.",
+        },
+      ]}
 
-        {/* Video Card 2 */}
-        <section>
-          <a
-            href="https://youtube.com/shorts/lnxXzDQ8dts"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-xl overflow-hidden shadow-md border border-slate-100 bg-white hover:shadow-lg transition-shadow"
-          >
-            {/* Thumbnail */}
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <img
-                src="https://i.ytimg.com/vi/lnxXzDQ8dts/hqdefault.jpg"
-                alt="الاستعداد للعملية الثانية"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-black/60 rounded-full w-12 h-12 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white mr-[-2px]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            {/* Card Body */}
-            <div className="p-4 space-y-2">
-              <span className="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
-                بعد العملية الأولى
-              </span>
-              <h3 className="text-base font-semibold text-slate-900 leading-snug">
-                الاستعداد للعملية الثانية
-              </h3>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                تجربة المريض بعد العملية الأولى والتحضير للجراحة التالية
-              </p>
-            </div>
-          </a>
-        </section>
+      relatedLinks={[
+        { href: "/ar/brain-tumor-treatment-germany", label: "جراحة المخ والأعصاب" },
+        { href: "/ar/trigeminal-neuralgia-treatment-germany", label: "ألم العصب الخامس" },
+        { href: "/ar/neurology-treatment-germany", label: "مركز أمراض الأعصاب" },
+      ]}
 
-        {/* Divider */}
-        <div className="h-px bg-slate-100" />
+      ctaText="اتخاذ القرار الصحيح في الوقت المناسب يمنع تدهور الحالة الصحية للأعصاب."
+      ctaButton="أرسل ملفك الطبي لتقييم الحالة الآن"
+      ctaHref="/ar#intake-form"
+      gdprNote="يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR)."
 
-        {/* CTA */}
-        <section className="space-y-4">
-          <p className="text-base text-slate-700">
-            أرسل ملفك الطبي لتقييم الحالة.
-          </p>
-          <Link href="/send-medical-reports">
-            <button className="w-full bg-slate-900 text-white text-base font-medium py-3 px-6 rounded-none hover:bg-slate-800 transition-colors">
-              أرسل الملف الطبي
-            </button>
-          </Link>
-        </section>
-
-      </main>
-    </div>
+      sectionLabels={{
+        about: "عن الحالة",
+        symptoms: "الأعراض",
+        treatmentOptions: "الخطة العلاجية",
+        whyGermany: "لماذا ألمانيا؟",
+        evaluation: "تقييم الخبراء",
+        pathway: "مسار المريض",
+        related: "خدمات مرتبطة",
+        deepDiveToggle: "التفاصيل الجراحية والتقنية المتقدمة",
+        deepDiveClose: "إخفاء التفاصيل",
+        footerNote: "يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR).",
+      }}
+    />
   );
 }

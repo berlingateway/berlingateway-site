@@ -99,6 +99,13 @@ export interface MedicalConditionPageProps {
     items: string[];
     footer?: string;
   };
+  /** Patient video cards shown between patientPathway and relatedLinks */
+  patientVideos?: Array<{
+    youtubeId: string;
+    title: string;
+    tag?: string;
+    description?: string;
+  }>;
 }
 
 export default function MedicalConditionPage({
@@ -138,6 +145,7 @@ export default function MedicalConditionPage({
   heroEyebrow,
   pageDir,
   checklistSection,
+  patientVideos,
 }: MedicalConditionPageProps) {
   const [symptomsExpanded, setSymptomsExpanded] = useState(false);
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
@@ -492,6 +500,50 @@ export default function MedicalConditionPage({
                   </li>
                 ))}
               </ol>
+            </section>
+          </>
+        )}
+
+        {/* Patient Videos */}
+        {patientVideos && patientVideos.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section className="space-y-6">
+              {(patientVideos as Array<{ youtubeId: string; title: string; tag?: string; description?: string }>).map((video, i: number) => (
+                <a
+                  key={i}
+                  href={`https://youtube.com/shorts/${video.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-xl overflow-hidden shadow-md border border-slate-100 bg-white hover:shadow-lg transition-shadow"
+                >
+                  <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <img
+                      src={`https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                      alt={video.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-black/60 rounded-full w-12 h-12 flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" style={{ marginRight: '-2px' }} fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-2">
+                    {video.tag && (
+                      <span className="inline-block text-xs font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                        {video.tag}
+                      </span>
+                    )}
+                    <h3 className="text-base font-semibold text-slate-900 leading-snug">{video.title}</h3>
+                    {video.description && (
+                      <p className="text-sm text-slate-500 leading-relaxed">{video.description}</p>
+                    )}
+                  </div>
+                </a>
+              ))}
             </section>
           </>
         )}

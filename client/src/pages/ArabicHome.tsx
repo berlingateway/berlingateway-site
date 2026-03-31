@@ -224,6 +224,21 @@ function ArabicIframeForm() {
   );
 }
 
+// ─── Single source of truth for Arabic conditions navigation ────────────────
+const AR_NAV_CONDITIONS = {
+  hub: { label: "أمراض الأعصاب →", href: "/ar/neurology-treatment-germany" },
+  items: [
+    { label: "أورام المخ",          href: "/ar/brain-tumor-treatment-germany" },
+    { label: "ألم العصب الخامس",   href: "/ar/trigeminal-neuralgia-treatment-germany" },
+    { label: "الانزلاق الغضروفي",  href: "/ar/herniated-disc" },
+  ],
+  services: [
+    { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
+    { label: "مكتبة الفيديو",         href: "/ar/videos" },
+  ],
+};
+// ─────────────────────────────────────────────────────────────────────────────
+
 export default function ArabicHome() {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -309,7 +324,7 @@ export default function ArabicHome() {
                 dir="rtl"
                 style={{ minWidth: '680px' }}
               >
-                {/* Desktop: only published /ar/ pages */}
+                {/* Desktop: driven by AR_NAV_CONDITIONS — single source of truth */}
                 <div className="grid grid-cols-2 gap-0 divide-x divide-x-reverse divide-slate-100">
                   {/* Column 1: Neurology + Spine */}
                   <div className="px-4">
@@ -383,15 +398,38 @@ export default function ArabicHome() {
             الحالات الطبية <span className={`text-xs transition-transform inline-block ${mobileConditionsOpen ? 'rotate-180' : ''}`}>▾</span>
           </button>
           {mobileConditionsOpen && (
-            <div className="flex flex-col gap-1 pr-3 pb-2" dir="rtl">
-              <Link href="/ar/neurology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-[10px] text-slate-500 uppercase tracking-widest font-semibold pt-1 pb-0.5 border-b border-slate-100 block hover:text-slate-900">أمراض الأعصاب →</Link>
-              <Link href="/ar/brain-tumor-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">أورام المخ</Link>
-              <Link href="/ar/trigeminal-neuralgia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">ألم العصب الخامس</Link>
-              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold pt-2 pb-0.5 border-b border-slate-100">العمود الفقري</span>
-              <Link href="/ar/herniated-disc" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">الانزلاق الغضروفي</Link>
+            <div className="flex flex-col gap-1 pr-3 pb-2 overflow-y-auto max-h-64" dir="rtl">
+              {/* Hub link — from AR_NAV_CONDITIONS */}
+              <Link
+                href={AR_NAV_CONDITIONS.hub.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-[10px] text-slate-500 uppercase tracking-widest font-semibold pt-1 pb-0.5 border-b border-slate-100 block hover:text-slate-900"
+              >
+                {AR_NAV_CONDITIONS.hub.label}
+              </Link>
+              {/* Condition items — from AR_NAV_CONDITIONS */}
+              {AR_NAV_CONDITIONS.items.map(item => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs text-slate-600 py-1 hover:text-slate-900"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {/* Services — from AR_NAV_CONDITIONS */}
               <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold pt-2 pb-0.5 border-b border-slate-100">خدمات</span>
-              <Link href="/send-medical-reports" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">إرسال التقارير الطبية</Link>
-              <Link href="/ar/videos" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">مكتبة الفيديو</Link>
+              {AR_NAV_CONDITIONS.services.map(svc => (
+                <Link
+                  key={svc.href}
+                  href={svc.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs text-slate-600 py-1 hover:text-slate-900"
+                >
+                  {svc.label}
+                </Link>
+              ))}
             </div>
           )}
           <a

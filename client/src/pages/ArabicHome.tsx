@@ -313,7 +313,7 @@ export default function ArabicHome() {
                 <div className="grid grid-cols-2 gap-0 divide-x divide-x-reverse divide-slate-100">
                   {/* Column 1: Neurology + Spine */}
                   <div className="px-4">
-                    <span className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2">أمراض الأعصاب</span>
+                    <Link href="/ar/neurology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2 hover:text-slate-900 transition-colors">أمراض الأعصاب →</Link>
                     <Link href="/ar/brain-tumor-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">أورام المخ</Link>
                     <Link href="/ar/trigeminal-neuralgia-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">ألم العصب الخامس</Link>
                     <div className="mt-3">
@@ -384,7 +384,7 @@ export default function ArabicHome() {
           </button>
           {mobileConditionsOpen && (
             <div className="flex flex-col gap-1 pr-3 pb-2" dir="rtl">
-              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold pt-1 pb-0.5 border-b border-slate-100">أمراض الأعصاب</span>
+              <Link href="/ar/neurology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-[10px] text-slate-500 uppercase tracking-widest font-semibold pt-1 pb-0.5 border-b border-slate-100 block hover:text-slate-900">أمراض الأعصاب →</Link>
               <Link href="/ar/brain-tumor-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">أورام المخ</Link>
               <Link href="/ar/trigeminal-neuralgia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1 hover:text-slate-900">ألم العصب الخامس</Link>
               <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold pt-2 pb-0.5 border-b border-slate-100">العمود الفقري</span>

@@ -27,6 +27,7 @@ import BrainTumor from "./pages/conditions/BrainTumor";
 import BrainTumorTreatmentArabic from "./pages/conditions/BrainTumorTreatmentArabic";
 import TrigeminalNeuralgia from "./pages/conditions/TrigeminalNeuralgia";
 import TrigeminalNeuralgiaArabic from "./pages/conditions/TrigeminalNeuralgiaArabic";
+import NeurologyHubArabic from "./pages/conditions/NeurologyHubArabic";
 import SpineSurgery from "./pages/conditions/SpineSurgery";
 import HerniatedDisc from "./pages/conditions/HerniatedDisc";
 import HerniatedDiscEN from "./pages/conditions/HerniatedDiscEN";
@@ -96,6 +97,7 @@ function Router() {
       <Route path={"/spine-surgery-germany"} component={SpineSurgery} />
       <Route path={"/ar/brain-tumor-treatment-germany"} component={BrainTumorTreatmentArabic} />
       <Route path={"/ar/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgiaArabic} />
+      <Route path={"/ar/neurology-treatment-germany"} component={NeurologyHubArabic} />
       <Route path={"/ar/herniated-disc"} component={HerniatedDisc} />
       <Route path={"/ar/videos"} component={VideoLibrary} />
       <Route path={"/herniated-disc-treatment-germany"} component={HerniatedDiscEN} />

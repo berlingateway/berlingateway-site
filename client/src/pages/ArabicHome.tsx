@@ -231,6 +231,7 @@ const AR_NAV_CONDITIONS = {
     { label: "أورام المخ",          href: "/ar/brain-tumor-treatment-germany" },
     { label: "ألم العصب الخامس",   href: "/ar/trigeminal-neuralgia-treatment-germany" },
     { label: "الانزلاق الغضروفي",  href: "/ar/herniated-disc" },
+    { label: "سرطان الرئة",         href: "/ar/lung-cancer-treatment-germany" },
   ],
   services: [
     { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },

@@ -39,6 +39,7 @@ import MultipleSclerosis from "./pages/conditions/MultipleSclerosis";
 import EpilepsyTreatment from "./pages/conditions/EpilepsyTreatment";
 import PediatricNeurology from "./pages/conditions/PediatricNeurology";
 import LungCancer from "./pages/conditions/LungCancer";
+import LungCancerArabic from "./pages/conditions/LungCancerArabic";
 import BreastCancer from "./pages/conditions/BreastCancer";
 import ProstateCancer from "./pages/conditions/ProstateCancer";
 import ColonCancer from "./pages/conditions/ColonCancer";
@@ -108,6 +109,7 @@ function Router() {
       <Route path={"/epilepsy-treatment-germany"} component={EpilepsyTreatment} />
       <Route path={"/pediatric-neurology-germany"} component={PediatricNeurology} />
       <Route path={"/lung-cancer-treatment-germany"} component={LungCancer} />
+      <Route path={"/ar/lung-cancer-treatment-germany"} component={LungCancerArabic} />
       <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
       <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />
       <Route path={"/colon-cancer-treatment-germany"} component={ColonCancer} />

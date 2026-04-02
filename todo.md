@@ -1168,3 +1168,9 @@
 - [ ] B1 (UMzijBy0pQ4): IMG_3727 → /videos/immune-b1.jpg (hooded winter jacket)
 - [ ] B2 (K9v4u6HT-YM): IMG_3781 → /videos/immune-b2.jpg (neat jacket, indoors)
 - [ ] Switch to object-cover + object-position:center for all 4 cards
+
+## Arabic Lung Cancer Page (Apr 2026)
+- [x] Create /ar/lung-cancer-treatment-germany (LungCancerArabic.tsx) with Gold Standard MedicalConditionPage
+- [x] Register route in App.tsx
+- [x] Add "سرطان الرئة" to AR_NAV_CONDITIONS in ArabicHome.tsx
+- [x] TypeScript: 0 errors verified

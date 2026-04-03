@@ -247,7 +247,7 @@ export default function MedicalConditionPage({
 
       {/* Hero */}
       <header className="bg-slate-50 border-b border-slate-200 py-14 md:py-20 px-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {eyebrow && (
             <p className="text-xs text-slate-400 uppercase tracking-widest mb-4">
               {eyebrow}
@@ -274,7 +274,7 @@ export default function MedicalConditionPage({
       </header>
 
       {/* Main content — pb-28 ensures floating WA button never overlaps last section on mobile */}
-      <main className="max-w-3xl mx-auto px-6 py-14 md:py-20 space-y-14 pb-28 md:pb-20">
+      <main className="max-w-5xl mx-auto px-6 py-14 md:py-20 space-y-14 pb-28 md:pb-20">
 
         {/* Arabic Summary / Hook Block */}
         {arabicSummary && (

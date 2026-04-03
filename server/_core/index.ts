@@ -138,6 +138,49 @@ async function startServer() {
     }
     next();
   });
+  // ─────────────────────────────────────────────────────────────────────────
+  // ARABIC-FIRST SEO ARCHITECTURE
+  // ─────────────────────────────────────────────────────────────────────────
+
+  // 301 Redirects: hybrid/English pages → canonical Arabic equivalents
+  const REDIRECTS_301: Record<string, string> = {
+    '/neurology-treatment-germany':           '/ar/neurology-treatment-germany',
+    '/brain-tumor-treatment-germany':         '/ar/brain-tumor-treatment-germany',
+    '/trigeminal-neuralgia-treatment-germany':'/ar/trigeminal-neuralgia-treatment-germany',
+    '/lung-cancer-treatment-germany':         '/ar/lung-cancer-treatment-germany',
+    '/herniated-disc-treatment-germany':      '/ar/herniated-disc',
+    '/spine-surgery-germany':                 '/ar/neurology-treatment-germany',
+  };
+
+  // 410 Gone: permanently deleted English-only pages
+  const GONE_410: string[] = [
+    '/brain-surgery-germany',
+  ];
+
+  app.use((req, res, next) => {
+    const path = req.path.replace(/\/+$/, '') || '/';
+
+    // 410 Gone — permanently removed pages
+    if (GONE_410.includes(path)) {
+      res.status(410).send(
+        '<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><title>410 Gone</title></head>' +
+        '<body><h1>410 — هذه الصفحة لم تعد متاحة</h1>' +
+        '<p><a href="/ar">العودة إلى الصفحة الرئيسية</a></p></body></html>'
+      );
+      return;
+    }
+
+    // 301 Redirect — hybrid/English pages → Arabic canonical
+    const target = REDIRECTS_301[path];
+    if (target) {
+      return res.redirect(301, target);
+    }
+
+    next();
+  });
+
+  // ─────────────────────────────────────────────────────────────────────────
+
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);
   

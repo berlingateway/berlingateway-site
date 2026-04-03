@@ -114,10 +114,9 @@ export default function LungCancerArabic() {
         ]}
 
         relatedLinks={[
-          { href: "/ar/neurology-treatment-germany", label: "مركز علاج الأعصاب" },
-          { href: "/ar/brain-tumor-treatment-germany", label: "أورام المخ" },
-          { href: "/ar/second-opinion", label: "الرأي الطبي الثاني" },
-          { href: "/ar/advanced-diagnostics", label: "التشخيص المتقدم" },
+          { href: "/ar/brain-tumor-treatment-germany", label: "علاج أورام المخ في ألمانيا" },
+          { href: "/ar/neurology-treatment-germany", label: "مركز علاج الأعصاب في ألمانيا" },
+          { href: "/ar/trigeminal-neuralgia-treatment-germany", label: "علاج ألم العصب الخامس" },
         ]}
 
         sectionLabels={{

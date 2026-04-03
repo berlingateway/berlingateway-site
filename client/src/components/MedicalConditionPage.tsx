@@ -189,9 +189,13 @@ export default function MedicalConditionPage({
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans" dir={pageDir}>
       <Helmet>
+        {pageDir === 'rtl' && <html lang="ar" dir="rtl" />}
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        {/* hreflang: self-referencing for Arabic canonical */}
+        {pageDir === 'rtl' && <link rel="alternate" hrefLang="ar" href={canonicalUrl} />}
+        {pageDir === 'rtl' && <meta property="og:locale" content="ar_AR" />}
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />

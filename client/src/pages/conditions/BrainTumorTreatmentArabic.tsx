@@ -99,10 +99,9 @@ export default function BrainTumorTreatmentArabic() {
         ]}
 
         relatedLinks={[
-          { href: "/ar/brain-surgery", label: "جراحة المخ والأعصاب" },
-          { href: "/ar/neurology-treatment-germany", label: "علاج الأعصاب في ألمانيا" },
-          { href: "/ar/second-opinion", label: "الرأي الطبي الثاني" },
-          { href: "/ar/advanced-diagnostics", label: "التشخيص المتقدم" },
+          { href: "/ar/neurology-treatment-germany", label: "مركز علاج الأعصاب في ألمانيا" },
+          { href: "/ar/trigeminal-neuralgia-treatment-germany", label: "علاج ألم العصب الخامس" },
+          { href: "/ar/lung-cancer-treatment-germany", label: "علاج سرطان الرئة في ألمانيا" },
         ]}
 
         sectionLabels={{

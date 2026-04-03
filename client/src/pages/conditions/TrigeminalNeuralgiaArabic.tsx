@@ -123,10 +123,9 @@ export default function TrigeminalNeuralgiaArabic() {
         ]}
 
         relatedLinks={[
-          { href: "/ar/neurology-treatment-germany", label: "علاج الأعصاب في ألمانيا" },
-          { href: "/ar/brain-tumor-treatment-germany", label: "جراحة المخ والأعصاب" },
-          { href: "/ar/second-opinion", label: "الرأي الطبي الثاني" },
-          { href: "/ar/advanced-diagnostics", label: "التشخيص المتقدم" },
+          { href: "/ar/neurology-treatment-germany", label: "مركز علاج الأعصاب في ألمانيا" },
+          { href: "/ar/brain-tumor-treatment-germany", label: "علاج أورام المخ في ألمانيا" },
+          { href: "/ar/herniated-disc", label: "علاج انزلاق الغضروف في ألمانيا" },
         ]}
 
         sectionLabels={{

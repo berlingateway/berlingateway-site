@@ -9,7 +9,7 @@ export interface MedicalConditionPageProps {
   headline: string;
   subtitle: string;
   introduction?: string;
-  aboutCondition: string | string[];
+  aboutCondition: string | string[] | React.ReactNode[];
   symptoms?: string[];
   /** How many symptoms to show before "show more" button. Default: all */
   symptomsPreviewCount?: number;
@@ -329,7 +329,11 @@ export default function MedicalConditionPage({
             {sectionLabels?.aboutCondition ?? sectionLabels?.about ?? (isArabic ? "عن الحالة" : "About the Condition")}
           </h2>
           {Array.isArray(aboutCondition)
-            ? aboutCondition.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
+            ? aboutCondition.map((p, i) =>
+                typeof p === 'string' && p.includes('<')
+                  ? <p key={i} className="text-base text-slate-700 leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: p }} />
+                  : <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>
+              )
             : <p className="text-base text-slate-700 leading-relaxed">{aboutCondition}</p>}
         </section>
 

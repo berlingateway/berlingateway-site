@@ -45,6 +45,7 @@ export default function LungCancerArabic() {
 
         aboutCondition={[
           "الخطأ في تقييم مراحل سرطان الرئة قد يؤدي إلى اختيار مسار علاجي غير فعال. في ألمانيا، يعتمد التقييم على أدق تقنيات التصوير (PET-CT) والفحوصات الجينية المتقدمة لتحديد الخصائص الفريدة لكل ورم، مما يضمن تصميم علاج مفصل لكل مريض على حدة.",
+          "في بعض الحالات المتقدمة، قد يؤثر المرض على <a href='/ar/brain-tumor-treatment-germany' style='color:inherit;text-decoration:underline;'>الجهاز العصبي</a>.",
         ]}
 
         symptoms={[

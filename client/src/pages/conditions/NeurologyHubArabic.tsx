@@ -3,7 +3,7 @@ import MedicalConditionPage from "@/components/MedicalConditionPage";
 const WA_NUMBER = "4915781497451";
 
 export default function NeurologyHubArabic() {
-  const intakeHref = "/ar#intake-form";
+  const intakeHref = "/send-medical-reports";
 
   return (
     <MedicalConditionPage

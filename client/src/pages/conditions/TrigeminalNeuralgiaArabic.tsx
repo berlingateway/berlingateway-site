@@ -4,7 +4,7 @@ const WA_NUMBER = "4915781497451";
 
 export default function TrigeminalNeuralgiaArabic() {
   const waHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة ألم العصب الخامس")}`;
-  const intakeHref = "/ar#intake-form";
+  const intakeHref = "/send-medical-reports";
 
   return (
     <>

@@ -12,7 +12,7 @@ export default function HerniatedDisc() {
         langLink: "الإنجليزية",
         langHref: "/spine-surgery-germany",
         ctaButton: "إرسال التقارير الطبية",
-        ctaHref: "/ar#intake-form",
+        ctaHref: "/send-medical-reports",
         topBarEmail: "info@medicalcaregermany.com",
       }}
       footerLabels={{
@@ -93,7 +93,7 @@ export default function HerniatedDisc() {
 
       midPageCta={{
         label: "احصل على تقييم طبي أولي لحالتك",
-        href: "/ar#intake-form",
+        href: "/send-medical-reports",
       }}
 
       patientPathway={[
@@ -128,7 +128,7 @@ export default function HerniatedDisc() {
 
       ctaText="اتخاذ القرار الصحيح في الوقت المناسب يمنع تدهور الحالة الصحية للأعصاب."
       ctaButton="أرسل ملفك الطبي لتقييم الحالة الآن"
-      ctaHref="/ar#intake-form"
+      ctaHref="/send-medical-reports"
       gdprNote="يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR)."
 
       sectionLabels={{

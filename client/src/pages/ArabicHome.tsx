@@ -516,6 +516,41 @@ export default function ArabicHome() {
         </div>
       </section>
 
+      {/* PATH ROUTING BLOCK — inserted under hero */}
+      <section className="py-10 px-6 bg-white border-b border-slate-200" dir="rtl">
+        <div className="max-w-4xl mx-auto">
+          <h2
+            className="text-base md:text-lg font-medium text-slate-900 text-center mb-6"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            اختر المسار الطبي المناسب لحالتك
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <Link
+              href="/ar/neurology-treatment-germany"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              جراحة الأعصاب في ألمانيا
+            </Link>
+            <Link
+              href="/ar/brain-tumor-treatment-germany"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              علاج الأورام في ألمانيا
+            </Link>
+            <Link
+              href="/send-medical-reports"
+              className="block py-5 px-4 text-sm font-medium text-center border border-[#0B1C2C] bg-[#0B1C2C] text-white hover:bg-[#1E3A5A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              أعراض غير مشخصة
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* METRICS BAR */}
       <section className="py-8 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">

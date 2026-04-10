@@ -575,12 +575,13 @@ export default function ArabicHome() {
             >
               الأمراض النادرة وغير المشخصة
             </Link>
-            <div
-              className="py-5 px-4 text-sm font-medium text-center border border-slate-100 bg-slate-50 text-slate-400 cursor-default"
+            <Link
+              href="/ar/cardiology-treatment-germany"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
-              أمراض القلب والتدخلات المتقدمة
-            </div>
+              أمراض وجراحة القلب المتقدمة
+            </Link>
           </div>
         </div>
       </section>

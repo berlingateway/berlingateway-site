@@ -286,14 +286,7 @@ export default function ArabicHome() {
       {/* Google Fonts: IBM Plex Sans Arabic */}
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
-      {/* Top Contact Bar */}
-      <div className="w-full bg-slate-900 text-white py-3 px-6">
-        <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
-          <a href="mailto:info@medicalcaregermany.com" className="hover:text-slate-300 transition-colors">
-            info@medicalcaregermany.com
-          </a>
-        </div>
-      </div>
+
 
       {/* Navigation */}
       <nav className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm" style={{ top: 'var(--banner-height, 0px)' }}>
@@ -516,7 +509,7 @@ export default function ArabicHome() {
         </div>
       </section>
 
-      {/* PATH ROUTING BLOCK — inserted under hero */}
+      {/* PATH ROUTING BLOCK */}
       <section className="py-10 px-6 bg-white border-b border-slate-200" dir="rtl">
         <div className="max-w-4xl mx-auto">
           <h2
@@ -525,24 +518,24 @@ export default function ArabicHome() {
           >
             اختر المسار الطبي المناسب لحالتك
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="flex flex-col gap-3">
             <Link
               href="/ar/neurology-treatment-germany"
-              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              className="block w-full py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
-              جراحة الأعصاب في ألمانيا
+              جراحة الأعصاب
             </Link>
             <Link
               href="/ar/brain-tumor-treatment-germany"
-              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              className="block w-full py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
-              علاج الأورام في ألمانيا
+              علاج الأورام
             </Link>
             <Link
               href="/send-medical-reports"
-              className="block py-5 px-4 text-sm font-medium text-center border border-[#0B1C2C] bg-[#0B1C2C] text-white hover:bg-[#1E3A5A] transition-all duration-200"
+              className="block w-full py-5 px-4 text-sm font-medium text-center border border-[#0B1C2C] bg-[#0B1C2C] text-white hover:bg-[#1E3A5A] transition-all duration-200"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
               أعراض غير مشخصة
@@ -551,65 +544,69 @@ export default function ArabicHome() {
         </div>
       </section>
 
-      {/* METRICS BAR */}
-      <section className="py-8 px-6 bg-white border-b border-slate-200">
+      {/* SPECIALTY CARDS — مجالات التخصص الطبي */}
+      <section className="py-10 px-6 bg-slate-50 border-b border-slate-200" dir="rtl">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-2xl font-serif text-slate-900 font-medium">+15</div>
-              <div className="text-xs text-slate-500 mt-1 leading-snug">شبكة المستشفيات الجامعية</div>
-            </div>
-            <div>
-              <div className="text-2xl font-serif text-slate-900 font-medium">+150</div>
-              <div className="text-xs text-slate-500 mt-1 leading-snug">البروفيسورات والاستشاريون</div>
-            </div>
-            <div>
-              <div className="text-2xl font-serif text-slate-900 font-medium">+500</div>
-              <div className="text-xs text-slate-500 mt-1 leading-snug">حالات معقدة تمت مراجعتها</div>
-            </div>
-            <div>
-              <div className="text-2xl font-serif text-slate-900 font-medium">24–48h</div>
-              <div className="text-xs text-slate-500 mt-1 leading-snug">المراجعة الأولية</div>
+          <h2
+            className="text-base md:text-lg font-medium text-slate-900 text-center mb-6"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            مجالات التخصص الطبي
+          </h2>
+          <div className="grid grid-cols-2 gap-3">
+            <Link
+              href="/ar/brain-tumor-treatment-germany"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              الأورام والسرطانات المعقدة
+            </Link>
+            <Link
+              href="/ar/neurology-treatment-germany"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              جراحة المخ والأعصاب والعمود الفقري
+            </Link>
+            <Link
+              href="/send-medical-reports"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              الأمراض النادرة وغير المشخصة
+            </Link>
+            <div
+              className="py-5 px-4 text-sm font-medium text-center border border-slate-100 bg-slate-50 text-slate-400 cursor-default"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              أمراض القلب والتدخلات المتقدمة
             </div>
           </div>
         </div>
       </section>
 
-      {/* DIAGNOSTIC ENTRY LAYER */}
-      <DiagnosticLayer />
 
-      {/* CLINICAL FOCUS AREAS */}
-      <section id="focus" className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-medium mb-12 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            مجالات التخصص السريري
+
+
+
+
+
+      {/* SUBMIT CASE FORM */}
+      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
+        <span id="intake-form" style={{ display: 'block', marginTop: '-90px', paddingTop: '90px', pointerEvents: 'none' }} aria-hidden="true" />
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+            تقديم الحالة للمراجعة الطبية
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>
-              </div>
-              <div className="text-sm font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>جراحة المخ والأعصاب والعمود الفقري</div>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-              </div>
-              <div className="text-sm font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>الأورام والسرطانات المعقدة</div>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-              </div>
-              <div className="text-sm font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>أمراض القلب والتدخلات المتقدمة</div>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
-              </div>
-              <div className="text-sm font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>الأمراض النادرة وغير المشخصة</div>
-            </div>
+          <p className="text-center text-slate-500 text-sm mb-12 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+            تُجرى مراجعات الحالات وفق ممارسات الحوكمة السريرية الألمانية.
+          </p>
+          <div className="border border-slate-200 bg-white shadow-sm">
+            <ArabicIframeForm />
           </div>
+          <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+            يتم التعامل مع جميع الملفات بسرية تامة.
+          </p>
         </div>
       </section>
 
@@ -829,26 +826,7 @@ export default function ArabicHome() {
         </div>
       </section>
 
-      {/* SUBMIT CASE FORM */}
-      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
-        {/* intake-form anchor — targeted by DiagnosticLayer CTA */}
-        <span id="intake-form" style={{ display: 'block', marginTop: '-90px', paddingTop: '90px', pointerEvents: 'none' }} aria-hidden="true" />
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            تقديم الحالة للمراجعة الطبية
-          </h2>
-          <p className="text-center text-slate-500 text-sm mb-12 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            تُجرى مراجعات الحالات وفق ممارسات الحوكمة السريرية الألمانية.
-          </p>
-          <div className="border border-slate-200 bg-white shadow-sm">
-            <ArabicIframeForm />
-          </div>
-          <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            يتم التعامل مع جميع الملفات بسرية تامة. للتواصل المباشر:{' '}
-            <a href="mailto:info@medicalcaregermany.com" className="text-slate-600 hover:underline">info@medicalcaregermany.com</a>
-          </p>
-        </div>
-      </section>
+
 
       {/* FOOTER */}
       <footer id="contact" className="py-10 bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>

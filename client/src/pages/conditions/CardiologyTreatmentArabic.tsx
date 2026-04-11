@@ -29,7 +29,7 @@ export default function CardiologyTreatmentArabic() {
             تقييم طبي وجراحي للحالات القلبية المعقدة خلال 24–48 ساعة وربطها بالمركز المناسب.
           </p>
           <Link
-            href="/ar/send-medical-reports"
+            href="/send-medical-reports"
             className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
@@ -106,7 +106,7 @@ export default function CardiologyTreatmentArabic() {
             ].map((card, i) => (
               <Link
                 key={i}
-                href="/ar/send-medical-reports"
+                href="/send-medical-reports"
                 className="block p-6 border border-slate-200 bg-white hover:border-[#0B1C2C] hover:bg-slate-50 transition-all duration-200"
               >
                 <h3 className="text-base font-medium text-slate-900 mb-2" style={FONT}>
@@ -150,7 +150,7 @@ export default function CardiologyTreatmentArabic() {
             ابدأ الآن
           </h2>
           <Link
-            href="/ar/send-medical-reports"
+            href="/send-medical-reports"
             className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >

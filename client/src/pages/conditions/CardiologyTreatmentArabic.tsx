@@ -33,8 +33,34 @@ export default function CardiologyTreatmentArabic() {
             className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
-            ابدأ التقييم الآن
+            أرسل تقاريرك ليتم تقييم حالتك القلبية
           </Link>
+        </div>
+      </section>
+
+      {/* TASK 1 — URGENT EVALUATION BLOCK */}
+      <section className="py-16 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-10" style={FONT}>
+            متى تصبح حالتك القلبية بحاجة لتقييم عاجل؟
+          </h2>
+          <ul className="space-y-4 mb-8">
+            {[
+              "تم إبلاغك بضرورة إجراء عملية قلب وتحتاج تأكيد القرار",
+              "لديك انسداد في الشرايين أو مشاكل في الصمامات",
+              "تعاني من أعراض مستمرة (ضيق تنفس، ألم صدر، خفقان) بدون تفسير واضح",
+              "قيل لك أن الحالة \"مستقرة\" لكنك لا تشعر بتحسن",
+              "تم اقتراح قسطرة أو تدخل جراحي وتريد التأكد من الخيار الصحيح",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0" />
+                <p className="text-base text-slate-700 leading-relaxed" style={FONT}>{item}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-slate-500 leading-relaxed border-r-2 border-slate-300 pr-4" style={FONT}>
+            في هذه الحالات، القرار الطبي الخاطئ قد يؤدي إلى تدخل غير ضروري أو تأخير خطير.
+          </p>
         </div>
       </section>
 
@@ -82,8 +108,61 @@ export default function CardiologyTreatmentArabic() {
         </div>
       </section>
 
-      {/* DECISION GATEWAY */}
+      {/* TASK 2 — HEART TEAM EVALUATION PROCESS */}
       <section className="py-16 px-6 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-6" style={FONT}>
+            كيف يتم تقييم حالتك القلبية في ألمانيا؟
+          </h2>
+          <p className="text-base text-slate-600 text-center mb-10 leading-relaxed" style={FONT}>
+            لا يتم اتخاذ القرار من طبيب واحد.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <div className="bg-white border border-slate-200 p-5">
+              <p className="text-xs uppercase tracking-widest text-slate-400 mb-3 font-semibold" style={FONT}>
+                Heart Team يشمل
+              </p>
+              <ul className="space-y-2">
+                {["أطباء القلب", "جراحي القلب", "أخصائيي الأشعة والتشخيص"].map((t, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 flex-shrink-0" />
+                    <span className="text-sm text-slate-700" style={FONT}>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white border border-slate-200 p-5">
+              <p className="text-xs uppercase tracking-widest text-slate-400 mb-3 font-semibold" style={FONT}>
+                يتم تحليل
+              </p>
+              <ul className="space-y-2">
+                {["صور القسطرة", "تخطيط القلب", "الأشعة (CT / MRI)", "التقارير الطبية السابقة"].map((t, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 flex-shrink-0" />
+                    <span className="text-sm text-slate-700" style={FONT}>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white border border-slate-200 p-5">
+              <p className="text-xs uppercase tracking-widest text-slate-400 mb-3 font-semibold" style={FONT}>
+                ثم يتم تحديد
+              </p>
+              <ul className="space-y-2">
+                {["هل تحتاج قسطرة؟", "عملية جراحية؟", "أم علاج تحفظي بدون تدخل؟"].map((t, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 flex-shrink-0" />
+                    <span className="text-sm text-slate-700" style={FONT}>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DECISION GATEWAY */}
+      <section className="py-16 px-6 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -122,7 +201,7 @@ export default function CardiologyTreatmentArabic() {
       </section>
 
       {/* PATHWAY */}
-      <section className="py-16 px-6 bg-white border-b border-slate-200">
+      <section className="py-16 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-12" style={FONT}>
             مسار التنسيق
@@ -140,6 +219,31 @@ export default function CardiologyTreatmentArabic() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* TASK 3 — REQUIRED DOCUMENTS BLOCK */}
+      <section className="py-16 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-10" style={FONT}>
+            لبدء التقييم الطبي، نحتاج:
+          </h2>
+          <ul className="space-y-4 mb-8">
+            {[
+              "تقارير القلب (إن وجدت)",
+              "صور القسطرة أو الأشعة",
+              "نتائج التحاليل",
+              "وصف الأعراض الحالية",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0" />
+                <p className="text-base text-slate-700 leading-relaxed" style={FONT}>{item}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-slate-500 leading-relaxed border-r-2 border-slate-300 pr-4" style={FONT}>
+            لا يشترط أن يكون الملف كاملاً. نبدأ بما هو متوفر، ونطلب الباقي لاحقًا إذا لزم الأمر.
+          </p>
         </div>
       </section>
 

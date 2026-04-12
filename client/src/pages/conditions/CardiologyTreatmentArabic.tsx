@@ -200,6 +200,38 @@ export default function CardiologyTreatmentArabic() {
         </div>
       </section>
 
+      {/* TASK 1 — SYSTEM LOGIC BLOCK */}
+      <section className="py-16 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-6" style={FONT}>
+            كيف تعمل المنظومة الطبية الموحدة في ألمانيا؟
+          </h2>
+          <p className="text-base text-slate-600 text-center mb-10 leading-relaxed" style={FONT}>
+            عند إرسال ملفك الطبي، لا يتم اتخاذ القرار بشكل فردي.
+          </p>
+          <p className="text-sm text-slate-500 mb-6 leading-relaxed" style={FONT}>
+            يتم إدخال حالتك ضمن منظومة طبية متكاملة تشمل:
+          </p>
+          <ul className="space-y-4 mb-8">
+            {[
+              "مراجعة دقيقة لكل التقارير والصور",
+              "تحديد التخصص المناسب بدقة",
+              "عرض الحالة على فريق طبي متخصص (Heart Team)",
+              "مقارنة الخيارات العلاجية (قسطرة – جراحة – علاج تحفظي)",
+              "اختيار المركز الأنسب بناءً على الحالة وليس بشكل عشوائي",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0" />
+                <p className="text-base text-slate-700 leading-relaxed" style={FONT}>{item}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-slate-500 leading-relaxed border-r-2 border-slate-300 pr-4" style={FONT}>
+            كل قرار يتم اتخاذه بناءً على تقييم جماعي دقيق، وليس رأي طبيب واحد فقط.
+          </p>
+        </div>
+      </section>
+
       {/* PATHWAY */}
       <section className="py-16 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto">
@@ -247,6 +279,36 @@ export default function CardiologyTreatmentArabic() {
         </div>
       </section>
 
+      {/* TASK 2 — PEAK DECISION BLOCK */}
+      <section className="py-16 px-6 bg-[#0B1C2C] text-white border-b border-slate-800">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-white text-center mb-8" style={FONT}>
+            في الحالات القلبية، التأخير في القرار قد يغيّر النتيجة بالكامل.
+          </h2>
+          <p className="text-sm text-slate-300 mb-6 leading-relaxed" style={FONT}>
+            بعض المرضى:
+          </p>
+          <ul className="space-y-4 mb-8">
+            {[
+              "يخضعون لتدخل لم يكن ضروريًا",
+              "أو يتم تأجيل العلاج رغم الحاجة",
+              "أو يتم اختيار مسار غير مناسب للحالة",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-500 mt-2 flex-shrink-0" />
+                <p className="text-base text-slate-300 leading-relaxed" style={FONT}>{item}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-base text-slate-300 leading-relaxed mb-4" style={FONT}>
+            الفرق لا يكون في العلاج فقط… بل في دقة القرار في الوقت المناسب.
+          </p>
+          <p className="text-sm text-slate-400 leading-relaxed border-r-2 border-slate-600 pr-4" style={FONT}>
+            إذا كانت حالتك غير واضحة، أو القرار غير مؤكد، فالتقييم الصحيح في الوقت الصحيح يصنع الفرق.
+          </p>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="py-20 px-6 bg-[#0B1C2C] text-white text-center">
         <div className="max-w-2xl mx-auto">
@@ -258,7 +320,7 @@ export default function CardiologyTreatmentArabic() {
             className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
-            أرسل ملفك الطبي
+            أرسل ملفك الطبي الآن — ليتم تحديد القرار المناسب لحالتك
           </Link>
         </div>
       </section>

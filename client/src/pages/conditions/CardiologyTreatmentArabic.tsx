@@ -324,6 +324,34 @@ export default function CardiologyTreatmentArabic() {
           </Link>
         </div>
       </section>
+      {/* INTERNAL LINKING */}
+      <section className="py-16 px-6 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-4" style={FONT}>
+            قد تكون هذه المسارات أقرب لحالتك
+          </h2>
+          <p className="text-sm text-slate-500 text-center mb-10 leading-relaxed" style={FONT}>
+            إذا لم تكن الحالة القلبية هي المسار الأدق، يمكنك مراجعة هذه الصفحات الطبية المرتبطة:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { label: "الأعصاب", desc: "للأعراض العصبية، التنميل، الدوخة، واضطرابات التوازن", href: "/ar/neurology-treatment-germany" },
+              { label: "العمود الفقري", desc: "للانزلاق الغضروفي، الضغط على الأعصاب، وآلام الظهر الممتدة", href: "/ar/spine-treatment-germany" },
+              { label: "سرطان الرئة", desc: "للحالات الورمية التي تحتاج تقييمًا تشخيصيًا وعلاجيًا دقيقًا", href: "/ar/lung-cancer-treatment-germany" },
+              { label: "حالة غير مشخصة", desc: "إذا كانت الأعراض مستمرة لكن التشخيص غير واضح حتى الآن", href: "/ar/undetermined-condition" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className="block p-6 border border-slate-200 bg-white hover:border-[#0B1C2C] hover:bg-slate-50 transition-all duration-200"
+              >
+                <h3 className="text-base font-medium text-slate-900 mb-2" style={FONT}>{item.label}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed" style={FONT}>{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

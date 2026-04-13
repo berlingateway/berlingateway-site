@@ -336,9 +336,9 @@ export default function CardiologyTreatmentArabic() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { label: "الأعصاب", desc: "للأعراض العصبية، التنميل، الدوخة، واضطرابات التوازن", href: "/ar/neurology-treatment-germany" },
-              { label: "العمود الفقري", desc: "للانزلاق الغضروفي، الضغط على الأعصاب، وآلام الظهر الممتدة", href: "/ar/spine-treatment-germany" },
+              { label: "الانزلاق الغضروفي", desc: "للانزلاق الغضروفي، الضغط على الأعصاب، وآلام الظهر الممتدة", href: "/ar/herniated-disc" },
               { label: "سرطان الرئة", desc: "للحالات الورمية التي تحتاج تقييمًا تشخيصيًا وعلاجيًا دقيقًا", href: "/ar/lung-cancer-treatment-germany" },
-              { label: "حالة غير مشخصة", desc: "إذا كانت الأعراض مستمرة لكن التشخيص غير واضح حتى الآن", href: "/ar/undetermined-condition" },
+              { label: "ألم العصب الخامس", desc: "للأعراض العصبية الحادة وحالات الألم غير المشخصة في الوجه والرأس", href: "/ar/trigeminal-neuralgia" },
             ].map((item, i) => (
               <Link
                 key={i}

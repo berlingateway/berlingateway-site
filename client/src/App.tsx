@@ -64,6 +64,20 @@ import CancerTreatment from "./pages/conditions/CancerTreatment";
 import OrthopedicTreatment from "./pages/conditions/OrthopedicTreatment";
 import InternationalPatients from "./pages/InternationalPatients";
 
+// Arabic Symptom Entry Pages
+import DizzinessLongTerm from "./pages/symptoms/DizzinessLongTerm";
+import VertigoUnknownCause from "./pages/symptoms/VertigoUnknownCause";
+import UnexplainedBalanceLoss from "./pages/symptoms/UnexplainedBalanceLoss";
+import NumbnessOneSideBody from "./pages/symptoms/NumbnessOneSideBody";
+import TinglingBurningSensation from "./pages/symptoms/TinglingBurningSensation";
+import NervePainFace from "./pages/symptoms/NervePainFace";
+import BackPainWithNumbness from "./pages/symptoms/BackPainWithNumbness";
+import ChronicNeckPain from "./pages/symptoms/ChronicNeckPain";
+import HeadPressureUnknown from "./pages/symptoms/HeadPressureUnknown";
+import ChronicHeadacheUnknown from "./pages/symptoms/ChronicHeadacheUnknown";
+import WeaknessInLimbs from "./pages/symptoms/WeaknessInLimbs";
+import SuddenBodyWeakness from "./pages/symptoms/SuddenBodyWeakness";
+
 // Category Hub Pages
 import NeurologyHub from "./pages/hubs/NeurologyHub";
 import SpineHub from "./pages/hubs/SpineHub";
@@ -112,6 +126,19 @@ function Router() {
       <Route path={"/pediatric-neurology-germany"} component={PediatricNeurology} />
       <Route path={"/lung-cancer-treatment-germany"} component={LungCancer} />
       <Route path={"/ar/lung-cancer-treatment-germany"} component={LungCancerArabic} />
+      {/* Arabic Symptom Entry Pages */}
+      <Route path={"/ar/dizziness-long-term"} component={DizzinessLongTerm} />
+      <Route path={"/ar/vertigo-unknown-cause"} component={VertigoUnknownCause} />
+      <Route path={"/ar/unexplained-balance-loss"} component={UnexplainedBalanceLoss} />
+      <Route path={"/ar/numbness-one-side-body"} component={NumbnessOneSideBody} />
+      <Route path={"/ar/tingling-burning-sensation"} component={TinglingBurningSensation} />
+      <Route path={"/ar/nerve-pain-face"} component={NervePainFace} />
+      <Route path={"/ar/back-pain-with-numbness"} component={BackPainWithNumbness} />
+      <Route path={"/ar/chronic-neck-pain"} component={ChronicNeckPain} />
+      <Route path={"/ar/head-pressure-unknown"} component={HeadPressureUnknown} />
+      <Route path={"/ar/chronic-headache-unknown"} component={ChronicHeadacheUnknown} />
+      <Route path={"/ar/weakness-in-limbs"} component={WeaknessInLimbs} />
+      <Route path={"/ar/sudden-body-weakness"} component={SuddenBodyWeakness} />
       <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
       <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />
       <Route path={"/colon-cancer-treatment-germany"} component={ColonCancer} />

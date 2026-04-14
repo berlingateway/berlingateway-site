@@ -204,21 +204,18 @@ export default function SendMedicalReports() {
                   </span>
                 </label>
 
-                {/* Drop zone */}
-                <div
-                  className="border border-dashed border-slate-300 bg-slate-50 px-6 py-8 text-center cursor-pointer hover:border-slate-500 hover:bg-slate-100 transition-colors"
-                  onClick={() => fileInputRef.current?.click()}
-                  onKeyDown={e => e.key === "Enter" && fileInputRef.current?.click()}
-                  role="button"
-                  tabIndex={0}
-                  aria-label="Select files to upload"
-                >
-                  <p className="text-sm text-slate-500">
-                    Click to select files
-                  </p>
-                  <p className="text-xs text-slate-400 mt-1">
-                    Accepted: PDF, DICOM (.dcm), JPEG, PNG, TIFF
-                  </p>
+                {/* Arabic custom file upload UI */}
+                <div className="flex items-center gap-3 mt-2">
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="px-5 py-2 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-[#1a3a5c] transition-colors"
+                  >
+                    اختر الملفات
+                  </button>
+                  <span className={`text-sm ${files.length > 0 ? 'text-green-600 font-medium' : 'text-slate-400'}`}>
+                    {files.length > 0 ? `تم اختيار ${files.length} ملف` : 'لم يتم اختيار ملف'}
+                  </span>
                 </div>
                 <input
                   ref={fileInputRef}
@@ -226,7 +223,7 @@ export default function SendMedicalReports() {
                   multiple
                   accept={ACCEPTED_ATTR}
                   onChange={handleFileChange}
-                  className="hidden"
+                  style={{ display: 'none' }}
                   aria-label="Upload medical reports"
                 />
 

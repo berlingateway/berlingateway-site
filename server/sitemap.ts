@@ -64,6 +64,75 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.9,
   },
 
+  // ── Arabic Cardiology ──────────────────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/cardiology-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+
+  // ── Arabic Symptom Entry Pages ────────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/dizziness-long-term`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/vertigo-unknown-cause`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/unexplained-balance-loss`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/numbness-one-side-body`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/tingling-burning-sensation`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/nerve-pain-face`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/back-pain-with-numbness`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/chronic-neck-pain`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/head-pressure-unknown`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/chronic-headache-unknown`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/weakness-in-limbs`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/sudden-body-weakness`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+
   // ── Arabic Utility Pages ───────────────────────────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/videos`,

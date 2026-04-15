@@ -213,6 +213,40 @@ export default function NeurologyHubArabic() {
         </div>
       </section>
 
+      {/* SYMPTOM ENTRY PAGES */}
+      <section className="py-12 px-6 bg-white border-t border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-6 text-center" style={FONT}>
+            أعراض شائعة — ابحث عن حالتك
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {[
+              { href: "/ar/dizziness-long-term", label: "دوخة مستمرة" },
+              { href: "/ar/vertigo-unknown-cause", label: "دوار حاد متكرر" },
+              { href: "/ar/unexplained-balance-loss", label: "اضطراب التوازن" },
+              { href: "/ar/numbness-one-side-body", label: "تنميل جانب واحد" },
+              { href: "/ar/tingling-burning-sensation", label: "وخز وحرقة" },
+              { href: "/ar/nerve-pain-face", label: "ألم عصبي في الوجه" },
+              { href: "/ar/back-pain-with-numbness", label: "آلام الظهر مع تنميل" },
+              { href: "/ar/chronic-neck-pain", label: "ألم الرقبة المزمن" },
+              { href: "/ar/head-pressure-unknown", label: "ضغط في الرأس" },
+              { href: "/ar/chronic-headache-unknown", label: "صداع مزمن" },
+              { href: "/ar/weakness-in-limbs", label: "ضعف في الأطراف" },
+              { href: "/ar/sudden-body-weakness", label: "ضعف مفاجئ" },
+            ].map((link, i) => (
+              <Link
+                key={i}
+                href={link.href}
+                className="block px-3 py-2 border border-slate-200 bg-slate-50 text-xs text-slate-600 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors text-center"
+                style={FONT}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="py-8 px-6 bg-white border-t border-slate-100 text-center">
         <p className="text-xs text-slate-400" style={FONT}>

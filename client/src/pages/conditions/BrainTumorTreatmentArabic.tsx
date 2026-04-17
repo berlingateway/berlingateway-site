@@ -10,6 +10,7 @@ export default function BrainTumorTreatmentArabic() {
     <>
       <MedicalConditionPage
         pageDir="rtl"
+        hideGlobalHeader={true}
         metaTitle="علاج أورام المخ في ألمانيا | ميديكال كير جيرماني"
         metaDescription="تقييم طبي ألماني متخصص لحالات أورام المخ خلال 24–48 ساعة. تحديد المسار الصحيح قبل اتخاذ أي قرار علاجي."
         canonicalPath="/ar/brain-tumor-treatment-germany"

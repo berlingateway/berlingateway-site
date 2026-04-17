@@ -93,6 +93,8 @@ export interface MedicalConditionPageProps {
   pageDir?: "rtl" | "ltr";
   /** Pre-filled WhatsApp message (URL-encoded). If omitted, the global FloatingWhatsApp handles it. */
   whatsappMessage?: string;
+  /** When true, suppresses the built-in Top Contact Bar and sticky nav (use when a global header already renders above this component) */
+  hideGlobalHeader?: boolean;
   /** Optional checklist section rendered between Hero and 'About' — ideal for 'هل هذه حالتك؟' blocks */
   checklistSection?: {
     title: string;
@@ -146,6 +148,7 @@ export default function MedicalConditionPage({
   pageDir,
   checklistSection,
   patientVideos,
+  hideGlobalHeader,
 }: MedicalConditionPageProps) {
   const [symptomsExpanded, setSymptomsExpanded] = useState(false);
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
@@ -205,6 +208,8 @@ export default function MedicalConditionPage({
         )}
       </Helmet>
 
+       {!hideGlobalHeader && (
+        <>
       {/* Top Contact Bar */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
         <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
@@ -213,7 +218,6 @@ export default function MedicalConditionPage({
           </a>
         </div>
       </div>
-
       {/* Navigation */}
       <nav className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm" style={{ top: 'var(--banner-height, 0px)' }}>
         <div className="flex flex-col">
@@ -247,8 +251,9 @@ export default function MedicalConditionPage({
             </Link>
           )}
         </div>
-      </nav>
-
+       </nav>
+        </>
+      )}
       {/* Hero */}
       <header className="bg-slate-50 border-b border-slate-200 py-14 md:py-20 px-6">
         <div className="max-w-5xl mx-auto">

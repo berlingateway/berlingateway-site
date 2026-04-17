@@ -13,11 +13,7 @@ export default function ArabicHeaderLocked() {
   const [langOpen, setLangOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Render ONLY on Arabic routes
-  if (!location.startsWith("/ar")) return null;
-
-  // Close dropdown on outside click
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  // All hooks MUST be called before any conditional return
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
@@ -27,6 +23,9 @@ export default function ArabicHeaderLocked() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Render ONLY on Arabic routes — conditional AFTER all hooks
+  if (!location.startsWith("/ar")) return null;
 
   return (
     <>
@@ -47,7 +46,7 @@ export default function ArabicHeaderLocked() {
         className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm"
         style={{ top: "var(--banner-height, 0px)" }}
       >
-        {/* Brand block — left side (RTL: right side) */}
+        {/* Brand block */}
         <div className="flex flex-col">
           <Link
             href="/ar"
@@ -62,7 +61,7 @@ export default function ArabicHeaderLocked() {
 
         {/* Right side: Globe dropdown + CTA */}
         <div className="flex items-center gap-4">
-          {/* Globe language switch */}
+          {/* Globe language switch — defensive, never crashes */}
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"

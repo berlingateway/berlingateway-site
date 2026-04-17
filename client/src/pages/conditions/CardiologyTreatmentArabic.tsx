@@ -13,6 +13,19 @@ export default function CardiologyTreatmentArabic() {
 
       {/* SEO meta handled via document title */}
 
+      {/* HEADER */}
+      <header className="bg-[#0B1C2C] border-b border-slate-700">
+        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+          <a href="/ar" className="text-white text-sm font-medium hover:text-slate-300 transition-colors" style={FONT}>
+            Medical Care Germany
+          </a>
+          <div className="flex items-center gap-4">
+            <a href="/send-medical-reports" className="text-xs text-slate-300 hover:text-white transition-colors" style={FONT}>إرسال التقارير</a>
+            <a href="/cardiology-treatment-germany" className="text-xs text-slate-400 hover:text-slate-200 transition-colors">EN</a>
+          </div>
+        </div>
+      </header>
+
       {/* HERO */}
       <section className="py-20 px-6 bg-[#0B1C2C] text-white">
         <div className="max-w-4xl mx-auto text-center">

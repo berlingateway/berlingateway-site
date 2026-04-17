@@ -21,6 +21,9 @@ export default function CardiologyTreatmentArabic() {
           </a>
           <div className="flex items-center gap-4">
             <a href="/send-medical-reports" className="text-xs text-slate-300 hover:text-white transition-colors" style={FONT}>إرسال التقارير</a>
+            <span className="text-xs text-slate-400">🌍</span>
+            <a href="/ar" className="text-xs text-slate-300 hover:text-white transition-colors">AR</a>
+            <span className="text-xs text-slate-600">|</span>
             <a href="/cardiology-treatment-germany" className="text-xs text-slate-400 hover:text-slate-200 transition-colors">EN</a>
           </div>
         </div>

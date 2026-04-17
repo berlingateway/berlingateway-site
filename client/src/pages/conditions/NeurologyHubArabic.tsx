@@ -13,21 +13,6 @@ export default function NeurologyHubArabic() {
     >
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
-      {/* HEADER */}
-      <header className="bg-[#0B1C2C] border-b border-slate-700">
-        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
-          <a href="/ar" className="text-white text-sm font-medium hover:text-slate-300 transition-colors" style={FONT}>
-            Medical Care Germany
-          </a>
-          <div className="flex items-center gap-4">
-            <a href="/send-medical-reports" className="text-xs text-slate-300 hover:text-white transition-colors" style={FONT}>إرسال التقارير</a>
-            <span className="text-xs text-slate-400">🌍</span>
-            <a href="/ar" className="text-xs text-slate-300 hover:text-white transition-colors">AR</a>
-            <span className="text-xs text-slate-600">|</span>
-            <a href="/neurology-treatment-germany" className="text-xs text-slate-400 hover:text-slate-200 transition-colors">EN</a>
-          </div>
-        </div>
-      </header>
 
       {/* 1. HERO — dark blue */}
       <section className="py-20 px-6 bg-[#0B1C2C] text-white">

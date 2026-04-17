@@ -19,7 +19,6 @@ import ArabicHome from "./pages/ArabicHome";
 import SubmitCase from "./pages/SubmitCase";
 import SendMedicalReports from "./pages/SendMedicalReports";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
-import TopBanner from "./components/TopBanner";
 import ReferringDoctors from "./pages/ReferringDoctors";
 
 // Medical Condition Pages
@@ -191,7 +190,6 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <TopBanner />
           <Router />
           <FloatingWhatsApp />
         </TooltipProvider>

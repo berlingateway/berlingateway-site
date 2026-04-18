@@ -31,6 +31,7 @@ a:hover{opacity:.85}
   min-height: clamp(320px, 52vw, 520px);
   background: linear-gradient(135deg, #0B1F3A 0%, #0E2A4D 100%) !important;
   background-image: none !important;
+  color: #ffffff !important;
   display: flex;
   align-items: center;
   justify-content: center;

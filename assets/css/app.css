@@ -28,7 +28,7 @@ a:hover{opacity:.85}
 
 .hero-image {
   position: relative;
-  min-height: clamp(320px, 52vw, 520px);
+  min-height: 70vh;
   background: linear-gradient(135deg, #0B1F3A 0%, #0E2A4D 100%) !important;
   background-image: none !important;
   color: #ffffff !important;
@@ -37,6 +37,7 @@ a:hover{opacity:.85}
   justify-content: center;
   overflow: hidden;
   margin-bottom: 32px;
+  padding: 120px 20px 100px;
 }
 .hero-image picture {
   display: none !important;
@@ -48,11 +49,44 @@ a:hover{opacity:.85}
   background-image: none !important;
 }
 .hero-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;z-index:0}
-.hero-overlay{position:relative;z-index:2;text-align:center;padding:40px 20px;max-width:600px;margin:0 auto;background:transparent;border-radius:0;pointer-events:auto}
-.hero-overlay .h1{color:#fff;font-size:clamp(24px,6vw,48px);line-height:1.15;font-weight:700}
-.hero-overlay .sub{color:#fff;max-width:100%;margin:0 auto 24px;font-size:clamp(14px,4vw,16px)}
-.hero-overlay .kicker{color:rgba(255,255,255,0.9);font-weight:600;font-size:clamp(12px,3vw,14px)}
-.hero-overlay .btn.primary{background:#0B3B8C;border-color:#0B3B8C;color:#fff;pointer-events:auto}
+.hero-overlay{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 0;
+  pointer-events: auto;
+}
+.hero-overlay .h1 {
+  color: #fff;
+  font-size: clamp(42px, 6vw, 48px);
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+.hero-overlay .sub {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 100%;
+  margin: 0 auto 32px;
+  font-size: clamp(18px, 4vw, 20px);
+  line-height: 1.4;
+}
+.hero-overlay .kicker {
+  display: none;
+}
+.hero-overlay .btn.primary {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #0B1F3A !important;
+  pointer-events: auto;
+  font-weight: 600;
+  padding: 14px 28px;
+  font-size: 16px;
+}
 .hero{padding:54px 0 28px}
 .h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 14px;color:var(--primary);letter-spacing:-.4px;word-break:normal;overflow-wrap:anywhere}
 .sub{max-width:860px;color:var(--text);margin:0 0 22px;font-size:clamp(14px,3.5vw,16px)}

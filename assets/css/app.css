@@ -27,7 +27,7 @@ a:hover{opacity:.85}
 .nav a.active{background:var(--soft);color:var(--primary)}
 
 /* HERO SECTION - INSTITUTIONAL MODE WITH FAILURE PROTECTION */
-.hero-image {
+main section.hero-image {
   position: relative;
   min-height: 85vh;
   background: linear-gradient(135deg, #0B1F3A 0%, #0E2A4D 100%);
@@ -44,18 +44,18 @@ a:hover{opacity:.85}
   padding-right: 20px;
 }
 
-.hero-image picture {
+main section.hero-image picture {
   display: none;
 }
 
-.hero-image::before,
-.hero-image::after {
+main section.hero-image::before,
+main section.hero-image::after {
   content: none;
   display: none;
   background-image: none;
 }
 
-.hero-overlay {
+main section.hero-image .hero-overlay {
   position: relative;
   z-index: 10;
   text-align: center;
@@ -70,7 +70,7 @@ a:hover{opacity:.85}
   opacity: 1;
 }
 
-.hero-overlay .h1 {
+main section.hero-image .hero-overlay .h1 {
   color: #ffffff;
   font-size: clamp(28px, 5vw, 52px);
   line-height: 1.2;
@@ -85,15 +85,15 @@ a:hover{opacity:.85}
   overflow-wrap: break-word;
 }
 
-html[lang="ar"] .hero-overlay .h1 {
+html[lang="ar"] main section.hero-image .hero-overlay .h1 {
   line-height: 1.4;
 }
 
-html[lang="de"] .hero-overlay .h1 {
+html[lang="de"] main section.hero-image .hero-overlay .h1 {
   line-height: 1.2;
 }
 
-.hero-overlay .sub {
+main section.hero-image .hero-overlay .sub {
   color: rgba(255, 255, 255, 0.75);
   max-width: 100%;
   margin: 0 auto 24px;
@@ -104,11 +104,11 @@ html[lang="de"] .hero-overlay .h1 {
   opacity: 1;
 }
 
-.hero-overlay .kicker {
+main section.hero-image .hero-overlay .kicker {
   display: none;
 }
 
-.hero-overlay .actions {
+main section.hero-image .hero-overlay .actions {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -117,7 +117,7 @@ html[lang="de"] .hero-overlay .h1 {
   margin-bottom: 16px;
 }
 
-.hero-overlay .btn.primary {
+main section.hero-image .hero-overlay .btn.primary {
   background: #ffffff;
   border-color: #ffffff;
   color: #0B1F3A;
@@ -135,7 +135,7 @@ html[lang="de"] .hero-overlay .h1 {
   transition: all 0.2s ease;
 }
 
-.hero-overlay .btn.primary:hover {
+main section.hero-image .hero-overlay .btn.primary:hover {
   background: #f0f0f0;
   transform: translateY(-2px);
 }

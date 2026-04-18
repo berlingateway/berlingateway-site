@@ -42,7 +42,7 @@
 </head>
 <body>
 <header class="header">
-  <div class="container wrap">
+  <div class="header__inner">
     <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
     <nav class="nav">
       <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
@@ -50,7 +50,7 @@
       <a href="/de/systemlogik.html">Systemlogik</a>
       <a href="/de/chancenkarte.html">Chancenkarte</a>
     </nav>
-    <div class="lang-switcher">
+    <div class="lang-switch">
       <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 Deutsch</button>
       <div class="lang-dropdown" id="langDropdown">
         <a href="/de/">Deutsch</a>
@@ -61,18 +61,16 @@
 </header>
 
 
-
-
 <main class="container">
   <!-- 1. HERO SECTION -->
-  <section class="hero-image">
-    <div class="hero-overlay">
-      <h1 class="h1">Zugang zum deutschen Berufssystem</h1>
+  <section class="hero">
+    <div class="hero__inner">
+      <h1>Zugang zum deutschen Berufssystem</h1>
       <p class="sub">Strukturierte Bewertung. Klare Entscheidung.</p>
       <div class="actions">
-        <a class="btn primary" href="/de/assessment.html">Bewertung starten</a>
+        <a class="cta" href="/de/assessment.html">Bewertung starten</a>
       </div>
-      <div class="trust-row">
+      <div class="trust">
         Zertifizierte Bewertung nach deutschen Standards
       </div>
     </div>
@@ -407,13 +405,29 @@
 </main>
 
 <footer class="footer">
-  <div class="container wrap">
-    <div><b>Berlin Gateway</b> — Strukturelle Eintrittsarchitektur für Fachkräfte</div>
-    <div class="footer-contact">Kontakt: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a> · Telefon: <a href="tel:+493025730875">+49 30 25730875</a></div>
-  </div>
-  <div class="container">
-    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. Alle Rechte vorbehalten. · <a href="/sitemap.html" style="color: #0B3B8C; text-decoration: none;">Sitemap</a></div>
-    <div class="footer-closing">Strukturiert. Selektiv. Systemisch.</div>
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <h4>Berlin Gateway</h4>
+        <p>Strukturelle Eintrittsarchitektur für internationale Fachkräfte in Deutschland.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+        <a href="tel:+493025730875">+49 30 25730875</a>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
+        <a href="/de/insights.html">Insights</a>
+        <a href="/de/systemlogik.html">Systemlogik</a>
+        <a href="/sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© <span id="year">2026</span> Berlin Gateway. Alle Rechte vorbehalten.</div>
+      <div>Strukturiert. Selektiv. Systemisch.</div>
+    </div>
   </div>
 </footer>
 <script>

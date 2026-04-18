@@ -102,7 +102,7 @@ body main section.hero-image .hero-overlay .btn.primary {
   opacity: 1 !important;
   text-decoration: none !important;
 }
-.hero{padding:54px 0 28px}
+/* .hero{padding:54px 0 28px} */
 .h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 14px;color:var(--primary);letter-spacing:-.4px;word-break:normal;overflow-wrap:anywhere}
 .sub{max-width:860px;color:var(--text);margin:0 0 22px;font-size:clamp(14px,3.5vw,16px)}
 .kicker{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 10px}
@@ -190,7 +190,7 @@ span[dir="ltr"]{direction:ltr;unicode-bidi:embed;display:inline-block}
 
 @media (max-width:480px){
   .h1{font-size:clamp(24px,5vw,28px);line-height:1.2}
-  .hero{padding:32px 0 16px}
+  /* .hero{padding:32px 0 16px} */
   .section{padding:16px 0}
   .nav{gap:6px;font-size:11px;flex-wrap:wrap;align-content:flex-start}
   .nav a{padding:3px 5px;white-space:nowrap}

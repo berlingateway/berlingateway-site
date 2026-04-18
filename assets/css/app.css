@@ -26,18 +26,19 @@ a:hover{opacity:.85}
 .nav a{padding:6px 8px;border-radius:6px}
 .nav a.active{background:var(--soft);color:var(--primary)}
 
-.hero-image {
+main .hero-image {
   position: relative;
-  min-height: 70vh;
+  min-height: 70vh !important;
+  height: 70vh !important;
   background: linear-gradient(135deg, #0B1F3A 0%, #0E2A4D 100%) !important;
   background-image: none !important;
   color: #ffffff !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   overflow: hidden;
   margin-bottom: 32px;
-  padding: 120px 20px 100px;
+  padding: 120px 20px 100px !important;
 }
 .hero-image picture {
   display: none !important;
@@ -49,43 +50,47 @@ a:hover{opacity:.85}
   background-image: none !important;
 }
 .hero-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;background:#e2e8f0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px;z-index:0}
-.hero-overlay{
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 0;
-  max-width: 900px;
-  margin: 0 auto;
-  background: transparent;
-  border-radius: 0;
-  pointer-events: auto;
+main .hero-overlay {
+  position: relative !important;
+  z-index: 2 !important;
+  text-align: center !important;
+  padding: 0 !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  pointer-events: auto !important;
+  display: block !important;
 }
-.hero-overlay .h1 {
-  color: #fff;
-  font-size: clamp(42px, 6vw, 48px);
-  line-height: 1.2;
-  font-weight: 700;
-  margin: 0 0 16px;
-  letter-spacing: -0.5px;
+main .hero-overlay .h1 {
+  color: #ffffff !important;
+  font-size: clamp(42px, 6vw, 48px) !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  margin: 0 0 16px !important;
+  letter-spacing: -0.5px !important;
+  display: block !important;
 }
-.hero-overlay .sub {
-  color: rgba(255, 255, 255, 0.75);
-  max-width: 100%;
-  margin: 0 auto 32px;
-  font-size: clamp(18px, 4vw, 20px);
-  line-height: 1.4;
+main .hero-overlay .sub {
+  color: rgba(255, 255, 255, 0.75) !important;
+  max-width: 100% !important;
+  margin: 0 auto 32px !important;
+  font-size: clamp(18px, 4vw, 20px) !important;
+  line-height: 1.4 !important;
+  display: block !important;
 }
-.hero-overlay .kicker {
-  display: none;
+main .hero-overlay .kicker {
+  display: none !important;
 }
-.hero-overlay .btn.primary {
+main .hero-overlay .btn.primary {
   background: #ffffff !important;
   border-color: #ffffff !important;
   color: #0B1F3A !important;
-  pointer-events: auto;
-  font-weight: 600;
-  padding: 14px 28px;
-  font-size: 16px;
+  pointer-events: auto !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  font-size: 16px !important;
+  display: inline-flex !important;
 }
 .hero{padding:54px 0 28px}
 .h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 14px;color:var(--primary);letter-spacing:-.4px;word-break:normal;overflow-wrap:anywhere}

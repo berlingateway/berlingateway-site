@@ -63,18 +63,60 @@
 
 <main class="container">
   <!-- 1. HERO SECTION -->
-  <section class="hero">
+  <section class="hero" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; max-width:1200px; margin:0 auto;">
     <div class="hero__inner">
       <h1>Können Sie in Deutschland arbeiten?</h1>
       <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte</p>
-      <div class="actions">
-        <a class="cta" href="#calculator">Jetzt prüfen</a>
-      </div>
       <div class="trust">
         Zertifizierte Bewertung nach deutschen Standards
       </div>
     </div>
+    <!-- FORM IN HERO -->
+    <div style="padding:32px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; height:fit-content;">
+      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:24px; font-size:18px; text-align:center;">Professionelle Fallbewertung</h3>
+      <!-- 3-MONTHS READINESS CHECK -->
+      <div style="margin-bottom:24px; padding:16px; background:#f0f4f8; border-left:4px solid #0B3B8C; border-radius:4px;">
+        <label style="display:block; margin-bottom:12px; color:#334155; font-weight:600; font-size:13px;">Sind Sie bereit innerhalb von 3 Monaten zu starten?</label>
+        <select id="readiness-answer" onchange="checkReadiness()" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+          <option value="">-- Bitte wählen --</option>
+          <option value="yes">Ja, ich bin bereit</option>
+          <option value="no">Nein, noch nicht</option>
+        </select>
+      </div>
+      <div id="filter-message" style="display:none; margin-bottom:24px; padding:16px; background:#fff3cd; border-left:4px solid #ffc107; border-radius:4px;"></div>
+      
+      <form id="lead-form" style="display:none; display:flex; flex-direction:column; gap:16px;">
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500; font-size:13px;">Name</label>
+          <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500; font-size:13px;">Email</label>
+          <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500; font-size:13px;">Beruf</label>
+          <input type="text" name="profession" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500; font-size:13px;">CV (PDF)</label>
+          <input type="file" name="cv" accept=".pdf" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <p style="font-size:13px; color:#64748b; margin:0;">Nur ernsthafte Anfragen. Antwort innerhalb 24–48h</p>
+        <button type="submit" class="btn primary" style="margin-top:12px; width:100%;">Fall einreichen</button>
+      </form>
+    </div>
   </section>
+  
+  <!-- RESPONSIVE HERO ADJUSTMENT -->
+  <style>
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+    }
+  </style>
 
   <!-- STICKY CTA FOR MOBILE -->
   <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
@@ -560,43 +602,7 @@
     </div>
   </section>
 
-  <!-- LEAD FORM SECTION -->
-  <section class="section" style="margin-bottom:48px;">
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:center;">Professionelle Fallbewertung</h2>
-    <div style="max-width:600px; margin:0 auto; padding:32px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px;">
-      <!-- 3-MONTHS READINESS CHECK -->
-      <div style="margin-bottom:24px; padding:16px; background:#f0f4f8; border-left:4px solid #0B3B8C; border-radius:4px;">
-        <label style="display:block; margin-bottom:12px; color:#334155; font-weight:600;">Sind Sie bereit innerhalb von 3 Monaten zu starten?</label>
-        <select id="readiness-answer" onchange="checkReadiness()" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-          <option value="">-- Bitte wählen --</option>
-          <option value="yes">Ja, ich bin bereit</option>
-          <option value="no">Nein, noch nicht</option>
-        </select>
-      </div>
-      <div id="filter-message" style="display:none; margin-bottom:24px; padding:16px; background:#fff3cd; border-left:4px solid #ffc107; border-radius:4px;"></div>
-      
-      <form id="lead-form" style="display:none; display:flex; flex-direction:column; gap:16px;">
-        <div>
-          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Name</label>
-          <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-        </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Email</label>
-          <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-        </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Beruf</label>
-          <input type="text" name="profession" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-        </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">CV (PDF)</label>
-          <input type="file" name="cv" accept=".pdf" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-        </div>
-        <p style="font-size:13px; color:#64748b; margin:0;">Nur ernsthafte Anfragen. Antwort innerhalb 24–48h</p>
-        <button type="submit" class="btn primary" style="margin-top:12px;">Fall einreichen</button>
-      </form>
-    </div>
-  </section>
+
 
 <footer class="footer">
   <div class="footer__inner">

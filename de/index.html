@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Anerkennung ausländischer Abschlüsse — Berlin Gateway</title>
+  <title>Chancenkarte 2026 – Können Sie in Deutschland arbeiten?</title>
   <meta name="description" content="Strukturelle Einordnung und Anerkennungslogik für Fachkräfte in Deutschland. Systemisch. Selektiv. Institutionell." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
@@ -65,16 +65,43 @@
   <!-- 1. HERO SECTION -->
   <section class="hero">
     <div class="hero__inner">
-      <h1>Zugang zum deutschen Berufssystem</h1>
-      <p class="sub">Strukturierte Bewertung. Klare Entscheidung.</p>
+      <h1>Können Sie in Deutschland arbeiten?</h1>
+      <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte</p>
       <div class="actions">
-        <a class="cta" href="/de/assessment.html">Bewertung starten</a>
+        <a class="cta" href="#calculator">Jetzt prüfen</a>
       </div>
       <div class="trust">
         Zertifizierte Bewertung nach deutschen Standards
       </div>
     </div>
   </section>
+
+  <!-- STICKY CTA FOR MOBILE -->
+  <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
+    <a href="#calculator" style="display:block; background:#FFFFFF; color:#0B1F3A; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
+      Chancen prüfen
+    </a>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const stickyCta = document.getElementById('sticky-cta-mobile');
+      const calculator = document.getElementById('calculator');
+      if (window.innerWidth <= 768) {
+        if (calculator && window.scrollY > calculator.offsetTop - 100) {
+          stickyCta.style.display = 'none';
+        } else {
+          stickyCta.style.display = 'block';
+        }
+      } else {
+        stickyCta.style.display = 'none';
+      }
+    });
+  </script>
+
+  <!-- CALCULATOR INTRO -->
+  <div id="calculator" style="margin:48px 0; padding:32px; background:#f0f4f8; border-radius:8px; text-align:center;">
+    <p style="color:#0B3B8C; font-size:16px; font-weight:600; margin:0;">Diese Bewertung ist für ernsthafte Bewerber gedacht</p>
+  </div>
 
   <!-- 1.5 CHANCENKARTE QUICK CHECK SECTION -->
   <section class="section" style="background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f7 100%); padding: 48px 24px; margin: 48px 0; border-radius: 12px; text-align: center;">
@@ -103,6 +130,11 @@
         <h3>Deutschland öffnet neue Wege</h3>
         <p>Die Chancenkarte und neue Regelungen schaffen strukturierte Einstiegspfade für internationale Fachkräfte in den deutschen Arbeitsmarkt.</p>
       </div>
+    <!-- CTA BLOCK AFTER SECTION -->
+    <div style="margin-top:48px; padding:32px; background:#f8fafc; border:2px solid #0B3B8C; border-radius:8px; text-align:center;">
+      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; font-size:18px;">Trifft das auf Sie zu?</h3>
+      <a class="btn primary" href="#calculator" style="display:inline-block; margin-top:12px;">Jetzt Bewertung starten</a>
+    </div>
     </div>
   </section>
 
@@ -403,6 +435,41 @@
     </div>
   </section>
 </main>
+
+  <!-- TRUST SECTION -->
+  <section class="section" style="background:#f8fafc; padding:48px 32px; border-radius:8px; margin-bottom:48px;">
+    <h2 style="color:#0B3B8C; margin-bottom:16px; text-align:center;">Warum Berlin Gateway?</h2>
+    <p style="color:#334155; font-size:16px; line-height:1.6; max-width:700px; margin:0 auto; text-align:center;">
+      Wir verstehen das deutsche System: Anerkennung, Klassifizierung und Arbeitsmarkt. Unsere Bewertung basiert auf struktureller Analyse, nicht auf Hoffnung.
+    </p>
+  </section>
+
+  <!-- LEAD FORM SECTION -->
+  <section class="section" style="margin-bottom:48px;">
+    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:center;">Professionelle Fallbewertung</h2>
+    <div style="max-width:600px; margin:0 auto; padding:32px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px;">
+      <form id="lead-form" style="display:flex; flex-direction:column; gap:16px;">
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Name</label>
+          <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Email</label>
+          <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Beruf</label>
+          <input type="text" name="profession" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <div>
+          <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">CV (PDF)</label>
+          <input type="file" name="cv" accept=".pdf" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+        </div>
+        <p style="font-size:13px; color:#64748b; margin:0;">Nur ernsthafte Anfragen. Antwort innerhalb 24–48h</p>
+        <button type="submit" class="btn primary" style="margin-top:12px;">Fall einreichen</button>
+      </form>
+    </div>
+  </section>
 
 <footer class="footer">
   <div class="footer__inner">

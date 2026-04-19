@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <title>تعديل الشهادات والاعتراف المهني في ألمانيا | Berlin Gateway</title>
+  <title>بطاقة الفرص 2026 – هل يمكنك العمل في ألمانيا؟</title>
   <meta name="description" content="تصنيف هيكلي ومنطق الاعتراف للكفاءات في ألمانيا. منهجي. انتقائي. مؤسسي." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
@@ -67,16 +67,43 @@
   <!-- 1. HERO SECTION -->
   <section class="hero" dir="rtl">
     <div class="hero__inner">
-      <h1>الدخول إلى النظام المهني الألماني</h1>
-      <p class="sub">تقييم منظم. قرار واضح.</p>
+      <h1>هل يمكنك العمل في ألمانيا؟</h1>
+      <p class="sub">تحقق الآن خلال دقيقة واحدة إذا كنت مؤهلاً لبطاقة الفرص</p>
       <div class="actions">
-        <a class="cta" href="/ar/assessment.html">ابدأ التقييم</a>
+        <a class="cta" href="#calculator">ابدأ التقييم الآن</a>
       </div>
       <div class="trust">
         تقييم معتمد وفق المعايير الألمانية
       </div>
     </div>
   </section>
+
+  <!-- STICKY CTA FOR MOBILE -->
+  <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
+    <a href="#calculator" style="display:block; background:#FFFFFF; color:#0B1F3A; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
+      احسب فرصك الآن
+    </a>
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+      const stickyCta = document.getElementById('sticky-cta-mobile');
+      const calculator = document.getElementById('calculator');
+      if (window.innerWidth <= 768) {
+        if (calculator && window.scrollY > calculator.offsetTop - 100) {
+          stickyCta.style.display = 'none';
+        } else {
+          stickyCta.style.display = 'block';
+        }
+      } else {
+        stickyCta.style.display = 'none';
+      }
+    });
+  </script>
+
+  <!-- CALCULATOR INTRO -->
+  <div id="calculator" style="margin:48px 0; padding:32px; background:#f0f4f8; border-radius:8px; text-align:center;">
+    <p style="color:#0B3B8C; font-size:16px; font-weight:600; margin:0;">هذا التقييم مخصص للمتقدمين الجادين فقط</p>
+  </div>
 
   <!-- 1.5 CHANCENKARTE QUICK CHECK SECTION -->
   <section class="section" style="background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f7 100%); padding: 48px 24px; margin: 48px 0; border-radius: 12px; text-align: center;">
@@ -105,6 +132,11 @@
         <h3>ألمانيا تفتح طرقاً جديدة</h3>
         <p>بطاقة الفرص والقوانين الجديدة تخلق مسارات دخول منظمة للكفاءات الدولية إلى سوق العمل الألماني.</p>
       </div>
+    <!-- CTA BLOCK AFTER SECTION -->
+    <div style="margin-top:48px; padding:32px; background:#f8fafc; border:2px solid #0B3B8C; border-radius:8px; text-align:center;">
+      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; font-size:18px;">هل ينطبق هذا عليك؟</h3>
+      <a class="btn primary" href="#calculator" style="display:inline-block; margin-top:12px;">ابدأ التقييم الآن</a>
+    </div>
     </div>
   </section>
 

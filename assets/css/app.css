@@ -142,22 +142,27 @@ a:hover { opacity: 0.8; }
 }
 
 .lang-switch {
-  background: var(--black) !important;
-  color: var(--white) !important;
-  padding: 10px 18px;
-  border-radius: 20px;
+  background: #0B1F3A !important;
+  color: #FFFFFF !important;
+  padding: 12px 20px;
+  border-radius: 999px;
   font-size: 13px;
   font-weight: 700;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  position: relative;
-  z-index: 999;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .lang-switch:hover {
   opacity: 0.9;
+  background: #0B1F3A !important;
 }
 
 @media (max-width: 968px) {

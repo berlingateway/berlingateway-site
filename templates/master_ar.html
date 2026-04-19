@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — منطق النظام</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/systemlogik.html" class="lang-switch">Deutsch</a>
+            <a href="/de/{{ page_slug }}.html" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -55,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>كيف يعمل النظام الألماني؟</h1>
-                    <p class="sub">افهم المنطق وراء المتطلبات ومعايير التقييم.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">منطق النظام</span>
-                        <span class="badge">الشفافية</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -86,25 +86,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
-    <section class="container">
-        <h2>مكونات النظام</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>الاعتراف</h3>
-                <p>كيف يتم الاعتراف بشهاداتك وشهاداتك في ألمانيا.</p>
-            </div>
-            <div class="card">
-                <h3>سوق العمل</h3>
-                <p>المتطلبات والفرص في مجال عملك.</p>
-            </div>
-            <div class="card">
-                <h3>التأشيرة والإقامة</h3>
-                <p>الأساس القانوني للعمل والإقامة في ألمانيا.</p>
-            </div>
-        </div>
-    </section>
-
+    {{ page_content }}
 
 </main>
 

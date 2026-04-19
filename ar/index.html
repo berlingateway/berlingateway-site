@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,7 +15,8 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/" class="lang-switch">Deutsch</a><a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+            <a href="/de/index.html" class="lang-switch">Deutsch</a>
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
@@ -42,13 +43,14 @@
 <!-- BAND 3: SUB NAV BAND (BLACK) -->
 <nav class="subnav">
     <div class="subnav__inner">
-        <a href="#assessment">تقييم معتمد</a>
-        <a href="#contact">اتصل بنا</a>
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل بنا</a>
     </div>
 </nav>
 
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
             <div class="hero__inner">
@@ -83,6 +85,8 @@
         </div>
     </section>
 
+    <!-- PAGE-SPECIFIC CONTENT -->
+    
     <section class="container">
         <h2>أي مسار يناسبك؟</h2>
         <div class="grid-3">
@@ -139,6 +143,8 @@
             </div>
         </div>
     </section>
+
+
 </main>
 
 <!-- FOOTER (BLACK) -->
@@ -147,21 +153,21 @@
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
                 <h4>Berlin Gateway</h4>
-                <p>التصنيف المهني الاحترافي في النظام الألماني.</p>
+                <p>تقييم مهني احترافي لألمانيا.</p>
             </div>
             <div>
-                <h4>التنقل</h4>
+                <h4>الملاحة</h4>
                 <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
                 <a href="/ar/systemlogik.html">منطق النظام</a>
                 <a href="/ar/monitor.html">المرصد</a>
             </div>
             <div>
-                <h4>قانوني</h4>
+                <h4>القانونية</h4>
                 <a href="/ar/impressum.html">بصمة الموقع</a>
                 <a href="/ar/datenschutz.html">خصوصية البيانات</a>
             </div>
             <div>
-                <h4>اتصل بنا</h4>
+                <h4>الاتصال</h4>
                 <p>info@berlingateway.de</p>
                 <p>+49 30 25730875</p>
             </div>
@@ -177,7 +183,7 @@ document.getElementById('assessment-form').addEventListener('submit', function(e
     const readiness = document.getElementById('readiness-answer').value;
     if (readiness === 'no') {
         e.preventDefault();
-        alert('هذه الخدمة مخصصة للمتقدمين المستعدين للبدء قريباً (خلال 3 أشهر).');
+        alert('هذه الخدمة موجهة للمتقدمين الذين يريدون البدء قريباً (خلال 3 أشهر).');
     }
 });
 </script>

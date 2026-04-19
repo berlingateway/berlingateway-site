@@ -1,679 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <title>Chancenkarte 2026 – Können Sie in Deutschland arbeiten?</title>
-  <meta name="description" content="Strukturelle Einordnung und Anerkennungslogik für Fachkräfte in Deutschland. Systemisch. Selektiv. Institutionell." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-  <meta name="author" content="Berlin Gateway" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://berlingateway.de/de/index.html" />
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/index.html" />
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/index.html" />
-  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/index.html" />
-  <link rel="stylesheet" href="/assets/css/app.css" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Berlin Gateway",
-  "url": "https://www.berlingateway.de",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Perleberger Str 41",
-    "addressLocality": "Berlin",
-    "postalCode": "10559",
-    "addressCountry": "DE"
-  },
-  "areaServed": [
-    "Yemen",
-    "Senegal",
-    "Mali",
-    "Nigeria",
-    "North Africa",
-    "Middle East"
-  ],
-  "sameAs": [
-    "https://www.facebook.com/",
-    "https://www.linkedin.com/"
-  ]
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berlin Gateway — Professionelle Bewertung für Deutschland</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- MAIN HEADER (White) -->
+
 <header class="header">
-  <div class="header__inner">
-    <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
-      <a href="/de/insights.html">Insights</a>
-      <a href="/de/systemlogik.html">Systemlogik</a>
-      <a href="/de/chancenkarte.html">Chancenkarte</a>
-    </nav>
-    <div class="lang-switch">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 Deutsch</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/">العربية</a>
-      </div>
+    <div class="header__inner">
+        <a href="/de/" class="brand">
+            <div class="emblem"></div>
+            BERLIN GATEWAY
+        </a>
+        <nav class="nav">
+            <a href="/de/chancenkarte.html">Chancenkarte</a>
+            <a href="/de/systemlogik.html">Systemlogik</a>
+            <a href="/de/monitor.html">Monitor</a>
+            <a href="/ar/" class="lang-switch">العربية</a>
+        </nav>
     </div>
-  </div>
 </header>
 
-<main class="container">
-  <!-- 1. HERO SECTION -->
-  <section class="hero" id="hero-form-section">
-    <div class="hero__inner">
-      <h1>Können Sie in Deutschland arbeiten?</h1>
-      <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte</p>
-      <div class="trust">
-        Zertifizierte Bewertung nach deutschen Standards
-      </div>
-      <p style="margin-top:16px; font-size:14px; #FFFFFF;">
-        Basierend auf der <a href="/de/systemlogik.html" style="#FFFFFF; text-decoration:none; font-weight:600;">Systemlogik der beruflichen Einordnung</a> und <a href="/de/chancenkarte.html" style="#FFFFFF; text-decoration:none; font-weight:600;">Chancenkarte Anforderungen</a>.
-      </p>
-    </div>
-    <!-- FORM IN HERO -->
-    <div >
-      <h3 style="#FFFFFF; margin-top:0; margin-bottom:24px; font-size:18px; text-align:center;">Professionelle Fallbewertung</h3>
-      <!-- 3-MONTHS READINESS CHECK -->
-      <div >
-        <label style="display:block; margin-bottom:12px; #FFFFFF; font-weight:600; font-size:13px;">Sind Sie bereit innerhalb von 3 Monaten zu starten?</label>
-        <select id="readiness-answer" onchange="checkReadiness()" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-          <option value="">-- Bitte wählen --</option>
-          <option value="yes">Ja, ich bin bereit</option>
-          <option value="no">Nein, noch nicht</option>
-        </select>
-      </div>
-      
-      
-      <form id="lead-form" style="display:none; display:flex; flex-direction:column; gap:16px;">
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">Name</label>
-          <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero-content">
+                    <h1>Können Sie in Deutschland arbeiten?</h1>
+                    <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte 2026. Strukturierte Bewertung nach deutschen Standards.</p>
+                    <div class="trust-row">
+                        <span class="badge">Zertifizierte Bewertung</span>
+                        <span class="badge">Echtzeit-Analyse</span>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <form class="assessment-form" id="assessment-form">
+                        <h3>Professionelle Fallbewertung</h3>
+                        <label>Bereit innerhalb von 3 Monaten zu starten?</label>
+                        <select id="readiness-answer" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="yes">Ja, ich bin bereit</option>
+                            <option value="no">Nein, noch nicht</option>
+                        </select>
+                        <label>Name</label>
+                        <input type="text" placeholder="Ihr Name" required>
+                        <label>Email</label>
+                        <input type="email" placeholder="ihre@email.de" required>
+                        <label>Beruf</label>
+                        <input type="text" placeholder="z.B. Softwareentwickler" required>
+                        <button type="submit" class="cta">Fall einreichen</button>
+                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">Antwort innerhalb 24–48h. Nur ernsthafte Anfragen.</p>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">Email</label>
-          <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+    </section>
+
+    <section class="container">
+        <h2>Welcher Weg passt zu Ihnen?</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Anerkennung</h3>
+                <p>Ihr Abschluss wird in Deutschland anerkannt. Klare Wege zur formalen Gleichstellung.</p>
+                <a href="/de/systemlogik.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">Mehr erfahren →</a>
+            </div>
+            <div class="card">
+                <h3>Ausbildung / Studium</h3>
+                <p>Sie möchten in Deutschland lernen und arbeiten. Strukturierte Einstiegspfade.</p>
+                <a href="/de/systemlogik.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">Mehr erfahren →</a>
+            </div>
+            <div class="card">
+                <h3>Chancenkarte</h3>
+                <p>Das neue Punktesystem für die Jobsuche in Deutschland. Prüfen Sie Ihre Eignung.</p>
+                <a href="/de/chancenkarte.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">Punkte berechnen →</a>
+            </div>
         </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">Beruf</label>
-          <input type="text" name="profession" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+    </section>
+
+    <section class="section-alt">
+        <div class="container">
+            <h2>Der Prozess in 4 Schritten</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">01</div>
+                    <h3>Bewertung</h3>
+                    <p>Ihre Qualifikation wird anhand der aktuellen Systemlogik analysiert.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">02</div>
+                    <h3>Filterung</h3>
+                    <p>Klare Einordnung nach Arbeitsmarktdaten und gesetzlichen Vorgaben.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">03</div>
+                    <h3>Entscheidung</h3>
+                    <p>Sie erhalten klare Handlungsempfehlungen für Ihren nächsten Schritt.</p>
+                </div>
+            </div>
         </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">CV (PDF)</label>
-          <input type="file" name="cv" accept=".pdf" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+    </section>
+
+    <section class="container" style="text-align:center;">
+        <h2>Warum Berlin Gateway?</h2>
+        <div class="grid-3" style="text-align:left;">
+            <div class="card">
+                <h3>Systemwissen</h3>
+                <p>Nicht auf Hoffnung, sondern auf struktureller Analyse des deutschen Systems.</p>
+            </div>
+            <div class="card">
+                <h3>Fokus</h3>
+                <p>Wir filtern nach Qualifikation, nicht nach Quantität. Nur ernsthafte Bewerber.</p>
+            </div>
+            <div class="card">
+                <h3>Klarheit</h3>
+                <p>Keine Garantien, sondern strukturierte Fakten über Ihre Möglichkeiten.</p>
+            </div>
         </div>
-        <p style="font-size:13px; #FFFFFF; margin:0;">Nur ernsthafte Anfragen. Antwort innerhalb 24–48h</p>
-        <button type="submit" class="btn primary" style="margin-top:12px; width:100%;">Fall einreichen</button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- RESPONSIVE HERO ADJUSTMENT -->
-  <style>
-    html { scroll-behavior: smooth; }
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
-      }
-    }
-  </style>
-
-  <!-- STICKY CTA FOR MOBILE -->
-  <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
-    <a href="#hero-form-section" style="display:block; background:#FFFFFF; #FFFFFF; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
-      Chancen prüfen
-    </a>
-  </div>
-  <script>
-    window.addEventListener('scroll', function() {
-      const stickyCta = document.getElementById('sticky-cta-mobile');
-      const calculator = document.getElementById('calculator');
-      if (window.innerWidth <= 768) {
-        if (calculator && window.scrollY > calculator.offsetTop - 100) {
-          stickyCta.style.display = 'none';
-        } else {
-          stickyCta.style.display = 'block';
-        }
-      } else {
-        stickyCta.style.display = 'none';
-      }
-    });
-  </script>
-
-  <!-- AUTHORITY PROOF LAYER -->
-  <section style="background:#ffffff; padding:24px 32px; border-bottom:1px solid #e2e8f0; text-align:center;">
-    <div style="max-width:900px; margin:0 auto; font-size:13px; #FFFFFF; line-height:1.8;">
-      <p style="margin:0;">Basierend auf:</p>
-      <p style="margin:8px 0 0 0;">• Bewertungssystem &nbsp; • Arbeitsmarkt-Daten &nbsp; • Individueller Profilanalyse</p>
-    </div>
-  </section>
-  <!-- CALCULATOR INTRO -->
-  <div id="calculator" >
-    <p style="#FFFFFF; font-size:16px; font-weight:600; margin:0;">Diese Bewertung ist für ernsthafte Bewerber gedacht</p>
-  </div>
-
-  <!-- PROFILE-BASED PATH SELECTION -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:32px; text-align:center;">Welcher Weg passt zu Ihnen?</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px; max-width:1000px; margin:0 auto;">
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">Anerkennung</h3>
-        <p style="#FFFFFF; font-size:14px;">Ihr Abschluss wird in Deutschland anerkannt. Klare Wege zur formalen Gleichstellung.</p>
-        <a href="/de/#hero-form-section" style="#FFFFFF; text-decoration:none; font-weight:600; font-size:14px;">Bewertung starten →</a>
-      </div>
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">Ausbildung / Studium</h3>
-        <p style="#FFFFFF; font-size:14px;">Sie möchten in Deutschland lernen und arbeiten. Strukturierte Einstiegspfade.</p>
-        <a href="/de/#hero-form-section" style="#FFFFFF; text-decoration:none; font-weight:600; font-size:14px;">Bewertung starten →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MIGRATION STEPS -->
-  <section class="section" style="padding:48px 32px;">
-    <h2 style="#FFFFFF; margin-bottom:48px; text-align:center;">Der Prozess in 4 Schritten</h2>
-    <div style="max-width:900px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:24px;">
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">1</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">Bewertung</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">Ihre Qualifikation wird analysiert.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">2</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">Filterung</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">Klare Einordnung nach Systemlogik.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">3</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">Entscheidung</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">Sie erhalten klare Handlungsempfehlungen.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">4</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">Zugang</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">Strukturierte Vorbereitung für den nächsten Schritt.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACCESS LEVELS -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:48px; text-align:center;">Zugangsebenen</h2>
-    <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:32px;">
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">Basis</h3>
-        <p style="#FFFFFF; font-size:13px;">Automatisierte Bewertung. Sofortige Ergebnisse.</p>
-        <ul style="#FFFFFF; font-size:13px; margin:0; padding-left:16px;">
-          <li>Profilanalyse</li>
-          <li>Systemeinordnung</li>
-        </ul>
-      </div>
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">Standard</h3>
-        <p style="#FFFFFF; font-size:13px;">Strukturierte Bewertung mit Dokumentenprüfung.</p>
-        <ul style="#FFFFFF; font-size:13px; margin:0; padding-left:16px;">
-          <li>Detaillierte Analyse</li>
-          <li>Handlungsplan</li>
-        </ul>
-      </div>
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">Premium</h3>
-        <p style="#FFFFFF; font-size:13px;">Professionelle Beratung mit Begleitung.</p>
-        <ul style="#FFFFFF; font-size:13px; margin:0; padding-left:16px;">
-          <li>Persönliche Beratung</li>
-          <li>Prozessbegleitung</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US SECTION -->
-  <section class="section" style="padding:48px 32px;">
-    <h2 style="#FFFFFF; margin-bottom:32px; text-align:center;">Warum Berlin Gateway?</h2>
-    <div style="max-width:700px; margin:0 auto; #FFFFFF; font-size:14px; line-height:1.8;">
-      <p><strong>Keine Garantien.</strong> Wir versprechen keine Ergebnisse, sondern strukturierte Klarheit. Das System ist, was es ist.</p>
-      <p><strong>Strukturierte Entscheidung.</strong> Basierend auf Systemlogik, nicht auf Hoffnung. Sie wissen, wo Sie stehen.</p>
-      <p><strong>Erfahrungsbasiert.</strong> Wir verstehen das deutsche System von innen. Anerkennung, Klassifizierung, Arbeitsmarkt.</p>
-    </div>
-  </section>
-
-  <!-- 1.5 CHANCENKARTE QUICK CHECK SECTION -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:16px; font-size:28px;">Kann ich mit der Chancenkarte in Deutschland arbeiten?</h2>
-    <p style="#FFFFFF; margin-bottom:32px; font-size:16px; max-width:600px; margin-left:auto; margin-right:auto;">Prüfen Sie Ihre Punkte in weniger als einer Minute.</p>
-    <a class="btn primary" href="/de/assessment" style="display:inline-block;">Chancenkarte Punkte berechnen</a>
-  </section>
-
-  <!-- 2. LABOR SHORTAGE / MARKET FACTS SECTION -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">Marktchancen für Fachkräfte</p>
-    <h2 style="#FFFFFF; margin-bottom:32px;">Die wichtigsten Fakten zum deutschen Arbeitsmarkt</h2>
-    <div class="grid">
-      <div class="card-with-icon">
-        <div style="font-size:48px; margin-bottom:16px;">📊</div>
-        <h3>400.000 Fachkräfte fehlen jährlich</h3>
-        <p>Deutschland hat einen strukturellen Fachkräftemangel in Pflege, IT, Ingenieurwesen und Handwerk. Der Bedarf wächst kontinuierlich.</p>
-      </div>
-      <div class="card-with-icon">
-        <div style="font-size:48px; margin-bottom:16px;">💶</div>
-        <h3>Durchschnittliche Einstiegsgehälter bis €50.000</h3>
-        <p>Neue Fachkräfte verdienen in Deutschland zwischen €32.000 und €50.000 brutto pro Jahr, je nach Branche und Qualifikation.</p>
-      </div>
-      <div class="card-with-icon">
-        <div style="font-size:48px; margin-bottom:16px;">📍</div>
-        <h3>Deutschland öffnet neue Wege</h3>
-        <p>Die Chancenkarte und neue Regelungen schaffen strukturierte Einstiegspfade für internationale Fachkräfte in den deutschen Arbeitsmarkt.</p>
-      </div>
-    <!-- CTA BLOCK AFTER SECTION -->
-    <div >
-      <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">Trifft das auf Sie zu?</h3>
-      <a class="btn primary" href="#hero-form-section" style="display:inline-block; margin-top:12px;">Jetzt Bewertung starten</a>
-    </div>
-    </div>
-  </section>
-
-  <!-- 3. INDUSTRY DEMAND / CHARTS SECTION -->
-  <section class="section">
-    <p class="kicker">Systemische Grundlagen</p>
-    <h2>Wie Berlin Gateway funktioniert</h2>
-    
-    <div >
-      <h3 style="font-size:14px; margin-top:0; margin-bottom:16px; #FFFFFF;">Strukturelle Nachfrageindikatoren nach Berufsgruppen</h3>
-      <div style="display:flex; flex-direction:column; gap:12px;">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">Pflege & Gesundheit</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">Hoch</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">IT & Software</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">Hoch</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">Ingenieurwesen</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">Mittel–Hoch</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">Spezialisierte Handwerke</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">Mittel</span>
-        </div>
-      </div>
-      <p style="font-size:11px; #FFFFFF; margin:12px 0 0 0;">Quelle: Engpassanalysen der Bundesagentur für Arbeit</p>
-    </div>
-
-    <div >
-      <h3 style="font-size:14px; margin-top:0; margin-bottom:16px; #FFFFFF;">Durchschnittliche Vakanzzeit in Engpassberufen</h3>
-      <svg width="100%" height="200" style="max-width:100%;" viewBox="0 0 400 150">
-        <line x1="30" y1="120" x2="390" y2="120" stroke="#e2e8f0" stroke-width="1"/>
-        <line x1="30" y1="90" x2="390" y2="90" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2,2"/>
-        <line x1="30" y1="60" x2="390" y2="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2,2"/>
-        <line x1="30" y1="30" x2="390" y2="30" stroke="#e2e8f0" stroke-width="1"/>
-        <polyline points="30,110 100,70 170,50 240,65 310,45 380,55" fill="none" stroke="#0B3B8C" stroke-width="2"/>
-        <circle cx="30" cy="110" r="3" fill="#0B3B8C"/>
-        <circle cx="100" cy="70" r="3" fill="#0B3B8C"/>
-        <circle cx="170" cy="50" r="3" fill="#0B3B8C"/>
-        <circle cx="240" cy="65" r="3" fill="#0B3B8C"/>
-        <circle cx="310" cy="45" r="3" fill="#0B3B8C"/>
-        <circle cx="380" cy="55" r="3" fill="#0B3B8C"/>
-        <text x="30" y="135" font-size="11" fill="#64748b" text-anchor="middle">2022</text>
-        <text x="100" y="135" font-size="11" fill="#64748b" text-anchor="middle">2023</text>
-        <text x="170" y="135" font-size="11" fill="#64748b" text-anchor="middle">2024</text>
-        <text x="240" y="135" font-size="11" fill="#64748b" text-anchor="middle">2025</text>
-        <text x="310" y="135" font-size="11" fill="#64748b" text-anchor="middle">2026</text>
-        <text x="380" y="135" font-size="11" fill="#64748b" text-anchor="middle">Prognose</text>
-      </svg>
-      <p style="font-size:11px; #FFFFFF; margin:8px 0 0 0;">Relative Trend-Indikatoren. Quelle: Bundesagentur für Arbeit</p>
-    </div>
-
-    <div >
-      <h3 style="font-size:14px; margin-top:0; margin-bottom:16px; #FFFFFF;">Regionale Schwerpunktindikatoren (Auswahl)</h3>
-      <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
-      <table style="width:100%; border-collapse:collapse; font-size:12px;">
-        <thead>
-          <tr style="border-bottom:2px solid #0B3B8C;">
-            <th style="text-align:left; padding:8px; #FFFFFF; font-weight:600;">Region</th>
-            <th style="text-align:left; padding:8px; #FFFFFF; font-weight:600;">Schwerpunkt</th>
-            <th style="text-align:left; padding:8px; #FFFFFF; font-weight:600;">Indikator</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF;">Berlin/Brandenburg</td>
-            <td style="padding:8px; #FFFFFF;">Pflege, IT, Verwaltung</td>
-            <td style="padding:8px; #FFFFFF;">Hoch</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF;">Bayern</td>
-            <td style="padding:8px; #FFFFFF;">Ingenieurwesen, Maschinenbau</td>
-            <td style="padding:8px; #FFFFFF;">Hoch</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF;">Baden-Württemberg</td>
-            <td style="padding:8px; #FFFFFF;">Elektrotechnik, Automotive</td>
-            <td style="padding:8px; #FFFFFF;">Hoch</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF;">NRW</td>
-            <td style="padding:8px; #FFFFFF;">Handwerk, Logistik</td>
-            <td style="padding:8px; #FFFFFF;">Mittel–Hoch</td>
-          </tr>
-          <tr>
-            <td style="padding:8px; #FFFFFF;">Sachsen</td>
-            <td style="padding:8px; #FFFFFF;">Spezialisierte Handwerke</td>
-            <td style="padding:8px; #FFFFFF;">Mittel</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      <p style="font-size:11px; #FFFFFF; margin:12px 0 0 0;">Indikative Schwerpunkte. Datenstand: Februar 2026</p>
-    </div>
-    
-  </section>
-
-  <!-- 4. FOUR-PHASE ROADMAP / PROCESS SECTION -->
-  <section class="section">
-    <p class="kicker">Strukturierter Prozess</p>
-    <h2>Vier Phasen der Einordnung</h2>
-    <div class="stepper-horizontal">
-      <div class="step-item">
-        <div class="step-number">1</div>
-        <h4>Erstprüfung</h4>
-        <p>Dokumentenprüfung und Systemeinordnung</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">2</div>
-        <h4>Pfadbestimmung</h4>
-        <p>Festlegung des Anerkennungswegs</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">3</div>
-        <h4>Sprachplanung</h4>
-        <p>Koordinierte Sprachentwicklung</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">4</div>
-        <h4>Umsetzung</h4>
-        <p>Begleitung der Maßnahmen</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. FINAL CTA SECTION -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:16px;">Wo sind die größten Chancen?</h2>
-    <p style="#FFFFFF; font-size:16px; line-height:1.6; max-width:600px; margin:0 auto 32px;">
-      Entdecken Sie aktuelle Arbeitsmarktdaten, Gehaltstrends und regionale Schwerpunkte. Unser Arbeitsmarkt Monitor bietet eine detaillierte Analyse der Chancen für Ihre Karriere in Deutschland.
-    </p>
-    <a class="btn primary wide" href="/de/monitor.html" style="display:inline-block;">Arbeitsmarkt Monitor analysieren</a>
-  </section>
-
-  <!-- ADDITIONAL SECTIONS (moved below conversion funnel) -->
-  <section class="section">
-    <h2 style="#FFFFFF; margin-bottom:16px;">Standortfaktor in der Integrationsphase</h2>
-    <p style="#FFFFFF; line-height:1.6; margin-bottom:12px;">
-      Berlin bietet in der initialen Phase der beruflichen Integration eine hohe Dichte an administrativen Zugängen, Fachsprachprüfungen und beruflichen Schnittstellen.
-    </p>
-    <p style="#FFFFFF; line-height:1.6; margin-bottom:12px;">
-      In komplexeren Konstellationen kann eine temporäre Standortfokussierung die strukturelle Stabilität deutlich erhöhen.
-    </p>
-    <p style="#FFFFFF; line-height:1.6;">
-      Die bundesweite Integration bleibt davon unberührt.
-    </p>
-    <p style="#FFFFFF; line-height:1.6;">
-      In der strukturellen Prüfung wird berücksichtigt, ob eine initiale Standortfokussierung sinnvoll erscheint.
-    </p>
-  </section>
-
-  <section class="section">
-    <p class="kicker">Drei Kernprozesse</p>
-    <div class="grid">
-      <div class="card-with-icon">
-        <picture>
-          <source srcset="/assets/images/icon-classification.webp" type="image/webp">
-          <img src="/assets/images/icon-classification.jpg" alt="Icon: Berufliche Einordnung" class="icon-placeholder" style="width:64px; height:64px;">
-        </picture>
-        <h3>Berufliche Einordnung</h3>
-        <p>Bestimmung der Position im deutschen Berufssystem.</p>
-      </div>
-      <div class="card-with-icon">
-        <picture>
-          <source srcset="/assets/images/icon-recognition.webp" type="image/webp">
-          <img src="/assets/images/icon-recognition.jpg" alt="Icon: Anerkennungsmöglichkeiten" class="icon-placeholder" style="width:64px; height:64px;">
-        </picture>
-        <h3>Anerkennungsmöglichkeiten</h3>
-        <p>Klare Darstellung der Wege und Anforderungen.</p>
-      </div>
-      <div class="card-with-icon">
-        <picture>
-          <source srcset="/assets/images/icon-language.webp" type="image/webp">
-          <img src="/assets/images/icon-language.jpg" alt="Icon: Sprachaufbau" class="icon-placeholder" style="width:64px; height:64px;">
-        </picture>
-        <h3>Sprachaufbau</h3>
-        <p>Koordinierter Sprachaufbau mit beruflichem Fortschritt.</p>
-      </div>
-    </div>
-    <div >
-      <p style="margin:0; #FFFFFF; font-size:13px; font-weight:500;">
-        Daten senden — Aktennummer erhalten — Einordnung per E-Mail.
-      </p>
-    </div>
-    <p style="margin-top:20px; font-size:12px; #FFFFFF; text-align:center; font-style:italic;">
-      Anabin (H+/entspricht) wird als Signal berücksichtigt — falls vorhanden.
-    </p>
-  </section>
-
-  <section class="section">
-    <p class="kicker">H+ Status und Anerkennung</p>
-    <h2 style="font-size:clamp(22px,4vw,32px); margin-bottom:16px;">Anabin H+ — Universitaere Anerkennung</h2>
-    <p style="#FFFFFF; line-height:1.6; margin-bottom:16px;">
-      Der H+ Status bestaetigt, dass eine Universitaet innerhalb des deutschen Hochschulsystems anerkannt ist (Anabin). Diese Klassifizierung spielt eine Schluesselrolle bei der Bestimmung der Qualifikationsaequivalenz.
-    </p>
-    <p style="#FFFFFF; line-height:1.6;">
-      Abschluesse von H+-Universitaeten werden in der strukturellen Einordnung bevorzugt behandelt, da sie eine hohe akademische Standardisierung signalisieren.
-    </p>
-  </section>
-
-  <section class="section jobs-section">
-    <div class="jobs-container">
-      <div class="jobs-image">
-        <picture>
-          <source srcset="/assets/images/jobs.webp" type="image/webp">
-          <img src="/assets/images/jobs.jpg" alt="Modernes Büro mit Fachkräften in Zusammenarbeit — Professionelle Arbeitsumgebung" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-        </picture>
-      </div>
-      <div class="jobs-content">
-        <h2>Das System in der Praxis</h2>
-        <p>
-          Das System funktioniert über klare Schritte. Berlin Gateway schafft diese Klarheit von Anfang an.
-        </p>
-        <div class="actions">
-          <a class="btn primary wide" href="/de/apply.html">Bewertung starten</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="kicker">Institutionelle Systematik</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Einordnung — Bestimmung der beruflichen Position im System.</h3>
-        <p>Kategorisierung nach Berufsregulierung und Anerkennungslogik. Nicht Hoffnung, sondern Systematik.</p>
-      </div>
-      <div class="card">
-        <h3>Selektive Prüfung</h3>
-        <p>Nur Profile mit Dokumentenstandard und Passung. Keine Massenbearbeitung.</p>
-      </div>
-      <div class="card">
-        <h3>Interne Sequenz</h3>
-        <p>Ergebnis per E-Mail nach interner Sichtung. Nicht on-screen, nicht sofort.</p>
-      </div>
-    </div>
-    <p style="font-size:13px; #FFFFFF; margin-top:24px; font-style:italic;">
-      Konkrete Fallkonstellationen werden im Anschluss an die Erstprüfung dargestellt.
-    </p>
-  </section>
-
-  <!-- TOP BERUFE SECTION -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">Gefragte Berufe</p>
-    <h2 style="#FFFFFF; margin-bottom:32px;">Top Berufe in Deutschland</h2>
-    <div class="grid">
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">Softwareentwickler</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px;"><strong>Gehalt:</strong> 55.000 - 85.000 EUR/Jahr</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6;">Entwicklung von Anwendungen und Systemen. Hohe Nachfrage in Deutschland und weltweit.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">Pflegekräfte</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px;"><strong>Gehalt:</strong> 35.000 - 50.000 EUR/Jahr</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6;">Patientenbetreuung in Krankenhäusern und Pflegeheimen. Akuter Fachkräftemangel.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">Elektriker</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px;"><strong>Gehalt:</strong> 40.000 - 60.000 EUR/Jahr</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6;">Installation und Wartung elektrischer Systeme. Essentiell in Bau und Industrie.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">Ingenieur</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px;"><strong>Gehalt:</strong> 55.000 - 80.000 EUR/Jahr</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6;">Entwicklung und Konstruktion von Maschinen. Kernbereich der deutschen Industrie.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">LKW Fahrer</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px;"><strong>Gehalt:</strong> 35.000 - 55.000 EUR/Jahr</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6;">Gütertransport über lange Strecken. Großer Fachkräftemangel in Europa.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">Busfahrer</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px;"><strong>Gehalt:</strong> 32.000 - 48.000 EUR/Jahr</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6;">Personenbeförderung im öffentlichen und privaten Nahverkehr.</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a class="btn primary" href="/de/berufe-in-deutschland.html" style="display:inline-block;">Alle Berufe anzeigen</a>
-    </div>
-  </section>
+    </section>
 </main>
 
-  <!-- TRUST SECTION -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:16px; text-align:center;">Warum Berlin Gateway?</h2>
-    <p style="#FFFFFF; font-size:16px; line-height:1.6; max-width:700px; margin:0 auto; text-align:center;">
-      Wir verstehen das deutsche System: Anerkennung, Klassifizierung und Arbeitsmarkt. Unsere Bewertung basiert auf struktureller Analyse, nicht auf Hoffnung.
-    </p>
-  </section>
-
-  <!-- TRUST DOMINATION BLOCK -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:32px; text-align:center;">Warum Berlin Gateway?</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:32px;">
-      <div style="text-align:center;">
-        <div style="font-size:48px; margin-bottom:16px;">🔍</div>
-        <h3 style="#FFFFFF;">Basierend auf echtem Systemwissen</h3>
-        <p style="#FFFFFF;">Nicht auf Hoffnung, sondern auf struktureller Analyse des deutschen Systems.</p>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:48px; margin-bottom:16px;">✓</div>
-        <h3 style="#FFFFFF;">Für ernsthafte Bewerber</h3>
-        <p style="#FFFFFF;">Wir filtern nach Qualifikation, nicht nach Quantität. Nur echte Chancen.</p>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-size:48px; margin-bottom:16px;">📊</div>
-        <h3 style="#FFFFFF;">Strukturierte Bewertung</h3>
-        <p style="#FFFFFF;">Klare Kriterien, keine Überraschungen. Sie wissen, wo Sie stehen.</p>
-      </div>
-    </div>
-  </section>
-
-
-
 <footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__top">
-      <div>
-        <h4>Berlin Gateway</h4>
-        <p>Strukturelle Eintrittsarchitektur für internationale Fachkräfte in Deutschland.</p>
-      </div>
-      <div>
-        <h4>Kontakt</h4>
-        <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
-        <a href="tel:+493025730875">+49 30 25730875</a>
-      </div>
-      <div>
-        <h4>Navigation</h4>
-        <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
-        <a href="/de/insights.html">Insights</a>
-        <a href="/de/systemlogik.html">Systemlogik</a>
-        <a href="/sitemap.html">Sitemap</a>
-      </div>
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p style="font-size:14px; opacity:0.7;">Professionelle Einordnung in das deutsche Berufssystem.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <a href="/de/chancenkarte.html">Chancenkarte</a>
+                <a href="/de/systemlogik.html">Systemlogik</a>
+                <a href="/de/monitor.html">Monitor</a>
+            </div>
+            <div>
+                <h4>Rechtliches</h4>
+                <a href="/de/impressum.html">Impressum</a>
+                <a href="/de/datenschutz.html">Datenschutz</a>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p style="font-size:14px; opacity:0.7;">info@berlingateway.de</p>
+                <p style="font-size:14px; opacity:0.7;">+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        </div>
     </div>
-    <div class="footer__bottom">
-      <div>© <span id="year">2026</span> Berlin Gateway. Alle Rechte vorbehalten.</div>
-      <div>Strukturiert. Selektiv. Systemisch.</div>
-    </div>
-  </div>
 </footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
-  }
-}
 
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
+<script>
+document.getElementById('assessment-form').addEventListener('submit', function(e) {
+    const readiness = document.getElementById('readiness-answer').value;
+    if (readiness === 'no') {
+        e.preventDefault();
+        alert('Dieser Service ist für Bewerber gedacht, die zeitnah (innerhalb von 3 Monaten) starten möchten.');
+    }
 });
 </script>
-  <!-- LEAD FILTER SYSTEM (3-MONTHS CHECK) -->
-  <script>
-    function checkReadiness() {
-      const answer = document.getElementById('readiness-answer').value;
-      const message = document.getElementById('filter-message');
-      if (answer === 'no') {
-        message.style.display = 'block';
-        message.innerHTML = '<p style="#FFFFFF; font-weight:600;">Diese Bewertung ist für ernsthafte Bewerber gedacht, die innerhalb von 3 Monaten handeln können. Bitte kontaktieren Sie uns später, wenn Sie bereit sind.</p>';
-        document.getElementById('lead-form').style.display = 'none';
-      } else if (answer === 'yes') {
-        message.style.display = 'none';
-        document.getElementById('lead-form').style.display = 'block';
-      }
-    }
-  </script>
+
 </body>
 </html>

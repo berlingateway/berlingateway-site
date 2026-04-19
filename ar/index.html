@@ -1,629 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <title>بطاقة الفرص 2026 – هل يمكنك العمل في ألمانيا؟</title>
-  <meta name="description" content="تصنيف هيكلي ومنطق الاعتراف للكفاءات في ألمانيا. منهجي. انتقائي. مؤسسي." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-  <meta name="author" content="Berlin Gateway" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://berlingateway.de/ar/index.html" />
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/index.html" />
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/index.html" />
-  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/index.html" />
-  <link rel="stylesheet" href="/assets/css/app.css" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Berlin Gateway",
-  "url": "https://www.berlingateway.de",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Perleberger Str 41",
-    "addressLocality": "Berlin",
-    "postalCode": "10559",
-    "addressCountry": "DE"
-  },
-  "areaServed": [
-    "Yemen",
-    "Senegal",
-    "Mali",
-    "Nigeria",
-    "North Africa",
-    "Middle East"
-  ],
-  "sameAs": [
-    "https://www.facebook.com/",
-    "https://www.linkedin.com/"
-  ]
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berlin Gateway — تقييم مهني احترافي لألمانيا</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="rtl">
-<!-- MAIN HEADER (White) -->
-<header class="header" dir="rtl">
-  <div class="header__inner">
-    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/ar/monitor.html">مرصد سوق العمل</a>
-      <a href="/ar/insights.html">المقالات</a>
-      <a href="/ar/systemlogik.html">منطق النظام</a>
-      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
-    </nav>
-    <div class="lang-switch">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 العربية</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/">العربية</a>
-      </div>
+<body>
+
+<header class="header">
+    <div class="header__inner">
+        <a href="/ar/" class="brand">
+            <div class="emblem"></div>
+            BERLIN GATEWAY
+        </a>
+        <nav class="nav">
+            <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
+            <a href="/ar/systemlogik.html">منطق النظام</a>
+            <a href="/ar/monitor.html">المرصد</a>
+            <a href="/de/" class="lang-switch">Deutsch</a>
+        </nav>
     </div>
-  </div>
 </header>
 
-<main class="container">
-  <!-- 1. HERO SECTION -->
-  <section class="hero" id="hero-form-section" dir="rtl">
-    <div class="hero__inner">
-      <h1>هل يمكنك العمل في ألمانيا؟</h1>
-      <p class="sub">تحقق الآن خلال دقيقة واحدة إذا كنت مؤهلاً لبطاقة الفرص</p>
-      <div class="trust">
-        تقييم معتمد وفق المعايير الألمانية
-      </div>
-    </div>
-    <!-- FORM IN HERO -->
-    <div  dir="rtl">
-      <h3 style="#FFFFFF; margin-top:0; margin-bottom:24px; font-size:18px; text-align:center;">تقييم الملف المهني</h3>
-      <!-- 3-MONTHS READINESS CHECK -->
-      <div >
-        <label style="display:block; margin-bottom:12px; #FFFFFF; font-weight:600; font-size:13px;">هل أنت مستعد للبدء خلال 3 أشهر؟</label>
-        <select id="readiness-answer" onchange="checkReadiness()" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
-          <option value="">اختر من فضلك</option>
-          <option value="yes">نعم، أنا مستعد</option>
-          <option value="no">لا، ليس بعد</option>
-        </select>
-      </div>
-      
-      
-      <form id="lead-form" style="display:none; display:flex; flex-direction:column; gap:16px;">
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">الاسم</label>
-          <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero-content">
+                    <h1>هل يمكنك العمل في ألمانيا؟</h1>
+                    <p class="sub">تحقق الآن خلال 60 ثانية من فرصك للحصول على بطاقة الفرص لعام 2026. تقييم منظم وفقاً للمعايير الألمانية.</p>
+                    <div class="trust-row">
+                        <span class="badge">تقييم معتمد</span>
+                        <span class="badge">تحليل فوري</span>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <form class="assessment-form" id="assessment-form">
+                        <h3>طلب تقييم احترافي</h3>
+                        <label>هل أنت مستعد للبدء خلال 3 أشهر؟</label>
+                        <select id="readiness-answer" required>
+                            <option value="">-- يرجى الاختيار --</option>
+                            <option value="yes">نعم، أنا مستعد</option>
+                            <option value="no">ليس بعد</option>
+                        </select>
+                        <label>الاسم</label>
+                        <input type="text" placeholder="اسمك الكامل" required>
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="email@example.com" required>
+                        <label>المهنة</label>
+                        <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
+                        <button type="submit" class="cta">إرسال الطلب</button>
+                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">الرد خلال 24-48 ساعة. للطلبات الجادة فقط.</p>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">البريد الإلكتروني</label>
-          <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+    </section>
+
+    <section class="container">
+        <h2>أي مسار يناسبك؟</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>الاعتراف المهني</h3>
+                <p>يتم الاعتراف بشهادتك في ألمانيا. مسارات واضحة للمساواة الرسمية.</p>
+                <a href="/ar/systemlogik.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">اكتشف المزيد ←</a>
+            </div>
+            <div class="card">
+                <h3>التدريب / الدراسة</h3>
+                <p>ترغب في التعلم والعمل في ألمانيا. مسارات دخول منظمة.</p>
+                <a href="/ar/systemlogik.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">اكتشف المزيد ←</a>
+            </div>
+            <div class="card">
+                <h3>بطاقة الفرص</h3>
+                <p>نظام النقاط الجديد للبحث عن عمل في ألمانيا. تحقق من أهليتك.</p>
+                <a href="/ar/chancenkarte.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">احسب نقاطك ←</a>
+            </div>
         </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">المهنة</label>
-          <input type="text" name="profession" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+    </section>
+
+    <section class="section-alt">
+        <div class="container">
+            <h2>العملية في 4 خطوات</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">01</div>
+                    <h3>التقييم</h3>
+                    <p>يتم تحليل مؤهلاتك بناءً على منطق النظام الحالي.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">02</div>
+                    <h3>التصفية</h3>
+                    <p>تصنيف واضح وفقاً لبيانات سوق العمل والمتطلبات القانونية.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">03</div>
+                    <h3>القرار</h3>
+                    <p>تتلقى توصيات واضحة للعمل لخطوتك التالية.</p>
+                </div>
+            </div>
         </div>
-        <div>
-          <label style="display:block; margin-bottom:8px; #FFFFFF; font-weight:500; font-size:13px;">CV (PDF)</label>
-          <input type="file" name="cv" accept=".pdf" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+    </section>
+
+    <section class="container" style="text-align:center;">
+        <h2>لماذا Berlin Gateway؟</h2>
+        <div class="grid-3" style="text-align:right;">
+            <div class="card">
+                <h3>معرفة بالنظام</h3>
+                <p>لا نعتمد على الأمل، بل على التحليل الهيكلي للنظام الألماني.</p>
+            </div>
+            <div class="card">
+                <h3>التركيز</h3>
+                <p>نقوم بالتصفية بناءً على المؤهلات، وليس الكمية. للمتقدمين الجادين فقط.</p>
+            </div>
+            <div class="card">
+                <h3>الوضوح</h3>
+                <p>لا توجد ضمانات، بل حقائق منظمة حول إمكانياتك.</p>
+            </div>
         </div>
-        <p style="font-size:13px; #FFFFFF; margin:0;">نرد على الطلبات الجادة فقط. الرد خلال 24–48 ساعة</p>
-        <button type="submit" class="btn primary" style="margin-top:12px; width:100%;">إرسال الملف</button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- RESPONSIVE HERO ADJUSTMENT -->
-  <style>
-    html { scroll-behavior: smooth; }
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
-      }
-    }
-  </style>
-
-  <!-- STICKY CTA FOR MOBILE -->
-  <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
-    <a href="#hero-form-section" style="display:block; background:#FFFFFF; #FFFFFF; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
-      احسب فرصك الآن
-    </a>
-  </div>
-  <script>
-    window.addEventListener('scroll', function() {
-      const stickyCta = document.getElementById('sticky-cta-mobile');
-      const calculator = document.getElementById('calculator');
-      if (window.innerWidth <= 768) {
-        if (calculator && window.scrollY > calculator.offsetTop - 100) {
-          stickyCta.style.display = 'none';
-        } else {
-          stickyCta.style.display = 'block';
-        }
-      } else {
-        stickyCta.style.display = 'none';
-      }
-    });
-  </script>
-
-  <!-- AUTHORITY PROOF LAYER -->
-  <section style="background:#ffffff; padding:24px 32px; border-bottom:1px solid #e2e8f0; text-align:center;" dir="rtl">
-    <div style="max-width:900px; margin:0 auto; font-size:13px; #FFFFFF; line-height:1.8;">
-      <p style="margin:0;">يعتمد التقييم على:</p>
-      <p style="margin:8px 0 0 0;">• نظام نقاط واضح &nbsp; • بيانات سوق العمل &nbsp; • تحليل ملفك المهني</p>
-    </div>
-  </section>
-  <!-- CALCULATOR INTRO -->
-  <div id="calculator" >
-    <p style="#FFFFFF; font-size:16px; font-weight:600; margin:0;">هذا التقييم مخصص للمتقدمين الجادين فقط</p>
-  </div>
-
-  <!-- PROFILE-BASED PATH SELECTION -->
-  <section class="section"  dir="rtl">
-    <h2 style="#FFFFFF; margin-bottom:32px; text-align:center;">أي طريق مناسب لك؟</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px; max-width:1000px; margin:0 auto;">
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">الاعتراف</h3>
-        <p style="#FFFFFF; font-size:14px;">يتم الاعتراف بشهادتك في ألمانيا. طرق واضحة للمعادلة الرسمية.</p>
-        <a href="/ar/#hero-form-section" style="#FFFFFF; text-decoration:none; font-weight:600; font-size:14px;">ابدأ التقييم ←</a>
-      </div>
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">الدراسة / التدريب</h3>
-        <p style="#FFFFFF; font-size:14px;">تريد أن تتعلم وتعمل في ألمانيا. طرق دخول منظمة.</p>
-        <a href="/ar/#hero-form-section" style="#FFFFFF; text-decoration:none; font-weight:600; font-size:14px;">ابدأ التقييم ←</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MIGRATION STEPS -->
-  <section class="section" style="padding:48px 32px;" dir="rtl">
-    <h2 style="#FFFFFF; margin-bottom:48px; text-align:center;">العملية في 4 خطوات</h2>
-    <div style="max-width:900px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:24px;">
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">1</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">التقييم</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">يتم تحليل مؤهلاتك.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">2</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">التصفية</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">تصنيف واضح وفقاً لمنطق النظام.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">3</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">القرار</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">تحصل على توصيات إجراء واضحة.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:32px; font-weight:700; #FFFFFF; margin-bottom:12px;">4</div>
-          <h3 style="#FFFFFF; font-size:16px; margin:0 0 8px 0;">الوصول</h3>
-          <p style="#FFFFFF; font-size:13px; margin:0;">تحضير منظم للخطوة التالية.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACCESS LEVELS -->
-  <section class="section"  dir="rtl">
-    <h2 style="#FFFFFF; margin-bottom:48px; text-align:center;">مستويات الوصول</h2>
-    <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:32px;">
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">أساسي</h3>
-        <p style="#FFFFFF; font-size:13px;">تقييم آلي. نتائج فورية.</p>
-        <ul style="#FFFFFF; font-size:13px; margin:0; padding-right:16px;">
-          <li>تحليل الملف الشخصي</li>
-          <li>تصنيف النظام</li>
-        </ul>
-      </div>
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">قياسي</h3>
-        <p style="#FFFFFF; font-size:13px;">تقييم منظم مع فحص الوثائق.</p>
-        <ul style="#FFFFFF; font-size:13px; margin:0; padding-right:16px;">
-          <li>تحليل مفصل</li>
-          <li>خطة العمل</li>
-        </ul>
-      </div>
-      <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
-        <h3 style="#FFFFFF; margin-top:0;">بريميوم</h3>
-        <p style="#FFFFFF; font-size:13px;">استشارة احترافية مع المرافقة.</p>
-        <ul style="#FFFFFF; font-size:13px; margin:0; padding-right:16px;">
-          <li>استشارة شخصية</li>
-          <li>مرافقة العملية</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY US SECTION -->
-  <section class="section" style="padding:48px 32px;" dir="rtl">
-    <h2 style="#FFFFFF; margin-bottom:32px; text-align:center;">لماذا Berlin Gateway؟</h2>
-    <div style="max-width:700px; margin:0 auto; #FFFFFF; font-size:14px; line-height:1.8;">
-      <p><strong>بدون ضمانات.</strong> لا نعد بالنتائج، بل بالوضوح المنظم. النظام هو ما هو عليه.</p>
-      <p><strong>قرار منظم.</strong> بناءً على منطق النظام، وليس على الأمل. أنت تعرف أين تقف.</p>
-      <p><strong>مبني على الخبرة.</strong> نحن نفهم النظام الألماني من الداخل. الاعتراف والتصنيف وسوق العمل.</p>
-    </div>
-  </section>
-
-  <!-- 1.5 CHANCENKARTE QUICK CHECK SECTION -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:16px; font-size:28px;">هل يمكنك العمل في ألمانيا عبر بطاقة الفرص؟</h2>
-    <p style="#FFFFFF; margin-bottom:32px; font-size:16px; max-width:600px; margin-left:auto; margin-right:auto;">احسب نقاطك خلال أقل من دقيقة.</p>
-    <a class="btn primary" href="/ar/assessment" style="display:inline-block;">احسب نقاط بطاقة الفرص</a>
-  </section>
-
-  <!-- 2. LABOR SHORTAGE / MARKET FACTS SECTION -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">فرص السوق للكفاءات</p>
-    <h2 style="#FFFFFF; margin-bottom:32px;">الحقائق الأساسية لسوق العمل الألماني</h2>
-    <div class="grid">
-      <div class="card-with-icon">
-        <div style="font-size:48px; margin-bottom:16px;">📊</div>
-        <h3>400.000 كفاءة مفقودة سنوياً</h3>
-        <p>ألمانيا تعاني من نقص هيكلي في الكفاءات في التمريض والتكنولوجيا والهندسة والحرف. الطلب ينمو بشكل مستمر.</p>
-      </div>
-      <div class="card-with-icon">
-        <div style="font-size:48px; margin-bottom:16px;">💶</div>
-        <h3>رواتب الدخول تصل إلى 50.000 يورو</h3>
-        <p>تكسب الكفاءات الجديدة في ألمانيا بين 32.000 و 50.000 يورو سنوياً، حسب القطاع والمؤهلات.</p>
-      </div>
-      <div class="card-with-icon">
-        <div style="font-size:48px; margin-bottom:16px;">📍</div>
-        <h3>ألمانيا تفتح طرقاً جديدة</h3>
-        <p>بطاقة الفرص والقوانين الجديدة تخلق مسارات دخول منظمة للكفاءات الدولية إلى سوق العمل الألماني.</p>
-      </div>
-    <!-- CTA BLOCK AFTER SECTION -->
-    <div >
-      <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px;">هل ينطبق هذا عليك؟</h3>
-      <a class="btn primary" href="#hero-form-section" style="display:inline-block; margin-top:12px;">ابدأ التقييم الآن</a>
-    </div>
-    </div>
-  </section>
-
-  <!-- 3. INDUSTRY DEMAND / CHARTS SECTION -->
-  <section class="section">
-    <p class="kicker">تحليل السوق</p>
-    <h2>تحليل السوق: مؤشرات الطلب الهيكلية</h2>
-    
-    <div >
-      <h3 style="font-size:14px; margin-top:0; margin-bottom:16px; #FFFFFF;">مؤشرات الطلب الهيكلي حسب المجموعات المهنية</h3>
-      <div style="display:flex; flex-direction:column; gap:12px;">
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">التمريض والصحة</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">مرتفع</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">تكنولوجيا المعلومات</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">مرتفع</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">الهندسة</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">متوسط–مرتفع</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <span style="font-size:12px; min-width:140px; #FFFFFF;">الحرف المتخصصة</span>
-          <div style="flex:1; height:24px; background:#e2e8f0; border-radius:3px; position:relative; overflow:hidden;">
-            
-          </div>
-          <span style="font-size:11px; #FFFFFF; min-width:40px;">متوسط</span>
-        </div>
-      </div>
-      <p style="font-size:11px; #FFFFFF; margin:12px 0 0 0;">المصدر: تحليلات الاختناقات من وكالة العمل الاتحادية</p>
-    </div>
-
-    <div >
-      <h3 style="font-size:14px; margin-top:0; margin-bottom:16px; #FFFFFF;">متوسط وقت الشغور في المهن الحرجة</h3>
-      <svg width="100%" height="200" style="max-width:100%;" viewBox="0 0 400 150">
-        <line x1="30" y1="120" x2="390" y2="120" stroke="#e2e8f0" stroke-width="1"/>
-        <line x1="30" y1="90" x2="390" y2="90" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2,2"/>
-        <line x1="30" y1="60" x2="390" y2="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2,2"/>
-        <line x1="30" y1="30" x2="390" y2="30" stroke="#e2e8f0" stroke-width="1"/>
-        <polyline points="30,110 100,70 170,50 240,65 310,45 380,55" fill="none" stroke="#0B3B8C" stroke-width="2"/>
-        <circle cx="30" cy="110" r="3" fill="#0B3B8C"/>
-        <circle cx="100" cy="70" r="3" fill="#0B3B8C"/>
-        <circle cx="170" cy="50" r="3" fill="#0B3B8C"/>
-        <circle cx="240" cy="65" r="3" fill="#0B3B8C"/>
-        <circle cx="310" cy="45" r="3" fill="#0B3B8C"/>
-        <circle cx="380" cy="55" r="3" fill="#0B3B8C"/>
-        <text x="30" y="135" font-size="11" fill="#64748b" text-anchor="middle">2022</text>
-        <text x="100" y="135" font-size="11" fill="#64748b" text-anchor="middle">2023</text>
-        <text x="170" y="135" font-size="11" fill="#64748b" text-anchor="middle">2024</text>
-        <text x="240" y="135" font-size="11" fill="#64748b" text-anchor="middle">2025</text>
-        <text x="310" y="135" font-size="11" fill="#64748b" text-anchor="middle">2026</text>
-        <text x="380" y="135" font-size="11" fill="#64748b" text-anchor="middle">توقع</text>
-      </svg>
-      <p style="font-size:11px; #FFFFFF; margin:8px 0 0 0;">مؤشرات الاتجاه النسبي. المصدر: وكالة العمل الاتحادية</p>
-    </div>
-
-    <div >
-      <h3 style="font-size:14px; margin-top:0; margin-bottom:16px; #FFFFFF;">مؤشرات التركيز الإقليمي (اختيار)</h3>
-      <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
-      <table style="width:100%; border-collapse:collapse; font-size:12px;">
-        <thead>
-          <tr style="border-bottom:2px solid #0B3B8C;">
-            <th style="text-align:right; padding:8px; #FFFFFF; font-weight:600;">المنطقة</th>
-            <th style="text-align:right; padding:8px; #FFFFFF; font-weight:600;">التركيز</th>
-            <th style="text-align:right; padding:8px; #FFFFFF; font-weight:600;">المؤشر</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF; text-align:right;">برلين/براندنبرغ</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">التمريض، تكنولوجيا المعلومات</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">مرتفع</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF; text-align:right;">بافاريا</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">الهندسة، الهندسة الميكانيكية</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">مرتفع</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF; text-align:right;">بادن-فورتمبيرغ</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">الهندسة الكهربائية، السيارات</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">مرتفع</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:8px; #FFFFFF; text-align:right;">شمال الراين</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">الحرف، اللوجستيات</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">متوسط–مرتفع</td>
-          </tr>
-          <tr>
-            <td style="padding:8px; #FFFFFF; text-align:right;">ساكسونيا</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">الحرف المتخصصة</td>
-            <td style="padding:8px; #FFFFFF; text-align:right;">متوسط</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      <p style="font-size:11px; #FFFFFF; margin:12px 0 0 0;">تركيزات استدلالية. Datenstand: فبراير 2026</p>
-    </div>
-    
-  </section>
-
-  <!-- 4. FOUR-PHASE ROADMAP / PROCESS SECTION -->
-  <section class="section">
-    <p class="kicker">عملية منظمة</p>
-    <h2>أربع مراحل للتصنيف</h2>
-    <div class="stepper-horizontal">
-      <div class="step-item">
-        <div class="step-number">1</div>
-        <h4>مراجعة أولية</h4>
-        <p>فحص الوثائق والتصنيف في النظام</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">2</div>
-        <h4>تحديد المسار</h4>
-        <p>تحديد طريق الاعتراف</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">3</div>
-        <h4>خطة اللغة</h4>
-        <p>تطوير اللغة المنسق</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">4</div>
-        <h4>التنفيذ</h4>
-        <p>مرافقة الإجراءات</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. FINAL CTA SECTION -->
-  <section class="section" >
-    <h2 style="#FFFFFF; margin-bottom:16px;">أين أكبر الفرص؟</h2>
-    <p style="#FFFFFF; font-size:16px; line-height:1.6; max-width:600px; margin:0 auto 32px;">
-      اكتشف بيانات سوق العمل الحالية واتجاهات الرواتب والتركيزات الإقليمية. مرصد سوق العمل الخاص بنا يقدم تحليلاً مفصلاً للفرص في مسارك المهني في ألمانيا.
-    </p>
-    <a class="btn primary wide" href="/ar/monitor.html" style="display:inline-block;">تحليل مرصد سوق العمل</a>
-  </section>
-
-  <!-- ADDITIONAL SECTIONS (moved below conversion funnel) -->
-  <section class="section">
-    <h2 style="#FFFFFF; margin-bottom:16px;">عامل الموقع في مرحلة الاندماج</h2>
-    <p style="#FFFFFF; line-height:1.6; margin-bottom:12px; text-align:right;">
-      توفر برلين في المرحلة الأولى من الاندماج المهني كثافة عالية من الخدمات الإدارية، وفرص امتحان اللغة التخصصية، ونقاط الاتصال المهنية.
-    </p>
-    <p style="#FFFFFF; line-height:1.6; margin-bottom:12px; text-align:right;">
-      في الحالات المعقدة قد يعزز التركيز الجغرافي المؤقت من الاستقرار الهيكلي للمسار.
-    </p>
-    <p style="#FFFFFF; line-height:1.6; text-align:right;">
-      يبقى الاندماج على مستوى ألمانيا ككل دون تغيير.
-    </p>
-    <p style="#FFFFFF; line-height:1.6; text-align:right;">
-      يؤخذ عامل الموقع في الاعتبار ضمن التقييم الهيكلي عند الحاجة.
-    </p>
-  </section>
-
-  <section class="section">
-    <p class="kicker">ثلاث عمليات أساسية</p>
-    <div class="grid">
-      <div class="card-with-icon">
-        <picture>
-          <source srcset="/assets/images/icon-classification.webp" type="image/webp">
-          <img src="/assets/images/icon-classification.jpg" alt="رمز: تحديد الفئة المهنية" class="icon-placeholder" style="width:64px; height:64px;">
-        </picture>
-        <h3>تحديد الفئة المهنية</h3>
-        <p>نيسر لك الطريق للعمل بالمهنة التي ترغب بها في ألمانيا.</p>
-      </div>
-      <div class="card-with-icon">
-        <picture>
-          <source srcset="/assets/images/icon-recognition.webp" type="image/webp">
-          <img src="/assets/images/icon-recognition.jpg" alt="رمز: مسار الاعتراف" class="icon-placeholder" style="width:64px; height:64px;">
-        </picture>
-        <h3>مسار الاعتراف</h3>
-        <p>نوضح لك الجهات المعنية والمتطلبات الدقيقة.</p>
-      </div>
-      <div class="card-with-icon">
-        <picture>
-          <source srcset="/assets/images/icon-language.webp" type="image/webp">
-          <img src="/assets/images/icon-language.jpg" alt="رمز: خطة اللغة" class="icon-placeholder" style="width:64px; height:64px;">
-        </picture>
-        <h3>خطة اللغة</h3>
-        <p>برنامج لغوي مرن يسير مع مسارك المهني بالتوازي.</p>
-      </div>
-    </div>
-    <div >
-      <p style="margin:0; #FFFFFF; font-size:13px; font-weight:500; text-align:right;">
-        أرسل بياناتك — يصلك رقم ملف — نرد بنتيجة التصنيف.
-      </p>
-    </div>
-    <p style="margin-top:20px; font-size:12px; #FFFFFF; text-align:right; font-style:italic;">
-      تُؤخذ إشارات Anabin (مثل H+ / entspricht) في الاعتبار عند توفرها.
-    </p>
-  </section>
-
-  <section class="section jobs-section">
-    <div class="jobs-container">
-      <div class="jobs-image">
-        <picture>
-          <source srcset="/assets/images/jobs.webp" type="image/webp">
-          <img src="/assets/images/jobs.jpg" alt="مكتب حديث مع متخصصين في بيئة عمل مهنية — بيئة عمل حديثة" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-        </picture>
-      </div>
-      <div class="jobs-content">
-        <h2>النظام في الممارسة</h2>
-        <p>
-          النظام المهني في ألمانيا يعتمد على ترتيب الخطوات. Berlin Gateway تضع لك هذا الترتيب من البداية.
-        </p>
-        <div class="actions">
-          <a class="btn primary wide" href="/ar/apply.html">ابدأ التقييم</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="kicker">النظام المؤسسي</p>
-    <div class="grid">
-      <div class="card">
-        <h3>التصنيف — تحديد موقع المؤهل داخل الإطار المهني.</h3>
-        <p>يستند التصنيف إلى تنظيم المهنة ومنطق الاعتراف. ليس الأمل, بل النظام.</p>
-      </div>
-      <div class="card">
-        <h3>التدقيق الانتقائي</h3>
-        <p>الملفات الموثقة بوضوح والموائمة للمسار تنال الأولوية. معالجة فردية لا جماعية.</p>
-      </div>
-      <div class="card">
-        <h3>التسلسل الداخلي</h3>
-        <p>النتيجة عبر البريد بعد المراجعة الداخلية. ليس فوريًا, ليس على الشاشة.</p>
-      </div>
-    </div>
-    <p style="font-size:13px; #FFFFFF; margin-top:24px; font-style:italic; text-align:right;">
-      تُعرض أمثلة تطبيقية بعد التقييم الأولي
-    </p>
-  </section>
-
-  <section class="section">
-    <p class="kicker">حالة H+ والاعتراف</p>
-    <h2 style="font-size:clamp(22px,4vw,32px); margin-bottom:16px; text-align:right;">Anabin H+ — الاعتراف الجامعي</h2>
-    <p style="#FFFFFF; line-height:1.6; margin-bottom:16px; text-align:right;">
-      حالة H+ تؤكد أن الجامعة معترف بها ضمن النظام الجامعي الألماني (Anabin). هذا التصنيف يلعب دوراً أساسياً في تحديد معادلة المؤهلات.
-    </p>
-    <p style="#FFFFFF; line-height:1.6; text-align:right;">
-      الشهادات من جامعات H+ تحظى بمعاملة مفضلة في التصنيف الهيكلي، لأنها تشير إلى معايير أكاديمية عالية الجودة.
-    </p>
-  </section>
-
-  <!-- TOP BERUFE SECTION -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">المهن المطلوبة</p>
-    <h2 style="#FFFFFF; margin-bottom:32px; text-align:right;">أهم المهن المطلوبة في ألمانيا</h2>
-    <div class="grid">
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px; text-align:right;">مطور برمجيات</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px; text-align:right;"><strong>الراتب:</strong> 55.000 - 85.000 يورو/سنة</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6; text-align:right;">تطوير التطبيقات والأنظمة. طلب عالي جداً في ألمانيا والعالم.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px; text-align:right;">ممرضة/ممرض</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px; text-align:right;"><strong>الراتب:</strong> 35.000 - 50.000 يورو/سنة</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6; text-align:right;">رعاية المرضى في المستشفيات ودور الرعاية. نقص حاد في الكوادر.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px; text-align:right;">كهربائي</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px; text-align:right;"><strong>الراتب:</strong> 40.000 - 60.000 يورو/سنة</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6; text-align:right;">تركيب وصيانة الأنظمة الكهربائية. ضروري في البناء والصناعة.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px; text-align:right;">مهندس</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px; text-align:right;"><strong>الراتب:</strong> 55.000 - 80.000 يورو/سنة</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6; text-align:right;">تطوير وتصميم الآلات. المجال الأساسي للصناعة الألمانية.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px; text-align:right;">سائق شاحنة</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px; text-align:right;"><strong>الراتب:</strong> 35.000 - 55.000 يورو/سنة</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6; text-align:right;">نقل البضائع على مسافات طويلة. نقص حاد في أوروبا.</p>
-      </div>
-      <div class="card" style="border:1px solid #e2e8f0; border-radius:8px; padding:24px; background-#FFFFFF;">
-        <h3 style="#FFFFFF; margin-top:0; margin-bottom:12px; font-size:18px; text-align:right;">سائق حافلة</h3>
-        <p style="#FFFFFF; margin-bottom:12px; font-size:14px; text-align:right;"><strong>الراتب:</strong> 32.000 - 48.000 يورو/سنة</p>
-        <p style="#FFFFFF; font-size:14px; line-height:1.6; text-align:right;">نقل الركاب في النقل العام والخاص.</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a class="btn primary" href="/ar/المهن-المطلوبة-في-ألمانيا.html" style="display:inline-block;">عرض جميع المهن</a>
-    </div>
-  </section>
+    </section>
 </main>
 
-<footer class="footer" dir="rtl">
-  <div class="footer__inner">
-    <div class="footer__top">
-      <div>
-        <h4>Berlin Gateway</h4>
-        <p>بنية دخول هيكلية للكفاءات الدولية في ألمانيا.</p>
-      </div>
-      <div>
-        <h4>التواصل</h4>
-        <a href="mailto:info@berlingateway.de"><span dir="ltr">info@berlingateway.de</span></a>
-        <a href="tel:+493025730875"><span dir="ltr">+49 30 25730875</span></a>
-      </div>
-      <div>
-        <h4>التنقل</h4>
-        <a href="/ar/monitor.html">مرصد سوق العمل</a>
-        <a href="/ar/insights.html">المقالات</a>
-        <a href="/ar/systemlogik.html">منطق النظام</a>
-        <a href="/sitemap.html">Sitemap</a>
-      </div>
+<footer class="footer">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p style="font-size:14px; opacity:0.7;">التصنيف المهني الاحترافي في النظام الألماني.</p>
+            </div>
+            <div>
+                <h4>التنقل</h4>
+                <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
+                <a href="/ar/systemlogik.html">منطق النظام</a>
+                <a href="/ar/monitor.html">المرصد</a>
+            </div>
+            <div>
+                <h4>قانوني</h4>
+                <a href="/ar/impressum.html">بصمة الموقع</a>
+                <a href="/ar/datenschutz.html">خصوصية البيانات</a>
+            </div>
+            <div>
+                <h4>اتصل بنا</h4>
+                <p style="font-size:14px; opacity:0.7;">info@berlingateway.de</p>
+                <p style="font-size:14px; opacity:0.7;">+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+        </div>
     </div>
-    <div class="footer__bottom">
-      <div>© <span id="year">2026</span> Berlin Gateway. جميع الحقوق محفوظة.</div>
-      <div>هيكلي. انتقائي. منهجي.</div>
-    </div>
-  </div>
 </footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
-  }
-}
 
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switch');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
+<script>
+document.getElementById('assessment-form').addEventListener('submit', function(e) {
+    const readiness = document.getElementById('readiness-answer').value;
+    if (readiness === 'no') {
+        e.preventDefault();
+        alert('هذه الخدمة مخصصة للمتقدمين المستعدين للبدء قريباً (خلال 3 أشهر).');
+    }
 });
 </script>
+
 </body>
 </html>

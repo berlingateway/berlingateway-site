@@ -3,9 +3,5 @@ Allow: /
 Disallow: /admin/
 Disallow: /*.json$
 Disallow: /api/
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1
-
 # Sitemap location
 Sitemap: https://berlingateway.de/sitemap.xml

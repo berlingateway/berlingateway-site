@@ -288,11 +288,7 @@ main section.hero-image {
   color: #FFFFFF !important;
 }
 
-.hero *,
-.hero-image *,
-main section.hero-image * {
-  color: #FFFFFF !important;
-}
+/* REMOVED: Global wildcard rule to prevent color leak into form section */
 
 .hero h1,
 .hero h2,
@@ -330,18 +326,34 @@ main section.hero-image a:hover {
   color: #FFFFFF !important;
 }
 
-/* Remove any grey text */
-.hero [style*="color: #ccc"],
-.hero [style*="color: #aaa"],
-.hero [style*="color: #999"],
-.hero [style*="color: #666"],
-.hero [style*="color: #555"],
-.hero [style*="color: #333"],
-.hero-image [style*="color: #ccc"],
-.hero-image [style*="color: #aaa"],
-.hero-image [style*="color: #999"],
-.hero-image [style*="color: #666"],
-.hero-image [style*="color: #555"],
-.hero-image [style*="color: #333"] {
+/* FORCE FORM TEXT BACK TO DARK FOR READABILITY */
+.form-section,
+.form-section *,
+.assessment-form,
+.assessment-form * {
+  color: #1A1A1A !important;
+}
+
+input,
+select,
+textarea,
+.form-section input,
+.form-section select,
+.form-section textarea {
+  color: #1A1A1A !important;
+  background: #FFFFFF !important;
+  border-color: #e2e8f0 !important;
+}
+
+label,
+.form-section label,
+.assessment-form label {
+  color: #1A1A1A !important;
+}
+
+.form-section button,
+.assessment-form button {
   color: #FFFFFF !important;
 }
+
+/* REMOVED: Grey text override rule to prevent color leak */

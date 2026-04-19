@@ -1,0 +1,13 @@
+# Tracking Configuration
+# Replace YOUR_PIXEL_ID with actual Meta Pixel ID
+# Replace YOUR_GA_ID with actual Google Analytics ID
+
+META_PIXEL_ID=YOUR_PIXEL_ID
+GOOGLE_ANALYTICS_ID=G-YOUR_GA_ID
+
+# Events to track:
+# - PageView (automatic)
+# - ViewContent (landing pages)
+# - InitiateCheckout (calculator start)
+# - Purchase (lead submission)
+# - Lead (form submission)

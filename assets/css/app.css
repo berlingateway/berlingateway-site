@@ -471,3 +471,80 @@ a {
 .hero a, footer a, header a {
   color: #FFFFFF !important;
 }
+
+
+/* ========== SCOPED TEXT RECOVERY (CONTENT AREAS ONLY) ========== */
+
+/* Main content area text hierarchy */
+main h1, main h2, main h3, main h4, main h5, main h6,
+article h1, article h2, article h3, article h4, article h5, article h6,
+section:not(.hero):not([class*="navy"]) h1,
+section:not(.hero):not([class*="navy"]) h2,
+section:not(.hero):not([class*="navy"]) h3 {
+  color: #0B1F3A !important;
+}
+
+main p, main span, main li, main td, main label,
+article p, article span, article li, article td, article label,
+section:not(.hero):not([class*="navy"]) p,
+section:not(.hero):not([class*="navy"]) span,
+section:not(.hero):not([class*="navy"]) li,
+section:not(.hero):not([class*="navy"]) td,
+section:not(.hero):not([class*="navy"]) label {
+  color: #1A1A1A !important;
+}
+
+/* Table text */
+table th, table td {
+  color: #1A1A1A !important;
+}
+
+/* Description and helper text */
+.description, .helper-text, .subtitle, .meta {
+  color: #1A1A1A !important;
+}
+
+/* STRICT PROTECTION: Hero sections remain white */
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6,
+.hero p, .hero span, .hero li, .hero label,
+[class*="navy"] h1, [class*="navy"] h2, [class*="navy"] h3,
+[class*="navy"] p, [class*="navy"] span, [class*="navy"] li,
+footer h1, footer h2, footer h3, footer p, footer span,
+header h1, header h2, header h3, header p, header span {
+  color: #FFFFFF !important;
+}
+
+/* ========== BORDER DISCIPLINE (NO SHADOWS, NO GRADIENTS) ========== */
+
+.card, .panel, .content-box, .wrapper, [class*="card"], [class*="panel"] {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: none !important;
+}
+
+table th, table td {
+  border: 1px solid #E5E7EB !important;
+}
+
+/* Remove all shadows except hero/buttons */
+body, main, section:not(.hero), article {
+  box-shadow: none !important;
+}
+
+/* Preserve hero and button shadows if needed */
+.hero, button, .button, [class*="btn"], .cta {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* No gradients except hero */
+body, main, section:not(.hero), article, div:not(.hero) {
+  background-image: none !important;
+}
+

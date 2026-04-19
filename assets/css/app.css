@@ -101,8 +101,32 @@ a:hover { opacity: 0.8; }
    ======================================== */
 .hero {
   padding: 100px 0;
-  background: var(--white) !important;
-  border-bottom: 1px solid var(--border);
+  background: var(--navy-900) !important;
+  color: var(--white) !important;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--white) !important;
+  margin: 0 0 20px 0;
+}
+
+.hero p.sub {
+  font-size: clamp(18px, 2vw, 22px);
+  color: rgba(255,255,255,0.8) !important;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.hero .trust-row {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.hero .badge {
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
 }
 
 .hero__inner {

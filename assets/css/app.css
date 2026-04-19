@@ -14,7 +14,7 @@
   --muted:#64748b;
   --line:#e2e8f0;
   --bg:#ffffff;
-  --soft:#f8fafc;
+  --soft:#FFFFFF;
   --max:1100px;
 }
 
@@ -375,7 +375,7 @@ p, span, li, td, label, input::placeholder {
 [class*="section"],
 [class*="block"] {
   background: #FFFFFF !important;
-  border: 1px solid #E5E7EB !important;
+  border: 1px solid #FFFFFF !important;
 }
 
 /* REMOVE GRAY BACKGROUNDS FROM COMMON ELEMENTS */
@@ -404,4 +404,70 @@ footer a,
 header,
 .header {
   background: linear-gradient(to bottom, rgba(11,31,58,.75), rgba(11,31,58,.55)) !important;
+}
+
+
+/* ========== GLOBAL COLOR ENFORCEMENT (FINAL) ========== */
+
+/* ALL backgrounds default to white */
+body, html, main, section, div, article, aside {
+  background-color: #FFFFFF !important;
+}
+
+/* Navy sections (preserved) */
+.hero, .hero-section, .hero-image,
+footer, .footer,
+header, .header,
+[class*="navy"],
+[class*="dark"] {
+  background-color: #0B1F3A !important;
+}
+
+/* All text colors standardized */
+h1, h2, h3, h4, h5, h6 {
+  color: #0B1F3A !important;
+}
+
+p, span, li, td, label, input::placeholder, textarea::placeholder {
+  color: #1A1A1A !important;
+}
+
+/* Hero/Navy section text remains white */
+.hero h1, .hero h2, .hero h3, .hero p, .hero span,
+footer h1, footer h2, footer h3, footer p, footer span,
+header h1, header h2, header h3, header p, header span {
+  color: #FFFFFF !important;
+}
+
+/* Remove all gray backgrounds from utility classes */
+.bg-gray, .bg-light, .bg-light-gray, .bg-slate, .bg-stone,
+.bg-neutral, .bg-zinc, .bg-gray-50, .bg-gray-100, .bg-gray-200 {
+  background-color: #FFFFFF !important;
+}
+
+/* Borders remain subtle */
+.border, [class*="border"] {
+  border-color: #E5E7EB !important;
+}
+
+/* Buttons maintain navy */
+button, .button, [class*="btn"] {
+  background-color: #0B1F3A !important;
+  color: #FFFFFF !important;
+}
+
+/* Form elements */
+input, textarea, select {
+  background-color: #FFFFFF !important;
+  color: #1A1A1A !important;
+  border-color: #E5E7EB !important;
+}
+
+/* Links */
+a {
+  color: #0B1F3A !important;
+}
+
+.hero a, footer a, header a {
+  color: #FFFFFF !important;
 }

@@ -2,131 +2,261 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://berlingateway.de/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://berlingateway.de/de/</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/chancenkarte.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/systemlogik.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/monitor.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/anerkennung.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/apply.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/assessment.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/chancenkarte.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/systemlogik.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/monitor.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/anerkennung.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/apply.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/assessment.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/landing/chancenkarte-punkte-rechner.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/landing/arbeiten-deutschland-ohne-deutsch.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/landing/fachkrafte-deutschland-2026.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/landing/gehalt-deutschland-berufe.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/landing/chancenkarte-voraussetzungen.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/landing/المهن-المطلوبة-في-ألمانيا-2026.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/landing/حساب-نقاط-بطاقة-الفرص.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/landing/العمل-في-ألمانيا-بدون-لغة.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/landing/رواتب-المهن-في-ألمانيا-2026.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/landing/الهجرة-إلى-ألمانيا-للكفاءات.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/arbeit-in-deutschland.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/arbeiten-in-deutschland.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/chancenkarte-punkte.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/chancenkarte-voraussetzungen.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/chancenkarte-vs-bluecard.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/gefragte-berufe.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/gehaelter-deutschland.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/insights/kandidaten-fehler.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/insights/system-erklaerung.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/arbeit-in-deutschland.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/arbeiten-in-deutschland.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/chancenkarte-punkte.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/chancenkarte-voraussetzungen.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/chancenkarte-vs-bluecard.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/gefragte-berufe.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/gehaelter-deutschland.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/insights/أخطاء-المتقدمين.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/insights/شرح-النظام.html</loc>
     <lastmod>2026-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

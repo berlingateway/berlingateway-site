@@ -1,9 +1,11 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://berlingateway.de/sitemap.xml
-
-# Disallow crawling of admin/private pages
 Disallow: /admin/
-Disallow: /private/
-Disallow: /*.pdf$
+Disallow: /*.json$
+Disallow: /api/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://berlingateway.de/sitemap.xml

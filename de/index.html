@@ -444,11 +444,44 @@
     </p>
   </section>
 
+  <!-- TRUST DOMINATION BLOCK -->
+  <section class="section" style="background:#f8fafc; padding:48px 32px; border-radius:8px; margin-bottom:48px;">
+    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:center;">Warum Berlin Gateway?</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:32px;">
+      <div style="text-align:center;">
+        <div style="font-size:48px; margin-bottom:16px;">🔍</div>
+        <h3 style="color:#0B3B8C;">Basierend auf echtem Systemwissen</h3>
+        <p style="color:#334155;">Nicht auf Hoffnung, sondern auf struktureller Analyse des deutschen Systems.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:48px; margin-bottom:16px;">✓</div>
+        <h3 style="color:#0B3B8C;">Für ernsthafte Bewerber</h3>
+        <p style="color:#334155;">Wir filtern nach Qualifikation, nicht nach Quantität. Nur echte Chancen.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:48px; margin-bottom:16px;">📊</div>
+        <h3 style="color:#0B3B8C;">Strukturierte Bewertung</h3>
+        <p style="color:#334155;">Klare Kriterien, keine Überraschungen. Sie wissen, wo Sie stehen.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- LEAD FORM SECTION -->
   <section class="section" style="margin-bottom:48px;">
     <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:center;">Professionelle Fallbewertung</h2>
     <div style="max-width:600px; margin:0 auto; padding:32px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px;">
-      <form id="lead-form" style="display:flex; flex-direction:column; gap:16px;">
+      <!-- 3-MONTHS READINESS CHECK -->
+      <div style="margin-bottom:24px; padding:16px; background:#f0f4f8; border-left:4px solid #0B3B8C; border-radius:4px;">
+        <label style="display:block; margin-bottom:12px; color:#334155; font-weight:600;">Sind Sie bereit innerhalb von 3 Monaten zu starten?</label>
+        <select id="readiness-answer" onchange="checkReadiness()" style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
+          <option value="">-- Bitte wählen --</option>
+          <option value="yes">Ja, ich bin bereit</option>
+          <option value="no">Nein, noch nicht</option>
+        </select>
+      </div>
+      <div id="filter-message" style="display:none; margin-bottom:24px; padding:16px; background:#fff3cd; border-left:4px solid #ffc107; border-radius:4px;"></div>
+      
+      <form id="lead-form" style="display:none; display:flex; flex-direction:column; gap:16px;">
         <div>
           <label style="display:block; margin-bottom:8px; color:#334155; font-weight:500;">Name</label>
           <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:6px; font-size:14px;">
@@ -525,3 +558,19 @@ document.addEventListener('click', function(event) {
 </script>
 </body>
 </html>
+
+  <!-- LEAD FILTER SYSTEM (3-MONTHS CHECK) -->
+  <script>
+    function checkReadiness() {
+      const answer = document.getElementById('readiness-answer').value;
+      const message = document.getElementById('filter-message');
+      if (answer === 'no') {
+        message.style.display = 'block';
+        message.innerHTML = '<p style="color:#d32f2f; font-weight:600;">Diese Bewertung ist für ernsthafte Bewerber gedacht, die innerhalb von 3 Monaten handeln können. Bitte kontaktieren Sie uns später, wenn Sie bereit sind.</p>';
+        document.getElementById('lead-form').style.display = 'none';
+      } else if (answer === 'yes') {
+        message.style.display = 'none';
+        document.getElementById('lead-form').style.display = 'block';
+      }
+    }
+  </script>

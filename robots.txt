@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.berlingateway.de/sitemap.xml
+
+Sitemap: https://berlingateway.de/sitemap.xml
+
+# Disallow crawling of admin/private pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$

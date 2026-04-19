@@ -1,76 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Homepage -->
   <url>
-    <loc>https://www.berlingateway.de/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/de/</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
-
-  <!-- German Pages -->
   <url>
-    <loc>https://www.berlingateway.de/de/systemlogik.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/ar/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/landing/chancenkarte-punkte-rechner.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/systemlogik.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/systemlogik.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
-
   <url>
-    <loc>https://www.berlingateway.de/de/framework.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/de/landing/arbeiten-deutschland-ohne-deutsch.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/framework.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/framework.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
-
   <url>
-    <loc>https://www.berlingateway.de/de/voraussetzungen.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/de/landing/fachkrafte-deutschland-2026.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/voraussetzungen.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/voraussetzungen.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
-
-  <!-- Arabic Pages -->
   <url>
-    <loc>https://www.berlingateway.de/ar/systemlogik.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/de/landing/gehalt-deutschland-berufe.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/systemlogik.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/systemlogik.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
-
   <url>
-    <loc>https://www.berlingateway.de/ar/framework.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/de/landing/chancenkarte-voraussetzungen.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/framework.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/framework.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
-
   <url>
-    <loc>https://www.berlingateway.de/ar/voraussetzungen.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <loc>https://berlingateway.de/ar/landing/المهن-المطلوبة-في-ألمانيا-2026.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.berlingateway.de/ar/voraussetzungen.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.berlingateway.de/de/voraussetzungen.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.berlingateway.de/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/landing/حساب-نقاط-بطاقة-الفرص.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/landing/العمل-في-ألمانيا-بدون-لغة.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/landing/رواتب-المهن-في-ألمانيا-2026.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/landing/الهجرة-إلى-ألمانيا-للكفاءات.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/kandidaten-fehler.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/de/insights/system-erklaerung.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/أخطاء-المتقدمين.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/شرح-النظام.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://berlingateway.de/de/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/" />
   </url>
 </urlset>

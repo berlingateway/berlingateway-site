@@ -1,10 +1,9 @@
 :root {
+  --black: #000000;
+  --white: #FFFFFF;
   --navy-900: #081629;
   --navy-800: #0B1F3A;
-  --navy-700: #0E2A4D;
-  --white: #FFFFFF;
   --text-dark: #111111;
-  --text-muted: #4B5563;
   --border: #E5E7EB;
   --container: min(1200px, 92vw);
   --radius: 6px;
@@ -33,12 +32,67 @@ a:hover { opacity: 0.8; }
 }
 
 /* ========================================
-   HEADER - High-End Consulting Look
+   BAND 1 - TOP BAND (BLACK)
+   ======================================== */
+.top-band {
+  background: var(--black) !important;
+  color: var(--white) !important;
+  padding: 12px 0;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-band__inner {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-band__left {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.top-band__right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.top-band a {
+  color: var(--white) !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-band__icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .top-band { padding: 10px 0; font-size: 12px; }
+  .top-band__left { gap: 12px; }
+}
+
+/* ========================================
+   BAND 2 - MAIN HEADER (WHITE)
    ======================================== */
 .header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   height: 80px;
   background: var(--white) !important;
   border-bottom: 1px solid var(--border) !important;
@@ -57,76 +111,141 @@ a:hover { opacity: 0.8; }
 }
 
 .brand {
-  color: var(--navy-800) !important;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: -0.5px;
+  color: var(--black) !important;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -0.8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-transform: uppercase;
 }
 
-.emblem {
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--navy-800);
+.brand-icon {
+  width: 24px;
+  height: 24px;
+  border: 2.5px solid var(--black);
   transform: rotate(45deg);
 }
 
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   align-items: center;
 }
 
 .nav a {
   font-size: 15px;
-  font-weight: 600;
-  color: var(--navy-800) !important;
+  font-weight: 700;
+  color: var(--black) !important;
+  text-transform: capitalize;
 }
 
 .lang-switch {
-  background: var(--navy-800) !important;
+  background: var(--black) !important;
   color: var(--white) !important;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 18px;
+  border-radius: 20px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 968px) {
+  .header { height: 70px; }
+  .brand { font-size: 16px; }
+  .nav { gap: 20px; }
+  .nav a { font-size: 13px; }
 }
 
 /* ========================================
-   HERO - Clean & Institutional
+   BAND 3 - SUB NAV BAND (BLACK)
+   ======================================== */
+.subnav {
+  background: var(--black) !important;
+  color: var(--white) !important;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.subnav__inner {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.subnav a {
+  color: var(--white) !important;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+}
+
+.subnav a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .subnav { padding: 12px 0; font-size: 12px; }
+  .subnav__inner { gap: 16px; }
+}
+
+/* ========================================
+   BAND 4 - CONTENT BODY (WHITE)
+   ======================================== */
+main {
+  background: var(--white) !important;
+}
+
+section {
+  padding: 80px 0;
+  background: var(--white) !important;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--black) !important;
+  margin: 0 0 24px 0;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--black) !important;
+  margin: 0 0 40px 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 20px;
+  color: var(--black) !important;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+p {
+  color: var(--text-dark) !important;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   HERO SECTION
    ======================================== */
 .hero {
   padding: 100px 0;
-  background: var(--navy-900) !important;
-  color: var(--white) !important;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 5vw, 56px);
-  line-height: 1.1;
-  font-weight: 800;
-  color: var(--white) !important;
-  margin: 0 0 20px 0;
-}
-
-.hero p.sub {
-  font-size: clamp(18px, 2vw, 22px);
-  color: rgba(255,255,255,0.8) !important;
-  margin: 0 0 32px 0;
-  line-height: 1.5;
-}
-
-.hero .trust-row {
-  color: rgba(255,255,255,0.6) !important;
-}
-
-.hero .badge {
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
+  background: var(--white) !important;
 }
 
 .hero__inner {
@@ -140,37 +259,29 @@ a:hover { opacity: 0.8; }
   .hero__inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
 }
 
-.hero h1 {
-  font-size: clamp(32px, 5vw, 56px);
-  line-height: 1.1;
-  font-weight: 800;
-  color: var(--navy-800) !important;
-  margin: 0 0 20px 0;
-}
-
 .hero p.sub {
   font-size: clamp(18px, 2vw, 22px);
-  color: var(--text-muted) !important;
+  color: #4B5563 !important;
   margin: 0 0 32px 0;
   line-height: 1.5;
 }
 
 /* ========================================
-   FORM CARD - High Usability
+   FORM CARD
    ======================================== */
-.assessment-form, .form-card {
+.form-card, .assessment-form {
   background: var(--white);
   border: 1px solid var(--border);
   padding: 32px;
   border-radius: var(--radius);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .assessment-form h3 {
   margin: 0 0 20px 0;
   font-size: 20px;
-  color: var(--navy-800);
+  color: var(--black);
+  font-weight: 700;
 }
 
 .assessment-form label {
@@ -190,11 +301,13 @@ a:hover { opacity: 0.8; }
   border-radius: 4px;
   margin-bottom: 16px;
   font-size: 15px;
+  background: var(--white);
+  color: var(--text-dark);
 }
 
 .cta, .btn-primary {
   width: 100%;
-  background: var(--navy-800) !important;
+  background: var(--black) !important;
   color: var(--white) !important;
   padding: 16px;
   border: none;
@@ -203,31 +316,15 @@ a:hover { opacity: 0.8; }
   font-size: 16px;
   cursor: pointer;
   transition: background 0.2s;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
 }
 
-.cta:hover { background: var(--navy-700) !important; }
+.cta:hover { background: #222 !important; }
 
 /* ========================================
-   SECTIONS - Structured & Minimal
+   CARDS & GRID
    ======================================== */
-section {
-  padding: 80px 0;
-  background: var(--white) !important;
-}
-
-.section-alt {
-  background: #F9FAFB !important; /* Very subtle grey for contrast only */
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-h2 {
-  font-size: clamp(24px, 4vw, 36px);
-  color: var(--navy-800) !important;
-  margin: 0 0 40px 0;
-  font-weight: 700;
-}
-
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -243,26 +340,59 @@ h2 {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--black);
 }
 
 .card h3 {
   margin: 0 0 15px 0;
-  color: var(--navy-800);
+  color: var(--black);
   font-size: 18px;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  font-size: 15px;
+  color: #4B5563;
 }
 
 /* ========================================
    FOOTER
    ======================================== */
 .footer {
-  background: var(--navy-900) !important;
+  background: var(--black) !important;
   color: var(--white) !important;
   padding: 60px 0 30px 0;
 }
 
-.footer h4 { color: var(--white); margin-bottom: 20px; }
-.footer a { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 10px; display: block; }
+.footer h4 { 
+  color: var(--white); 
+  margin-bottom: 20px; 
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer a { 
+  color: rgba(255,255,255,0.7); 
+  font-size: 14px; 
+  margin-bottom: 10px; 
+  display: block; 
+  transition: color 0.2s;
+}
+
 .footer a:hover { color: var(--white); }
+
+.footer p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  margin: 0;
+}
 
 /* ========================================
    UTILITIES
@@ -272,20 +402,43 @@ h2 {
   display: flex;
   gap: 20px;
   font-size: 13px;
-  color: var(--text-muted);
+  color: #4B5563;
 }
 
 .badge {
-  padding: 4px 12px;
-  background: #E5E7EB;
+  padding: 6px 14px;
+  background: #F3F4F6;
+  border: 1px solid var(--border);
   border-radius: 20px;
   font-weight: 600;
+  color: var(--text-dark);
+  font-size: 12px;
+  text-transform: capitalize;
 }
 
-/* ARABIC SPECIFIC */
+/* ========================================
+   RESPONSIVE MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+  section { padding: 60px 0; }
+  
+  h1 { margin-bottom: 16px; }
+  h2 { margin-bottom: 24px; }
+  
+  .hero { padding: 60px 0; }
+  
+  .card { padding: 20px; }
+  
+  .grid-3 { gap: 20px; }
+}
+
+/* ========================================
+   ARABIC SPECIFIC
+   ======================================== */
 html[lang="ar"] {
   direction: rtl;
 }
 
 html[lang="ar"] .hero__inner { text-align: right; }
 html[lang="ar"] .assessment-form { text-align: right; }
+html[lang="ar"] .subnav__inner { justify-content: flex-end; }

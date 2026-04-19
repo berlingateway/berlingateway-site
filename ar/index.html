@@ -7,25 +7,53 @@
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de">
+                ✉ info@berlingateway.de
+            </a>
+            <a href="tel:+493025730875">
+                ☎ +49 30 25730875
+            </a>
+        </div>
+        <div class="top-band__right">
+            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+        </div>
+    </div>
+</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
 <header class="header">
     <div class="header__inner">
         <a href="/ar/" class="brand">
-            <div class="emblem"></div>
-            BERLIN GATEWAY
+            <div class="brand-icon"></div>
+            Berlin Gateway
         </a>
         <nav class="nav">
             <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
             <a href="/ar/systemlogik.html">منطق النظام</a>
             <a href="/ar/monitor.html">المرصد</a>
+            <a href="/ar/insights.html">الرؤى</a>
             <a href="/de/" class="lang-switch">Deutsch</a>
         </nav>
     </div>
 </header>
 
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="#assessment">تقييم معتمد</a>
+        <a href="#contact">اتصل بنا</a>
+    </div>
+</nav>
+
+<!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
     <section class="hero">
         <div class="container">
@@ -67,47 +95,42 @@
             <div class="card">
                 <h3>الاعتراف المهني</h3>
                 <p>يتم الاعتراف بشهادتك في ألمانيا. مسارات واضحة للمساواة الرسمية.</p>
-                <a href="/ar/systemlogik.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">اكتشف المزيد ←</a>
             </div>
             <div class="card">
                 <h3>التدريب / الدراسة</h3>
                 <p>ترغب في التعلم والعمل في ألمانيا. مسارات دخول منظمة.</p>
-                <a href="/ar/systemlogik.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">اكتشف المزيد ←</a>
             </div>
             <div class="card">
                 <h3>بطاقة الفرص</h3>
                 <p>نظام النقاط الجديد للبحث عن عمل في ألمانيا. تحقق من أهليتك.</p>
-                <a href="/ar/chancenkarte.html" style="color:var(--navy-800); font-weight:700; font-size:14px; margin-top:16px; display:inline-block;">احسب نقاطك ←</a>
             </div>
         </div>
     </section>
 
-    <section class="section-alt">
-        <div class="container">
-            <h2>العملية في 4 خطوات</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">01</div>
-                    <h3>التقييم</h3>
-                    <p>يتم تحليل مؤهلاتك بناءً على منطق النظام الحالي.</p>
-                </div>
-                <div class="card">
-                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">02</div>
-                    <h3>التصفية</h3>
-                    <p>تصنيف واضح وفقاً لبيانات سوق العمل والمتطلبات القانونية.</p>
-                </div>
-                <div class="card">
-                    <div style="font-size:24px; font-weight:800; color:#E5E7EB; margin-bottom:10px;">03</div>
-                    <h3>القرار</h3>
-                    <p>تتلقى توصيات واضحة للعمل لخطوتك التالية.</p>
-                </div>
+    <section class="container">
+        <h2>العملية في 4 خطوات</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">01</div>
+                <h3>التقييم</h3>
+                <p>يتم تحليل مؤهلاتك بناءً على منطق النظام الحالي.</p>
+            </div>
+            <div class="card">
+                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">02</div>
+                <h3>التصفية</h3>
+                <p>تصنيف واضح وفقاً لبيانات سوق العمل والمتطلبات القانونية.</p>
+            </div>
+            <div class="card">
+                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">03</div>
+                <h3>القرار</h3>
+                <p>تتلقى توصيات واضحة للعمل لخطوتك التالية.</p>
             </div>
         </div>
     </section>
 
-    <section class="container" style="text-align:center;">
+    <section class="container">
         <h2>لماذا Berlin Gateway؟</h2>
-        <div class="grid-3" style="text-align:right;">
+        <div class="grid-3">
             <div class="card">
                 <h3>معرفة بالنظام</h3>
                 <p>لا نعتمد على الأمل، بل على التحليل الهيكلي للنظام الألماني.</p>
@@ -124,12 +147,13 @@
     </section>
 </main>
 
+<!-- FOOTER (BLACK) -->
 <footer class="footer">
     <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
                 <h4>Berlin Gateway</h4>
-                <p style="font-size:14px; opacity:0.7;">التصنيف المهني الاحترافي في النظام الألماني.</p>
+                <p>التصنيف المهني الاحترافي في النظام الألماني.</p>
             </div>
             <div>
                 <h4>التنقل</h4>
@@ -144,11 +168,11 @@
             </div>
             <div>
                 <h4>اتصل بنا</h4>
-                <p style="font-size:14px; opacity:0.7;">info@berlingateway.de</p>
-                <p style="font-size:14px; opacity:0.7;">+49 30 25730875</p>
+                <p>info@berlingateway.de</p>
+                <p>+49 30 25730875</p>
             </div>
         </div>
-        <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
             &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
         </div>
     </div>

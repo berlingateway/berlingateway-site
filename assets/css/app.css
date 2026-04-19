@@ -34,8 +34,8 @@ a:hover{opacity:.85}
   height:64px;
   display:flex; align-items:center;
   backdrop-filter: blur(10px);
-  background: linear-gradient(to bottom, rgba(11,31,58,.75), rgba(11,31,58,.55));
-  border-bottom:1px solid var(--border-soft);
+  background: #FFFFFF !important;
+  border-bottom:1px solid #E5E7EB !important;
 }
 @media(min-width:768px){
   .header{ height:72px; }
@@ -56,24 +56,24 @@ a:hover{opacity:.85}
 }
 
 .logo{ display:flex; align-items:center; gap:10px; padding:6px 0; }
-.brand{display:flex;align-items:center;gap:10px;color:var(--white);font-weight:700;letter-spacing:.3px}
-.brand-link{text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:10px;cursor:pointer}
+.brand{display:flex;align-items:center;gap:10px;color:#0B1F3A !important;font-weight:700;letter-spacing:.3px}
+.brand-link{text-decoration:none;color:#0B1F3A !important;display:inline-flex;align-items:center;gap:10px;cursor:pointer}
 .brand-link:hover{text-decoration:none;opacity:.9}
-.emblem{width:18px;height:18px;border:1px solid var(--white);display:inline-block;transform:rotate(45deg)}
+.emblem{width:18px;height:18px;border:1px solid #0B1F3A !important;display:inline-block;transform:rotate(45deg)}
 
 .nav{
   display:flex; align-items:center; gap:22px;
 }
 .nav a{
-  color:var(--white);
+  color:#0B1F3A !important;
   text-decoration:none;
-  font-weight:500;
-  opacity:.95;
+  font-weight:700 !important;
+  opacity:1 !important;
   padding:6px 0;
-  font-size:14px;
+  font-size:16px !important;
 }
 .nav a.active{
-  border-bottom:2px solid var(--white);
+  border-bottom:2px solid #0B1F3A !important;
 }
 .nav .sep{opacity:.35}
 .lang-switch{
@@ -546,5 +546,41 @@ body, main, section:not(.hero), article {
 /* No gradients except hero */
 body, main, section:not(.hero), article, div:not(.hero) {
   background-image: none !important;
+}
+
+
+/* ========== MOBILE MENU ENFORCEMENT ========== */
+
+.mobile-menu-button {
+  color: #0B1F3A !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mobile-menu-button:hover {
+  opacity: 0.7 !important;
+}
+
+/* Mobile menu items */
+.menu-item, .mobile-nav a, .mobile-menu a {
+  color: #0B1F3A !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+/* Ensure header and nav always visible */
+header, nav {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #E5E7EB !important;
+}
+
+header a, nav a {
+  color: #0B1F3A !important;
+  font-weight: 700 !important;
 }
 

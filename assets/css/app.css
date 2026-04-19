@@ -722,3 +722,187 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, label, input, select, textarea {
     margin-bottom: 48px !important;
   }
 }
+
+
+/* ========== STRIPED AUTHORITY LAYOUT SYSTEM ========== */
+
+/* Global section styling */
+section {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+/* Dark authority bands (control sections) */
+.authority-band, .dark-band, .control-section {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+  padding: 32px 20px !important;
+  text-align: center;
+}
+
+.authority-band h2, .authority-band h3, .authority-band p,
+.dark-band h2, .dark-band h3, .dark-band p,
+.control-section h2, .control-section h3, .control-section p {
+  color: #ffffff !important;
+}
+
+.authority-band a, .dark-band a, .control-section a {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* Hero section deep dark tone */
+.hero-image, .hero {
+  background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%) !important;
+  color: #ffffff !important;
+}
+
+.hero-image h1, .hero h1 {
+  color: #ffffff !important;
+}
+
+.hero-image h2, .hero h2,
+.hero-image p, .hero p,
+.hero-image span, .hero span {
+  color: #ffffff !important;
+}
+
+.hero-image a, .hero a {
+  color: #ffffff !important;
+}
+
+/* Button system based on section background */
+
+/* Dark section buttons */
+.authority-band .btn, .dark-band .btn, .control-section .btn,
+.authority-band button, .dark-band button, .control-section button,
+.hero-image .btn, .hero .btn,
+.hero-image button, .hero button {
+  background: #ffffff !important;
+  color: #0b0b0b !important;
+  border: none !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.authority-band .btn:hover, .dark-band .btn:hover, .control-section .btn:hover,
+.authority-band button:hover, .dark-band button:hover, .control-section button:hover,
+.hero-image .btn:hover, .hero .btn:hover,
+.hero-image button:hover, .hero button:hover {
+  background: #f0f0f0 !important;
+  transform: translateY(-2px);
+}
+
+/* White section buttons */
+section .btn, section button,
+.content-section .btn, .content-section button,
+main .btn, main button {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section .btn:hover, section button:hover,
+.content-section .btn:hover, .content-section button:hover,
+main .btn:hover, main button:hover {
+  background: #1a1a1a !important;
+  transform: translateY(-2px);
+}
+
+/* Form card styling */
+.form-section, .form-card, [class*="form"] {
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 8px;
+  padding: 24px !important;
+}
+
+.form-section input, .form-section select, .form-section textarea,
+.form-card input, .form-card select, .form-card textarea {
+  background: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.form-section label, .form-card label {
+  color: #111111 !important;
+}
+
+/* Visual rhythm enforcement */
+section:nth-child(even) {
+  background: #ffffff !important;
+}
+
+section:nth-child(odd) {
+  background: #ffffff !important;
+}
+
+/* Specific dark sections (can be applied via class) */
+.dark-section, .authority-section, .control-zone {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+}
+
+.dark-section *, .authority-section *, .control-zone * {
+  color: #ffffff !important;
+}
+
+.dark-section a, .authority-section a, .control-zone a {
+  color: #ffffff !important;
+}
+
+/* Ensure no gradients in white sections */
+section {
+  background-image: none !important;
+  background-gradient: none !important;
+}
+
+/* Text color enforcement in white sections */
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  color: #0B1F3A !important;
+}
+
+section p, section span, section li, section td {
+  color: #111111 !important;
+}
+
+/* Footer styling */
+footer {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+}
+
+footer a {
+  color: #ffffff !important;
+}
+
+footer h3, footer h4 {
+  color: #ffffff !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .authority-band, .dark-band, .control-section {
+    padding: 24px 20px !important;
+  }
+  
+  .form-section, .form-card {
+    padding: 16px !important;
+  }
+}
+
+/* Ensure no blue dominance */
+:root {
+  --primary: #0b0b0b !important;
+  --primary-hover: #1a1a1a !important;
+}
+
+/* Override any remaining blue tones */
+[style*="blue"], [style*="#0B3B8C"], [style*="rgb(11, 59, 140)"] {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+}

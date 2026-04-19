@@ -130,8 +130,10 @@ a:hover { opacity: 0.8; }
 
 .nav {
   display: flex;
-  gap: 40px;
+  gap: 28px;
   align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
 }
 
 .nav a {
@@ -139,6 +141,8 @@ a:hover { opacity: 0.8; }
   font-weight: 700;
   color: var(--black) !important;
   text-transform: capitalize;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .lang-switch {
@@ -166,8 +170,15 @@ a:hover { opacity: 0.8; }
 @media (max-width: 968px) {
   .header { height: 70px; }
   .brand { font-size: 16px; }
-  .nav { gap: 20px; }
+  .nav { gap: 16px; }
   .nav a { font-size: 13px; }
+}
+
+@media (max-width: 768px) {
+  .header { height: 65px; }
+  .brand { font-size: 14px; gap: 8px; }
+  .nav { gap: 12px; }
+  .nav a { font-size: 12px; }
 }
 
 /* ========================================

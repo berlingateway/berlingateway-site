@@ -63,7 +63,7 @@
 
 <main class="container">
   <!-- 1. HERO SECTION -->
-  <section class="hero" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; max-width:1200px; margin:0 auto;">
+  <section class="hero" id="hero-form-section" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; max-width:1200px; margin:0 auto;">
     <div class="hero__inner">
       <h1>Können Sie in Deutschland arbeiten?</h1>
       <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte</p>
@@ -110,6 +110,7 @@
   
   <!-- RESPONSIVE HERO ADJUSTMENT -->
   <style>
+    html { scroll-behavior: smooth; }
     @media (max-width: 768px) {
       .hero {
         grid-template-columns: 1fr !important;
@@ -120,7 +121,7 @@
 
   <!-- STICKY CTA FOR MOBILE -->
   <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
-    <a href="#calculator" style="display:block; background:#FFFFFF; color:#0B1F3A; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
+    <a href="#hero-form-section" style="display:block; background:#FFFFFF; color:#0B1F3A; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
       Chancen prüfen
     </a>
   </div>
@@ -159,12 +160,12 @@
       <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
         <h3 style="color:#0B3B8C; margin-top:0;">Anerkennung</h3>
         <p style="color:#334155; font-size:14px;">Ihr Abschluss wird in Deutschland anerkannt. Klare Wege zur formalen Gleichstellung.</p>
-        <a href="/#calculator" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">Bewertung starten →</a>
+        <a href="/de/#hero-form-section" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">Bewertung starten →</a>
       </div>
       <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
         <h3 style="color:#0B3B8C; margin-top:0;">Ausbildung / Studium</h3>
         <p style="color:#334155; font-size:14px;">Sie möchten in Deutschland lernen und arbeiten. Strukturierte Einstiegspfade.</p>
-        <a href="/#calculator" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">Bewertung starten →</a>
+        <a href="/de/#hero-form-section" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">Bewertung starten →</a>
       </div>
     </div>
   </section>
@@ -269,7 +270,7 @@
     <!-- CTA BLOCK AFTER SECTION -->
     <div style="margin-top:48px; padding:32px; background:#f8fafc; border:2px solid #0B3B8C; border-radius:8px; text-align:center;">
       <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; font-size:18px;">Trifft das auf Sie zu?</h3>
-      <a class="btn primary" href="#calculator" style="display:inline-block; margin-top:12px;">Jetzt Bewertung starten</a>
+      <a class="btn primary" href="#hero-form-section" style="display:inline-block; margin-top:12px;">Jetzt Bewertung starten</a>
     </div>
     </div>
   </section>
@@ -656,9 +657,6 @@ document.addEventListener('click', function(event) {
   }
 });
 </script>
-</body>
-</html>
-
   <!-- LEAD FILTER SYSTEM (3-MONTHS CHECK) -->
   <script>
     function checkReadiness() {
@@ -674,3 +672,5 @@ document.addEventListener('click', function(event) {
       }
     }
   </script>
+</body>
+</html>

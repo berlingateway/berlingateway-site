@@ -65,7 +65,7 @@
 
 <main class="container">
   <!-- 1. HERO SECTION -->
-  <section class="hero" dir="rtl" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; max-width:1200px; margin:0 auto;">
+  <section class="hero" id="hero-form-section" dir="rtl" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; max-width:1200px; margin:0 auto;">
     <div class="hero__inner">
       <h1>هل يمكنك العمل في ألمانيا؟</h1>
       <p class="sub">تحقق الآن خلال دقيقة واحدة إذا كنت مؤهلاً لبطاقة الفرص</p>
@@ -112,6 +112,7 @@
   
   <!-- RESPONSIVE HERO ADJUSTMENT -->
   <style>
+    html { scroll-behavior: smooth; }
     @media (max-width: 768px) {
       .hero {
         grid-template-columns: 1fr !important;
@@ -122,7 +123,7 @@
 
   <!-- STICKY CTA FOR MOBILE -->
   <div id="sticky-cta-mobile" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#0B1F3A; padding:12px 20px; z-index:999; box-shadow:0 -2px 10px rgba(0,0,0,0.1);">
-    <a href="#calculator" style="display:block; background:#FFFFFF; color:#0B1F3A; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
+    <a href="#hero-form-section" style="display:block; background:#FFFFFF; color:#0B1F3A; text-align:center; padding:12px; border-radius:6px; font-weight:600; text-decoration:none;">
       احسب فرصك الآن
     </a>
   </div>
@@ -161,12 +162,12 @@
       <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
         <h3 style="color:#0B3B8C; margin-top:0;">الاعتراف</h3>
         <p style="color:#334155; font-size:14px;">يتم الاعتراف بشهادتك في ألمانيا. طرق واضحة للمعادلة الرسمية.</p>
-        <a href="/#calculator" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">ابدأ التقييم ←</a>
+        <a href="/ar/#hero-form-section" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">ابدأ التقييم ←</a>
       </div>
       <div style="padding:24px; background:white; border:1px solid #e2e8f0; border-radius:8px;">
         <h3 style="color:#0B3B8C; margin-top:0;">الدراسة / التدريب</h3>
         <p style="color:#334155; font-size:14px;">تريد أن تتعلم وتعمل في ألمانيا. طرق دخول منظمة.</p>
-        <a href="/#calculator" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">ابدأ التقييم ←</a>
+        <a href="/ar/#hero-form-section" style="color:#0B3B8C; text-decoration:none; font-weight:600; font-size:14px;">ابدأ التقييم ←</a>
       </div>
     </div>
   </section>
@@ -271,7 +272,7 @@
     <!-- CTA BLOCK AFTER SECTION -->
     <div style="margin-top:48px; padding:32px; background:#f8fafc; border:2px solid #0B3B8C; border-radius:8px; text-align:center;">
       <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; font-size:18px;">هل ينطبق هذا عليك؟</h3>
-      <a class="btn primary" href="#calculator" style="display:inline-block; margin-top:12px;">ابدأ التقييم الآن</a>
+      <a class="btn primary" href="#hero-form-section" style="display:inline-block; margin-top:12px;">ابدأ التقييم الآن</a>
     </div>
     </div>
   </section>

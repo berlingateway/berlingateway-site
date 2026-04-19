@@ -509,9 +509,19 @@ table th, table td {
 .hero p, .hero span, .hero li, .hero label,
 [class*="navy"] h1, [class*="navy"] h2, [class*="navy"] h3,
 [class*="navy"] p, [class*="navy"] span, [class*="navy"] li,
-footer h1, footer h2, footer h3, footer p, footer span,
-header h1, header h2, header h3, header p, header span {
+footer h1, footer h2, footer h3, footer p, footer span {
   color: #FFFFFF !important;
+}
+
+/* Header and Nav always Navy on White */
+header, .header, .nav, .nav a, .brand, .brand-link, .mobile-menu-button {
+  background: #FFFFFF !important;
+  color: #0B1F3A !important;
+}
+
+.nav a, .brand-link, .menu-item {
+  color: #0B1F3A !important;
+  font-weight: 700 !important;
 }
 
 /* ========== BORDER DISCIPLINE (NO SHADOWS, NO GRADIENTS) ========== */

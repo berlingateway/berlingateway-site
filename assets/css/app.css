@@ -357,3 +357,51 @@ label,
 }
 
 /* REMOVED: Grey text override rule to prevent color leak */
+
+/* GLOBAL TEXT COLOR STANDARDIZATION */
+h1, h2, h3, h4, h5, h6 {
+  color: #0B1F3A !important;
+}
+
+p, span, li, td, label, input::placeholder {
+  color: #1A1A1A !important;
+}
+
+/* CARD AND SECTION STANDARDIZATION */
+.card,
+.section,
+.block,
+[class*="card"],
+[class*="section"],
+[class*="block"] {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+}
+
+/* REMOVE GRAY BACKGROUNDS FROM COMMON ELEMENTS */
+.bg-gray,
+.bg-light,
+.bg-light-gray,
+[class*="bg-gray"],
+[class*="bg-light"],
+[class*="bg-soft"] {
+  background: #FFFFFF !important;
+}
+
+/* ENSURE FOOTER REMAINS NAVY */
+footer,
+.footer {
+  background: #0B1F3A !important;
+  color: #FFFFFF !important;
+}
+
+footer a,
+.footer a {
+  color: #FFFFFF !important;
+}
+
+/* ENSURE HEADER REMAINS NAVY */
+header,
+.header {
+  background: linear-gradient(to bottom, rgba(11,31,58,.75), rgba(11,31,58,.55)) !important;
+}

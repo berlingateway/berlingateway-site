@@ -176,8 +176,8 @@ a:hover { opacity: 0.8; }
 
 @media (max-width: 768px) {
   .header { height: 65px; }
-  .brand { font-size: 14px; gap: 8px; }
-  .nav { gap: 12px; }
+  .brand { font-size: 14px; gap: 6px; }
+  .nav { gap: 8px; }
   .nav a { font-size: 12px; }
 }
 

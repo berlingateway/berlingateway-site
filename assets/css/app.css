@@ -664,3 +664,61 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, label, input, select, textarea {
   }
 }
 
+
+
+/* ========== MOBILE LAYOUT OPTIMIZATION ========== */
+
+@media (max-width: 768px) {
+  section, .container, main, article {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  
+  section, .container, article {
+    margin-bottom: 30px !important;
+  }
+  
+  .empty-block, .spacer-legacy, .spacer, .placeholder, .dummy-block,
+  [class*="empty"], [class*="spacer"], [class*="placeholder"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hero, .hero-image, .form-section, .content-section {
+    margin-bottom: 30px !important;
+  }
+  
+  .card, .panel, [class*="card"], [class*="panel"] {
+    margin-bottom: 20px !important;
+    padding: 16px !important;
+  }
+  
+  form, .form-group {
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  table {
+    margin-bottom: 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  section, .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  section, .container {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    margin-bottom: 48px !important;
+  }
+}

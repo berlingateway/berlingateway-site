@@ -152,6 +152,12 @@ a:hover { opacity: 0.8; }
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  position: relative;
+  z-index: 999;
+}
+
+.lang-switch:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 968px) {

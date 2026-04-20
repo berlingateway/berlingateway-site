@@ -185,37 +185,13 @@ def render_page(template_name, page_data, lang_pages, output_path):
         template_content = f.read()
 
     # Replace placeholders with actual data
-    rendered_html = template_content.replace('{{ page.title }}', page_data['title'])
-    rendered_html = rendered_html.replace('{{ page.hero_title }}', page_data['hero_title'])
-    rendered_html = rendered_html.replace('{{ page.hero_subtitle }}', page_data['hero_subtitle'])
-    rendered_html = rendered_html.replace('{{ page.badge_1 }}', page_data['badge_1'])
-    rendered_html = rendered_html.replace('{{ page.badge_2 }}', page_data['badge_2'])
-    rendered_html = rendered_html.replace('{{ page.content }}', page_data['content'])
-
-    # Generate navigation links dynamically
-    nav_links = ""
-    for slug, data in lang_pages.items():
-        if not slug.startswith('insights/'): # Hauptnavigation
-            nav_links += f"<a href=\"/" + (output_path.name if output_path.name == 'de' else 'ar') + f"/{data['slug']}\">{data['title'].split('—')[-1].strip()}</a>\n"
-
-    rendered_html = rendered_html.replace('{{ nav_links }}', nav_links)
-
-    # Generate sub-navigation links dynamically (for Insights pages)
-    subnav_links = ""
-    for slug, data in lang_pages.items():
-        if slug.startswith('insights/'):
-            subnav_links += f"<a href=\"/" + (output_path.name if output_path.name == 'de' else 'ar') + f"/{data['slug']}\">{data['title'].split('—')[-1].strip()}</a>\n"
-    rendered_html = rendered_html.replace('{{ subnav_links }}', subnav_links)
-
-    # Canonical URL
-    canonical_url = f"https://berlingateway.de/" + (output_path.name if output_path.name == 'de' else 'ar') + f"/{page_data['slug']}"
-    rendered_html = rendered_html.replace('{{ canonical_url }}', canonical_url)
-
-    # Language switch
-    other_lang_prefix = 'ar' if template_name == 'de' else 'de'
-    other_lang_slug = page_data['slug']
-    other_lang_link = f"/{other_lang_prefix}/{other_lang_slug}"
-    rendered_html = rendered_html.replace('{{ other_lang_link }}', other_lang_link)
+    rendered_html = template_content.replace('{{ page_title }}', page_data['title'])
+    rendered_html = rendered_html.replace('{{ hero_title }}', page_data['hero_title'])
+    rendered_html = rendered_html.replace('{{ hero_subtitle }}', page_data['hero_subtitle'])
+    rendered_html = rendered_html.replace('{{ badge_1 }}', page_data['badge_1'])
+    rendered_html = rendered_html.replace('{{ badge_2 }}', page_data['badge_2'])
+    rendered_html = rendered_html.replace('{{ page_content }}', page_data['content'])
+    rendered_html = rendered_html.replace('{{ page_slug }}', page_data['slug'])
 
     output_file = output_path / f"{page_data['slug']}.html"
     output_file.parent.mkdir(parents=True, exist_ok=True)

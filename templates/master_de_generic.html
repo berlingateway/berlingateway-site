@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — Monitor</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/ar/monitor" class="lang-switch">العربية</a>
+            <a href="/ar/{{ page_slug }}" class="lang-switch">العربية</a>
             <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
         </div>
     </div>
@@ -55,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>Arbeitsmarkt-Monitor</h1>
-                    <p class="sub">Aktuelle Daten und Trends für Ihre Berufsentscheidung.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Monitor</span>
-                        <span class="badge">Echtzeit-Daten</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
+    {{ page_content }}
 
 </main>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — شروط بطاقة الفرص</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/insights/chancenkarte-voraussetzungen" class="lang-switch">Deutsch</a>
+            <a href="/de/{{ page_slug }}" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -55,19 +55,73 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>بطاقة الفرص: الشروط</h1>
-                    <p class="sub">ما هي المعايير التي يجب أن تستوفيها للحصول على بطاقة الفرص؟</p>
-                    <div class="trust-row">
-                        <span class="badge">بطاقة الفرص</span>
-                        <span class="badge">الشروط</span>
-                    </div>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>{{ authority_statement_title }}</h2>
+            <p>{{ authority_statement_content }}</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>{{ who_this_is_for_title }}</h2>
+            <ul>
+                <li>{{ who_this_is_for_item1 }}</li>
+                <li>{{ who_this_is_for_item2 }}</li>
+                <li>{{ who_this_is_for_item3 }}</li>
+            </ul>
+            <p>{{ who_this_is_for_disclaimer }}</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>{{ form_title }}</h3>
+                    <label>المهنة المستهدفة</label>
+                    <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
+                    <label>المؤهل العلمي</label>
+                    <input type="text" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
+                    <label>سنوات الخبرة</label>
+                    <input type="number" placeholder="مثلاً: 5" required>
+                    <label>مستوى اللغة</label>
+                    <input type="text" placeholder="مثلاً: ألمانية B2، إنجليزية C1" required>
+                    <label>رفع السيرة الذاتية أو الشهادات</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>{{ micro_trust_item1 }}</li>
+                <li>{{ micro_trust_item2 }}</li>
+                <li>{{ micro_trust_item3 }}</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>{{ final_statement_content }}</p>
+        </div>
+    </section>
 
 </main>
 
@@ -101,6 +155,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("تم إرسال النموذج بنجاح! (هذه رسالة اختبار)");
+});
+</script>
 
 </body>
 </html>

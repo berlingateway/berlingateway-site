@@ -90,12 +90,14 @@ PAGES_DE = {
         'hero_subtitle': 'Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte 2026. Strukturierte Bewertung nach deutschen Standards.',
         'badge_1': 'Zertifizierte Bewertung',
         'badge_2': 'Echtzeit-Analyse',
-        'content': load_markdown_content('de', 'homepage')
+        'content': load_markdown_content('de', 'homepage'),
+        'is_chancenkarte': False
     },
     'chancenkarte': {
         'title': 'Berlin Gateway — Chancenkarte Bewertung',
         'slug': 'chancenkarte',
-        **load_markdown_content('de', 'chancenkarte')
+        **load_markdown_content('de', 'chancenkarte'),
+        'is_chancenkarte': True
     },
     'systemlogik': {
         'title': 'Berlin Gateway — Systemlogik',
@@ -104,7 +106,8 @@ PAGES_DE = {
         'hero_subtitle': 'Verstehen Sie die Logik hinter den Anforderungen und Bewertungskriterien.',
         'badge_1': 'Systemlogik',
         'badge_2': 'Transparenz',
-        'content': load_markdown_content('de', 'systemlogik')
+        'content': load_markdown_content('de', 'systemlogik'),
+        'is_chancenkarte': False
     },
     'monitor': {
         'title': 'Berlin Gateway — Monitor',
@@ -113,7 +116,8 @@ PAGES_DE = {
         'hero_subtitle': 'Aktuelle Daten und Trends für Ihre Berufsentscheidung.',
         'badge_1': 'Monitor',
         'badge_2': 'Echtzeit-Daten',
-        'content': load_markdown_content('de', 'monitor')
+        'content': load_markdown_content('de', 'monitor'),
+        'is_chancenkarte': False
     },
     'insights': {
         'title': 'Berlin Gateway — Insights',
@@ -122,7 +126,8 @@ PAGES_DE = {
         'hero_subtitle': 'Tiefgreifende Analysen zu Chancen und Herausforderungen.',
         'badge_1': 'Insights',
         'badge_2': 'Analyse',
-        'content': load_markdown_content('de', 'insights')
+        'content': load_markdown_content('de', 'insights'),
+        'is_chancenkarte': False
     },
     'insights/chancenkarte-voraussetzungen': {
         'title': 'Berlin Gateway — Chancenkarte Voraussetzungen',
@@ -131,7 +136,8 @@ PAGES_DE = {
         'hero_subtitle': 'Welche Kriterien müssen Sie erfüllen, um die Chancenkarte zu erhalten?',
         'badge_1': 'Chancenkarte',
         'badge_2': 'Voraussetzungen',
-        'content': load_markdown_content('de', 'insights/chancenkarte-voraussetzungen')
+        'content': load_markdown_content('de', 'insights/chancenkarte-voraussetzungen'),
+        'is_chancenkarte': False
     },
     'insights/chancenkarte-punkte': {
         'title': 'Berlin Gateway — Chancenkarte Punkte',
@@ -140,16 +146,18 @@ PAGES_DE = {
         'hero_subtitle': 'Verstehen Sie, wie das Punktesystem der Chancenkarte funktioniert.',
         'badge_1': 'Chancenkarte',
         'badge_2': 'Punktesystem',
-        'content': load_markdown_content('de', 'insights/chancenkarte-punkte')
+        'content': load_markdown_content('de', 'insights/chancenkarte-punkte'),
+        'is_chancenkarte': False
     },
     'insights/chancenkarte-vs-bluecard': {
         'title': 'Berlin Gateway — Chancenkarte vs. Blue Card',
         'slug': 'insights/chancenkarte-vs-bluecard',
-        'hero_title': 'Chancenkarte: Das Punktesystem',
-        'hero_subtitle': 'Verstehen Sie, wie das Punktesystem der Chancenkarte funktioniert.',
+        'hero_title': 'Chancenkarte vs. Blue Card',
+        'hero_subtitle': 'Ein Vergleich der beiden Wege zum Arbeiten in Deutschland.',
         'badge_1': 'Chancenkarte',
         'badge_2': 'Blue Card',
-        'content': load_markdown_content('de', 'insights/chancenkarte-vs-bluecard')
+        'content': load_markdown_content('de', 'insights/chancenkarte-vs-bluecard'),
+        'is_chancenkarte': False
     }
 }
 
@@ -161,12 +169,14 @@ PAGES_AR = {
         'hero_subtitle': 'تحقق الآن خلال 60 ثانية من فرصك للحصول على بطاقة الفرص لعام 2026. تقييم منظم وفقاً للمعايير الألمانية.',
         'badge_1': 'تقييم معتمد',
         'badge_2': 'تحليل فوري',
-        'content': load_markdown_content('ar', 'homepage')
+        'content': load_markdown_content('ar', 'homepage'),
+        'is_chancenkarte': False
     },
     'chancenkarte': {
         'title': 'Berlin Gateway — تقييم بطاقة الفرص',
         'slug': 'chancenkarte',
-        **load_markdown_content('ar', 'chancenkarte')
+        **load_markdown_content('ar', 'chancenkarte'),
+        'is_chancenkarte': True
     },
     'systemlogik': {
         'title': 'Berlin Gateway — منطق النظام',
@@ -175,7 +185,8 @@ PAGES_AR = {
         'hero_subtitle': 'افهم المنطق وراء المتطلبات ومعايير التقييم.',
         'badge_1': 'منطق النظام',
         'badge_2': 'الشفافية',
-        'content': load_markdown_content('ar', 'systemlogik')
+        'content': load_markdown_content('ar', 'systemlogik'),
+        'is_chancenkarte': False
     },
     'monitor': {
         'title': 'Berlin Gateway — مراقب سوق العمل',
@@ -184,7 +195,8 @@ PAGES_AR = {
         'hero_subtitle': 'أحدث البيانات والاتجاهات لقرارك المهني.',
         'badge_1': 'مراقب',
         'badge_2': 'بيانات فورية',
-        'content': load_markdown_content('ar', 'monitor')
+        'content': load_markdown_content('ar', 'monitor'),
+        'is_chancenkarte': False
     },
     'insights': {
         'title': 'Berlin Gateway — رؤى وتحليلات',
@@ -193,7 +205,8 @@ PAGES_AR = {
         'hero_subtitle': 'تحليلات متعمقة للفرص والتحديات.',
         'badge_1': 'رؤى',
         'badge_2': 'تحليل',
-        'content': load_markdown_content('ar', 'insights')
+        'content': load_markdown_content('ar', 'insights'),
+        'is_chancenkarte': False
     },
     'insights/chancenkarte-voraussetzungen': {
         'title': 'Berlin Gateway — شروط بطاقة الفرص',
@@ -202,7 +215,8 @@ PAGES_AR = {
         'hero_subtitle': 'ما هي المعايير التي يجب أن تستوفيها للحصول على بطاقة الفرص؟',
         'badge_1': 'بطاقة الفرص',
         'badge_2': 'الشروط',
-        'content': load_markdown_content('ar', 'insights/chancenkarte-voraussetzungen')
+        'content': load_markdown_content('ar', 'insights/chancenkarte-voraussetzungen'),
+        'is_chancenkarte': False
     },
     'insights/chancenkarte-punkte': {
         'title': 'Berlin Gateway — نقاط بطاقة الفرص',
@@ -211,16 +225,18 @@ PAGES_AR = {
         'hero_subtitle': 'افهم كيف يعمل نظام النقاط لبطاقة الفرص.',
         'badge_1': 'بطاقة الفرص',
         'badge_2': 'نظام النقاط',
-        'content': load_markdown_content('ar', 'insights/chancenkarte-punkte')
+        'content': load_markdown_content('ar', 'insights/chancenkarte-punkte'),
+        'is_chancenkarte': False
     },
     'insights/chancenkarte-vs-bluecard': {
         'title': 'Berlin Gateway — بطاقة الفرص مقابل البطاقة الزرقاء',
         'slug': 'insights/chancenkarte-vs-bluecard',
-        'hero_title': 'بطاقة الفرص: نظام النقاط',
-        'hero_subtitle': 'افهم كيف يعمل نظام النقاط لبطاقة الفرص.',
+        'hero_title': 'بطاقة الفرص مقابل البطاقة الزرقاء',
+        'hero_subtitle': 'مقارنة بين المسارين للعمل في ألمانيا.',
         'badge_1': 'بطاقة الفرص',
         'badge_2': 'البطاقة الزرقاء',
-        'content': load_markdown_content('ar', 'insights/chancenkarte-vs-bluecard')
+        'content': load_markdown_content('ar', 'insights/chancenkarte-vs-bluecard'),
+        'is_chancenkarte': False
     }
 }
 
@@ -228,8 +244,13 @@ PAGES_AR = {
 # TEMPLATE RENDERING
 # ============================================================================
 
-def render_page(template_name, page_data, output_path):
-    template_file = TEMPLATES_PATH / f"master_{template_name}.html"
+def render_page(lang, page_data, output_path):
+    # Select the appropriate template based on page type
+    if page_data.get('is_chancenkarte'):
+        template_file = TEMPLATES_PATH / f"master_{lang}_chancenkarte.html"
+    else:
+        template_file = TEMPLATES_PATH / f"master_{lang}_generic.html"
+    
     with open(template_file, 'r', encoding='utf-8') as f:
         template_content = f.read()
 
@@ -240,7 +261,7 @@ def render_page(template_name, page_data, output_path):
     rendered_html = rendered_html.replace('{{ page_slug }}', page_data.get('slug', ''))
 
     # Replace Chancenkarte-specific placeholders
-    if page_data.get('slug') == 'chancenkarte':
+    if page_data.get('is_chancenkarte'):
         rendered_html = rendered_html.replace('{{ authority_statement_title }}', page_data.get('authority_statement_title', ''))
         rendered_html = rendered_html.replace('{{ authority_statement_content }}', page_data.get('authority_statement_content', ''))
         rendered_html = rendered_html.replace('{{ who_this_is_for_title }}', page_data.get('who_this_is_for_title', ''))

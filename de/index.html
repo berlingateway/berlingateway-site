@@ -57,71 +57,17 @@
                 <div class="hero-content">
                     <h1>Können Sie in Deutschland arbeiten?</h1>
                     <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte 2026. Strukturierte Bewertung nach deutschen Standards.</p>
+                    <div class="trust-row">
+                        <span class="badge">Zertifizierte Bewertung</span>
+                        <span class="badge">Echtzeit-Analyse</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
-        <div class="container">
-            <h2>{{ authority_statement_title }}</h2>
-            <p>{{ authority_statement_content }}</p>
-        </div>
-    </section>
-
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>{{ who_this_is_for_title }}</h2>
-            <ul>
-                <li>{{ who_this_is_for_item1 }}</li>
-                <li>{{ who_this_is_for_item2 }}</li>
-                <li>{{ who_this_is_for_item3 }}</li>
-            </ul>
-            <p>{{ who_this_is_for_disclaimer }}</p>
-        </div>
-    </section>
-
-    <!-- FORM (GATE) -->
-    <section class="section form-gate">
-        <div class="container">
-            <div class="form-card">
-                <form class="assessment-form" id="assessment-form">
-                    <h3>{{ form_title }}</h3>
-                    <label>Zielberuf</label>
-                    <input type="text" placeholder="z.B. Softwareentwickler" required>
-                    <label>Abschluss</label>
-                    <input type="text" placeholder="z.B. Master Informatik" required>
-                    <label>Berufserfahrung (Jahre)</label>
-                    <input type="number" placeholder="z.B. 5" required>
-                    <label>Sprachkenntnisse</label>
-                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
-                    <label>Lebenslauf / Dokumente hochladen</label>
-                    <input type="file" required>
-                    <button type="submit" class="cta">Fall einreichen</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>{{ micro_trust_item1 }}</li>
-                <li>{{ micro_trust_item2 }}</li>
-                <li>{{ micro_trust_item3 }}</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>{{ final_statement_content }}</p>
-        </div>
-    </section>
+    <!-- PAGE-SPECIFIC CONTENT -->
+    
 
 </main>
 
@@ -155,15 +101,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-// Form submission logic will be handled here or via a separate JS file
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("Formular erfolgreich eingereicht! (Dies ist eine Testmeldung)");
-});
-</script>
 
 </body>
 </html>

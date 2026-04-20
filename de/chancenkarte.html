@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chancenkarte Deutschland: Ihr direkter Weg zur Arbeitserlaubnis</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/de/chancenkarte">
 </head>
 <body>
 
@@ -20,7 +19,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/ar/chancenkarte.html" class="lang-switch">العربية</a>
+            <a href="/ar/{{ page_slug }}.html" class="lang-switch">العربية</a>
             <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
         </div>
     </div>
@@ -51,15 +50,16 @@
 
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
-<section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>Chancenkarte — Das Punktesystem für Deutschland</h1>
-                    <p class="sub">Berechnen Sie Ihre Chancen mit dem neuen 6-Punkte-System. Strukturierte Bewertung nach deutschen Standards.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Zertifizierte Bewertung</span>
-                        <span class="badge">Echtzeit-Analyse</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -85,62 +85,9 @@
         </div>
     </section>
 
-    <section class="container">
-        <h2>Die 6 Bewertungskriterien</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Qualifikation</h3>
-                <p>Ihr Abschluss wird nach deutschen Standards bewertet.</p>
-            </div>
-            <div class="card">
-                <h3>Berufserfahrung</h3>
-                <p>Relevante Arbeitserfahrung in Ihrem Fachgebiet.</p>
-            </div>
-            <div class="card">
-                <h3>Sprachkenntnisse</h3>
-                <p>Deutsch- und Englischkenntnisse sind entscheidend.</p>
-            </div>
-        </div>
-    </section>
+    <!-- PAGE-SPECIFIC CONTENT -->
+    {{ page_content }}
 
-    <section class="container">
-        <h2>Der Bewertungsprozess</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">01</div>
-                <h3>Datenerfassung</h3>
-                <p>Ihre Qualifikationen werden systematisch erfasst.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">02</div>
-                <h3>Analyse</h3>
-                <p>Vergleich mit aktuellen Arbeitsmarktdaten.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">03</div>
-                <h3>Bewertung</h3>
-                <p>Klare Punktevergabe nach Systemlogik.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>Warum die Chancenkarte?</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Transparenz</h3>
-                <p>Klare Kriterien, keine versteckten Anforderungen.</p>
-            </div>
-            <div class="card">
-                <h3>Fairness</h3>
-                <p>Objektive Bewertung nach Qualifikation.</p>
-            </div>
-            <div class="card">
-                <h3>Effizienz</h3>
-                <p>Schnelle Entscheidung über Ihre Chancen.</p>
-            </div>
-        </div>
-    </section>
 </main>
 
 <!-- FOOTER (BLACK) -->

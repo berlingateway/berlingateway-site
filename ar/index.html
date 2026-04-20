@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة برلين: طريقك نحو مستقبل مهني ناجح في ألمانيا</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/ar/">
 </head>
 <body>
-<a href="/de/chancenkarte" style="display:none;">Chancenkarte</a>
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/index.html" class="lang-switch">Deutsch</a>
+            <a href="/de/{{ page_slug }}.html" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -57,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>هل يمكنك العمل في ألمانيا؟</h1>
-                    <p class="sub">تحقق الآن خلال 60 ثانية من فرصك للحصول على بطاقة الفرص لعام 2026. تقييم منظم وفقاً للمعايير الألمانية.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">تقييم معتمد</span>
-                        <span class="badge">تحليل فوري</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -88,64 +86,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
-    <section class="container">
-        <h2>أي مسار يناسبك؟</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>الاعتراف المهني</h3>
-                <p>يتم الاعتراف بشهادتك في ألمانيا. مسارات واضحة للمساواة الرسمية.</p>
-            </div>
-            <div class="card">
-                <h3>التدريب / الدراسة</h3>
-                <p>ترغب في التعلم والعمل في ألمانيا. مسارات دخول منظمة.</p>
-            </div>
-            <div class="card">
-                <h3>بطاقة الفرص</h3>
-                <p>نظام النقاط الجديد للبحث عن عمل في ألمانيا. تحقق من أهليتك.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>العملية في 4 خطوات</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">01</div>
-                <h3>التقييم</h3>
-                <p>يتم تحليل مؤهلاتك بناءً على منطق النظام الحالي.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">02</div>
-                <h3>التصفية</h3>
-                <p>تصنيف واضح وفقاً لبيانات سوق العمل والمتطلبات القانونية.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">03</div>
-                <h3>القرار</h3>
-                <p>تتلقى توصيات واضحة للعمل لخطوتك التالية.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>لماذا Berlin Gateway؟</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>معرفة بالنظام</h3>
-                <p>لا نعتمد على الأمل، بل على التحليل الهيكلي للنظام الألماني.</p>
-            </div>
-            <div class="card">
-                <h3>التركيز</h3>
-                <p>نقوم بالتصفية بناءً على المؤهلات، وليس الكمية. للمتقدمين الجادين فقط.</p>
-            </div>
-            <div class="card">
-                <h3>الوضوح</h3>
-                <p>لا توجد ضمانات، بل حقائق منظمة حول إمكانياتك.</p>
-            </div>
-        </div>
-    </section>
-
+    {{ page_content }}
 
 </main>
 

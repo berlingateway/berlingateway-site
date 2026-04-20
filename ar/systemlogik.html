@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منطق نظام بوابة برلين: خطة طريقك للنجاح في ألمانيا</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/ar/systemlogik">
 </head>
 <body>
-<a href="/de/chancenkarte" style="display:none;">Chancenkarte</a>
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/systemlogik.html" class="lang-switch">Deutsch</a>
+            <a href="/de/{{ page_slug }}.html" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -52,96 +50,44 @@
 
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
-<section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>منطق النظام — كيف يعمل النظام الألماني</h1>
-                    <p class="sub">افهم قواعد واحتياجات سوق العمل الألماني. تحليل منظم لمنطق النظام.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Zertifizierte Bewertung</span>
-                        <span class="badge">Echtzeit-Analyse</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
                     <form class="assessment-form" id="assessment-form">
-                        <h3>Professionelle Fallbewertung</h3>
-                        <label>Bereit innerhalb von 3 Monaten zu starten?</label>
+                        <h3>طلب تقييم احترافي</h3>
+                        <label>هل أنت مستعد للبدء خلال 3 أشهر؟</label>
                         <select id="readiness-answer" required>
-                            <option value="">-- Bitte wählen --</option>
-                            <option value="yes">Ja, ich bin bereit</option>
-                            <option value="no">Nein, noch nicht</option>
+                            <option value="">-- يرجى الاختيار --</option>
+                            <option value="yes">نعم، أنا مستعد</option>
+                            <option value="no">ليس بعد</option>
                         </select>
-                        <label>Name</label>
-                        <input type="text" placeholder="Ihr Name" required>
-                        <label>Email</label>
-                        <input type="email" placeholder="ihre@email.de" required>
-                        <label>Beruf</label>
-                        <input type="text" placeholder="z.B. Softwareentwickler" required>
-                        <button type="submit" class="cta">Fall einreichen</button>
-                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">Antwort innerhalb 24–48h. Nur ernsthafte Anfragen.</p>
+                        <label>الاسم</label>
+                        <input type="text" placeholder="اسمك الكامل" required>
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="email@example.com" required>
+                        <label>المهنة</label>
+                        <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
+                        <button type="submit" class="cta">إرسال الطلب</button>
+                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">الرد خلال 24-48 ساعة. للطلبات الجادة فقط.</p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <h2>الأعمدة الثلاثة للنظام</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>الاعتراف</h3>
-                <p>الاعتراف الرسمي بالشهادات والمؤهلات.</p>
-            </div>
-            <div class="card">
-                <h3>سوق العمل</h3>
-                <p>متطلبات سوق العمل الألماني.</p>
-            </div>
-            <div class="card">
-                <h3>الإطار القانوني</h3>
-                <p>القوانين واللوائح للعاملين المهرة.</p>
-            </div>
-        </div>
-    </section>
+    <!-- PAGE-SPECIFIC CONTENT -->
+    {{ page_content }}
 
-    <section class="container">
-        <h2>طرق القرار الأربع</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">01</div>
-                <h3>الطريق 1: الاعتراف</h3>
-                <p>المساواة الرسمية لشهادتك.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">02</div>
-                <h3>الطريق 2: بطاقة الفرص</h3>
-                <p>تقييم قائم على النقاط للبحث عن وظيفة.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">03</div>
-                <h3>الطريق 3: التدريب</h3>
-                <p>إعادة التدريب أو التأهيل الإضافي.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>عوامل النجاح</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>معرفة النظام</h3>
-                <p>معرفة القواعد والمتطلبات.</p>
-            </div>
-            <div class="card">
-                <h3>المؤهلات</h3>
-                <p>الكفاءة المهنية المثبتة.</p>
-            </div>
-            <div class="card">
-                <h3>التخطيط</h3>
-                <p>نهج استراتيجي لتحقيق الأهداف.</p>
-            </div>
-        </div>
-    </section>
 </main>
 
 <!-- FOOTER (BLACK) -->

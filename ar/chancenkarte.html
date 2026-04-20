@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بطاقة الفرص الألمانية: طريقك المباشر لتصريح العمل</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/ar/chancenkarte">
 </head>
 <body>
 
@@ -16,7 +15,7 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/chancenkarte.html" class="lang-switch">Deutsch</a>
+            <a href="/de/{{ page_slug }}.html" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -51,96 +50,44 @@
 
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
-<section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>بطاقة الفرص — نظام النقاط الألماني</h1>
-                    <p class="sub">احسب فرصك باستخدام نظام النقاط الجديد. تقييم منظم وفقاً للمعايير الألمانية.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Zertifizierte Bewertung</span>
-                        <span class="badge">Echtzeit-Analyse</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
                     <form class="assessment-form" id="assessment-form">
-                        <h3>Professionelle Fallbewertung</h3>
-                        <label>Bereit innerhalb von 3 Monaten zu starten?</label>
+                        <h3>طلب تقييم احترافي</h3>
+                        <label>هل أنت مستعد للبدء خلال 3 أشهر؟</label>
                         <select id="readiness-answer" required>
-                            <option value="">-- Bitte wählen --</option>
-                            <option value="yes">Ja, ich bin bereit</option>
-                            <option value="no">Nein, noch nicht</option>
+                            <option value="">-- يرجى الاختيار --</option>
+                            <option value="yes">نعم، أنا مستعد</option>
+                            <option value="no">ليس بعد</option>
                         </select>
-                        <label>Name</label>
-                        <input type="text" placeholder="Ihr Name" required>
-                        <label>Email</label>
-                        <input type="email" placeholder="ihre@email.de" required>
-                        <label>Beruf</label>
-                        <input type="text" placeholder="z.B. Softwareentwickler" required>
-                        <button type="submit" class="cta">Fall einreichen</button>
-                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">Antwort innerhalb 24–48h. Nur ernsthafte Anfragen.</p>
+                        <label>الاسم</label>
+                        <input type="text" placeholder="اسمك الكامل" required>
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="email@example.com" required>
+                        <label>المهنة</label>
+                        <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
+                        <button type="submit" class="cta">إرسال الطلب</button>
+                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">الرد خلال 24-48 ساعة. للطلبات الجادة فقط.</p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <h2>معايير التقييم الستة</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>المؤهلات</h3>
-                <p>يتم تقييم شهادتك وفقاً للمعايير الألمانية.</p>
-            </div>
-            <div class="card">
-                <h3>الخبرة المهنية</h3>
-                <p>الخبرة العملية ذات الصلة في مجال تخصصك.</p>
-            </div>
-            <div class="card">
-                <h3>اللغة</h3>
-                <p>مهارات اللغة الألمانية والإنجليزية حاسمة.</p>
-            </div>
-        </div>
-    </section>
+    <!-- PAGE-SPECIFIC CONTENT -->
+    {{ page_content }}
 
-    <section class="container">
-        <h2>عملية التقييم</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">01</div>
-                <h3>جمع البيانات</h3>
-                <p>يتم جمع مؤهلاتك بشكل منظم.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">02</div>
-                <h3>التحليل</h3>
-                <p>المقارنة مع بيانات سوق العمل الحالية.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">03</div>
-                <h3>التقييم</h3>
-                <p>منح النقاط وفقاً لمنطق النظام.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>لماذا بطاقة الفرص؟</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>الشفافية</h3>
-                <p>معايير واضحة بدون متطلبات مخفية.</p>
-            </div>
-            <div class="card">
-                <h3>العدالة</h3>
-                <p>تقييم موضوعي بناءً على المؤهلات.</p>
-            </div>
-            <div class="card">
-                <h3>الكفاءة</h3>
-                <p>قرار سريع بشأن فرصك.</p>
-            </div>
-        </div>
-    </section>
 </main>
 
 <!-- FOOTER (BLACK) -->

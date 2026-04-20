@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway Monitor: Behalten Sie den Überblick über Ihre Migration</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/de/monitor">
 </head>
 <body>
-<a href="/de/chancenkarte" style="display:none;">Chancenkarte</a>
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
@@ -21,7 +19,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/ar/monitor.html" class="lang-switch">العربية</a>
+            <a href="/ar/{{ page_slug }}.html" class="lang-switch">العربية</a>
             <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
         </div>
     </div>
@@ -57,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>Arbeitsmarkt-Monitor</h1>
-                    <p class="sub">Aktuelle Daten und Trends für Ihre Berufsentscheidung.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Monitor</span>
-                        <span class="badge">Echtzeit-Daten</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -88,25 +86,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
-    <section class="container">
-        <h2>Markttrends</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Nachfrage</h3>
-                <p>Welche Berufe sind derzeit in Deutschland gefragt?</p>
-            </div>
-            <div class="card">
-                <h3>Gehalt</h3>
-                <p>Gehaltsspannen und Verdienstmöglichkeiten in verschiedenen Branchen.</p>
-            </div>
-            <div class="card">
-                <h3>Prognose</h3>
-                <p>Zukunftstrends und langfristige Chancen.</p>
-            </div>
-        </div>
-    </section>
-
+    {{ page_content }}
 
 </main>
 

@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رؤى بوابة برلين: المعرفة لنجاحك في ألمانيا</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/ar/insights">
 </head>
 <body>
-<a href="/de/chancenkarte" style="display:none;">Chancenkarte</a>
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/insights.html" class="lang-switch">Deutsch</a>
+            <a href="/de/{{ page_slug }}.html" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -57,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>الرؤى والتحليلات</h1>
-                    <p class="sub">تحليلات عميقة للفرص والتحديات.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">الرؤى</span>
-                        <span class="badge">التحليل</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -88,25 +86,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
-    <section class="container">
-        <h2>التحليلات المفصلة</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>تحليل القطاع</h3>
-                <p>رؤى مفصلة عن القطاعات والصناعات المختلفة.</p>
-            </div>
-            <div class="card">
-                <h3>قصص النجاح</h3>
-                <p>تقارير من متخصصين نجحوا في القدوم إلى ألمانيا.</p>
-            </div>
-            <div class="card">
-                <h3>أفضل الممارسات</h3>
-                <p>استراتيجيات مثبتة للبدء الناجح.</p>
-            </div>
-        </div>
-    </section>
-
+    {{ page_content }}
 
 </main>
 

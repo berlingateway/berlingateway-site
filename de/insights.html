@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway Insights: Wissen für Ihren Erfolg in Deutschland</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/de/insights">
 </head>
 <body>
-<a href="/de/chancenkarte" style="display:none;">Chancenkarte</a>
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
@@ -21,7 +19,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/ar/insights.html" class="lang-switch">العربية</a>
+            <a href="/ar/{{ page_slug }}.html" class="lang-switch">العربية</a>
             <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
         </div>
     </div>
@@ -57,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>Insights & Analysen</h1>
-                    <p class="sub">Tiefgreifende Analysen zu Chancen und Herausforderungen.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Insights</span>
-                        <span class="badge">Analyse</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -88,25 +86,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
-    <section class="container">
-        <h2>Detaillierte Analysen</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Branchenanalyse</h3>
-                <p>Detaillierte Einblicke in verschiedene Branchen und Sektoren.</p>
-            </div>
-            <div class="card">
-                <h3>Erfolgsgeschichten</h3>
-                <p>Erfahrungsberichte von Fachkräften, die erfolgreich nach Deutschland gekommen sind.</p>
-            </div>
-            <div class="card">
-                <h3>Best Practices</h3>
-                <p>Bewährte Strategien für einen erfolgreichen Einstieg.</p>
-            </div>
-        </div>
-    </section>
-
+    {{ page_content }}
 
 </main>
 

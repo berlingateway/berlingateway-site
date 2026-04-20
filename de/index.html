@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway: Ihr Weg zur beruflichen Zukunft in Deutschland</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://berlingateway.de/de/">
 </head>
 <body>
-<a href="/de/chancenkarte" style="display:none;">Chancenkarte</a>
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
@@ -21,7 +19,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/ar/index.html" class="lang-switch">العربية</a>
+            <a href="/ar/{{ page_slug }}.html" class="lang-switch">العربية</a>
             <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
         </div>
     </div>
@@ -57,11 +55,11 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero-content">
-                    <h1>Können Sie in Deutschland arbeiten?</h1>
-                    <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte 2026. Strukturierte Bewertung nach deutschen Standards.</p>
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
                     <div class="trust-row">
-                        <span class="badge">Zertifizierte Bewertung</span>
-                        <span class="badge">Echtzeit-Analyse</span>
+                        <span class="badge">{{ badge_1 }}</span>
+                        <span class="badge">{{ badge_2 }}</span>
                     </div>
                 </div>
                 <div class="form-card">
@@ -88,64 +86,7 @@
     </section>
 
     <!-- PAGE-SPECIFIC CONTENT -->
-    
-    <section class="container">
-        <h2>Welcher Weg passt zu Ihnen?</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Anerkennung</h3>
-                <p>Ihr Abschluss wird in Deutschland anerkannt. Klare Wege zur formalen Gleichstellung.</p>
-            </div>
-            <div class="card">
-                <h3>Ausbildung / Studium</h3>
-                <p>Sie möchten in Deutschland lernen und arbeiten. Strukturierte Einstiegspfade.</p>
-            </div>
-            <div class="card">
-                <h3>Chancenkarte</h3>
-                <p>Das neue Punktesystem für die Jobsuche in Deutschland. Prüfen Sie Ihre Eignung.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>Der Prozess in 4 Schritten</h2>
-        <div class="grid-3">
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">01</div>
-                <h3>Bewertung</h3>
-                <p>Ihre Qualifikation wird anhand der aktuellen Systemlogik analysiert.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">02</div>
-                <h3>Filterung</h3>
-                <p>Klare Einordnung nach Arbeitsmarktdaten und gesetzlichen Vorgaben.</p>
-            </div>
-            <div class="card">
-                <div style="font-size:28px; font-weight:900; color:#E5E7EB; margin-bottom:16px;">03</div>
-                <h3>Entscheidung</h3>
-                <p>Sie erhalten klare Handlungsempfehlungen für Ihren nächsten Schritt.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2>Warum Berlin Gateway?</h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>Systemwissen</h3>
-                <p>Nicht auf Hoffnung, sondern auf struktureller Analyse des deutschen Systems.</p>
-            </div>
-            <div class="card">
-                <h3>Fokus</h3>
-                <p>Wir filtern nach Qualifikation, nicht nach Quantität. Nur ernsthafte Bewerber.</p>
-            </div>
-            <div class="card">
-                <h3>Klarheit</h3>
-                <p>Keine Garantien, sondern strukturierte Fakten über Ihre Möglichkeiten.</p>
-            </div>
-        </div>
-    </section>
-
+    {{ page_content }}
 
 </main>
 

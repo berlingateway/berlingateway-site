@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /*.json$
-Disallow: /api/
-# Sitemap location
+
 Sitemap: https://berlingateway.de/sitemap.xml

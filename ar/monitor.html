@@ -15,7 +15,7 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/monitor.html" class="lang-switch">Deutsch</a>
+            <a href="/de/monitor" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
@@ -33,10 +33,10 @@
             Berlin Gateway
         </a>
         <nav class="nav">
-            <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
-            <a href="/ar/systemlogik.html">منطق النظام</a>
-            <a href="/ar/monitor.html">المرصد</a>
-            <a href="/ar/insights.html">الرؤى</a></nav>
+            <a href="/ar/chancenkarte">بطاقة الفرص</a>
+            <a href="/ar/systemlogik">منطق النظام</a>
+            <a href="/ar/monitor">المرصد</a>
+            <a href="/ar/insights">الرؤى</a></nav>
     </div>
 </header>
 
@@ -57,59 +57,71 @@
                 <div class="hero-content">
                     <h1>مراقب سوق العمل</h1>
                     <p class="sub">أحدث البيانات والاتجاهات لقرارك المهني.</p>
-                    <div class="trust-row">
-                        <span class="badge">مراقب</span>
-                        <span class="badge">بيانات فورية</span>
-                    </div>
-                </div>
-                <div class="form-card">
-                    <form class="assessment-form" id="assessment-form">
-                        <h3>طلب تقييم احترافي</h3>
-                        <label>هل أنت مستعد للبدء خلال 3 أشهر؟</label>
-                        <select id="readiness-answer" required>
-                            <option value="">-- يرجى الاختيار --</option>
-                            <option value="yes">نعم، أنا مستعد</option>
-                            <option value="no">ليس بعد</option>
-                        </select>
-                        <label>الاسم</label>
-                        <input type="text" placeholder="اسمك الكامل" required>
-                        <label>البريد الإلكتروني</label>
-                        <input type="email" placeholder="email@example.com" required>
-                        <label>المهنة</label>
-                        <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
-                        <button type="submit" class="cta">إرسال الطلب</button>
-                        <p style="font-size:12px; color:#666; margin-top:12px; text-align:center;">الرد خلال 24-48 ساعة. للطلبات الجادة فقط.</p>
-                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    <h2>المهن الأكثر طلباً</h2>
-<h3>تكنولوجيا المعلومات</h3>
-<p>أعلى طلب وأفضل الفرص.</p>
-<h3>الهندسة</h3>
-<p>طلب مستمر مرتفع.</p>
-<h3>الرعاية الصحية</h3>
-<p>احتياج متزايد للعاملين المهرة.</p>
-<h2>اتجاهات سوق العمل</h2>
-<p>01</p>
-<h3>الرقمنة</h3>
-<p>مهارات التكنولوجيا مطلوبة بشكل متزايد.</p>
-<p>02</p>
-<h3>نقص المهارات</h3>
-<p>فرص كبيرة للمرشحين المؤهلين.</p>
-<p>03</p>
-<h3>الاختلافات الإقليمية</h3>
-<p>برلين وميونيخ تتصدران وظائف التكنولوجيا.</p>
-<h2>استفد من فرصك</h2>
-<h3>مدعوم بالبيانات</h3>
-<p>القرارات تستند إلى بيانات السوق الحالية.</p>
-<h3>واقعي</h3>
-<p>تقييم صادق لفرصك.</p>
-<h3>موجه للعمل</h3>
-<p>خطوات واضحة التالية لنجاحك.</p>
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>{{ authority_statement_title }}</h2>
+            <p>{{ authority_statement_content }}</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>{{ who_this_is_for_title }}</h2>
+            <ul>
+                <li>{{ who_this_is_for_item1 }}</li>
+                <li>{{ who_this_is_for_item2 }}</li>
+                <li>{{ who_this_is_for_item3 }}</li>
+            </ul>
+            <p>{{ who_this_is_for_disclaimer }}</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>{{ form_title }}</h3>
+                    <label>المهنة المستهدفة</label>
+                    <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
+                    <label>المؤهل العلمي</label>
+                    <input type="text" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
+                    <label>سنوات الخبرة</label>
+                    <input type="number" placeholder="مثلاً: 5" required>
+                    <label>مستوى اللغة</label>
+                    <input type="text" placeholder="مثلاً: ألمانية B2، إنجليزية C1" required>
+                    <label>رفع السيرة الذاتية أو الشهادات</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>{{ micro_trust_item1 }}</li>
+                <li>{{ micro_trust_item2 }}</li>
+                <li>{{ micro_trust_item3 }}</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>{{ final_statement_content }}</p>
+        </div>
+    </section>
 
 </main>
 
@@ -123,14 +135,14 @@
             </div>
             <div>
                 <h4>الملاحة</h4>
-                <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
-                <a href="/ar/systemlogik.html">منطق النظام</a>
-                <a href="/ar/monitor.html">المرصد</a>
+                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <a href="/ar/systemlogik">منطق النظام</a>
+                <a href="/ar/monitor">المرصد</a>
             </div>
             <div>
                 <h4>القانونية</h4>
-                <a href="/ar/impressum.html">بصمة الموقع</a>
-                <a href="/ar/datenschutz.html">خصوصية البيانات</a>
+                <a href="/ar/impressum">بصمة الموقع</a>
+                <a href="/ar/datenschutz">خصوصية البيانات</a>
             </div>
             <div>
                 <h4>الاتصال</h4>
@@ -145,12 +157,11 @@
 </footer>
 
 <script>
-document.getElementById('assessment-form').addEventListener('submit', function(e) {
-    const readiness = document.getElementById('readiness-answer').value;
-    if (readiness === 'no') {
-        e.preventDefault();
-        alert('هذه الخدمة موجهة للمتقدمين الذين يريدون البدء قريباً (خلال 3 أشهر).');
-    }
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("تم إرسال النموذج بنجاح! (هذه رسالة اختبار)");
 });
 </script>
 

@@ -1,47 +1,24 @@
-## Die 6 Bewertungskriterien
+hero_title: Chancenkarte Deutschland – Lassen Sie Ihr Profil professionell prüfen
+hero_subtitle: Viele beginnen – wenige erreichen das Ziel. Nicht wegen fehlender Chancen, sondern wegen falscher Einschätzung.
 
-### Qualifikation
+# Authority Statement
+Wir geben keine allgemeinen Ratschläge.
+Wir prüfen Profile nach klaren Kriterien des deutschen Arbeitsmarkts.
 
-Ihr Abschluss wird nach deutschen Standards bewertet.
+# Who This Is For
+- Sie haben einen Abschluss (Studium/Ausbildung)
+- Sie verfügen über Berufserfahrung
+- Sie planen konkret den Weg nach Deutschland
 
-### Berufserfahrung
+Wenn das nicht zutrifft, ist diese Prüfung nicht geeignet.
 
-Relevante Arbeitserfahrung in Ihrem Fachgebiet.
+# Form Title
+Professionelle Bewertung starten
 
-### Sprachkenntnisse
+# Micro-Trust
+- Antwort innerhalb von 24–48 Stunden
+- Prüfung basiert auf realen Anforderungen
+- Bearbeitung nur qualifizierter Anfragen
 
-Deutsch- und Englischkenntnisse sind entscheidend.
-
-## Der Bewertungsprozess
-
-01
-
-### Datenerfassung
-
-Ihre Qualifikationen werden systematisch erfasst.
-
-02
-
-### Analyse
-
-Vergleich mit aktuellen Arbeitsmarktdaten.
-
-03
-
-### Bewertung
-
-Klare Punktevergabe nach Systemlogik.
-
-## Warum die Chancenkarte?
-
-### Transparenz
-
-Klare Kriterien, keine versteckten Anforderungen.
-
-### Fairness
-
-Objektive Bewertung nach Qualifikation.
-
-### Effizienz
-
-Schnelle Entscheidung über Ihre Chancen.
+# Final Statement
+Sie erfahren Ihren realistischen Status, bevor Sie Zeit und Geld investieren.

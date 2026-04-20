@@ -2,6 +2,7 @@ import os
 import json
 from pathlib import Path
 import markdown
+import re
 
 # ============================================================================
 # CONFIGURATION
@@ -17,13 +18,69 @@ OUTPUT_AR_PATH = BASE_PATH / 'ar'
 # PAGE CONTENT DEFINITIONS
 # ============================================================================
 
+def parse_chancenkarte_markdown(md_content):
+    data = {}
+    
+    # Extract hero_title and hero_subtitle from front matter or first lines
+    lines = md_content.split('\n')
+    for line in lines:
+        if line.startswith('hero_title:'):
+            data['hero_title'] = line.replace('hero_title:', '').strip()
+        elif line.startswith('hero_subtitle:'):
+            data['hero_subtitle'] = line.replace('hero_subtitle:', '').strip()
+    
+    # Remove front matter for further parsing
+    md_content_body = re.sub(r'^(hero_title:|hero_subtitle:).*\n', '', md_content, flags=re.MULTILINE)
+
+    # Authority Statement
+    match = re.search(r'# Authority Statement\n(.*?)(?=#|$)', md_content_body, re.DOTALL)
+    if match:
+        content = match.group(1).strip().split('\n', 1)
+        data['authority_statement_title'] = 'Authority Statement'
+        data['authority_statement_content'] = content[0].strip() if content else ''
+
+    # Who This Is For
+    match = re.search(r'# Who This Is For\n(.*?)(?=#|$)', md_content_body, re.DOTALL)
+    if match:
+        content = match.group(1).strip().split('\n')
+        data['who_this_is_for_title'] = 'Who This Is For'
+        data['who_this_is_for_item1'] = content[0].replace('- ', '').strip() if len(content) > 0 else ''
+        data['who_this_is_for_item2'] = content[1].replace('- ', '').strip() if len(content) > 1 else ''
+        data['who_this_is_for_item3'] = content[2].replace('- ', '').strip() if len(content) > 2 else ''
+        data['who_this_is_for_disclaimer'] = content[3].strip() if len(content) > 3 else ''
+
+    # Form Title
+    match = re.search(r'# Form Title\n(.*?)(?=#|$)', md_content_body, re.DOTALL)
+    if match:
+        data['form_title'] = match.group(1).strip()
+
+    # Micro-Trust
+    match = re.search(r'# Micro-Trust\n(.*?)(?=#|$)', md_content_body, re.DOTALL)
+    if match:
+        content = match.group(1).strip().split('\n')
+        data['micro_trust_item1'] = content[0].replace('- ', '').strip() if len(content) > 0 else ''
+        data['micro_trust_item2'] = content[1].replace('- ', '').strip() if len(content) > 1 else ''
+        data['micro_trust_item3'] = content[2].replace('- ', '').strip() if len(content) > 2 else ''
+
+    # Final Statement
+    match = re.search(r'# Final Statement\n(.*?)(?=#|$)', md_content_body, re.DOTALL)
+    if match:
+        data['final_statement_content'] = match.group(1).strip()
+
+    return data
+
 def load_markdown_content(lang, slug):
     md_file_path = CONTENT_PATH / lang / f"{slug}.md"
     if md_file_path.exists():
         with open(md_file_path, 'r', encoding='utf-8') as f:
             md_content = f.read()
-        return markdown.markdown(md_content)
-    return "<!-- CONTENT NOT FOUND -->"
+        
+        if slug == 'chancenkarte':
+            return parse_chancenkarte_markdown(md_content)
+        else:
+            # For other pages, just convert markdown to HTML
+            return {'page_content': markdown.markdown(md_content)}
+    return {'page_content': '<!-- CONTENT NOT FOUND -->', 'hero_title': '', 'hero_subtitle': ''}
 
 PAGES_DE = {
     'index': {
@@ -38,11 +95,7 @@ PAGES_DE = {
     'chancenkarte': {
         'title': 'Berlin Gateway — Chancenkarte Bewertung',
         'slug': 'chancenkarte',
-        'hero_title': 'Chancenkarte 2026 — Ihre Chancen prüfen',
-        'hero_subtitle': 'Erfahren Sie in wenigen Minuten, ob Sie die Anforderungen der Chancenkarte erfüllen und welche Schritte als nächstes folgen.',
-        'badge_1': 'Chancenkarte',
-        'badge_2': 'Punktesystem',
-        'content': load_markdown_content('de', 'chancenkarte')
+        **load_markdown_content('de', 'chancenkarte')
     },
     'systemlogik': {
         'title': 'Berlin Gateway — Systemlogik',
@@ -92,8 +145,8 @@ PAGES_DE = {
     'insights/chancenkarte-vs-bluecard': {
         'title': 'Berlin Gateway — Chancenkarte vs. Blue Card',
         'slug': 'insights/chancenkarte-vs-bluecard',
-        'hero_title': 'Chancenkarte vs. Blue Card',
-        'hero_subtitle': 'Ein Vergleich der beiden Wege zum Arbeiten in Deutschland.',
+        'hero_title': 'Chancenkarte: Das Punktesystem',
+        'hero_subtitle': 'Verstehen Sie, wie das Punktesystem der Chancenkarte funktioniert.',
         'badge_1': 'Chancenkarte',
         'badge_2': 'Blue Card',
         'content': load_markdown_content('de', 'insights/chancenkarte-vs-bluecard')
@@ -113,11 +166,7 @@ PAGES_AR = {
     'chancenkarte': {
         'title': 'Berlin Gateway — تقييم بطاقة الفرص',
         'slug': 'chancenkarte',
-        'hero_title': 'بطاقة الفرص 2026 — تحقق من فرصك',
-        'hero_subtitle': 'اكتشف في دقائق قليلة ما إذا كنت تستوفي متطلبات بطاقة الفرص والخطوات التالية.',
-        'badge_1': 'بطاقة الفرص',
-        'badge_2': 'نظام النقاط',
-        'content': load_markdown_content('ar', 'chancenkarte')
+        **load_markdown_content('ar', 'chancenkarte')
     },
     'systemlogik': {
         'title': 'Berlin Gateway — منطق النظام',
@@ -167,8 +216,8 @@ PAGES_AR = {
     'insights/chancenkarte-vs-bluecard': {
         'title': 'Berlin Gateway — بطاقة الفرص مقابل البطاقة الزرقاء',
         'slug': 'insights/chancenkarte-vs-bluecard',
-        'hero_title': 'بطاقة الفرص مقابل البطاقة الزرقاء',
-        'hero_subtitle': 'مقارنة بين المسارين للعمل في ألمانيا.',
+        'hero_title': 'بطاقة الفرص: نظام النقاط',
+        'hero_subtitle': 'افهم كيف يعمل نظام النقاط لبطاقة الفرص.',
         'badge_1': 'بطاقة الفرص',
         'badge_2': 'البطاقة الزرقاء',
         'content': load_markdown_content('ar', 'insights/chancenkarte-vs-bluecard')
@@ -179,19 +228,36 @@ PAGES_AR = {
 # TEMPLATE RENDERING
 # ============================================================================
 
-def render_page(template_name, page_data, lang_pages, output_path):
+def render_page(template_name, page_data, output_path):
     template_file = TEMPLATES_PATH / f"master_{template_name}.html"
     with open(template_file, 'r', encoding='utf-8') as f:
         template_content = f.read()
 
-    # Replace placeholders with actual data
-    rendered_html = template_content.replace('{{ page_title }}', page_data['title'])
-    rendered_html = rendered_html.replace('{{ hero_title }}', page_data['hero_title'])
-    rendered_html = rendered_html.replace('{{ hero_subtitle }}', page_data['hero_subtitle'])
-    rendered_html = rendered_html.replace('{{ badge_1 }}', page_data['badge_1'])
-    rendered_html = rendered_html.replace('{{ badge_2 }}', page_data['badge_2'])
-    rendered_html = rendered_html.replace('{{ page_content }}', page_data['content'])
-    rendered_html = rendered_html.replace('{{ page_slug }}', page_data['slug'])
+    # Replace common placeholders
+    rendered_html = template_content.replace('{{ page_title }}', page_data.get('title', ''))
+    rendered_html = rendered_html.replace('{{ hero_title }}', page_data.get('hero_title', ''))
+    rendered_html = rendered_html.replace('{{ hero_subtitle }}', page_data.get('hero_subtitle', ''))
+    rendered_html = rendered_html.replace('{{ page_slug }}', page_data.get('slug', ''))
+
+    # Replace Chancenkarte-specific placeholders
+    if page_data.get('slug') == 'chancenkarte':
+        rendered_html = rendered_html.replace('{{ authority_statement_title }}', page_data.get('authority_statement_title', ''))
+        rendered_html = rendered_html.replace('{{ authority_statement_content }}', page_data.get('authority_statement_content', ''))
+        rendered_html = rendered_html.replace('{{ who_this_is_for_title }}', page_data.get('who_this_is_for_title', ''))
+        rendered_html = rendered_html.replace('{{ who_this_is_for_item1 }}', page_data.get('who_this_is_for_item1', ''))
+        rendered_html = rendered_html.replace('{{ who_this_is_for_item2 }}', page_data.get('who_this_is_for_item2', ''))
+        rendered_html = rendered_html.replace('{{ who_this_is_for_item3 }}', page_data.get('who_this_is_for_item3', ''))
+        rendered_html = rendered_html.replace('{{ who_this_is_for_disclaimer }}', page_data.get('who_this_is_for_disclaimer', ''))
+        rendered_html = rendered_html.replace('{{ form_title }}', page_data.get('form_title', ''))
+        rendered_html = rendered_html.replace('{{ micro_trust_item1 }}', page_data.get('micro_trust_item1', ''))
+        rendered_html = rendered_html.replace('{{ micro_trust_item2 }}', page_data.get('micro_trust_item2', ''))
+        rendered_html = rendered_html.replace('{{ micro_trust_item3 }}', page_data.get('micro_trust_item3', ''))
+        rendered_html = rendered_html.replace('{{ final_statement_content }}', page_data.get('final_statement_content', ''))
+    else:
+        # For other pages, use the generic page_content
+        rendered_html = rendered_html.replace('{{ page_content }}', page_data.get('page_content', ''))
+        rendered_html = rendered_html.replace('{{ badge_1 }}', page_data.get('badge_1', ''))
+        rendered_html = rendered_html.replace('{{ badge_2 }}', page_data.get('badge_2', ''))
 
     output_file = output_path / f"{page_data['slug']}.html"
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -205,11 +271,11 @@ def render_page(template_name, page_data, lang_pages, output_path):
 def build_site():
     # Build German pages
     for slug, data in PAGES_DE.items():
-        render_page('de', data, PAGES_DE, OUTPUT_DE_PATH)
+        render_page('de', data, OUTPUT_DE_PATH)
     
     # Build Arabic pages
     for slug, data in PAGES_AR.items():
-        render_page('ar', data, PAGES_AR, OUTPUT_AR_PATH)
+        render_page('ar', data, OUTPUT_AR_PATH)
 
     print("Site build complete!")
 

@@ -20,7 +20,7 @@
             </a></div>
         <div class="top-band__right">
             <a href="/ar/{{ page_slug }}" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+            <span style="font-size:12px; opacity:0.7;">{{ badge_1 }}</span>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
                 <div class="hero-content">
                     <h1>{{ hero_title }}</h1>
                     <p class="sub">{{ hero_subtitle }}</p>
-                    <div class="trust-row">
+                    <div class="badges">
                         <span class="badge">{{ badge_1 }}</span>
                         <span class="badge">{{ badge_2 }}</span>
                     </div>
@@ -66,8 +66,66 @@
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    {{ page_content }}
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>{{ authority_statement_title }}</h2>
+            <p>{{ authority_statement_content }}</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>{{ who_this_is_for_title }}</h2>
+            <ul>
+                <li>{{ who_this_is_for_item1 }}</li>
+                <li>{{ who_this_is_for_item2 }}</li>
+                <li>{{ who_this_is_for_item3 }}</li>
+            </ul>
+            <p>{{ who_this_is_for_disclaimer }}</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>{{ form_title }}</h3>
+                    <label>Zielberuf</label>
+                    <input type="text" placeholder="z.B. Softwareentwickler" required>
+                    <label>Abschluss</label>
+                    <input type="text" placeholder="z.B. Master Informatik" required>
+                    <label>Berufserfahrung (Jahre)</label>
+                    <input type="number" placeholder="z.B. 5" required>
+                    <label>Sprachkenntnisse</label>
+                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
+                    <label>Lebenslauf / Dokumente hochladen</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">Fall Einreichen</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>{{ micro_trust_item1 }}</li>
+                <li>{{ micro_trust_item2 }}</li>
+                <li>{{ micro_trust_item3 }}</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>{{ final_statement_content }}</p>
+        </div>
+    </section>
 
 </main>
 
@@ -101,6 +159,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
+});
+</script>
 
 </body>
 </html>

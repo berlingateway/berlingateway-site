@@ -57,7 +57,7 @@
                 <div class="hero-content">
                     <h1>Können Sie in Deutschland arbeiten?</h1>
                     <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte 2026. Strukturierte Bewertung nach deutschen Standards.</p>
-                    <div class="trust-row">
+                    <div class="badges">
                         <span class="badge">Zertifizierte Bewertung</span>
                         <span class="badge">Echtzeit-Analyse</span>
                     </div>
@@ -66,8 +66,66 @@
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>Professionelle Einschätzung nach deutschen Maßstäben</h2>
+            <p>Wir analysieren Ihre Qualifikation nicht nach allgemeinen Kriterien, sondern nach den realen Anforderungen des deutschen Arbeitsmarkts.</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>Für wen ist diese Bewertung?</h2>
+            <ul>
+                <li>Sie haben einen akademischen oder beruflichen Abschluss</li>
+                <li>Sie verfügen über relevante Berufserfahrung</li>
+                <li>Sie planen konkret den Schritt nach Deutschland</li>
+            </ul>
+            <p>Wenn diese Voraussetzungen nicht zutreffen, ist diese Bewertung nicht geeignet.</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>Erste Einschätzung starten</h3>
+                    <label>Zielberuf</label>
+                    <input type="text" placeholder="z.B. Softwareentwickler" required>
+                    <label>Abschluss</label>
+                    <input type="text" placeholder="z.B. Master Informatik" required>
+                    <label>Berufserfahrung (Jahre)</label>
+                    <input type="number" placeholder="z.B. 5" required>
+                    <label>Sprachkenntnisse</label>
+                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
+                    <label>Lebenslauf / Dokumente hochladen</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">Fall Einreichen</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>Antwort innerhalb von 24–48 Stunden</li>
+                <li>Basierend auf aktuellen Arbeitsmarktdaten</li>
+                <li>Nur ernsthafte Anfragen werden bearbeitet</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>Erhalten Sie eine klare, realistische Einschätzung Ihrer Chancen – bevor Sie Zeit und Geld investieren.</p>
+        </div>
+    </section>
 
 </main>
 
@@ -101,6 +159,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
+});
+</script>
 
 </body>
 </html>

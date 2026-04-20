@@ -20,7 +20,7 @@
             </a></div>
         <div class="top-band__right">
             <a href="/ar/systemlogik" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+            <span style="font-size:12px; opacity:0.7;">Systemlogik</span>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
                 <div class="hero-content">
                     <h1>Die Logik des deutschen Arbeitsmarkts</h1>
                     <p class="sub">Verstehen Sie die Struktur und Anforderungen, die hinter der Chancenkarte stehen.</p>
-                    <div class="trust-row">
+                    <div class="badges">
                         <span class="badge">Systemlogik</span>
                         <span class="badge">Transparenz</span>
                     </div>
@@ -66,8 +66,66 @@
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>Wie das System funktioniert</h2>
+            <p>Die Chancenkarte folgt klaren, nachvollziehbaren Regeln. Wir erklären die Logik dahinter und zeigen, wie Sie diese zu Ihrem Vorteil nutzen.</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>Diese Seite hilft Ihnen, wenn:</h2>
+            <ul>
+                <li>Sie die Anforderungen der Chancenkarte verstehen möchten</li>
+                <li>Sie wissen wollen, wie Ihre Qualifikation bewertet wird</li>
+                <li>Sie Ihre Chancen realistisch einschätzen möchten</li>
+            </ul>
+            <p>Detaillierte Informationen zur Systemlogik finden Sie in unseren Insights-Artikeln.</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>Ihre Chancen prüfen</h3>
+                    <label>Zielberuf</label>
+                    <input type="text" placeholder="z.B. Softwareentwickler" required>
+                    <label>Abschluss</label>
+                    <input type="text" placeholder="z.B. Master Informatik" required>
+                    <label>Berufserfahrung (Jahre)</label>
+                    <input type="number" placeholder="z.B. 5" required>
+                    <label>Sprachkenntnisse</label>
+                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
+                    <label>Lebenslauf / Dokumente hochladen</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">Fall Einreichen</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>Basierend auf aktuellen Arbeitsmarktdaten</li>
+                <li>Strukturierte Analyse nach deutschen Standards</li>
+                <li>Klare, verständliche Ergebnisse</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>Verstehen Sie das System und treffen Sie informierte Entscheidungen für Ihre Karriere in Deutschland.</p>
+        </div>
+    </section>
 
 </main>
 
@@ -101,6 +159,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
+});
+</script>
 
 </body>
 </html>

@@ -20,7 +20,7 @@
             </a></div>
         <div class="top-band__right">
             <a href="/ar/monitor" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+            <span style="font-size:12px; opacity:0.7;">Monitor</span>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
                 <div class="hero-content">
                     <h1>Arbeitsmarkt-Monitor Deutschland</h1>
                     <p class="sub">Aktuelle Trends und Daten für Ihre Berufsentscheidung.</p>
-                    <div class="trust-row">
+                    <div class="badges">
                         <span class="badge">Monitor</span>
                         <span class="badge">Live-Daten</span>
                     </div>
@@ -66,8 +66,66 @@
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>Datengestützte Einschätzung</h2>
+            <p>Unser Monitor zeigt aktuelle Trends im deutschen Arbeitsmarkt. Basierend auf realen Daten, nicht auf Vermutungen.</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>Der Monitor ist für Sie relevant, wenn:</h2>
+            <ul>
+                <li>Sie aktuelle Arbeitsmarkttrends verstehen möchten</li>
+                <li>Sie Ihre Berufswahl datengestützt treffen wollen</li>
+                <li>Sie wissen möchten, welche Qualifikationen gefragt sind</li>
+            </ul>
+            <p>Die Daten werden regelmäßig aktualisiert und basieren auf offiziellen Quellen.</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>Marktanalyse anfordern</h3>
+                    <label>Zielberuf</label>
+                    <input type="text" placeholder="z.B. Softwareentwickler" required>
+                    <label>Abschluss</label>
+                    <input type="text" placeholder="z.B. Master Informatik" required>
+                    <label>Berufserfahrung (Jahre)</label>
+                    <input type="number" placeholder="z.B. 5" required>
+                    <label>Sprachkenntnisse</label>
+                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
+                    <label>Lebenslauf / Dokumente hochladen</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">Fall Einreichen</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>Aktuelle Arbeitsmarktdaten</li>
+                <li>Regelmäßig aktualisiert</li>
+                <li>Basierend auf offiziellen Quellen</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>Treffen Sie Ihre Entscheidung auf Basis aktueller, verlässlicher Daten.</p>
+        </div>
+    </section>
 
 </main>
 
@@ -101,6 +159,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
+});
+</script>
 
 </body>
 </html>

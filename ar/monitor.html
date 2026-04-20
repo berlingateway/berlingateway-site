@@ -20,7 +20,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+            <span style="font-size:12px; opacity:0.7;">المراقب</span>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@
                 <div class="hero-content">
                     <h1>مراقب سوق العمل الألماني</h1>
                     <p class="sub">الاتجاهات والبيانات الحالية لقرارك الوظيفي.</p>
-                    <div class="trust-row">
+                    <div class="badges">
                         <span class="badge">المراقب</span>
                         <span class="badge">بيانات حية</span>
                     </div>
@@ -66,8 +66,66 @@
         </div>
     </section>
 
-    <!-- PAGE-SPECIFIC CONTENT -->
-    
+    <!-- AUTHORITY STATEMENT -->
+    <section class="section">
+        <div class="container">
+            <h2>تقييم قائم على البيانات</h2>
+            <p>مراقبنا يعرض الاتجاهات الحالية في سوق العمل الألماني. بناءً على بيانات حقيقية، وليس على تخمينات.</p>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR (FILTER) -->
+    <section class="section">
+        <div class="container">
+            <h2>المراقب مهم لك إذا:</h2>
+            <ul>
+                <li>تريد فهم اتجاهات سوق العمل الحالية</li>
+                <li>تريد اتخاذ قرار وظيفي قائم على البيانات</li>
+                <li>تريد معرفة المؤهلات المطلوبة</li>
+            </ul>
+            <p>يتم تحديث البيانات بانتظام وتستند إلى مصادر رسمية.</p>
+        </div>
+    </section>
+
+    <!-- FORM (GATE) -->
+    <section class="section form-gate">
+        <div class="container">
+            <div class="form-card">
+                <form class="assessment-form" id="assessment-form">
+                    <h3>اطلب تحليل السوق</h3>
+                    <label>المهنة المستهدفة</label>
+                    <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
+                    <label>المؤهل العلمي</label>
+                    <input type="text" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
+                    <label>سنوات الخبرة</label>
+                    <input type="number" placeholder="مثلاً: 5" required>
+                    <label>مستوى اللغة</label>
+                    <input type="text" placeholder="مثلاً: ألمانية B2، إنجليزية C1" required>
+                    <label>رفع السيرة الذاتية أو الشهادات</label>
+                    <input type="file" required>
+                    <button type="submit" class="cta">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICRO-TRUST -->
+    <section class="section micro-trust">
+        <div class="container">
+            <ul>
+                <li>بيانات سوق العمل الحالية</li>
+                <li>محدثة بانتظام</li>
+                <li>بناءً على مصادر رسمية</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FINAL STATEMENT -->
+    <section class="section final-statement">
+        <div class="container">
+            <p>اتخذ قرارك بناءً على بيانات حالية وموثوقة.</p>
+        </div>
+    </section>
 
 </main>
 
@@ -101,6 +159,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Form submission logic will be handled here or via a separate JS file
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Implement form submission logic (e.g., AJAX to backend endpoint)
+    alert("تم إرسال النموذج بنجاح! (هذه رسالة اختبار)");
+});
+</script>
 
 </body>
 </html>

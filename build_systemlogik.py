@@ -47,6 +47,25 @@ CONTENT_AR = {
     "cta_text": "قيّم فرصتك الآن"
 }
 
+def generate_filters_html(content_data, lang_code):
+    """Generate HTML blocks for filters with inline links"""
+    html = ""
+    link_text_de = "Ihre Chancenkarte-Bewertung starten"
+    link_text_ar = "ابدأ تقييم بطاقة الفرص الخاصة بك"
+    link_target = f"/{lang_code}/chancenkarte"
+
+    filters = [
+        {"title": content_data["filter_1_title"], "text": content_data["filter_1_text"]},
+        {"title": content_data["filter_2_title"], "text": content_data["filter_2_text"]},
+        {"title": content_data["filter_3_title"], "text": content_data["filter_3_text"]},
+    ]
+
+    for i, filter_data in enumerate(filters):
+        html += f'            <div class="filter-block">\n                <h3>{filter_data["title"]}</h3>\n                <p>{filter_data["text"]}</p>\n            </div>\n'
+        if i == 1: # After the second filter block
+            html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
+    return html
+
 def build_systemlogik_page(lang_code, content_data):
     """Build a Systemlogik page for a given language"""
     template_name = f"systemlogik_{lang_code}.html"
@@ -57,9 +76,22 @@ def build_systemlogik_page(lang_code, content_data):
     with open(template_path, 'r', encoding='utf-8') as f:
         template = f.read()
     
+    filters_content_with_links = generate_filters_html(content_data, lang_code)
+
     # Replace placeholders with actual content
-    for key, value in content_data.items():
-        template = template.replace(f"{{{{ {key} }}}}", value)
+    template = template.replace(
+        "{{ page_title }}", content_data["page_title"]
+    ).replace(
+        "{{ hero_title }}", content_data["hero_title"]
+    ).replace(
+        "{{ hero_subtitle }}", content_data["hero_subtitle"]
+    ).replace(
+        "{{ filters_content_with_links }}", filters_content_with_links
+    ).replace(
+        "{{ exclusion_text }}", content_data["exclusion_text"]
+    ).replace(
+        "{{ cta_text }}", content_data["cta_text"]
+    )
     
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(template)

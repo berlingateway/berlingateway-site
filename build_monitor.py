@@ -73,13 +73,23 @@ INSIGHTS_AR = [
     }
 ]
 
-def generate_insights_html(insights):
-    """Generate HTML blocks for insights"""
+def generate_insights_html(insights, lang_code):
+    """Generate HTML blocks for insights with inline links"""
     html = ""
-    for insight in insights:
+    link_text_de = "Ihre Chancenkarte-Bewertung starten"
+    link_text_ar = "ابدأ تقييم بطاقة الفرص الخاصة بك"
+    link_target = f"/{lang_code}/chancenkarte"
+
+    for i, insight in enumerate(insights):
         html += f'''            <div class="insight-block">
                 <h3>{insight['title']}</h3>
                 <p>{insight['insight']}</p>
+            </div>
+'''
+        # Add inline link after every 2-3 content blocks
+        if (i + 1) % 2 == 0 and i < len(insights) - 1: # After 2nd and 4th block
+            html += f'''            <div class="inline-link-container">
+                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == 'de' else link_text_ar}</a>
             </div>
 '''
     return html
@@ -92,7 +102,7 @@ def build_monitor_de():
     with open(template_path, 'r', encoding='utf-8') as f:
         template = f.read()
     
-    insights_html = generate_insights_html(INSIGHTS_DE)
+    insights_html = generate_insights_html(INSIGHTS_DE, "de")
     
     content = template.replace(
         "{{ page_title }}", "Monitor – Berlin Gateway"
@@ -119,7 +129,7 @@ def build_monitor_ar():
     with open(template_path, 'r', encoding='utf-8') as f:
         template = f.read()
     
-    insights_html = generate_insights_html(INSIGHTS_AR)
+    insights_html = generate_insights_html(INSIGHTS_AR, "ar")
     
     content = template.replace(
         "{{ page_title }}", "المراقب – Berlin Gateway"

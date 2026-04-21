@@ -508,3 +508,19 @@ html[lang="ar"] .subnav__inner { justify-content: flex-end; }
     display: flex; /* Show on mobile */
   }
 }
+
+.inline-link-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.inline-cta-link {
+    color: #B8860B !important; /* Gold color */
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.inline-cta-link:hover {
+    opacity: 0.8;
+}

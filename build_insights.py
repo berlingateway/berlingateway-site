@@ -51,11 +51,18 @@ CONTENT_AR = {
     "cta_text": "قيّم فرصتك الآن"
 }
 
-def generate_scenarios_html(scenarios):
-    """Generate HTML list items for scenarios"""
+def generate_scenarios_html(scenarios, lang_code):
+    """Generate HTML list items for scenarios with inline links"""
     html = ""
-    for scenario in scenarios:
+    link_text_de = "Ihre Chancenkarte-Bewertung starten"
+    link_text_ar = "ابدأ تقييم بطاقة الفرص الخاصة بك"
+    link_target = f"/{lang_code}/chancenkarte"
+
+    for i, scenario in enumerate(scenarios):
         html += f"            <li>{scenario}</li>\n"
+        # Add inline link after every 2-3 content blocks
+        if (i + 1) % 2 == 0 and i < len(scenarios) - 1: # After 2nd and 4th block
+            html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
     return html
 
 def build_insights_page(lang_code, content_data):
@@ -76,7 +83,7 @@ def build_insights_page(lang_code, content_data):
     ).replace(
         "{{ hero_subtitle }}", content_data["hero_subtitle"]
     ).replace(
-        "{{ scenario_blocks }}", generate_scenarios_html(content_data["scenarios"])
+        "{{ scenario_blocks }}", generate_scenarios_html(content_data["scenarios"], lang_code)
     ).replace(
         "{{ mirror_text }}", content_data["mirror_text"]
     ).replace(

@@ -66,7 +66,7 @@ def generate_filters_html(content_data, lang_code):
             html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
     return html
 
-def build_systemlogik_page(lang_code, content_data):
+def build_systemlogik_page(lang_code, content_data, current_page):
     """Build a Systemlogik page for a given language"""
     template_name = f"systemlogik_{lang_code}.html"
     template_path = TEMPLATES_DIR / template_name
@@ -92,6 +92,10 @@ def build_systemlogik_page(lang_code, content_data):
     ).replace(
         "{{ cta_text }}", content_data["cta_text"]
     )
+
+    # Replace current_page and lang placeholders for active nav item
+    template = template.replace('{{ current_page }}', current_page)
+    template = template.replace('{{ lang }}', lang_code)
     
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(template)
@@ -100,6 +104,6 @@ def build_systemlogik_page(lang_code, content_data):
 
 if __name__ == "__main__":
     print("Building Systemlogik pages...")
-    build_systemlogik_page("de", CONTENT_DE)
-    build_systemlogik_page("ar", CONTENT_AR)
+    build_systemlogik_page("de", CONTENT_DE, "systemlogik")
+    build_systemlogik_page("ar", CONTENT_AR, "systemlogik")
     print("✓ Systemlogik build complete!")

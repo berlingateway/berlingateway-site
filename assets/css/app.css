@@ -524,3 +524,68 @@ html[lang="ar"] .subnav__inner { justify-content: flex-end; }
 .inline-cta-link:hover {
     opacity: 0.8;
 }
+
+/* ========================================
+   INTERNAL NAV BAR
+   ======================================== */
+.internal-nav {
+    position: sticky;
+    top: 80px; /* Adjust based on header height */
+    z-index: 998;
+    background: var(--black);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.internal-nav__inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scroll on mobile */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+}
+
+.internal-nav__inner::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.internal-nav a {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 4px 0;
+    transition: color 0.2s;
+}
+
+.internal-nav a:hover {
+    color: var(--white);
+}
+
+.internal-nav a.active {
+    color: var(--white);
+    border-bottom: 2px solid #B8860B; /* Gold underline for active page */
+}
+
+@media (max-width: 768px) {
+    .internal-nav {
+        top: 65px; /* Adjust for smaller mobile header */
+        padding: 10px 0;
+    }
+    .internal-nav__inner {
+        gap: 20px;
+        justify-content: flex-start; /* Align items to start for scrolling */
+    }
+    .internal-nav a {
+        font-size: 13px;
+    }
+}

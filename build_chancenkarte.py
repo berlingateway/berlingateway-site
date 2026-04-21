@@ -58,7 +58,7 @@ CHANCENKARTE_AR = {
     'final_close': 'القرار الخطأ يكلفك سنوات. التقييم الصحيح يختصر الطريق.',
 }
 
-def render_page(lang, content):
+def render_page(lang, content, current_page):
     """Render a page with the given language and content."""
     if lang == 'de':
         template_path = TEMPLATES_PATH / 'chancenkarte_de.html'
@@ -77,10 +77,16 @@ def render_page(lang, content):
         if placeholder not in html:
             raise ValueError(f"Missing placeholder: {placeholder} in template {template_path}")
         html = html.replace(placeholder, str(value))
+
+    # Replace current_page and lang placeholders for active nav item
+    html = html.replace('{{ current_page }}', current_page)
+    html = html.replace('{{ lang }}', lang)
     
     # Check for remaining placeholders (excluding comments)
     import re
-    placeholders = re.findall(r'{{\s*\w+\s*}}', html)
+    placeholders = re.findall(r'{{(\s*\w+\s*)}}', html)
+    # Filter out known placeholders that are handled by JS or are optional
+    placeholders = [p for p in placeholders if p.strip() not in ['current_page', 'lang']]
     if placeholders:
         raise ValueError(f"Unresolved placeholders: {placeholders}")
     
@@ -93,6 +99,6 @@ def render_page(lang, content):
 
 if __name__ == '__main__':
     print("Building Chancenkarte pages...")
-    render_page('de', CHANCENKARTE_DE)
-    render_page('ar', CHANCENKARTE_AR)
+    render_page('de', CHANCENKARTE_DE, 'chancenkarte')
+    render_page('ar', CHANCENKARTE_AR, 'chancenkarte')
     print("✓ Chancenkarte build complete!")

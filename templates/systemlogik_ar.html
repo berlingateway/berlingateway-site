@@ -132,8 +132,18 @@
     </div>
 </header>
 
+<!-- BAND 3: INTERNAL NAV BAR -->
+<div class="internal-nav">
+    <div class="internal-nav__inner">
+        <a href="/ar/chancenkarte" class="nav-link {{ 'active' if current_page == 'chancenkarte' and lang == 'ar' else '' }}">بطاقة الفرصة</a>
+        <a href="/ar/systemlogik" class="nav-link {{ 'active' if current_page == 'systemlogik' and lang == 'ar' else '' }}">منطق النظام</a>
+        <a href="/ar/monitor" class="nav-link {{ 'active' if current_page == 'monitor' and lang == 'ar' else '' }}">المرصد</a>
+        <a href="/ar/insights" class="nav-link {{ 'active' if current_page == 'insights' and lang == 'ar' else '' }}">الرؤى</a>
+    </div>
+</div>
+
 <!-- MAIN CONTENT -->
-<main>
+<main style="padding-top: 130px;">
     <!-- HERO SECTION -->
     <section class="systemlogik-hero">
         <h1>{{ hero_title }}</h1>

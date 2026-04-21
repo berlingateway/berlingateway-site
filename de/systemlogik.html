@@ -132,8 +132,18 @@
     </div>
 </header>
 
+<!-- BAND 3: INTERNAL NAV BAR -->
+<div class="internal-nav">
+    <div class="internal-nav__inner">
+        <a href="/de/chancenkarte" class="nav-link {{ 'active' if current_page == 'chancenkarte' and lang == 'de' else '' }}">Chancenkarte</a>
+        <a href="/de/systemlogik" class="nav-link {{ 'active' if current_page == 'systemlogik' and lang == 'de' else '' }}">Systemlogik</a>
+        <a href="/de/monitor" class="nav-link {{ 'active' if current_page == 'monitor' and lang == 'de' else '' }}">Monitor</a>
+        <a href="/de/insights" class="nav-link {{ 'active' if current_page == 'insights' and lang == 'de' else '' }}">Insights</a>
+    </div>
+</div>
+
 <!-- MAIN CONTENT -->
-<main>
+<main style="padding-top: 130px;">
     <!-- HERO SECTION -->
     <section class="systemlogik-hero">
         <h1>Die Basis unserer Zusammenarbeit</h1>

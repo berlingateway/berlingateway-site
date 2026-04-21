@@ -26,7 +26,7 @@ CONTENT_DE = {
         "Sie haben einen exzellenten Abschluss, aber keine deutsche Arbeitserfahrung.",
         "Ihre Qualifikation ist im Ausland hoch angesehen, in Deutschland jedoch unbekannt.",
         "Sie sprechen gut Englisch, aber Ihr Deutsch ist noch nicht auf B1-Niveau.",
-        "Sie erhalten Absagen, weil Ihr Profil nicht 'passt', obwohl Sie qualifiziert sind.",
+        "Sie erhalten Absagen, weil Ihr Profil nicht \'passt\', obwohl Sie qualifiziert sind.",
         "Sie suchen nach einer klaren Strategie, um in den deutschen Arbeitsmarkt einzusteigen.",
         "Sie möchten Ihre Chancen maximieren und Fehler vermeiden."
     ],
@@ -43,7 +43,7 @@ CONTENT_AR = {
         "لديك شهادة ممتازة، ولكن لا توجد خبرة عمل ألمانية.",
         "مؤهلاتك تحظى بتقدير كبير في الخارج، ولكنها غير معروفة في ألمانيا.",
         "تتحدث الإنجليزية بطلاقة، ولكن مستوى لغتك الألمانية لم يصل بعد إلى B1.",
-        "تتلقى رفضًا لأن ملفك الشخصي لا 'يتناسب'، على الرغم من أنك مؤهل.",
+        "تتلقى رفضًا لأن ملفك الشخصي لا \'يتناسب\'، على الرغم من أنك مؤهل.",
         "تبحث عن استراتيجية واضحة لدخول سوق العمل الألماني.",
         "ترغب في زيادة فرصك وتجنب الأخطاء."
     ],
@@ -65,11 +65,11 @@ def generate_scenarios_html(scenarios, lang_code):
             html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
     return html
 
-def build_insights_page(lang_code, content_data):
+def render_page(lang, content_data, current_page):
     """Build an Insights page for a given language"""
-    template_name = f"insights_{lang_code}.html"
+    template_name = f"insights_{lang}.html"
     template_path = TEMPLATES_DIR / template_name
-    output_dir = OUTPUT_DIR_DE if lang_code == "de" else OUTPUT_DIR_AR
+    output_dir = OUTPUT_DIR_DE if lang == "de" else OUTPUT_DIR_AR
     output_path = output_dir / "insights.html"
     
     with open(template_path, 'r', encoding='utf-8') as f:
@@ -83,12 +83,16 @@ def build_insights_page(lang_code, content_data):
     ).replace(
         "{{ hero_subtitle }}", content_data["hero_subtitle"]
     ).replace(
-        "{{ scenario_blocks }}", generate_scenarios_html(content_data["scenarios"], lang_code)
+        "{{ scenario_blocks }}", generate_scenarios_html(content_data["scenarios"], lang)
     ).replace(
         "{{ mirror_text }}", content_data["mirror_text"]
     ).replace(
         "{{ cta_text }}", content_data["cta_text"]
     )
+
+    # Replace current_page and lang placeholders for active nav item
+    template = template.replace('{{ current_page }}', current_page)
+    template = template.replace('{{ lang }}', lang)
     
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(template)
@@ -97,6 +101,22 @@ def build_insights_page(lang_code, content_data):
 
 if __name__ == "__main__":
     print("Building Insights pages...")
-    build_insights_page("de", CONTENT_DE)
-    build_insights_page("ar", CONTENT_AR)
+    insights_content_de = {
+        "page_title": "Insights – Berlin Gateway",
+        "hero_title": "Ihre Situation. Unsere Realität.",
+        "hero_subtitle": "Erkennen Sie sich in diesen Szenarien wieder? Dann sind Sie hier richtig.",
+        "scenarios": CONTENT_DE["scenarios"],
+        "mirror_text": CONTENT_DE["mirror_text"],
+        "cta_text": CONTENT_DE["cta_text"]
+    }
+    insights_content_ar = {
+        "page_title": "رؤى – Berlin Gateway",
+        "hero_title": "وضعك. واقعنا.",
+        "hero_subtitle": "هل تجد نفسك في هذه السيناريوهات؟ إذن أنت في المكان الصحيح.",
+        "scenarios": CONTENT_AR["scenarios"],
+        "mirror_text": CONTENT_AR["mirror_text"],
+        "cta_text": CONTENT_AR["cta_text"]
+    }
+    render_page("de", insights_content_de, "insights")
+    render_page("ar", insights_content_ar, "insights")
     print("✓ Insights build complete!")

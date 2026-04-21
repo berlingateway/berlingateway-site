@@ -81,75 +81,62 @@ def generate_insights_html(insights, lang_code):
     link_target = f"/{lang_code}/chancenkarte"
 
     for i, insight in enumerate(insights):
-        html += f'''            <div class="insight-block">
-                <h3>{insight['title']}</h3>
-                <p>{insight['insight']}</p>
-            </div>
-'''
+        html += f'            <div class="insight-block">\n                <h3>{insight["title"]}</h3>\n                <p>{insight["insight"]}</p>\n            </div>\n'
         # Add inline link after every 2-3 content blocks
         if (i + 1) % 2 == 0 and i < len(insights) - 1: # After 2nd and 4th block
-            html += f'''            <div class="inline-link-container">
-                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == 'de' else link_text_ar}</a>
-            </div>
-'''
+            html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
     return html
 
-def build_monitor_de():
-    """Build German Monitor page"""
-    template_path = TEMPLATES_DIR / "monitor_de.html"
-    output_path = OUTPUT_DIR_DE / "monitor.html"
+def render_page(lang, content_data, current_page):
+    """Build a Monitor page for a given language"""
+    template_name = f"monitor_{lang}.html"
+    template_path = TEMPLATES_DIR / template_name
+    output_dir = OUTPUT_DIR_DE if lang == "de" else OUTPUT_DIR_AR
+    output_path = output_dir / "monitor.html"
     
     with open(template_path, 'r', encoding='utf-8') as f:
         template = f.read()
     
-    insights_html = generate_insights_html(INSIGHTS_DE, "de")
+    insights_html = generate_insights_html(content_data["insights"], lang)
     
-    content = template.replace(
-        "{{ page_title }}", "Monitor – Berlin Gateway"
+    # Replace placeholders with actual content
+    template = template.replace(
+        "{{ page_title }}", content_data["page_title"]
     ).replace(
-        "{{ hero_title }}", "Markteinblicke für Fachkräfte"
+        "{{ hero_title }}", content_data["hero_title"]
     ).replace(
-        "{{ hero_subtitle }}", "Aktuelle Trends und Chancen im deutschen Arbeitsmarkt. Direkt. Faktenbasiert."
+        "{{ hero_subtitle }}", content_data["hero_subtitle"]
     ).replace(
         "{{ insights_blocks }}", insights_html
     ).replace(
-        "{{ cta_text }}", "Lassen Sie Ihre Situation bewerten"
+        "{{ cta_text }}", content_data["cta_text"]
     )
-    
-    with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(content)
-    
-    print(f"✓ {output_path}")
 
-def build_monitor_ar():
-    """Build Arabic Monitor page"""
-    template_path = TEMPLATES_DIR / "monitor_ar.html"
-    output_path = OUTPUT_DIR_AR / "monitor.html"
-    
-    with open(template_path, 'r', encoding='utf-8') as f:
-        template = f.read()
-    
-    insights_html = generate_insights_html(INSIGHTS_AR, "ar")
-    
-    content = template.replace(
-        "{{ page_title }}", "المراقب – Berlin Gateway"
-    ).replace(
-        "{{ hero_title }}", "رؤى السوق للعاملين بالمهارات"
-    ).replace(
-        "{{ hero_subtitle }}", "اتجاهات وفرص حالية في سوق العمل الألماني. مباشر. قائم على الحقائق."
-    ).replace(
-        "{{ insights_blocks }}", insights_html
-    ).replace(
-        "{{ cta_text }}", "قيّم فرصتك الآن"
-    )
+    # Replace current_page and lang placeholders for active nav item
+    template = template.replace('{{ current_page }}', current_page)
+    template = template.replace('{{ lang }}', lang)
     
     with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(content)
+        f.write(template)
     
     print(f"✓ {output_path}")
 
 if __name__ == "__main__":
     print("Building Monitor pages...")
-    build_monitor_de()
-    build_monitor_ar()
+    monitor_content_de = {
+        "page_title": "Monitor – Berlin Gateway",
+        "hero_title": "Markteinblicke für Fachkräfte",
+        "hero_subtitle": "Aktuelle Trends und Chancen im deutschen Arbeitsmarkt. Direkt. Faktenbasiert.",
+        "insights": INSIGHTS_DE,
+        "cta_text": "Lassen Sie Ihre Situation bewerten"
+    }
+    monitor_content_ar = {
+        "page_title": "المراقب – Berlin Gateway",
+        "hero_title": "رؤى السوق للعاملين بالمهارات",
+        "hero_subtitle": "اتجاهات وفرص حالية في سوق العمل الألماني. مباشر. قائم على الحقائق.",
+        "insights": INSIGHTS_AR,
+        "cta_text": "قيّم فرصتك الآن"
+    }
+    render_page("de", monitor_content_de, "monitor")
+    render_page("ar", monitor_content_ar, "monitor")
     print("✓ Monitor build complete!")

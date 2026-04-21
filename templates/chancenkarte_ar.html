@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .chancenkarte-form-card {
+            max-width: 520px;
+            margin: 60px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .chancenkarte-form-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .chancenkarte-form-card label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .chancenkarte-form-card input,
+        .chancenkarte-form-card select,
+        .chancenkarte-form-card textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+        }
+        .chancenkarte-form-card button {
+            width: 100%;
+            padding: 14px;
+            background-color: #B8860B;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .chancenkarte-form-card button:hover {
+            background-color: #9a6f08;
+        }
+        .section-authority {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .section-authority h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .section-authority p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .section-authority ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 15px 0;
+        }
+        .section-authority li {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-right: 20px;
+            position: relative;
+        }
+        .section-authority li:before {
+            content: "•";
+            position: absolute;
+            right: 0;
+        }
+        .micro-trust {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .final-close {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/de/chancenkarte" class="lang-switch">Deutsch</a>
+        </div>
+    </div>
+</div>
+
+<!-- BAND 2: MINIMAL HEADER (WHITE) -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/ar/" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+    </div>
+</header>
+
+<!-- BAND 4: CONTENT BODY (WHITE) -->
+<main>
+    <!-- SECTION 1: HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero-content">
+                    <h1>{{ hero_title }}</h1>
+                    <p class="sub">{{ hero_subtitle }}</p>
+                    <a href="#form-section" class="cta" style="display: inline-block; background-color: #B8860B; color: white; padding: 14px 28px; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 20px;">{{ cta_primary }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: AUTHORITY + HARD FILTER -->
+    <section class="section-authority">
+        <p>{{ authority_statement }}</p>
+        <p><strong>{{ filter_title }}</strong></p>
+        <ul>
+            <li>{{ filter_item1 }}</li>
+            <li>{{ filter_item2 }}</li>
+            <li>{{ filter_item3 }}</li>
+        </ul>
+        <p><em>{{ filter_disclaimer }}</em></p>
+    </section>
+
+    <!-- SECTION 3: FORM -->
+    <section id="form-section">
+        <div class="chancenkarte-form-card">
+            <form class="assessment-form" id="assessment-form">
+                <h3>{{ form_title }}</h3>
+                
+                <label for="target-position">{{ form_field_1_label }}</label>
+                <input type="text" id="target-position" name="target_position" placeholder="مثلاً: مهندس برمجيات" required>
+                
+                <label for="qualification">{{ form_field_2_label }}</label>
+                <input type="text" id="qualification" name="qualification" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
+                
+                <label for="experience">{{ form_field_3_label }}</label>
+                <select id="experience" name="experience" required>
+                    <option value="">-- اختر --</option>
+                    <option value="0-2">0–2 سنة</option>
+                    <option value="2-5">2–5 سنوات</option>
+                    <option value="5+">5+ سنوات</option>
+                </select>
+                
+                <label for="language">{{ form_field_4_label }}</label>
+                <select id="language" name="language" required>
+                    <option value="">-- اختر --</option>
+                    <option value="a1-a2">A1–A2</option>
+                    <option value="b1">B1</option>
+                    <option value="b2">B2</option>
+                    <option value="c1+">C1+</option>
+                </select>
+                
+                <label for="cv-upload">{{ form_field_5_label }}</label>
+                <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
+                
+                <button type="submit">{{ form_button }}</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MICRO TRUST -->
+    <section class="micro-trust">
+        <p>{{ micro_trust }}</p>
+    </section>
+
+    <!-- SECTION 5: FINAL CLOSE -->
+    <section class="final-close">
+        <p>{{ final_close }}</p>
+    </section>
+
+</main>
+
+<!-- FOOTER (BLACK) -->
+<footer class="footer">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>تقييم مهني احترافي لألمانيا.</p>
+            </div>
+            <div>
+                <h4>الملاحة</h4>
+                <a href="/ar/">الصفحة الرئيسية</a>
+                <a href="/ar/systemlogik">منطق النظام</a>
+                <a href="/ar/monitor">المرصد</a>
+            </div>
+            <div>
+                <h4>القانونية</h4>
+                <a href="/ar/impressum">بصمة الموقع</a>
+                <a href="/ar/datenschutz">خصوصية البيانات</a>
+            </div>
+            <div>
+                <h4>الاتصال</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+        </div>
+    </div>
+</footer>
+
+<script>
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Form submission will be handled by backend
+    alert("تم إرسال الطلب. سنرد عليك خلال 24–48 ساعة.");
+});
+</script>
+
+</body>
+</html>

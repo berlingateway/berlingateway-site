@@ -87,6 +87,122 @@
         html[dir="rtl"] .systemlogik-cta-button:hover {
             background-color: #9a6f08;
         }
+        html[dir="rtl"] .routing-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        html[dir="rtl"] .routing-section-title {
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+        html[dir="rtl"] .routing-section-intro {
+            font-size: 16px;
+            text-align: center;
+            color: #4B5563;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        html[dir="rtl"] .routing-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        html[dir="rtl"] .routing-card {
+            padding: 30px;
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        html[dir="rtl"] .routing-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: var(--black);
+        }
+        html[dir="rtl"] .routing-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #4B5563;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+        html[dir="rtl"] .routing-card-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #B8860B;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background-color 0.2s;
+            align-self: center;
+        }
+        html[dir="rtl"] .routing-card-button:hover {
+            background-color: #9a6f08;
+        }
+        html[dir="rtl"] .decision-cta-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+        }
+        html[dir="rtl"] .decision-cta-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            color: var(--black);
+        }
+        html[dir="rtl"] .decision-cta-section p {
+            font-size: 16px;
+            color: #4B5563;
+            margin: 0 0 30px 0;
+            line-height: 1.6;
+        }
+        html[dir="rtl"] .decision-cta-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #B8860B;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background-color 0.2s;
+            margin-bottom: 30px;
+        }
+        html[dir="rtl"] .decision-cta-primary:hover {
+            background-color: #9a6f08;
+        }
+        html[dir="rtl"] .decision-cta-secondary {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+        }
+        html[dir="rtl"] .decision-cta-secondary a {
+            color: #B8860B;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        html[dir="rtl"] .decision-cta-secondary a:hover {
+            opacity: 0.8;
+        }
         @media (max-width: 768px) {
             html[dir="rtl"] .systemlogik-hero {
                 padding: 60px 20px;
@@ -103,6 +219,19 @@
             }
             html[dir="rtl"] .exclusion-statement {
                 font-size: 16px;
+            }
+            html[dir="rtl"] .routing-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            html[dir="rtl"] .routing-section-title {
+                font-size: 22px;
+            }
+            html[dir="rtl"] .decision-cta-section {
+                padding: 40px 20px;
+            }
+            html[dir="rtl"] .decision-cta-section h2 {
+                font-size: 22px;
             }
         }
     </style>
@@ -162,7 +291,7 @@
                 <p>مستوى B1 على الأقل في اللغة الألمانية. التواصل أمر حاسم.</p>
             </div>
             <div class="inline-link-container">
-                <a href="/ar/chancenkarte" class="inline-cta-link">ابدأ تقييم بطاقة الفرص الخاصة بك</a>
+                <a href="/ar/chancenkarte" class="inline-cta-link">ابدأ تقييم بطاقة الفرصة الخاصة بك</a>
             </div>
             <div class="filter-block">
                 <h3>الخبرة المهنية</h3>
@@ -177,9 +306,40 @@
         <p>إذا لم تستوف هذه المعايير، فلا يمكننا دعمك حاليًا.</p>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="systemlogik-cta">
-        <a href="/ar/chancenkarte" class="systemlogik-cta-button">قيّم فرصتك الآن</a>
+    <!-- ROUTING SECTION -->
+    <section class="routing-section">
+        <h2 class="routing-section-title">الخطوة التالية — ما الصفحة المناسبة لك الآن؟</h2>
+        <p class="routing-section-intro">ليس كل زائر يحتاج نفس الصفحة. اختر المسار المناسب حسب ما تحتاجه الآن.</p>
+        <div class="routing-cards-grid">
+                        <div class="routing-card">
+                <h3>افهم وضع السوق</h3>
+                <p>إذا كنت تريد أولاً فهم وضع سوق العمل الألماني بالنسبة لملفك.</p>
+                <a href="/ar/monitor" class="routing-card-button">إلى المرصد</a>
+            </div>
+            <div class="routing-card">
+                <h3>افهم فرصك بعمق</h3>
+                <p>إذا كنت تحتاج تحليلاً أوضح وسيناريوهات واقعية وخطوات مفهومة.</p>
+                <a href="/ar/insights" class="routing-card-button">إلى الرؤى</a>
+            </div>
+            <div class="routing-card">
+                <h3>قيّم ملفك مباشرة</h3>
+                <p>إذا كنت لا تريد معلومات إضافية بل تريد حكماً واضحاً على فرصتك الحقيقية.</p>
+                <a href="/ar/chancenkarte" class="routing-card-button">ابدأ تقييم بطاقة الفرصة</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DECISION CTA SECTION -->
+    <section class="decision-cta-section">
+        <h2>خذ القرار الصحيح الآن</h2>
+        <p>بعد أن فهمت منطق النظام، لا تؤجل الخطوة التالية.</p>
+        <a href="/ar/chancenkarte" class="decision-cta-primary">ابدأ تقييم بطاقة الفرصة</a>
+        <div class="decision-cta-secondary">
+                        <a href="/ar/monitor">المرصد →</a>
+            <a href="/ar/insights">الرؤى →</a>
+
+        </div>
     </section>
 </main>
 

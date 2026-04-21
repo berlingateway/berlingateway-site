@@ -87,6 +87,122 @@
         .systemlogik-cta-button:hover {
             background-color: #9a6f08;
         }
+        .routing-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .routing-section-title {
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+        .routing-section-intro {
+            font-size: 16px;
+            text-align: center;
+            color: #4B5563;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .routing-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .routing-card {
+            padding: 30px;
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .routing-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: var(--black);
+        }
+        .routing-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #4B5563;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+        .routing-card-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #B8860B;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background-color 0.2s;
+            align-self: center;
+        }
+        .routing-card-button:hover {
+            background-color: #9a6f08;
+        }
+        .decision-cta-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+        }
+        .decision-cta-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            color: var(--black);
+        }
+        .decision-cta-section p {
+            font-size: 16px;
+            color: #4B5563;
+            margin: 0 0 30px 0;
+            line-height: 1.6;
+        }
+        .decision-cta-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #B8860B;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background-color 0.2s;
+            margin-bottom: 30px;
+        }
+        .decision-cta-primary:hover {
+            background-color: #9a6f08;
+        }
+        .decision-cta-secondary {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+        }
+        .decision-cta-secondary a {
+            color: #B8860B;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        .decision-cta-secondary a:hover {
+            opacity: 0.8;
+        }
         @media (max-width: 768px) {
             .systemlogik-hero {
                 padding: 60px 20px;
@@ -103,6 +219,19 @@
             }
             .exclusion-statement {
                 font-size: 16px;
+            }
+            .routing-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .routing-section-title {
+                font-size: 22px;
+            }
+            .decision-cta-section {
+                padding: 40px 20px;
+            }
+            .decision-cta-section h2 {
+                font-size: 22px;
             }
         }
     </style>
@@ -177,9 +306,40 @@
         <p>Wenn Sie diese Kriterien nicht erfüllen, können wir Sie derzeit nicht unterstützen.</p>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="systemlogik-cta">
-        <a href="/de/chancenkarte" class="systemlogik-cta-button">Lassen Sie Ihre Situation bewerten</a>
+    <!-- ROUTING SECTION -->
+    <section class="routing-section">
+        <h2 class="routing-section-title">Nächster Schritt – was ist für Sie jetzt richtig?</h2>
+        <p class="routing-section-intro">Nicht jeder Besucher braucht dieselbe Seite. Wählen Sie den nächsten Schritt passend zu Ihrer Situation.</p>
+        <div class="routing-cards-grid">
+                        <div class="routing-card">
+                <h3>Marktlage prüfen</h3>
+                <p>Wenn Sie zuerst verstehen möchten, wie der deutsche Arbeitsmarkt für Ihr Profil aussieht.</p>
+                <a href="/de/monitor" class="routing-card-button">Zum Monitor</a>
+            </div>
+            <div class="routing-card">
+                <h3>Chancen besser verstehen</h3>
+                <p>Wenn Sie Einordnung, Szenarien und realistische Perspektiven für Ihren Weg brauchen.</p>
+                <a href="/de/insights" class="routing-card-button">Zu Insights</a>
+            </div>
+            <div class="routing-card">
+                <h3>Profil direkt bewerten lassen</h3>
+                <p>Wenn Sie keine Theorie mehr brauchen, sondern eine konkrete Einschätzung Ihrer realen Chance.</p>
+                <a href="/de/chancenkarte" class="routing-card-button">Chancenkarte-Bewertung starten</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DECISION CTA SECTION -->
+    <section class="decision-cta-section">
+        <h2>Treffen Sie jetzt die richtige Entscheidung</h2>
+        <p>Wer die Logik verstanden hat, sollte den nächsten Schritt nicht aufschieben.</p>
+        <a href="/de/chancenkarte" class="decision-cta-primary">Chancenkarte-Bewertung starten</a>
+        <div class="decision-cta-secondary">
+                        <a href="/de/monitor">Monitor ansehen →</a>
+            <a href="/de/insights">Insights lesen →</a>
+
+        </div>
     </section>
 </main>
 

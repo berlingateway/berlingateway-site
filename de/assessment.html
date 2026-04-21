@@ -60,10 +60,28 @@
   }
   </script>
   <style>
+    .assessment-hero {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 40px 20px;
+    }
+    .assessment-hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--black);
+      margin: 0 0 16px 0;
+    }
+    .assessment-hero p {
+      font-size: 18px;
+      color: #4B5563;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
     .assessment-container {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 20px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
     .progress-bar {
       width: 100%;
@@ -75,7 +93,7 @@
     }
     .progress-fill {
       height: 100%;
-      background: #0B3B8C;
+      background: #B8860B;
       width: 0%;
       transition: width 0.3s ease;
     }
@@ -91,13 +109,13 @@
       to { opacity: 1; }
     }
     .step-title {
-      color: #0B3B8C;
+      color: var(--black);
       font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
     }
     .step-description {
-      color: #64748b;
+      color: #4B5563;
       font-size: 16px;
       margin-bottom: 32px;
       line-height: 1.6;
@@ -109,34 +127,36 @@
       display: flex;
       align-items: center;
       padding: 16px;
-      border: 2px solid #e2e8f0;
+      border: 2px solid #E5E7EB;
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
       margin-bottom: 12px;
+      background: white;
     }
     .option-label:hover {
-      border-color: #0B3B8C;
-      background: #f8fafc;
+      border-color: #B8860B;
+      background: #fafaf8;
     }
     .option-label input[type="radio"] {
       margin-right: 12px;
       cursor: pointer;
       width: 20px;
       height: 20px;
+      accent-color: #B8860B;
     }
     .option-text {
       flex: 1;
     }
     .option-points {
-      color: #0B3B8C;
-      font-weight: 600;
+      color: #B8860B;
+      font-weight: 700;
       font-size: 14px;
     }
     .button-group {
       display: flex;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 40px;
       justify-content: space-between;
     }
     .btn {
@@ -144,29 +164,30 @@
       border: none;
       border-radius: 6px;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
     }
     .btn-primary {
-      background: #0B3B8C;
+      background: #B8860B;
       color: white;
       flex: 1;
     }
     .btn-primary:hover {
-      background: #082a5c;
+      background: #9a6f08;
     }
     .btn-secondary {
-      background: #e2e8f0;
-      color: #334155;
+      background: #E5E7EB;
+      color: #4B5563;
       padding: 14px 28px;
     }
     .btn-secondary:hover {
-      background: #cbd5e1;
+      background: #D1D5DB;
     }
     .result-section {
       display: none;
-      background: #f8fafc;
+      background: white;
+      border: 1px solid #E5E7EB;
       border-radius: 12px;
       padding: 40px;
       text-align: center;
@@ -178,26 +199,26 @@
     }
     .result-score {
       font-size: 64px;
-      font-weight: 700;
-      color: #0B3B8C;
+      font-weight: 800;
+      color: #B8860B;
       margin-bottom: 12px;
     }
     .result-status {
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 16px;
     }
     .result-status.excellent {
       color: #10b981;
     }
     .result-status.good {
-      color: #f59e0b;
+      color: #B8860B;
     }
     .result-status.early {
       color: #ef4444;
     }
     .result-message {
-      color: #64748b;
+      color: #4B5563;
       font-size: 16px;
       line-height: 1.6;
       margin-bottom: 32px;
@@ -205,128 +226,59 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .lead-form {
-      background: white;
-      border: 2px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 32px;
+    .result-cta {
       margin-top: 32px;
     }
-    .lead-form-title {
-      color: #0B3B8C;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-    .lead-form-description {
-      color: #64748b;
-      font-size: 14px;
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .form-group {
-      margin-bottom: 16px;
-    }
-    .form-group label {
-      display: block;
-      color: #334155;
-      font-weight: 600;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-    .form-group input {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
-    .form-group input:focus {
-      outline: none;
-      border-color: #0B3B8C;
-      box-shadow: 0 0 0 3px rgba(11, 59, 140, 0.1);
-    }
-    .form-submit {
-      width: 100%;
-      padding: 14px;
-      background: #0B3B8C;
+    .result-cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #B8860B;
       color: white;
-      border: none;
+      text-decoration: none;
       border-radius: 6px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .form-submit:hover {
-      background: #082a5c;
-    }
-    .form-message {
-      text-align: center;
-      margin-top: 12px;
-      font-size: 13px;
-      color: #64748b;
-    }
-    .score-display {
-      background: white;
-      border: 2px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 32px;
-      margin: 32px 0;
-      text-align: center;
-    }
-    .score-value {
-      font-size: 48px;
       font-weight: 700;
-      color: #0B3B8C;
-      margin-bottom: 8px;
+      transition: background 0.2s ease;
     }
-    .score-label {
-      color: #64748b;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 16px;
+    .result-cta a:hover {
+      background: #9a6f08;
     }
-    .score-bar {
-      width: 100%;
-      height: 12px;
-      background: #e2e8f0;
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-    .score-bar-fill {
-      height: 100%;
-      width: 0%;
-      background: #ef4444;
-      transition: width 0.3s ease, background 0.3s ease;
-      border-radius: 6px;
-    }
-    .score-message {
-      color: #64748b;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .success-message {
-      background: #d1fae5;
-      border: 1px solid #6ee7b7;
-      border-radius: 6px;
-      color: #065f46;
-      padding: 12px;
-      margin-top: 16px;
+    .micro-trust {
+      background: #f9f8f6;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 40px 0;
       text-align: center;
-      font-size: 14px;
-      display: none;
     }
-    @media (max-width: 480px) {
-      .assessment-container {
-        padding: 16px;
-        margin: 20px auto;
+    .micro-trust p {
+      color: #4B5563;
+      font-size: 14px;
+      margin: 8px 0;
+      font-weight: 600;
+    }
+    .final-cta {
+      text-align: center;
+      margin: 60px 0;
+    }
+    .final-cta a {
+      display: inline-block;
+      padding: 16px 40px;
+      background: #B8860B;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: background 0.2s ease;
+    }
+    .final-cta a:hover {
+      background: #9a6f08;
+    }
+    @media (max-width: 768px) {
+      .assessment-hero h1 {
+        font-size: 28px;
       }
-      .step-title {
-        font-size: 20px;
+      .assessment-hero p {
+        font-size: 16px;
       }
       .result-score {
         font-size: 48px;
@@ -374,280 +326,176 @@
       <button class="language-toggle">🌐 Deutsch</button>
     </div>
   </header>
-<nav class="breadcrumb" >
-  <a href="/de/" style="color:#0B3B8C; text-decoration:none; font-weight:500;">Startseite</a> >
-  <a href="/de/assessment.html" style="color:#0B3B8C; text-decoration:none; font-weight:500; margin:0 8px;">Bewertung</a> >
-  <span style="color:#334155; font-weight:600;">Assessment</span>
-</nav>
 
+  <main style="padding-top: 130px;">
+    <!-- HERO SECTION -->
+    <section class="assessment-hero">
+      <h1>Prüfen Sie Ihre Chancenkarte-Punkte jetzt</h1>
+      <p>Erhalten Sie sofort eine realistische Einschätzung basierend auf Ihren Angaben.</p>
+    </section>
 
-  <main style="padding: 40px 20px;">
-    <div class="container">
-      <!-- HERO SECTION -->
-      <section style="text-align: center; margin-bottom: 48px;">
-        <h1 style="color: #0B3B8C; font-size: 36px; margin-bottom: 12px; font-weight: 600;">Chancenkarte Punkte Rechner</h1>
-        <p style="color: #64748b; font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
-          Berechnen Sie Ihre Chancenkarte-Punkte in 5 einfachen Schritten. Erfahren Sie sofort, ob Sie die Mindestanforderung von 6 Punkten erfüllen.
-        </p>
-      </section>
+    <!-- ASSESSMENT TOOL -->
+    <div class="assessment-container">
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
 
-      <!-- ASSESSMENT TOOL -->
-      <div class="assessment-container">
-        <!-- PROGRESS BAR -->
-        <div class="progress-bar">
-          
+      <!-- STEP 1: QUALIFICATION -->
+      <div class="step active" id="step1">
+        <div class="step-title">Schritt 1: Ihre Qualifikation</div>
+        <div class="step-description">Was ist Ihr höchster Abschluss?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="qualification" value="3">
+            <span class="option-text">Universitätsabschluss (Bachelor/Master)</span>
+            <span class="option-points">3 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="qualification" value="2">
+            <span class="option-text">Berufsausbildung / Fachschule</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="qualification" value="0">
+            <span class="option-text">Keine formale Qualifikation</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
         </div>
-
-        <!-- STEP 1: QUALIFICATION -->
-        <div class="step active" id="step1">
-          <div class="step-title">Schritt 1: Qualifikation</div>
-          <div class="step-description">Welcher Abschluss liegt vor?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="qualification" value="4" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Hochschulabschluss (Bachelor/Master)</div>
-              </div>
-              <div class="option-points">4 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="qualification" value="2" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Berufsausbildung oder Fachschule</div>
-              </div>
-              <div class="option-points">2 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="qualification" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Kein formaler Abschluss</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-          </div>
+        <div class="button-group">
+          <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
         </div>
+      </div>
 
-        <!-- STEP 2: EXPERIENCE -->
-        <div class="step" id="step2">
-          <div class="step-title">Schritt 2: Berufserfahrung</div>
-          <div class="step-description">Wie viel relevante Berufserfahrung haben Sie?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="experience" value="3" onchange="updateProgress()">
-              <div class="option-text">
-                <div>5+ Jahre in den letzten 7 Jahren</div>
-              </div>
-              <div class="option-points">3 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="experience" value="2" onchange="updateProgress()">
-              <div class="option-text">
-                <div>2-4 Jahre in den letzten 5 Jahren</div>
-              </div>
-              <div class="option-points">2 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="experience" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Weniger als 2 Jahre</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
-            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-          </div>
+      <!-- STEP 2: EXPERIENCE -->
+      <div class="step" id="step2">
+        <div class="step-title">Schritt 2: Berufserfahrung</div>
+        <div class="step-description">Wie viele Jahre Berufserfahrung haben Sie?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="experience" value="3">
+            <span class="option-text">Mehr als 5 Jahre</span>
+            <span class="option-points">3 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="experience" value="2">
+            <span class="option-text">2-5 Jahre</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="experience" value="0">
+            <span class="option-text">Weniger als 2 Jahre</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
         </div>
-
-        <!-- STEP 3: LANGUAGE -->
-        <div class="step" id="step3">
-          <div class="step-title">Schritt 3: Sprachkenntnisse</div>
-          <div class="step-description">Welches Deutsch- oder Englischniveau haben Sie?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="language" value="3" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Deutsch B2+ oder Englisch C1+</div>
-              </div>
-              <div class="option-points">3 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="language" value="2" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Deutsch B1 oder Englisch B2</div>
-              </div>
-              <div class="option-points">2 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="language" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Deutsch A2 oder Englisch B1</div>
-              </div>
-              <div class="option-points">1 Punkt</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="language" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>A1 oder keine Kenntnisse</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
-            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-          </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
         </div>
+      </div>
 
-        <!-- STEP 4: AGE -->
-        <div class="step" id="step4">
-          <div class="step-title">Schritt 4: Alter</div>
-          <div class="step-description">Wie alt sind Sie?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="age" value="2" onchange="updateProgress()">
-              <div class="option-text">
-                <div>35 Jahre oder jünger</div>
-              </div>
-              <div class="option-points">2 Punkte</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="age" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>36-40 Jahre</div>
-              </div>
-              <div class="option-points">1 Punkt</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="age" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Älter als 40 Jahre</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
-            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
-          </div>
+      <!-- STEP 3: LANGUAGE -->
+      <div class="step" id="step3">
+        <div class="step-title">Schritt 3: Deutschkenntnisse</div>
+        <div class="step-description">Welches Sprachniveau haben Sie?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="language" value="3">
+            <span class="option-text">C1 oder höher</span>
+            <span class="option-points">3 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="language" value="2">
+            <span class="option-text">B2 / B3</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="language" value="0">
+            <span class="option-text">B1 oder darunter</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
         </div>
-
-        <!-- STEP 5: GERMANY CONNECTION -->
-        <div class="step" id="step5">
-          <div class="step-title">Schritt 5: Bezug zu Deutschland</div>
-          <div class="step-description">Hatten Sie Aufenthalt oder Arbeit in Deutschland?</div>
-          <div class="option-group">
-            <label class="option-label">
-              <input type="radio" name="connection" value="1" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Ja, mindestens 6 Monate Aufenthalt in den letzten 5 Jahren</div>
-              </div>
-              <div class="option-points">1 Punkt</div>
-            </label>
-            <label class="option-label">
-              <input type="radio" name="connection" value="0" onchange="updateProgress()">
-              <div class="option-text">
-                <div>Nein oder weniger als 6 Monate</div>
-              </div>
-              <div class="option-points">0 Punkte</div>
-            </label>
-          </div>
-          <div class="button-group">
-            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
-            <button class="btn btn-primary" onclick="calculateResult()">Ergebnis anzeigen</button>
-          </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
         </div>
+      </div>
 
-        <!-- RESULT SECTION -->
-        <div class="result-section" id="resultSection">
-          <div class="score-display">
-            <div class="score-label">Ihre geschätzte Punktezahl</div>
-            <div class="score-value"><span id="resultScore">0</span> Punkte</div>
-            <div style="color: #64748b; font-size: 14px; margin-bottom: 16px;">Mindestanforderung: 6 Punkte</div>
-            
-            <div class="score-bar">
-              
-            </div>
-            
-            
-            
-          </div>
-
-          <!-- LEAD CAPTURE FORM -->
-          <div class="lead-form">
-            <div class="lead-form-title">Kostenlose Erstberatung anfragen</div>
-            <div class="lead-form-description">Erhalten Sie eine persönliche Beratung zu Ihren nächsten Schritten</div>
-            <form action="https://formsubmit.co/info@berlingateway.de" method="POST" onsubmit="submitLead(event)">
-              <div class="form-group">
-                <label>E-Mail</label>
-                <input type="email" name="email" id="leadEmail" placeholder="Ihre E-Mail-Adresse" required>
-              </div>
-              <div class="form-group">
-                <label>WhatsApp (optional)</label>
-                <input type="text" name="whatsapp" id="leadWhatsApp" placeholder="+49 ...">
-              </div>
-              <input type="hidden" name="_subject" value="Chancenkarte Assessment - Kostenlose Beratung">
-              <input type="hidden" name="_replyto" id="formReplyTo" value="">
-              <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage! Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen.">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://berlingateway.de/de/assessment.html">
-              <input type="hidden" name="score" id="formScore" value="0">
-              <input type="hidden" name="status" id="formStatus" value="">
-              <input type="hidden" name="language" value="de">
-              <button type="submit" class="form-submit">Beratung anfragen</button>
-              <div class="form-message">Ihre Daten werden sicher behandelt und nicht weitergegeben.</div>
-              <div class="success-message" id="successMessage">Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.</div>
-            </form>
-          </div>
-
-          <div class="button-group" style="margin-top: 32px;">
-            <button class="btn btn-secondary" onclick="resetAssessment()">Neu beginnen</button>
-            <button class="btn btn-primary" onclick="window.location.href='/de/chancenkarte-deutschland.html'">Mehr erfahren</button>
-          </div>
+      <!-- STEP 4: AGE -->
+      <div class="step" id="step4">
+        <div class="step-title">Schritt 4: Ihr Alter</div>
+        <div class="step-description">In welcher Altersgruppe sind Sie?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="age" value="2">
+            <span class="option-text">Unter 35 Jahren</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="age" value="1">
+            <span class="option-text">35-45 Jahre</span>
+            <span class="option-points">1 Punkt</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="age" value="0">
+            <span class="option-text">Über 45 Jahre</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
         </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: CONNECTION -->
+      <div class="step" id="step5">
+        <div class="step-title">Schritt 5: Verbindung zu Deutschland</div>
+        <div class="step-description">Haben Sie bereits Kontakte oder Angebote in Deutschland?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="connection" value="2">
+            <span class="option-text">Ja, ich habe ein Jobangebot</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="connection" value="1">
+            <span class="option-text">Ja, ich habe Kontakte</span>
+            <span class="option-points">1 Punkt</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="connection" value="0">
+            <span class="option-text">Nein, noch keine Kontakte</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+          <button class="btn btn-primary" onclick="calculateResult()">Ergebnis anzeigen</button>
+        </div>
+      </div>
+
+      <!-- RESULT SECTION -->
+      <div class="result-section" id="resultSection">
+        <div class="result-score" id="resultScore">0</div>
+        <div class="result-status" id="resultStatus">Ihre Bewertung</div>
+        <div class="result-message" id="resultMessage">Ihre Punkte werden berechnet...</div>
+        <div class="result-cta" id="resultCTA"></div>
+        <button class="btn btn-secondary" onclick="resetAssessment()" style="margin-top: 20px;">Neu starten</button>
       </div>
     </div>
 
-    <!-- FAQ SECTION -->
-    <section style="max-width: 700px; margin: 64px auto; padding: 0 24px;">
-      <h2 style="font-size: 32px; margin-bottom: 32px; color: #0B3B8C; text-align: center;">Häufig gestellte Fragen zur Chancenkarte</h2>
-      
-      <div style="display: grid; gap: 24px;">
-        <!-- FAQ Item 1 -->
-        <div >
-          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Was ist die Chancenkarte Deutschland?</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Die Chancenkarte ist ein punktbasiertes Einwanderungssystem, das internationalen Fachkräften ermöglicht, nach Deutschland zu kommen und eine Arbeit zu suchen.</p>
-        </div>
+    <!-- MICRO TRUST -->
+    <div class="micro-trust">
+      <p>✓ Keine allgemeinen Informationen</p>
+      <p>✓ Basierend auf realen Kriterien</p>
+      <p>✓ Individuelle Bewertung möglich</p>
+    </div>
 
-        <!-- FAQ Item 2 -->
-        <div >
-          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Wie viele Punkte braucht man für die Chancenkarte?</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Mindestens 6 Punkte im Bewertungssystem sind erforderlich.</p>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div >
-          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Kann man ohne Deutsch nach Deutschland kommen?</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Ja, in einigen Fällen können Englischkenntnisse ausreichen, besonders in internationalen Branchen.</p>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div >
-          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Wie lange ist die Chancenkarte gültig?</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Die Chancenkarte ermöglicht einen Aufenthalt von bis zu 12 Monaten zur Jobsuche.</p>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div >
-          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Kann man mit der Chancenkarte arbeiten?</h3>
-          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Ja, begrenzte Beschäftigung ist während der Jobsuche möglich.</p>
-        </div>
-      </div>
-    </section>
+    <!-- FINAL CTA -->
+    <div class="final-cta">
+      <a href="/de/chancenkarte.html">Zur vollständigen Bewertung übergehen</a>
+    </div>
   </main>
 
   <footer class="footer">
@@ -685,9 +533,10 @@
     }
 
     function nextStep() {
-      const stepInputs = document.querySelectorAll(`input[name="${getStepName(currentStep)}"]`);
+      const stepNames = ['qualification', 'experience', 'language', 'age', 'connection'];
+      const stepInputs = document.querySelectorAll(`input[name="${stepNames[currentStep - 1]}"]`);
       const isSelected = Array.from(stepInputs).some(input => input.checked);
-      
+
       if (!isSelected) {
         alert('Bitte wählen Sie eine Option aus.');
         return;
@@ -706,102 +555,60 @@
       }
     }
 
-    function getStepName(step) {
-      const names = ['qualification', 'experience', 'language', 'age', 'connection'];
-      return names[step - 1];
-    }
-
     function calculateResult() {
+      const stepNames = ['qualification', 'experience', 'language', 'age', 'connection'];
       const stepInputs = document.querySelectorAll(`input[name="connection"]`);
       const isSelected = Array.from(stepInputs).some(input => input.checked);
-      
+
       if (!isSelected) {
         alert('Bitte wählen Sie eine Option aus.');
         return;
       }
 
-      // Calculate total points
       let totalPoints = 0;
-      for (let i = 1; i <= totalSteps; i++) {
-        const stepName = getStepName(i);
-        const selected = document.querySelector(`input[name="${stepName}"]:checked`);
+      for (let i = 0; i < totalSteps; i++) {
+        const selected = document.querySelector(`input[name="${stepNames[i]}"]:checked`);
         if (selected) {
           totalPoints += parseInt(selected.value);
         }
       }
 
-      // Determine status and message
-      let status, message, statusClass;
-      if (totalPoints >= 10) {
-        status = 'Ausgezeichnete Chancen!';
-        statusClass = 'excellent';
-        message = 'Sie erfüllen die Anforderungen sehr gut. Ihre Chancen auf die Chancenkarte sind ausgezeichnet. Kontaktieren Sie uns für die nächsten Schritte.';
-      } else if (totalPoints >= 6) {
-        status = 'Chancenkarte möglich!';
+      let status, message, ctaText, ctaLink, statusClass;
+
+      if (totalPoints >= 6) {
+        status = 'Sie erfüllen die Mindestanforderung.';
         statusClass = 'good';
-        message = 'Sie erfüllen die Mindestanforderung. Sie können die Chancenkarte beantragen. Wir helfen Ihnen gerne bei den nächsten Schritten.';
+        message = 'Glückwunsch! Sie erfüllen die Mindestpunktzahl von 6 Punkten. Sie können die Chancenkarte beantragen.';
+        ctaText = 'Zur Bewertung fortfahren';
+        ctaLink = '/de/chancenkarte.html';
       } else {
-        status = 'Vorbereitung empfohlen';
+        status = 'Aktuell erfüllen Sie die Anforderungen nicht vollständig.';
         statusClass = 'early';
         message = 'Sie erreichen derzeit nicht die Mindestpunktzahl von 6. Verbessern Sie Ihre Deutschkenntnisse oder Berufserfahrung und versuchen Sie es erneut.';
+        ctaText = 'Systemlogik verstehen';
+        ctaLink = '/de/systemlogik.html';
       }
 
-      // Display result
       document.getElementById('resultScore').textContent = totalPoints;
       document.getElementById('resultStatus').textContent = status;
       document.getElementById('resultStatus').className = 'result-status ' + statusClass;
       document.getElementById('resultMessage').textContent = message;
-      
-      // Update score bar
-      const scorePercentage = (totalPoints / 13) * 100; // Max points is 13
-      const scoreBar = document.getElementById('scoreBar');
-      
-      if (totalPoints >= 10) {
-        scoreBar.style.background = '#10b981'; // Green
-      } else if (totalPoints >= 6) {
-        scoreBar.style.background = '#0B3B8C'; // Blue
-      } else {
-        scoreBar.style.background = '#f59e0b'; // Orange
-      }
-      scoreBar.style.width = Math.min(scorePercentage, 100) + '%';
-      
-      // Update form hidden fields
-      document.getElementById('formScore').value = totalPoints;
-      document.getElementById('formStatus').value = status;
-      
-      document.getElementById('resultSection').classList.add('active');
+      document.getElementById('resultCTA').innerHTML = `<a href="${ctaLink}">${ctaText}</a>`;
 
+      document.getElementById('resultSection').classList.add('active');
       for (let i = 1; i <= totalSteps; i++) {
         document.getElementById('step' + i).classList.remove('active');
       }
-
       window.scrollTo(0, 0);
-    }
-
-    function submitLead(event) {
-      event.preventDefault();
-      const email = document.getElementById('leadEmail').value.trim();
-      const form = event.target;
-      
-      if (!email) {
-        alert('Bitte geben Sie Ihre E-Mail-Adresse ein.');
-        return;
-      }
-      
-      document.getElementById('formReplyTo').value = email;
-      document.getElementById('successMessage').style.display = 'block';
-      
-      form.submit();
     }
 
     function resetAssessment() {
       document.querySelectorAll('input[type="radio"]').forEach(input => {
         input.checked = false;
       });
-      
+
       currentStep = 1;
       showStep(1);
-      
       document.getElementById('resultSection').classList.remove('active');
     }
 

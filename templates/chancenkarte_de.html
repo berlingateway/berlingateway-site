@@ -326,5 +326,90 @@ document.getElementById("assessment-form").addEventListener("submit", function(e
 });
 </script>
 
+    <div class="mobile-cta-bar" id="mobile-cta-bar">
+        <a href="#assessment-form" class="mobile-cta-button">Bewertung jetzt senden</a>
+    </div>
+
+<script>
+    const mobileCtaBar = document.getElementById('mobile-cta-bar');
+    const formCard = document.querySelector('.chancenkarte-form-card');
+    const assessmentForm = document.getElementById('assessment-form');
+
+    let formExpanded = false;
+    let ctaVisible = false;
+
+    function expandForm() {
+        if (formExpanded) return;
+        formExpanded = true;
+        
+        document.getElementById('language-field').classList.add('visible');
+        document.getElementById('upload-field').classList.add('visible');
+        document.getElementById('submit-btn').classList.add('visible');
+
+        // Hide CTA bar if form is visible after expansion
+        checkCtaVisibility();
+    }
+
+    function checkCtaVisibility() {
+        if (window.innerWidth > 768) { // Only for mobile
+            mobileCtaBar.classList.remove('visible');
+            ctaVisible = false;
+            return;
+        }
+
+        const formRect = formCard.getBoundingClientRect();
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+        // Show CTA if scrolled past 10-15% and form is not visible
+        if (scrollPercentage > 10 && formRect.top > window.innerHeight) {
+            if (!ctaVisible) {
+                mobileCtaBar.classList.add('visible');
+                ctaVisible = true;
+            }
+        } else {
+            if (ctaVisible) {
+                mobileCtaBar.classList.remove('visible');
+                ctaVisible = false;
+            }
+        }
+    }
+
+    // Trigger 1: Input in first field
+    document.getElementById('target-position').addEventListener('input', expandForm);
+
+    // Trigger 2: Scroll detection for form expansion
+    let scrollTriggeredFormExpansion = false;
+    window.addEventListener('scroll', function() {
+        if (scrollTriggeredFormExpansion || formExpanded) return;
+        
+        const rect = formCard.getBoundingClientRect();
+        
+        // Trigger when form is partially scrolled into view
+        if (rect.top < window.innerHeight * 0.8) {
+            scrollTriggeredFormExpansion = true;
+            expandForm();
+        }
+    });
+
+    // Scroll detection for CTA bar visibility
+    window.addEventListener('scroll', checkCtaVisibility);
+    window.addEventListener('resize', checkCtaVisibility); // Re-check on resize
+    document.addEventListener('DOMContentLoaded', checkCtaVisibility); // Initial check
+
+    // Smooth scroll to form on CTA click
+    mobileCtaBar.querySelector('.mobile-cta-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        assessmentForm.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    // Form submission
+    assessmentForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Anfrage eingereicht. Wir melden uns innerhalb von 24–48 Stunden.");
+    });
+</script>
+
 </body>
 </html>

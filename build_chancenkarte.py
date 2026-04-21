@@ -35,6 +35,14 @@ CHANCENKARTE_DE = {
     'form_button': 'Anfrage zur Bewertung senden',
     'micro_trust': 'Antwort in 24–48h | Individuelle Bewertung | Reale Marktanforderungen',
     'final_close': 'Die falsche Entscheidung kostet Jahre. Die richtige Bewertung spart Zeit.',
+    'routing_block_1_title': 'Verstehen Sie zuerst die Systemlogik',
+    'routing_block_1_text': 'Nicht jede Person mit Interesse an Deutschland ist automatisch geeignet. Wenn Sie zuerst verstehen möchten, nach welchen Kriterien entschieden wird, beginnen Sie hier.',
+    'routing_block_1_button': 'Systemlogik verstehen',
+    'routing_block_1_link': '/de/systemlogik',
+    'routing_block_2_title': 'Prüfen Sie zuerst Ihre reale Position',
+    'routing_block_2_text': 'Bevor Sie Ihre Unterlagen senden, sollten Sie verstehen, wie Ihr Profil im aktuellen Arbeitsmarkt einzuordnen ist.',
+    'routing_block_2_button': 'Zum Monitor',
+    'routing_block_2_link': '/de/monitor',
 }
 
 CHANCENKARTE_AR = {
@@ -56,6 +64,14 @@ CHANCENKARTE_AR = {
     'form_button': 'إرسال الطلب للتقييم',
     'micro_trust': 'الرد خلال 24–48 ساعة | تقييم فردي وليس آلي | معايير سوق العمل الفعلية',
     'final_close': 'القرار الخطأ يكلفك سنوات. التقييم الصحيح يختصر الطريق.',
+    'routing_block_1_title': 'افهم أولاً منطق النظام',
+    'routing_block_1_text': 'ليس كل من يرغب في ألمانيا مؤهلاً تلقائياً. إذا كنت تريد أولاً فهم المعايير التي يُبنى عليها القرار، ابدأ من هنا.',
+    'routing_block_1_button': 'فهم منطق النظام',
+    'routing_block_1_link': '/ar/systemlogik',
+    'routing_block_2_title': 'قيّم موقعك الحقيقي أولاً',
+    'routing_block_2_text': 'قبل إرسال الملف، من الأفضل أن تعرف كيف يمكن قراءة ملفك داخل سوق العمل الحالي.',
+    'routing_block_2_button': 'إلى المرصد',
+    'routing_block_2_link': '/ar/monitor',
 }
 
 def render_page(lang, content, current_page):

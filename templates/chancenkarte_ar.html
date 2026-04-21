@@ -208,14 +208,14 @@
                         
                         <div class="form-field visible">
                             <label for="qualification">{{ form_field_2_label }}</label>
-                            <input type="text" id="qualification" name="qualification" placeholder="مثال: ماجستير علوم الحاسوب" required>
+                            <input type="text" id="qualification" name="qualification" placeholder="مثال: ماجستير في علوم الحاسب" required>
                         </div>
                         
                         <div class="form-field visible">
                             <label for="experience">{{ form_field_3_label }}</label>
                             <select id="experience" name="experience" required>
-                                <option value="">-- اختر من فضلك --</option>
-                                <option value="0-2">0–2 سنة</option>
+                                <option value="">-- الرجاء الاختيار --</option>
+                                <option value="0-2">0–2 سنوات</option>
                                 <option value="2-5">2–5 سنوات</option>
                                 <option value="5+">5+ سنوات</option>
                             </select>
@@ -224,7 +224,7 @@
                         <div class="form-field" id="language-field">
                             <label for="language">{{ form_field_4_label }}</label>
                             <select id="language" name="language" required>
-                                <option value="">-- اختر من فضلك --</option>
+                                <option value="">-- الرجاء الاختيار --</option>
                                 <option value="a1-a2">A1–A2</option>
                                 <option value="b1">B1</option>
                                 <option value="b2">B2</option>
@@ -244,6 +244,13 @@
         </div>
     </section>
 
+    <!-- ROUTING BLOCK 1: SYSTEMLOGIK -->
+    <section class="chancenkarte-routing-block">
+        <h2>{{ routing_block_1_title }}</h2>
+        <p>{{ routing_block_1_text }}</p>
+        <a href="{{ routing_block_1_link }}" class="chancenkarte-routing-button">{{ routing_block_1_button }}</a>
+    </section>
+
     <!-- SECTION 2: AUTHORITY + HARD FILTER -->
     <section class="section-authority">
         <p>{{ authority_statement }}</p>
@@ -254,6 +261,13 @@
             <li>{{ filter_item3 }}</li>
         </ul>
         <p><em>{{ filter_disclaimer }}</em></p>
+    </section>
+
+    <!-- ROUTING BLOCK 2: MONITOR -->
+    <section class="chancenkarte-routing-block">
+        <h2>{{ routing_block_2_title }}</h2>
+        <p>{{ routing_block_2_text }}</p>
+        <a href="{{ routing_block_2_link }}" class="chancenkarte-routing-button">{{ routing_block_2_button }}</a>
     </section>
 
     <!-- SECTION 3: MICRO TRUST -->

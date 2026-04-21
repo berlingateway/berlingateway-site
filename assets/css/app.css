@@ -589,3 +589,54 @@ html[lang="ar"] .subnav__inner { justify-content: flex-end; }
         font-size: 13px;
     }
 }
+
+/* Chancenkarte Routing Blocks */
+.chancenkarte-routing-block {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-align: center;
+}
+.chancenkarte-routing-block h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    color: var(--black);
+}
+.chancenkarte-routing-block p {
+    font-size: 16px;
+    color: #4B5563;
+    margin: 0 0 30px 0;
+    line-height: 1.6;
+}
+.chancenkarte-routing-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #B8860B;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+.chancenkarte-routing-button:hover {
+    background-color: #9a6f08;
+}
+
+@media (max-width: 768px) {
+    .chancenkarte-routing-block {
+        padding: 30px 20px;
+        margin: 60px auto;
+    }
+    .chancenkarte-routing-block h2 {
+        font-size: 20px;
+    }
+    .chancenkarte-routing-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}

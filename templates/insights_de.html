@@ -1,59 +1,59 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رؤى – Berlin Gateway</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        html[dir="rtl"] .insights-hero {
+        .insights-hero {
             text-align: center;
             padding: 80px 20px;
             background: var(--white);
         }
-        html[dir="rtl"] .insights-hero h1 {
+        .insights-hero h1 {
             font-size: 32px;
             font-weight: 800;
             line-height: 1.3;
             margin-bottom: 20px;
             color: var(--black);
         }
-        html[dir="rtl"] .insights-hero p {
+        .insights-hero p {
             font-size: 16px;
             line-height: 1.6;
             color: #333;
             max-width: 700px;
             margin: 0 auto;
         }
-        html[dir="rtl"] .scenarios-container {
+        .scenarios-container {
             max-width: 900px;
             margin: 60px auto;
             padding: 0 20px;
         }
-        html[dir="rtl"] .scenario-list {
+        .scenario-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        html[dir="rtl"] .scenario-list li {
+        .scenario-list li {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 15px;
-            padding-right: 25px; /* Adjusted for RTL */
+            padding-left: 25px;
             position: relative;
             color: var(--text-dark);
         }
-        html[dir="rtl"] .scenario-list li:before {
+        .scenario-list li:before {
             content: "\2713"; /* Checkmark icon */
             position: absolute;
-            right: 0; /* Adjusted for RTL */
+            left: 0;
             color: #B8860B;
             font-weight: bold;
         }
-        html[dir="rtl"] .mirror-statement {
+        .mirror-statement {
             max-width: 800px;
             margin: 60px auto;
             padding: 0 20px;
@@ -63,12 +63,12 @@
             color: var(--black);
             line-height: 1.6;
         }
-        html[dir="rtl"] .insights-cta {
+        .insights-cta {
             text-align: center;
             padding: 60px 20px;
             background: var(--white);
         }
-        html[dir="rtl"] .insights-cta-button {
+        .insights-cta-button {
             display: inline-block;
             padding: 16px 40px;
             background-color: #B8860B;
@@ -79,21 +79,21 @@
             font-size: 16px;
             transition: background-color 0.2s;
         }
-        html[dir="rtl"] .insights-cta-button:hover {
+        .insights-cta-button:hover {
             background-color: #9a6f08;
         }
         @media (max-width: 768px) {
-            html[dir="rtl"] .insights-hero {
+            .insights-hero {
                 padding: 60px 20px;
             }
-            html[dir="rtl"] .insights-hero h1 {
+            .insights-hero h1 {
                 font-size: 24px;
             }
-            html[dir="rtl"] .scenario-list li {
+            .scenario-list li {
                 font-size: 16px;
-                padding-right: 20px; /* Adjusted for RTL */
+                padding-left: 20px;
             }
-            html[dir="rtl"] .mirror-statement {
+            .mirror-statement {
                 font-size: 16px;
             }
         }
@@ -109,7 +109,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/de/insights" class="lang-switch">Deutsch</a>
+            <a href="/ar/insights" class="lang-switch">العربية</a>
         </div>
     </div>
 </div>
@@ -117,7 +117,7 @@
 <!-- BAND 2: MINIMAL HEADER (WHITE) -->
 <header class="header">
     <div class="header__inner">
-        <a href="/ar/" class="brand">
+        <a href="/de/" class="brand">
             <div class="brand-icon"></div>
             Berlin Gateway
         </a>
@@ -128,31 +128,25 @@
 <main>
     <!-- HERO SECTION -->
     <section class="insights-hero">
-        <h1>وضعك. واقعنا.</h1>
-        <p>هل تجد نفسك في هذه السيناريوهات؟ إذن أنت في المكان الصحيح.</p>
+        <h1>{{ hero_title }}</h1>
+        <p>{{ hero_subtitle }}</p>
     </section>
 
     <!-- SCENARIOS SECTION -->
     <section class="scenarios-container">
         <ul class="scenario-list">
-                        <li>لديك شهادة ممتازة، ولكن لا توجد خبرة عمل ألمانية.</li>
-            <li>مؤهلاتك تحظى بتقدير كبير في الخارج، ولكنها غير معروفة في ألمانيا.</li>
-            <li>تتحدث الإنجليزية بطلاقة، ولكن مستوى لغتك الألمانية لم يصل بعد إلى B1.</li>
-            <li>تتلقى رفضًا لأن ملفك الشخصي لا 'يتناسب'، على الرغم من أنك مؤهل.</li>
-            <li>تبحث عن استراتيجية واضحة لدخول سوق العمل الألماني.</li>
-            <li>ترغب في زيادة فرصك وتجنب الأخطاء.</li>
-
+            {{ scenario_blocks }}
         </ul>
     </section>
 
     <!-- MIRROR STATEMENT -->
     <section class="mirror-statement">
-        <p>إذا كانت هذه النقاط تنطبق عليك، فنحن نتفهم تحديك.</p>
+        <p>{{ mirror_text }}</p>
     </section>
 
     <!-- CTA SECTION -->
     <section class="insights-cta">
-        <a href="/ar/chancenkarte" class="insights-cta-button">قيّم فرصتك الآن</a>
+        <a href="/de/chancenkarte" class="insights-cta-button">{{ cta_text }}</a>
     </section>
 </main>
 
@@ -162,27 +156,27 @@
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
                 <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي في النظام الوظيفي الألماني.</p>
+                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
             </div>
             <div>
-                <h4>التنقل</h4>
-                <a href="/ar/">الصفحة الرئيسية</a>
-                <a href="/ar/systemlogik">منطق النظام</a>
-                <a href="/ar/monitor">المراقب</a>
+                <h4>Navigation</h4>
+                <a href="/de/">Startseite</a>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Monitor</a>
             </div>
             <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum">بيانات الاتصال</a>
-                <a href="/ar/datenschutz">سياسة الخصوصية</a>
+                <h4>Rechtliches</h4>
+                <a href="/de/impressum">Impressum</a>
+                <a href="/de/datenschutz">Datenschutz</a>
             </div>
             <div>
-                <h4>التواصل</h4>
+                <h4>Kontakt</h4>
                 <p>info@berlingateway.de</p>
                 <p>+49 30 25730875</p>
             </div>
         </div>
         <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
         </div>
     </div>
 </footer>

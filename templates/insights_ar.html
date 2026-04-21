@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رؤى – Berlin Gateway</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,31 +128,25 @@
 <main>
     <!-- HERO SECTION -->
     <section class="insights-hero">
-        <h1>وضعك. واقعنا.</h1>
-        <p>هل تجد نفسك في هذه السيناريوهات؟ إذن أنت في المكان الصحيح.</p>
+        <h1>{{ hero_title }}</h1>
+        <p>{{ hero_subtitle }}</p>
     </section>
 
     <!-- SCENARIOS SECTION -->
     <section class="scenarios-container">
         <ul class="scenario-list">
-                        <li>لديك شهادة ممتازة، ولكن لا توجد خبرة عمل ألمانية.</li>
-            <li>مؤهلاتك تحظى بتقدير كبير في الخارج، ولكنها غير معروفة في ألمانيا.</li>
-            <li>تتحدث الإنجليزية بطلاقة، ولكن مستوى لغتك الألمانية لم يصل بعد إلى B1.</li>
-            <li>تتلقى رفضًا لأن ملفك الشخصي لا 'يتناسب'، على الرغم من أنك مؤهل.</li>
-            <li>تبحث عن استراتيجية واضحة لدخول سوق العمل الألماني.</li>
-            <li>ترغب في زيادة فرصك وتجنب الأخطاء.</li>
-
+            {{ scenario_blocks }}
         </ul>
     </section>
 
     <!-- MIRROR STATEMENT -->
     <section class="mirror-statement">
-        <p>إذا كانت هذه النقاط تنطبق عليك، فنحن نتفهم تحديك.</p>
+        <p>{{ mirror_text }}</p>
     </section>
 
     <!-- CTA SECTION -->
     <section class="insights-cta">
-        <a href="/ar/chancenkarte" class="insights-cta-button">قيّم فرصتك الآن</a>
+        <a href="/ar/chancenkarte" class="insights-cta-button">{{ cta_text }}</a>
     </section>
 </main>
 

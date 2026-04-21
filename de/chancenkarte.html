@@ -56,25 +56,18 @@
             font-size: 14px;
         }
         .form-field {
-            display: none;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.2s ease, max-height 0.2s ease;
+            margin: 0;
+            padding: 0;
         }
         .form-field.visible {
-            display: block;
-        }
-        .form-expand-trigger {
-            text-align: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-        .form-expand-trigger button {
-            background: none;
-            border: none;
-            color: #B8860B;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 14px;
-            text-decoration: underline;
+            opacity: 1;
+            max-height: 100px;
+            margin-bottom: 20px;
+            padding: 0;
         }
         .chancenkarte-form-card button[type="submit"] {
             width: 100%;
@@ -86,8 +79,15 @@
             font-weight: 700;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, opacity 0.2s ease, max-height 0.2s ease;
             margin-top: 20px;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .chancenkarte-form-card button[type="submit"].visible {
+            opacity: 1;
+            max-height: 100px;
         }
         .chancenkarte-form-card button[type="submit"]:hover {
             background-color: #9a6f08;
@@ -227,11 +227,7 @@
                             <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
                         </div>
                         
-                        <div class="form-expand-trigger" id="expand-trigger" style="display: block;">
-                            <button type="button" onclick="expandForm(event)">Weitere Felder anzeigen</button>
-                        </div>
-                        
-                        <button type="submit" id="submit-btn" style="display: none;">Anfrage zur Bewertung senden</button>
+                        <button type="submit" id="submit-btn">Anfrage zur Bewertung senden</button>
                     </form>
                 </div>
             </div>
@@ -294,14 +290,36 @@
 </footer>
 
 <script>
-function expandForm(event) {
-    event.preventDefault();
+let formExpanded = false;
+
+function expandForm() {
+    if (formExpanded) return;
+    formExpanded = true;
+    
     document.getElementById('language-field').classList.add('visible');
     document.getElementById('upload-field').classList.add('visible');
-    document.getElementById('expand-trigger').style.display = 'none';
-    document.getElementById('submit-btn').style.display = 'block';
+    document.getElementById('submit-btn').classList.add('visible');
 }
 
+// Trigger 1: Input in first field
+document.getElementById('target-position').addEventListener('input', expandForm);
+
+// Trigger 2: Scroll detection
+let scrollTriggered = false;
+window.addEventListener('scroll', function() {
+    if (scrollTriggered || formExpanded) return;
+    
+    const formCard = document.querySelector('.chancenkarte-form-card');
+    const rect = formCard.getBoundingClientRect();
+    
+    // Trigger when form is partially scrolled into view
+    if (rect.top < window.innerHeight * 0.8) {
+        scrollTriggered = true;
+        expandForm();
+    }
+});
+
+// Form submission
 document.getElementById("assessment-form").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Anfrage eingereicht. Wir melden uns innerhalb von 24–48 Stunden.");

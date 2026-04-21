@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المراقب – Berlin Gateway</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,44 +127,20 @@
 <main>
     <!-- HERO SECTION -->
     <section class="monitor-hero">
-        <h1>رؤى السوق للعاملين بالمهارات</h1>
-        <p>اتجاهات وفرص حالية في سوق العمل الألماني. مباشر. قائم على الحقائق.</p>
+        <h1>{{ hero_title }}</h1>
+        <p>{{ hero_subtitle }}</p>
     </section>
 
     <!-- INSIGHTS SECTION -->
     <section class="insights-container">
         <div class="insights-grid">
-                        <div class="insight-block">
-                <h3>نقص الكفاءات في ألمانيا</h3>
-                <p>أكثر من 500 ألف وظيفة شاغرة في المهن الماهرة. أصحاب العمل يبحثون بنشاط عن مرشحين مؤهلين من الخارج.</p>
-            </div>
-            <div class="insight-block">
-                <h3>نظام بطاقة الفرص</h3>
-                <p>هجرة جديدة قائمة على النقاط للعاملين بالمهارات. الاعتراف بالشهادات الأجنبية حاسم.</p>
-            </div>
-            <div class="insight-block">
-                <h3>الاعتراف بالشهادات</h3>
-                <p>الاعتراف الرسمي يزيد الراتب بمتوسط 25%. يفضل أصحاب العمل المؤهلات المعترف بها.</p>
-            </div>
-            <div class="insight-block">
-                <h3>متطلبات اللغة</h3>
-                <p>B1 الألمانية هي الحد الأدنى. مستويات لغة أعلى تفتح أبواباً لوظائف وراتب أفضل.</p>
-            </div>
-            <div class="insight-block">
-                <h3>ديناميكية سوق العمل</h3>
-                <p>الطلب على تكنولوجيا المعلومات والهندسة والرعاية هو الأعلى. عمليات التقديم السريعة شائعة.</p>
-            </div>
-            <div class="insight-block">
-                <h3>هيكل الراتب</h3>
-                <p>متوسط راتب البداية للعاملين بالمهارات: 45000–65000 يورو. الخبرة والاعتراف حاسمان.</p>
-            </div>
-
+            {{ insights_blocks }}
         </div>
     </section>
 
     <!-- CTA SECTION -->
     <section class="monitor-cta">
-        <a href="/ar/chancenkarte" class="monitor-cta-button">قيّم فرصتك الآن</a>
+        <a href="/ar/chancenkarte" class="monitor-cta-button">{{ cta_text }}</a>
     </section>
 </main>
 

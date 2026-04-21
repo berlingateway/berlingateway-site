@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المراقب – Berlin Gateway</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        html[dir="rtl"] .monitor-hero {
+        .monitor-hero {
             text-align: center;
             padding: 80px 20px;
             background: var(--white);
         }
-        html[dir="rtl"] .monitor-hero h1 {
+        .monitor-hero h1 {
             font-size: 32px;
             font-weight: 800;
             line-height: 1.3;
             margin-bottom: 20px;
             color: var(--black);
         }
-        html[dir="rtl"] .monitor-hero p {
+        .monitor-hero p {
             font-size: 16px;
             line-height: 1.6;
             color: #333;
             max-width: 600px;
             margin: 0 auto;
         }
-        html[dir="rtl"] .insights-container {
+        .insights-container {
             max-width: 1000px;
             margin: 60px auto;
             padding: 0 20px;
         }
-        html[dir="rtl"] .insights-grid {
+        .insights-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-bottom: 60px;
         }
-        html[dir="rtl"] .insight-block {
+        .insight-block {
             padding: 30px;
             background: white;
             border: 1px solid #E5E7EB;
             border-radius: 8px;
             transition: border-color 0.2s;
         }
-        html[dir="rtl"] .insight-block:hover {
+        .insight-block:hover {
             border-color: var(--black);
         }
-        html[dir="rtl"] .insight-block h3 {
+        .insight-block h3 {
             font-size: 18px;
             font-weight: 700;
             margin: 0 0 12px 0;
             color: var(--black);
             line-height: 1.3;
         }
-        html[dir="rtl"] .insight-block p {
+        .insight-block p {
             font-size: 15px;
             line-height: 1.5;
             color: #4B5563;
             margin: 0;
         }
-        html[dir="rtl"] .monitor-cta {
+        .monitor-cta {
             text-align: center;
             padding: 60px 20px;
             background: white;
         }
-        html[dir="rtl"] .monitor-cta-button {
+        .monitor-cta-button {
             display: inline-block;
             padding: 16px 40px;
             background-color: #B8860B;
@@ -78,21 +78,21 @@
             font-size: 16px;
             transition: background-color 0.2s;
         }
-        html[dir="rtl"] .monitor-cta-button:hover {
+        .monitor-cta-button:hover {
             background-color: #9a6f08;
         }
         @media (max-width: 768px) {
-            html[dir="rtl"] .monitor-hero {
+            .monitor-hero {
                 padding: 60px 20px;
             }
-            html[dir="rtl"] .monitor-hero h1 {
+            .monitor-hero h1 {
                 font-size: 24px;
             }
-            html[dir="rtl"] .insights-grid {
+            .insights-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            html[dir="rtl"] .insight-block {
+            .insight-block {
                 padding: 20px;
             }
         }
@@ -108,7 +108,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/de/monitor" class="lang-switch">Deutsch</a>
+            <a href="/ar/monitor" class="lang-switch">العربية</a>
         </div>
     </div>
 </div>
@@ -116,7 +116,7 @@
 <!-- BAND 2: MINIMAL HEADER (WHITE) -->
 <header class="header">
     <div class="header__inner">
-        <a href="/ar/" class="brand">
+        <a href="/de/" class="brand">
             <div class="brand-icon"></div>
             Berlin Gateway
         </a>
@@ -127,44 +127,20 @@
 <main>
     <!-- HERO SECTION -->
     <section class="monitor-hero">
-        <h1>رؤى السوق للعاملين بالمهارات</h1>
-        <p>اتجاهات وفرص حالية في سوق العمل الألماني. مباشر. قائم على الحقائق.</p>
+        <h1>{{ hero_title }}</h1>
+        <p>{{ hero_subtitle }}</p>
     </section>
 
     <!-- INSIGHTS SECTION -->
     <section class="insights-container">
         <div class="insights-grid">
-                        <div class="insight-block">
-                <h3>نقص الكفاءات في ألمانيا</h3>
-                <p>أكثر من 500 ألف وظيفة شاغرة في المهن الماهرة. أصحاب العمل يبحثون بنشاط عن مرشحين مؤهلين من الخارج.</p>
-            </div>
-            <div class="insight-block">
-                <h3>نظام بطاقة الفرص</h3>
-                <p>هجرة جديدة قائمة على النقاط للعاملين بالمهارات. الاعتراف بالشهادات الأجنبية حاسم.</p>
-            </div>
-            <div class="insight-block">
-                <h3>الاعتراف بالشهادات</h3>
-                <p>الاعتراف الرسمي يزيد الراتب بمتوسط 25%. يفضل أصحاب العمل المؤهلات المعترف بها.</p>
-            </div>
-            <div class="insight-block">
-                <h3>متطلبات اللغة</h3>
-                <p>B1 الألمانية هي الحد الأدنى. مستويات لغة أعلى تفتح أبواباً لوظائف وراتب أفضل.</p>
-            </div>
-            <div class="insight-block">
-                <h3>ديناميكية سوق العمل</h3>
-                <p>الطلب على تكنولوجيا المعلومات والهندسة والرعاية هو الأعلى. عمليات التقديم السريعة شائعة.</p>
-            </div>
-            <div class="insight-block">
-                <h3>هيكل الراتب</h3>
-                <p>متوسط راتب البداية للعاملين بالمهارات: 45000–65000 يورو. الخبرة والاعتراف حاسمان.</p>
-            </div>
-
+            {{ insights_blocks }}
         </div>
     </section>
 
     <!-- CTA SECTION -->
     <section class="monitor-cta">
-        <a href="/ar/chancenkarte" class="monitor-cta-button">قيّم فرصتك الآن</a>
+        <a href="/de/chancenkarte" class="monitor-cta-button">{{ cta_text }}</a>
     </section>
 </main>
 
@@ -174,27 +150,27 @@
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
                 <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي في النظام الوظيفي الألماني.</p>
+                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
             </div>
             <div>
-                <h4>التنقل</h4>
-                <a href="/ar/">الصفحة الرئيسية</a>
-                <a href="/ar/systemlogik">منطق النظام</a>
-                <a href="/ar/monitor">المراقب</a>
+                <h4>Navigation</h4>
+                <a href="/de/">Startseite</a>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Monitor</a>
             </div>
             <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum">بيانات الاتصال</a>
-                <a href="/ar/datenschutz">سياسة الخصوصية</a>
+                <h4>Rechtliches</h4>
+                <a href="/de/impressum">Impressum</a>
+                <a href="/de/datenschutz">Datenschutz</a>
             </div>
             <div>
-                <h4>التواصل</h4>
+                <h4>Kontakt</h4>
                 <p>info@berlingateway.de</p>
                 <p>+49 30 25730875</p>
             </div>
         </div>
         <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
         </div>
     </div>
 </footer>

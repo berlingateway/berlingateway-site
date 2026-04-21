@@ -3,11 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — منطق النظام الألماني</title>
+    <title>منطق النظام – Berlin Gateway</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        html[dir="rtl"] .systemlogik-hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--white);
+        }
+        html[dir="rtl"] .systemlogik-hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        html[dir="rtl"] .systemlogik-hero p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        html[dir="rtl"] .filters-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        html[dir="rtl"] .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        html[dir="rtl"] .filter-block {
+            padding: 30px;
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            text-align: center;
+        }
+        html[dir="rtl"] .filter-block h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: var(--black);
+        }
+        html[dir="rtl"] .filter-block p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #4B5563;
+            margin: 0;
+        }
+        html[dir="rtl"] .exclusion-statement {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #CC0000; /* Red for emphasis */
+            line-height: 1.6;
+        }
+        html[dir="rtl"] .systemlogik-cta {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--white);
+        }
+        html[dir="rtl"] .systemlogik-cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #B8860B;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+        html[dir="rtl"] .systemlogik-cta-button:hover {
+            background-color: #9a6f08;
+        }
+        @media (max-width: 768px) {
+            html[dir="rtl"] .systemlogik-hero {
+                padding: 60px 20px;
+            }
+            html[dir="rtl"] .systemlogik-hero h1 {
+                font-size: 24px;
+            }
+            html[dir="rtl"] .filters-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            html[dir="rtl"] .filter-block {
+                padding: 20px;
+            }
+            html[dir="rtl"] .exclusion-statement {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -15,118 +113,60 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/systemlogik" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <span style="font-size:12px; opacity:0.7;">منطق النظام</span>
+            <a href="/de/systemlogik" class="lang-switch">Deutsch</a>
         </div>
     </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- BAND 2: MINIMAL HEADER (WHITE) -->
 <header class="header">
     <div class="header__inner">
         <a href="/ar/" class="brand">
             <div class="brand-icon"></div>
             Berlin Gateway
         </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte">بطاقة الفرص</a>
-            <a href="/ar/systemlogik">منطق النظام</a>
-            <a href="/ar/monitor">المرصد</a>
-            <a href="/ar/insights">الرؤى</a></nav>
     </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل بنا</a>
-    </div>
-</nav>
-
-<!-- BAND 4: CONTENT BODY (WHITE) -->
+<!-- MAIN CONTENT -->
 <main>
     <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>منطق سوق العمل الألماني</h1>
-                    <p class="sub">افهم البنية والمتطلبات التي تقف خلف بطاقة الفرص.</p>
-                    <div class="badges">
-                        <span class="badge">منطق النظام</span>
-                        <span class="badge">الشفافية</span>
-                    </div>
-                </div>
+    <section class="systemlogik-hero">
+        <h1>أساس تعاوننا</h1>
+        <p>نحن نعمل حصريًا مع المرشحين الذين يستوفون معاييرنا العالية. تحقق مما إذا كنت مؤهلاً.</p>
+    </section>
+
+    <!-- FILTERS SECTION -->
+    <section class="filters-container">
+        <div class="filters-grid">
+            <div class="filter-block">
+                <h3>المؤهلات</h3>
+                <p>شهادة جامعية أو تدريب مهني معترف به. لا استثناءات.</p>
+            </div>
+            <div class="filter-block">
+                <h3>مهارات اللغة</h3>
+                <p>مستوى B1 على الأقل في اللغة الألمانية. التواصل أمر حاسم.</p>
+            </div>
+            <div class="filter-block">
+                <h3>الخبرة المهنية</h3>
+                <p>خبرة مهنية ذات صلة لا تقل عن سنتين. النظرية وحدها لا تكفي.</p>
             </div>
         </div>
     </section>
 
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
-        <div class="container">
-            <h2>كيف يعمل النظام</h2>
-            <p>بطاقة الفرص تتبع قواعد واضحة وقابلة للفهم. نشرح المنطق وراءها وكيفية استخدامها لصالحك.</p>
-        </div>
+    <!-- EXCLUSION STATEMENT -->
+    <section class="exclusion-statement">
+        <p>إذا لم تستوف هذه المعايير، فلا يمكننا دعمك حاليًا.</p>
     </section>
 
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>هذه الصفحة مفيدة لك إذا:</h2>
-            <ul>
-                <li>تريد فهم متطلبات بطاقة الفرص</li>
-                <li>تريد معرفة كيف يتم تقييم مؤهلاتك</li>
-                <li>تريد تقييم فرصك بشكل واقعي</li>
-            </ul>
-            <p>معلومات تفصيلية عن منطق النظام تجدها في مقالات الرؤى الخاصة بنا.</p>
-        </div>
+    <!-- CTA SECTION -->
+    <section class="systemlogik-cta">
+        <a href="/ar/chancenkarte" class="systemlogik-cta-button">قيّم فرصتك الآن</a>
     </section>
-
-    <!-- FORM (GATE) -->
-    <section class="section form-gate">
-        <div class="container">
-            <div class="form-card">
-                <form class="assessment-form" id="assessment-form">
-                    <h3>تحقق من فرصك</h3>
-                    <label>المهنة المستهدفة</label>
-                    <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
-                    <label>المؤهل العلمي</label>
-                    <input type="text" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
-                    <label>سنوات الخبرة</label>
-                    <input type="number" placeholder="مثلاً: 5" required>
-                    <label>مستوى اللغة</label>
-                    <input type="text" placeholder="مثلاً: ألمانية B2، إنجليزية C1" required>
-                    <label>رفع السيرة الذاتية أو الشهادات</label>
-                    <input type="file" required>
-                    <button type="submit" class="cta">إرسال الطلب</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>بناءً على بيانات سوق العمل الحالية</li>
-                <li>تحليل منظم وفقاً للمعايير الألمانية</li>
-                <li>نتائج واضحة وسهلة الفهم</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>افهم النظام واتخذ قرارات مستنيرة لمستقبلك الوظيفي في ألمانيا.</p>
-        </div>
-    </section>
-
 </main>
 
 <!-- FOOTER (BLACK) -->
@@ -135,21 +175,21 @@
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
                 <h4>Berlin Gateway</h4>
-                <p>تقييم مهني احترافي لألمانيا.</p>
+                <p>تقييم احترافي في النظام الوظيفي الألماني.</p>
             </div>
             <div>
-                <h4>الملاحة</h4>
-                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <h4>التنقل</h4>
+                <a href="/ar/">الصفحة الرئيسية</a>
                 <a href="/ar/systemlogik">منطق النظام</a>
-                <a href="/ar/monitor">المرصد</a>
+                <a href="/ar/monitor">المراقب</a>
             </div>
             <div>
                 <h4>القانونية</h4>
-                <a href="/ar/impressum">بصمة الموقع</a>
-                <a href="/ar/datenschutz">خصوصية البيانات</a>
+                <a href="/ar/impressum">بيانات الاتصال</a>
+                <a href="/ar/datenschutz">سياسة الخصوصية</a>
             </div>
             <div>
-                <h4>الاتصال</h4>
+                <h4>التواصل</h4>
                 <p>info@berlingateway.de</p>
                 <p>+49 30 25730875</p>
             </div>
@@ -159,15 +199,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-// Form submission logic will be handled here or via a separate JS file
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("تم إرسال النموذج بنجاح! (هذه رسالة اختبار)");
-});
-</script>
 
 </body>
 </html>

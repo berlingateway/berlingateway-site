@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Systemlogik – Berlin Gateway</title>
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,36 +136,36 @@
 <main>
     <!-- HERO SECTION -->
     <section class="systemlogik-hero">
-        <h1>Die Basis unserer Zusammenarbeit</h1>
-        <p>Wir arbeiten ausschließlich mit Kandidaten, die unsere hohen Standards erfüllen. Prüfen Sie, ob Sie dazu gehören.</p>
+        <h1>{{ hero_title }}</h1>
+        <p>{{ hero_subtitle }}</p>
     </section>
 
     <!-- FILTERS SECTION -->
     <section class="filters-container">
         <div class="filters-grid">
             <div class="filter-block">
-                <h3>Qualifikation</h3>
-                <p>Hochschulabschluss oder anerkannte Berufsausbildung. Ohne Ausnahme.</p>
+                <h3>{{ filter_1_title }}</h3>
+                <p>{{ filter_1_text }}</p>
             </div>
             <div class="filter-block">
-                <h3>Sprachkenntnisse</h3>
-                <p>Mindestens B1-Niveau in Deutsch. Kommunikation ist entscheidend.</p>
+                <h3>{{ filter_2_title }}</h3>
+                <p>{{ filter_2_text }}</p>
             </div>
             <div class="filter-block">
-                <h3>Berufserfahrung</h3>
-                <p>Mindestens 2 Jahre relevante Berufserfahrung. Theorie allein genügt nicht.</p>
+                <h3>{{ filter_3_title }}</h3>
+                <p>{{ filter_3_text }}</p>
             </div>
         </div>
     </section>
 
     <!-- EXCLUSION STATEMENT -->
     <section class="exclusion-statement">
-        <p>Wenn Sie diese Kriterien nicht erfüllen, können wir Sie derzeit nicht unterstützen.</p>
+        <p>{{ exclusion_text }}</p>
     </section>
 
     <!-- CTA SECTION -->
     <section class="systemlogik-cta">
-        <a href="/de/chancenkarte" class="systemlogik-cta-button">Lassen Sie Ihre Situation bewerten</a>
+        <a href="/de/chancenkarte" class="systemlogik-cta-button">{{ cta_text }}</a>
     </section>
 </main>
 

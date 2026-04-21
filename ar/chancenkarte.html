@@ -3,11 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — تقييم بطاقة الفرص</title>
+    <title>بطاقة الفرص – تقييم احترافي</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        html[dir="rtl"] .hero-with-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        html[dir="rtl"] .hero-text h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        html[dir="rtl"] .hero-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        html[dir="rtl"] .chancenkarte-form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        html[dir="rtl"] .chancenkarte-form-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        html[dir="rtl"] .chancenkarte-form-card label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        html[dir="rtl"] .chancenkarte-form-card input,
+        html[dir="rtl"] .chancenkarte-form-card select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Tajawal, sans-serif;
+            font-size: 14px;
+        }
+        html[dir="rtl"] .form-field {
+            display: none;
+        }
+        html[dir="rtl"] .form-field.visible {
+            display: block;
+        }
+        html[dir="rtl"] .form-expand-trigger {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        html[dir="rtl"] .form-expand-trigger button {
+            background: none;
+            border: none;
+            color: #B8860B;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        html[dir="rtl"] .chancenkarte-form-card button[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #B8860B;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 20px;
+        }
+        html[dir="rtl"] .chancenkarte-form-card button[type="submit"]:hover {
+            background-color: #9a6f08;
+        }
+        html[dir="rtl"] .section-authority {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        html[dir="rtl"] .section-authority h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        html[dir="rtl"] .section-authority p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        html[dir="rtl"] .section-authority ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 15px 0;
+        }
+        html[dir="rtl"] .section-authority li {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-right: 20px;
+            position: relative;
+        }
+        html[dir="rtl"] .section-authority li:before {
+            content: "•";
+            position: absolute;
+            right: 0;
+        }
+        html[dir="rtl"] .micro-trust {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        html[dir="rtl"] .final-close {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            html[dir="rtl"] .hero-with-form {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            html[dir="rtl"] .hero-text h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -15,112 +158,106 @@
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="/de/chancenkarte" class="lang-switch">Deutsch</a>
             <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+            <a href="/de/chancenkarte" class="lang-switch">Deutsch</a>
         </div>
     </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- BAND 2: MINIMAL HEADER (WHITE) -->
 <header class="header">
     <div class="header__inner">
         <a href="/ar/" class="brand">
             <div class="brand-icon"></div>
             Berlin Gateway
         </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte">بطاقة الفرص</a>
-            <a href="/ar/systemlogik">منطق النظام</a>
-            <a href="/ar/monitor">المرصد</a>
-            <a href="/ar/insights">الرؤى</a></nav>
     </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل بنا</a>
-    </div>
-</nav>
-
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
-    <!-- HERO SECTION -->
+    <!-- SECTION 1: HERO WITH FORM -->
     <section class="hero">
         <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>بطاقة الفرص الألمانية – اترك ملفك يُقيّم بشكل احترافي</h1>
-                    <p class="sub">كثيرون يبدأون… وقليل يصلون. ليس بسبب نقص الفرص، بل بسبب التقييم الخاطئ.</p>
+            <div class="hero-with-form">
+                <div class="hero-text">
+                    <h1>هل لديك فرصة حقيقية للعمل في ألمانيا… أم تضيع وقتك؟</h1>
+                    <p>تقييم احترافي خلال 48 ساعة — بناءً على معايير سوق العمل الألماني، وليس معلومات عامة.</p>
+                </div>
+                <div class="chancenkarte-form-card">
+                    <form class="assessment-form" id="assessment-form">
+                        <h3>ابدأ التقييم الآن</h3>
+                        
+                        <div class="form-field visible">
+                            <label for="target-position">المسمى الوظيفي المستهدف</label>
+                            <input type="text" id="target-position" name="target_position" placeholder="مثال: مطور برمجيات" required>
+                        </div>
+                        
+                        <div class="form-field visible">
+                            <label for="qualification">المؤهل العلمي</label>
+                            <input type="text" id="qualification" name="qualification" placeholder="مثال: ماجستير علوم الحاسوب" required>
+                        </div>
+                        
+                        <div class="form-field visible">
+                            <label for="experience">سنوات الخبرة</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">-- اختر من فضلك --</option>
+                                <option value="0-2">0–2 سنة</option>
+                                <option value="2-5">2–5 سنوات</option>
+                                <option value="5+">5+ سنوات</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-field" id="language-field">
+                            <label for="language">مستوى اللغة</label>
+                            <select id="language" name="language" required>
+                                <option value="">-- اختر من فضلك --</option>
+                                <option value="a1-a2">A1–A2</option>
+                                <option value="b1">B1</option>
+                                <option value="b2">B2</option>
+                                <option value="c1+">C1+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-field" id="upload-field">
+                            <label for="cv-upload">رفع السيرة الذاتية</label>
+                            <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
+                        </div>
+                        
+                        <div class="form-expand-trigger" id="expand-trigger" style="display: block;">
+                            <button type="button" onclick="expandForm(event)">عرض الحقول المتبقية</button>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" style="display: none;">إرسال الطلب للتقييم</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
-        <div class="container">
-            <h2>لماذا تقييمنا مهم</h2>
-            <p>نحن لا نقدم نصائح عامة. نقوم بتقييم الحالات وفق معايير سوق العمل الألماني.</p>
-        </div>
+    <!-- SECTION 2: AUTHORITY + HARD FILTER -->
+    <section class="section-authority">
+        <p>نحن لا نشرح القوانين. نحن نقيّم حالتك ونحدد فرصتك الحقيقية.</p>
+        <p><strong>هذا التقييم مناسب لك فقط إذا:</strong></p>
+        <ul>
+            <li>لديك شهادة أو مهنة واضحة</li>
+            <li>لديك خبرة عملية حقيقية</li>
+            <li>تنوي العمل في ألمانيا بشكل جدي</li>
+        </ul>
+        <p><em>إذا كنت تبحث عن معلومات عامة — هذه الصفحة ليست لك.</em></p>
     </section>
 
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>هذا التقييم مناسب لك إذا:</h2>
-            <ul>
-                <li>لديك شهادة (جامعية أو مهنية)</li>
-                <li>لديك خبرة عملية</li>
-                <li>لديك نية حقيقية للعمل في ألمانيا</li>
-            </ul>
-            <p>إذا لم تنطبق هذه الشروط، هذا التقييم غير مناسب لك.</p>
-        </div>
+    <!-- SECTION 3: MICRO TRUST -->
+    <section class="micro-trust">
+        <p>الرد خلال 24–48 ساعة | تقييم فردي وليس آلي | معايير سوق العمل الفعلية</p>
     </section>
 
-    <!-- FORM (GATE) -->
-    <section class="section form-gate">
-        <div class="container">
-            <div class="form-card">
-                <form class="assessment-form" id="assessment-form">
-                    <h3>ابدأ التقييم الآن</h3>
-                    <label>المهنة المستهدفة</label>
-                    <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
-                    <label>المؤهل العلمي</label>
-                    <input type="text" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
-                    <label>سنوات الخبرة</label>
-                    <input type="number" placeholder="مثلاً: 5" required>
-                    <label>مستوى اللغة</label>
-                    <input type="text" placeholder="مثلاً: ألمانية B2، إنجليزية C1" required>
-                    <label>رفع السيرة الذاتية أو الشهادات</label>
-                    <input type="file" required>
-                    <button type="submit" class="cta">إرسال الطلب</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>الرد خلال 24–48 ساعة</li>
-                <li>التقييم مبني على واقع السوق الألماني</li>
-                <li>يتم التعامل فقط مع الحالات الجادة</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>تعرف وضعك الحقيقي قبل أن تضيع وقتك ومالك.</p>
-        </div>
+    <!-- SECTION 4: FINAL CLOSE -->
+    <section class="final-close">
+        <p>القرار الخطأ يكلفك سنوات. التقييم الصحيح يختصر الطريق.</p>
     </section>
 
 </main>
@@ -131,21 +268,21 @@
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
                 <h4>Berlin Gateway</h4>
-                <p>تقييم مهني احترافي لألمانيا.</p>
+                <p>تقييم احترافي في النظام الوظيفي الألماني.</p>
             </div>
             <div>
-                <h4>الملاحة</h4>
-                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <h4>التنقل</h4>
+                <a href="/ar/">الصفحة الرئيسية</a>
                 <a href="/ar/systemlogik">منطق النظام</a>
-                <a href="/ar/monitor">المرصد</a>
+                <a href="/ar/monitor">المراقب</a>
             </div>
             <div>
                 <h4>القانونية</h4>
-                <a href="/ar/impressum">بصمة الموقع</a>
-                <a href="/ar/datenschutz">خصوصية البيانات</a>
+                <a href="/ar/impressum">بيانات الاتصال</a>
+                <a href="/ar/datenschutz">سياسة الخصوصية</a>
             </div>
             <div>
-                <h4>الاتصال</h4>
+                <h4>التواصل</h4>
                 <p>info@berlingateway.de</p>
                 <p>+49 30 25730875</p>
             </div>
@@ -157,11 +294,17 @@
 </footer>
 
 <script>
-// Form submission logic will be handled here or via a separate JS file
+function expandForm(event) {
+    event.preventDefault();
+    document.getElementById('language-field').classList.add('visible');
+    document.getElementById('upload-field').classList.add('visible');
+    document.getElementById('expand-trigger').style.display = 'none';
+    document.getElementById('submit-btn').style.display = 'block';
+}
+
 document.getElementById("assessment-form").addEventListener("submit", function(event) {
     event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("تم إرسال النموذج بنجاح! (هذه رسالة اختبار)");
+    alert("تم إرسال الطلب. سنرد عليك خلال 24–48 ساعة.");
 });
 </script>
 

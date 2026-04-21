@@ -17,9 +17,9 @@ OUTPUT_AR_PATH = BASE_PATH / 'ar'
 # ============================================================================
 
 CHANCENKARTE_DE = {
+    'page_title': 'Chancenkarte Deutschland – Professionelle Bewertung',
     'hero_title': 'Haben Sie eine reale Chance, in Deutschland zu arbeiten – oder verschwenden Sie Ihre Zeit?',
     'hero_subtitle': 'Professionelle Bewertung innerhalb von 48 Stunden – basierend auf realen Marktanforderungen, nicht auf allgemeinen Informationen.',
-    'cta_primary': 'Bewertung starten',
     'authority_statement': 'Wir erklären keine Gesetze. Wir analysieren Ihre Situation und bewerten Ihre reale Chance.',
     'filter_title': 'Diese Bewertung ist nur für Sie geeignet, wenn:',
     'filter_item1': 'Sie eine klare Qualifikation haben',
@@ -38,9 +38,9 @@ CHANCENKARTE_DE = {
 }
 
 CHANCENKARTE_AR = {
+    'page_title': 'بطاقة الفرص – تقييم احترافي',
     'hero_title': 'هل لديك فرصة حقيقية للعمل في ألمانيا… أم تضيع وقتك؟',
     'hero_subtitle': 'تقييم احترافي خلال 48 ساعة — بناءً على معايير سوق العمل الألماني، وليس معلومات عامة.',
-    'cta_primary': 'ابدأ التقييم الآن',
     'authority_statement': 'نحن لا نشرح القوانين. نحن نقيّم حالتك ونحدد فرصتك الحقيقية.',
     'filter_title': 'هذا التقييم مناسب لك فقط إذا:',
     'filter_item1': 'لديك شهادة أو مهنة واضحة',
@@ -78,10 +78,11 @@ def render_page(lang, content):
             raise ValueError(f"Missing placeholder: {placeholder} in template {template_path}")
         html = html.replace(placeholder, str(value))
     
-    # Check for remaining placeholders
-    if '{{' in html:
-        remaining = [m for m in html.split('{{') if m]
-        raise ValueError(f"Unresolved placeholders: {remaining}")
+    # Check for remaining placeholders (excluding comments)
+    import re
+    placeholders = re.findall(r'{{\s*\w+\s*}}', html)
+    if placeholders:
+        raise ValueError(f"Unresolved placeholders: {placeholders}")
     
     # Write output
     os.makedirs(output_path.parent, exist_ok=True)

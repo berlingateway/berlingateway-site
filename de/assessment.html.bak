@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Chancenkarte Punkte Rechner — Testen Sie Ihre Chancen für Deutschland</title>
+  <meta name="description" content="Chancenkarte Punkte Rechner: Berechnen Sie Ihre Punkte für die Chancenkarte. Kostenlos und in 5 Schritten. Erfahren Sie, ob Sie die Mindestanforderung erfüllen." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="author" content="Berlin Gateway" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://berlingateway.de/de/assessment.html" />
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/assessment.html" />
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/assessment.html" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist die Chancenkarte Deutschland?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Chancenkarte ist ein punktbasiertes Einwanderungssystem, das internationalen Fachkräften ermöglicht, nach Deutschland zu kommen und eine Arbeit zu suchen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viele Punkte braucht man für die Chancenkarte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mindestens 6 Punkte im Bewertungssystem sind erforderlich."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann man ohne Deutsch nach Deutschland kommen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, in einigen Fällen können Englischkenntnisse ausreichen, besonders in internationalen Branchen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange ist die Chancenkarte gültig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Chancenkarte ermöglicht einen Aufenthalt von bis zu 12 Monaten zur Jobsuche."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann man mit der Chancenkarte arbeiten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, begrenzte Beschäftigung ist während der Jobsuche möglich."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .assessment-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      margin-bottom: 32px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #0B3B8C;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    .step {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .step.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .step-title {
+      color: #0B3B8C;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .step-description {
+      color: #64748b;
+      font-size: 16px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .option-group {
+      margin-bottom: 24px;
+    }
+    .option-label {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 12px;
+    }
+    .option-label:hover {
+      border-color: #0B3B8C;
+      background: #f8fafc;
+    }
+    .option-label input[type="radio"] {
+      margin-right: 12px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+    .option-text {
+      flex: 1;
+    }
+    .option-points {
+      color: #0B3B8C;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      justify-content: space-between;
+    }
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #0B3B8C;
+      color: white;
+      flex: 1;
+    }
+    .btn-primary:hover {
+      background: #082a5c;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #334155;
+      padding: 14px 28px;
+    }
+    .btn-secondary:hover {
+      background: #cbd5e1;
+    }
+    .result-section {
+      display: none;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .result-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    .result-score {
+      font-size: 64px;
+      font-weight: 700;
+      color: #0B3B8C;
+      margin-bottom: 12px;
+    }
+    .result-status {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .result-status.excellent {
+      color: #10b981;
+    }
+    .result-status.good {
+      color: #f59e0b;
+    }
+    .result-status.early {
+      color: #ef4444;
+    }
+    .result-message {
+      color: #64748b;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lead-form {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 32px;
+    }
+    .lead-form-title {
+      color: #0B3B8C;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .lead-form-description {
+      color: #64748b;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      color: #334155;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #0B3B8C;
+      box-shadow: 0 0 0 3px rgba(11, 59, 140, 0.1);
+    }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: #0B3B8C;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .form-submit:hover {
+      background: #082a5c;
+    }
+    .form-message {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .score-display {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .score-value {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0B3B8C;
+      margin-bottom: 8px;
+    }
+    .score-label {
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .score-bar {
+      width: 100%;
+      height: 12px;
+      background: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .score-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #ef4444;
+      transition: width 0.3s ease, background 0.3s ease;
+      border-radius: 6px;
+    }
+    .score-message {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .success-message {
+      background: #d1fae5;
+      border: 1px solid #6ee7b7;
+      border-radius: 6px;
+      color: #065f46;
+      padding: 12px;
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+      display: none;
+    }
+    @media (max-width: 480px) {
+      .assessment-container {
+        padding: 16px;
+        margin: 20px auto;
+      }
+      .step-title {
+        font-size: 20px;
+      }
+      .result-score {
+        font-size: 48px;
+      }
+      .button-group {
+        flex-direction: column;
+      }
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://berlingateway.de/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bewertung",
+      "item": "https://berlingateway.de/de/assessment.html"
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="container wrap">
+      <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
+      <nav class="nav">
+        <a href="/de/monitor.html">Arbeitsmarkt Monitor</a>
+        <a href="/de/systemlogik.html">Systemlogik</a>
+        <a href="/de/chancenkarte.html">Chancenkarte</a>
+        <a href="/de/insights.html">Insights</a>
+      </nav>
+      <button class="language-toggle">🌐 Deutsch</button>
+    </div>
+  </header>
+<nav class="breadcrumb" >
+  <a href="/de/" style="color:#0B3B8C; text-decoration:none; font-weight:500;">Startseite</a> >
+  <a href="/de/assessment.html" style="color:#0B3B8C; text-decoration:none; font-weight:500; margin:0 8px;">Bewertung</a> >
+  <span style="color:#334155; font-weight:600;">Assessment</span>
+</nav>
+
+
+  <main style="padding: 40px 20px;">
+    <div class="container">
+      <!-- HERO SECTION -->
+      <section style="text-align: center; margin-bottom: 48px;">
+        <h1 style="color: #0B3B8C; font-size: 36px; margin-bottom: 12px; font-weight: 600;">Chancenkarte Punkte Rechner</h1>
+        <p style="color: #64748b; font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          Berechnen Sie Ihre Chancenkarte-Punkte in 5 einfachen Schritten. Erfahren Sie sofort, ob Sie die Mindestanforderung von 6 Punkten erfüllen.
+        </p>
+      </section>
+
+      <!-- ASSESSMENT TOOL -->
+      <div class="assessment-container">
+        <!-- PROGRESS BAR -->
+        <div class="progress-bar">
+          
+        </div>
+
+        <!-- STEP 1: QUALIFICATION -->
+        <div class="step active" id="step1">
+          <div class="step-title">Schritt 1: Qualifikation</div>
+          <div class="step-description">Welcher Abschluss liegt vor?</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="qualification" value="4" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Hochschulabschluss (Bachelor/Master)</div>
+              </div>
+              <div class="option-points">4 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="qualification" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Berufsausbildung oder Fachschule</div>
+              </div>
+              <div class="option-points">2 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="qualification" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Kein formaler Abschluss</div>
+              </div>
+              <div class="option-points">0 Punkte</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: EXPERIENCE -->
+        <div class="step" id="step2">
+          <div class="step-title">Schritt 2: Berufserfahrung</div>
+          <div class="step-description">Wie viel relevante Berufserfahrung haben Sie?</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="experience" value="3" onchange="updateProgress()">
+              <div class="option-text">
+                <div>5+ Jahre in den letzten 7 Jahren</div>
+              </div>
+              <div class="option-points">3 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="experience" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>2-4 Jahre in den letzten 5 Jahren</div>
+              </div>
+              <div class="option-points">2 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="experience" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Weniger als 2 Jahre</div>
+              </div>
+              <div class="option-points">0 Punkte</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: LANGUAGE -->
+        <div class="step" id="step3">
+          <div class="step-title">Schritt 3: Sprachkenntnisse</div>
+          <div class="step-description">Welches Deutsch- oder Englischniveau haben Sie?</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="language" value="3" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Deutsch B2+ oder Englisch C1+</div>
+              </div>
+              <div class="option-points">3 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="language" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Deutsch B1 oder Englisch B2</div>
+              </div>
+              <div class="option-points">2 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="language" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Deutsch A2 oder Englisch B1</div>
+              </div>
+              <div class="option-points">1 Punkt</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="language" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>A1 oder keine Kenntnisse</div>
+              </div>
+              <div class="option-points">0 Punkte</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: AGE -->
+        <div class="step" id="step4">
+          <div class="step-title">Schritt 4: Alter</div>
+          <div class="step-description">Wie alt sind Sie?</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="age" value="2" onchange="updateProgress()">
+              <div class="option-text">
+                <div>35 Jahre oder jünger</div>
+              </div>
+              <div class="option-points">2 Punkte</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="age" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>36-40 Jahre</div>
+              </div>
+              <div class="option-points">1 Punkt</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="age" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Älter als 40 Jahre</div>
+              </div>
+              <div class="option-points">0 Punkte</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+            <button class="btn btn-primary" onclick="nextStep()">Weiter</button>
+          </div>
+        </div>
+
+        <!-- STEP 5: GERMANY CONNECTION -->
+        <div class="step" id="step5">
+          <div class="step-title">Schritt 5: Bezug zu Deutschland</div>
+          <div class="step-description">Hatten Sie Aufenthalt oder Arbeit in Deutschland?</div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="radio" name="connection" value="1" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Ja, mindestens 6 Monate Aufenthalt in den letzten 5 Jahren</div>
+              </div>
+              <div class="option-points">1 Punkt</div>
+            </label>
+            <label class="option-label">
+              <input type="radio" name="connection" value="0" onchange="updateProgress()">
+              <div class="option-text">
+                <div>Nein oder weniger als 6 Monate</div>
+              </div>
+              <div class="option-points">0 Punkte</div>
+            </label>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-secondary" onclick="prevStep()">Zurück</button>
+            <button class="btn btn-primary" onclick="calculateResult()">Ergebnis anzeigen</button>
+          </div>
+        </div>
+
+        <!-- RESULT SECTION -->
+        <div class="result-section" id="resultSection">
+          <div class="score-display">
+            <div class="score-label">Ihre geschätzte Punktezahl</div>
+            <div class="score-value"><span id="resultScore">0</span> Punkte</div>
+            <div style="color: #64748b; font-size: 14px; margin-bottom: 16px;">Mindestanforderung: 6 Punkte</div>
+            
+            <div class="score-bar">
+              
+            </div>
+            
+            
+            
+          </div>
+
+          <!-- LEAD CAPTURE FORM -->
+          <div class="lead-form">
+            <div class="lead-form-title">Kostenlose Erstberatung anfragen</div>
+            <div class="lead-form-description">Erhalten Sie eine persönliche Beratung zu Ihren nächsten Schritten</div>
+            <form action="https://formsubmit.co/info@berlingateway.de" method="POST" onsubmit="submitLead(event)">
+              <div class="form-group">
+                <label>E-Mail</label>
+                <input type="email" name="email" id="leadEmail" placeholder="Ihre E-Mail-Adresse" required>
+              </div>
+              <div class="form-group">
+                <label>WhatsApp (optional)</label>
+                <input type="text" name="whatsapp" id="leadWhatsApp" placeholder="+49 ...">
+              </div>
+              <input type="hidden" name="_subject" value="Chancenkarte Assessment - Kostenlose Beratung">
+              <input type="hidden" name="_replyto" id="formReplyTo" value="">
+              <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage! Unser Team wird sich in Kürze mit Ihnen in Verbindung setzen.">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://berlingateway.de/de/assessment.html">
+              <input type="hidden" name="score" id="formScore" value="0">
+              <input type="hidden" name="status" id="formStatus" value="">
+              <input type="hidden" name="language" value="de">
+              <button type="submit" class="form-submit">Beratung anfragen</button>
+              <div class="form-message">Ihre Daten werden sicher behandelt und nicht weitergegeben.</div>
+              <div class="success-message" id="successMessage">Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Unser Team meldet sich in Kürze.</div>
+            </form>
+          </div>
+
+          <div class="button-group" style="margin-top: 32px;">
+            <button class="btn btn-secondary" onclick="resetAssessment()">Neu beginnen</button>
+            <button class="btn btn-primary" onclick="window.location.href='/de/chancenkarte-deutschland.html'">Mehr erfahren</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <section style="max-width: 700px; margin: 64px auto; padding: 0 24px;">
+      <h2 style="font-size: 32px; margin-bottom: 32px; color: #0B3B8C; text-align: center;">Häufig gestellte Fragen zur Chancenkarte</h2>
+      
+      <div style="display: grid; gap: 24px;">
+        <!-- FAQ Item 1 -->
+        <div >
+          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Was ist die Chancenkarte Deutschland?</h3>
+          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Die Chancenkarte ist ein punktbasiertes Einwanderungssystem, das internationalen Fachkräften ermöglicht, nach Deutschland zu kommen und eine Arbeit zu suchen.</p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div >
+          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Wie viele Punkte braucht man für die Chancenkarte?</h3>
+          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Mindestens 6 Punkte im Bewertungssystem sind erforderlich.</p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div >
+          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Kann man ohne Deutsch nach Deutschland kommen?</h3>
+          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Ja, in einigen Fällen können Englischkenntnisse ausreichen, besonders in internationalen Branchen.</p>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div >
+          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Wie lange ist die Chancenkarte gültig?</h3>
+          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Die Chancenkarte ermöglicht einen Aufenthalt von bis zu 12 Monaten zur Jobsuche.</p>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div >
+          <h3 style="font-size: 18px; color: #0B3B8C; margin-top: 0; margin-bottom: 12px;">Kann man mit der Chancenkarte arbeiten?</h3>
+          <p style="font-size: 16px; color: #666; line-height: 1.8; margin: 0;">Ja, begrenzte Beschäftigung ist während der Jobsuche möglich.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container wrap">
+      <div>
+        <p><strong>Berlin Gateway</strong></p>
+        <p>Perleberger Str 41, 10559 Berlin</p>
+      </div>
+      <div>
+        <p><a href="mailto:info@berlingateway.de">info@berlingateway.de</a></p>
+        <p><a href="tel:+493025730875">+49 30 25730875</a></p>
+      </div>
+      <div>
+        <p><a href="/sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    function updateProgress() {
+      const progress = (currentStep / totalSteps) * 100;
+      document.getElementById('progressFill').style.width = progress + '%';
+    }
+
+    function showStep(step) {
+      for (let i = 1; i <= totalSteps; i++) {
+        document.getElementById('step' + i).classList.remove('active');
+      }
+      document.getElementById('step' + step).classList.add('active');
+      updateProgress();
+      window.scrollTo(0, 0);
+    }
+
+    function nextStep() {
+      const stepInputs = document.querySelectorAll(`input[name="${getStepName(currentStep)}"]`);
+      const isSelected = Array.from(stepInputs).some(input => input.checked);
+      
+      if (!isSelected) {
+        alert('Bitte wählen Sie eine Option aus.');
+        return;
+      }
+
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function getStepName(step) {
+      const names = ['qualification', 'experience', 'language', 'age', 'connection'];
+      return names[step - 1];
+    }
+
+    function calculateResult() {
+      const stepInputs = document.querySelectorAll(`input[name="connection"]`);
+      const isSelected = Array.from(stepInputs).some(input => input.checked);
+      
+      if (!isSelected) {
+        alert('Bitte wählen Sie eine Option aus.');
+        return;
+      }
+
+      // Calculate total points
+      let totalPoints = 0;
+      for (let i = 1; i <= totalSteps; i++) {
+        const stepName = getStepName(i);
+        const selected = document.querySelector(`input[name="${stepName}"]:checked`);
+        if (selected) {
+          totalPoints += parseInt(selected.value);
+        }
+      }
+
+      // Determine status and message
+      let status, message, statusClass;
+      if (totalPoints >= 10) {
+        status = 'Ausgezeichnete Chancen!';
+        statusClass = 'excellent';
+        message = 'Sie erfüllen die Anforderungen sehr gut. Ihre Chancen auf die Chancenkarte sind ausgezeichnet. Kontaktieren Sie uns für die nächsten Schritte.';
+      } else if (totalPoints >= 6) {
+        status = 'Chancenkarte möglich!';
+        statusClass = 'good';
+        message = 'Sie erfüllen die Mindestanforderung. Sie können die Chancenkarte beantragen. Wir helfen Ihnen gerne bei den nächsten Schritten.';
+      } else {
+        status = 'Vorbereitung empfohlen';
+        statusClass = 'early';
+        message = 'Sie erreichen derzeit nicht die Mindestpunktzahl von 6. Verbessern Sie Ihre Deutschkenntnisse oder Berufserfahrung und versuchen Sie es erneut.';
+      }
+
+      // Display result
+      document.getElementById('resultScore').textContent = totalPoints;
+      document.getElementById('resultStatus').textContent = status;
+      document.getElementById('resultStatus').className = 'result-status ' + statusClass;
+      document.getElementById('resultMessage').textContent = message;
+      
+      // Update score bar
+      const scorePercentage = (totalPoints / 13) * 100; // Max points is 13
+      const scoreBar = document.getElementById('scoreBar');
+      
+      if (totalPoints >= 10) {
+        scoreBar.style.background = '#10b981'; // Green
+      } else if (totalPoints >= 6) {
+        scoreBar.style.background = '#0B3B8C'; // Blue
+      } else {
+        scoreBar.style.background = '#f59e0b'; // Orange
+      }
+      scoreBar.style.width = Math.min(scorePercentage, 100) + '%';
+      
+      // Update form hidden fields
+      document.getElementById('formScore').value = totalPoints;
+      document.getElementById('formStatus').value = status;
+      
+      document.getElementById('resultSection').classList.add('active');
+
+      for (let i = 1; i <= totalSteps; i++) {
+        document.getElementById('step' + i).classList.remove('active');
+      }
+
+      window.scrollTo(0, 0);
+    }
+
+    function submitLead(event) {
+      event.preventDefault();
+      const email = document.getElementById('leadEmail').value.trim();
+      const form = event.target;
+      
+      if (!email) {
+        alert('Bitte geben Sie Ihre E-Mail-Adresse ein.');
+        return;
+      }
+      
+      document.getElementById('formReplyTo').value = email;
+      document.getElementById('successMessage').style.display = 'block';
+      
+      form.submit();
+    }
+
+    function resetAssessment() {
+      document.querySelectorAll('input[type="radio"]').forEach(input => {
+        input.checked = false;
+      });
+      
+      currentStep = 1;
+      showStep(1);
+      
+      document.getElementById('resultSection').classList.remove('active');
+    }
+
+    updateProgress();
+  </script>
+
+  <script>
+    document.querySelector('.language-toggle').addEventListener('click', function() {
+      window.location.href = '/ar/assessment.html';
+    });
+  </script>
+</body>
+</html>

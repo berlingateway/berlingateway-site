@@ -154,39 +154,7 @@
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/chancenkarte" class="lang-switch">العربية</a>
-        </div>
-    </div>
-</div>
-
-<!-- BAND 2: MINIMAL HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-    </div>
-</header>
-
-<!-- BAND 3: INTERNAL NAV BAR -->
-<div class="internal-nav">
-    <div class="internal-nav__inner">
-        <a href="/de/chancenkarte" class="nav-link {{ 'active' if current_page == 'chancenkarte' and lang == 'de' else '' }}">Chancenkarte</a>
-        <a href="/de/assessment" class="nav-link {{ 'active' if current_page == 'assessment' and lang == 'de' else '' }}">Punkte-Rechner</a>
-        <a href="/de/systemlogik" class="nav-link {{ 'active' if current_page == 'systemlogik' and lang == 'de' else '' }}">Systemlogik</a>
-        <a href="/de/monitor" class="nav-link {{ 'active' if current_page == 'monitor' and lang == 'de' else '' }}">Monitor</a>
-        <a href="/de/insights" class="nav-link {{ 'active' if current_page == 'insights' and lang == 'de' else '' }}">Insights</a>
-    </div>
-</div>
+{% include 'includes/header_de.html' %}
 
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main style="padding-top: 130px;">
@@ -282,41 +250,7 @@
     </section>
 
 </main>
-
-<!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/">Startseite</a>
-                <a href="/de/chancenkarte">Chancenkarte</a>
-                <a href="/de/assessment">Punkte-Rechner</a>
-                <a href="/de/systemlogik">Systemlogik</a>
-                <a href="/de/monitor">Monitor</a>
-                <a href="/de/insights">Insights</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum">Impressum</a>
-                <a href="/de/datenschutz">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
-</footer>
-
+{% include 'includes/footer_de.html' %}
 <script>
 let formExpanded = false;
 

@@ -1,16 +1,14 @@
-#!/usr/bin/env python3
-"""
-Build script for Berlin Gateway Chancenkarte decision page.
-Renders DE and AR versions with exact copy and specialized form.
-"""
-
 import os
 from pathlib import Path
+from jinja2 import Environment, FileSystemLoader
 
 BASE_PATH = Path(__file__).parent
 TEMPLATES_PATH = BASE_PATH / 'templates'
 OUTPUT_DE_PATH = BASE_PATH / 'de'
 OUTPUT_AR_PATH = BASE_PATH / 'ar'
+
+# Setup Jinja2 environment
+env = Environment(loader=FileSystemLoader(TEMPLATES_PATH))
 
 # ============================================================================
 # CHANCENKARTE CONTENT (EXACT COPY FROM REQUIREMENTS)
@@ -74,47 +72,35 @@ CHANCENKARTE_AR = {
     'routing_block_2_link': '/ar/monitor',
 }
 
-def render_page(lang, content, current_page):
-    """Render a page with the given language and content."""
+def render_page(lang, content, current_page, page_slug):
+    """Render a page with the given language and content using Jinja2."""
     if lang == 'de':
-        template_path = TEMPLATES_PATH / 'chancenkarte_de.html'
+        template_file = 'chancenkarte_de.html'
         output_path = OUTPUT_DE_PATH / 'chancenkarte.html'
     else:
-        template_path = TEMPLATES_PATH / 'chancenkarte_ar.html'
+        template_file = 'chancenkarte_ar.html'
         output_path = OUTPUT_AR_PATH / 'chancenkarte.html'
     
-    # Read template
-    with open(template_path, 'r', encoding='utf-8') as f:
-        html = f.read()
+    template = env.get_template(template_file)
     
-    # Replace all variables
-    for key, value in content.items():
-        placeholder = '{{ ' + key + ' }}'
-        if placeholder not in html:
-            raise ValueError(f"Missing placeholder: {placeholder} in template {template_path}")
-        html = html.replace(placeholder, str(value))
-
-    # Replace current_page and lang placeholders for active nav item
-    html = html.replace('{{ current_page }}', current_page)
-    html = html.replace('{{ lang }}', lang)
+    # Combine content with global variables for rendering
+    context = {
+        **content,
+        'current_page': current_page,
+        'lang': lang,
+        'page_slug': page_slug
+    }
     
-    # Check for remaining placeholders (excluding comments)
-    import re
-    placeholders = re.findall(r'{{(\s*\w+\s*)}}', html)
-    # Filter out known placeholders that are handled by JS or are optional
-    placeholders = [p for p in placeholders if p.strip() not in ['current_page', 'lang']]
-    if placeholders:
-        raise ValueError(f"Unresolved placeholders: {placeholders}")
+    rendered_html = template.render(context)
     
-    # Write output
     os.makedirs(output_path.parent, exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(html)
+        f.write(rendered_html)
     
     print(f"✓ {output_path}")
 
 if __name__ == '__main__':
     print("Building Chancenkarte pages...")
-    render_page('de', CHANCENKARTE_DE, 'chancenkarte')
-    render_page('ar', CHANCENKARTE_AR, 'chancenkarte')
+    render_page('de', CHANCENKARTE_DE, 'chancenkarte', 'chancenkarte')
+    render_page('ar', CHANCENKARTE_AR, 'chancenkarte', 'chancenkarte')
     print("✓ Chancenkarte build complete!")

@@ -1,11 +1,6 @@
-#!/usr/bin/env python3
-"""
-Build script for Systemlogik pages (DE + AR)
-Generates /de/systemlogik and /ar/systemlogik from templates with filter logic and routing
-"""
-
 import os
 from pathlib import Path
+from jinja2 import Environment, FileSystemLoader
 
 # Define base paths
 BASE_DIR = Path(__file__).parent
@@ -16,6 +11,9 @@ OUTPUT_DIR_AR = BASE_DIR / "ar"
 # Ensure output directories exist
 OUTPUT_DIR_DE.mkdir(exist_ok=True)
 OUTPUT_DIR_AR.mkdir(exist_ok=True)
+
+# Setup Jinja2 environment
+env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
 
 # German content data
 CONTENT_DE = {
@@ -50,7 +48,7 @@ CONTENT_DE = {
     "decision_cta_secondary_link_1": "Monitor ansehen",
     "decision_cta_secondary_link_1_href": "/de/monitor",
     "decision_cta_secondary_link_2": "Insights lesen",
-    "decision_cta_secondary_link_2_href": "/de/insights",
+    "decision_cta_secondary_link_2_2_href": "/de/insights",
 }
 
 # Arabic content data
@@ -89,107 +87,32 @@ CONTENT_AR = {
     "decision_cta_secondary_link_2_href": "/ar/insights",
 }
 
-def generate_filters_html(content_data, lang_code):
-    """Generate HTML blocks for filters with inline links"""
-    html = ""
-    link_text_de = "Ihre Chancenkarte-Bewertung starten"
-    link_text_ar = "ابدأ تقييم بطاقة الفرصة الخاصة بك"
-    link_target = f"/{lang_code}/chancenkarte"
-
-    filters = [
-        {"title": content_data["filter_1_title"], "text": content_data["filter_1_text"]},
-        {"title": content_data["filter_2_title"], "text": content_data["filter_2_text"]},
-        {"title": content_data["filter_3_title"], "text": content_data["filter_3_text"]},
-    ]
-
-    for i, filter_data in enumerate(filters):
-        html += f'            <div class="filter-block">\n                <h3>{filter_data["title"]}</h3>\n                <p>{filter_data["text"]}</p>\n            </div>\n'
-        if i == 1: # After the second filter block
-            html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
-    return html
-
-def generate_routing_cards_html(content_data, lang_code):
-    """Generate HTML for routing cards"""
-    html = ""
-    for i in range(1, 4):
-        card_title = content_data[f"routing_card_{i}_title"]
-        card_text = content_data[f"routing_card_{i}_text"]
-        card_button = content_data[f"routing_card_{i}_button"]
-        card_link = content_data[f"routing_card_{i}_link"]
-        html += f'''            <div class="routing-card">
-                <h3>{card_title}</h3>
-                <p>{card_text}</p>
-                <a href="{card_link}" class="routing-card-button">{card_button}</a>
-            </div>
-'''
-    return html
-
-def generate_decision_cta_secondary_links(content_data):
-    """Generate secondary links for decision CTA"""
-    html = ""
-    link_1_text = content_data["decision_cta_secondary_link_1"]
-    link_1_href = content_data["decision_cta_secondary_link_1_href"]
-    link_2_text = content_data["decision_cta_secondary_link_2"]
-    link_2_href = content_data["decision_cta_secondary_link_2_href"]
-    
-    html += f'            <a href="{link_1_href}">{link_1_text} →</a>\n'
-    html += f'            <a href="{link_2_href}">{link_2_text} →</a>\n'
-    return html
-
-def build_systemlogik_page(lang_code, content_data, current_page):
-    """Build a Systemlogik page for a given language"""
-    template_name = f"systemlogik_{lang_code}.html"
-    template_path = TEMPLATES_DIR / template_name
+def build_systemlogik_page(lang_code, content_data, current_page, page_slug):
+    """Build a Systemlogik page for a given language using Jinja2."""
+    template_file = f"systemlogik_{lang_code}.html"
     output_dir = OUTPUT_DIR_DE if lang_code == "de" else OUTPUT_DIR_AR
     output_path = output_dir / "systemlogik.html"
     
-    with open(template_path, 'r', encoding='utf-8') as f:
-        template = f.read()
+    template = env.get_template(template_file)
     
-    filters_content_with_links = generate_filters_html(content_data, lang_code)
-    routing_cards_html = generate_routing_cards_html(content_data, lang_code)
-    decision_cta_secondary_links = generate_decision_cta_secondary_links(content_data)
-
-    # Replace placeholders with actual content
-    template = template.replace(
-        "{{ page_title }}", content_data["page_title"]
-    ).replace(
-        "{{ hero_title }}", content_data["hero_title"]
-    ).replace(
-        "{{ hero_subtitle }}", content_data["hero_subtitle"]
-    ).replace(
-        "{{ filters_content_with_links }}", filters_content_with_links
-    ).replace(
-        "{{ exclusion_text }}", content_data["exclusion_text"]
-    ).replace(
-        "{{ cta_text }}", content_data["cta_text"]
-    ).replace(
-        "{{ routing_section_title }}", content_data["routing_section_title"]
-    ).replace(
-        "{{ routing_section_intro }}", content_data["routing_section_intro"]
-    ).replace(
-        "{{ routing_cards_html }}", routing_cards_html
-    ).replace(
-        "{{ decision_cta_headline }}", content_data["decision_cta_headline"]
-    ).replace(
-        "{{ decision_cta_text }}", content_data["decision_cta_text"]
-    ).replace(
-        "{{ decision_cta_button }}", content_data["decision_cta_button"]
-    ).replace(
-        "{{ decision_cta_secondary_links }}", decision_cta_secondary_links
-    )
-
-    # Replace current_page and lang placeholders for active nav item
-    template = template.replace('{{ current_page }}', current_page)
-    template = template.replace('{{ lang }}', lang_code)
+    # Combine content with global variables for rendering
+    context = {
+        **content_data,
+        "current_page": current_page,
+        "lang": lang_code,
+        "page_slug": page_slug
+    }
     
-    with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(template)
+    rendered_html = template.render(context)
+    
+    os.makedirs(output_path.parent, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(rendered_html)
     
     print(f"✓ {output_path}")
 
 if __name__ == "__main__":
     print("Building Systemlogik pages...")
-    build_systemlogik_page("de", CONTENT_DE, "systemlogik")
-    build_systemlogik_page("ar", CONTENT_AR, "systemlogik")
+    build_systemlogik_page("de", CONTENT_DE, "systemlogik", "systemlogik")
+    build_systemlogik_page("ar", CONTENT_AR, "systemlogik", "systemlogik")
     print("✓ Systemlogik build complete!")

@@ -1,11 +1,6 @@
-#!/usr/bin/env python3
-"""
-Build script for Insights pages (DE + AR)
-Generates /de/insights and /ar/insights from templates with real scenarios
-"""
-
 import os
 from pathlib import Path
+from jinja2 import Environment, FileSystemLoader
 
 # Define base paths
 BASE_DIR = Path(__file__).parent
@@ -16,6 +11,9 @@ OUTPUT_DIR_AR = BASE_DIR / "ar"
 # Ensure output directories exist
 OUTPUT_DIR_DE.mkdir(exist_ok=True)
 OUTPUT_DIR_AR.mkdir(exist_ok=True)
+
+# Setup Jinja2 environment
+env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
 
 # German content data
 CONTENT_DE = {
@@ -55,68 +53,44 @@ def generate_scenarios_html(scenarios, lang_code):
     """Generate HTML list items for scenarios with inline links"""
     html = ""
     link_text_de = "Ihre Chancenkarte-Bewertung starten"
-    link_text_ar = "ابدأ تقييم بطاقة الفرص الخاصة بك"
+    link_text_ar = "ابدأ تقييم بطاقة الفرصة الخاصة بك"
     link_target = f"/{lang_code}/chancenkarte"
 
     for i, scenario in enumerate(scenarios):
         html += f"            <li>{scenario}</li>\n"
         # Add inline link after every 2-3 content blocks
         if (i + 1) % 2 == 0 and i < len(scenarios) - 1: # After 2nd and 4th block
-            html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text_de if lang_code == "de" else link_text_ar}</a>\n            </div>\n'
+            link_text = link_text_de if lang_code == "de" else link_text_ar
+            html += f'            <div class="inline-link-container">\n                <a href="{link_target}" class="inline-cta-link">{link_text}</a>\n            </div>\n'
     return html
 
-def render_page(lang, content_data, current_page):
-    """Build an Insights page for a given language"""
-    template_name = f"insights_{lang}.html"
-    template_path = TEMPLATES_DIR / template_name
+def render_page(lang, content_data, current_page, page_slug):
+    """Build an Insights page for a given language using Jinja2."""
+    template_file = f"insights_{lang}.html"
     output_dir = OUTPUT_DIR_DE if lang == "de" else OUTPUT_DIR_AR
     output_path = output_dir / "insights.html"
     
-    with open(template_path, 'r', encoding='utf-8') as f:
-        template = f.read()
+    template = env.get_template(template_file)
     
-    # Replace placeholders with actual content
-    template = template.replace(
-        "{{ page_title }}", content_data["page_title"]
-    ).replace(
-        "{{ hero_title }}", content_data["hero_title"]
-    ).replace(
-        "{{ hero_subtitle }}", content_data["hero_subtitle"]
-    ).replace(
-        "{{ scenario_blocks }}", generate_scenarios_html(content_data["scenarios"], lang)
-    ).replace(
-        "{{ mirror_text }}", content_data["mirror_text"]
-    ).replace(
-        "{{ cta_text }}", content_data["cta_text"]
-    )
-
-    # Replace current_page and lang placeholders for active nav item
-    template = template.replace('{{ current_page }}', current_page)
-    template = template.replace('{{ lang }}', lang)
+    # Combine content with global variables for rendering
+    context = {
+        **content_data,
+        "current_page": current_page,
+        "lang": lang,
+        "page_slug": page_slug,
+        "scenario_blocks": generate_scenarios_html(content_data["scenarios"], lang)
+    }
     
-    with open(output_path, 'w', encoding='utf-8') as f:
-        f.write(template)
+    rendered_html = template.render(context)
+    
+    os.makedirs(output_path.parent, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(rendered_html)
     
     print(f"✓ {output_path}")
 
 if __name__ == "__main__":
     print("Building Insights pages...")
-    insights_content_de = {
-        "page_title": "Insights – Berlin Gateway",
-        "hero_title": "Ihre Situation. Unsere Realität.",
-        "hero_subtitle": "Erkennen Sie sich in diesen Szenarien wieder? Dann sind Sie hier richtig.",
-        "scenarios": CONTENT_DE["scenarios"],
-        "mirror_text": CONTENT_DE["mirror_text"],
-        "cta_text": CONTENT_DE["cta_text"]
-    }
-    insights_content_ar = {
-        "page_title": "رؤى – Berlin Gateway",
-        "hero_title": "وضعك. واقعنا.",
-        "hero_subtitle": "هل تجد نفسك في هذه السيناريوهات؟ إذن أنت في المكان الصحيح.",
-        "scenarios": CONTENT_AR["scenarios"],
-        "mirror_text": CONTENT_AR["mirror_text"],
-        "cta_text": CONTENT_AR["cta_text"]
-    }
-    render_page("de", insights_content_de, "insights")
-    render_page("ar", insights_content_ar, "insights")
+    render_page("de", CONTENT_DE, "insights", "insights")
+    render_page("ar", CONTENT_AR, "insights", "insights")
     print("✓ Insights build complete!")

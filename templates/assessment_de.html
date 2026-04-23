@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>حاسبة نقاط بطاقة الفرصة – اختبر فرصك لألمانيا</title>
-  <meta name="description" content="احصل على تقييم فوري لفرصتك بناءً على بياناتك." />
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ hero_subtitle }}" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://berlingateway.de/ar/assessment.html" />
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/assessment.html" />
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/assessment.html" />
+  <link rel="canonical" href="https://berlingateway.de/de/{{ page_slug }}.html" />
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/{{ page_slug }}.html" />
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/{{ page_slug }}.html" />
   <link rel="stylesheet" href="/assets/css/app.css" />
   <style>
     .assessment-hero {
@@ -91,8 +91,7 @@
       background: #fafaf8;
     }
     .option-label input[type="radio"] {
-      margin-left: 12px; /* RTL adjustment */
-      margin-right: 0;
+      margin-right: 12px;
       cursor: pointer;
       width: 20px;
       height: 20px;
@@ -100,7 +99,6 @@
     }
     .option-text {
       flex: 1;
-      text-align: right; /* RTL adjustment */
     }
     .option-points {
       color: #B8860B;
@@ -112,7 +110,6 @@
       gap: 12px;
       margin-top: 40px;
       justify-content: space-between;
-      flex-direction: row-reverse; /* RTL adjustment */
     }
     .btn {
       padding: 14px 28px;
@@ -248,50 +245,13 @@
   </style>
 </head>
 <body>
-  <!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/de/assessment" class="lang-switch">Deutsch</a>
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
-        </div>
-    </div>
-</div>
-
-<!-- BAND 2: MAIN HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte" class="nav-link ">بطاقة الفرص</a>
-            <a href="/ar/assessment" class="nav-link active">حاسبة النقاط</a>
-            <a href="/ar/systemlogik" class="nav-link ">منطق النظام</a>
-            <a href="/ar/monitor" class="nav-link ">المرصد</a>
-            <a href="/ar/insights" class="nav-link ">الرؤى</a>
-        </nav>
-    </div>
-</header>
-
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
-    </div>
-</nav>
+  {% include 'includes/header_de.html' %}
 
   <main style="padding-top: 130px;">
     <!-- HERO SECTION -->
     <section class="assessment-hero">
-      <h1>احسب نقاطك لبطاقة الفرصة الآن</h1>
-      <p>احصل على تقييم فوري لفرصتك بناءً على بياناتك.</p>
+      <h1>{{ hero_title }}</h1>
+      <p>{{ hero_subtitle }}</p>
     </section>
 
     <!-- ASSESSMENT TOOL -->
@@ -303,140 +263,140 @@
 
       <!-- STEP 1: QUALIFICATION -->
       <div class="step active" id="step1">
-        <div class="step-title">الخطوة 1: مؤهلاتك</div>
-        <div class="step-description">ما هو أعلى مؤهل لديك؟</div>
+        <div class="step-title">Schritt 1: Ihre Qualifikation</div>
+        <div class="step-description">Was ist Ihr höchster Abschluss?</div>
         <div class="option-group">
           <label class="option-label">
             <input type="radio" name="qualification" value="3">
-            <span class="option-text">شهادة جامعية (بكالوريوس/ماجستير)</span>
-            <span class="option-points">3 نقاط</span>
+            <span class="option-text">Universitätsabschluss (Bachelor/Master)</span>
+            <span class="option-points">3 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="qualification" value="2">
-            <span class="option-text">تدريب مهني / مدرسة فنية</span>
-            <span class="option-points">2 نقطة</span>
+            <span class="option-text">Berufsausbildung / Fachschule</span>
+            <span class="option-points">2 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="qualification" value="0">
-            <span class="option-text">لا يوجد مؤهل رسمي</span>
-            <span class="option-points">0 نقاط</span>
+            <span class="option-text">Keine formale Qualifikation</span>
+            <span class="option-points">0 Punkte</span>
           </label>
         </div>
         <div class="button-group">
-          <button class="btn btn-primary" onclick="nextStep(2)">التالي</button>
+          <button class="btn btn-primary" onclick="nextStep(2)">Weiter</button>
         </div>
       </div>
 
       <!-- STEP 2: PROFESSIONAL EXPERIENCE -->
       <div class="step" id="step2">
-        <div class="step-title">الخطوة 2: الخبرة المهنية</div>
-        <div class="step-description">كم سنة من الخبرة المهنية ذات الصلة لديك؟</div>
+        <div class="step-title">Schritt 2: Berufserfahrung</div>
+        <div class="step-description">Wie viele Jahre relevanter Berufserfahrung haben Sie?</div>
         <div class="option-group">
           <label class="option-label">
             <input type="radio" name="experience" value="3">
-            <span class="option-text">5+ سنوات</span>
-            <span class="option-points">3 نقاط</span>
+            <span class="option-text">5+ Jahre</span>
+            <span class="option-points">3 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="experience" value="2">
-            <span class="option-text">2-4 سنوات</span>
-            <span class="option-points">2 نقطة</span>
+            <span class="option-text">2-4 Jahre</span>
+            <span class="option-points">2 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="experience" value="0">
-            <span class="option-text">أقل من سنتين</span>
-            <span class="option-points">0 نقاط</span>
+            <span class="option-text">Weniger als 2 Jahre</span>
+            <span class="option-points">0 Punkte</span>
           </label>
         </div>
         <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(1)">السابق</button>
-          <button class="btn btn-primary" onclick="nextStep(3)">التالي</button>
+          <button class="btn btn-secondary" onclick="prevStep(1)">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep(3)">Weiter</button>
         </div>
       </div>
 
       <!-- STEP 3: GERMAN LANGUAGE SKILLS -->
       <div class="step" id="step3">
-        <div class="step-title">الخطوة 3: مهارات اللغة الألمانية</div>
-        <div class="step-description">ما هو مستواك الحالي في اللغة الألمانية؟</div>
+        <div class="step-title">Schritt 3: Deutschkenntnisse</div>
+        <div class="step-description">Was ist Ihr aktuelles Deutsch-Niveau?</div>
         <div class="option-group">
           <label class="option-label">
             <input type="radio" name="german" value="3">
-            <span class="option-text">B2 أو أعلى</span>
-            <span class="option-points">3 نقاط</span>
+            <span class="option-text">B2 oder höher</span>
+            <span class="option-points">3 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="german" value="2">
             <span class="option-text">B1</span>
-            <span class="option-points">2 نقطة</span>
+            <span class="option-points">2 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="german" value="1">
             <span class="option-text">A2</span>
-            <span class="option-points">1 نقطة</span>
+            <span class="option-points">1 Punkt</span>
           </label>
           <label class="option-label">
             <input type="radio" name="german" value="0">
-            <span class="option-text">A1 أو أقل</span>
-            <span class="option-points">0 نقاط</span>
+            <span class="option-text">A1 oder niedriger</span>
+            <span class="option-points">0 Punkte</span>
           </label>
         </div>
         <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(2)">السابق</button>
-          <button class="btn btn-primary" onclick="nextStep(4)">التالي</button>
+          <button class="btn btn-secondary" onclick="prevStep(2)">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep(4)">Weiter</button>
         </div>
       </div>
 
       <!-- STEP 4: AGE -->
       <div class="step" id="step4">
-        <div class="step-title">الخطوة 4: عمرك</div>
-        <div class="step-description">كم عمرك؟</div>
+        <div class="step-title">Schritt 4: Ihr Alter</div>
+        <div class="step-description">Wie alt sind Sie?</div>
         <div class="option-group">
           <label class="option-label">
             <input type="radio" name="age" value="2">
-            <span class="option-text">أقل من 35</span>
-            <span class="option-points">2 نقطة</span>
+            <span class="option-text">Unter 35</span>
+            <span class="option-points">2 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="age" value="1">
             <span class="option-text">35-40</span>
-            <span class="option-points">1 نقطة</span>
+            <span class="option-points">1 Punkt</span>
           </label>
           <label class="option-label">
             <input type="radio" name="age" value="0">
-            <span class="option-text">أكثر من 40</span>
-            <span class="option-points">0 نقاط</span>
+            <span class="option-text">Über 40</span>
+            <span class="option-points">0 Punkte</span>
           </label>
         </div>
         <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(3)">السابق</button>
-          <button class="btn btn-primary" onclick="nextStep(5)">التالي</button>
+          <button class="btn btn-secondary" onclick="prevStep(3)">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep(5)">Weiter</button>
         </div>
       </div>
 
       <!-- STEP 5: CONNECTION TO GERMANY -->
       <div class="step" id="step5">
-        <div class="step-title">الخطوة 5: صلتك بألمانيا</div>
-        <div class="step-description">هل لديك أي صلة بألمانيا؟</div>
+        <div class="step-title">Schritt 5: Verbindung zu Deutschland</div>
+        <div class="step-description">Haben Sie eine Verbindung zu Deutschland?</div>
         <div class="option-group">
           <label class="option-label">
             <input type="radio" name="connection" value="2">
-            <span class="option-text">إقامة سابقة في ألمانيا</span>
-            <span class="option-points">2 نقطة</span>
+            <span class="option-text">Früherer Aufenthalt in Deutschland</span>
+            <span class="option-points">2 Punkte</span>
           </label>
           <label class="option-label">
             <input type="radio" name="connection" value="1">
-            <span class="option-text">أقارب في ألمانيا</span>
-            <span class="option-points">1 نقطة</span>
+            <span class="option-text">Verwandte in Deutschland</span>
+            <span class="option-points">1 Punkt</span>
           </label>
           <label class="option-label">
             <input type="radio" name="connection" value="0">
-            <span class="option-text">لا توجد صلة</span>
-            <span class="option-points">0 نقاط</span>
+            <span class="option-text">Keine Verbindung</span>
+            <span class="option-points">0 Punkte</span>
           </label>
         </div>
         <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(4)">السابق</button>
-          <button class="btn btn-primary" onclick="calculateResult()">احسب النتيجة</button>
+          <button class="btn btn-secondary" onclick="prevStep(4)">Zurück</button>
+          <button class="btn btn-primary" onclick="calculateResult()">Ergebnis berechnen</button>
         </div>
       </div>
 
@@ -450,50 +410,19 @@
 
       <!-- MICRO-TRUST SECTION -->
       <div class="micro-trust">
-        <p>✓ مجاني 100% وغير ملزم</p>
-        <p>✓ يعتمد على معايير رسمية</p>
-        <p>✓ نتيجة فورية</p>
+        <p>✓ 100% kostenlos und unverbindlich</p>
+        <p>✓ Basiert auf offiziellen Kriterien</p>
+        <p>✓ Sofortiges Ergebnis</p>
       </div>
 
       <!-- FINAL CTA -->
       <div class="final-cta">
-        <a href="/ar/chancenkarte">ابدأ تقييم بطاقة الفرصة الخاصة بك</a>
+        <a href="/de/chancenkarte">{{ cta_text }}</a>
       </div>
     </div>
   </main>
 
-  <!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
-            </div>
-            <div>
-                <h4>التنقل</h4>
-                <a href="/ar/chancenkarte">بطاقة الفرص</a>
-                <a href="/ar/assessment">حاسبة النقاط</a>
-                <a href="/ar/systemlogik">منطق النظام</a>
-                <a href="/ar/monitor">المرصد</a>
-                <a href="/ar/insights">الرؤى</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum">بيان قانوني</a>
-                <a href="/ar/datenschutz">سياسة الخصوصية</a>
-            </div>
-            <div>
-                <h4>اتصل</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
-        </div>
-    </div>
-</footer>
+  {% include 'includes/footer_de.html' %}
 
   <script>
     let currentStep = 1;
@@ -533,18 +462,18 @@
       const resultMessage = document.getElementById("resultMessage");
       const resultCta = document.getElementById("resultCta");
 
-      resultScore.textContent = `${totalPoints} نقاط`;
+      resultScore.textContent = `${totalPoints} Punkte`;
 
       if (totalPoints >= 6) {
-        resultStatus.textContent = "أنت مؤهل مبدئياً.";
+        resultStatus.textContent = "{{ assessment_cta_headline_success }}";
         resultStatus.className = "result-status good";
-        resultMessage.textContent = "بناءً على تقييمك، تستوفي الحد الأدنى من المتطلبات لبطاقة الفرصة. تابع لبدء تقييم بطاقة الفرصة الخاصة بك.";
-        resultCta.innerHTML = `<a href="/ar/chancenkarte">ابدأ التقييم</a>`;
+        resultMessage.textContent = "{{ assessment_cta_text_success }}";
+        resultCta.innerHTML = `<a href="{{ assessment_cta_link_success }}">{{ assessment_cta_button_success }}</a>`;
       } else {
-        resultStatus.textContent = "حالياً لا تستوفي المتطلبات بشكل كامل.";
+        resultStatus.textContent = "{{ assessment_cta_headline_fail }}";
         resultStatus.className = "result-status early";
-        resultMessage.textContent = "بناءً على تقييمك، لا تستوفي الحد الأدنى من المتطلبات لبطاقة الفرصة بشكل كامل. تحقق من منطق النظام لفهم خياراتك.";
-        resultCta.innerHTML = `<a href="/ar/systemlogik">تحقق من منطق النظام</a>`;
+        resultMessage.textContent = "{{ assessment_cta_text_fail }}";
+        resultCta.innerHTML = `<a href="{{ assessment_cta_link_fail }}">{{ assessment_cta_button_fail }}</a>`;
       }
 
       resultSection.classList.add("active");

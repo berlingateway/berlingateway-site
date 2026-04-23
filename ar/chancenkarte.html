@@ -84,10 +84,12 @@
             opacity: 0;
             max-height: 0;
             overflow: hidden;
+            position: static !important;
         }
         html[dir="rtl"] .chancenkarte-form-card button[type="submit"].visible {
             opacity: 1;
             max-height: 100px;
+            position: static !important;
         }
         html[dir="rtl"] .chancenkarte-form-card button[type="submit"]:hover {
             background-color: #9a6f08;
@@ -148,6 +150,9 @@
             }
             html[dir="rtl"] .hero-text h1 {
                 font-size: 24px;
+            }
+            html[dir="rtl"] .chancenkarte-form-card {
+                padding: 30px 20px;
             }
         }
     </style>

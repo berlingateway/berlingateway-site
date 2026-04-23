@@ -84,10 +84,12 @@
             opacity: 0;
             max-height: 0;
             overflow: hidden;
+            position: static !important;
         }
         .chancenkarte-form-card button[type="submit"].visible {
             opacity: 1;
             max-height: 100px;
+            position: static !important;
         }
         .chancenkarte-form-card button[type="submit"]:hover {
             background-color: #9a6f08;
@@ -148,6 +150,9 @@
             }
             .hero-text h1 {
                 font-size: 24px;
+            }
+            .chancenkarte-form-card {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -365,20 +370,7 @@ document.getElementById("assessment-form").addEventListener("submit", function(e
     const formCard = document.querySelector('.chancenkarte-form-card');
     const assessmentForm = document.getElementById('assessment-form');
 
-    let formExpanded = false;
     let ctaVisible = false;
-
-    function expandForm() {
-        if (formExpanded) return;
-        formExpanded = true;
-        
-        document.getElementById('language-field').classList.add('visible');
-        document.getElementById('upload-field').classList.add('visible');
-        document.getElementById('submit-btn').classList.add('visible');
-
-        // Hide CTA bar if form is visible after expansion
-        checkCtaVisibility();
-    }
 
     function checkCtaVisibility() {
         if (window.innerWidth > 768) { // Only for mobile
@@ -404,23 +396,6 @@ document.getElementById("assessment-form").addEventListener("submit", function(e
         }
     }
 
-    // Trigger 1: Input in first field
-    document.getElementById('target-position').addEventListener('input', expandForm);
-
-    // Trigger 2: Scroll detection for form expansion
-    let scrollTriggeredFormExpansion = false;
-    window.addEventListener('scroll', function() {
-        if (scrollTriggeredFormExpansion || formExpanded) return;
-        
-        const rect = formCard.getBoundingClientRect();
-        
-        // Trigger when form is partially scrolled into view
-        if (rect.top < window.innerHeight * 0.8) {
-            scrollTriggeredFormExpansion = true;
-            expandForm();
-        }
-    });
-
     // Scroll detection for CTA bar visibility
     window.addEventListener('scroll', checkCtaVisibility);
     window.addEventListener('resize', checkCtaVisibility); // Re-check on resize
@@ -432,12 +407,6 @@ document.getElementById("assessment-form").addEventListener("submit", function(e
         assessmentForm.scrollIntoView({
             behavior: 'smooth'
         });
-    });
-
-    // Form submission
-    assessmentForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        alert("Anfrage eingereicht. Wir melden uns innerhalb von 24–48 Stunden.");
     });
 </script>
 

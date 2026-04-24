@@ -9,151 +9,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .hero-with-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+        .chancenkarte-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
-        .hero-text h1 {
+        .chancenkarte-hero {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .chancenkarte-hero h1 {
             font-size: 32px;
             font-weight: 800;
             line-height: 1.3;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #000;
         }
-        .hero-text p {
+        .chancenkarte-hero p {
             font-size: 16px;
             line-height: 1.6;
-            color: #333;
-            margin-bottom: 20px;
+            color: #666;
         }
-        .chancenkarte-form-card {
+        .chancenkarte-form-wrapper {
             background: white;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .chancenkarte-form-card h3 {
-            font-size: 18px;
+        .chancenkarte-form-wrapper h2 {
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-align: center;
+            color: #000;
         }
-        .chancenkarte-form-card label {
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
             display: block;
             font-weight: 600;
             margin-bottom: 8px;
             font-size: 14px;
+            color: #333;
         }
-        .chancenkarte-form-card input,
-        .chancenkarte-form-card select {
+        .form-group input,
+        .form-group select {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: Inter, sans-serif;
+            border-radius: 6px;
             font-size: 14px;
+            font-family: Inter, sans-serif;
+            box-sizing: border-box;
         }
-        .form-field {
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: opacity 0.2s ease, max-height 0.2s ease;
-            margin: 0;
-            padding: 0;
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #C5A059;
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
         }
-        .form-field.visible {
-            opacity: 1;
-            max-height: 100px;
-            margin-bottom: 20px;
-            padding: 0;
+        .form-group small {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
         }
-        .chancenkarte-form-card button[type="submit"] {
+        .form-submit {
             width: 100%;
             padding: 14px;
-            background-color: #B8860B;
+            background: #C5A059;
             color: white;
             border: none;
-            border-radius: 4px;
-            font-weight: 700;
+            border-radius: 6px;
             font-size: 16px;
+            font-weight: 700;
             cursor: pointer;
-            transition: background-color 0.2s, opacity 0.2s ease, max-height 0.2s ease;
-            margin-top: 20px;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            position: static !important;
+            margin-top: 10px;
+            transition: background 0.3s ease;
         }
-        .chancenkarte-form-card button[type="submit"].visible {
-            opacity: 1;
-            max-height: 100px;
-            position: static !important;
+        .form-submit:hover {
+            background: #a88a47;
         }
-        .chancenkarte-form-card button[type="submit"]:hover {
-            background-color: #9a6f08;
-        }
-        .section-authority {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .section-authority h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        .section-authority p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .section-authority ul {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0 15px 0;
-        }
-        .section-authority li {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .section-authority li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-        }
-        .micro-trust {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-        }
-        .final-close {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.6;
-        }
-        @media (max-width: 768px) {
-            .hero-with-form {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            .hero-text h1 {
-                font-size: 24px;
-            }
-            .chancenkarte-form-card {
-                padding: 30px 20px;
-            }
+        .form-submit:active {
+            background: #9a7c3f;
         }
     </style>
 </head>
@@ -161,246 +102,81 @@
 
 {% include 'includes/header_de.html' %}
 
-<!-- BAND 4: CONTENT BODY (WHITE) -->
-<main style="padding-top: 130px;">
-    <!-- SECTION 1: HERO WITH FORM -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-with-form">
-                <div class="hero-text">
-                    <h1>{{ hero_title }}</h1>
-                    <p>{{ hero_subtitle }}</p>
-                </div>
-                <div class="chancenkarte-form-card">
-                    <form class="assessment-form" id="assessment-form">
-                        <h3>{{ form_title }}</h3>
-                        
-                        <div class="form-field">
-                            <label for="target-position">{{ form_field_1_label }}</label>
-                            <input type="text" id="target-position" name="target_position" placeholder="z.B. Softwareentwickler" required>
-                        </div>
-                        
-                        <div class="form-field">
-                            <label for="qualification">{{ form_field_2_label }}</label>
-                            <input type="text" id="qualification" name="qualification" placeholder="z.B. Master Informatik" required>
-                        </div>
-                        
-                        <div class="form-field">
-                            <label for="experience">{{ form_field_3_label }}</label>
-                            <select id="experience" name="experience" required>
-                                <option value="">-- Bitte wählen --</option>
-                                <option value="0-2">0–2 Jahre</option>
-                                <option value="2-5">2–5 Jahre</option>
-                                <option value="5+">5+ Jahre</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-field">
-                            <label for="language">{{ form_field_4_label }}</label>
-                            <select id="language" name="language" required>
-                                <option value="">-- Bitte wählen --</option>
-                                <option value="a1-a2">A1–A2</option>
-                                <option value="b1">B1</option>
-                                <option value="b2">B2</option>
-                                <option value="c1+">C1+</option>
-                            </select>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="country">{{ form_field_5_label }}</label>
-                            <select id="country" name="country" required>
-                                <option value="">-- Bitte wählen --</option>
-                                <option value="DE">Deutschland</option>
-                                <option value="AT">Österreich</option>
-                                <option value="CH">Schweiz</option>
-                                <option value="US">USA</option>
-                                <option value="CA">Kanada</option>
-                                <option value="GB">Großbritannien</option>
-                                <option value="AU">Australien</option>
-                                <option value="OTHER">Andere</option>
-                            </select>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="email">{{ form_field_6_label }}</label>
-                            <input type="email" id="email" name="email" placeholder="ihre.email@example.com" required>
-                        </div>
-                        
-                        <div class="form-field">
-                            <label for="cv-upload">{{ form_field_7_label }}</label>
-                            <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
-                            <small>PDF only, max 5MB</small>
-                        </div>
-                        
-                        <button type="submit" id="submit-btn">{{ form_button }}</button>
-                    </form>
-                </div>
-            </div>
+<main>
+    <div class="chancenkarte-container">
+        <div class="chancenkarte-hero">
+            <h1>{{ hero_title }}</h1>
+            <p>{{ hero_subtitle }}</p>
         </div>
-    </section>
 
-    <!-- ROUTING BLOCK 1: SYSTEMLOGIK -->
-    <section class="chancenkarte-routing-block">
-        <h2>{{ routing_block_1_title }}</h2>
-        <p>{{ routing_block_1_text }}</p>
-        <a href="{{ routing_block_1_link }}" class="chancenkarte-routing-button">{{ routing_block_1_button }}</a>
-    </section>
+        <div class="chancenkarte-form-wrapper">
+            <h2>{{ form_title }}</h2>
+            <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="target-position">{{ form_field_1_label }}</label>
+                    <input type="text" id="target-position" name="target_position" placeholder="z.B. Softwareentwickler" required>
+                </div>
 
-    <!-- SECTION 2: AUTHORITY + HARD FILTER -->
-    <section class="section-authority">
-        <p>{{ authority_statement }}</p>
-        <p><strong>{{ filter_title }}</strong></p>
-        <ul>
-            <li>{{ filter_item1 }}</li>
-            <li>{{ filter_item2 }}</li>
-            <li>{{ filter_item3 }}</li>
-        </ul>
-        <p><em>{{ filter_disclaimer }}</em></p>
-    </section>
+                <div class="form-group">
+                    <label for="qualification">{{ form_field_2_label }}</label>
+                    <input type="text" id="qualification" name="qualification" placeholder="z.B. Master Informatik" required>
+                </div>
 
-    <!-- ROUTING BLOCK 2: MONITOR -->
-    <section class="chancenkarte-routing-block">
-        <h2>{{ routing_block_2_title }}</h2>
-        <p>{{ routing_block_2_text }}</p>
-        <a href="{{ routing_block_2_link }}" class="chancenkarte-routing-button">{{ routing_block_2_button }}</a>
-    </section>
+                <div class="form-group">
+                    <label for="experience">{{ form_field_3_label }}</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">-- Bitte wählen --</option>
+                        <option value="0-2">0–2 Jahre</option>
+                        <option value="2-5">2–5 Jahre</option>
+                        <option value="5+">5+ Jahre</option>
+                    </select>
+                </div>
 
-    <!-- SECTION 3: MICRO TRUST -->
-    <section class="micro-trust">
-        <p>{{ micro_trust }}</p>
-    </section>
+                <div class="form-group">
+                    <label for="language">{{ form_field_4_label }}</label>
+                    <select id="language" name="language" required>
+                        <option value="">-- Bitte wählen --</option>
+                        <option value="a1-a2">A1–A2</option>
+                        <option value="b1">B1</option>
+                        <option value="b2">B2</option>
+                        <option value="c1+">C1+</option>
+                    </select>
+                </div>
 
-    <!-- SECTION 4: FINAL CLOSE -->
-    <section class="final-close">
-        <p>{{ final_close }}</p>
-    </section>
+                <div class="form-group">
+                    <label for="country">{{ form_field_5_label }}</label>
+                    <select id="country" name="country" required>
+                        <option value="">-- Bitte wählen --</option>
+                        <option value="DE">Deutschland</option>
+                        <option value="AT">Österreich</option>
+                        <option value="CH">Schweiz</option>
+                        <option value="US">USA</option>
+                        <option value="CA">Kanada</option>
+                        <option value="GB">Großbritannien</option>
+                        <option value="AU">Australien</option>
+                        <option value="OTHER">Andere</option>
+                    </select>
+                </div>
 
-</main>
-{% include 'includes/footer_de.html' %}
-<script>
-let formExpanded = false;
+                <div class="form-group">
+                    <label for="email">{{ form_field_6_label }}</label>
+                    <input type="email" id="email" name="email" placeholder="ihre.email@example.com" required>
+                </div>
 
-function expandForm() {
-    if (formExpanded) return;
-    formExpanded = true;
-    
-    document.getElementById('language-field').classList.add('visible');
-    document.getElementById('upload-field').classList.add('visible');
-    document.getElementById('submit-btn').classList.add('visible');
-}
+                <div class="form-group">
+                    <label for="cv-upload">{{ form_field_7_label }}</label>
+                    <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
+                    <small>PDF only, max 5MB</small>
+                </div>
 
-// Trigger 1: Input in first field
-document.getElementById('target-position').addEventListener('input', expandForm);
-
-// Trigger 2: Scroll detection
-let scrollTriggered = false;
-window.addEventListener('scroll', function() {
-    if (scrollTriggered || formExpanded) return;
-    
-    const formCard = document.querySelector('.chancenkarte-form-card');
-    const rect = formCard.getBoundingClientRect();
-    
-    // Trigger when form is partially scrolled into view
-    if (rect.top < window.innerHeight * 0.8) {
-        scrollTriggered = true;
-        expandForm();
-    }
-});
-
-// Form submission with validation
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    // Validate required fields
-    const email = document.getElementById('email').value.trim();
-    const country = document.getElementById('country').value.trim();
-    const fileInput = document.getElementById('cv-upload');
-    const file = fileInput.files[0];
-    
-    // Email validation
-    if (!email) {
-        alert('Bitte geben Sie Ihre E-Mail-Adresse ein.');
-        return;
-    }
-    
-    // Country validation
-    if (!country) {
-        alert('Bitte waehlen Sie Ihr Wohnsitzland aus.');
-        return;
-    }
-    
-    // File validation
-    if (!file) {
-        alert('Bitte laden Sie eine PDF-Datei hoch.');
-        return;
-    }
-    
-    // Check file type
-    if (file.type !== 'application/pdf') {
-        alert('Bitte laden Sie nur PDF-Dateien hoch.');
-        return;
-    }
-    
-    // Check file size (max 5MB)
-    const maxSize = 5 * 1024 * 1024;
-    if (file.size > maxSize) {
-        alert('Die Datei ist zu gross. Maximale Groesse: 5MB.');
-        return;
-    }
-    
-    // All validations passed
-    alert('Vielen Dank. Ihre Anfrage wurde uebermittelt.');
-});
-</script>
-
-    <div class="mobile-cta-bar" id="mobile-cta-bar">
-        <a href="#assessment-form" class="mobile-cta-button">Bewertung jetzt senden</a>
+                <button type="submit" class="form-submit">{{ form_button }}</button>
+            </form>
+        </div>
     </div>
+</main>
 
-<script>
-    const mobileCtaBar = document.getElementById('mobile-cta-bar');
-    const formCard = document.querySelector('.chancenkarte-form-card');
-    const assessmentForm = document.getElementById('assessment-form');
-
-    let ctaVisible = false;
-
-    function checkCtaVisibility() {
-        if (window.innerWidth > 768) { // Only for mobile
-            mobileCtaBar.classList.remove('visible');
-            ctaVisible = false;
-            return;
-        }
-
-        const formRect = formCard.getBoundingClientRect();
-        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-        // Show CTA if scrolled past 10-15% and form is not visible
-        if (scrollPercentage > 10 && formRect.top > window.innerHeight) {
-            if (!ctaVisible) {
-                mobileCtaBar.classList.add('visible');
-                ctaVisible = true;
-            }
-        } else {
-            if (ctaVisible) {
-                mobileCtaBar.classList.remove('visible');
-                ctaVisible = false;
-            }
-        }
-    }
-
-    // Scroll detection for CTA bar visibility
-    window.addEventListener('scroll', checkCtaVisibility);
-    window.addEventListener('resize', checkCtaVisibility); // Re-check on resize
-    document.addEventListener('DOMContentLoaded', checkCtaVisibility); // Initial check
-
-    // Smooth scroll to form on CTA click
-    mobileCtaBar.querySelector('.mobile-cta-button').addEventListener('click', function(e) {
-        e.preventDefault();
-        assessmentForm.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-</script>
+{% include 'includes/footer_de.html' %}
 
 </body>
 </html>

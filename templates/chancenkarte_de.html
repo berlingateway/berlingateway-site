@@ -113,19 +113,22 @@
             <h2>{{ form_title }}</h2>
             <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
                 
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Neue Anfrage - Berlin Gateway">
+                
                 <div class="form-group">
                     <label for="target-position">{{ form_field_1_label }}</label>
-                    <input type="text" id="target-position" name="target_position" placeholder="z.B. Softwareentwickler" required>
+                    <input type="text" id="target-position" name="Zielberuf" placeholder="z.B. Softwareentwickler" required>
                 </div>
 
                 <div class="form-group">
                     <label for="qualification">{{ form_field_2_label }}</label>
-                    <input type="text" id="qualification" name="qualification" placeholder="z.B. Master Informatik" required>
+                    <input type="text" id="qualification" name="Abschluss" placeholder="z.B. Master Informatik" required>
                 </div>
 
                 <div class="form-group">
                     <label for="experience">{{ form_field_3_label }}</label>
-                    <select id="experience" name="experience" required>
+                    <select id="experience" name="Berufserfahrung" required>
                         <option value="">-- Bitte wählen --</option>
                         <option value="0-2">0–2 Jahre</option>
                         <option value="2-5">2–5 Jahre</option>
@@ -135,7 +138,7 @@
 
                 <div class="form-group">
                     <label for="language">{{ form_field_4_label }}</label>
-                    <select id="language" name="language" required>
+                    <select id="language" name="Sprachkenntnisse" required>
                         <option value="">-- Bitte wählen --</option>
                         <option value="a1-a2">A1–A2</option>
                         <option value="b1">B1</option>
@@ -146,7 +149,7 @@
 
                 <div class="form-group">
                     <label for="country">{{ form_field_5_label }}</label>
-                    <select id="country" name="country" required>
+                    <select id="country" name="Wohnsitzland" required>
                         <option value="">-- Bitte wählen --</option>
                         <option value="DE">Deutschland</option>
                         <option value="AT">Österreich</option>
@@ -161,12 +164,12 @@
 
                 <div class="form-group">
                     <label for="email">{{ form_field_6_label }}</label>
-                    <input type="email" id="email" name="email" placeholder="ihre.email@example.com" required>
+                    <input type="email" id="email" name="E-Mail" placeholder="ihre.email@example.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="cv-upload">{{ form_field_7_label }}</label>
-                    <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
+                    <input type="file" id="cv-upload" name="CV Upload" accept=".pdf" required>
                     <small>PDF only, max 5MB</small>
                 </div>
 

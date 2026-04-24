@@ -175,27 +175,27 @@
                     <form class="assessment-form" id="assessment-form">
                         <h3>{{ form_title }}</h3>
                         
-                        <div class="form-field visible">
+                        <div class="form-field">
                             <label for="target-position">{{ form_field_1_label }}</label>
                             <input type="text" id="target-position" name="target_position" placeholder="مثال: مطور برمجيات" required>
                         </div>
                         
-                        <div class="form-field visible">
+                        <div class="form-field">
                             <label for="qualification">{{ form_field_2_label }}</label>
-                            <input type="text" id="qualification" name="qualification" placeholder="مثال: ماجستير في علوم الحاسب" required>
+                            <input type="text" id="qualification" name="qualification" placeholder="مثال: ماجستير في علوم الحاسوب" required>
                         </div>
                         
-                        <div class="form-field visible">
+                        <div class="form-field">
                             <label for="experience">{{ form_field_3_label }}</label>
                             <select id="experience" name="experience" required>
                                 <option value="">-- الرجاء الاختيار --</option>
-                                <option value="0-2">0–2 سنوات</option>
-                                <option value="2-5">2–5 سنوات</option>
+                                <option value="0-2">0-2 سنوات</option>
+                                <option value="2-5">2-5 سنوات</option>
                                 <option value="5+">5+ سنوات</option>
                             </select>
                         </div>
                         
-                        <div class="form-field" id="language-field">
+                        <div class="form-field">
                             <label for="language">{{ form_field_4_label }}</label>
                             <select id="language" name="language" required>
                                 <option value="">-- الرجاء الاختيار --</option>
@@ -205,10 +205,31 @@
                                 <option value="c1+">C1+</option>
                             </select>
                         </div>
+
+                        <div class="form-field">
+                            <label for="country">{{ form_field_5_label }}</label>
+                            <select id="country" name="country" required>
+                                <option value="">-- الرجاء الاختيار --</option>
+                                <option value="DE">ألمانيا</option>
+                                <option value="AT">النمسا</option>
+                                <option value="CH">سويسرا</option>
+                                <option value="US">الولايات المتحدة</option>
+                                <option value="CA">كندا</option>
+                                <option value="GB">المملكة المتحدة</option>
+                                <option value="AU">أستراليا</option>
+                                <option value="OTHER">أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">{{ form_field_6_label }}</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
                         
-                        <div class="form-field" id="upload-field">
-                            <label for="cv-upload">{{ form_field_5_label }}</label>
+                        <div class="form-field">
+                            <label for="cv-upload">{{ form_field_7_label }}</label>
                             <input type="file" id="cv-upload" name="cv_upload" accept=".pdf" required>
+                            <small>PDF فقط، الحد الأقصى 5MB</small>
                         </div>
                         
                         <button type="submit" id="submit-btn">{{ form_button }}</button>
@@ -332,10 +353,49 @@
         });
     });
 
-    // Form submission
+    // Form submission with validation
     assessmentForm.addEventListener("submit", function(event) {
         event.preventDefault();
-        alert("تم إرسال الطلب. سنرد عليك خلال 24–48 ساعة.");
+        
+        // Validate required fields
+        const email = document.getElementById('email').value.trim();
+        const country = document.getElementById('country').value.trim();
+        const fileInput = document.getElementById('cv-upload');
+        const file = fileInput.files[0];
+        
+        // Email validation
+        if (!email) {
+            alert('يرجى إدخال عنوان بريدك الإلكتروني.');
+            return;
+        }
+        
+        // Country validation
+        if (!country) {
+            alert('يرجى اختيار بلد إقامتك.');
+            return;
+        }
+        
+        // File validation
+        if (!file) {
+            alert('يرجى تحميل ملف PDF.');
+            return;
+        }
+        
+        // Check file type
+        if (file.type !== 'application/pdf') {
+            alert('يرجى تحميل ملفات PDF فقط.');
+            return;
+        }
+        
+        // Check file size (max 5MB)
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+            alert('الملف كبير جدا. الحد الأقصى: 5MB.');
+            return;
+        }
+        
+        // All validations passed
+        alert('شكراً لك. تم إرسال طلبك بنجاح.');
     });
 </script>
 

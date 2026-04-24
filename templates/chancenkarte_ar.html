@@ -79,16 +79,22 @@
         }
         .form-submit {
             width: 100%;
-            padding: 14px;
+            min-height: 58px;
             background: #C5A059;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
+            color: #ffffff;
+            font-size: 18px;
             font-weight: 700;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: none;
             cursor: pointer;
             margin-top: 10px;
             transition: background 0.3s ease;
+            opacity: 1;
+            visibility: visible;
         }
         .form-submit:hover {
             background: #a88a47;
@@ -150,14 +156,33 @@
                 <div class="form-group">
                     <label for="country">{{ form_field_5_label }}</label>
                     <select id="country" name="Wohnsitzland" required>
-                        <option value="">-- يرجى الاختيار --</option>
-                        <option value="DE">ألمانيا</option>
-                        <option value="AT">النمسا</option>
-                        <option value="CH">سويسرا</option>
-                        <option value="US">الولايات المتحدة</option>
-                        <option value="CA">كندا</option>
-                        <option value="GB">المملكة المتحدة</option>
-                        <option value="AU">أستراليا</option>
+                        <option value="">يرجى الاختيار</option>
+                        <option value="DE">المانيا</option>
+                        <option value="EG">مصر</option>
+                        <option value="LY">ليبيا</option>
+                        <option value="TN">تونس</option>
+                        <option value="DZ">الجزائر</option>
+                        <option value="MA">المغرب</option>
+                        <option value="SD">السودان</option>
+                        <option value="SA">السعودية</option>
+                        <option value="AE">الإمارات</option>
+                        <option value="QA">قطر</option>
+                        <option value="KW">الكويت</option>
+                        <option value="OM">عُمان</option>
+                        <option value="BH">البحرين</option>
+                        <option value="JO">الأردن</option>
+                        <option value="LB">لبنان</option>
+                        <option value="SY">سوريا</option>
+                        <option value="IQ">العراق</option>
+                        <option value="PS">فلسطين</option>
+                        <option value="YE">اليمن</option>
+                        <option value="TR">تركيا</option>
+                        <option value="PK">باكستان</option>
+                        <option value="IN">الهند</option>
+                        <option value="BD">بنغلاديش</option>
+                        <option value="NG">نيجيريا</option>
+                        <option value="GH">غانا</option>
+                        <option value="CM">الكاميرون</option>
                         <option value="OTHER">أخرى</option>
                     </select>
                 </div>

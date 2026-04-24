@@ -79,16 +79,22 @@
         }
         .form-submit {
             width: 100%;
-            padding: 14px;
+            min-height: 58px;
             background: #C5A059;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
+            color: #ffffff;
+            font-size: 18px;
             font-weight: 700;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: none;
             cursor: pointer;
             margin-top: 10px;
             transition: background 0.3s ease;
+            opacity: 1;
+            visibility: visible;
         }
         .form-submit:hover {
             background: #a88a47;
@@ -150,14 +156,33 @@
                 <div class="form-group">
                     <label for="country">{{ form_field_5_label }}</label>
                     <select id="country" name="Wohnsitzland" required>
-                        <option value="">-- Bitte wählen --</option>
+                        <option value="">Bitte wählen</option>
                         <option value="DE">Deutschland</option>
-                        <option value="AT">Österreich</option>
-                        <option value="CH">Schweiz</option>
-                        <option value="US">USA</option>
-                        <option value="CA">Kanada</option>
-                        <option value="GB">Großbritannien</option>
-                        <option value="AU">Australien</option>
+                        <option value="EG">Ägypten</option>
+                        <option value="LY">Libyen</option>
+                        <option value="TN">Tunesien</option>
+                        <option value="DZ">Algerien</option>
+                        <option value="MA">Marokko</option>
+                        <option value="SD">Sudan</option>
+                        <option value="SA">Saudi-Arabien</option>
+                        <option value="AE">Vereinigte Arabische Emirate</option>
+                        <option value="QA">Katar</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="OM">Oman</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="JO">Jordanien</option>
+                        <option value="LB">Libanon</option>
+                        <option value="SY">Syrien</option>
+                        <option value="IQ">Irak</option>
+                        <option value="PS">Palästina</option>
+                        <option value="YE">Jemen</option>
+                        <option value="TR">Türkei</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="IN">Indien</option>
+                        <option value="BD">Bangladesch</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="GH">Ghana</option>
+                        <option value="CM">Kamerun</option>
                         <option value="OTHER">Andere</option>
                     </select>
                 </div>

@@ -27,288 +27,248 @@
 }
 </script>
 </head>
-<body class="rtl">
-<header class="header" dir="rtl">
-  <div class="container wrap">
-    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/ar/monitor.html">مرصد سوق العمل</a>
-      <a href="/ar/insights.html">المقالات</a>
-      <a href="/ar/systemlogik.html">منطق النظام</a>
-      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
-    </nav>
-    <div class="lang-switcher">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 العربية</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/de/">English</a>
-        <a href="/ar/">العربية</a>
-      </div>
+<body>
+
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/de/ausbildung-in-deutschland.html" class="lang-switch">Deutsch</a>
+            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/ar/" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/ar/chancenkarte" class="nav-link ">بطاقة الفرص</a>
+            <a href="/ar/assessment" class="nav-link ">حاسبة النقاط</a>
+            <a href="/ar/systemlogik" class="nav-link ">منطق النظام</a>
+            <a href="/ar/monitor" class="nav-link ">المرصد</a>
+            <a href="/ar/insights" class="nav-link ">الرؤى</a>
+        </nav>
+    </div>
 </header>
 
-<main class="container">
-  <!-- HERO SECTION -->
-  <section class="hero-image">
-    <div class="hero-overlay">
-      <p class="kicker">التدريب المهني</p>
-      <h1 class="h1">التدريب المهني في ألمانيا للطلاب الدوليين</h1>
-      <p class="sub">
-        تقدم ألمانيا فرصاً ممتازة للتدريب المهني والتطور الوظيفي على المدى الطويل. ابدأ مسيرتك الوظيفية اليوم.
-      </p>
-      <div class="actions">
-        <a class="btn primary wide" href="/ar/assessment">احسب نقاط بطاقة الفرص</a>
-      </div>
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
     </div>
+</nav>
+
+<main class="container" style="padding: 80px 20px;">
+  <!-- HERO SECTION -->
+  <section class="hero" style="text-align: center; margin-bottom: 60px;">
+    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">التدريب المهني</p>
+    <h1 class="h1" style="font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: #000; margin-bottom: 24px;">التدريب المهني في ألمانيا للطلاب الدوليين</h1>
+    <p class="sub" style="font-size: 18px; line-height: 1.6; color: #4B5563; max-width: 800px; margin: 0 auto;">
+      تقدم ألمانيا فرصاً ممتازة للتدريب المهني والتطور الوظيفي على المدى الطويل. ابدأ مسيرتك الوظيفية اليوم.
+    </p>
   </section>
 
   <!-- ما هو التدريب المهني؟ -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">النظام الألماني للتدريب</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:right;">ما هو التدريب المهني في ألمانيا؟</h2>
+  <section class="section" style="margin-bottom: 60px;">
+    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">النظام الألماني للتدريب</p>
+    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 32px;">ما هو التدريب المهني في ألمانيا؟</h2>
     <div >
-      <p style="color:#334155; line-height:1.8; margin-bottom:16px; text-align:right;">
+      <p style="font-size: 16px; line-height: 1.8; color: #334155; margin-bottom: 24px;">
         نظام التدريب المهني الألماني معروف عالمياً بجودته ونهجه العملي. التدريب المهني هو تأهيل مهني منظم يجمع بين النظرية والتطبيق العملي.
       </p>
-      <div class="grid" style="margin-top:24px;">
-        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #0B3B8C;">
-          <h4 style="color:#0B3B8C; margin-top:0; text-align:right;">النظام الثنائي</h4>
-          <p style="color:#666; margin:0; font-size:14px; text-align:right;">مزيج من المدرسة المهنية والعمل العملي في الشركة.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #C5A059; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; border-left: 1px solid #E5E7EB;">
+          <h4 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 8px;">النظام الثنائي</h4>
+          <p style="font-size: 14px; color: #666; margin: 0;">مزيج من المدرسة المهنية والعمل العملي في الشركة.</p>
         </div>
-        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #0B3B8C;">
-          <h4 style="color:#0B3B8C; margin-top:0; text-align:right;">تدريب مدفوع الأجر</h4>
-          <p style="color:#666; margin:0; font-size:14px; text-align:right;">يتلقى المتدربون راتباً شهرياً طوال فترة التدريب.</p>
+        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #C5A059; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; border-left: 1px solid #E5E7EB;">
+          <h4 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 8px;">تدريب مدفوع الأجر</h4>
+          <p style="font-size: 14px; color: #666; margin: 0;">يتلقى المتدربون راتباً شهرياً طوال فترة التدريب.</p>
         </div>
-        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #0B3B8C;">
-          <h4 style="color:#0B3B8C; margin-top:0; text-align:right;">المدة: 2-3 سنوات</h4>
-          <p style="color:#666; margin:0; font-size:14px; text-align:right;">معظم برامج التدريب تستغرق 2-3 سنوات حسب المهنة.</p>
+        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #C5A059; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; border-left: 1px solid #E5E7EB;">
+          <h4 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 8px;">المدة: 2-3 سنوات</h4>
+          <p style="font-size: 14px; color: #666; margin: 0;">معظم برامج التدريب تستغرق 2-3 سنوات حسب المهنة.</p>
         </div>
-        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #0B3B8C;">
-          <h4 style="color:#0B3B8C; margin-top:0; text-align:right;">فرص وظيفية</h4>
-          <p style="color:#666; margin:0; font-size:14px; text-align:right;">بعد التدريب توجد خيارات عديدة للتعليم المستمر والترقي.</p>
+        <div style="background:white; padding:20px; border-radius:8px; border-right:4px solid #C5A059; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; border-left: 1px solid #E5E7EB;">
+          <h4 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 8px;">فرص وظيفية</h4>
+          <p style="font-size: 14px; color: #666; margin: 0;">بعد التدريب توجد خيارات عديدة للتعليم المستمر والترقي.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- المهن المشهورة -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">المسارات الوظيفية</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:right;">المهن المشهورة للتدريب المهني في ألمانيا</h2>
-    <div class="grid">
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">متخصص التمريض</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px; text-align:right;">
+  <section class="section" style="margin-bottom: 60px;">
+    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">المسارات الوظيفية</p>
+    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 32px;">المهن المشهورة للتدريب المهني في ألمانيا</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">متخصص التمريض</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 12px;">
           رعاية ودعم المرضى في المستشفيات ودور الرعاية والخدمات الصحية المنزلية. طلب عالي على المتخصصين.
         </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0; text-align:right;">الراتب: 1.200-1.500 يورو/شهر</p>
+        <p style="font-size: 14px; font-weight: 700; color: #C5A059; margin: 0;">الراتب: 1.200-1.500 يورو/شهر</p>
       </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">كهربائي</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">كهربائي</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 12px;">
           تركيب وصيانة الأنظمة الكهربائية في المباني والصناعة. أساسي في البناء والحرف.
         </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0; text-align:right;">الراتب: 1.000-1.300 يورو/شهر</p>
+        <p style="font-size: 14px; font-weight: 700; color: #C5A059; margin: 0;">الراتب: 1.000-1.300 يورو/شهر</p>
       </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">تقني الميكاترونيكس</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">تقني الميكاترونيكس</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 12px;">
           مزيج من الميكانيكا والإلكترونيات. إصلاح وصيانة الآلات والأنظمة.
         </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0; text-align:right;">الراتب: 1.100-1.400 يورو/شهر</p>
+        <p style="font-size: 14px; font-weight: 700; color: #C5A059; margin: 0;">الراتب: 1.100-1.400 يورو/شهر</p>
       </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">موظف الفندق</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">موظف الفندق</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 12px;">
           خدمة العملاء والإدارة في الفنادق والمطاعم. بيئة دولية وممارسة اللغة.
         </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0; text-align:right;">الراتب: 900-1.200 يورو/شهر</p>
+        <p style="font-size: 14px; font-weight: 700; color: #C5A059; margin: 0;">الراتب: 900-1.200 يورو/شهر</p>
       </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">طاهي</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">طاهي</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 12px;">
           تحضير الطعام في المطاعم والفنادق والمطابخ الكبيرة. عمل إبداعي وعملي.
         </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0; text-align:right;">الراتب: 900-1.200 يورو/شهر</p>
+        <p style="font-size: 14px; font-weight: 700; color: #C5A059; margin: 0;">الراتب: 900-1.200 يورو/شهر</p>
       </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">تقني أنظمة تكنولوجيا المعلومات</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">تقني أنظمة تكنولوجيا المعلومات</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 12px;">
           تركيب وصيانة أنظمة تكنولوجيا المعلومات. مزيج من الأجهزة والبرمجيات.
         </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0; text-align:right;">الراتب: 1.000-1.400 يورو/شهر</p>
+        <p style="font-size: 14px; font-weight: 700; color: #C5A059; margin: 0;">الراتب: 1.000-1.400 يورو/شهر</p>
       </div>
     </div>
   </section>
 
   <!-- الراتب أثناء التدريب -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">الأمان المالي</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:right;">الراتب أثناء التدريب المهني</h2>
+  <section class="section" style="margin-bottom: 60px;">
+    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">الأمان المالي</p>
+    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 32px;">الراتب أثناء التدريب المهني</h2>
     <div >
-      <p style="color:#334155; line-height:1.8; margin-bottom:16px; text-align:right;">
+      <p style="font-size: 16px; line-height: 1.8; color: #334155; margin-bottom: 24px;">
         على عكس العديد من الدول الأخرى، يتم دفع راتب للمتدربين في ألمانيا. يختلف الراتب حسب الصناعة وسنة التدريب.
       </p>
-      <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+      <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table style="width:100%; border-collapse:collapse; margin:20px 0; border: 1px solid #E5E7EB;">
         <thead>
-          <tr style="background:#0B3B8C; color:white;">
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">سنة التدريب</th>
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">متوسط الراتب</th>
+          <tr style="background:#F9FAFB; color:#000; border-bottom: 2px solid #E5E7EB;">
+            <th style="padding:16px; text-align:right; font-weight: 700;">سنة التدريب</th>
+            <th style="padding:16px; text-align:right; font-weight: 700;">متوسط الراتب</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; text-align:right;">السنة الأولى</td>
-            <td style="padding:12px; color:#334155; text-align:right;">800-1.000 يورو/شهر</td>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:16px; color:#334155;">السنة الأولى</td>
+            <td style="padding:16px; color:#334155;">800-1.000 يورو/شهر</td>
           </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; text-align:right;">السنة الثانية</td>
-            <td style="padding:12px; color:#334155; text-align:right;">900-1.150 يورو/شهر</td>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:16px; color:#334155;">السنة الثانية</td>
+            <td style="padding:16px; color:#334155;">900-1.150 يورو/شهر</td>
           </tr>
           <tr>
-            <td style="padding:12px; color:#334155; text-align:right;">السنة الثالثة</td>
-            <td style="padding:12px; color:#334155; text-align:right;">1.000-1.300 يورو/شهر</td>
+            <td style="padding:16px; color:#334155;">السنة الثالثة</td>
+            <td style="padding:16px; color:#334155;">1.000-1.300 يورو/شهر</td>
           </tr>
         </tbody>
       </table>
-      <p style="color:#666; font-size:14px; line-height:1.6; margin-top:16px; text-align:right;">
+      </div>
+      <p style="font-size: 14px; color: #666; line-height: 1.6; margin-top: 16px;">
         ملاحظة: هذه الرواتب متوسطات. قد تختلف الرواتب الفعلية حسب الشركة والمنطقة والصناعة.
       </p>
     </div>
   </section>
 
   <!-- المتطلبات -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">المتطلبات</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:right;">متطلبات التدريب المهني في ألمانيا</h2>
-    <div class="grid">
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">📚 شهادة المدرسة</h3>
-        <p style="color:#666; margin:0; line-height:1.6; text-align:right;">
+  <section class="section" style="margin-bottom: 60px;">
+    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">المتطلبات</p>
+    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 32px;">متطلبات التدريب المهني في ألمانيا</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">📚 شهادة المدرسة</h3>
+        <p style="font-size: 14px; color: #666; margin: 0; line-height: 1.6;">
           مطلوب شهادة مدرسية (المدرسة الثانوية أو أعلى). يجب الاعتراف بالشهادات الأجنبية.
         </p>
       </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">🗣️ اللغة الألمانية</h3>
-        <p style="color:#666; margin:0; line-height:1.6; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">🗣️ اللغة الألمانية</h3>
+        <p style="font-size: 14px; color: #666; margin: 0; line-height: 1.6;">
           اللغة الألمانية B1 مثالية لمعظم برامج التدريب. يُنصح بـ B2 للمهن الأكثر تعقيداً.
         </p>
       </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">💪 الدافع</h3>
-        <p style="color:#666; margin:0; line-height:1.6; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">💪 الدافع</h3>
+        <p style="font-size: 14px; color: #666; margin: 0; line-height: 1.6;">
           الالتزام والرغبة في التعلم والموثوقية مهمة للنجاح في التدريب.
         </p>
       </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px; text-align:right;">📋 التأشيرة</h3>
-        <p style="color:#666; margin:0; line-height:1.6; text-align:right;">
+      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px;">📋 التأشيرة</h3>
+        <p style="font-size: 14px; color: #666; margin: 0; line-height: 1.6;">
           يحتاج المتقدمون الدوليون إلى تأشيرة تدريب مهني. يمكن استخدام بطاقة الفرص أيضاً للتدريب.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- كيف تتقدم؟ -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">عملية التقديم</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:right;">كيف تتقدم للتدريب المهني؟</h2>
-    <div class="stepper-horizontal">
-      <div class="step-item">
-        <div class="step-number">1</div>
-        <h4 style="text-align:right;">اختر المهنة</h4>
-        <p style="text-align:right;">اقرر على مهنة تدريب تتطابق مع اهتماماتك.</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">2</div>
-        <h4 style="text-align:right;">جهز المستندات</h4>
-        <p style="text-align:right;">اجمع شهادات المدرسة وشهادات اللغة والمستندات المطلوبة الأخرى.</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">3</div>
-        <h4 style="text-align:right;">تقدم للشركات</h4>
-        <p style="text-align:right;">اكتب طلبات التقديم للشركات التي تقدم مواضع تدريب.</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">4</div>
-        <h4 style="text-align:right;">عقد التدريب</h4>
-        <p style="text-align:right;">بعد التقديم الناجح تحصل على عقد تدريب.</p>
-      </div>
-      
-      <div class="step-item">
-        <div class="step-number">5</div>
-        <h4 style="text-align:right;">طلب التأشيرة</h4>
-        <p style="text-align:right;">تقدم بطلب تأشيرة التدريب المهني في السفارة أو القنصلية الألمانية.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA SECTION -->
-  <section class="section" style="background:#0B3B8C; padding:48px 32px; border-radius:8px; text-align:center; margin-bottom:48px; color:white;">
-    <h2 style="color:white; margin-bottom:16px; text-align:right;">تحقق من فرصك في ألمانيا</h2>
-    <p style="color:#e8f0f7; font-size:16px; line-height:1.6; max-width:600px; margin:0 auto 32px; text-align:right;">
-      احسب في أقل من دقيقة ما إذا كنت تستوفي متطلبات بطاقة الفرص وتستطيع بدء التدريب المهني في ألمانيا.
-    </p>
-    <a class="btn primary" href="/ar/assessment" style="display:inline-block; background-color:white; color:#0B3B8C;">احسب نقاطك</a>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">الأسئلة الشائعة</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px; text-align:right;">الأسئلة الشائعة عن التدريب المهني في ألمانيا</h2>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px; text-align:right;">هل يمكنني كأجنبي أن أقوم بتدريب مهني في ألمانيا؟</h3>
-      <p style="color:#666; margin:0; text-align:right;">نعم، يمكن للمتقدمين الدوليين إكمال التدريب المهني في ألمانيا. تحتاج إلى تأشيرة تدريب وتلبية متطلبات اللغة.</p>
-    </div>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px; text-align:right;">كم من الوقت يستغرق التدريب المهني؟</h3>
-      <p style="color:#666; margin:0; text-align:right;">معظم برامج التدريب تستغرق 2-3 سنوات حسب المهنة والصناعة.</p>
-    </div>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px; text-align:right;">هل يمكنني العمل في ألمانيا بعد إكمال التدريب؟</h3>
-      <p style="color:#666; margin:0; text-align:right;">نعم، بعد إكمال التدريب بنجاح يمكنك العمل كمتخصص. يمكنك التقديم على تأشيرة عامل ماهر.</p>
-    </div>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px; text-align:right;">ما اللغة التي أحتاجها للتدريب المهني؟</h3>
-      <p style="color:#666; margin:0; text-align:right;">اللغة الألمانية B1 هي الحد الأدنى. يُنصح بـ B2 لمعظم برامج التدريب لمتابعة الدروس والعمل العملي بفعالية.</p>
+  <!-- BOTTOM CTA -->
+  <section class="section" style="text-align: center; padding: 60px 0; border-top: 1px solid #E5E7EB;">
+    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 12px;">ابدأ التقييم المهني الأولي</h2>
+    <p style="font-size: 18px; color: #4B5563; margin-bottom: 32px;">أرسل ملفك وسنحدد المسار المناسب لك نحو ألمانيا</p>
+    <div style="margin-bottom: 24px;">
+      <a href="/ar/assessment" style="display: inline-block; padding: 18px 40px; background-color: #C5A059; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 18px; transition: background-color 0.2s;">← /ar/assessment</a>
     </div>
   </section>
 </main>
 
+<!-- FOOTER (BLACK) -->
 <footer class="footer">
-  <div class="container wrap">
-    <div><b>Berlin Gateway</b> — بنية دخول منظمة للمحترفين المؤهلين</div>
-    <div class="footer-contact">التواصل: <a href="mailto:info@berlingateway.de"><span dir="ltr">info@berlingateway.de</span></a> · هاتف: <a href="tel:+493025730875"><span dir="ltr">+49 30 25730875</span></a></div>
-  </div>
-  <div class="container">
-    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. جميع الحقوق محفوظة. · <a href="/sitemap.html" style="color: #0B3B8C; text-decoration: none;">Sitemap</a></div>
-    <div class="footer-closing">منظم. انتقائي. منهجي.</div>
-  </div>
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
+            </div>
+            <div>
+                <h4>التنقل</h4>
+                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <a href="/ar/assessment">حاسبة النقاط</a>
+                <a href="/ar/systemlogik">منطق النظام</a>
+                <a href="/ar/monitor">المرصد</a>
+                <a href="/ar/insights">الرؤى</a>
+            </div>
+            <div>
+                <h4>القانونية</h4>
+                <a href="/ar/impressum">بيان قانوني</a>
+                <a href="/ar/datenschutz">سياسة الخصوصية</a>
+            </div>
+            <div>
+                <h4>اتصل</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+        </div>
+    </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
-  }
-}
-
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
-});
-</script>
 </body>
 </html>

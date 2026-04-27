@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>التقييم الهيكلي — Berlin Gateway</title>
-  <meta name="description" content="ابدأ التقييم الهيكلي لملفك الشخصي للاعتراف المهني في ألمانيا." />
+  <meta name="description" content="ابدأ التقييم الهيكلي لملفك الشخصي للاعتراف المهني in ألمانيا." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -46,43 +46,77 @@
   ]
 }
 </script>
-
+<style>
+  .step { display: none; }
+  .step.active { display: block; }
+  form select, form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+  }
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000;
+  }
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+  }
+</style>
 </head>
 <body class="rtl">
-<header class="header" dir="rtl">
-  <div class="container wrap">
-    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/ar/monitor.html">مرصد سوق العمل</a>
-      <a href="/ar/systemlogik.html">منطق النظام</a>
-      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
-    </nav>
-    <div class="lang-switcher">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 العربية</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/">العربية</a>
-      </div>
+
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/de/apply" class="lang-switch">Deutsch</a>
+            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/ar/" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/ar/chancenkarte" class="nav-link">بطاقة الفرص</a>
+            <a href="/ar/assessment" class="nav-link">حاسبة النقاط</a>
+            <a href="/ar/systemlogik" class="nav-link">منطق النظام</a>
+            <a href="/ar/monitor" class="nav-link">المرصد</a>
+            <a href="/ar/insights" class="nav-link">الرؤى</a>
+        </nav>
+    </div>
 </header>
-<nav class="breadcrumb" dir="rtl" >
-  <span style="color:#334155; font-weight:600;">Apply</span> >
-  <a href="/ar/apply.html" style="color:#0B3B8C; text-decoration:none; font-weight:500; margin:0 8px;">التقديم</a> >
-  <a href="/ar/" style="color:#0B3B8C; text-decoration:none; font-weight:500;">الرئيسية</a>
+
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
+    </div>
 </nav>
 
-
-
-
-
-<main class="container">
-  <section class="hero">
-    <p class="kicker">Decision Gateway</p>
-    <h1 class="h1">تسجيل الدخول إلى التدقيق</h1>
+<main class="container" style="padding-top: 40px; max-width: 800px; margin: 0 auto;">
+  <section class="hero" style="margin-bottom: 40px; text-align: center;">
+    <p class="kicker" style="color: #C5A059; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Decision Gateway</p>
+    <h1 class="h1" style="font-size: 36px; font-weight: 800; color: #000;">تسجيل الدخول إلى التدقيق</h1>
   </section>
 
-  <section class="section">
+  <section class="section" style="margin-bottom: 40px;">
     <p style="color:#334155; line-height:1.6; margin-bottom:16px;">
       تمثل هذه الواجهة بداية مرحلة الفحص الهيكلي.
     </p>
@@ -94,8 +128,8 @@
     </p>
   </section>
 
-  <section class="section form">
-    <p style="color:#334155; font-weight:bold; margin-bottom:24px; font-size:14px;">
+  <section class="section form" style="background: #f8fafc; padding: 40px; border-radius: 16px; margin-bottom: 80px;">
+    <p style="color:#000; font-weight:800; margin-bottom:32px; font-size:18px; border-bottom: 2px solid #C5A059; display: inline-block; padding-bottom: 8px;">
       آلية التدقيق
     </p>
     <form id="bgForm" action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
@@ -107,7 +141,7 @@
 
       <div class="step active" id="s1">
         <label><b>1) الفئة المهنية</b></label>
-        <p style="font-size:13px;color:#666;margin-bottom:16px;">
+        <p style="font-size:14px;color:#64748b;margin-bottom:20px;">
           أي فئة تناسب شهادتك/مهنتك؟
         </p>
         <select name="Kategorie" required>
@@ -118,7 +152,7 @@
           <option value="D — أكاديمي غير منظم (أعمال، إدارة)">D — أكاديمي غير منظم (أعمال، إدارة)</option>
         </select>
         <div class="actions">
-          <button class="btn primary wide" type="button" onclick="nextStep(2)">التالي</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(2)" style="background: #C5A059; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer;">التالي</button>
         </div>
       </div>
 
@@ -176,8 +210,8 @@
         </select>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(1)">رجوع</button>
-          <button class="btn primary wide" type="button" onclick="nextStep(3)">التالي</button>
+          <button class="btn" type="button" onclick="nextStep(1)" style="background: #e2e8f0; color: #000; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 1; cursor: pointer;">رجوع</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(3)" style="background: #C5A059; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 2; cursor: pointer;">التالي</button>
         </div>
       </div>
 
@@ -201,7 +235,7 @@
           <option value="40 فأكثر">40 فأكثر</option>
           <option value="لا أريد الإفصاح">لا أريد الإفصاح</option>
         </select>
-        <p style="font-size:12px;color:#999;margin-top:6px;">
+        <p style="font-size:12px;color:#64748b;margin-top:6px;">
           في بعض المسارات (مثل بطاقة الفرصة) قد تؤخذ الفئة العمرية ضمن التصنيف الهيكلي.
         </p>
 
@@ -217,8 +251,8 @@
         </select>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(2)">رجوع</button>
-          <button class="btn primary wide" type="button" onclick="nextStep(4)">التالي</button>
+          <button class="btn" type="button" onclick="nextStep(2)" style="background: #e2e8f0; color: #000; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 1; cursor: pointer;">رجوع</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(4)" style="background: #C5A059; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 2; cursor: pointer;">التالي</button>
         </div>
       </div>
 
@@ -247,8 +281,8 @@
         </select>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(3)">رجوع</button>
-          <button class="btn primary wide" type="button" onclick="nextStep(5)">التالي</button>
+          <button class="btn" type="button" onclick="nextStep(3)" style="background: #e2e8f0; color: #000; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 1; cursor: pointer;">رجوع</button>
+          <button class="btn primary wide" type="button" onclick="nextStep(5)" style="background: #C5A059; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 2; cursor: pointer;">التالي</button>
         </div>
       </div>
 
@@ -264,22 +298,18 @@
         <input type="text" name="WhatsApp" placeholder="مثال: +49 1234 567890" />
 
         <label style="margin-top:16px;">ملاحظة قصيرة (اختياري)</label>
-        <textarea name="Notiz" placeholder="الهدف الوظيفي، الإطار الزمني، ملاحظات خاصة"></textarea>
+        <textarea name="Notiz" placeholder="الهدف الوظيفي، الإطار الزمني، ملاحظات خاصة" style="width: 100%; min-height: 100px; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;"></textarea>
 
-        <p style="font-size:12px;color:#999;margin-top:12px;">
-          يمكنك إرسال الوثائق (CV، الشهادة PDF) بعد استلام رقم الملف عبر البريد الإلكتروني.
-        </p>
-
-        <p style="font-size:12px;color:#666;margin-bottom:16px;">
+        <p style="font-size:12px;color:#64748b;margin-bottom:16px;">
           كلما كانت البيانات أدق، كان التصنيف أوضح.
         </p>
 
         <details style="margin-bottom:24px; border-top:1px solid #e2e8f0; padding-top:16px;">
-          <summary style="cursor:pointer; color:#0B3B8C; font-weight:600; font-size:14px; user-select:none;">
+          <summary style="cursor:pointer; color:#C5A059; font-weight:700; font-size:14px; user-select:none;">
             معايير الفحص ومنطق النظام (عرض)
           </summary>
-          <div >
-            <ul style="margin:0; padding-right:20px;">
+          <div style="padding: 12px 0;">
+            <ul style="margin:0; padding-right:20px; color: #4B5563; font-size: 14px;">
               <li style="margin-bottom:8px;">قاعدة الوثائق: اكتمال البيانات واتساقها.</li>
               <li style="margin-bottom:8px;">التصنيف المهني: تحديد المسار وفق طبيعة المهنة (منظمة/غير منظمة) ومنطق الاعتراف.</li>
               <li>قابلية التنفيذ: تقدير الخطوات الإدارية (الوقت، الإثباتات، ترتيب الإجراءات).</li>
@@ -287,18 +317,16 @@
           </div>
         </details>
 
-        <input type="hidden" name="_autoresponse" value="Vielen Dank! Wir haben Ihre Anfrage erhalten. Das Berlin Gateway Team wird Ihre Unterlagen prüfen und sich in Kürze bei Ihnen melden. / شكراً لكم، لقد استلمنا طلبكم بنجاح. سيقوم فريق Berlin Gateway بمراجعة بياناتكم والتواصل معكم في أقرب وقت ممكن.">
-
         <p style="font-size:12px; color:#64748b; margin-bottom:16px; text-align:right;">
           تُعامل البيانات ضمن إطار مهني منظم.
         </p>
 
         <div class="actions">
-          <button class="btn" type="button" onclick="nextStep(4)">رجوع</button>
-          <button class="btn primary wide" type="submit">إرسال</button>
+          <button class="btn" type="button" onclick="nextStep(4)" style="background: #e2e8f0; color: #000; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 1; cursor: pointer;">رجوع</button>
+          <button class="btn primary wide" type="submit" style="background: #C5A059; color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; flex: 2; cursor: pointer;">إرسال</button>
         </div>
 
-        <p class="small" style="margin-top:12px;">
+        <p style="margin-top:16px; font-size: 13px; color: #64748b; text-align: center;">
           الرد بعد المراجعة الداخلية خلال 24–72 ساعة.
         </p>
       </div>
@@ -307,28 +335,44 @@
 </main>
 
 <footer class="footer">
-  <div class="container wrap">
-    <div><b>Berlin Gateway</b> — بنية دخول هيكلية للكفاءات</div>
-    <div class="footer-contact">التواصل: <a href="mailto:info@berlingateway.de"><span dir="ltr">info@berlingateway.de</span></a> · هاتف: <a href="tel:+493025730875">+49 30 25730875</a></div>
-  </div>
-  <div class="container">
-    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. جميع الحقوق محفوظة.</div>
-    <div class="footer-closing">هيكلي. انتقائي. منهجي.</div>
-  </div>
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
+            </div>
+            <div>
+                <h4>التنقل</h4>
+                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <a href="/ar/assessment">حاسبة النقاط</a>
+                <a href="/ar/systemlogik">منطق النظام</a>
+                <a href="/ar/monitor">المرصد</a>
+                <a href="/ar/insights">الرؤى</a>
+            </div>
+            <div>
+                <h4>القانونية</h4>
+                <a href="/ar/impressum">بيان قانوني</a>
+                <a href="/ar/datenschutz">سياسة الخصوصية</a>
+            </div>
+            <div>
+                <h4>اتصل</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+        </div>
+    </div>
 </footer>
 
-
 <script>
-  // ---------- Step navigation + disable inactive inputs ----------
   function setStep(n){
     for(let i=1;i<=5;i++){
       const step = document.getElementById('s'+i);
       const active = (i === n);
       step.classList.toggle('active', active);
-
-      // Disable inputs in inactive steps so "required" won't block submit
       step.querySelectorAll('input, select, textarea, button').forEach(el=>{
-        // keep step navigation buttons clickable only in active step
         if(el.type === 'button') return;
         el.disabled = !active;
       });
@@ -338,71 +382,16 @@
 
   function nextStep(n){ setStep(n); }
 
-  // ---------- ID / Aktenzeichen ----------
-  function randomDigits(len){
-    let s='';
-    for(let i=0;i<len;i++) s += Math.floor(Math.random()*10);
-    return s;
-  }
-
-  // ---------- Text normalization (safe) ----------
-  function normalizeText(v){
-    if(!v) return v;
-    v = v.trim().replace(/\s+/g,' ');
-    // Capitalize first letter only if latin; leave Arabic as-is
-    if(/^[A-Za-z]/.test(v)) v = v.charAt(0).toUpperCase() + v.slice(1);
-    return v;
-  }
-
-  function normalizeField(form, name){
-    const el = form.querySelector(`[name="${name}"]`);
-    if(el && typeof el.value === 'string') el.value = normalizeText(el.value);
-  }
-
-  // ---------- Submit handler ----------
   const form = document.getElementById('bgForm');
-
-  // Initialize: activate step 1 and disable others
   setStep(1);
 
-  // Enable all fields before submit (Worker handles Aktenzeichen + redirect)
   form.addEventListener('submit', function(){
-    // Normalize only these text fields (do NOT touch Email)
-    normalizeField(form, 'Abschlussland');
-    normalizeField(form, 'Abschlussname');
-    normalizeField(form, 'Zielregion');
-    normalizeField(form, 'Name');
-    normalizeField(form, 'WhatsApp');
-    normalizeField(form, 'Notiz');
-
-    // Before submit, temporarily enable all fields so they get sent
     for(let i=1;i<=5;i++){
       document.getElementById('s'+i)
         .querySelectorAll('input, select, textarea')
         .forEach(el=> el.disabled = false);
     }
   });
-
-  // Set year
-  const y = document.getElementById('year');
-  if(y) y.textContent = new Date().getFullYear();
-</script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
-  }
-}
-
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
-});
 </script>
 </body>
 </html>

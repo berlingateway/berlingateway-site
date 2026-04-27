@@ -28,351 +28,383 @@
 </script>
 </head>
 <body>
-<header class="header">
-  <div class="container wrap">
-    <a href="/ar/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/ar/monitor.html">مراقب سوق العمل</a>
-      <a href="/ar/insights.html">الرؤى</a>
-      <a href="/ar/systemlogik.html">منطق النظام</a>
-      <a href="/ar/chancenkarte.html">بطاقة الفرص</a>
-    </nav>
-    <div class="lang-switcher">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 العربية</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/de/">English</a>
-        <a href="/ar/">العربية</a>
-      </div>
+
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/de/lebenshaltungskosten-deutschland" class="lang-switch">Deutsch</a>
+            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/ar/" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/ar/chancenkarte" class="nav-link ">بطاقة الفرص</a>
+            <a href="/ar/assessment" class="nav-link ">حاسبة النقاط</a>
+            <a href="/ar/systemlogik" class="nav-link ">منطق النظام</a>
+            <a href="/ar/monitor" class="nav-link ">المرصد</a>
+            <a href="/ar/insights" class="nav-link active">الرؤى</a>
+        </nav>
+    </div>
 </header>
 
-<main class="container">
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
+    </div>
+</nav>
+
+<main class="container" style="padding-top: 40px;">
   <!-- HERO SECTION -->
-  <section class="hero-image">
+  <section class="hero-image" style="background: linear-gradient(rgba(11, 59, 140, 0.8), rgba(11, 59, 140, 0.8)), url('/assets/img/hero-bg.jpg') center/cover; padding: 100px 20px; color: white; text-align: center; border-radius: 8px; margin-bottom: 60px;">
     <div class="hero-overlay">
-      <p class="kicker">التخطيط المالي</p>
-      <h1 class="h1">تكاليف المعيشة في ألمانيا 2026</h1>
-      <p class="sub">
+      <p class="kicker" style="text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin-bottom: 16px; color: #C5A059;">التخطيط المالي</p>
+      <h1 class="h1" style="font-size: clamp(32px, 5vw, 48px); font-weight: 800; margin-bottom: 24px; color: white;">تكاليف المعيشة في ألمانيا 2026</h1>
+      <p class="sub" style="font-size: 18px; max-width: 700px; margin: 0 auto 32px; opacity: 0.9;">
         كم تكلفة العيش في ألمانيا للكفاءات الدولية والطلاب؟ نظرة عامة مفصلة على جميع النفقات.
       </p>
       <div class="actions">
-        <a class="btn primary wide" href="/ar/assessment.html">احسب نقاط بطاقة الفرص</a>
+        <a class="btn primary wide" href="/ar/assessment" style="display: inline-block; padding: 16px 40px; background: #C5A059; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 18px;">احسب نقاط بطاقة الفرص</a>
       </div>
     </div>
   </section>
 
-  <!-- تكاليف المعيشة الشهرية -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">نظرة عامة على التكاليف</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px;">تكاليف المعيشة الشهرية في ألمانيا</h2>
-    <div >
-      <p style="color:#334155; line-height:1.8; margin-bottom:16px;">
-        تختلف تكاليف المعيشة في ألمانيا حسب المدينة ونمط الحياة والأولويات الشخصية. إليك نظرة عامة مفصلة على فئات النفقات الرئيسية.
-      </p>
-      <table style="width:100%; border-collapse:collapse; margin:20px 0;">
-        <thead>
-          <tr style="background:#0B3B8C; color:white;">
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">فئة النفقات</th>
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">التكلفة الشهرية</th>
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">الوصف</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; font-weight:bold;">السكن</td>
-            <td style="padding:12px; color:#334155;">400-800 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">إيجار شقة بغرفة واحدة في المركز أو خارجه</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; font-weight:bold;">المواد الغذائية</td>
-            <td style="padding:12px; color:#334155;">150-250 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">التسوق في السوبرماركت لشخص واحد</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; font-weight:bold;">النقل</td>
-            <td style="padding:12px; color:#334155;">50-100 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">المواصلات العامة أو الدراجة الهوائية</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; font-weight:bold;">التأمين الصحي</td>
-            <td style="padding:12px; color:#334155;">100-150 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">التأمين الصحي الحكومي أو الخاص</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; font-weight:bold;">المرافق</td>
-            <td style="padding:12px; color:#334155;">100-150 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">الكهرباء والماء والغاز والإنترنت</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155; font-weight:bold;">الترفيه والثقافة</td>
-            <td style="padding:12px; color:#334155;">50-100 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">السينما والمتاحف والمطاعم والهوايات</td>
-          </tr>
-          <tr>
-            <td style="padding:12px; color:#334155; font-weight:bold;">أخرى</td>
-            <td style="padding:12px; color:#334155;">50-100 يورو</td>
-            <td style="padding:12px; color:#666; font-size:14px;">الملابس والنظافة الشخصية والأدوات المنزلية</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="color:#0B3B8C; font-weight:bold; margin-top:16px; font-size:18px;">
-        الميزانية الإجمالية: 900-1.650 يورو شهرياً
-      </p>
-    </div>
-  </section>
+  <article style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <!-- تكاليف المعيشة الشهرية -->
+    <section class="section" style="margin-bottom: 64px;">
+      <p class="kicker" style="color: #C5A059; font-weight: 700; margin-bottom: 12px;">نظرة عامة على التكاليف</p>
+      <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 32px;">تكاليف المعيشة الشهرية في ألمانيا</h2>
+      <div >
+        <p style="font-size: 17px; color: #4B5563; line-height: 1.8; margin-bottom: 24px;">
+          تختلف تكاليف المعيشة في ألمانيا حسب المدينة ونمط الحياة والأولويات الشخصية. إليك نظرة عامة مفصلة على فئات النفقات الرئيسية.
+        </p>
+        <div style="overflow-x: auto; margin: 32px 0;">
+          <table style="width:100%; border-collapse:collapse; min-width: 600px;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom: 2px solid #e2e8f0;">
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">فئة النفقات</th>
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">التكلفة الشهرية</th>
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">الوصف</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">السكن</td>
+                <td style="padding:16px; color:#4B5563;">400-800 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">إيجار شقة بغرفة واحدة في المركز أو خارجه</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">المواد الغذائية</td>
+                <td style="padding:16px; color:#4B5563;">150-250 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">التسوق في السوبرماركت لشخص واحد</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">النقل</td>
+                <td style="padding:16px; color:#4B5563;">50-100 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">المواصلات العامة أو الدراجة الهوائية</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">التأمين الصحي</td>
+                <td style="padding:16px; color:#4B5563;">100-150 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">التأمين الصحي الحكومي أو الخاص</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">المرافق</td>
+                <td style="padding:16px; color:#4B5563;">100-150 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">الكهرباء والماء والغاز والإنترنت</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">الترفيه والثقافة</td>
+                <td style="padding:16px; color:#4B5563;">50-100 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">السينما والمتاحف والمطاعم والهوايات</td>
+              </tr>
+              <tr>
+                <td style="padding:16px; color:#000; font-weight:bold;">أخرى</td>
+                <td style="padding:16px; color:#4B5563;">50-100 يورو</td>
+                <td style="padding:16px; color:#64748b; font-size:14px;">الملابس والنظافة الشخصية والأدوات المنزلية</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="color:#C5A059; font-weight:800; margin-top:24px; font-size:20px; text-align: center; background: #f8fafc; padding: 20px; border-radius: 8px;">
+          الميزانية الإجمالية: 900-1.650 يورو شهرياً
+        </p>
+      </div>
+    </section>
 
-  <!-- التكاليف في مدن مختلفة -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">مقارنة المدن</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px;">تكاليف المعيشة في المدن الألمانية الكبرى</h2>
-    <div class="grid">
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🏙️ برلين</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px;">
-          العاصمة هي إحدى أرخص المدن الكبرى. السكن أرخص من ميونيخ أو فرانكفورت.
-        </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0;">الميزانية الشهرية: 900-1.200 يورو</p>
+    <!-- التكاليف في مدن مختلفة -->
+    <section class="section" style="margin-bottom: 64px;">
+      <p class="kicker" style="color: #C5A059; font-weight: 700; margin-bottom: 12px;">مقارنة المدن</p>
+      <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 32px;">تكاليف المعيشة في المدن الألمانية الكبرى</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div class="card" style="padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background: white;">
+          <h3 style="font-size: 20px; font-weight: 800; color: #000; margin-bottom: 12px;">🏙️ برلين</h3>
+          <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
+            العاصمة هي إحدى أرخص المدن الكبرى. السكن أرخص من ميونيخ أو فرانكفورت.
+          </p>
+          <p style="color:#C5A059; font-weight:bold; margin:0;">الميزانية الشهرية: 900-1.200 يورو</p>
+        </div>
+        <div class="card" style="padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background: white;">
+          <h3 style="font-size: 20px; font-weight: 800; color: #000; margin-bottom: 12px;">🏔️ ميونيخ</h3>
+          <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
+            أغلى مدينة كبرى في ألمانيا. الإيجارات أعلى بكثير، خاصة في المركز.
+          </p>
+          <p style="color:#C5A059; font-weight:bold; margin:0;">الميزانية الشهرية: 1.300-1.650 يورو</p>
+        </div>
+        <div class="card" style="padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background: white;">
+          <h3 style="font-size: 20px; font-weight: 800; color: #000; margin-bottom: 12px;">⚓ هامبورغ</h3>
+          <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
+            مدينة ميناء بتكاليف معيشة معتدلة. السكن أغلى من برلين وأرخص من ميونيخ.
+          </p>
+          <p style="color:#C5A059; font-weight:bold; margin:0;">الميزانية الشهرية: 1.100-1.400 يورو</p>
+        </div>
+        <div class="card" style="padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background: white;">
+          <h3 style="font-size: 20px; font-weight: 800; color: #000; margin-bottom: 12px;">💼 فرانكفورت</h3>
+          <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
+            مركز مالي بتكاليف معيشة عالية. السكن مكلف، لكن الرواتب أعلى.
+          </p>
+          <p style="color:#C5A059; font-weight:bold; margin:0;">الميزانية الشهرية: 1.200-1.500 يورو</p>
+        </div>
+        <div class="card" style="padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background: white;">
+          <h3 style="font-size: 20px; font-weight: 800; color: #000; margin-bottom: 12px;">🎨 لايبزيغ</h3>
+          <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
+            إحدى أرخص المدن الكبرى. الإيجارات منخفضة، جودة الحياة عالية.
+          </p>
+          <p style="color:#C5A059; font-weight:bold; margin:0;">الميزانية الشهرية: 700-950 يورو</p>
+        </div>
+        <div class="card" style="padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background: white;">
+          <h3 style="font-size: 20px; font-weight: 800; color: #000; margin-bottom: 12px;">🌳 كولونيا</h3>
+          <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 16px;">
+            عاصمة ثقافية بتكاليف معتدلة. السكن أرخص من ميونيخ oder فرانكفورت.
+          </p>
+          <p style="color:#C5A059; font-weight:bold; margin:0;">الميزانية الشهرية: 950-1.250 يورو</p>
+        </div>
       </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🏔️ ميونيخ</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px;">
-          أغلى مدينة كبرى في ألمانيا. الإيجارات أعلى بكثير، خاصة في المركز.
-        </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0;">الميزانية الشهرية: 1.300-1.650 يورو</p>
-      </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">⚓ هامبورغ</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px;">
-          مدينة ميناء بتكاليف معيشة معتدلة. السكن أغلى من برلين وأرخص من ميونيخ.
-        </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0;">الميزانية الشهرية: 1.100-1.400 يورو</p>
-      </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">💼 فرانكفورت</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px;">
-          مركز مالي بتكاليف معيشة عالية. السكن مكلف، لكن الرواتب أعلى.
-        </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0;">الميزانية الشهرية: 1.200-1.500 يورو</p>
-      </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🎨 لايبزيغ</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px;">
-          إحدى أرخص المدن الكبرى. الإيجارات منخفضة، جودة الحياة عالية.
-        </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0;">الميزانية الشهرية: 700-950 يورو</p>
-      </div>
-      <div class="card" >
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🌳 كولونيا</h3>
-        <p style="color:#666; font-size:14px; line-height:1.6; margin-bottom:12px;">
-          عاصمة ثقافية بتكاليف معتدلة. السكن أرخص من ميونيخ أو فرانكفورت.
-        </p>
-        <p style="color:#0B3B8C; font-weight:bold; margin:0;">الميزانية الشهرية: 950-1.250 يورو</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ميزانية الطلاب -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">للطلاب</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px;">ميزانية الطلاب في ألمانيا</h2>
-    <div >
-      <p style="color:#334155; line-height:1.8; margin-bottom:16px;">
-        غالباً ما يكون لدى الطلاب تكاليف معيشة أقل من العاملين. إليك ميزانية طالب نموذجية.
-      </p>
-      <table style="width:100%; border-collapse:collapse; margin:20px 0;">
-        <thead>
-          <tr style="background:#0B3B8C; color:white;">
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">النفقة</th>
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">التكلفة</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">سكن الطلاب</td>
-            <td style="padding:12px; color:#334155;">250-400 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">المواد الغذائية (تسوق اقتصادي)</td>
-            <td style="padding:12px; color:#334155;">100-150 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">تذكرة النقل للطلاب</td>
-            <td style="padding:12px; color:#334155;">20-50 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">التأمين الصحي (طالب)</td>
-            <td style="padding:12px; color:#334155;">110 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">المرافق (مشتركة)</td>
-            <td style="padding:12px; color:#334155;">50-80 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">الترفيه والثقافة (طالب)</td>
-            <td style="padding:12px; color:#334155;">30-50 يورو</td>
-          </tr>
-          <tr>
-            <td style="padding:12px; color:#334155; font-weight:bold;">الميزانية الإجمالية</td>
-            <td style="padding:12px; color:#334155; font-weight:bold;">560-830 يورو</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="color:#666; font-size:14px; line-height:1.6; margin-top:16px;">
-        ملاحظة: تقدم العديد من الجامعات سكن طلاب بأسعار معقولة. تسمح تذكرة الطالب بالاستخدام غير المحدود للمواصلات العامة في المنطقة.
-      </p>
-    </div>
-  </section>
+    <!-- ميزانية الطلاب -->
+    <section class="section" style="margin-bottom: 64px;">
+      <p class="kicker" style="color: #C5A059; font-weight: 700; margin-bottom: 12px;">للطلاب</p>
+      <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 32px;">ميزانية الطلاب في ألمانيا</h2>
+      <div >
+        <p style="font-size: 17px; color: #4B5563; line-height: 1.8; margin-bottom: 24px;">
+          غالباً ما يكون لدى الطلاب تكاليف معيشة أقل من العاملين. إليك ميزانية طالب نموذجية.
+        </p>
+        <div style="overflow-x: auto; margin: 32px 0;">
+          <table style="width:100%; border-collapse:collapse; min-width: 500px;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom: 2px solid #e2e8f0;">
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">النفقة</th>
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">التكلفة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">سكن الطلاب</td>
+                <td style="padding:16px; color:#4B5563;">250-400 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">المواد الغذائية (تسوق اقتصادي)</td>
+                <td style="padding:16px; color:#4B5563;">100-150 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">تذكرة النقل للطلاب</td>
+                <td style="padding:16px; color:#4B5563;">20-50 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">التأمين الصحي (طالب)</td>
+                <td style="padding:16px; color:#4B5563;">110 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">المرافق (مشتركة)</td>
+                <td style="padding:16px; color:#4B5563;">50-80 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">الترفيه والثقافة (طالب)</td>
+                <td style="padding:16px; color:#4B5563;">30-50 يورو</td>
+              </tr>
+              <tr>
+                <td style="padding:16px; color:#C5A059; font-weight:800;">الميزانية الإجمالية</td>
+                <td style="padding:16px; color:#C5A059; font-weight:800;">560-830 يورو</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-top: 16px; font-style: italic;">
+          ملاحظة: تقدم العديد من الجامعات سكن طلاب بأسعار معقولة. تسمح تذكرة الطالب بالاستخدام غير المحدود للمواصلات العامة في المنطقة.
+        </p>
+      </div>
+    </section>
 
-  <!-- نصائح توفير المال -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">نصائح مالية</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px;">نصائح لتوفير المال في ألمانيا</h2>
-    <div class="grid">
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🏠 استخدم سكن الطلاب</h3>
-        <p style="color:#666; margin:0; line-height:1.6;">
-          سكن الطلاب غالباً ما يكون أرخص ويوفر مجتمع جيد. تقدم بطلبك مبكراً.
-        </p>
+    <!-- نصائح توفير المال -->
+    <section class="section" style="margin-bottom: 64px;">
+      <p class="kicker" style="color: #C5A059; font-weight: 700; margin-bottom: 12px;">نصائح مالية</p>
+      <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 32px;">نصائح لتوفير المال في ألمانيا</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+        <div style="background:#f8fafc; padding:24px; border-radius:12px;">
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 12px;">🏠 سكن الطلاب (WG)</h3>
+          <p style="font-size: 14px; color: #4B5563; margin:0; line-height:1.6;">
+            سكن الطلاب غالباً ما يكون أرخص ويوفر مجتمع جيد. تقدم بطلبك مبكراً.
+          </p>
+        </div>
+        <div style="background:#f8fafc; padding:24px; border-radius:12px;">
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 12px;">🚌 المواصلات العامة</h3>
+          <p style="font-size: 14px; color: #4B5563; margin:0; line-height:1.6;">
+            تذاكر الطلاب رخيصة جداً. ركوب الدراجة أيضاً خيار شهير ومجاني.
+          </p>
+        </div>
+        <div style="background:#f8fafc; padding:24px; border-radius:12px;">
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 12px;">🛒 تسوق رخيص</h3>
+          <p style="font-size: 14px; color: #4B5563; margin:0; line-height:1.6;">
+            متاجر الخصم مثل Aldi و Lidl توفر مواد غذائية رخيصة. أسواق الأسبوع غالباً أرخص.
+          </p>
+        </div>
+        <div style="background:#f8fafc; padding:24px; border-radius:12px;">
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 12px;">🍽️ طبخ في البيت</h3>
+          <p style="font-size: 14px; color: #4B5563; margin:0; line-height:1.6;">
+            تناول الطعام بالخارج مكلف. الطبخ في البيت يوفر المال وأصح.
+          </p>
+        </div>
+        <div style="background:#f8fafc; padding:24px; border-radius:12px;">
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 12px;">💳 قارن التأمين الصحي</h3>
+          <p style="font-size: 14px; color: #4B5563; margin:0; line-height:1.6;">
+            قارن خيارات التأمين الصحي. الطلاب غالباً يحصلون على أسعار أرخص.
+          </p>
+        </div>
+        <div style="background:#f8fafc; padding:24px; border-radius:12px;">
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 12px;">📱 أنشطة مجانية</h3>
+          <p style="font-size: 14px; color: #4B5563; margin:0; line-height:1.6;">
+            العديد من المتاحف لها أيام دخول مجانية. الحدائق والبحيرات مجانية.
+          </p>
+        </div>
       </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🚌 المواصلات العامة</h3>
-        <p style="color:#666; margin:0; line-height:1.6;">
-          تذاكر الطلاب رخيصة جداً. ركوب الدراجة أيضاً خيار شهير ومجاني.
-        </p>
-      </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🛒 تسوق رخيص</h3>
-        <p style="color:#666; margin:0; line-height:1.6;">
-          متاجر الخصم مثل Aldi و Lidl توفر مواد غذائية رخيصة. أسواق الأسبوع غالباً أرخص.
-        </p>
-      </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">🍽️ طبخ في البيت</h3>
-        <p style="color:#666; margin:0; line-height:1.6;">
-          تناول الطعام بالخارج مكلف. الطبخ في البيت يوفر المال وأصح.
-        </p>
-      </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">💳 قارن التأمين الصحي</h3>
-        <p style="color:#666; margin:0; line-height:1.6;">
-          قارن خيارات التأمين الصحي. الطلاب غالباً يحصلون على أسعار أرخص.
-        </p>
-      </div>
-      <div style="background:white; padding:24px; border-radius:8px; border:1px solid #e2e8f0;">
-        <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:12px;">📱 أنشطة مجانية</h3>
-        <p style="color:#666; margin:0; line-height:1.6;">
-          العديد من المتاحف لها أيام دخول مجانية. الحدائق والبحيرات مجانية.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- الميزانية الإجمالية -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">ملخص الميزانية</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px;">الميزانية الإجمالية لألمانيا</h2>
-    <div >
-      <p style="color:#334155; line-height:1.8; margin-bottom:24px;">
-        تختلف تكاليف المعيشة في ألمانيا حسب المدينة ونمط الحياة والأولويات الشخصية. إليك ملخص الميزانيات الشهرية المتوسطة.
-      </p>
-      <table style="width:100%; border-collapse:collapse; margin:20px 0;">
-        <thead>
-          <tr style="background:#0B3B8C; color:white;">
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">المجموعة</th>
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">الميزانية الشهرية</th>
-            <th style="padding:12px; text-align:right; border:1px solid #ddd;">الميزانية السنوية</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">طالب (سكن)</td>
-            <td style="padding:12px; color:#334155;">560-830 يورو</td>
-            <td style="padding:12px; color:#334155;">6.720-9.960 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">طالب (شقة إيجار)</td>
-            <td style="padding:12px; color:#334155;">900-1.200 يورو</td>
-            <td style="padding:12px; color:#334155;">10.800-14.400 يورو</td>
-          </tr>
-          <tr style="border-bottom:1px solid #e2e8f0;">
-            <td style="padding:12px; color:#334155;">عامل (اقتصادي)</td>
-            <td style="padding:12px; color:#334155;">1.200-1.500 يورو</td>
-            <td style="padding:12px; color:#334155;">14.400-18.000 يورو</td>
-          </tr>
-          <tr>
-            <td style="padding:12px; color:#334155;">عامل (مريح)</td>
-            <td style="padding:12px; color:#334155;">1.500-2.000 يورو</td>
-            <td style="padding:12px; color:#334155;">18.000-24.000 يورو</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <!-- الميزانية الإجمالية -->
+    <section class="section" style="margin-bottom: 64px;">
+      <p class="kicker" style="color: #C5A059; font-weight: 700; margin-bottom: 12px;">ملخص الميزانية</p>
+      <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 32px;">الميزانية الإجمالية لألمانيا</h2>
+      <div >
+        <p style="font-size: 17px; color: #4B5563; line-height: 1.8; margin-bottom: 24px;">
+          تختلف تكاليف المعيشة في ألمانيا حسب المدينة ونمط الحياة والأولويات الشخصية. إليك ملخص الميزانيات الشهرية المتوسطة.
+        </p>
+        <div style="overflow-x: auto; margin: 32px 0;">
+          <table style="width:100%; border-collapse:collapse; min-width: 600px;">
+            <thead>
+              <tr style="background:#f8fafc; border-bottom: 2px solid #e2e8f0;">
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">المجموعة</th>
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">الميزانية الشهرية</th>
+                <th style="padding:16px; text-align:right; font-weight: 800; color: #000;">الميزانية السنوية</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">طالب (سكن)</td>
+                <td style="padding:16px; color:#4B5563;">560-830 يورو</td>
+                <td style="padding:16px; color:#4B5563;">6.720-9.960 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">طالب (شقة إيجار)</td>
+                <td style="padding:16px; color:#4B5563;">900-1.200 يورو</td>
+                <td style="padding:16px; color:#4B5563;">10.800-14.400 يورو</td>
+              </tr>
+              <tr style="border-bottom:1px solid #e2e8f0;">
+                <td style="padding:16px; color:#000; font-weight:bold;">عامل (اقتصادي)</td>
+                <td style="padding:16px; color:#4B5563;">1.200-1.500 يورو</td>
+                <td style="padding:16px; color:#4B5563;">14.400-18.000 يورو</td>
+              </tr>
+              <tr>
+                <td style="padding:16px; color:#000; font-weight:bold;">عامل (مريح)</td>
+                <td style="padding:16px; color:#4B5563;">1.500-2.000 يورو</td>
+                <td style="padding:16px; color:#4B5563;">18.000-24.000 يورو</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-  <!-- CTA SECTION -->
-  <section class="section" style="background:#0B3B8C; padding:48px 32px; border-radius:8px; text-align:center; margin-bottom:48px; color:white;">
-    <h2 style="color:white; margin-bottom:16px;">تحقق من فرصك في ألمانيا</h2>
-    <p style="color:#e8f0f7; font-size:16px; line-height:1.6; max-width:600px; margin:0 auto 32px;">
-      احسب في أقل من دقيقة واحدة ما إذا كنت تستوفي متطلبات بطاقة الفرص وتستطيع القدوم إلى ألمانيا.
-    </p>
-    <a class="btn primary" href="/ar/assessment.html" style="display:inline-block; background-color:white; color:#0B3B8C;">احسب نقاطك</a>
-  </section>
+    <!-- FAQ SECTION -->
+    <section class="section" style="margin-bottom: 80px; padding: 40px; background: #f8fafc; border-radius: 16px;">
+      <p class="kicker" style="color: #C5A059; font-weight: 700; margin-bottom: 12px;">الأسئلة الشائعة</p>
+      <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 32px;">أسئلة حول تكاليف المعيشة في ألمانيا</h2>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
+        <div >
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 8px;">كم المال الذي أحتاجه شهرياً في ألمانيا؟</h3>
+          <p style="font-size: 16px; color: #4B5563; line-height: 1.6; margin:0;">هذا يعتمد على مدينتك ونمط حياتك. في المتوسط، تحتاج إلى 900-1.650 يورو شهرياً.</p>
+        </div>
+        <div >
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 8px;">أي مدينة هي الأرخص؟</h3>
+          <p style="font-size: 16px; color: #4B5563; line-height: 1.6; margin:0;">لايبزيغ وبرلين هما أرخص المدن الكبرى. ميونيخ هي الأغلى.</p>
+        </div>
+        <div >
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 8px;">هل يمكن للطلاب العيش برخص أكثر؟</h3>
+          <p style="font-size: 16px; color: #4B5563; line-height: 1.6; margin:0;">نعم، يمكن للطلاب العيش بـ 560-830 يورو شهرياً، خاصة في سكن الطلاب.</p>
+        </div>
+        <div >
+          <h3 style="font-size: 18px; font-weight: 800; color: #000; margin-bottom: 8px;">كم تكلفة التأمين الصحي؟</h3>
+          <p style="font-size: 16px; color: #4B5563; line-height: 1.6; margin:0;">التأمين الصحي الحكومي يكلف حوالي 100-150 يورو شهرياً. الطلاب يدفعون حوالي 110 يورو.</p>
+        </div>
+      </div>
+    </section>
+  </article>
 
-  <!-- FAQ SECTION -->
-  <section class="section" style="margin-bottom: 48px;">
-    <p class="kicker">الأسئلة الشائعة</p>
-    <h2 style="color:#0B3B8C; margin-bottom:32px;">أسئلة حول تكاليف المعيشة في ألمانيا</h2>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px;">كم المال الذي أحتاجه شهرياً في ألمانيا؟</h3>
-      <p style="color:#666; margin:0;">هذا يعتمد على مدينتك ونمط حياتك. في المتوسط، تحتاج إلى 900-1.650 يورو شهرياً.</p>
-    </div>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px;">أي مدينة هي الأرخص؟</h3>
-      <p style="color:#666; margin:0;">لايبزيغ وبرلين هما أرخص المدن الكبرى. ميونيخ هي الأغلى.</p>
-    </div>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px;">هل يمكن للطلاب العيش برخص أكثر؟</h3>
-      <p style="color:#666; margin:0;">نعم، يمكن للطلاب العيش بـ 560-830 يورو شهرياً، خاصة في سكن الطلاب.</p>
-    </div>
-    <div >
-      <h3 style="color:#0B3B8C; margin-top:0; margin-bottom:8px;">كم تكلفة التأمين الصحي؟</h3>
-      <p style="color:#666; margin:0;">التأمين الصحي الحكومي يكلف حوالي 100-150 يورو شهرياً. الطلاب يدفعون حوالي 110 يورو.</p>
+  <!-- BOTTOM CTA -->
+  <section class="section" style="text-align: center; padding: 80px 20px; border-top: 1px solid #E5E7EB; background: white;">
+    <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 16px;">ابدأ التقييم المهني الأولي</h2>
+    <p style="font-size: 18px; color: #4B5563; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">أرسل ملفك وسنحدد المسار المناسب لك نحو ألمانيا</p>
+    <div style="margin-bottom: 24px;">
+      <a href="/ar/assessment" style="display: inline-block; padding: 18px 48px; background-color: #C5A059; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 18px; transition: background-color 0.2s;">ابدأ التقييم الآن</a>
     </div>
   </section>
 </main>
 
+<!-- FOOTER (BLACK) -->
 <footer class="footer">
-  <div class="container wrap">
-    <div><b>Berlin Gateway</b> — معمارية الدخول المنظمة للمحترفين</div>
-    <div class="footer-contact">الاتصال: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a> · الهاتف: <a href="tel:+493025730875">+49 30 25730875</a></div>
-  </div>
-  <div class="container">
-    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. جميع الحقوق محفوظة. · <a href="/sitemap.html" style="color: #0B3B8C; text-decoration: none;">خريطة الموقع</a></div>
-    <div class="footer-closing">منظمة. انتقائية. منهجية.</div>
-  </div>
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
+            </div>
+            <div>
+                <h4>التنقل</h4>
+                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <a href="/ar/assessment">حاسبة النقاط</a>
+                <a href="/ar/systemlogik">منطق النظام</a>
+                <a href="/ar/monitor">المرصد</a>
+                <a href="/ar/insights">الرؤى</a>
+            </div>
+            <div>
+                <h4>القانونية</h4>
+                <a href="/ar/impressum">بيان قانوني</a>
+                <a href="/ar/datenschutz">سياسة الخصوصية</a>
+            </div>
+            <div>
+                <h4>اتصل</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+        </div>
+    </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
-  }
-}
-
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
-});
-</script>
 </body>
 </html>

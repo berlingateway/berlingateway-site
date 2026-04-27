@@ -77,6 +77,8 @@ import HeadPressureUnknown from "./pages/symptoms/HeadPressureUnknown";
 import ChronicHeadacheUnknown from "./pages/symptoms/ChronicHeadacheUnknown";
 import WeaknessInLimbs from "./pages/symptoms/WeaknessInLimbs";
 import SuddenBodyWeakness from "./pages/symptoms/SuddenBodyWeakness";
+import ParkinsonsTreatmentGermany from "./pages/symptoms/ParkinsonsTreatmentGermany";
+import PediatricNeurologyGermany from "./pages/symptoms/PediatricNeurologyGermany";
 
 // Category Hub Pages
 import NeurologyHub from "./pages/hubs/NeurologyHub";
@@ -139,6 +141,8 @@ function Router() {
       <Route path={"/ar/chronic-headache-unknown"} component={ChronicHeadacheUnknown} />
       <Route path={"/ar/weakness-in-limbs"} component={WeaknessInLimbs} />
       <Route path={"/ar/sudden-body-weakness"} component={SuddenBodyWeakness} />
+      <Route path={"/ar/parkinsons-treatment-germany"} component={ParkinsonsTreatmentGermany} />
+      <Route path={"/ar/pediatric-neurology-germany"} component={PediatricNeurologyGermany} />
       <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
       <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />
       <Route path={"/colon-cancer-treatment-germany"} component={ColonCancer} />

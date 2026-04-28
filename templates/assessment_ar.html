@@ -452,12 +452,11 @@
 
     function calculateResult() {
       let totalPoints = 0;
-      const form = document.querySelector(".assessment-container");
-      const formData = new FormData(form);
-
-      for (const [key, value] of formData.entries()) {
-        totalPoints += parseInt(value, 10);
-      }
+      const inputs = document.querySelectorAll('.assessment-container input[type="radio"]:checked');
+      
+      inputs.forEach(input => {
+        totalPoints += parseInt(input.value, 10);
+      });
 
       const resultSection = document.getElementById("resultSection");
       const resultScore = document.getElementById("resultScore");

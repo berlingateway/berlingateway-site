@@ -45,7 +45,7 @@
     }
     .progress-fill {
       height: 100%;
-      background: #B8860B;
+      background: #C5A059;
       width: 0%;
       transition: width 0.3s ease;
     }
@@ -87,7 +87,7 @@
       background: white;
     }
     .option-label:hover {
-      border-color: #B8860B;
+      border-color: #C5A059;
       background: #fafaf8;
     }
     .option-label input[type="radio"] {
@@ -95,13 +95,13 @@
       cursor: pointer;
       width: 20px;
       height: 20px;
-      accent-color: #B8860B;
+      accent-color: #C5A059;
     }
     .option-text {
       flex: 1;
     }
     .option-points {
-      color: #B8860B;
+      color: #C5A059;
       font-weight: 700;
       font-size: 14px;
     }
@@ -121,7 +121,7 @@
       transition: all 0.2s ease;
     }
     .btn-primary {
-      background: #B8860B;
+      background: #C5A059;
       color: white;
       flex: 1;
     }
@@ -152,7 +152,7 @@
     .result-score {
       font-size: 64px;
       font-weight: 800;
-      color: #B8860B;
+      color: #C5A059;
       margin-bottom: 12px;
     }
     .result-status {
@@ -164,7 +164,7 @@
       color: #10b981;
     }
     .result-status.good {
-      color: #B8860B;
+      color: #C5A059;
     }
     .result-status.early {
       color: #ef4444;
@@ -184,7 +184,7 @@
     .result-cta a {
       display: inline-block;
       padding: 14px 32px;
-      background: #B8860B;
+      background: #C5A059;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -214,7 +214,7 @@
     .final-cta a {
       display: inline-block;
       padding: 16px 40px;
-      background: #B8860B;
+      background: #C5A059;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -517,12 +517,11 @@
 
     function calculateResult() {
       let totalPoints = 0;
-      const form = document.querySelector(".assessment-container");
-      const formData = new FormData(form);
-
-      for (const [key, value] of formData.entries()) {
-        totalPoints += parseInt(value, 10);
-      }
+      const inputs = document.querySelectorAll('.assessment-container input[type="radio"]:checked');
+      
+      inputs.forEach(input => {
+        totalPoints += parseInt(input.value, 10);
+      });
 
       const resultSection = document.getElementById("resultSection");
       const resultScore = document.getElementById("resultScore");

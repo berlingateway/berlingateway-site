@@ -31,7 +31,6 @@ export const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
   name: "Medical Care Germany",
-  alternateName: "Berlin Medical Care",
   url: CANONICAL_DOMAIN,
   logo: CANONICAL_DOMAIN + "/logo.png",
   description: "Germany's premier medical coordination authority for international patients requiring complex, high-priority medical interventions.",

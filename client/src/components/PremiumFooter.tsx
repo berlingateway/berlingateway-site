@@ -39,6 +39,44 @@ export default function PremiumFooter() {
           </div>
         </div>
 
+        {/* Treatment Guide Links */}
+        <div className="border-t border-slate-800 pt-8 mb-8 grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 className="text-xs uppercase tracking-widest text-slate-500 mb-4">Treatment Guide — Germany</h4>
+            <ul className="space-y-2">
+              {[
+                { href: "/treatment-in-germany-arab-patients", label: "Treatment in Germany for Arab Patients" },
+                { href: "/treatment-cost-germany", label: "Treatment Cost in Germany" },
+                { href: "/medical-visa-germany", label: "Medical Visa Germany" },
+                { href: "/hospitals-germany-international-patients", label: "Hospitals for International Patients" },
+                { href: "/travel-for-treatment-germany", label: "Travel for Medical Treatment" },
+                { href: "/send-medical-reports", label: "Send Medical Reports" },
+              ].map((l, i) => (
+                <li key={i}>
+                  <a href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors">{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div dir="rtl">
+            <h4 className="text-xs uppercase tracking-widest text-slate-500 mb-4">دليل العلاج في ألمانيا</h4>
+            <ul className="space-y-2">
+              {[
+                { href: "/ar/العلاج-في-المانيا-للعرب", label: "العلاج في ألمانيا للعرب" },
+                { href: "/ar/تكلفة-العلاج-في-المانيا", label: "تكلفة العلاج" },
+                { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج" },
+                { href: "/ar/مستشفيات-المانيا-للعرب", label: "المستشفيات" },
+                { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج" },
+                { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير الطبية" },
+              ].map((l, i) => (
+                <li key={i}>
+                  <a href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>Operating within established clinical coordination frameworks.</p>

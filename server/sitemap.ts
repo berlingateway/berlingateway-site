@@ -133,6 +133,50 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.75,
   },
 
+  // ── Arabic Symptom Pages (new) ───────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/parkinsons-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/pediatric-neurology-germany`,
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
+
+  // ── Arabic SEO Gateway Pages ───────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/العلاج-في-المانيا-للعرب`,
+    changefreq: 'monthly',
+    priority: 0.6,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/تكلفة-العلاج-في-المانيا`,
+    changefreq: 'monthly',
+    priority: 0.6,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/فيزا-العلاج-في-المانيا`,
+    changefreq: 'monthly',
+    priority: 0.6,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/مستشفيات-المانيا-للعرب`,
+    changefreq: 'monthly',
+    priority: 0.6,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/السفر-للعلاج-في-المانيا`,
+    changefreq: 'monthly',
+    priority: 0.6,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/ارسال-التقارير-الطبية`,
+    changefreq: 'monthly',
+    priority: 0.6,
+  },
+
   // ── Arabic Utility Pages ───────────────────────────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/videos`,

@@ -80,6 +80,14 @@ import SuddenBodyWeakness from "./pages/symptoms/SuddenBodyWeakness";
 import ParkinsonsTreatmentGermany from "./pages/symptoms/ParkinsonsTreatmentGermany";
 import PediatricNeurologyGermany from "./pages/symptoms/PediatricNeurologyGermany";
 
+// SEO Gateway Pages
+import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
+import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
+import MedicalVisaGermany from "./pages/seo/MedicalVisaGermany";
+import HospitalsGermanyInternational from "./pages/seo/HospitalsGermanyInternational";
+import TravelForTreatmentGermany from "./pages/seo/TravelForTreatmentGermany";
+import SendMedicalReportsArabic from "./pages/seo/SendMedicalReportsArabic";
+
 // Category Hub Pages
 import NeurologyHub from "./pages/hubs/NeurologyHub";
 import SpineHub from "./pages/hubs/SpineHub";
@@ -143,6 +151,18 @@ function Router() {
       <Route path={"/ar/sudden-body-weakness"} component={SuddenBodyWeakness} />
       <Route path={"/ar/parkinsons-treatment-germany"} component={ParkinsonsTreatmentGermany} />
       <Route path={"/ar/pediatric-neurology-germany"} component={PediatricNeurologyGermany} />
+      {/* SEO Gateway Routes */}
+      <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
+      <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />
+      <Route path={"/ar/تكلفة-العلاج-في-المانيا"} component={TreatmentCostGermany} />
+      <Route path={"/treatment-cost-germany"} component={TreatmentCostGermany} />
+      <Route path={"/ar/فيزا-العلاج-في-المانيا"} component={MedicalVisaGermany} />
+      <Route path={"/medical-visa-germany"} component={MedicalVisaGermany} />
+      <Route path={"/ar/مستشفيات-المانيا-للعرب"} component={HospitalsGermanyInternational} />
+      <Route path={"/hospitals-germany-international-patients"} component={HospitalsGermanyInternational} />
+      <Route path={"/ar/السفر-للعلاج-في-المانيا"} component={TravelForTreatmentGermany} />
+      <Route path={"/travel-for-treatment-germany"} component={TravelForTreatmentGermany} />
+      <Route path={"/ar/ارسال-التقارير-الطبية"} component={SendMedicalReportsArabic} />
       <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
       <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />
       <Route path={"/colon-cancer-treatment-germany"} component={ColonCancer} />

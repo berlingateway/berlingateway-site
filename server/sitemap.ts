@@ -25,7 +25,7 @@ interface SitemapUrl {
 const STATIC_ROUTES: SitemapUrl[] = [
   // ── Homepage ──────────────────────────────────────────────────────────────
   {
-    loc: CANONICAL_DOMAIN,
+    loc: CANONICAL_DOMAIN + '/',
     changefreq: 'weekly',
     priority: 1.0,
   },

@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const intakeHref = "/send-medical-reports";
@@ -182,6 +183,24 @@ export function SeoGatewayPage({
         </div>
       </section>
 
+      {/* 5b. TRUST INDICATORS */}
+      <section className="py-10 px-6 bg-white border-b border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {[
+              { label: "تنسيق من برلين" },
+              { label: "مراجعة خلال 48 ساعة" },
+              { label: "خبرة مع المرضى الدوليين" },
+              { label: "سرية تامة" },
+            ].map((t, i) => (
+              <div key={i} className="py-4 px-2 border border-slate-100">
+                <p className="text-xs text-slate-500 leading-snug" style={FONT}>{t.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 6. FINAL CTA */}
       <section className="py-20 px-6 bg-[#0B1C2C] text-white">
         <div className="max-w-2xl mx-auto text-center">
@@ -216,23 +235,12 @@ export function SeoGatewayPage({
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 px-6 bg-white border-t border-slate-100 text-center">
-        <p className="text-xs text-slate-400 mb-4" style={FONT}>
-          ميديكال كير جيرماني · برلين، ألمانيا
-        </p>
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-          {[
-            { href: "/ar/العلاج-في-المانيا-للعرب", label: "العلاج في ألمانيا للعرب" },
-            { href: "/ar/تكلفة-العلاج-في-المانيا", label: "تكلفة العلاج" },
-            { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج" },
-            { href: "/ar/مستشفيات-المانيا-للعرب", label: "المستشفيات" },
-            { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج" },
-            { href: "/send-medical-reports", label: "إرسال التقارير الطبية" },
-          ].map((l, i) => (
-            <Link key={i} href={l.href} className="text-xs text-slate-400 hover:text-slate-700 transition-colors" style={FONT}>
-              {l.label}
-            </Link>
-          ))}
+      <footer className="bg-white border-t border-slate-100">
+        <ArabicFooterGuide />
+        <div className="py-8 px-6 text-center">
+          <p className="text-xs text-slate-400" style={FONT}>
+            ميديكال كير جيرماني · برلين، ألمانيا
+          </p>
         </div>
       </footer>
     </div>

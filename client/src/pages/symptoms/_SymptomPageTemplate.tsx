@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const intakeHref = "/send-medical-reports";
@@ -244,10 +245,13 @@ export function SymptomPage({
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 px-6 bg-white border-t border-slate-100 text-center">
-        <p className="text-xs text-slate-400" style={FONT}>
-          ميديكال كير جيرماني · برلين، ألمانيا
-        </p>
+      <footer className="bg-white border-t border-slate-100">
+        <ArabicFooterGuide />
+        <div className="py-8 px-6 text-center">
+          <p className="text-xs text-slate-400" style={FONT}>
+            ميديكال كير جيرماني · برلين، ألمانيا
+          </p>
+        </div>
       </footer>
     </div>
   );

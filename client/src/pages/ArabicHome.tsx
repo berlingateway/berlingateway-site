@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
+import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 // ─── Diagnostic Entry Layer (v2) ─────────────────────────────────────────────
 
@@ -838,7 +839,24 @@ export default function ArabicHome() {
 
 
       {/* FOOTER */}
-      <footer id="contact" className="py-10 bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
+      <footer id="contact" className="bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
+        {/* Treatment Guide Links — dark variant */}
+        <div className="border-b border-slate-700 py-6 px-4">
+          <p className="text-xs text-slate-500 mb-3 tracking-wide" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>دليل العلاج في ألمانيا</p>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {[
+              { href: "/ar/العلاج-في-المانيا-للعرب", label: "العلاج في ألمانيا للعرب" },
+              { href: "/ar/تكلفة-العلاج-في-المانيا", label: "تكلفة العلاج" },
+              { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج" },
+              { href: "/ar/مستشفيات-المانيا-للعرب", label: "مستشفيات ألمانيا" },
+              { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج" },
+              { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+            ].map((l) => (
+              <a key={l.href} href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>{l.label}</a>
+            ))}
+          </div>
+        </div>
+        <div className="py-10">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
             <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
@@ -851,6 +869,7 @@ export default function ArabicHome() {
           <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85, fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
             يُستشار رأيه قبل اتخاذ القرارات الطبية الحاسمة.
           </p>
+        </div>
         </div>
       </footer>
     </div>

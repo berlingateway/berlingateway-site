@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { ArabicFooterGuide } from "./ArabicFooterGuide";
 
 export interface MedicalConditionPageProps {
   metaTitle: string;
@@ -620,13 +621,16 @@ export default function MedicalConditionPage({
       </main>
 
       {/* Footer */}
-      <footer className="py-10 border-t border-slate-100 text-center">
-        {footerLine1 && (
-          <p className="text-xs text-slate-400">{footerLine1}</p>
-        )}
-        {footerLine2 && (
-          <p className="text-xs text-slate-300 mt-1">{footerLine2}</p>
-        )}
+      <footer className="border-t border-slate-100">
+        {isArabic && <ArabicFooterGuide />}
+        <div className="py-10 text-center">
+          {footerLine1 && (
+            <p className="text-xs text-slate-400">{footerLine1}</p>
+          )}
+          {footerLine2 && (
+            <p className="text-xs text-slate-300 mt-1">{footerLine2}</p>
+          )}
+        </div>
       </footer>
     </div>
   );

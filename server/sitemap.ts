@@ -8,7 +8,7 @@
 
 import type { Request, Response } from 'express';
 
-const CANONICAL_DOMAIN = 'https://www.medicalcaregermany.com';
+const CANONICAL_DOMAIN = 'https://medicalcaregermany.com';
 
 interface SitemapUrl {
   loc: string;

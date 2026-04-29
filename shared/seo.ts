@@ -8,7 +8,7 @@ export interface PageMetadata {
   twitterCard?: "summary" | "summary_large_image";
 }
 
-const CANONICAL_DOMAIN = "https://www.medicalcaregermany.com";
+const CANONICAL_DOMAIN = "https://medicalcaregermany.com";
 const DEFAULT_OG_IMAGE = CANONICAL_DOMAIN + "/og-image.jpg";
 
 export const SEO_METADATA: Record<string, PageMetadata> = {

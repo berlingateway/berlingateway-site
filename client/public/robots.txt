@@ -1,6 +1,6 @@
 # Medical Care Germany - Robots.txt
 # Premium Medical Coordination Authority
-# https://www.medicalcaregermany.com
+# https://medicalcaregermany.com
 
 User-agent: *
 Allow: /
@@ -24,7 +24,7 @@ Allow: /*.svg$
 Allow: /*.webp$
 
 # Sitemap location
-Sitemap: https://www.medicalcaregermany.com/sitemap.xml
+Sitemap: https://medicalcaregermany.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

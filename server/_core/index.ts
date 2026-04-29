@@ -37,17 +37,18 @@ async function startServer() {
   app.use((req, res, next) => {
     const host = req.get('host') || '';
     const protocol = req.protocol;
-    
-    // Enforce HTTPS in production
-    if (process.env.NODE_ENV === 'production' && protocol !== 'https') {
-      return res.redirect(301, `https://${host}${req.url}`);
+
+    if (process.env.NODE_ENV === 'production') {
+      // Enforce HTTPS
+      if (protocol !== 'https') {
+        return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
+      }
+      // Enforce non-www (canonical: medicalcaregermany.com)
+      if (host === 'www.medicalcaregermany.com') {
+        return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
+      }
     }
-    
-    // Enforce www subdomain (canonical: www.medicalcaregermany.com)
-    if (process.env.NODE_ENV === 'production' && host === 'medicalcaregermany.com') {
-      return res.redirect(301, `https://www.medicalcaregermany.com${req.url}`);
-    }
-    
+
     next();
   });
 
@@ -144,6 +145,7 @@ async function startServer() {
 
   // 301 Redirects: hybrid/English pages → canonical Arabic equivalents
   const REDIRECTS_301: Record<string, string> = {
+    '/intake-form-ar.html':                    '/ar',
     '/neurology-treatment-germany':           '/ar/neurology-treatment-germany',
     '/brain-tumor-treatment-germany':         '/ar/brain-tumor-treatment-germany',
     '/trigeminal-neuralgia-treatment-germany':'/ar/trigeminal-neuralgia-treatment-germany',

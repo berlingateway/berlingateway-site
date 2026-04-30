@@ -25,6 +25,7 @@ import ReferringDoctors from "./pages/ReferringDoctors";
 // Medical Condition Pages
 import BrainTumor from "./pages/conditions/BrainTumor";
 import BrainTumorTreatmentArabic from "./pages/conditions/BrainTumorTreatmentArabic";
+import ComplexTraumaEvaluation from "./pages/conditions/ComplexTraumaEvaluation";
 import TrigeminalNeuralgia from "./pages/conditions/TrigeminalNeuralgia";
 import TrigeminalNeuralgiaArabic from "./pages/conditions/TrigeminalNeuralgiaArabic";
 import NeurologyHubArabic from "./pages/conditions/NeurologyHubArabic";
@@ -122,6 +123,7 @@ function Router() {
       <Route path={"/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgia} />
       <Route path={"/spine-surgery-germany"} component={SpineSurgery} />
       <Route path={"/ar/brain-tumor-treatment-germany"} component={BrainTumorTreatmentArabic} />
+      <Route path={"/ar/complex-trauma-evaluation"} component={ComplexTraumaEvaluation} />
       <Route path={"/ar/trigeminal-neuralgia-treatment-germany"} component={TrigeminalNeuralgiaArabic} />
       <Route path={"/ar/neurology-treatment-germany"} component={NeurologyHubArabic} />
       <Route path={"/ar/cardiology-treatment-germany"} component={CardiologyTreatmentArabic} />

@@ -45,6 +45,9 @@ const STATIC_ROUTES: SitemapUrl[] = [
   },
   {
     loc: `${CANONICAL_DOMAIN}/ar/brain-tumor-treatment-germany`,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/complex-trauma-evaluation`,
     changefreq: 'monthly',
     priority: 0.9,
   },

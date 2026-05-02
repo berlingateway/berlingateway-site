@@ -147,6 +147,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.75,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/shrapnel-brain-injury-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 
   // ── Arabic SEO Gateway Pages ───────────────────────────────────────────
   {

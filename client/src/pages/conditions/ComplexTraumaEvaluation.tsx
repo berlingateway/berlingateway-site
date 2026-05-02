@@ -110,7 +110,7 @@ export default function ComplexTraumaEvaluation() {
                 label: "تنميل أو ضعف في الأطراف",
               },
               {
-                href: "/ar/shrapnel-in-brain",
+                href: "/ar/shrapnel-brain-injury-germany",
                 label: "إصابة في الرأس أو شظايا",
               },
               {

@@ -102,6 +102,37 @@ export function SeoGatewayPage({
         </div>
       </section>
 
+      {/* 1b. CLINICAL CONTEXT BLOCK */}
+      <section className="py-14 px-6 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto" dir="rtl">
+          <p className="text-sm text-slate-700 leading-relaxed mb-5" style={FONT}>
+            في بعض الحالات، تستمر الأعراض لسنوات دون تشخيص واضح، رغم إجراء فحوصات متعددة.
+          </p>
+          <p className="text-sm font-medium text-slate-800 mb-3" style={FONT}>مثل:</p>
+          <ul className="space-y-2 mb-5">
+            {[
+              "دوخة مستمرة",
+              "عدم توازن",
+              "تنميل أو ضعف",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3" style={FONT}>
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0B1C2C] flex-shrink-0" />
+                <span className="text-sm text-slate-700 leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-slate-700 leading-relaxed mb-5" style={FONT}>
+            غالبًا يتم التعامل مع هذه الأعراض بشكل منفصل، دون الوصول إلى السبب الحقيقي.
+          </p>
+          <p className="text-sm text-slate-700 leading-relaxed mb-5" style={FONT}>
+            عند مراجعة الملف الطبي بشكل منهجي في ألمانيا، يتم تحليل جميع النتائج ضمن سياق واحد، مما يسمح بتحديد التشخيص الصحيح.
+          </p>
+          <p className="text-sm text-slate-700 leading-relaxed" style={FONT}>
+            في هذه الحالات، لا يكون التغيير في العلاج فقط،<br />بل في اتخاذ القرار الطبي من البداية.
+          </p>
+        </div>
+      </section>
+
       {/* 2. QUICK ANSWERS */}
       <section className="py-16 px-6 bg-white border-b border-slate-100">
         <div className="max-w-3xl mx-auto">

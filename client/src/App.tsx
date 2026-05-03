@@ -82,6 +82,7 @@ import ParkinsonsTreatmentGermany from "./pages/symptoms/ParkinsonsTreatmentGerm
 import PediatricNeurologyGermany from "./pages/symptoms/PediatricNeurologyGermany";
 import ShrapnelBrainInjuryGermany from "./pages/symptoms/ShrapnelBrainInjuryGermany";
 import NerveInjuryAfterTraumaGermany from "./pages/symptoms/NerveInjuryAfterTraumaGermany";
+import MedicalVisaResidencyGermany from "./pages/symptoms/MedicalVisaResidencyGermany";
 
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
@@ -157,6 +158,7 @@ function Router() {
       <Route path={"/ar/pediatric-neurology-germany"} component={PediatricNeurologyGermany} />
       <Route path={"/ar/shrapnel-brain-injury-germany"} component={ShrapnelBrainInjuryGermany} />
       <Route path={"/ar/nerve-injury-after-trauma-germany"} component={NerveInjuryAfterTraumaGermany} />
+      <Route path={"/ar/medical-visa-residency-germany"} component={MedicalVisaResidencyGermany} />
       {/* SEO Gateway Routes */}
       <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
       <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />

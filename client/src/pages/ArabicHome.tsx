@@ -241,6 +241,7 @@ const AR_NAV_CONDITIONS = {
   ],
   services: [
     { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
+    { label: "فيزا العلاج في ألمانيا والإقامة الطبية", href: "/ar/medical-visa-residency-germany" },
     { label: "مكتبة الفيديو",         href: "/ar/videos" },
   ],
 };
@@ -346,6 +347,7 @@ export default function ArabicHome() {
                   <div className="px-4">
                     <span className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2">خدمات استشارية</span>
                     <Link href="/send-medical-reports" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">إرسال التقارير الطبية</Link>
+                    <Link href="/ar/medical-visa-residency-germany" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">فيزا العلاج في ألمانيا والإقامة الطبية</Link>
                     <Link href="/ar/videos" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">مكتبة الفيديو</Link>
                   </div>
                 </div>

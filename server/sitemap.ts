@@ -167,6 +167,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.8,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/joint-replacement-after-trauma`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 
   // ── Arabic SEO Gateway Pages ───────────────────────────────────────────
   {

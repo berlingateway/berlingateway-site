@@ -114,7 +114,7 @@ export default function ComplexTraumaEvaluation() {
                 label: "إصابة في الرأس أو شظايا",
               },
               {
-                href: "/ar/prosthetics-after-amputation",
+                href: "/ar/prosthetics-after-amputation-germany",
                 label: "بتر أو طرف صناعي",
               },
               {

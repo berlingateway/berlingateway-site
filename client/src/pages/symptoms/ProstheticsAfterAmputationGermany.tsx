@@ -187,6 +187,10 @@ export default function ProstheticsAfterAmputationGermany() {
                 label: "تركيب طرف صناعي في ألمانيا",
               },
               {
+                href: "/ar/joint-replacement-after-trauma",
+                label: "استبدال المفاصل بعد الإصابات",
+              },
+              {
                 href: "/ar/medical-visa-residency-germany",
                 label: "فيزا العلاج في ألمانيا",
               },

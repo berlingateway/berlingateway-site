@@ -238,6 +238,7 @@ const AR_NAV_CONDITIONS = {
     { label: "مرض باركنسون",                  href: "/ar/parkinsons-treatment-germany" },
     { label: "أعصاب الأطفال",                 href: "/ar/pediatric-neurology-germany" },
     { label: "إصابات الحوادث والحروب",           href: "/ar/complex-trauma-evaluation" },
+    { label: "الأطراف الصناعية بعد البتر",          href: "/ar/prosthetics-after-amputation-germany" },
   ],
   services: [
     { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
@@ -338,6 +339,7 @@ export default function ArabicHome() {
                     <Link href="/ar/parkinsons-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">مرض باركنسون</Link>
                     <Link href="/ar/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">أعصاب الأطفال</Link>
                     <Link href="/ar/complex-trauma-evaluation" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">إصابات الحوادث والحروب</Link>
+                    <Link href="/ar/prosthetics-after-amputation-germany" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">الأطراف الصناعية بعد البتر</Link>
                     <div className="mt-3">
                       <span className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2">العمود الفقري</span>
                       <Link href="/ar/herniated-disc" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">الانزلاق الغضروفي</Link>

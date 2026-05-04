@@ -196,20 +196,20 @@ export default function ShrapnelBrainInjuryGermany() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               {
-                href: "/ar/neurology-treatment-germany",
-                label: "جراحة الأعصاب في ألمانيا",
+                href: "/ar/complex-trauma-evaluation",
+                label: "إصابات الحوادث والحروب",
               },
               {
-                href: "/ar/brain-tumor-treatment-germany",
-                label: "أورام الدماغ في ألمانيا",
+                href: "/ar/nerve-injury-after-trauma-germany",
+                label: "إصابة الأعصاب بعد البتر",
               },
               {
-                href: "/ar/trigeminal-neuralgia-treatment-germany",
-                label: "ألم العصب الخامس",
+                href: "/ar/prosthetics-after-amputation-germany",
+                label: "تركيب طرف صناعي في ألمانيا",
               },
               {
-                href: "/ar/herniated-disc",
-                label: "العمود الفقري والانزلاق الغضروفي",
+                href: "/ar/medical-visa-residency-germany",
+                label: "فيزا العلاج في ألمانيا",
               },
             ].map((link, i) => (
               <Link

@@ -92,6 +92,12 @@ import FertilityLibya from "./pages/conditions/FertilityLibya";
 import FertilitySaudi from "./pages/conditions/FertilitySaudi";
 import FertilityIraq from "./pages/conditions/FertilityIraq";
 
+// Fertility Cluster Pages
+import FertilityHub from "./pages/conditions/FertilityHub";
+import IvfGermany from "./pages/conditions/IvfGermany";
+import IcsiGermany from "./pages/conditions/IcsiGermany";
+import PgdGermany from "./pages/conditions/PgdGermany";
+
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
 import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
@@ -170,6 +176,11 @@ function Router() {
       <Route path={"/ar/prosthetics-after-amputation-germany"} component={ProstheticsAfterAmputationGermany} />
       <Route path={"/ar/joint-replacement-after-trauma"} component={JointReplacementAfterTrauma} />
       <Route path={"/ar/complex-trauma-germany"} component={ComplexTraumaGermany} />
+      {/* Fertility Cluster Routes */}
+      <Route path={"/ar/fertility-treatment-germany"} component={FertilityHub} />
+      <Route path={"/ar/ivf-germany"} component={IvfGermany} />
+      <Route path={"/ar/icsi-germany"} component={IcsiGermany} />
+      <Route path={"/ar/pgd-germany"} component={PgdGermany} />
       {/* Geo-Intent Fertility Routes */}
       <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
       <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />

@@ -91,6 +91,7 @@ import ComplexTraumaGermany from "./pages/symptoms/ComplexTraumaGermany";
 import FertilityLibya from "./pages/conditions/FertilityLibya";
 import FertilitySaudi from "./pages/conditions/FertilitySaudi";
 import FertilityIraq from "./pages/conditions/FertilityIraq";
+import FertilityEgypt from "./pages/conditions/FertilityEgypt";
 
 // Fertility Cluster Pages
 import FertilityHub from "./pages/conditions/FertilityHub";
@@ -187,6 +188,7 @@ function Router() {
       <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
       <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />
       <Route path={"/ar/fertility-treatment-iraq-germany"} component={FertilityIraq} />
+      <Route path={"/ar/fertility-treatment-egypt-germany"} component={FertilityEgypt} />
       {/* SEO Gateway Routes */}
       <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
       <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />

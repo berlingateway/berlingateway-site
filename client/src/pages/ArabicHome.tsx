@@ -250,6 +250,7 @@ const AR_NAV_CONDITIONS = {
     { label: "علاج الخصوبة لليبيين في ألمانيا",         href: "/ar/fertility-treatment-libya-germany" },
     { label: "علاج الخصوبة للسعوديين في ألمانيا",       href: "/ar/fertility-treatment-saudi-germany" },
     { label: "علاج الخصوبة للعراقيين في ألمانيا",       href: "/ar/fertility-treatment-iraq-germany" },
+    { label: "علاج الخصوبة للمصريين في ألمانيا",          href: "/ar/fertility-treatment-egypt-germany" },
   ],
   services: [
     { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },

@@ -871,6 +871,24 @@ export default function ArabicHome() {
         </div>
       </section>
 
+      {/* TRAUMA SEO ENTRY POINT */}
+      <section style={{ marginTop: '60px', padding: '30px', background: '#0b1d2a', borderRadius: '12px' }} dir="rtl">
+        <h2 style={{ color: 'white', fontSize: '22px', marginBottom: '15px', fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+          إصابات الحروب والحوادث المعقدة
+        </h2>
+        <p style={{ color: '#cbd5e1', fontSize: '16px', lineHeight: '1.6', fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+          حالات البتر، إصابات الأعصاب، والشظايا تحتاج تقييم دقيق قبل اتخاذ أي قرار علاجي.
+          في ألمانيا، يتم التعامل مع هذه الحالات ضمن منظومة طبية متقدمة تشمل الجراحة،
+          إعادة التأهيل، وتركيب الأطراف الصناعية.
+        </p>
+        <a
+          href="/ar/complex-trauma-germany"
+          style={{ display: 'inline-block', marginTop: '20px', padding: '12px 20px', background: '#1e3a5f', color: 'white', textDecoration: 'none', borderRadius: '6px', fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+        >
+          عرض جميع الحالات المعقدة في ألمانيا
+        </a>
+      </section>
+
       {/* FOOTER */}
       <footer id="contact" className="bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         {/* Treatment Guide Links — dark variant */}

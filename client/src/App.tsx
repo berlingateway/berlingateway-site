@@ -85,6 +85,7 @@ import NerveInjuryAfterTraumaGermany from "./pages/symptoms/NerveInjuryAfterTrau
 import MedicalVisaResidencyGermany from "./pages/symptoms/MedicalVisaResidencyGermany";
 import ProstheticsAfterAmputationGermany from "./pages/symptoms/ProstheticsAfterAmputationGermany";
 import JointReplacementAfterTrauma from "./pages/symptoms/JointReplacementAfterTrauma";
+import ComplexTraumaGermany from "./pages/symptoms/ComplexTraumaGermany";
 
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
@@ -163,6 +164,7 @@ function Router() {
       <Route path={"/ar/medical-visa-residency-germany"} component={MedicalVisaResidencyGermany} />
       <Route path={"/ar/prosthetics-after-amputation-germany"} component={ProstheticsAfterAmputationGermany} />
       <Route path={"/ar/joint-replacement-after-trauma"} component={JointReplacementAfterTrauma} />
+      <Route path={"/ar/complex-trauma-germany"} component={ComplexTraumaGermany} />
       {/* SEO Gateway Routes */}
       <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
       <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />

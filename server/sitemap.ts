@@ -172,6 +172,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.8,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/complex-trauma-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 
   // ── Arabic SEO Gateway Pages ───────────────────────────────────────────
   {

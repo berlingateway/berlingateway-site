@@ -51,6 +51,22 @@ export default function ShrapnelBrainInjuryGermany() {
         </div>
       </section>
 
+      {/* HUB BREADCRUMB */}
+      <section className="py-4 px-6 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs text-slate-500" style={FONT}>
+            هذه الصفحة جزء من نظام الحالات المعقدة:{" "}
+            <a
+              href="/ar/complex-trauma-germany"
+              className="text-[#0B1C2C] underline hover:no-underline"
+              style={FONT}
+            >
+              عرض جميع الحالات المعقدة في ألمانيا
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* 2. TRIGGERS */}
       <section className="py-16 px-6 bg-white border-b border-slate-100">
         <div className="max-w-3xl mx-auto">
@@ -292,6 +308,88 @@ export default function ShrapnelBrainInjuryGermany() {
           >
             لا تحتاج ملفاً كاملاً — أرسل ما هو متوفر الآن
           </p>
+        </div>
+      </section>
+
+      {/* RELATED CASES */}
+      <section className="py-14 px-6 bg-white border-b border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <h3
+            className="text-base font-medium text-slate-900 mb-6 text-center"
+            style={FONT}
+          >
+            حالات مرتبطة
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="/ar/nerve-injury-after-trauma-germany"
+                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+                style={FONT}
+              >
+                إصابات الأعصاب بعد الحوادث
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ar/prosthetics-after-amputation-germany"
+                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+                style={FONT}
+              >
+                تركيب الأطراف الصناعية في ألمانيا
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ar/complex-trauma-germany"
+                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+                style={FONT}
+              >
+                جميع الحالات المعقدة بعد الحوادث
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <h3
+            className="text-base font-medium text-slate-900 mb-8 text-center"
+            style={FONT}
+          >
+            أسئلة شائعة
+          </h3>
+          <div className="space-y-6">
+            {[
+              {
+                q: "هل الحالات الحربية تحتاج تقييماً خاصاً؟",
+                a: "نعم. إصابات الحرب والانفجارات تتضمن أحياناً شظايا متعددة وإصابات متزامنة في أعضاء مختلفة. هذه الحالات تتطلب فريقاً متعدد التخصصات ومرفقاً طبياً قادراً على التعامل مع التعقيد المتعدد الأنظمة.",
+              },
+              {
+                q: "هل يمكن إزالة الشظايا من الدماغ جراحياً؟",
+                a: "يعتمد ذلك على موقع الشظايا وقربها من مناطق حيوية. التصوير بالرنين المغناطيسي والمقطعي يحدد إمكانية التدخل الجراحي الآمن. بعض الشظايا يمكن إزالتها بدقة عالية في مراكز جراحة الدماغ المتخصصة.",
+              },
+              {
+                q: "كم تستغرق إعادة التأهيل بعد إصابة الرأس؟",
+                a: "تتراوح مدة إعادة التأهيل بين أشهر وسنوات حسب شدة الإصابة. برامج إعادة التأهيل العصبي في ألمانيا مكثفة ومصممة لتحقيق أقصى استعادة للوظيفة المعرفية والحركية.",
+              },
+              {
+                q: "هل إصابات الشظايا الناتجة عن الانفجارات تختلف عن الحوادث العادية؟",
+                a: "نعم. إصابات الانفجارات تسبب موجة ضغط تؤثر على الدماغ حتى بدون اختراق مباشر، إضافة إلى الشظايا المتعددة. هذا النوع يحتاج تقييماً أكثر شمولاً يتضمن اختبارات عصبية معرفية وتصوير متخصص.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="border-b border-slate-100 pb-5">
+                <p className="text-sm font-medium text-slate-900 mb-2" style={FONT}>
+                  {item.q}
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed" style={FONT}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

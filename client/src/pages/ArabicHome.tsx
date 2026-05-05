@@ -846,6 +846,31 @@ export default function ArabicHome() {
 
 
 
+      {/* COMPLEX TRAUMA HUB SECTION */}
+      <section className="py-14 px-6 bg-slate-50 border-b border-slate-200" dir="rtl">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2
+            className="text-xl font-medium text-slate-900 mb-3"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            حالات طبية معقدة
+          </h2>
+          <p
+            className="text-sm text-slate-500 mb-6 leading-relaxed"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            نقوم بتقييم الحالات الناتجة عن الحوادث والإصابات المعقدة.
+          </p>
+          <a
+            href="/ar/complex-trauma-germany"
+            className="inline-block px-6 py-3 border border-slate-300 text-slate-700 text-sm hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+          >
+            استعرض جميع الحالات
+          </a>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer id="contact" className="bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         {/* Treatment Guide Links — dark variant */}

@@ -51,6 +51,22 @@ export default function NerveInjuryAfterTraumaGermany() {
         </div>
       </section>
 
+      {/* HUB BREADCRUMB */}
+      <section className="py-4 px-6 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs text-slate-500" style={FONT}>
+            هذه الصفحة جزء من نظام الحالات المعقدة:{" "}
+            <a
+              href="/ar/complex-trauma-germany"
+              className="text-[#0B1C2C] underline hover:no-underline"
+              style={FONT}
+            >
+              عرض جميع الحالات المعقدة في ألمانيا
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* 2. TRIGGERS */}
       <section className="py-16 px-6 bg-white border-b border-slate-100">
         <div className="max-w-3xl mx-auto">
@@ -292,6 +308,88 @@ export default function NerveInjuryAfterTraumaGermany() {
           >
             لا تحتاج ملفاً كاملاً — أرسل ما هو متوفر الآن
           </p>
+        </div>
+      </section>
+
+      {/* RELATED CASES */}
+      <section className="py-14 px-6 bg-white border-b border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <h3
+            className="text-base font-medium text-slate-900 mb-6 text-center"
+            style={FONT}
+          >
+            حالات مرتبطة
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="/ar/shrapnel-brain-injury-germany"
+                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+                style={FONT}
+              >
+                إصابات الشظايا والدماغ
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ar/prosthetics-after-amputation-germany"
+                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+                style={FONT}
+              >
+                تركيب الأطراف الصناعية في ألمانيا
+              </a>
+            </li>
+            <li>
+              <a
+                href="/ar/complex-trauma-germany"
+                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+                style={FONT}
+              >
+                جميع الحالات المعقدة بعد الحوادث
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-slate-50 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <h3
+            className="text-base font-medium text-slate-900 mb-8 text-center"
+            style={FONT}
+          >
+            أسئلة شائعة
+          </h3>
+          <div className="space-y-6">
+            {[
+              {
+                q: "هل يمكن علاج إصابات الأعصاب بعد الحوادث؟",
+                a: "نعم، في كثير من الحالات يمكن استعادة الوظيفة العصبية جزئياً أو كلياً عبر الجراحة الدقيقة للأعصاب، خاصة إذا تم التقييم مبكراً. ألمانيا تمتلك مراكز متخصصة في إعادة توصيل الأعصاب الطرفية.",
+              },
+              {
+                q: "كيف يتم تشخيص إصابة الأعصاب؟",
+                a: "يتم التشخيص عبر تخطيط الأعصاب الكهربائي والرنين المغناطيسي. هذه الفحوصات تحدد موقع الإصابة ودرجتها وإمكانية التدخل الجراحي.",
+              },
+              {
+                q: "كم تستغرق إعادة التأهيل بعد إصابة الأعصاب؟",
+                a: "تتراوح مدة إعادة التأهيل بين 3 أشهر وسنة كاملة حسب نوع الإصابة ومستوى التدخل الجراحي. برامج إعادة التأهيل في ألمانيا مكثفة ومصممة لتحقيق أقصى استعادة للوظيفة.",
+              },
+              {
+                q: "هل يمكن تجنب البتر في حالات إصابة الأعصاب؟",
+                a: "في بعض الحالات نعم. إنقاذ الطرف يعتمد على حجم الإصابة الوعائية والعصبية وسرعة التدخل. التقييم المتخصص في ألمانيا يحدد إمكانية الإنقاذ قبل اتخاذ قرار البتر.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="border-b border-slate-100 pb-5">
+                <p className="text-sm font-medium text-slate-900 mb-2" style={FONT}>
+                  {item.q}
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed" style={FONT}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

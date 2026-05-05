@@ -87,6 +87,11 @@ import ProstheticsAfterAmputationGermany from "./pages/symptoms/ProstheticsAfter
 import JointReplacementAfterTrauma from "./pages/symptoms/JointReplacementAfterTrauma";
 import ComplexTraumaGermany from "./pages/symptoms/ComplexTraumaGermany";
 
+// Geo-Intent Fertility Pages
+import FertilityLibya from "./pages/conditions/FertilityLibya";
+import FertilitySaudi from "./pages/conditions/FertilitySaudi";
+import FertilityIraq from "./pages/conditions/FertilityIraq";
+
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
 import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
@@ -165,6 +170,10 @@ function Router() {
       <Route path={"/ar/prosthetics-after-amputation-germany"} component={ProstheticsAfterAmputationGermany} />
       <Route path={"/ar/joint-replacement-after-trauma"} component={JointReplacementAfterTrauma} />
       <Route path={"/ar/complex-trauma-germany"} component={ComplexTraumaGermany} />
+      {/* Geo-Intent Fertility Routes */}
+      <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
+      <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />
+      <Route path={"/ar/fertility-treatment-iraq-germany"} component={FertilityIraq} />
       {/* SEO Gateway Routes */}
       <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
       <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />

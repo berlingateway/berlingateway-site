@@ -241,6 +241,16 @@ const AR_NAV_CONDITIONS = {
     { label: "الأطراف الصناعية بعد البتر",          href: "/ar/prosthetics-after-amputation-germany" },
     { label: "استبدال المفاصل بعد الإصابة",        href: "/ar/joint-replacement-after-trauma" },
   ],
+  fertility: [
+    { label: "علاج تأخر الإنجاب في ألمانيا",           href: "/ar/fertility-treatment-germany" },
+    { label: "أطفال الأنابيب IVF في ألمانيا",           href: "/ar/ivf-germany" },
+    { label: "الحقن المجهري ICSI في ألمانيا",           href: "/ar/icsi-germany" },
+    { label: "الفحص الوراثي للأجنة PGD في ألمانيا",    href: "/ar/pgd-germany" },
+    { label: "تكلفة أطفال الأنابيب في ألمانيا",         href: "/ar/ivf-cost-germany" },
+    { label: "علاج الخصوبة لليبيين في ألمانيا",         href: "/ar/fertility-treatment-libya-germany" },
+    { label: "علاج الخصوبة للسعوديين في ألمانيا",       href: "/ar/fertility-treatment-saudi-germany" },
+    { label: "علاج الخصوبة للعراقيين في ألمانيا",       href: "/ar/fertility-treatment-iraq-germany" },
+  ],
   services: [
     { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
     { label: "فيزا العلاج في ألمانيا والإقامة الطبية", href: "/ar/medical-visa-residency-germany" },
@@ -328,7 +338,7 @@ export default function ArabicHome() {
                 style={{ minWidth: '680px' }}
               >
                 {/* Desktop: driven by AR_NAV_CONDITIONS — single source of truth */}
-                <div className="grid grid-cols-2 gap-0 divide-x divide-x-reverse divide-slate-100">
+                <div className="grid grid-cols-3 gap-0 divide-x divide-x-reverse divide-slate-100" style={{ minWidth: '900px' }}>
                   {/* Column 1: Neurology + Spine */}
                   <div className="px-4">
                     <Link href="/ar/neurology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2 hover:text-slate-900 transition-colors">أمراض الأعصاب →</Link>
@@ -347,7 +357,14 @@ export default function ArabicHome() {
                       <Link href="/ar/herniated-disc" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">الانزلاق الغضروفي</Link>
                     </div>
                   </div>
-                  {/* Column 2: Services */}
+                  {/* Column 2: Fertility */}
+                  <div className="px-4">
+                    <span className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2">الخصوبة والإنجاب</span>
+                    {AR_NAV_CONDITIONS.fertility.map(item => (
+                      <Link key={item.href} href={item.href} onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">{item.label}</Link>
+                    ))}
+                  </div>
+                  {/* Column 3: Services */}
                   <div className="px-4">
                     <span className="block px-0 py-1.5 text-[10px] text-slate-500 uppercase tracking-widest font-semibold border-b border-slate-100 mb-2">خدمات استشارية</span>
                     <Link href="/send-medical-reports" onClick={() => setConditionsOpen(false)} className="block py-1.5 text-xs text-slate-700 hover:text-slate-900 hover:bg-slate-50 px-1">إرسال التقارير الطبية</Link>
@@ -421,6 +438,18 @@ export default function ArabicHome() {
               </Link>
               {/* Condition items — from AR_NAV_CONDITIONS */}
               {AR_NAV_CONDITIONS.items.map(item => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-xs text-slate-600 py-1 hover:text-slate-900"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {/* Fertility section — from AR_NAV_CONDITIONS */}
+              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold pt-2 pb-0.5 border-b border-slate-100">الخصوبة والإنجاب</span>
+              {AR_NAV_CONDITIONS.fertility.map(item => (
                 <Link
                   key={item.href}
                   href={item.href}

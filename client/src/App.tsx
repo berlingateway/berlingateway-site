@@ -97,6 +97,7 @@ import FertilityHub from "./pages/conditions/FertilityHub";
 import IvfGermany from "./pages/conditions/IvfGermany";
 import IcsiGermany from "./pages/conditions/IcsiGermany";
 import PgdGermany from "./pages/conditions/PgdGermany";
+import IvfCostGermany from "./pages/conditions/IvfCostGermany";
 
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
@@ -181,6 +182,7 @@ function Router() {
       <Route path={"/ar/ivf-germany"} component={IvfGermany} />
       <Route path={"/ar/icsi-germany"} component={IcsiGermany} />
       <Route path={"/ar/pgd-germany"} component={PgdGermany} />
+      <Route path={"/ar/ivf-cost-germany"} component={IvfCostGermany} />
       {/* Geo-Intent Fertility Routes */}
       <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
       <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />

@@ -21,6 +21,10 @@ export default function AdvancedDiagnostics() {
         "about": { "@type": "MedicalCondition", "name": "Complex Diagnostic Evaluation" },
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
+      relatedLinks={[
+        { href: "/ar/fertility-treatment-germany", label: "علاج تأخر الإنجاب في ألمانيا" },
+      ]}
+      sectionLabels={{ relatedLinks: "خدماتنا المتميزة" }}
     />
   );
 }

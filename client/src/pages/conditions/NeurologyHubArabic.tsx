@@ -249,6 +249,20 @@ export default function NeurologyHubArabic() {
         </div>
       </section>
 
+      {/* RELATED SERVICES */}
+      <section className="py-10 px-6 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3" style={FONT}>خدماتنا المتميزة</p>
+          <a
+            href="/ar/fertility-treatment-germany"
+            className="inline-block px-6 py-3 border border-[#0B1C2C] text-[#0B1C2C] text-sm hover:bg-[#0B1C2C] hover:text-white transition-colors"
+            style={FONT}
+          >
+            علاج تأخر الإنجاب في ألمانيا
+          </a>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-white border-t border-slate-100">
         <ArabicFooterGuide />

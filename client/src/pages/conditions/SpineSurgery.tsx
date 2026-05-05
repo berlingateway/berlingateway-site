@@ -22,6 +22,10 @@ export default function SpineSurgery() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
       arabicSummary="جراحة العمود الفقري تشمل طيفاً واسعاً من الحالات، منها انزلاق الغضاريف، وتضيق القناة الشوكية، والكسور الفقرية، والتشوهات الهيكلية. قد يعاني المريض من آلام في الظهر أو الرقبة، أو خدر وتنمل يمتد إلى الأطراف. تمتلك مراكز العمود الفقري في ألمانيا تقنيات جراحية متطورة تتيح إجراء العمليات بدقة عالية وبأقل تدخل ممكن. يبدأ التقييم بمراجعة صور الأشعة والتقارير الطبية المتوفرة لتحديد أنسب خيار جراحي."
+      relatedLinks={[
+        { href: "/ar/fertility-treatment-germany", label: "علاج تأخر الإنجاب في ألمانيا" },
+      ]}
+      sectionLabels={{ relatedLinks: "خدماتنا المتميزة" }}
     />
   );
 }

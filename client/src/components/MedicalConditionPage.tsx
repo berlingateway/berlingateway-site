@@ -109,6 +109,31 @@ export interface MedicalConditionPageProps {
     tag?: string;
     description?: string;
   }>;
+  /** FAQ accordion shown after patientVideos and before relatedLinks */
+  faqSection?: {
+    title?: string;
+    items: Array<{ question: string; answer: string }>;
+  };
+  /** Required documents checklist shown after faqSection */
+  documentsSection?: {
+    title?: string;
+    items: string[];
+    footer?: string;
+  };
+  /** Authority / trust block shown after documentsSection */
+  authoritySection?: {
+    title?: string;
+    content: string | string[];
+  };
+  /** Custom CTA that overrides the built-in CTA box entirely */
+  customCTA?: {
+    title?: string;
+    heading: string;
+    body?: string;
+    buttonLabel: string;
+    buttonHref: string;
+    note?: string;
+  };
 }
 
 export default function MedicalConditionPage({
@@ -150,9 +175,14 @@ export default function MedicalConditionPage({
   checklistSection,
   patientVideos,
   hideGlobalHeader,
+  faqSection,
+  documentsSection,
+  authoritySection,
+  customCTA,
 }: MedicalConditionPageProps) {
   const [symptomsExpanded, setSymptomsExpanded] = useState(false);
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
   const isArabic = pageDir === "rtl";
@@ -562,6 +592,81 @@ export default function MedicalConditionPage({
           </>
         )}
 
+        {/* FAQ Section */}
+        {faqSection && faqSection.items.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">
+                {faqSection.title ?? (isArabic ? "أسئلة شائعة" : "Frequently Asked Questions")}
+              </h2>
+              <div className="space-y-3">
+                {faqSection.items.map((item, i) => (
+                  <div key={i} className="border border-slate-200">
+                    <button
+                      onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                      className="w-full text-start px-5 py-4 flex justify-between items-center gap-4 hover:bg-slate-50 transition-colors"
+                      aria-expanded={openFaqIndex === i}
+                    >
+                      <span className="text-sm font-medium text-slate-900 leading-snug">{item.question}</span>
+                      <span className="flex-shrink-0 text-slate-400 text-lg leading-none">{openFaqIndex === i ? "−" : "+"}</span>
+                    </button>
+                    {openFaqIndex === i && (
+                      <div className="px-5 pb-5 pt-1">
+                        <p className="text-sm text-slate-600 leading-relaxed">{item.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
+
+        {/* Documents Section */}
+        {documentsSection && documentsSection.items.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">
+                {documentsSection.title ?? (isArabic ? "الوثائق المطلوبة" : "Required Documents")}
+              </h2>
+              <ul className="space-y-3">
+                {documentsSection.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-slate-900 text-white text-xs flex items-center justify-center">✓</span>
+                    <span className="text-sm text-slate-700 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {documentsSection.footer && (
+                <p className="text-xs text-slate-400 mt-5">{documentsSection.footer}</p>
+              )}
+            </section>
+          </>
+        )}
+
+        {/* Authority Section */}
+        {authoritySection && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section className="bg-slate-50 border border-slate-200 px-8 py-8">
+              {authoritySection.title && (
+                <h2 className="text-xl font-serif font-medium text-slate-900 mb-4">{authoritySection.title}</h2>
+              )}
+              {Array.isArray(authoritySection.content) ? (
+                <div className="space-y-3">
+                  {(authoritySection.content as string[]).map((para, i) => (
+                    <p key={i} className="text-sm text-slate-600 leading-relaxed">{para}</p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-slate-600 leading-relaxed">{authoritySection.content as string}</p>
+              )}
+            </section>
+          </>
+        )}
+
         {/* Related Conditions — hidden on Arabic pages unless relatedLinks provided */}
         {relatedLinks && relatedLinks.length > 0 && (
           <>
@@ -585,8 +690,33 @@ export default function MedicalConditionPage({
           </>
         )}
 
-        {/* Final CTA box */}
-        {(resolvedCtaH2 || resolvedCtaText || resolvedCtaButton) && (
+        {/* Custom CTA — overrides built-in CTA box when provided */}
+        {customCTA ? (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section className="bg-slate-50 border border-slate-200 px-8 py-10">
+              {customCTA.title && (
+                <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">{customCTA.title}</p>
+              )}
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-3">{customCTA.heading}</h2>
+              {customCTA.body && (
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">{customCTA.body}</p>
+              )}
+              <a
+                href={customCTA.buttonHref}
+                className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
+              >
+                {customCTA.buttonLabel}
+              </a>
+              {customCTA.note && (
+                <p className="text-xs text-slate-400 mt-4">{customCTA.note}</p>
+              )}
+            </section>
+          </>
+        ) : null}
+
+        {/* Final CTA box — shown only when customCTA is not provided */}
+        {!customCTA && (resolvedCtaH2 || resolvedCtaText || resolvedCtaButton) && (
           <>
             <div className="h-px bg-slate-100" />
             <section className="bg-slate-50 border border-slate-200 px-8 py-10">

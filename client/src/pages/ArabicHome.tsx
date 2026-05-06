@@ -358,6 +358,8 @@ export default function ArabicHome() {
                       { id: 'spine', label: 'العمود الفقري' },
                       { id: 'fertility', label: 'الخصوبة والإنجاب' },
                       { id: 'pediatric', label: 'طب الأطفال' },
+                      { id: 'general-surgery', label: 'الجراحة العامة' },
+                      { id: 'cosmetic-surgery', label: 'الجراحة التجميلية والترميمية' },
                     ].map(cat => (
                       <button
                         key={cat.id}
@@ -472,6 +474,40 @@ export default function ArabicHome() {
                           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
                           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
                         >أعصاب الأطفال</Link>
+                      </>
+                    )}
+                    {activeMedCat === 'general-surgery' && (
+                      <>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الجراحة العامة</span>
+                        {[
+                          { href: '#', label: 'علاج الفتق في ألمانيا' },
+                          { href: '#', label: 'جراحة الجهاز الهضمي' },
+                          { href: '#', label: 'الجراحة التنظيرية المتقدمة' },
+                        ].map(item => (
+                          <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
+                      </>
+                    )}
+                    {activeMedCat === 'cosmetic-surgery' && (
+                      <>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الجراحة التجميلية والترميمية</span>
+                        {[
+                          { href: '#', label: 'الترميم بعد الحوادث والأورام' },
+                          { href: '#', label: 'جراحة الوجه والفكين' },
+                          { href: '#', label: 'التجميل التصحيحي' },
+                        ].map(item => (
+                          <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
                       </>
                     )}
                   </div>
@@ -617,6 +653,36 @@ export default function ArabicHome() {
               {mobileAccordion === 'pediatric' && (
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
                   <Link href="/ar/pediatric-neurology-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">أعصاب الأطفال</Link>
+                </div>
+              )}
+              {/* Accordion: الجراحة العامة */}
+              <button
+                onClick={() => setMobileAccordion(v => v === 'general-surgery' ? null : 'general-surgery')}
+                className="flex items-center justify-between w-full text-right text-sm font-medium text-slate-700 py-3 border-b border-slate-100 px-2"
+              >
+                <span>الجراحة العامة</span>
+                <span className="text-slate-400 text-xs">{mobileAccordion === 'general-surgery' ? '−' : '+'}</span>
+              </button>
+              {mobileAccordion === 'general-surgery' && (
+                <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
+                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">علاج الفتق في ألمانيا</a>
+                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الجهاز الهضمي</a>
+                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الجراحة التنظيرية المتقدمة</a>
+                </div>
+              )}
+              {/* Accordion: الجراحة التجميلية */}
+              <button
+                onClick={() => setMobileAccordion(v => v === 'cosmetic-surgery' ? null : 'cosmetic-surgery')}
+                className="flex items-center justify-between w-full text-right text-sm font-medium text-slate-700 py-3 border-b border-slate-100 px-2"
+              >
+                <span>الجراحة التجميلية والترميمية</span>
+                <span className="text-slate-400 text-xs">{mobileAccordion === 'cosmetic-surgery' ? '−' : '+'}</span>
+              </button>
+              {mobileAccordion === 'cosmetic-surgery' && (
+                <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
+                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الترميم بعد الحوادث والأورام</a>
+                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الوجه والفكين</a>
+                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التجميل التصحيحي</a>
                 </div>
               )}
               {/* Direct links */}

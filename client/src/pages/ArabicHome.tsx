@@ -586,11 +586,12 @@ export default function ArabicHome() {
                 onClick={() => setMobileAccordion(v => v === 'neurology' ? null : 'neurology')}
                 className="flex items-center justify-between w-full text-right text-sm font-medium text-slate-700 py-3 border-b border-slate-100 px-2"
               >
-                <span>الأعصاب</span>
+                <span>الأعصاب والجهاز العصبي</span>
                 <span className="text-slate-400 text-xs">{mobileAccordion === 'neurology' ? '−' : '+'}</span>
               </button>
               {mobileAccordion === 'neurology' && (
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
+                  <Link href="/ar/neurology-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">صفحة الأعصاب والجهاز العصبي</Link>
                   <Link href="/ar/brain-tumor-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">أورام المخ</Link>
                   <Link href="/ar/trigeminal-neuralgia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">ألم العصب الخامس</Link>
                   <Link href="/ar/parkinsons-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">مرض باركنسون</Link>

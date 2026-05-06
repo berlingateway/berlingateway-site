@@ -627,9 +627,9 @@ export default function HerniaTreatmentGermany() {
       {/* ── RELATED EXPERTISE ───────────────────────────────────── */}
       <section
         style={{
-          background: "#f8fafc",
+          background: "#0B1C2C",
           padding: "48px 24px",
-          borderTop: "1px solid #e2e8f0",
+          borderTop: "1px solid #1e3a5f",
         }}
       >
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
@@ -638,7 +638,7 @@ export default function HerniaTreatmentGermany() {
               ...AR,
               fontSize: 10,
               letterSpacing: "0.2em",
-              color: "#94a3b8",
+              color: "#64748b",
               textTransform: "uppercase",
               marginBottom: 20,
             }}
@@ -659,11 +659,11 @@ export default function HerniaTreatmentGermany() {
                 style={{
                   ...AR,
                   fontSize: 12,
-                  color: "#475569",
+                  color: "#94a3b8",
                   padding: "8px 16px",
-                  border: "1px solid #e2e8f0",
+                  border: "1px solid #1e3a5f",
                   textDecoration: "none",
-                  background: "#fff",
+                  background: "transparent",
                   transition: "border-color 0.2s",
                 }}
               >
@@ -677,9 +677,10 @@ export default function HerniaTreatmentGermany() {
       {/* ── SECTION 7: FINAL INSTITUTIONAL CTA ─────────────────── */}
       <section
         style={{
+          background: "#0B1C2C",
           padding: "80px 24px",
           textAlign: "center",
-          borderTop: "1px solid #e2e8f0",
+          borderTop: "1px solid #1e3a5f",
         }}
       >
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
@@ -688,7 +689,7 @@ export default function HerniaTreatmentGermany() {
               ...AR,
               fontSize: 10,
               letterSpacing: "0.2em",
-              color: "#94a3b8",
+              color: "#64748b",
               textTransform: "uppercase",
               marginBottom: 16,
             }}
@@ -700,7 +701,7 @@ export default function HerniaTreatmentGermany() {
               ...AR,
               fontSize: "clamp(20px, 3vw, 28px)",
               fontWeight: 500,
-              color: "#0B1C2C",
+              color: "#f8fafc",
               marginBottom: 16,
               lineHeight: 1.5,
             }}
@@ -711,7 +712,7 @@ export default function HerniaTreatmentGermany() {
             style={{
               ...AR,
               fontSize: 14,
-              color: "#64748b",
+              color: "#94a3b8",
               lineHeight: 1.8,
               marginBottom: 36,
             }}
@@ -733,8 +734,8 @@ export default function HerniaTreatmentGermany() {
                 ...AR,
                 display: "inline-block",
                 padding: "13px 32px",
-                background: "#0B1C2C",
-                color: "#f8fafc",
+                background: "#fff",
+                color: "#0B1C2C",
                 fontSize: 13,
                 fontWeight: 500,
                 textDecoration: "none",
@@ -751,11 +752,11 @@ export default function HerniaTreatmentGermany() {
                 display: "inline-block",
                 padding: "13px 32px",
                 background: "transparent",
-                color: "#475569",
+                color: "#94a3b8",
                 fontSize: 13,
                 fontWeight: 400,
                 textDecoration: "none",
-                border: "1px solid #cbd5e1",
+                border: "1px solid #334155",
               }}
             >
               تواصل عبر واتساب

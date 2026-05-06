@@ -482,7 +482,7 @@ export default function ArabicHome() {
                         {[
                           { href: '/ar/hernia-treatment-germany', label: 'علاج الفتق في ألمانيا' },
                           { href: '#', label: 'جراحة الجهاز الهضمي' },
-                          { href: '#', label: 'الجراحة التنظيرية المتقدمة' },
+                          { href: '/ar/laparoscopic-surgery-germany', label: 'الجراحة التنظيرية المتقدمة' },
                         ].map(item => (
                           <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
                             className="block transition-colors"
@@ -497,7 +497,7 @@ export default function ArabicHome() {
                       <>
                         <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الجراحة التجميلية والترميمية</span>
                         {[
-                          { href: '#', label: 'الترميم بعد الحوادث والأورام' },
+                          { href: '/ar/reconstructive-surgery-germany', label: 'الترميم بعد الحوادث والأورام' },
                           { href: '#', label: 'جراحة الوجه والفكين' },
                           { href: '#', label: 'التجميل التصحيحي' },
                         ].map(item => (
@@ -667,7 +667,7 @@ export default function ArabicHome() {
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
                   <a href="/ar/hernia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">علاج الفتق في ألمانيا</a>
                   <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الجهاز الهضمي</a>
-                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الجراحة التنظيرية المتقدمة</a>
+                  <a href="/ar/laparoscopic-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الجراحة التنظيرية المتقدمة</a>
                 </div>
               )}
               {/* Accordion: الجراحة التجميلية */}
@@ -680,7 +680,7 @@ export default function ArabicHome() {
               </button>
               {mobileAccordion === 'cosmetic-surgery' && (
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
-                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الترميم بعد الحوادث والأورام</a>
+                  <a href="/ar/reconstructive-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الترميم بعد الحوادث والأورام</a>
                   <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الوجه والفكين</a>
                   <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التجميل التصحيحي</a>
                 </div>

@@ -105,6 +105,8 @@ import MaleInfertility from "./pages/conditions/MaleInfertility";
 
 // General Surgery Pages
 import HerniaTreatmentGermany from "./pages/conditions/HerniaTreatmentGermany";
+import LaparoscopicSurgeryGermany from "./pages/conditions/LaparoscopicSurgeryGermany";
+import ReconstructiveSurgeryGermany from "./pages/conditions/ReconstructiveSurgeryGermany";
 
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
@@ -195,6 +197,8 @@ function Router() {
       <Route path={"/ar/male-infertility-germany"} component={MaleInfertility} />
       {/* General Surgery Routes */}
       <Route path={"/ar/hernia-treatment-germany"} component={HerniaTreatmentGermany} />
+      <Route path={"/ar/laparoscopic-surgery-germany"} component={LaparoscopicSurgeryGermany} />
+      <Route path={"/ar/reconstructive-surgery-germany"} component={ReconstructiveSurgeryGermany} />
       {/* Geo-Intent Fertility Routes */}
       <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
       <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />

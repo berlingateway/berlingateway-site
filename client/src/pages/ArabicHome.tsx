@@ -336,82 +336,158 @@ export default function ArabicHome() {
             </button>
             {conditionsOpen && (
               <div
-                className="absolute top-full right-0 mt-1 bg-white border border-slate-200 shadow-lg z-50"
+                className="absolute top-full right-0 mt-0 bg-white z-50"
                 dir="rtl"
-                style={{ minWidth: '480px', maxWidth: '520px' }}
+                style={{
+                  minWidth: '440px',
+                  maxWidth: '460px',
+                  border: '1px solid #d1d5db',
+                  borderTop: '2px solid #0B1C2C',
+                  boxShadow: '0 4px 16px rgba(11,28,44,0.10)'
+                }}
               >
-                <div className="flex" style={{ minHeight: '260px' }}>
-                  {/* Left: Category list */}
-                  <div className="w-44 bg-slate-50 border-l border-slate-100 py-3 flex-shrink-0">
+                <div className="flex" style={{ minHeight: '240px' }}>
+                  {/* Left: Category column — institutional sidebar */}
+                  <div className="flex-shrink-0 bg-[#f7f8fa] border-l border-[#e5e7eb]" style={{ width: '148px' }}>
+                    <div className="px-4 pt-4 pb-1">
+                      <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold" style={AR_FONT}>التخصصات الطبية</span>
+                    </div>
                     {[
-                      { id: 'neurology', label: 'الأعصاب' },
-                      { id: 'heart', label: 'القلب' },
+                      { id: 'neurology', label: 'الأعصاب والجهاز العصبي' },
+                      { id: 'heart', label: 'أمراض القلب' },
                       { id: 'spine', label: 'العمود الفقري' },
                       { id: 'fertility', label: 'الخصوبة والإنجاب' },
-                      { id: 'pediatric', label: 'الأطفال' },
+                      { id: 'pediatric', label: 'طب الأطفال' },
                     ].map(cat => (
                       <button
                         key={cat.id}
                         onMouseEnter={() => setActiveMedCat(cat.id)}
                         onClick={() => setActiveMedCat(cat.id)}
-                        className={`w-full text-right px-4 py-2.5 text-xs font-medium transition-colors ${
-                          activeMedCat === cat.id
-                            ? 'bg-white text-[#0B1C2C] border-r-2 border-[#0B1C2C]'
-                            : 'text-slate-600 hover:bg-white hover:text-slate-900'
-                        }`}
-                        style={AR_FONT}
+                        className="w-full text-right transition-colors"
+                        style={{
+                          ...AR_FONT,
+                          display: 'block',
+                          padding: '9px 16px 9px 12px',
+                          fontSize: '11px',
+                          fontWeight: activeMedCat === cat.id ? '600' : '400',
+                          color: activeMedCat === cat.id ? '#0B1C2C' : '#4b5563',
+                          background: activeMedCat === cat.id ? '#ffffff' : 'transparent',
+                          borderRight: activeMedCat === cat.id ? '2px solid #0B1C2C' : '2px solid transparent',
+                          letterSpacing: '0.01em',
+                        }}
                       >
                         {cat.label}
                       </button>
                     ))}
                   </div>
-                  {/* Right: Pages for active category */}
+                  {/* Right: Content column */}
                   <div className="flex-1 py-4 px-5">
                     {activeMedCat === 'neurology' && (
                       <>
-                        <span className="block text-[9px] text-slate-400 uppercase tracking-widest font-semibold mb-3 border-b border-slate-100 pb-1.5">الأعصاب والإصابات</span>
-                        <Link href="/ar/brain-tumor-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">أورام المخ</Link>
-                        <Link href="/ar/trigeminal-neuralgia-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">ألم العصب الخامس</Link>
-                        <Link href="/ar/parkinsons-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">مرض باركنسون</Link>
-                        <Link href="/ar/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">أعصاب الأطفال</Link>
-                        <Link href="/ar/complex-trauma-evaluation" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">إصابات الحوادث والحروب</Link>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الحالات والإصابات</span>
+                        {[
+                          { href: '/ar/brain-tumor-treatment-germany', label: 'أورام المخ' },
+                          { href: '/ar/trigeminal-neuralgia-treatment-germany', label: 'ألم العصب الخامس' },
+                          { href: '/ar/parkinsons-treatment-germany', label: 'مرض باركنسون' },
+                          { href: '/ar/pediatric-neurology-germany', label: 'أعصاب الأطفال' },
+                          { href: '/ar/complex-trauma-evaluation', label: 'إصابات الحوادث والحروب' },
+                        ].map(item => (
+                          <Link key={item.href} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151', letterSpacing: '0.01em' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
                       </>
                     )}
                     {activeMedCat === 'heart' && (
                       <>
-                        <span className="block text-[9px] text-slate-400 uppercase tracking-widest font-semibold mb-3 border-b border-slate-100 pb-1.5">أمراض القلب</span>
-                        <Link href="/ar/cardiology-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">علاج القلب في ألمانيا</Link>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>أمراض القلب والأوعية</span>
+                        <Link href="/ar/cardiology-treatment-germany" onClick={() => setConditionsOpen(false)}
+                          className="block transition-colors"
+                          style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                        >علاج القلب في ألمانيا</Link>
                       </>
                     )}
                     {activeMedCat === 'spine' && (
                       <>
-                        <span className="block text-[9px] text-slate-400 uppercase tracking-widest font-semibold mb-3 border-b border-slate-100 pb-1.5">العمود الفقري</span>
-                        <Link href="/ar/herniated-disc" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">انزلاق الغضروف</Link>
-                        <Link href="/ar/spine-surgery-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">جراحة العمود الفقري</Link>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الجراحة والعلاج</span>
+                        {[
+                          { href: '/ar/herniated-disc', label: 'انزلاق الغضروف' },
+                          { href: '/ar/spine-surgery-germany', label: 'جراحة العمود الفقري' },
+                        ].map(item => (
+                          <Link key={item.href} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
                       </>
                     )}
                     {activeMedCat === 'fertility' && (
                       <>
-                        <span className="block text-[9px] text-slate-400 uppercase tracking-widest font-semibold mb-3 border-b border-slate-100 pb-1.5">الخصوبة والإنجاب</span>
-                        <Link href="/ar/fertility-treatment-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">علاج تأخر الإنجاب في ألمانيا</Link>
-                        <Link href="/ar/ivf-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">أطفال الأنابيب IVF</Link>
-                        <Link href="/ar/icsi-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">الحقن المجهري ICSI</Link>
-                        <Link href="/ar/pgd-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">الفحص الوراثي PGD</Link>
-                        <Link href="/ar/ivf-cost-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">تكلفة أطفال الأنابيب</Link>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-2 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>العلاج والتشخيص</span>
+                        {[
+                          { href: '/ar/fertility-treatment-germany', label: 'علاج تأخر الإنجاب في ألمانيا' },
+                          { href: '/ar/ivf-germany', label: 'أطفال الأنابيب IVF' },
+                          { href: '/ar/icsi-germany', label: 'الحقن المجهري ICSI' },
+                          { href: '/ar/pgd-germany', label: 'الفحص الوراثي PGD' },
+                          { href: '/ar/ivf-cost-germany', label: 'تكلفة أطفال الأنابيب' },
+                        ].map(item => (
+                          <Link key={item.href} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '6px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
+                        <div style={{ marginTop: '10px', paddingTop: '8px', borderTop: '1px solid #f0f0f0' }}>
+                          <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-2" style={AR_FONT}>حسب بلدك</span>
+                          {[
+                            { href: '/ar/fertility-treatment-libya-germany', label: 'للمرضى من ليبيا' },
+                            { href: '/ar/fertility-treatment-saudi-germany', label: 'للمرضى من السعودية' },
+                            { href: '/ar/fertility-treatment-iraq-germany', label: 'للمرضى من العراق' },
+                            { href: '/ar/fertility-treatment-egypt-germany', label: 'للمرضى من مصر' },
+                          ].map(item => (
+                            <Link key={item.href} href={item.href} onClick={() => setConditionsOpen(false)}
+                              className="block transition-colors"
+                              style={{ ...AR_FONT, padding: '5px 4px', fontSize: '11px', color: '#6b7280' }}
+                              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b7280'; }}
+                            >{item.label}</Link>
+                          ))}
+                        </div>
                       </>
                     )}
                     {activeMedCat === 'pediatric' && (
                       <>
-                        <span className="block text-[9px] text-slate-400 uppercase tracking-widest font-semibold mb-3 border-b border-slate-100 pb-1.5">طب الأطفال</span>
-                        <Link href="/ar/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)} className="block py-2 text-xs text-slate-700 hover:text-[#0B1C2C] hover:bg-slate-50 px-1 rounded transition-colors">أعصاب الأطفال</Link>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>طب الأطفال</span>
+                        <Link href="/ar/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)}
+                          className="block transition-colors"
+                          style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                        >أعصاب الأطفال</Link>
                       </>
                     )}
                   </div>
                 </div>
-                {/* Footer strip */}
-                <div className="border-t border-slate-100 px-5 py-2.5 flex justify-between items-center bg-slate-50">
-                  <Link href="/send-medical-reports" onClick={() => setConditionsOpen(false)} className="text-[10px] text-slate-500 hover:text-[#0B1C2C] transition-colors" style={AR_FONT}>إرسال التقارير الطبية</Link>
-                  <Link href="/ar/medical-visa-residency-germany" onClick={() => setConditionsOpen(false)} className="text-[10px] text-slate-500 hover:text-[#0B1C2C] transition-colors" style={AR_FONT}>فيزا العلاج</Link>
+                {/* Footer strip — institutional */}
+                <div style={{ borderTop: '1px solid #e5e7eb', padding: '8px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#f7f8fa' }}>
+                  <Link href="/send-medical-reports" onClick={() => setConditionsOpen(false)}
+                    style={{ ...AR_FONT, fontSize: '10px', color: '#6b7280', letterSpacing: '0.02em' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b7280'; }}
+                  >إرسال التقارير الطبية</Link>
+                  <Link href="/ar/medical-visa-residency-germany" onClick={() => setConditionsOpen(false)}
+                    style={{ ...AR_FONT, fontSize: '10px', color: '#6b7280', letterSpacing: '0.02em' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b7280'; }}
+                  >فيزا العلاج والإقامة</Link>
                 </div>
               </div>
             )}

@@ -560,17 +560,17 @@ export default function ArabicHome() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white flex flex-col items-end p-8 gap-6 text-lg text-slate-700">
-          <button onClick={() => setMobileMenuOpen(false)} className="self-start text-slate-900">
+        <div className="fixed inset-0 z-50 bg-white flex flex-col items-end overflow-y-auto p-8 text-lg text-slate-700" style={{gap: '0'}} dir="rtl">
+          <button onClick={() => setMobileMenuOpen(false)} className="self-start text-slate-900 mb-4">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <a href="#home" onClick={() => setMobileMenuOpen(false)}>الرئيسية</a>
-          <a href="#focus" onClick={() => setMobileMenuOpen(false)}>مجالات التخصص</a>
-          <a href="#why-germany" onClick={() => setMobileMenuOpen(false)}>لماذا ألمانيا</a>
-          <a href="/ar/videos" onClick={() => setMobileMenuOpen(false)}>مكتبة الفيديو</a>
-          <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>تقديم الحالة</a>
+          <a href="#home" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">الرئيسية</a>
+          <a href="#focus" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">مجالات التخصص</a>
+          <a href="#why-germany" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">لماذا ألمانيا</a>
+          <a href="/ar/videos" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">مكتبة الفيديو</a>
+          <a href="#submit-case" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">تقديم الحالة</a>
           {/* Mobile Medical Conditions (Arabic) */}
           <button
             onClick={() => setMobileConditionsOpen(v => !v)}
@@ -693,7 +693,7 @@ export default function ArabicHome() {
           <a
             href="/send-medical-reports"
             onClick={() => setMobileMenuOpen(false)}
-            className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors w-full"
+            className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors w-full mt-4 mb-24"
             style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
           >
             إرسال التقارير الطبية

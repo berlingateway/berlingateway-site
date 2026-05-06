@@ -480,7 +480,7 @@ export default function ArabicHome() {
                       <>
                         <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الجراحة العامة</span>
                         {[
-                          { href: '#', label: 'علاج الفتق في ألمانيا' },
+                          { href: '/ar/hernia-treatment-germany', label: 'علاج الفتق في ألمانيا' },
                           { href: '#', label: 'جراحة الجهاز الهضمي' },
                           { href: '#', label: 'الجراحة التنظيرية المتقدمة' },
                         ].map(item => (
@@ -665,7 +665,7 @@ export default function ArabicHome() {
               </button>
               {mobileAccordion === 'general-surgery' && (
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
-                  <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">علاج الفتق في ألمانيا</a>
+                  <a href="/ar/hernia-treatment-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">علاج الفتق في ألمانيا</a>
                   <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الجهاز الهضمي</a>
                   <a href="#" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الجراحة التنظيرية المتقدمة</a>
                 </div>

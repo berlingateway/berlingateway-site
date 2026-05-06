@@ -103,6 +103,9 @@ import FailedIvfCauses from "./pages/conditions/FailedIvfCauses";
 import RepeatedMiscarriage from "./pages/conditions/RepeatedMiscarriage";
 import MaleInfertility from "./pages/conditions/MaleInfertility";
 
+// General Surgery Pages
+import HerniaTreatmentGermany from "./pages/conditions/HerniaTreatmentGermany";
+
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
 import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
@@ -190,6 +193,8 @@ function Router() {
       <Route path={"/ar/failed-ivf-causes-germany"} component={FailedIvfCauses} />
       <Route path={"/ar/repeated-miscarriage-causes-germany"} component={RepeatedMiscarriage} />
       <Route path={"/ar/male-infertility-germany"} component={MaleInfertility} />
+      {/* General Surgery Routes */}
+      <Route path={"/ar/hernia-treatment-germany"} component={HerniaTreatmentGermany} />
       {/* Geo-Intent Fertility Routes */}
       <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
       <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />

@@ -106,6 +106,9 @@ import MaleInfertility from "./pages/conditions/MaleInfertility";
 // General Surgery Pages
 import HerniaTreatmentGermany from "./pages/conditions/HerniaTreatmentGermany";
 import LaparoscopicSurgeryGermany from "./pages/conditions/LaparoscopicSurgeryGermany";
+import GastrointestinalSurgeryGermany from "./pages/conditions/GastrointestinalSurgeryGermany";
+import MaxillofacialSurgeryGermany from "./pages/conditions/MaxillofacialSurgeryGermany";
+import CorrectivePlasticSurgeryGermany from "./pages/conditions/CorrectivePlasticSurgeryGermany";
 import ReconstructiveSurgeryGermany from "./pages/conditions/ReconstructiveSurgeryGermany";
 
 // SEO Gateway Pages
@@ -199,6 +202,9 @@ function Router() {
       <Route path={"/ar/hernia-treatment-germany"} component={HerniaTreatmentGermany} />
       <Route path={"/ar/laparoscopic-surgery-germany"} component={LaparoscopicSurgeryGermany} />
       <Route path={"/ar/reconstructive-surgery-germany"} component={ReconstructiveSurgeryGermany} />
+      <Route path={"/ar/gastrointestinal-surgery-germany"} component={GastrointestinalSurgeryGermany} />
+      <Route path={"/ar/maxillofacial-surgery-germany"} component={MaxillofacialSurgeryGermany} />
+      <Route path={"/ar/corrective-plastic-surgery-germany"} component={CorrectivePlasticSurgeryGermany} />
       {/* Geo-Intent Fertility Routes */}
       <Route path={"/ar/fertility-treatment-libya-germany"} component={FertilityLibya} />
       <Route path={"/ar/fertility-treatment-saudi-germany"} component={FertilitySaudi} />

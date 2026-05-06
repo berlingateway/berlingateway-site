@@ -551,4 +551,25 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.medicalcaregermany.com/ar/gastrointestinal-surgery-germany</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicalcaregermany.com/ar/maxillofacial-surgery-germany</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.medicalcaregermany.com/ar/corrective-plastic-surgery-germany</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

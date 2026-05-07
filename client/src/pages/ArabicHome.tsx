@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 // ─── Diagnostic Entry Layer (v2) ─────────────────────────────────────────────
 
@@ -308,7 +310,8 @@ export default function ArabicHome() {
       {/* Google Fonts: IBM Plex Sans Arabic */}
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
-
+      <HreflangTags currentPath="/ar" />
+      <SmartNavLayer currentPath="/ar" />
 
       {/* Navigation */}
       <nav className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm" style={{ top: 'var(--banner-height, 0px)' }}>

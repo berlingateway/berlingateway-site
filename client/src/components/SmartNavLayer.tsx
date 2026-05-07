@@ -69,6 +69,9 @@ const s = {
     background: "#fff",
     borderBottom: `1px solid ${LIGHT_BORDER}`,
     padding: "0 24px",
+    width: "100%",
+    boxSizing: "border-box",
+    overflowX: "hidden",
   }),
   inner: (): React.CSSProperties => ({
     maxWidth: 1100,

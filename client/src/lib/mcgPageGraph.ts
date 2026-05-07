@@ -74,15 +74,15 @@ const rehabRelatedAR = [
 ];
 
 const rehabRelatedEN = [
-  { href: "/ar/orthopedics-germany", label: "Orthopedics (Arabic)" },
+  { href: "/orthopedic-surgery-germany", label: "Orthopedics" },
   { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
   { href: "/neurology-treatment-germany", label: "Neurology" },
   { href: "/submit-case", label: "Submit Medical Reports" },
 ];
 
 const rehabRelatedDE = [
-  { href: "/ar/orthopedics-germany", label: "Orthopädie (Arabisch)" },
   { href: "/de/spinale-rehabilitation-deutschland", label: "Spinale Rehabilitation" },
+  { href: "/de/neurologische-rehabilitation-deutschland", label: "Neurologische Rehabilitation" },
   { href: "/submit-case", label: "Medizinische Berichte einreichen" },
 ];
 
@@ -1090,7 +1090,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "en",
     hub: "/orthopedic-surgery-germany",
     hubLabel: "Orthopedics",
-    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/spinale-rehabilitation-deutschland" },
     cluster: [
       { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
       { href: "/knee-replacement-germany", label: "Knee Replacement" },
@@ -1109,7 +1109,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "en",
     hub: "/orthopedic-surgery-germany",
     hubLabel: "Orthopedics",
-    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/spinale-rehabilitation-deutschland" },
     cluster: [
       { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
       { href: "/knee-replacement-germany", label: "Knee Replacement" },
@@ -1126,7 +1126,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "en",
     hub: "/orthopedic-surgery-germany",
     hubLabel: "Orthopedics",
-    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/spinale-rehabilitation-deutschland" },
     cluster: [
       { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
       { href: "/knee-replacement-germany", label: "Knee Replacement" },
@@ -1143,7 +1143,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "en",
     hub: "/orthopedic-surgery-germany",
     hubLabel: "Orthopedics",
-    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/spinale-rehabilitation-deutschland" },
     cluster: [
       { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
       { href: "/scoliosis-treatment-germany", label: "Scoliosis" },
@@ -1253,7 +1253,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     hubLabel: "Diagnostics",
     equivalents: {
       ar: "/ar",
-      de: "/de/rehabilitation-deutschland",
+      de: "/de/medizinische-zweitbewertung-deutschland",
     },
     cluster: [
       { href: "/advanced-diagnostics-germany", label: "Advanced Diagnostics" },
@@ -1261,6 +1261,53 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     ],
     related: [
       { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // HOMEPAGE ROOTS (AR / EN / DE)
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar": {
+    path: "/ar",
+    label: "الرئيسية",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { ar: "/ar", en: "/", de: "/de" },
+    cluster: [],
+    related: [
+      { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم" },
+      { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
+      { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
+      { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+    ],
+  },
+  "/": {
+    path: "/",
+    label: "Home",
+    lang: "en",
+    hub: "/",
+    hubLabel: "Home",
+    equivalents: { ar: "/ar", en: "/", de: "/de" },
+    cluster: [],
+    related: [
+      { href: "/neurology-treatment-germany", label: "Neurology" },
+      { href: "/orthopedic-surgery-germany", label: "Orthopedics" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+  "/de": {
+    path: "/de",
+    label: "Startseite",
+    lang: "de",
+    hub: "/de",
+    hubLabel: "Startseite",
+    equivalents: { ar: "/ar", en: "/", de: "/de" },
+    cluster: [],
+    related: [
+      { href: "/de/rehabilitation-deutschland", label: "Rehabilitation" },
+      { href: "/de/spinale-rehabilitation-deutschland", label: "Spinale Rehabilitation" },
+      { href: "/submit-case", label: "Berichte einreichen" },
     ],
   },
 };

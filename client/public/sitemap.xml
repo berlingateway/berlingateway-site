@@ -7,70 +7,70 @@
   <!-- ===================== CORE PAGES ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/</loc>
+    <loc>https://medicalcaregermany.com/</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar</loc>
+    <loc>https://medicalcaregermany.com/ar</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/send-medical-reports</loc>
+    <loc>https://medicalcaregermany.com/send-medical-reports</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/submit-case</loc>
+    <loc>https://medicalcaregermany.com/submit-case</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/international-patients</loc>
+    <loc>https://medicalcaregermany.com/international-patients</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/referring-doctors</loc>
+    <loc>https://medicalcaregermany.com/referring-doctors</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/contact</loc>
+    <loc>https://medicalcaregermany.com/contact</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/physician-referral-clinical</loc>
+    <loc>https://medicalcaregermany.com/physician-referral-clinical</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/governmental-bodies</loc>
+    <loc>https://medicalcaregermany.com/governmental-bodies</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/private-medical-advisory</loc>
+    <loc>https://medicalcaregermany.com/private-medical-advisory</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -79,56 +79,56 @@
   <!-- ===================== HUB PAGES (priority 0.8) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/neurology-germany</loc>
+    <loc>https://medicalcaregermany.com/neurology-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/spine-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/spine-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/oncology-germany</loc>
+    <loc>https://medicalcaregermany.com/oncology-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/orthopedics-germany</loc>
+    <loc>https://medicalcaregermany.com/orthopedics-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/cardiology-germany</loc>
+    <loc>https://medicalcaregermany.com/cardiology-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/consultation-services-germany</loc>
+    <loc>https://medicalcaregermany.com/consultation-services-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/cancer-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/cancer-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/orthopedic-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/orthopedic-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -137,56 +137,56 @@
   <!-- ===================== CONDITION PAGES: NEUROLOGY (priority 0.7) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/brain-tumor-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/brain-tumor-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/trigeminal-neuralgia-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/trigeminal-neuralgia-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/brain-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/brain-surgery-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/neurology-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/neurology-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/parkinson-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/parkinson-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/multiple-sclerosis-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/multiple-sclerosis-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/epilepsy-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/epilepsy-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/pediatric-neurology-germany</loc>
+    <loc>https://medicalcaregermany.com/pediatric-neurology-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -195,28 +195,28 @@
   <!-- ===================== CONDITION PAGES: SPINE (priority 0.7) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/spine-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/spine-surgery-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/herniated-disc-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/herniated-disc-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/scoliosis-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/scoliosis-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/spinal-stenosis-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/spinal-stenosis-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -225,35 +225,35 @@
   <!-- ===================== CONDITION PAGES: ONCOLOGY (priority 0.7) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/lung-cancer-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/lung-cancer-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/breast-cancer-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/breast-cancer-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/prostate-cancer-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/prostate-cancer-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/colon-cancer-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/colon-cancer-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/liver-cancer-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/liver-cancer-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -262,21 +262,21 @@
   <!-- ===================== CONDITION PAGES: ORTHOPEDICS (priority 0.7) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/orthopedic-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/orthopedic-surgery-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/knee-replacement-germany</loc>
+    <loc>https://medicalcaregermany.com/knee-replacement-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/hip-replacement-germany</loc>
+    <loc>https://medicalcaregermany.com/hip-replacement-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -285,28 +285,28 @@
   <!-- ===================== CONDITION PAGES: CARDIOLOGY (priority 0.7) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/cardiology-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/cardiology-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/heart-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/heart-surgery-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/arrhythmia-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/arrhythmia-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/congenital-heart-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/congenital-heart-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -315,42 +315,42 @@
   <!-- ===================== CONDITION PAGES: ADVISORY SERVICES (priority 0.7) ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/advanced-diagnostics-germany</loc>
+    <loc>https://medicalcaregermany.com/advanced-diagnostics-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/second-opinion-germany</loc>
+    <loc>https://medicalcaregermany.com/second-opinion-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/complex-medical-cases-germany</loc>
+    <loc>https://medicalcaregermany.com/complex-medical-cases-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/treatment-in-germany-for-international-patients</loc>
+    <loc>https://medicalcaregermany.com/treatment-in-germany-for-international-patients</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/specialist-referral-germany</loc>
+    <loc>https://medicalcaregermany.com/specialist-referral-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/university-hospital-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/university-hospital-treatment-germany</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -359,28 +359,28 @@
   <!-- ===================== ARABIC TRAUMA CLUSTER ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/complex-trauma-evaluation</loc>
+    <loc>https://medicalcaregermany.com/ar/complex-trauma-evaluation</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/prosthetics-after-amputation-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/prosthetics-after-amputation-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/joint-replacement-after-trauma</loc>
+    <loc>https://medicalcaregermany.com/ar/joint-replacement-after-trauma</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/shrapnel-brain-injury-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/shrapnel-brain-injury-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -389,21 +389,21 @@
   <!-- ===================== ARABIC MEDICAL ACCESS ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/medical-visa-residency-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/medical-visa-residency-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/فيزا-العلاج-في-المانيا</loc>
+    <loc>https://medicalcaregermany.com/ar/فيزا-العلاج-في-المانيا</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/السفر-للعلاج-في-المانيا</loc>
+    <loc>https://medicalcaregermany.com/ar/السفر-للعلاج-في-المانيا</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -412,168 +412,168 @@
   <!-- ===================== ARABIC MARKET CAPTURE ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/العلاج-في-المانيا-للعرب</loc>
+    <loc>https://medicalcaregermany.com/ar/العلاج-في-المانيا-للعرب</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/تكلفة-العلاج-في-المانيا</loc>
+    <loc>https://medicalcaregermany.com/ar/تكلفة-العلاج-في-المانيا</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/مستشفيات-المانيا-للعرب</loc>
+    <loc>https://medicalcaregermany.com/ar/مستشفيات-المانيا-للعرب</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/fertility-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/fertility-treatment-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/ivf-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/ivf-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/icsi-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/icsi-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/pgd-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/pgd-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/fertility-treatment-libya-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/fertility-treatment-libya-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/fertility-treatment-saudi-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/fertility-treatment-saudi-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/fertility-treatment-iraq-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/fertility-treatment-iraq-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/complex-trauma-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/complex-trauma-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/nerve-injury-after-trauma-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/nerve-injury-after-trauma-germany</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/ivf-cost-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/ivf-cost-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/fertility-treatment-egypt-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/fertility-treatment-egypt-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/failed-ivf-causes-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/failed-ivf-causes-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/repeated-miscarriage-causes-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/repeated-miscarriage-causes-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/male-infertility-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/male-infertility-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/hernia-treatment-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/hernia-treatment-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/laparoscopic-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/laparoscopic-surgery-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/reconstructive-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/reconstructive-surgery-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/spine-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/spine-surgery-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/gastrointestinal-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/gastrointestinal-surgery-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/maxillofacial-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/maxillofacial-surgery-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/corrective-plastic-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/corrective-plastic-surgery-germany</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -625,43 +625,43 @@
   <!-- ===================== EN REHABILITATION CLUSTER ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/en/advanced-rehabilitation-germany</loc>
+    <loc>https://medicalcaregermany.com/en/advanced-rehabilitation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/en/war-injury-rehabilitation-germany</loc>
+    <loc>https://medicalcaregermany.com/en/war-injury-rehabilitation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/en/prosthetics-germany</loc>
+    <loc>https://medicalcaregermany.com/en/prosthetics-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/en/spinal-rehabilitation-germany</loc>
+    <loc>https://medicalcaregermany.com/en/spinal-rehabilitation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/en/neurological-rehabilitation-germany</loc>
+    <loc>https://medicalcaregermany.com/en/neurological-rehabilitation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/en/second-medical-evaluation-germany</loc>
+    <loc>https://medicalcaregermany.com/en/second-medical-evaluation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/en/long-term-rehabilitation-germany</loc>
+    <loc>https://medicalcaregermany.com/en/long-term-rehabilitation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -670,43 +670,43 @@
   <!-- ===================== DE REHABILITATION CLUSTER ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/de/rehabilitation-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/rehabilitation-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/prothetik-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/prothetik-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/spinale-rehabilitation-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/spinale-rehabilitation-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/neurologische-rehabilitation-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/neurologische-rehabilitation-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/langzeit-rehabilitation-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/langzeit-rehabilitation-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -715,50 +715,50 @@
   <!-- ===================== ARABIC HUB PAGES: ORTHOPEDICS + ENT + PEDIATRICS ===================== -->
 
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/orthopedics-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/orthopedics-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/ent-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/ent-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/pediatric-medicine-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/pediatric-medicine-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/pediatric-surgery-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/pediatric-surgery-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/pediatric-orthopedics-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/pediatric-orthopedics-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/ar/pediatric-rehabilitation-germany</loc>
+    <loc>https://medicalcaregermany.com/ar/pediatric-rehabilitation-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- EN/DE Orthopedics Hubs -->
   <url>
-    <loc>https://www.medicalcaregermany.com/en/orthopedics-germany</loc>
+    <loc>https://medicalcaregermany.com/en/orthopedics-germany</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.medicalcaregermany.com/de/orthopaedie-deutschland</loc>
+    <loc>https://medicalcaregermany.com/de/orthopaedie-deutschland</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

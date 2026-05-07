@@ -23,9 +23,9 @@ export default function BreastCancer() {
         "@type": "MedicalWebPage",
         "name": "Breast Cancer Treatment in Germany",
         "description": "Certified breast cancer centers and multidisciplinary tumor boards at German university hospitals for comprehensive breast cancer care.",
-        "url": "https://www.medicalcaregermany.com/breast-cancer-treatment-germany",
+        "url": "https://medicalcaregermany.com/breast-cancer-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Breast Cancer" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

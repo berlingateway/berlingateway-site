@@ -14,7 +14,7 @@ export default function SpineHub() {
       <Helmet>
         <title>Spine Treatment in Germany — Specialist Spinal Care</title>
         <meta name="description" content="Specialist spinal evaluation and surgery at German university hospitals for herniated disc, scoliosis, spinal stenosis, and complex spine conditions." />
-        <link rel="canonical" href="https://www.medicalcaregermany.com/spine-treatment-germany" />
+        <link rel="canonical" href="https://medicalcaregermany.com/spine-treatment-germany" />
       </Helmet>
 
       <div className="w-full bg-slate-900 text-white py-3 px-6 text-center text-sm">

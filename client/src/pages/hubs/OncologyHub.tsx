@@ -17,7 +17,7 @@ export default function OncologyHub() {
       <Helmet>
         <title>Oncology Treatment in Germany — Cancer Specialist Care</title>
         <meta name="description" content="Specialist oncology evaluation and cancer treatment at German university hospitals for lung, breast, prostate, colon, liver cancer, and brain tumors." />
-        <link rel="canonical" href="https://www.medicalcaregermany.com/oncology-germany" />
+        <link rel="canonical" href="https://medicalcaregermany.com/oncology-germany" />
       </Helmet>
 
       <div className="w-full bg-slate-900 text-white py-3 px-6 text-center text-sm">

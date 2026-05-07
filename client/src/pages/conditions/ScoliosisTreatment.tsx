@@ -23,9 +23,9 @@ export default function ScoliosisTreatment() {
         "@type": "MedicalWebPage",
         "name": "Scoliosis Treatment in Germany",
         "description": "Conservative and surgical management of spinal deformity at German university spine centers, covering adolescent and adult scoliosis with structured specialist evaluation.",
-        "url": "https://www.medicalcaregermany.com/scoliosis-treatment-germany",
+        "url": "https://medicalcaregermany.com/scoliosis-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Scoliosis" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

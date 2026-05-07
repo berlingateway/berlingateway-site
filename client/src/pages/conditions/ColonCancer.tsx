@@ -23,9 +23,9 @@ export default function ColonCancer() {
         "@type": "MedicalWebPage",
         "name": "Colon Cancer Treatment in Germany",
         "description": "Surgical and oncological management of colorectal cancer at German university medical centers, with multidisciplinary tumor board review for each case.",
-        "url": "https://www.medicalcaregermany.com/colon-cancer-treatment-germany",
+        "url": "https://medicalcaregermany.com/colon-cancer-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Colorectal Cancer" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

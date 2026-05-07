@@ -102,8 +102,8 @@ async function startServer() {
 
   // CORS Configuration - Allow custom domain and development origins
   const allowedOrigins: (string | RegExp)[] = [
-    'https://www.medicalcaregermany.com',
     'https://medicalcaregermany.com',
+    'https://www.medicalcaregermany.com',
   ];
   
   if (process.env.NODE_ENV === 'development') {

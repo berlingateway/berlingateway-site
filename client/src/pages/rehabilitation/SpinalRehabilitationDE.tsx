@@ -20,8 +20,8 @@ export default function SpinalRehabilitationDE() {
       <HreflangTags currentPath="/de/spinale-rehabilitation-deutschland" />
       <title>Spinale Rehabilitation Deutschland | Rückenmarksrehabilitation Koordination</title>
       <meta name="description" content="Medical Care Germany koordiniert strukturierte spinale Rehabilitationspfade für Rückenmarksverletzungen und komplexe Wirbelsäulenerkrankungen in deutschen Fachzentren." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/de/spinale-rehabilitation-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/spinal-rehabilitation-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/de/spinale-rehabilitation-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/spinal-rehabilitation-germany" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

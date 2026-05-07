@@ -11,7 +11,7 @@ export default function InternationalPatients() {
         const desc = document.querySelector('meta[name="description"]');
         if (desc) desc.setAttribute("content", "Patients from outside Germany may submit medical reports for specialist review. Medical coordination in Berlin helps identify the appropriate specialist and hospital.");
         const canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-        if (canonical) canonical.href = "https://www.medicalcaregermany.com/international-patients";
+        if (canonical) canonical.href = "https://medicalcaregermany.com/international-patients";
         return null;
       })()}
 
@@ -203,16 +203,16 @@ export default function InternationalPatients() {
             "@type": "MedicalWebPage",
             "name": "Treatment in Germany for International Patients",
             "description": "Patients from outside Germany may submit medical reports for specialist review. Medical coordination in Berlin helps identify the appropriate specialist and hospital.",
-            "url": "https://www.medicalcaregermany.com/international-patients",
+            "url": "https://medicalcaregermany.com/international-patients",
             "about": {
               "@type": "MedicalOrganization",
               "name": "Medical Care Germany",
-              "url": "https://www.medicalcaregermany.com"
+              "url": "https://medicalcaregermany.com"
             },
             "publisher": {
               "@type": "Organization",
               "name": "Medical Care Germany",
-              "url": "https://www.medicalcaregermany.com"
+              "url": "https://medicalcaregermany.com"
             }
           })
         }}

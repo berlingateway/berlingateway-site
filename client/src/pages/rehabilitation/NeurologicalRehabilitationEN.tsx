@@ -20,9 +20,9 @@ export default function NeurologicalRehabilitationEN() {
       <HreflangTags currentPath="/en/neurological-rehabilitation-germany" />
       <title>Neurological Rehabilitation in Germany | Stroke and Brain Injury Rehabilitation</title>
       <meta name="description" content="Medical Care Germany coordinates neurological rehabilitation pathways for stroke, traumatic brain injury, and complex neurological conditions at German specialist centres." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/neurological-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/neurological-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/neurologische-rehabilitation-deutschland" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/neurological-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/neurological-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/neurologische-rehabilitation-deutschland" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

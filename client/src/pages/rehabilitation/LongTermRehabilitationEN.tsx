@@ -20,9 +20,9 @@ export default function LongTermRehabilitationEN() {
       <HreflangTags currentPath="/en/long-term-rehabilitation-germany" />
       <title>Long-Term Rehabilitation in Germany | Sustained Rehabilitation Pathway Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates long-term rehabilitation pathways for complex cases requiring sustained multidisciplinary rehabilitation within Germany." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/long-term-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/long-term-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/langzeit-rehabilitation-deutschland" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/long-term-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/long-term-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/langzeit-rehabilitation-deutschland" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

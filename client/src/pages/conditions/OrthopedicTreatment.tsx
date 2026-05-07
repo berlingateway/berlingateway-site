@@ -23,9 +23,9 @@ export default function OrthopedicTreatment() {
         "@type": "MedicalWebPage",
         "name": "Orthopedic Treatment in Germany",
         "description": "Structured access to orthopedic and musculoskeletal specialist expertise at German university hospitals for complex joint, spine, and bone conditions.",
-        "url": "https://www.medicalcaregermany.com/orthopedic-treatment-germany",
+        "url": "https://medicalcaregermany.com/orthopedic-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Orthopedic Conditions" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummary="أمراض العظام والمفاصل تشمل حالات متعددة، منها تآكل الغضاريف، والتشوهات الهيكلية، وأورام العظام، والحالات التي تحتاج إلى مراجعة جراحية بعد تدخلات سابقة. تتطلب هذه الحالات تقييماً دقيقاً يجمع بين صور الأشعة والتقييم الوظيفي والتاريخ الجراحي السابق. توفر مستشفيات ألمانيا الجامعية تقنيات تصوير متقدمة وأنظمة توجيه جراحي دقيقة تضمن دقة عالية في التدخلات المعقدة. يمكن إرسال التقارير للتقييم قبل اتخاذ أي قرار جراحي."
     />

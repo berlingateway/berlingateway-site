@@ -23,9 +23,9 @@ export default function AdvancedDiagnostics() {
         "@type": "MedicalWebPage",
         "name": "Advanced Medical Diagnostics in Germany",
         "description": "Comprehensive diagnostic evaluation using Germany's advanced imaging and laboratory technology, including 7T MRI, PET-CT, and molecular pathology.",
-        "url": "https://www.medicalcaregermany.com/advanced-diagnostics-germany",
+        "url": "https://medicalcaregermany.com/advanced-diagnostics-germany",
         "about": { "@type": "MedicalCondition", "name": "Complex Diagnostic Evaluation" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       relatedLinks={[
         { href: "/ar/fertility-treatment-germany", label: "علاج تأخر الإنجاب في ألمانيا" },

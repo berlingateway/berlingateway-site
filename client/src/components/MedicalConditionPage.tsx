@@ -184,7 +184,7 @@ export default function MedicalConditionPage({
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  const canonicalUrl = `https://www.medicalcaregermany.com${canonicalPath}`;
+  const canonicalUrl = `https://medicalcaregermany.com${canonicalPath}`;
   const isArabic = pageDir === "rtl";
 
   // ── Nav strings ──────────────────────────────────────────────────────────

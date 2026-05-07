@@ -50,7 +50,7 @@ export function SeoGatewayPage({
   internalLinks,
   faqSchema,
 }: SeoGatewayPageProps) {
-  const canonical = `https://www.medicalcaregermany.com${canonicalPath}`;
+  const canonical = `https://medicalcaregermany.com${canonicalPath}`;
 
   const faqJsonLd = faqSchema
     ? JSON.stringify({

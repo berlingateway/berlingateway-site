@@ -18,7 +18,7 @@ export default function NeurologyHub() {
       <Helmet>
         <title>Neurology Treatment in Germany — Specialist Neurological Care</title>
         <meta name="description" content="Specialist neurological evaluation and treatment at German university hospitals for brain tumors, Parkinson's disease, multiple sclerosis, epilepsy, and complex neurological conditions." />
-        <link rel="canonical" href="https://www.medicalcaregermany.com/neurology-germany" />
+        <link rel="canonical" href="https://medicalcaregermany.com/neurology-germany" />
       </Helmet>
 
       {/* Top bar */}

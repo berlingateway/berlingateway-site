@@ -20,9 +20,9 @@ export default function SpinalRehabilitationEN() {
       <HreflangTags currentPath="/en/spinal-rehabilitation-germany" />
       <title>Spinal Rehabilitation in Germany | Spinal Cord Injury Rehabilitation Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates structured spinal rehabilitation pathways for spinal cord injury, post-surgical recovery, and complex spinal cases at German specialist centres." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/spinal-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/spinal-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/spinale-rehabilitation-deutschland" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/spinal-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/spinal-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/spinale-rehabilitation-deutschland" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

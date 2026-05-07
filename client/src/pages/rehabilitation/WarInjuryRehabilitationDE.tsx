@@ -20,8 +20,8 @@ export default function WarInjuryRehabilitationDE() {
       <HreflangTags currentPath="/de/rehabilitation-kriegsverletzungen-deutschland" />
       <title>Rehabilitation Kriegsverletzungen Deutschland | Komplexe Traumarehabilitation</title>
       <meta name="description" content="Medical Care Germany koordiniert strukturierte Rehabilitationspfade für Kriegsverletzungen und komplexe Traumafälle innerhalb des deutschen Rehabilitationssystems." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/war-injury-rehabilitation-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/war-injury-rehabilitation-germany" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

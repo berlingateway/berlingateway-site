@@ -62,9 +62,9 @@ export default function NeurologyTreatment() {
         "@type": "MedicalWebPage",
         "name": "Neurology Treatment in Germany",
         "description": "Specialist neurological evaluation and treatment at German university hospitals.",
-        "url": "https://www.medicalcaregermany.com/neurology-treatment-germany",
+        "url": "https://medicalcaregermany.com/neurology-treatment-germany",
         "about": { "@type": "MedicalSpecialty", "name": "Neurology" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummary="تُعدّ ألمانيا من أبرز الوجهات الطبية في أوروبا لعلاج الأمراض العصبية المعقدة. تضمّ مستشفياتها الجامعية أقساماً متخصصة في أمراض الأوعية الدموية الدماغية، والصرع، واضطرابات الحركة، والتصلب المتعدد، والأمراض العصبية العضلية. يُتيح هذا التخصص الدقيق تقييم كل حالة من قِبل طبيب ذي خبرة محددة في مجالها. كما تتوفر أحدث أجهزة التصوير بالرنين المغناطيسي، وتخطيط الدماغ، والتحاليل الجينية، مما يضمن دقة التشخيص وفاعلية العلاج."
     />

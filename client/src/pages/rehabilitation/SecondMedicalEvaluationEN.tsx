@@ -20,9 +20,9 @@ export default function SecondMedicalEvaluationEN() {
       <HreflangTags currentPath="/en/second-medical-evaluation-germany" />
       <title>Second Medical Evaluation in Germany | Independent Clinical Second Opinion</title>
       <meta name="description" content="Medical Care Germany coordinates independent second medical evaluations at German specialist centres for complex diagnoses, treatment decisions, and surgical planning." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/second-medical-evaluation-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/second-medical-evaluation-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/second-medical-evaluation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/second-medical-evaluation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

@@ -154,9 +154,9 @@ export default function LungCancerArabic() {
           "@type": "MedicalWebPage",
           name: "علاج سرطان الرئة في ألمانيا",
           description: "تقييم طبي متخصص لحالات سرطان الرئة ضمن شبكة المستشفيات الجامعية في ألمانيا.",
-          url: "https://www.medicalcaregermany.com/ar/lung-cancer-treatment-germany",
+          url: "https://medicalcaregermany.com/ar/lung-cancer-treatment-germany",
           about: { "@type": "MedicalCondition", name: "Lung Cancer" },
-          publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://www.medicalcaregermany.com" },
+          publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com" },
           inLanguage: "ar",
         })}
       />

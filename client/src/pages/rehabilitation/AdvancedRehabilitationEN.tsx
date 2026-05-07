@@ -42,10 +42,10 @@ export default function AdvancedRehabilitationEN() {
       <HreflangTags currentPath="/en/advanced-rehabilitation-germany" />
       <title>Advanced Rehabilitation in Germany | Structured Rehabilitation Pathway Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates advanced rehabilitation pathways in Germany — war injuries, prosthetics, neurological rehabilitation, spinal cord, and second medical evaluation." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/advanced-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/advanced-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/rehabilitation-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/advanced-rehabilitation-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/advanced-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/advanced-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/rehabilitation-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/advanced-rehabilitation-germany" />
 
       {/* ── TOP BAR ───────────────────────────────────────────────── */}
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>

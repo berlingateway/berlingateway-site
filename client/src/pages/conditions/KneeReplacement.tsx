@@ -23,9 +23,9 @@ export default function KneeReplacement() {
         "@type": "MedicalWebPage",
         "name": "Knee Replacement Surgery in Germany",
         "description": "Total and partial knee arthroplasty at certified German orthopedic centers, with computer-assisted planning and structured rehabilitation pathways.",
-        "url": "https://www.medicalcaregermany.com/knee-replacement-germany",
+        "url": "https://medicalcaregermany.com/knee-replacement-germany",
         "about": { "@type": "MedicalCondition", "name": "Knee Osteoarthritis" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

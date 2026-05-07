@@ -23,9 +23,9 @@ export default function CardiologyTreatment() {
         "@type": "MedicalWebPage",
         "name": "Cardiology Treatment in Germany",
         "description": "Comprehensive cardiac evaluation and intervention at German university heart centers, covering coronary artery disease, heart failure, and structural heart conditions.",
-        "url": "https://www.medicalcaregermany.com/cardiology-treatment-germany",
+        "url": "https://medicalcaregermany.com/cardiology-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Cardiovascular Disease" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummary="أمراض القلب والشرايين تشمل حالات متعددة، منها تضيق الشرايين التاجية، وضعف عضلة القلب، وأمراض الصمامات، وارتفاع ضغط الشريان الرئوي. تتطلب هذه الحالات تشخيصاً دقيقاً يدمج بين التصوير بالرنين المغناطيسي، والموجات فوق الصوتية، وقسطرة الشرياين التاجية. تتوفر في ألمانيا مراكز قلب جامعية متخصصة تعتمد على فريق طبي متكامل لوضع خطط علاجية متكاملة. يمكن إرسال التقارير للتقييم الأولي قبل اتخاذ أي قرار علاجي."
     />

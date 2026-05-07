@@ -23,9 +23,9 @@ export default function SpecialistReferral() {
         "@type": "MedicalWebPage",
         "name": "Specialist Referral in Germany",
         "description": "Coordinated referral pathways to senior German specialists across all major medical disciplines, structured for international patients and referring physicians.",
-        "url": "https://www.medicalcaregermany.com/specialist-referral-germany",
+        "url": "https://medicalcaregermany.com/specialist-referral-germany",
         "about": { "@type": "MedicalCondition", "name": "Specialist Medical Referral" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

@@ -62,9 +62,9 @@ export default function MultipleSclerosis() {
         "@type": "MedicalWebPage",
         "name": "Multiple Sclerosis Treatment in Germany",
         "description": "Advanced MS diagnostics and disease-modifying therapy at German neurological centres, with specialist evaluation for international patients.",
-        "url": "https://www.medicalcaregermany.com/multiple-sclerosis-treatment-germany",
+        "url": "https://medicalcaregermany.com/multiple-sclerosis-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Multiple Sclerosis" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummary="التصلب المتعدد مرض مناعي يُصيب الجهاز العصبي المركزي ويُسبب تلفاً في غمد الميالين المحيط بالأعصاب. تتنوع أعراضه بين ضعف الأطراف واضطرابات البصر والإرهاق الشديد وصعوبات في التوازن. في ألمانيا، تتوفر مراكز متخصصة معتمدة تُقدم أحدث علاجات تعديل المرض، بما فيها الأدوية عالية الفاعلية وزراعة الخلايا الجذعية في الحالات المتقدمة. يُقيَّم كل مريض بشكل شامل لتحديد نوع المرض ومرحلته واختيار البروتوكول العلاجي الأنسب."
     />

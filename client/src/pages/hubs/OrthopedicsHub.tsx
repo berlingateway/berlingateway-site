@@ -16,7 +16,7 @@ export default function OrthopedicsHub() {
       <Helmet>
         <title>Orthopedics in Germany — Specialist Bone and Joint Care</title>
         <meta name="description" content="Specialist orthopedic evaluation and surgery at German university hospitals for joint replacement, scoliosis, spinal stenosis, and complex musculoskeletal conditions." />
-        <link rel="canonical" href="https://www.medicalcaregermany.com/orthopedics-germany" />
+        <link rel="canonical" href="https://medicalcaregermany.com/orthopedics-germany" />
       </Helmet>
 
       <div className="w-full bg-slate-900 text-white py-3 px-6 text-center text-sm">

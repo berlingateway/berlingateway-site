@@ -22,7 +22,7 @@ export default function ArabicSEO() {
     // Add canonical tag
     const canonical = document.createElement('link');
     canonical.rel = 'canonical';
-    canonical.href = 'https://www.medicalcaregermany.com';
+    canonical.href = 'https://medicalcaregermany.com';
     document.head.appendChild(canonical);
     
     // Add meta description

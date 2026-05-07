@@ -17,7 +17,7 @@ export default function ConsultationHub() {
       <Helmet>
         <title>Medical Consultation Services in Germany — Second Opinion &amp; Specialist Referral</title>
         <meta name="description" content="Structured medical consultation services in Germany including second opinions, specialist referrals, advanced diagnostics, and coordination for international patients at German university hospitals." />
-        <link rel="canonical" href="https://www.medicalcaregermany.com/consultation-services-germany" />
+        <link rel="canonical" href="https://medicalcaregermany.com/consultation-services-germany" />
       </Helmet>
 
       <div className="w-full bg-slate-900 text-white py-3 px-6 text-center text-sm">

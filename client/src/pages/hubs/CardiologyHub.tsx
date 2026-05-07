@@ -14,7 +14,7 @@ export default function CardiologyHub() {
       <Helmet>
         <title>Cardiology in Germany — Specialist Heart Care</title>
         <meta name="description" content="Specialist cardiology evaluation and heart surgery at German university cardiac centers for coronary artery disease, heart failure, valve conditions, and arrhythmia." />
-        <link rel="canonical" href="https://www.medicalcaregermany.com/cardiology-germany" />
+        <link rel="canonical" href="https://medicalcaregermany.com/cardiology-germany" />
       </Helmet>
 
       <div className="w-full bg-slate-900 text-white py-3 px-6 text-center text-sm">

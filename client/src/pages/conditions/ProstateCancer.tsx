@@ -23,9 +23,9 @@ export default function ProstateCancer() {
         "@type": "MedicalWebPage",
         "name": "Prostate Cancer Treatment in Germany",
         "description": "Advanced urological oncology including robotic-assisted surgery and PSMA PET imaging for prostate cancer at German university hospitals.",
-        "url": "https://www.medicalcaregermany.com/prostate-cancer-treatment-germany",
+        "url": "https://medicalcaregermany.com/prostate-cancer-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Prostate Cancer" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

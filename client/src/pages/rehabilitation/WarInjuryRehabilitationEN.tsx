@@ -31,10 +31,10 @@ export default function WarInjuryRehabilitationEN() {
       <HreflangTags currentPath="/en/war-injury-rehabilitation-germany" />
       <title>War Injury Rehabilitation in Germany | Complex Trauma Rehabilitation Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates structured rehabilitation pathways for war injury and complex trauma cases within Germany's specialist rehabilitation system." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/war-injury-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/war-injury-rehabilitation-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/war-injury-rehabilitation-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/war-injury-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/war-injury-rehabilitation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/war-injury-rehabilitation-germany" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

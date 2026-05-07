@@ -145,9 +145,9 @@ export default function BrainTumorTreatmentArabic() {
           "@type": "MedicalWebPage",
           name: "علاج أورام المخ في ألمانيا",
           description: "تقييم طبي ألماني متخصص لحالات أورام المخ خلال 24–48 ساعة.",
-          url: "https://www.medicalcaregermany.com/ar/brain-tumor-treatment-germany",
+          url: "https://medicalcaregermany.com/ar/brain-tumor-treatment-germany",
           about: { "@type": "MedicalCondition", name: "Brain Tumor" },
-          publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://www.medicalcaregermany.com" },
+          publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com" },
           inLanguage: "ar",
         })}
       />

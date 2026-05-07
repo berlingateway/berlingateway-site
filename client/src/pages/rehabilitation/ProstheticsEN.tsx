@@ -20,9 +20,9 @@ export default function ProstheticsEN() {
       <HreflangTags currentPath="/en/prosthetics-germany" />
       <title>Prosthetics in Germany | Advanced Prosthetic Rehabilitation Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates access to advanced prosthetic rehabilitation and functional training at German specialist centres." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/en/prosthetics-germany" />
-      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/prosthetics-germany" />
-      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/prothetik-deutschland" />
+      <link rel="canonical" href="https://medicalcaregermany.com/en/prosthetics-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://medicalcaregermany.com/ar/prosthetics-germany" />
+      <link rel="alternate" hrefLang="de" href="https://medicalcaregermany.com/de/prothetik-deutschland" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

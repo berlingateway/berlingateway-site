@@ -71,9 +71,9 @@ export default function BrainTumor() {
         "@type": "MedicalWebPage",
         "name": "Brain Tumor Treatment in Germany",
         "description": "Structured access to neurosurgical and neuro-oncological expertise at German university hospitals for brain tumor diagnosis and treatment.",
-        "url": "https://www.medicalcaregermany.com/brain-tumor-treatment-germany",
+        "url": "https://medicalcaregermany.com/brain-tumor-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Brain Tumor" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummaryTitle="متى تحتاج الحالة إلى مراجعة متخصصة؟"
       arabicSummary="أورام المخ ليست تشخيصًا واحدًا، بل مجموعة معقدة من الحالات تختلف في النوع، الموقع، وسرعة النمو. في بعض الحالات، قد يكون القرار العلاجي واضحًا. لكن في حالات أخرى، يكون التقييم غير كافٍ أو الخطة غير مكتملة. قد يغيّر التقييم المنظم من فريق متخصص مسار العلاج بالكامل. يمكن إرسال التقارير الطبية للحصول على تقييم أولي قبل اتخاذ أي قرار علاجي."

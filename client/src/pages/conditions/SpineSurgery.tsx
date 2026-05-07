@@ -23,9 +23,9 @@ export default function SpineSurgery() {
         "@type": "MedicalWebPage",
         "name": "Spine Surgery in Germany",
         "description": "Advanced spinal surgical procedures at accredited German university hospitals, from minimally invasive techniques to complex spinal reconstruction.",
-        "url": "https://www.medicalcaregermany.com/spine-surgery-germany",
+        "url": "https://medicalcaregermany.com/spine-surgery-germany",
         "about": { "@type": "MedicalCondition", "name": "Spinal Disorder" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummary="جراحة العمود الفقري تشمل طيفاً واسعاً من الحالات، منها انزلاق الغضاريف، وتضيق القناة الشوكية، والكسور الفقرية، والتشوهات الهيكلية. قد يعاني المريض من آلام في الظهر أو الرقبة، أو خدر وتنمل يمتد إلى الأطراف. تمتلك مراكز العمود الفقري في ألمانيا تقنيات جراحية متطورة تتيح إجراء العمليات بدقة عالية وبأقل تدخل ممكن. يبدأ التقييم بمراجعة صور الأشعة والتقارير الطبية المتوفرة لتحديد أنسب خيار جراحي."
       relatedLinks={[

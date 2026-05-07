@@ -23,9 +23,9 @@ export default function OrthopedicSurgery() {
         "@type": "MedicalWebPage",
         "name": "Orthopedic Surgery in Germany",
         "description": "Advanced orthopedic and musculoskeletal surgical care at German university hospitals, covering joint replacement, sports medicine, and complex reconstructive procedures.",
-        "url": "https://www.medicalcaregermany.com/orthopedic-surgery-germany",
+        "url": "https://medicalcaregermany.com/orthopedic-surgery-germany",
         "about": { "@type": "MedicalCondition", "name": "Orthopedic Condition" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
     />
     </>

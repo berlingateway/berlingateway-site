@@ -20,8 +20,8 @@ export default function NeurologicalRehabilitationDE() {
       <HreflangTags currentPath="/de/neurologische-rehabilitation-deutschland" />
       <title>Neurologische Rehabilitation Deutschland | Schlaganfall und Hirnverletzungsrehabilitation</title>
       <meta name="description" content="Medical Care Germany koordiniert neurologische Rehabilitationspfade für Schlaganfall, Schädel-Hirn-Trauma und komplexe neurologische Erkrankungen in deutschen Fachzentren." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/de/neurologische-rehabilitation-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/neurological-rehabilitation-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/de/neurologische-rehabilitation-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/neurological-rehabilitation-germany" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

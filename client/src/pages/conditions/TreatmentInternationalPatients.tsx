@@ -23,9 +23,9 @@ export default function TreatmentInternationalPatients() {
         "@type": "MedicalWebPage",
         "name": "Treatment in Germany for International Patients",
         "description": "Structured medical access to Germany's university hospital system for international patients, government-sponsored cases, and diplomatic referrals.",
-        "url": "https://www.medicalcaregermany.com/treatment-in-germany-for-international-patients",
+        "url": "https://medicalcaregermany.com/treatment-in-germany-for-international-patients",
         "about": { "@type": "MedicalCondition", "name": "International Patient Medical Access" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
       })}
       arabicSummary="يستقبل النظام الصحي في ألمانيا مرضى من جميع أنحاء العالم، سواء كانوا مرضى خاصين، أو حالات ممولة حكومياً، أو إحالات دبلوماسية. كل مسار له متطلبات إدارية وسريرية خاصة يجب تنسيقها مسبقاً. يبدأ الوصول إلى النظام بمراجعة سريرية لتحديد المتخصص والمؤسسة المناسبة، ويدير منسق طبي في برلين عملية التحويل والتوثيق اللازمة. يمكن إرسال التقارير الطبية للتقييم الأولي."
     />

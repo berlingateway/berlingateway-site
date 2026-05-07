@@ -20,8 +20,8 @@ export default function RehabilitationDE() {
       <HreflangTags currentPath="/de/rehabilitation-deutschland" />
       <title>Rehabilitation in Deutschland | Koordination komplexer Rehabilitationspfade</title>
       <meta name="description" content="Medical Care Germany koordiniert strukturierte Rehabilitationspfade in Deutschland — Kriegsverletzungen, Prothetik, neurologische Rehabilitation, Wirbelsäule und Zweitbewertung." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/de/rehabilitation-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/advanced-rehabilitation-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/de/rehabilitation-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/advanced-rehabilitation-germany" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

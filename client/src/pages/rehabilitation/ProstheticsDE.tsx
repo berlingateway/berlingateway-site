@@ -20,8 +20,8 @@ export default function ProstheticsDE() {
       <HreflangTags currentPath="/de/prothetik-deutschland" />
       <title>Prothetik Deutschland | Prothesenversorgung und funktionelle Rehabilitation</title>
       <meta name="description" content="Medical Care Germany koordiniert den Zugang zu fortgeschrittener Prothesenversorgung und funktioneller Rehabilitation in deutschen Fachzentren." />
-      <link rel="canonical" href="https://www.medicalcaregermany.com/de/prothetik-deutschland" />
-      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/prosthetics-germany" />
+      <link rel="canonical" href="https://medicalcaregermany.com/de/prothetik-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://medicalcaregermany.com/en/prosthetics-germany" />
 
       <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
         <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>

@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/advanced-rehabilitation-germany
  * Advanced Rehabilitation Hub — MCG English Authority Page
@@ -36,6 +38,8 @@ const THEMES = [
 export default function AdvancedRehabilitationEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, ...SANS }}>
+      <SmartNavLayer currentPath="/en/advanced-rehabilitation-germany" />
+      <HreflangTags currentPath="/en/advanced-rehabilitation-germany" />
       <title>Advanced Rehabilitation in Germany | Structured Rehabilitation Pathway Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates advanced rehabilitation pathways in Germany — war injuries, prosthetics, neurological rehabilitation, spinal cord, and second medical evaluation." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/advanced-rehabilitation-germany" />

@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -49,6 +51,8 @@ const DOCS = [
 export default function PediatricOrthopedicsGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/pediatric-orthopedics-germany" />
+      <HreflangTags currentPath="/ar/pediatric-orthopedics-germany" />
       <title>عظام الأطفال في ألمانيا | تقييم الحالات الجراحية والتصحيحية</title>
       <meta name="description" content="تنسيق متخصص لحالات عظام الأطفال في ألمانيا — التشوهات، الكسور المعقدة، الجراحة التصحيحية، وإعادة التأهيل." />
 

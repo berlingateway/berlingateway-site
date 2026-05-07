@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/medizinische-zweitbewertung-deutschland
  * MCG Institutional Authority Page — Medizinische Zweitbewertung in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function SecondMedicalEvaluationDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/medizinische-zweitbewertung-deutschland" />
+      <HreflangTags currentPath="/de/medizinische-zweitbewertung-deutschland" />
       <title>Medizinische Zweitbewertung Deutschland | Unabhängige klinische Zweitmeinung</title>
       <meta name="description" content="Medical Care Germany koordiniert unabhängige medizinische Zweitbewertungen in deutschen Fachzentren für komplexe Diagnosen, Behandlungsentscheidungen und Operationsplanung." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland" />

@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/rehabilitation-kriegsverletzungen-deutschland
  * MCG Institutional Authority Page — Rehabilitation von Kriegsverletzungen in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function WarInjuryRehabilitationDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/rehabilitation-kriegsverletzungen-deutschland" />
+      <HreflangTags currentPath="/de/rehabilitation-kriegsverletzungen-deutschland" />
       <title>Rehabilitation Kriegsverletzungen Deutschland | Komplexe Traumarehabilitation</title>
       <meta name="description" content="Medical Care Germany koordiniert strukturierte Rehabilitationspfade für Kriegsverletzungen und komplexe Traumafälle innerhalb des deutschen Rehabilitationssystems." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/rehabilitation-kriegsverletzungen-deutschland" />

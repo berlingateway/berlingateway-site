@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/neurological-rehabilitation-germany
  * MCG Institutional Authority Page — Neurological Rehabilitation in Germany
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function NeurologicalRehabilitationEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/en/neurological-rehabilitation-germany" />
+      <HreflangTags currentPath="/en/neurological-rehabilitation-germany" />
       <title>Neurological Rehabilitation in Germany | Stroke and Brain Injury Rehabilitation</title>
       <meta name="description" content="Medical Care Germany coordinates neurological rehabilitation pathways for stroke, traumatic brain injury, and complex neurological conditions at German specialist centres." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/neurological-rehabilitation-germany" />

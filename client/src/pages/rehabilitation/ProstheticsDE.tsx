@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/prothetik-deutschland
  * MCG Institutional Authority Page — Prothetik in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function ProstheticsDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/prothetik-deutschland" />
+      <HreflangTags currentPath="/de/prothetik-deutschland" />
       <title>Prothetik Deutschland | Prothesenversorgung und funktionelle Rehabilitation</title>
       <meta name="description" content="Medical Care Germany koordiniert den Zugang zu fortgeschrittener Prothesenversorgung und funktioneller Rehabilitation in deutschen Fachzentren." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/prothetik-deutschland" />

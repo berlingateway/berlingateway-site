@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -37,6 +39,8 @@ const THEMES = [
 export default function AdvancedRehabilitationGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/advanced-rehabilitation-germany" />
+      <HreflangTags currentPath="/ar/advanced-rehabilitation-germany" />
       <title>إعادة التأهيل المتقدم في ألمانيا | تنسيق التأهيل الطبي المتخصص</title>
       <meta
         name="description"

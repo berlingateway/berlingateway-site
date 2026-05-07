@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/spinale-rehabilitation-deutschland
  * MCG Institutional Authority Page — Spinale Rehabilitation in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function SpinalRehabilitationDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/spinale-rehabilitation-deutschland" />
+      <HreflangTags currentPath="/de/spinale-rehabilitation-deutschland" />
       <title>Spinale Rehabilitation Deutschland | Rückenmarksrehabilitation Koordination</title>
       <meta name="description" content="Medical Care Germany koordiniert strukturierte spinale Rehabilitationspfade für Rückenmarksverletzungen und komplexe Wirbelsäulenerkrankungen in deutschen Fachzentren." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/spinale-rehabilitation-deutschland" />

@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -39,6 +41,8 @@ const DOCUMENTS = [
 export default function WarInjuryRehabilitationGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/war-injury-rehabilitation-germany" />
+      <HreflangTags currentPath="/ar/war-injury-rehabilitation-germany" />
       <title>إعادة تأهيل إصابات الحرب في ألمانيا | تنسيق طبي متخصص</title>
       <meta
         name="description"

@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/prosthetics-germany
  * MCG Institutional Authority Page — Prosthetics in Germany
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function ProstheticsEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/en/prosthetics-germany" />
+      <HreflangTags currentPath="/en/prosthetics-germany" />
       <title>Prosthetics in Germany | Advanced Prosthetic Rehabilitation Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates access to advanced prosthetic rehabilitation and functional training at German specialist centres." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/prosthetics-germany" />

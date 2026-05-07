@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -39,6 +41,8 @@ const DOCUMENTS = [
 export default function ProstheticsGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/prosthetics-germany" />
+      <HreflangTags currentPath="/ar/prosthetics-germany" />
       <title>الأطراف الصناعية في ألمانيا | تنسيق التأهيل الحركي المتقدم</title>
       <meta
         name="description"

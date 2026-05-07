@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/langzeit-rehabilitation-deutschland
  * MCG Institutional Authority Page — Langzeit-Rehabilitation in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function LongTermRehabilitationDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/langzeit-rehabilitation-deutschland" />
+      <HreflangTags currentPath="/de/langzeit-rehabilitation-deutschland" />
       <title>Langzeit-Rehabilitation Deutschland | Nachhaltige Rehabilitationspfadkoordination</title>
       <meta name="description" content="Medical Care Germany koordiniert Langzeit-Rehabilitationspfade für komplexe Fälle, die eine nachhaltige multidisziplinäre Rehabilitation in Deutschland benötigen." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/langzeit-rehabilitation-deutschland" />

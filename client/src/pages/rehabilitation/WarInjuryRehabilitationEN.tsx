@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/war-injury-rehabilitation-germany
  * War Injury Rehabilitation — MCG English Authority Page
@@ -25,6 +27,8 @@ const CASES = [
 export default function WarInjuryRehabilitationEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/en/war-injury-rehabilitation-germany" />
+      <HreflangTags currentPath="/en/war-injury-rehabilitation-germany" />
       <title>War Injury Rehabilitation in Germany | Complex Trauma Rehabilitation Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates structured rehabilitation pathways for war injury and complex trauma cases within Germany's specialist rehabilitation system." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/war-injury-rehabilitation-germany" />

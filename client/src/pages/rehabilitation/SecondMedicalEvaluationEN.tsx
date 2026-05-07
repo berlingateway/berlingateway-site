@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/second-medical-evaluation-germany
  * MCG Institutional Authority Page — Second Medical Evaluation in Germany
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function SecondMedicalEvaluationEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/en/second-medical-evaluation-germany" />
+      <HreflangTags currentPath="/en/second-medical-evaluation-germany" />
       <title>Second Medical Evaluation in Germany | Independent Clinical Second Opinion</title>
       <meta name="description" content="Medical Care Germany coordinates independent second medical evaluations at German specialist centres for complex diagnoses, treatment decisions, and surgical planning." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/second-medical-evaluation-germany" />

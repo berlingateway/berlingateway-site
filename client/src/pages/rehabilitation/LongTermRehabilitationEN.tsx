@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/long-term-rehabilitation-germany
  * MCG Institutional Authority Page — Long-Term Rehabilitation in Germany
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function LongTermRehabilitationEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/en/long-term-rehabilitation-germany" />
+      <HreflangTags currentPath="/en/long-term-rehabilitation-germany" />
       <title>Long-Term Rehabilitation in Germany | Sustained Rehabilitation Pathway Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates long-term rehabilitation pathways for complex cases requiring sustained multidisciplinary rehabilitation within Germany." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/long-term-rehabilitation-germany" />

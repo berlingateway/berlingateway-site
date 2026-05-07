@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /en/spinal-rehabilitation-germany
  * MCG Institutional Authority Page — Spinal Rehabilitation in Germany
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function SpinalRehabilitationEN() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/en/spinal-rehabilitation-germany" />
+      <HreflangTags currentPath="/en/spinal-rehabilitation-germany" />
       <title>Spinal Rehabilitation in Germany | Spinal Cord Injury Rehabilitation Coordination</title>
       <meta name="description" content="Medical Care Germany coordinates structured spinal rehabilitation pathways for spinal cord injury, post-surgical recovery, and complex spinal cases at German specialist centres." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/en/spinal-rehabilitation-germany" />

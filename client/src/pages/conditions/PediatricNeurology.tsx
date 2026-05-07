@@ -1,8 +1,13 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 export default function PediatricNeurology() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/ar/pediatric-neurology-germany" />
+      <HreflangTags currentPath="/ar/pediatric-neurology-germany" />
+      <MedicalConditionPage
       metaTitle="Pediatric Neurology in Germany | Children's Neurological Care at University Hospitals"
       metaDescription="Specialist neurological care for children and adolescents at German university paediatric centres, covering epilepsy, neuromuscular disorders, cerebral palsy, and genetic neurological diseases."
       canonicalPath="/pediatric-neurology-germany"
@@ -62,5 +67,6 @@ export default function PediatricNeurology() {
       })}
       arabicSummary="طب الأعصاب للأطفال تخصص دقيق يعالج الاضطرابات العصبية في مرحلة الطفولة، كالصرع والشلل الدماغي وأمراض العضلات والأمراض الوراثية العصبية. في ألمانيا، تمتلك المستشفيات الجامعية أقساماً متخصصة في طب الأعصاب للأطفال تجمع بين أحدث تقنيات التشخيص الجيني والتصوير الدماغي وعلاجات تعديل المرض الحديثة. يُقيَّم كل طفل ضمن فريق متعدد التخصصات يضم أطباء أعصاب وجراحين وأخصائيي وراثة وإعادة تأهيل."
     />
+    </>
   );
 }

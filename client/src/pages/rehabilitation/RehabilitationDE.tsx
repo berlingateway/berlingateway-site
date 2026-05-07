@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/rehabilitation-deutschland
  * MCG Institutional Authority Page — Rehabilitation in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function RehabilitationDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/rehabilitation-deutschland" />
+      <HreflangTags currentPath="/de/rehabilitation-deutschland" />
       <title>Rehabilitation in Deutschland | Koordination komplexer Rehabilitationspfade</title>
       <meta name="description" content="Medical Care Germany koordiniert strukturierte Rehabilitationspfade in Deutschland — Kriegsverletzungen, Prothetik, neurologische Rehabilitation, Wirbelsäule und Zweitbewertung." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/rehabilitation-deutschland" />

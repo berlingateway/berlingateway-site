@@ -1,3 +1,5 @@
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 /**
  * /de/neurologische-rehabilitation-deutschland
  * MCG Institutional Authority Page — Neurologische Rehabilitation in Deutschland
@@ -14,6 +16,8 @@ const WHITE = "#f8fafc";
 export default function NeurologicalRehabilitationDE() {
   return (
     <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <SmartNavLayer currentPath="/de/neurologische-rehabilitation-deutschland" />
+      <HreflangTags currentPath="/de/neurologische-rehabilitation-deutschland" />
       <title>Neurologische Rehabilitation Deutschland | Schlaganfall und Hirnverletzungsrehabilitation</title>
       <meta name="description" content="Medical Care Germany koordiniert neurologische Rehabilitationspfade für Schlaganfall, Schädel-Hirn-Trauma und komplexe neurologische Erkrankungen in deutschen Fachzentren." />
       <link rel="canonical" href="https://www.medicalcaregermany.com/de/neurologische-rehabilitation-deutschland" />

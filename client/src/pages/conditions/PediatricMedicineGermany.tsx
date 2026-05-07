@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -49,6 +51,8 @@ const DOCS = [
 export default function PediatricMedicineGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/pediatric-general-medicine-germany" />
+      <HreflangTags currentPath="/ar/pediatric-general-medicine-germany" />
       <title>طب الأطفال في ألمانيا | تقييم الحالات المعقدة</title>
       <meta name="description" content="تنسيق متخصص لحالات طب الأطفال في ألمانيا — الأمراض المزمنة، الحالات النادرة، التشخيص المتقدم، والرأي الطبي الثاني." />
 

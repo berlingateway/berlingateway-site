@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -49,6 +51,8 @@ const DOCS = [
 export default function PediatricRehabilitationGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/pediatric-rehabilitation-germany" />
+      <HreflangTags currentPath="/ar/pediatric-rehabilitation-germany" />
       <title>تأهيل الأطفال في ألمانيا | إعادة التأهيل المتخصص للأطفال</title>
       <meta name="description" content="تنسيق متخصص لإعادة تأهيل الأطفال في ألمانيا — التأهيل العصبي، الحركي، بعد الجراحة، وإصابات الحوادث." />
 

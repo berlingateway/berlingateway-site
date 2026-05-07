@@ -4,6 +4,8 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -45,6 +47,8 @@ const RELATED = [
 export default function OrthopedicsGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/orthopedics-germany" />
+      <HreflangTags currentPath="/ar/orthopedics-germany" />
       <title>علاج العظام والمفاصل في ألمانيا | تقييم الحالات الجراحية المعقدة</title>
       <meta
         name="description"

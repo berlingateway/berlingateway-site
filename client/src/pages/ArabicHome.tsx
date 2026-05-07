@@ -361,6 +361,8 @@ export default function ArabicHome() {
                       { id: 'general-surgery', label: 'الجراحة العامة' },
                       { id: 'cosmetic-surgery', label: 'الجراحة التجميلية والترميمية' },
                       { id: 'rehabilitation', label: 'إعادة التأهيل المتقدم' },
+                      { id: 'orthopedics', label: 'العظام والمفاصل' },
+                      { id: 'ent', label: 'الأنف والأذن والحنجرة' },
                     ].map(cat => (
                       <button
                         key={cat.id}
@@ -469,12 +471,20 @@ export default function ArabicHome() {
                     {activeMedCat === 'pediatric' && (
                       <>
                         <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>طب الأطفال</span>
-                        <Link href="/ar/pediatric-neurology-germany" onClick={() => setConditionsOpen(false)}
-                          className="block transition-colors"
-                          style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
-                          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
-                          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
-                        >أعصاب الأطفال</Link>
+                        {[
+                          { href: '/ar/pediatric-medicine-germany', label: 'طب الأطفال العام' },
+                          { href: '/ar/pediatric-neurology-germany', label: 'أعصاب الأطفال' },
+                          { href: '/ar/pediatric-surgery-germany', label: 'جراحة الأطفال' },
+                          { href: '/ar/pediatric-orthopedics-germany', label: 'عظام الأطفال' },
+                          { href: '/ar/pediatric-rehabilitation-germany', label: 'تأهيل الأطفال' },
+                        ].map(item => (
+                          <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
                       </>
                     )}
                     {activeMedCat === 'general-surgery' && (
@@ -501,6 +511,39 @@ export default function ArabicHome() {
                           { href: '/ar/reconstructive-surgery-germany', label: 'الترميم بعد الحوادث والأورام' },
           { href: '/ar/maxillofacial-surgery-germany', label: 'جراحة الوجه والفكين' },
                            { href: '/ar/corrective-plastic-surgery-germany', label: 'التجميل التصحيحي' },
+                        ].map(item => (
+                          <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
+                      </>
+                    )}
+                    {activeMedCat === 'orthopedics' && (
+                      <>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>العظام والمفاصل</span>
+                        {[
+                          { href: '/ar/orthopedics-germany', label: 'العظام والمفاصل — المحور الرئيسي' },
+                          { href: '/ar/spine-surgery-germany', label: 'جراحة العمود الفقري' },
+                          { href: '/ar/spinal-rehabilitation-germany', label: 'تأهيل العمود الفقري' },
+                          { href: '/ar/pediatric-orthopedics-germany', label: 'عظام الأطفال' },
+                        ].map(item => (
+                          <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
+                      </>
+                    )}
+                    {activeMedCat === 'ent' && (
+                      <>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الأنف والأذن والحنجرة</span>
+                        {[
+                          { href: '/ar/ent-germany', label: 'الأنف والأذن والحنجرة — المحور الرئيسي' },
                         ].map(item => (
                           <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
                             className="block transition-colors"
@@ -675,7 +718,11 @@ export default function ArabicHome() {
               </button>
               {mobileAccordion === 'pediatric' && (
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
-                  <Link href="/ar/pediatric-neurology-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">أعصاب الأطفال</Link>
+                  <a href="/ar/pediatric-medicine-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">طب الأطفال العام</a>
+                  <a href="/ar/pediatric-neurology-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">أعصاب الأطفال</a>
+                  <a href="/ar/pediatric-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الأطفال</a>
+                  <a href="/ar/pediatric-orthopedics-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">عظام الأطفال</a>
+                  <a href="/ar/pediatric-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">تأهيل الأطفال</a>
                 </div>
               )}
               {/* Accordion: الجراحة العامة */}
@@ -725,6 +772,35 @@ export default function ArabicHome() {
                   <a href="/ar/neurological-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التأهيل العصبي</a>
                   <a href="/ar/second-medical-evaluation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التقييم الطبي الثاني</a>
                   <a href="/ar/long-term-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التأهيل طويل المدى</a>
+                </div>
+              )}
+              {/* Accordion: العظام والمفاصل */}
+              <button
+                onClick={() => setMobileAccordion(v => v === 'orthopedics' ? null : 'orthopedics')}
+                className="flex items-center justify-between w-full text-right text-sm font-medium text-slate-700 py-3 border-b border-slate-100 px-2"
+              >
+                <span>العظام والمفاصل</span>
+                <span className="text-slate-400 text-xs">{mobileAccordion === 'orthopedics' ? '−' : '+'}</span>
+              </button>
+              {mobileAccordion === 'orthopedics' && (
+                <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
+                  <a href="/ar/orthopedics-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">العظام والمفاصل — المحور</a>
+                  <a href="/ar/spine-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة العمود الفقري</a>
+                  <a href="/ar/spinal-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">تأهيل العمود الفقري</a>
+                  <a href="/ar/pediatric-orthopedics-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">عظام الأطفال</a>
+                </div>
+              )}
+              {/* Accordion: الأنف والأذن والحنجرة */}
+              <button
+                onClick={() => setMobileAccordion(v => v === 'ent' ? null : 'ent')}
+                className="flex items-center justify-between w-full text-right text-sm font-medium text-slate-700 py-3 border-b border-slate-100 px-2"
+              >
+                <span>الأنف والأذن والحنجرة</span>
+                <span className="text-slate-400 text-xs">{mobileAccordion === 'ent' ? '−' : '+'}</span>
+              </button>
+              {mobileAccordion === 'ent' && (
+                <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
+                  <a href="/ar/ent-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">الأنف والأذن والحنجرة — المحور</a>
                 </div>
               )}
               {/* Direct links */}

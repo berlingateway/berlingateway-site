@@ -118,6 +118,12 @@ import SpinalRehabilitationGermany from "./pages/conditions/SpinalRehabilitation
 import NeurologicalRehabilitationGermany from "./pages/conditions/NeurologicalRehabilitationGermany";
 import SecondMedicalEvaluationGermany from "./pages/conditions/SecondMedicalEvaluationGermany";
 import LongTermRehabilitationGermany from "./pages/conditions/LongTermRehabilitationGermany";
+import OrthopedicsGermany from "./pages/conditions/OrthopedicsGermany";
+import EntGermany from "./pages/conditions/EntGermany";
+import PediatricMedicineGermany from "./pages/conditions/PediatricMedicineGermany";
+import PediatricSurgeryGermany from "./pages/conditions/PediatricSurgeryGermany";
+import PediatricOrthopedicsGermany from "./pages/conditions/PediatricOrthopedicsGermany";
+import PediatricRehabilitationGermany from "./pages/conditions/PediatricRehabilitationGermany";
 
 // EN Rehabilitation Pages
 import AdvancedRehabilitationEN from "./pages/rehabilitation/AdvancedRehabilitationEN";
@@ -235,6 +241,12 @@ function Router() {
       <Route path={"/ar/neurological-rehabilitation-germany"} component={NeurologicalRehabilitationGermany} />
       <Route path={"/ar/second-medical-evaluation-germany"} component={SecondMedicalEvaluationGermany} />
       <Route path={"/ar/long-term-rehabilitation-germany"} component={LongTermRehabilitationGermany} />
+      <Route path={"/ar/orthopedics-germany"} component={OrthopedicsGermany} />
+      <Route path={"/ar/ent-germany"} component={EntGermany} />
+      <Route path={"/ar/pediatric-medicine-germany"} component={PediatricMedicineGermany} />
+      <Route path={"/ar/pediatric-surgery-germany"} component={PediatricSurgeryGermany} />
+      <Route path={"/ar/pediatric-orthopedics-germany"} component={PediatricOrthopedicsGermany} />
+      <Route path={"/ar/pediatric-rehabilitation-germany"} component={PediatricRehabilitationGermany} />
       {/* EN Rehabilitation Routes */}
       <Route path={"/en/advanced-rehabilitation-germany"} component={AdvancedRehabilitationEN} />
       <Route path={"/en/war-injury-rehabilitation-germany"} component={WarInjuryRehabilitationEN} />

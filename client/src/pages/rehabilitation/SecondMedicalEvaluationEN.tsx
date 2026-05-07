@@ -1,62 +1,155 @@
-import MedicalConditionPage from "@/components/MedicalConditionPage";
+/**
+ * /en/second-medical-evaluation-germany
+ * MCG Institutional Authority Page — Second Medical Evaluation in Germany
+ * Layout: MCG master system — dark navy hero, alternating sections, institutional footer
+ */
+
+const NAVY = "#0B1C2C";
+const NAVY_BORDER = "#1e3a52";
+const SLATE_BG = "#f8fafc";
+const MUTED = "#94a3b8";
+const BODY = "#475569";
+const WHITE = "#f8fafc";
 
 export default function SecondMedicalEvaluationEN() {
   return (
-    <MedicalConditionPage
-      metaTitle="Second Medical Evaluation in Germany | Independent Clinical Review"
-      metaDescription="Medical Care Germany coordinates independent second medical evaluations at German university hospitals for complex diagnoses, treatment plans, and surgical decisions."
-      canonicalPath="/en/second-medical-evaluation-germany"
-      headline="Second Medical Evaluation in Germany"
-      subtitle="Independent clinical review of complex diagnoses, treatment plans, and surgical decisions at German university hospitals."
-      introduction="A second medical evaluation provides an independent clinical review of a patient's diagnosis, treatment plan, or surgical recommendation. For complex cases involving significant diagnostic uncertainty, major surgical decisions, or treatment plans with substantial risk, an independent evaluation at a German university hospital provides access to specialist expertise and advanced diagnostic infrastructure. Medical Care Germany coordinates the preparation and submission of clinical documentation and the evaluation process at the relevant specialist centre."
-      aboutCondition="Second medical evaluations are appropriate for a wide range of clinical situations including diagnostic uncertainty in complex neurological, oncological, or orthopaedic conditions; review of surgical recommendations for high-risk procedures; assessment of treatment plans for chronic or progressive conditions; evaluation of cases where prior treatment has not produced the expected outcome; and review of rehabilitation plans for complex cases. The evaluation provides an independent clinical opinion based on a structured review of all available clinical documentation."
-      symptoms={[
-        "Diagnostic uncertainty in complex neurological, oncological, or orthopaedic condition",
-        "Major surgical recommendation requiring independent review",
-        "Treatment plan for chronic or progressive condition requiring specialist assessment",
-        "Unsatisfactory outcome following prior treatment or surgery",
-        "Complex rehabilitation case requiring independent programme evaluation",
-        "Government-sponsored or diplomatically referred case requiring independent clinical opinion"
-      ]}
-      causes="The need for a second medical evaluation arises from the inherent complexity of certain clinical situations. Diagnostic uncertainty may arise from atypical disease presentations, rare conditions, or conflicting prior investigations. Surgical recommendations for high-risk procedures warrant independent review to ensure that the proposed intervention is appropriately indicated and that alternative management options have been considered. Treatment plans for chronic or progressive conditions may benefit from independent assessment to ensure alignment with current evidence-based guidelines."
-      diagnosticProcess="Second medical evaluation begins with a comprehensive review of all available clinical documentation including clinical history, prior investigations, imaging, pathology reports, and treatment records. The specialist formulates an independent clinical opinion addressing the diagnostic formulation, treatment plan, and any recommendations for further investigation or management. Medical Care Germany coordinates the preparation and submission of documentation and the evaluation process."
-      treatmentOptions="Second medical evaluations at German university hospitals are conducted by specialist physicians with subspecialty expertise relevant to the patient's clinical condition. The evaluation may include review of imaging by specialist neuroradiologists, pathology review by specialist pathologists, and multidisciplinary team discussion where appropriate. The evaluation report provides a structured independent clinical opinion with specific recommendations."
-      treatmentList={[
-        "Independent diagnostic review for complex neurological conditions",
-        "Surgical recommendation review for high-risk neurosurgical or orthopaedic procedures",
-        "Oncological treatment plan independent assessment",
-        "Rehabilitation programme independent evaluation",
-        "Rare disease diagnostic evaluation",
-        "Complex trauma and war injury case review",
-        "Government-sponsored case independent clinical opinion",
-        "Multidisciplinary team review for complex cases"
-      ]}
-      whyGermany="German university hospitals provide access to specialist expertise across the full range of medical and surgical disciplines. The structured clinical governance framework, advanced diagnostic infrastructure, and multidisciplinary team organisation ensure that second medical evaluations are conducted with the rigour appropriate to complex clinical cases. Medical Care Germany coordinates access to the relevant specialist expertise for each case."
-      specialistEvaluation="Second medical evaluation at German university hospitals begins with a comprehensive review of all clinical documentation. The specialist formulates an independent clinical opinion addressing the diagnostic formulation, treatment plan, and management recommendations. The evaluation report is prepared in a structured format suitable for submission to the referring physician or institution."
-      patientPathway={[
-        "Submit complete clinical documentation including history, investigations, imaging, and prior treatment records",
-        "Clinical coordinator reviews documentation and identifies appropriate specialist for evaluation",
-        "Documentation submitted to specialist for independent review",
-        "Evaluation conducted with multidisciplinary input where appropriate",
-        "Structured evaluation report prepared and delivered",
-        "Follow-up coordination for recommended investigations or treatment"
-      ]}
-      relatedLinks={[
-        { href: "/en/advanced-rehabilitation-germany", label: "Advanced Rehabilitation" },
-        { href: "/en/neurological-rehabilitation-germany", label: "Neurological Rehabilitation" },
-        { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
-        { href: "/send-medical-reports", label: "Submit Medical Reports" },
-        { href: "/ar/second-medical-evaluation-germany", label: "النسخة العربية" }
-      ]}
-      structuredData={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Second Medical Evaluation in Germany",
-        "description": "Independent clinical review of complex diagnoses, treatment plans, and surgical decisions at German university hospitals.",
-        "url": "https://www.medicalcaregermany.com/en/second-medical-evaluation-germany",
-        "about": { "@type": "MedicalSpecialty", "name": "Internal Medicine" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
-      })}
-    />
+    <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <title>Second Medical Evaluation in Germany | Independent Clinical Second Opinion</title>
+      <meta name="description" content="Medical Care Germany coordinates independent second medical evaluations at German specialist centres for complex diagnoses, treatment decisions, and surgical planning." />
+      <link rel="canonical" href="https://www.medicalcaregermany.com/en/second-medical-evaluation-germany" />
+      <link rel="alternate" hrefLang="ar" href="https://www.medicalcaregermany.com/ar/second-medical-evaluation-germany" />
+      <link rel="alternate" hrefLang="de" href="https://www.medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland" />
+
+      <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
+        <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>
+      </div>
+
+      <nav style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
+        <div>
+          <a href="/" style={{ fontSize: 17, fontWeight: 600, color: NAVY, textDecoration: "none" }}>Medical Care Germany</a>
+          <p style={{ fontSize: 10, color: MUTED, margin: "2px 0 0", letterSpacing: "0.1em", textTransform: "uppercase" }}>Institutional Clinical Coordination Authority</p>
+        </div>
+        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <a href="/en/advanced-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
+          <a href="/ar/second-medical-evaluation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
+          <a href="/de/medizinische-zweitbewertung-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>Deutsch</a>
+          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
+        </div>
+      </nav>
+
+      <section style={{ background: NAVY, padding: "80px 24px 72px", textAlign: "center" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.18em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Medical Care Germany — Second Medical Evaluation</p>
+          <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Second Medical Evaluation in Germany</h1>
+          <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Structured coordination of independent second medical evaluations at German specialist centres.</p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Request Initial Assessment</a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "64px 24px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Complex medical decisions benefit from independent specialist evaluation</h2>
+          <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>A second medical evaluation provides an independent clinical assessment of a diagnosis, treatment recommendation, or surgical plan. For complex cases involving major surgery, oncological treatment, neurological conditions, or rare diagnoses, an independent evaluation at a German specialist centre may clarify the clinical picture and inform the treatment decision.</p>
+          <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany coordinates the preparation of clinical documentation and the submission to the relevant German specialist for independent evaluation, ensuring that the patient's case is reviewed within the appropriate clinical framework.</p>
+          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Initial Evaluation</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>Indication Types</p>
+          <h2 style={{ fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: NAVY, marginBottom: 40, textAlign: "center", lineHeight: 1.5 }}>Cases Reviewed for Second Evaluation</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+              <div key="Complex oncological diagnosis requiring independent review" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Complex oncological diagnosis requiring independent review</p>
+              </div>
+              <div key="Major surgical recommendation requiring confirmation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Major surgical recommendation requiring confirmation</p>
+              </div>
+              <div key="Neurological diagnosis with uncertain prognosis" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Neurological diagnosis with uncertain prognosis</p>
+              </div>
+              <div key="Rare or complex condition with limited local expertise" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Rare or complex condition with limited local expertise</p>
+              </div>
+              <div key="Conflicting medical opinions requiring resolution" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Conflicting medical opinions requiring resolution</p>
+              </div>
+              <div key="Treatment plan review prior to commencement" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Treatment plan review prior to commencement</p>
+              </div>
+              <div key="Post-treatment assessment and outcome evaluation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Post-treatment assessment and outcome evaluation</p>
+              </div>
+              <div key="Rehabilitation plan review and optimisation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Rehabilitation plan review and optimisation</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 24, lineHeight: 1.55 }}>Documentation required for second evaluation</h2>
+            <div key="Complete medical history and prior investigation reports" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Complete medical history and prior investigation reports</p>
+            </div>
+            <div key="Current imaging: MRI, CT, PET-CT as relevant" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Current imaging: MRI, CT, PET-CT as relevant</p>
+            </div>
+            <div key="Pathology and laboratory reports" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Pathology and laboratory reports</p>
+            </div>
+            <div key="Prior treatment summary and response assessment" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Prior treatment summary and response assessment</p>
+            </div>
+            <div key="Current clinical question or decision requiring evaluation" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Current clinical question or decision requiring evaluation</p>
+            </div>
+            <div key="Referring physician summary" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Referring physician summary</p>
+            </div>
+          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "56px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Related Pages</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              <a key="/en/advanced-rehabilitation-germany" href="/en/advanced-rehabilitation-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Advanced Rehabilitation Hub</a>
+              <a key="/en/neurological-rehabilitation-germany" href="/en/neurological-rehabilitation-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Neurological Rehabilitation</a>
+              <a key="/en/long-term-rehabilitation-germany" href="/en/long-term-rehabilitation-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Long-Term Rehabilitation</a>
+              <a key="/ar/second-medical-evaluation-germany" href="/ar/second-medical-evaluation-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>النسخة العربية</a>
+              <a key="/de/medizinische-zweitbewertung-deutschland" href="/de/medizinische-zweitbewertung-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Deutsche Version</a>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ background: NAVY, padding: "48px 24px 32px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", borderTop: `1px solid ${NAVY_BORDER}`, paddingTop: 24, textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#475569" }}>Operating within established clinical coordination frameworks.</p>
+          <p style={{ fontSize: 11, color: "#334155", marginTop: 6 }}>Medical Care Germany · Berlin, Germany</p>
+        </div>
+      </footer>
+
+    </div>
   );
 }

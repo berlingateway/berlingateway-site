@@ -1,62 +1,153 @@
-import MedicalConditionPage from "@/components/MedicalConditionPage";
+/**
+ * /de/prothetik-deutschland
+ * MCG Institutional Authority Page — Prothetik in Deutschland
+ * Layout: MCG master system — dark navy hero, alternating sections, institutional footer
+ */
+
+const NAVY = "#0B1C2C";
+const NAVY_BORDER = "#1e3a52";
+const SLATE_BG = "#f8fafc";
+const MUTED = "#94a3b8";
+const BODY = "#475569";
+const WHITE = "#f8fafc";
 
 export default function ProstheticsDE() {
   return (
-    <MedicalConditionPage
-      metaTitle="Prothetik in Deutschland | Fortschrittliche Prothesenversorgung und Rehabilitation"
-      metaDescription="Medical Care Germany koordiniert Prothesenversorgung, Anpassung und Rehabilitationszugang in deutschen Fachzentren für Prothetik und Rehabilitation."
-      canonicalPath="/de/prothetik-deutschland"
-      headline="Prothetik in Deutschland"
-      subtitle="Koordinierter Zugang zu spezialisierter Prothesenversorgung und funktionellen Rehabilitationsprogrammen."
-      introduction="Die Prothesenrehabilitation nach Amputation erfordert spezialisiertes Fachwissen in Prothesentechnologie, Anpassung und Funktionstraining. Deutsche Prothetikunternehmen und Rehabilitationseinrichtungen bieten Zugang zu fortschrittlichen Prothesensystemen einschließlich mikroprozessorgesteuerter Unterschenkelprothesen, myoelektrischer Armprothesen und Osseointegrations-verfahren. Medical Care Germany koordiniert Bewertung, Anpassung und Rehabilitationszugang für internationale Patienten."
-      aboutCondition="Die Prothesenrehabilitation adressiert die funktionelle Erholung von Patienten nach Amputation auf jeder Ebene der oberen oder unteren Extremität. Der Prothesenrehabilitations-prozess umfasst Stumpfbeurteilung und -vorbereitung, Prothesenverordnung und -anpassung, Funktionstraining und Langzeitnachsorge. Fortschrittliche Prothesen-technologien einschließlich mikroprozessorgesteuerter Kniegelenke, bionischer Hände und Osseointegrations-implantate sind in deutschen Fachzentren verfügbar."
-      symptoms={[
-        "Unterschenkelamputation auf jeder Ebene mit Bedarf an Prothesenversorgung",
-        "Armamputation mit Bedarf an myoelektrischer oder körperbetriebener Prothese",
-        "Beidseitige Amputation mit Bedarf an komplexer Prothesenrehabilitation",
-        "Unbefriedigender Ausgang mit früherer Prothesenversorgung",
-        "Stumpfkomplikationen mit Bedarf an Revision vor Prothesenversorgung",
-        "Osseointegrationsbeurteilung für direkte Skelettbefestigung"
-      ]}
-      causes="Amputationen entstehen durch Gefäßerkrankungen, Diabetes, Trauma, Kriegsverletzungen, Tumorresektionen oder angeborene Gliedmaßenfehlbildungen. Traumatische und kriegsbedingte Amputationen betreffen typischerweise jüngere Patienten mit höheren funktionellen Zielen und größerem Rehabilitationspotenzial. Vaskuläre und diabetische Amputationen betreffen typischerweise ältere Patienten mit Komorbiditäten, die eine sorgfältige Prothesenverordnung erfordern."
-      diagnosticProcess="Die Prothesenbeurteilung beginnt mit einer umfassenden Beurteilung des Stumpfes, einschließlich Wundheilungsstatus, Hautzustand, Volumensstabilität und Restgliedlänge. Die Beurteilung bewertet auch die funktionellen Ziele, das Aktivitätsniveau und das Rehabilitationspotenzial des Patienten. Medical Care Germany koordiniert die Vorbereitung der klinischen Dokumentation und die Vorabbeurteilung im zuständigen Prothetikunternehmen."
-      treatmentOptions="Prothesendienstleistungen in Deutschland umfassen das gesamte Spektrum an Prothesentechnologien und Rehabilitationsansätzen. Untere Extremitätenprothetik umfasst mikroprozessorgesteuerte Kniegelenke, energiespeichernde Karbonfußprothesen und Osseointegrations-systeme. Obere Extremitätenprothetik umfasst myoelektrische Hände, aktivitätsspezifische Endglieder und Teilhandprothesen."
-      treatmentList={[
-        "Mikroprozessorgesteuerte Unterschenkelprothesen-Anpassung und -Training",
-        "Myoelektrische Armprothesen-Anpassung und Funktionstraining",
-        "Osseointegrations-Beurteilung und Implantatverfahren-Koordination",
-        "Beidseitige Amputations-Prothesenrehabilitations-programm",
-        "Stumpfrevision und -vorbereitung vor Prothesenversorgung",
-        "Pädiatrische Prothesenversorgung und Rehabilitation",
-        "Sport- und aktivitätsspezifische Prothesenlösungen",
-        "Langfristige Prothesenbetreuung und Komponentenaustausch-Koordination"
-      ]}
-      whyGermany="Deutschland verfügt über eine hochentwickelte Prothetikindustrie mit Fachzentren, die Zugang zu fortschrittlichen Prothesensystemen und strukturierten Rehabilitationsprogrammen bieten. Deutsche Prothetikunternehmen sind mit dem gesamten Spektrum aktueller Prothesensysteme ausgestattet und verfügen über klinische Teams mit spezialisiertem Fachwissen in komplexen Fällen."
-      specialistEvaluation="Die Prothesenbeurteilung in deutschen Fachzentren beginnt mit einer umfassenden Stumpfbeurteilung und Funktionsevaluation. Der Prothetiker und Rehabilitationsmediziner formulieren eine Prothesenverordnung und einen Rehabilitationsprogrammplan. Medical Care Germany koordiniert die Dokumentationsvorbereitung, Zentrumsauswahl und Terminplanung."
-      patientPathway={[
-        "Einreichung von Amputationsberichten, Stumpfbeurteilungen und früherer Prothesengeschichte",
-        "Klinischer Koordinator prüft Dokumentation und identifiziert geeignetes Prothetikunternehmen",
-        "Spezialisierter Prothesenbeurteilungstermin koordiniert",
-        "Prothesenverordnung und Rehabilitationsprogramm formuliert",
-        "Anpassung und Funktionstraining-Programm begonnen",
-        "Laufende Nachsorge und Komponentenanpassung koordiniert"
-      ]}
-      relatedLinks={[
-        { href: "/de/rehabilitation-deutschland", label: "Rehabilitation in Deutschland" },
-        { href: "/de/rehabilitation-kriegsverletzungen-deutschland", label: "Rehabilitation bei Kriegsverletzungen" },
-        { href: "/de/medizinische-zweitbewertung-deutschland", label: "Medizinische Zweitbewertung" },
-        { href: "/en/prosthetics-germany", label: "English Version" },
-        { href: "/ar/prosthetics-germany", label: "النسخة العربية" }
-      ]}
-      structuredData={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Prothetik in Deutschland",
-        "description": "Koordinierter Zugang zu spezialisierter Prothesenversorgung und funktionellen Rehabilitationsprogrammen in Deutschland.",
-        "url": "https://www.medicalcaregermany.com/de/prothetik-deutschland",
-        "about": { "@type": "MedicalSpecialty", "name": "Physikalische Medizin und Rehabilitation" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
-      })}
-    />
+    <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <title>Prothetik Deutschland | Prothesenversorgung und funktionelle Rehabilitation</title>
+      <meta name="description" content="Medical Care Germany koordiniert den Zugang zu fortgeschrittener Prothesenversorgung und funktioneller Rehabilitation in deutschen Fachzentren." />
+      <link rel="canonical" href="https://www.medicalcaregermany.com/de/prothetik-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/prosthetics-germany" />
+
+      <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
+        <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>
+      </div>
+
+      <nav style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
+        <div>
+          <a href="/" style={{ fontSize: 17, fontWeight: 600, color: NAVY, textDecoration: "none" }}>Medical Care Germany</a>
+          <p style={{ fontSize: 10, color: MUTED, margin: "2px 0 0", letterSpacing: "0.1em", textTransform: "uppercase" }}>Institutional Clinical Coordination Authority</p>
+        </div>
+        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <a href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
+          <a href="/ar/prosthetics-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
+          <a href="/en/prosthetics-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>English</a>
+          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+        </div>
+      </nav>
+
+      <section style={{ background: NAVY, padding: "80px 24px 72px", textAlign: "center" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.18em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Medical Care Germany — Prothetik & Funktionelle Rehabilitation</p>
+          <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Prothetik in Deutschland</h1>
+          <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Strukturierte Koordination der Prothesenversorgung, funktionellen Rehabilitation und Mobilitätswiederherstellung.</p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Erstbewertung anfordern</a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "64px 24px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Prothesenrehabilitation erfordert klinische Präzision und funktionelles Training</h2>
+          <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>Erfolgreiche Prothesenrehabilitation geht über die Versorgung hinaus und umfasst funktionelles Training, Gangrehabilitation, Ergotherapie und psychologische Anpassung. Deutsche Prothetikzentren bieten integrierte Programme.</p>
+          <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany koordiniert den Zugang zu spezialisierten Prothesenrehabilitationsprogrammen für internationale Patienten und staatlich geförderte Fälle.</p>
+          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Erstbewertung einreichen</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>Falltypen</p>
+          <h2 style={{ fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: NAVY, marginBottom: 40, textAlign: "center", lineHeight: 1.5 }}>Prothesenrehabilitationsfälle</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+              <div key="Unterschenkel- und Oberschenkelamputation: Prothesenversorgung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Unterschenkel- und Oberschenkelamputation: Prothesenversorgung</p>
+              </div>
+              <div key="Armamputation: myoelektrische und körperbetriebene Prothesen" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Armamputation: myoelektrische und körperbetriebene Prothesen</p>
+              </div>
+              <div key="Beidseitige Amputationsrehabilitation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Beidseitige Amputationsrehabilitation</p>
+              </div>
+              <div key="Kriegsverletzungs- und traumabedingte Amputationsprothetik" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Kriegsverletzungs- und traumabedingte Amputationsprothetik</p>
+              </div>
+              <div key="Teilfuß- und Teilhandprothesen" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Teilfuß- und Teilhandprothesen</p>
+              </div>
+              <div key="Pädiatrische Prothetik und wachstumsangepasste Versorgung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Pädiatrische Prothetik und wachstumsangepasste Versorgung</p>
+              </div>
+              <div key="Prothesenrevision nach erfolgloser Vorversorgung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Prothesenrevision nach erfolgloser Vorversorgung</p>
+              </div>
+              <div key="Fortgeschrittene robotergestützte und mikroprozessorgesteuerte Prothesen" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Fortgeschrittene robotergestützte und mikroprozessorgesteuerte Prothesen</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 24, lineHeight: 1.55 }}>Unterlagen für die Erstbewertung</h2>
+            <div key="Amputationsniveau und Operationsbericht" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Amputationsniveau und Operationsbericht</p>
+            </div>
+            <div key="Aktuelle Stumpfzustandsbewertung" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Aktuelle Stumpfzustandsbewertung</p>
+            </div>
+            <div key="Frühere Prothesenversorgung falls vorhanden" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Frühere Prothesenversorgung falls vorhanden</p>
+            </div>
+            <div key="Funktionsbewertung und Mobilitätsziele" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Funktionsbewertung und Mobilitätsziele</p>
+            </div>
+            <div key="Bildgebung des Restgliedes falls relevant" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Bildgebung des Restgliedes falls relevant</p>
+            </div>
+            <div key="Überweisungsschreiben" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Überweisungsschreiben</p>
+            </div>
+          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Bewertung einreichen</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "56px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Verwandte Seiten</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              <a key="/de/rehabilitation-deutschland" href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Rehabilitation Hub</a>
+              <a key="/de/rehabilitation-kriegsverletzungen-deutschland" href="/de/rehabilitation-kriegsverletzungen-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Rehabilitation Kriegsverletzungen</a>
+              <a key="/de/neurologische-rehabilitation-deutschland" href="/de/neurologische-rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Neurologische Rehabilitation</a>
+              <a key="/en/prosthetics-germany" href="/en/prosthetics-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>English Version</a>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ background: NAVY, padding: "48px 24px 32px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", borderTop: `1px solid ${NAVY_BORDER}`, paddingTop: 24, textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#475569" }}>Tätig innerhalb etablierter klinischer Koordinationsrahmen.</p>
+          <p style={{ fontSize: 11, color: "#334155", marginTop: 6 }}>Medical Care Germany · Berlin, Deutschland</p>
+        </div>
+      </footer>
+
+    </div>
   );
 }

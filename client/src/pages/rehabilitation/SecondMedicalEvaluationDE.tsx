@@ -1,62 +1,153 @@
-import MedicalConditionPage from "@/components/MedicalConditionPage";
+/**
+ * /de/medizinische-zweitbewertung-deutschland
+ * MCG Institutional Authority Page — Medizinische Zweitbewertung in Deutschland
+ * Layout: MCG master system — dark navy hero, alternating sections, institutional footer
+ */
+
+const NAVY = "#0B1C2C";
+const NAVY_BORDER = "#1e3a52";
+const SLATE_BG = "#f8fafc";
+const MUTED = "#94a3b8";
+const BODY = "#475569";
+const WHITE = "#f8fafc";
 
 export default function SecondMedicalEvaluationDE() {
   return (
-    <MedicalConditionPage
-      metaTitle="Medizinische Zweitbewertung in Deutschland | Unabhängige klinische Begutachtung"
-      metaDescription="Medical Care Germany koordiniert unabhängige medizinische Zweitbewertungen in deutschen Universitätskliniken für komplexe Diagnosen, Behandlungspläne und chirurgische Entscheidungen."
-      canonicalPath="/de/medizinische-zweitbewertung-deutschland"
-      headline="Medizinische Zweitbewertung in Deutschland"
-      subtitle="Unabhängige klinische Begutachtung komplexer Diagnosen, Behandlungspläne und chirurgischer Entscheidungen in deutschen Universitätskliniken."
-      introduction="Eine medizinische Zweitbewertung bietet eine unabhängige klinische Überprüfung der Diagnose, des Behandlungsplans oder der chirurgischen Empfehlung eines Patienten. Für komplexe Fälle mit erheblicher diagnostischer Unsicherheit, bedeutenden chirurgischen Entscheidungen oder Behandlungsplänen mit erheblichem Risiko bietet eine unabhängige Bewertung in einer deutschen Universitätsklinik Zugang zu spezialisiertem Fachwissen und fortschrittlicher diagnostischer Infrastruktur."
-      aboutCondition="Medizinische Zweitbewertungen sind für ein breites Spektrum klinischer Situationen geeignet, einschließlich diagnostischer Unsicherheit bei komplexen neurologischen, onkologischen oder orthopädischen Erkrankungen; Überprüfung chirurgischer Empfehlungen für Hochrisikoverfahren; Beurteilung von Behandlungsplänen für chronische oder progressive Erkrankungen; Bewertung von Fällen, bei denen frühere Behandlungen nicht das erwartete Ergebnis erzielt haben; und Überprüfung von Rehabilitationsplänen für komplexe Fälle."
-      symptoms={[
-        "Diagnostische Unsicherheit bei komplexer neurologischer, onkologischer oder orthopädischer Erkrankung",
-        "Bedeutende chirurgische Empfehlung mit Bedarf an unabhängiger Überprüfung",
-        "Behandlungsplan für chronische oder progressive Erkrankung mit Bedarf an Fachbeurteilung",
-        "Unbefriedigender Ausgang nach früherer Behandlung oder Operation",
-        "Komplexer Rehabilitationsfall mit Bedarf an unabhängiger Programmbewertung",
-        "Staatlich geförderter oder diplomatisch überwiesener Fall mit Bedarf an unabhängiger klinischer Meinung"
-      ]}
-      causes="Der Bedarf an einer medizinischen Zweitbewertung ergibt sich aus der inhärenten Komplexität bestimmter klinischer Situationen. Diagnostische Unsicherheit kann durch atypische Krankheitsverläufe, seltene Erkrankungen oder widersprüchliche frühere Untersuchungen entstehen. Chirurgische Empfehlungen für Hochrisikoverfahren rechtfertigen eine unabhängige Überprüfung, um sicherzustellen, dass der vorgeschlagene Eingriff angemessen indiziert ist und alternative Behandlungsoptionen berücksichtigt wurden."
-      diagnosticProcess="Die medizinische Zweitbewertung beginnt mit einer umfassenden Überprüfung aller verfügbaren klinischen Dokumentation einschließlich Krankengeschichte, früherer Untersuchungen, Bildgebung, Pathologieberichte und Behandlungsunterlagen. Der Spezialist formuliert eine unabhängige klinische Meinung, die die diagnostische Formulierung, den Behandlungsplan und Empfehlungen für weitere Untersuchungen oder Behandlungen adressiert."
-      treatmentOptions="Medizinische Zweitbewertungen in deutschen Universitätskliniken werden von Fachärzten mit Subspezialitätskompetenz durchgeführt, die für den klinischen Zustand des Patienten relevant ist. Die Bewertung kann eine Überprüfung der Bildgebung durch spezialisierte Neuroradiologen, eine Pathologieüberprüfung durch spezialisierte Pathologen und eine multidisziplinäre Teamdiskussion umfassen."
-      treatmentList={[
-        "Unabhängige diagnostische Überprüfung für komplexe neurologische Erkrankungen",
-        "Chirurgische Empfehlungsüberprüfung für Hochrisiko-Neurochirurgie oder orthopädische Eingriffe",
-        "Onkologische Behandlungsplan-Unabhängigkeitsbewertung",
-        "Rehabilitationsprogramm-Unabhängigkeitsevaluation",
-        "Seltene Erkrankungen diagnostische Bewertung",
-        "Komplexe Trauma- und Kriegsverletzungsfall-Überprüfung",
-        "Staatlich geförderter Fall unabhängige klinische Meinung",
-        "Multidisziplinäre Teamüberprüfung für komplexe Fälle"
-      ]}
-      whyGermany="Deutsche Universitätskliniken bieten Zugang zu spezialisiertem Fachwissen in allen medizinischen und chirurgischen Disziplinen. Der strukturierte klinische Governance-Rahmen, die fortschrittliche diagnostische Infrastruktur und die multidisziplinäre Teamorganisation gewährleisten, dass medizinische Zweitbewertungen mit der für komplexe klinische Fälle angemessenen Strenge durchgeführt werden."
-      specialistEvaluation="Die medizinische Zweitbewertung in deutschen Universitätskliniken beginnt mit einer umfassenden Überprüfung aller klinischen Dokumentation. Der Spezialist formuliert eine unabhängige klinische Meinung, die die diagnostische Formulierung, den Behandlungsplan und Behandlungsempfehlungen adressiert. Der Bewertungsbericht wird in einem strukturierten Format erstellt, das für die Einreichung beim überweisenden Arzt oder der überweisenden Institution geeignet ist."
-      patientPathway={[
-        "Einreichung vollständiger klinischer Dokumentation einschließlich Anamnese, Untersuchungen, Bildgebung und früherer Behandlungsunterlagen",
-        "Klinischer Koordinator prüft Dokumentation und identifiziert geeigneten Spezialisten für die Bewertung",
-        "Dokumentation zur unabhängigen Überprüfung an Spezialisten weitergeleitet",
-        "Bewertung mit multidisziplinärem Input durchgeführt",
-        "Strukturierter Bewertungsbericht erstellt und zugestellt",
-        "Nachsorge-Koordination für empfohlene Untersuchungen oder Behandlungen"
-      ]}
-      relatedLinks={[
-        { href: "/de/rehabilitation-deutschland", label: "Rehabilitation in Deutschland" },
-        { href: "/de/neurologische-rehabilitation-deutschland", label: "Neurologische Rehabilitation" },
-        { href: "/de/spinale-rehabilitation-deutschland", label: "Spinale Rehabilitation" },
-        { href: "/en/second-medical-evaluation-germany", label: "English Version" },
-        { href: "/ar/second-medical-evaluation-germany", label: "النسخة العربية" }
-      ]}
-      structuredData={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Medizinische Zweitbewertung in Deutschland",
-        "description": "Unabhängige klinische Begutachtung komplexer Diagnosen, Behandlungspläne und chirurgischer Entscheidungen in deutschen Universitätskliniken.",
-        "url": "https://www.medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland",
-        "about": { "@type": "MedicalSpecialty", "name": "Innere Medizin" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
-      })}
-    />
+    <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <title>Medizinische Zweitbewertung Deutschland | Unabhängige klinische Zweitmeinung</title>
+      <meta name="description" content="Medical Care Germany koordiniert unabhängige medizinische Zweitbewertungen in deutschen Fachzentren für komplexe Diagnosen, Behandlungsentscheidungen und Operationsplanung." />
+      <link rel="canonical" href="https://www.medicalcaregermany.com/de/medizinische-zweitbewertung-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/second-medical-evaluation-germany" />
+
+      <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
+        <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>
+      </div>
+
+      <nav style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
+        <div>
+          <a href="/" style={{ fontSize: 17, fontWeight: 600, color: NAVY, textDecoration: "none" }}>Medical Care Germany</a>
+          <p style={{ fontSize: 10, color: MUTED, margin: "2px 0 0", letterSpacing: "0.1em", textTransform: "uppercase" }}>Institutional Clinical Coordination Authority</p>
+        </div>
+        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <a href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
+          <a href="/ar/second-medical-evaluation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
+          <a href="/en/second-medical-evaluation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>English</a>
+          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+        </div>
+      </nav>
+
+      <section style={{ background: NAVY, padding: "80px 24px 72px", textAlign: "center" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.18em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Medical Care Germany — Medizinische Zweitbewertung</p>
+          <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Medizinische Zweitbewertung in Deutschland</h1>
+          <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Strukturierte Koordination unabhängiger medizinischer Zweitbewertungen in deutschen Fachzentren.</p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Erstbewertung anfordern</a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "64px 24px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Komplexe medizinische Entscheidungen profitieren von unabhängiger Fachbewertung</h2>
+          <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>Eine medizinische Zweitbewertung bietet eine unabhängige klinische Beurteilung einer Diagnose, Behandlungsempfehlung oder eines Operationsplans. Für komplexe Fälle mit großen Operationen, onkologischer Behandlung oder seltenen Diagnosen kann eine unabhängige Bewertung das klinische Bild klären.</p>
+          <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany koordiniert die Vorbereitung der klinischen Dokumentation und die Einreichung beim zuständigen deutschen Spezialisten für eine unabhängige Bewertung.</p>
+          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Erstbewertung einreichen</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>Indikationstypen</p>
+          <h2 style={{ fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: NAVY, marginBottom: 40, textAlign: "center", lineHeight: 1.5 }}>Fälle für Zweitbewertung</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+              <div key="Komplexe onkologische Diagnose zur unabhängigen Überprüfung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Komplexe onkologische Diagnose zur unabhängigen Überprüfung</p>
+              </div>
+              <div key="Große chirurgische Empfehlung zur Bestätigung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Große chirurgische Empfehlung zur Bestätigung</p>
+              </div>
+              <div key="Neurologische Diagnose mit unsicherer Prognose" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Neurologische Diagnose mit unsicherer Prognose</p>
+              </div>
+              <div key="Seltene oder komplexe Erkrankung mit begrenzter lokaler Expertise" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Seltene oder komplexe Erkrankung mit begrenzter lokaler Expertise</p>
+              </div>
+              <div key="Widersprüchliche medizinische Meinungen zur Klärung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Widersprüchliche medizinische Meinungen zur Klärung</p>
+              </div>
+              <div key="Behandlungsplanüberprüfung vor Beginn" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Behandlungsplanüberprüfung vor Beginn</p>
+              </div>
+              <div key="Nachbehandlungsbewertung und Ergebnisbeurteilung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Nachbehandlungsbewertung und Ergebnisbeurteilung</p>
+              </div>
+              <div key="Rehabilitationsplanüberprüfung und -optimierung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Rehabilitationsplanüberprüfung und -optimierung</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 24, lineHeight: 1.55 }}>Unterlagen für die Zweitbewertung</h2>
+            <div key="Vollständige Krankengeschichte und frühere Untersuchungsberichte" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Vollständige Krankengeschichte und frühere Untersuchungsberichte</p>
+            </div>
+            <div key="Aktuelle Bildgebung: MRT, CT, PET-CT" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Aktuelle Bildgebung: MRT, CT, PET-CT</p>
+            </div>
+            <div key="Pathologie- und Laborberichte" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Pathologie- und Laborberichte</p>
+            </div>
+            <div key="Frühere Behandlungszusammenfassung und Ansprechen" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Frühere Behandlungszusammenfassung und Ansprechen</p>
+            </div>
+            <div key="Aktuelle klinische Frage oder Entscheidung" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Aktuelle klinische Frage oder Entscheidung</p>
+            </div>
+            <div key="Überweisungsschreiben" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Überweisungsschreiben</p>
+            </div>
+          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Bewertung einreichen</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "56px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Verwandte Seiten</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              <a key="/de/rehabilitation-deutschland" href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Rehabilitation Hub</a>
+              <a key="/de/neurologische-rehabilitation-deutschland" href="/de/neurologische-rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Neurologische Rehabilitation</a>
+              <a key="/de/langzeit-rehabilitation-deutschland" href="/de/langzeit-rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Langzeit-Rehabilitation</a>
+              <a key="/en/second-medical-evaluation-germany" href="/en/second-medical-evaluation-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>English Version</a>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ background: NAVY, padding: "48px 24px 32px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", borderTop: `1px solid ${NAVY_BORDER}`, paddingTop: 24, textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#475569" }}>Tätig innerhalb etablierter klinischer Koordinationsrahmen.</p>
+          <p style={{ fontSize: 11, color: "#334155", marginTop: 6 }}>Medical Care Germany · Berlin, Deutschland</p>
+        </div>
+      </footer>
+
+    </div>
   );
 }

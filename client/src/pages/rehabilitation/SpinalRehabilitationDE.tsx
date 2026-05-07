@@ -1,63 +1,153 @@
-import MedicalConditionPage from "@/components/MedicalConditionPage";
+/**
+ * /de/spinale-rehabilitation-deutschland
+ * MCG Institutional Authority Page — Spinale Rehabilitation in Deutschland
+ * Layout: MCG master system — dark navy hero, alternating sections, institutional footer
+ */
+
+const NAVY = "#0B1C2C";
+const NAVY_BORDER = "#1e3a52";
+const SLATE_BG = "#f8fafc";
+const MUTED = "#94a3b8";
+const BODY = "#475569";
+const WHITE = "#f8fafc";
 
 export default function SpinalRehabilitationDE() {
   return (
-    <MedicalConditionPage
-      metaTitle="Spinale Rehabilitation in Deutschland | Rückenmarksverletzung und Wirbelsäulenrehabilitation"
-      metaDescription="Medical Care Germany koordiniert spinale Rehabilitationsbewertung und Zugangswege in deutschen Fachzentren für Rückenmarksverletzungen und komplexe Wirbelsäulenerkrankungen."
-      canonicalPath="/de/spinale-rehabilitation-deutschland"
-      headline="Spinale Rehabilitation in Deutschland"
-      subtitle="Strukturierte Koordination von Rückenmarksverletzungs-Rehabilitation und komplexen Wirbelsäulenerholungswegen."
-      introduction="Rückenmarksverletzungen und komplexe Wirbelsäulenerkrankungen erfordern spezialisierte Rehabilitationsprogramme in dedizierten Wirbelsäulenrehabilitationszentren. Deutsche Wirbelsäulenrehabilitationszentren bieten strukturierte stationäre Rehabilitationsprogramme für Patienten mit akuten und chronischen Rückenmarksverletzungen, postoperativen Wirbelsäulenrehabilitations-anforderungen und komplexen Wirbelsäulenschmerzerkrankungen."
-      aboutCondition="Die spinale Rehabilitation adressiert die funktionellen Folgen von Rückenmarksverletzungen auf jeder Ebene, einschließlich Tetraplegie, Paraplegie und inkompletter Rückenmarksverletzungssyndrome. Das Rehabilitationsprogramm adressiert motorische Funktion, sensorische Funktion, Blasen- und Darmmanagement, Atemfunktion, Hautintegrität, Schmerzmanagement und psychologische Anpassung."
-      symptoms={[
-        "Inkomplette oder vollständige Rückenmarksverletzung nach Trauma oder Erkrankung",
-        "Funktionelle Beeinträchtigung nach Wirbelsäulenoperation",
-        "Spastik, Kontrakturen oder chronische Schmerzen nach Rückenmarksverletzung",
-        "Blasen-, Darm- oder Atemkomplikationen bei Rückenmarksverletzung",
-        "Unvollständige neurologische Erholung nach früherer Rehabilitation",
-        "Komplexe Wirbelsäulenschmerzen mit Bedarf an strukturiertem Rehabilitationsprogramm"
-      ]}
-      causes="Rückenmarksverletzungen entstehen durch traumatische Ursachen einschließlich Verkehrsunfälle, Stürze, Sportverletzungen und Kriegsverletzungen sowie nicht-traumatische Ursachen einschließlich Wirbelsäulentumoren, vaskuläre Ereignisse, entzündliche Erkrankungen und degenerative Erkrankungen. Postoperative Wirbelsäulenrehabilitation adressiert die Erholungsanforderungen nach größeren Wirbelsäuleneingriffen."
-      diagnosticProcess="Die spinale Rehabilitationsbewertung beginnt mit einer umfassenden neurologischen Untersuchung unter Verwendung der ASIA-Beeinträchtigungsskala, funktioneller Bewertung mit validierten Ergebnismaßen und Überprüfung von Bildgebung und chirurgischen Berichten. Medical Care Germany koordiniert die Vorbereitung der klinischen Dokumentation und die Vorabbeurteilung im zuständigen Wirbelsäulenrehabilitationszentrum."
-      treatmentOptions="Spinale Rehabilitationsprogramme in Deutschland werden von spezialisierten multidisziplinären Teams durchgeführt, einschließlich Rehabilitationsmediziner, Physiotherapeuten, Ergotherapeuten, auf Rückenmarksverletzungen spezialisierten Pflegepersonal, Neuropsychologen und Sozialarbeitern. Programme beinhalten fortschrittliche Rehabilitationstechnologien einschließlich robotergestützter Gangtrainingssysteme, funktioneller Elektrostimulation und Exoskelett-unterstütztem Gehen."
-      treatmentList={[
-        "Akutes Rückenmarksverletzungs-Stationärrehabilitationsprogramm",
-        "Chronisches Rückenmarksverletzungs-Funktionsverbesserungsprogramm",
-        "Postoperative Wirbelsäulenrehabilitation",
-        "Robotergestütztes Gangtraining und Exoskelett-Rehabilitation",
-        "Funktionelle Elektrostimulation zur motorischen Erholung",
-        "Blasen- und Darmmanagement-Programm",
-        "Spastikmanagement einschließlich intrathekaler Baclofen-Pumpe",
-        "Langfristige Wirbelsäulenrehabilitations-Planung und Nachsorge"
-      ]}
-      whyGermany="Deutschland verfügt über spezialisierte Wirbelsäulenrehabilitationszentren mit dedizierten Programmen für akute und chronische Rückenmarksverletzungen. Diese Zentren sind mit fortschrittlichen Rehabilitationstechnologien ausgestattet und verfügen über multidisziplinäre Teams mit spezialisiertem Fachwissen im Rückenmarksverletzungsmanagement."
-      specialistEvaluation="Die spinale Rehabilitationsbewertung in deutschen Fachzentren beginnt mit einer umfassenden neurologischen und funktionellen Beurteilung. Der Rehabilitationsmediziner formuliert einen strukturierten Programmplan, der das gesamte Spektrum der Rückenmarksverletzungsfolgen adressiert. Medical Care Germany koordiniert die Dokumentationsvorbereitung, Zentrumsauswahl und den Aufnahmeprozess."
-      patientPathway={[
-        "Einreichung von Rückenmarksverletzungsberichten, Bildgebung, chirurgischen Berichten und früherer Rehabilitationsdokumentation",
-        "Klinischer Koordinator prüft Dokumentation und identifiziert geeigneten spinalen Rehabilitationsweg",
-        "Koordination der Vorabbeurteilung im Fachwirbelsäulenrehabilitationszentrum",
-        "Multidisziplinärer Programmplan formuliert",
-        "Aufnahme und Programmbeginn koordiniert",
-        "Laufende Verbindung mit Rehabilitationsteam und überweisenden Ärzten"
-      ]}
-      relatedLinks={[
-        { href: "/de/rehabilitation-deutschland", label: "Rehabilitation in Deutschland" },
-        { href: "/de/neurologische-rehabilitation-deutschland", label: "Neurologische Rehabilitation" },
-        { href: "/de/medizinische-zweitbewertung-deutschland", label: "Medizinische Zweitbewertung" },
-        { href: "/de/langzeit-rehabilitation-deutschland", label: "Langzeitrehabilitation" },
-        { href: "/en/spinal-rehabilitation-germany", label: "English Version" },
-        { href: "/ar/spinal-rehabilitation-germany", label: "النسخة العربية" }
-      ]}
-      structuredData={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Spinale Rehabilitation in Deutschland",
-        "description": "Strukturierte Koordination von Rückenmarksverletzungs-Rehabilitation und komplexen Wirbelsäulenerholungswegen.",
-        "url": "https://www.medicalcaregermany.com/de/spinale-rehabilitation-deutschland",
-        "about": { "@type": "MedicalSpecialty", "name": "Physikalische Medizin und Rehabilitation" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
-      })}
-    />
+    <div style={{ background: "#fff", color: NAVY, fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+      <title>Spinale Rehabilitation Deutschland | Rückenmarksrehabilitation Koordination</title>
+      <meta name="description" content="Medical Care Germany koordiniert strukturierte spinale Rehabilitationspfade für Rückenmarksverletzungen und komplexe Wirbelsäulenerkrankungen in deutschen Fachzentren." />
+      <link rel="canonical" href="https://www.medicalcaregermany.com/de/spinale-rehabilitation-deutschland" />
+      <link rel="alternate" hrefLang="en" href="https://www.medicalcaregermany.com/en/spinal-rehabilitation-germany" />
+
+      <div style={{ background: NAVY, padding: "10px 24px", textAlign: "center" }}>
+        <a href="mailto:info@medicalcaregermany.com" style={{ fontSize: 12, color: MUTED, textDecoration: "none" }}>info@medicalcaregermany.com</a>
+      </div>
+
+      <nav style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 50 }}>
+        <div>
+          <a href="/" style={{ fontSize: 17, fontWeight: 600, color: NAVY, textDecoration: "none" }}>Medical Care Germany</a>
+          <p style={{ fontSize: 10, color: MUTED, margin: "2px 0 0", letterSpacing: "0.1em", textTransform: "uppercase" }}>Institutional Clinical Coordination Authority</p>
+        </div>
+        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <a href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
+          <a href="/ar/spinal-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
+          <a href="/en/spinal-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>English</a>
+          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+        </div>
+      </nav>
+
+      <section style={{ background: NAVY, padding: "80px 24px 72px", textAlign: "center" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.18em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Medical Care Germany — Spinale Rehabilitation</p>
+          <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Spinale Rehabilitation in Deutschland</h1>
+          <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Strukturierte Koordination der Rückenmarksrehabilitation und postoperativen Wirbelsäulenerholung.</p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Erstbewertung anfordern</a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "64px 24px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Spinale Rehabilitation erfordert spezialisierte multidisziplinäre Koordination</h2>
+          <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>Rückenmarksverletzungen und komplexe Wirbelsäulenerkrankungen erfordern eine strukturierte Rehabilitation in spezialisierten Zentren, die für neurologische Erholung, funktionelles Training und Langzeitpflegemanagement ausgestattet sind.</p>
+          <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany koordiniert die Dokumentationsvorbereitung, Zentrumsidentifikation und den Aufnahmeprozess für spinale Rehabilitationsfälle.</p>
+          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Erstbewertung einreichen</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>Falltypen</p>
+          <h2 style={{ fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: NAVY, marginBottom: 40, textAlign: "center", lineHeight: 1.5 }}>Spinale Rehabilitationsfälle</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+              <div key="Komplette Rückenmarksverletzungsrehabilitation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Komplette Rückenmarksverletzungsrehabilitation</p>
+              </div>
+              <div key="Inkomplette Rückenmarksverletzung neurologische Erholung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Inkomplette Rückenmarksverletzung neurologische Erholung</p>
+              </div>
+              <div key="Postoperative Wirbelsäulenrehabilitation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Postoperative Wirbelsäulenrehabilitation</p>
+              </div>
+              <div key="Rückenmarksverletzung durch Trauma oder Kriegsverletzung" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Rückenmarksverletzung durch Trauma oder Kriegsverletzung</p>
+              </div>
+              <div key="Spinalstenose und Myelopathie-Rehabilitation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Spinalstenose und Myelopathie-Rehabilitation</p>
+              </div>
+              <div key="Chronisches Schmerzmanagement im Rehabilitationsrahmen" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Chronisches Schmerzmanagement im Rehabilitationsrahmen</p>
+              </div>
+              <div key="Robotergestütztes Gangtraining" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Robotergestütztes Gangtraining</p>
+              </div>
+              <div key="Funktionelle Elektrostimulation" style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>Funktionelle Elektrostimulation</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: NAVY, padding: "72px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 24, lineHeight: 1.55 }}>Unterlagen für die Erstbewertung</h2>
+            <div key="Wirbelsäulen-MRT und CT-Bildgebung" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Wirbelsäulen-MRT und CT-Bildgebung</p>
+            </div>
+            <div key="Neurologische Bewertung einschließlich ASIA-Klassifikation" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Neurologische Bewertung einschließlich ASIA-Klassifikation</p>
+            </div>
+            <div key="Operationsberichte falls zutreffend" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Operationsberichte falls zutreffend</p>
+            </div>
+            <div key="Aktueller Funktionsstatus und Mobilitätsbewertung" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Aktueller Funktionsstatus und Mobilitätsbewertung</p>
+            </div>
+            <div key="Frühere Rehabilitationsberichte" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Frühere Rehabilitationsberichte</p>
+            </div>
+            <div key="Überweisungsschreiben" style={{ display: "flex", gap: 12, marginBottom: 14, alignItems: "flex-start" }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
+              <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Überweisungsschreiben</p>
+            </div>
+          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Bewertung einreichen</a>
+        </div>
+      </section>
+
+      <section style={{ background: SLATE_BG, padding: "56px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: MUTED, textTransform: "uppercase", marginBottom: 20 }}>Verwandte Seiten</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              <a key="/de/rehabilitation-deutschland" href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Rehabilitation Hub</a>
+              <a key="/de/neurologische-rehabilitation-deutschland" href="/de/neurologische-rehabilitation-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Neurologische Rehabilitation</a>
+              <a key="/de/rehabilitation-kriegsverletzungen-deutschland" href="/de/rehabilitation-kriegsverletzungen-deutschland" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>Rehabilitation Kriegsverletzungen</a>
+              <a key="/en/spinal-rehabilitation-germany" href="/en/spinal-rehabilitation-germany" style={{ fontSize: 13, color: NAVY, textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>English Version</a>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ background: NAVY, padding: "48px 24px 32px", borderTop: `1px solid ${NAVY_BORDER}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", borderTop: `1px solid ${NAVY_BORDER}`, paddingTop: 24, textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#475569" }}>Tätig innerhalb etablierter klinischer Koordinationsrahmen.</p>
+          <p style={{ fontSize: 11, color: "#334155", marginTop: 6 }}>Medical Care Germany · Berlin, Deutschland</p>
+        </div>
+      </footer>
+
+    </div>
   );
 }

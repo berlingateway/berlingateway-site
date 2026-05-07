@@ -171,6 +171,7 @@ export default function WarInjuryRehabilitationGermany() {
               { href: "/ar/neurological-rehabilitation-germany", label: "التأهيل العصبي" },
               { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
               { href: "/ar/submit-case", label: "تقديم الحالة" },
+              { href: "/ar/orthopedics-germany", label: "جراحة العظام والمفاصل" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ ...AR, fontSize: 13, color: "#0B1C2C", textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#f8fafc", display: "inline-block" }}>
                 {link.label}

@@ -172,6 +172,7 @@ export default function AdvancedRehabilitationGermany() {
               { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
               { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
               { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
+              { href: "/ar/pediatric-rehabilitation-germany", label: "تأهيل الأطفال في ألمانيا" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ ...AR, fontSize: 13, color: "#0B1C2C", textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>
                 {link.label}

@@ -39,6 +39,7 @@ const RELATED = [
   { href: "/ar/war-injury-rehabilitation-germany", label: "تأهيل إصابات الحرب" },
   { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
   { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
+  { href: "/ar/pediatric-orthopedics-germany", label: "عظام وجراحة الأطفال" }
 ];
 
 export default function OrthopedicsGermany() {

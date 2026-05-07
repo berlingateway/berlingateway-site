@@ -48,7 +48,8 @@ export default function NeurologyTreatment() {
         { href: "/brain-tumor-treatment-germany", label: "Brain Tumor Treatment" },
         { href: "/parkinson-treatment-germany", label: "Parkinson Treatment" },
         { href: "/multiple-sclerosis-treatment-germany", label: "Multiple Sclerosis" },
-        { href: "/epilepsy-treatment-germany", label: "Epilepsy Treatment" }
+        { href: "/epilepsy-treatment-germany", label: "Epilepsy Treatment" },
+        { href: "/ar/ent-germany", label: "ENT & Ear-Nose-Throat (Arabic)" }
       ]}
       structuredData={JSON.stringify({
         "@context": "https://schema.org",

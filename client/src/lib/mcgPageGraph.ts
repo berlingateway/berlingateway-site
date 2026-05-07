@@ -811,6 +811,56 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
   },
 
   // ══════════════════════════════════════════════════════════════════════════
+  // EN ORTHOPEDICS HUB
+  // ══════════════════════════════════════════════════════════════════════════
+  "/en/orthopedics-germany": {
+    path: "/en/orthopedics-germany",
+    label: "Orthopedics Germany",
+    lang: "en",
+    hub: "/en/orthopedics-germany",
+    hubLabel: "Orthopedics",
+    equivalents: {
+      ar: "/ar/orthopedics-germany",
+      de: "/de/orthopaedie-deutschland",
+    },
+    cluster: [
+      { href: "/en/orthopedics-germany", label: "Orthopedics Hub" },
+      { href: "/en/prosthetics-germany", label: "Prosthetics" },
+      { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
+    ],
+    related: [
+      { href: "/en/war-injury-rehabilitation-germany", label: "War Injury Rehabilitation" },
+      { href: "/en/advanced-rehabilitation-germany", label: "Advanced Rehabilitation" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // DE ORTHOPEDICS HUB
+  // ══════════════════════════════════════════════════════════════════════════
+  "/de/orthopaedie-deutschland": {
+    path: "/de/orthopaedie-deutschland",
+    label: "Orthopädie Deutschland",
+    lang: "de",
+    hub: "/de/orthopaedie-deutschland",
+    hubLabel: "Orthopädie",
+    equivalents: {
+      ar: "/ar/orthopedics-germany",
+      en: "/en/orthopedics-germany",
+    },
+    cluster: [
+      { href: "/de/orthopaedie-deutschland", label: "Orthopädie Hub" },
+      { href: "/de/prothetik-deutschland", label: "Prothetik" },
+      { href: "/de/spinale-rehabilitation-deutschland", label: "Spinale Rehabilitation" },
+    ],
+    related: [
+      { href: "/de/rehabilitation-kriegsverletzungen-deutschland", label: "Kriegsverletzungen" },
+      { href: "/de/rehabilitation-deutschland", label: "Rehabilitation" },
+      { href: "/submit-case", label: "Berichte einreichen" },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
   // AR SPINE
   // ══════════════════════════════════════════════════════════════════════════
   "/ar/spine-surgery-germany": {

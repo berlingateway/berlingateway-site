@@ -142,6 +142,8 @@ import SpinalRehabilitationDE from "./pages/rehabilitation/SpinalRehabilitationD
 import NeurologicalRehabilitationDE from "./pages/rehabilitation/NeurologicalRehabilitationDE";
 import SecondMedicalEvaluationDE from "./pages/rehabilitation/SecondMedicalEvaluationDE";
 import LongTermRehabilitationDE from "./pages/rehabilitation/LongTermRehabilitationDE";
+import OrthopedicsEN from "./pages/rehabilitation/OrthopedicsEN";
+import OrthopaedeDE from "./pages/rehabilitation/OrthopaedeDE";
 
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
@@ -263,6 +265,9 @@ function Router() {
       <Route path={"/de/neurologische-rehabilitation-deutschland"} component={NeurologicalRehabilitationDE} />
       <Route path={"/de/medizinische-zweitbewertung-deutschland"} component={SecondMedicalEvaluationDE} />
       <Route path={"/de/langzeit-rehabilitation-deutschland"} component={LongTermRehabilitationDE} />
+      {/* EN/DE Orthopedics Hub Routes */}
+      <Route path={"/en/orthopedics-germany"} component={OrthopedicsEN} />
+      <Route path={"/de/orthopaedie-deutschland"} component={OrthopaedeDE} />
       <Route path={"/ar/spine-surgery-germany"} component={SpineSurgeryGermany} />
       <Route path={"/ar/gastrointestinal-surgery-germany"} component={GastrointestinalSurgeryGermany} />
       <Route path={"/ar/maxillofacial-surgery-germany"} component={MaxillofacialSurgeryGermany} />

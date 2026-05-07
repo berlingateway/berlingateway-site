@@ -750,4 +750,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- EN/DE Orthopedics Hubs -->
+  <url>
+    <loc>https://www.medicalcaregermany.com/en/orthopedics-germany</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.medicalcaregermany.com/de/orthopaedie-deutschland</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

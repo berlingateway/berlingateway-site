@@ -111,6 +111,13 @@ import SpineSurgeryGermany from "./pages/conditions/SpineSurgeryGermany";
 import MaxillofacialSurgeryGermany from "./pages/conditions/MaxillofacialSurgeryGermany";
 import CorrectivePlasticSurgeryGermany from "./pages/conditions/CorrectivePlasticSurgeryGermany";
 import ReconstructiveSurgeryGermany from "./pages/conditions/ReconstructiveSurgeryGermany";
+import AdvancedRehabilitationGermany from "./pages/conditions/AdvancedRehabilitationGermany";
+import WarInjuryRehabilitationGermany from "./pages/conditions/WarInjuryRehabilitationGermany";
+import ProstheticsGermany from "./pages/conditions/ProstheticsGermany";
+import SpinalRehabilitationGermany from "./pages/conditions/SpinalRehabilitationGermany";
+import NeurologicalRehabilitationGermany from "./pages/conditions/NeurologicalRehabilitationGermany";
+import SecondMedicalEvaluationGermany from "./pages/conditions/SecondMedicalEvaluationGermany";
+import LongTermRehabilitationGermany from "./pages/conditions/LongTermRehabilitationGermany";
 
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
@@ -203,6 +210,13 @@ function Router() {
       <Route path={"/ar/hernia-treatment-germany"} component={HerniaTreatmentGermany} />
       <Route path={"/ar/laparoscopic-surgery-germany"} component={LaparoscopicSurgeryGermany} />
       <Route path={"/ar/reconstructive-surgery-germany"} component={ReconstructiveSurgeryGermany} />
+      <Route path={"/ar/advanced-rehabilitation-germany"} component={AdvancedRehabilitationGermany} />
+      <Route path={"/ar/war-injury-rehabilitation-germany"} component={WarInjuryRehabilitationGermany} />
+      <Route path={"/ar/prosthetics-germany"} component={ProstheticsGermany} />
+      <Route path={"/ar/spinal-rehabilitation-germany"} component={SpinalRehabilitationGermany} />
+      <Route path={"/ar/neurological-rehabilitation-germany"} component={NeurologicalRehabilitationGermany} />
+      <Route path={"/ar/second-medical-evaluation-germany"} component={SecondMedicalEvaluationGermany} />
+      <Route path={"/ar/long-term-rehabilitation-germany"} component={LongTermRehabilitationGermany} />
       <Route path={"/ar/spine-surgery-germany"} component={SpineSurgeryGermany} />
       <Route path={"/ar/gastrointestinal-surgery-germany"} component={GastrointestinalSurgeryGermany} />
       <Route path={"/ar/maxillofacial-surgery-germany"} component={MaxillofacialSurgeryGermany} />

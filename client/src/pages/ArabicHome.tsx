@@ -360,6 +360,7 @@ export default function ArabicHome() {
                       { id: 'pediatric', label: 'طب الأطفال' },
                       { id: 'general-surgery', label: 'الجراحة العامة' },
                       { id: 'cosmetic-surgery', label: 'الجراحة التجميلية والترميمية' },
+                      { id: 'rehabilitation', label: 'إعادة التأهيل المتقدم' },
                     ].map(cat => (
                       <button
                         key={cat.id}
@@ -500,6 +501,27 @@ export default function ArabicHome() {
                           { href: '/ar/reconstructive-surgery-germany', label: 'الترميم بعد الحوادث والأورام' },
           { href: '/ar/maxillofacial-surgery-germany', label: 'جراحة الوجه والفكين' },
                            { href: '/ar/corrective-plastic-surgery-germany', label: 'التجميل التصحيحي' },
+                        ].map(item => (
+                          <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
+                            className="block transition-colors"
+                            style={{ ...AR_FONT, padding: '7px 4px', fontSize: '12px', color: '#374151' }}
+                            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
+                            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#374151'; }}
+                          >{item.label}</Link>
+                        ))}
+                      </>
+                    )}
+                    {activeMedCat === 'rehabilitation' && (
+                      <>
+                        <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>إعادة التأهيل المتقدم</span>
+                        {[
+                          { href: '/ar/advanced-rehabilitation-germany', label: 'مركز التأهيل المتقدم' },
+                          { href: '/ar/war-injury-rehabilitation-germany', label: 'إعادة تأهيل إصابات الحرب' },
+                          { href: '/ar/prosthetics-germany', label: 'الأطراف الصناعية' },
+                          { href: '/ar/spinal-rehabilitation-germany', label: 'إعادة تأهيل العمود الفقري' },
+                          { href: '/ar/neurological-rehabilitation-germany', label: 'التأهيل العصبي' },
+                          { href: '/ar/second-medical-evaluation-germany', label: 'التقييم الطبي الثاني' },
+                          { href: '/ar/long-term-rehabilitation-germany', label: 'التأهيل طويل المدى' },
                         ].map(item => (
                           <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
                             className="block transition-colors"
@@ -684,6 +706,25 @@ export default function ArabicHome() {
                   <a href="/ar/reconstructive-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الترميم بعد الحوادث والأورام</a>
                    <a href="/ar/maxillofacial-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الوجه والفكين</a>
                    <a href="/ar/corrective-plastic-surgery-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التجميل التصحيحي</a>
+                </div>
+              )}
+              {/* Accordion: إعادة التأهيل */}
+              <button
+                onClick={() => setMobileAccordion(v => v === 'rehabilitation' ? null : 'rehabilitation')}
+                className="flex items-center justify-between w-full text-right text-sm font-medium text-slate-700 py-3 border-b border-slate-100 px-2"
+              >
+                <span>إعادة التأهيل المتقدم</span>
+                <span className="text-slate-400 text-xs">{mobileAccordion === 'rehabilitation' ? '−' : '+'}</span>
+              </button>
+              {mobileAccordion === 'rehabilitation' && (
+                <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
+                  <a href="/ar/advanced-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">مركز التأهيل المتقدم</a>
+                  <a href="/ar/war-injury-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">إعادة تأهيل إصابات الحرب</a>
+                  <a href="/ar/prosthetics-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الأطراف الصناعية</a>
+                  <a href="/ar/spinal-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">إعادة تأهيل العمود الفقري</a>
+                  <a href="/ar/neurological-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التأهيل العصبي</a>
+                  <a href="/ar/second-medical-evaluation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التقييم الطبي الثاني</a>
+                  <a href="/ar/long-term-rehabilitation-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">التأهيل طويل المدى</a>
                 </div>
               )}
               {/* Direct links */}

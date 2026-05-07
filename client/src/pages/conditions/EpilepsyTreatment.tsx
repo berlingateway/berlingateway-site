@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function EpilepsyTreatment() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/epilepsy-treatment-germany" />
+      <HreflangTags currentPath="/epilepsy-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Epilepsy Treatment in Germany | Epilepsy Surgery & Specialist Centres"
       metaDescription="Comprehensive epilepsy evaluation including presurgical workup, resective surgery, and neuromodulation at German university epilepsy centres for drug-resistant epilepsy."
       canonicalPath="/epilepsy-treatment-germany"
@@ -62,5 +68,6 @@ export default function EpilepsyTreatment() {
       })}
       arabicSummary="الصرع اضطراب عصبي يتميز بنوبات متكررة غير مستفزة. نحو ثلث المرضى لا يستجيبون للأدوية، وهؤلاء يُعانون من الصرع المقاوم للعلاج. في ألمانيا، تتوفر مراكز صرع معتمدة تُجري تقييماً جراحياً شاملاً يشمل تخطيط الدماغ المطوّل بالفيديو والرنين المغناطيسي عالي الدقة والتصوير الوظيفي. تشمل خيارات العلاج الجراحة الاستئصالية والتحفيز العصبي المتعدد الأشكال، مما يُتيح تحقيق السيطرة على النوبات لدى المرضى المؤهلين."
     />
+    </>
   );
 }

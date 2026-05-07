@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function HipReplacement() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/hip-replacement-germany" />
+      <HreflangTags currentPath="/hip-replacement-germany" />
+      <MedicalConditionPage
       metaTitle="Hip Replacement Surgery in Germany"
       metaDescription="Total hip arthroplasty and revision surgery at German orthopedic university centers, with minimally invasive approaches and structured rehabilitation."
       canonicalPath="/hip-replacement-germany"
@@ -22,5 +28,6 @@ export default function HipReplacement() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

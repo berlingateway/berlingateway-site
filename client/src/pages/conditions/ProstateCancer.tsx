@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function ProstateCancer() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/prostate-cancer-treatment-germany" />
+      <HreflangTags currentPath="/prostate-cancer-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Prostate Cancer Treatment in Germany"
       metaDescription="Advanced urological oncology including robotic-assisted surgery and PSMA PET imaging for prostate cancer at German university hospitals."
       canonicalPath="/prostate-cancer-treatment-germany"
@@ -22,5 +28,6 @@ export default function ProstateCancer() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

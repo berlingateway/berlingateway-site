@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function HeartSurgery() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/heart-surgery-germany" />
+      <HreflangTags currentPath="/heart-surgery-germany" />
+      <MedicalConditionPage
       metaTitle="Heart Surgery in Germany"
       metaDescription="Open-heart and minimally invasive cardiac surgery at German university cardiac centers, including coronary bypass, valve repair, and aortic surgery."
       canonicalPath="/heart-surgery-germany"
@@ -23,5 +29,6 @@ export default function HeartSurgery() {
       })}
       arabicSummary="جراحة القلب تشمل طيفاً واسعاً من التدخلات، منها عمليات القسطرة التاجية، وإصلاح أو استبدال الصمامات، وجراحة الشريان الأبهر، وعيوب القلب الخلقية. تعتمد طريقة التدخل على طبيعة الحالة وتشريح المريض وخبرة الفريق الجراحي. تتميز مراكز جراحة القلب في ألمانيا بأعداد جراحية عالية ونتائج خاضعة لرقابة جودة مستمرة. يبدأ التقييم بمراجعة نتائج القسطرة والموجات فوق الصوتية وصور الأشعة لتحديد أنسب أسلوب جراحي."
     />
+    </>
   );
 }

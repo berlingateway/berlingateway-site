@@ -7,6 +7,9 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -69,6 +72,8 @@ const COORDINATION_POINTS = [
 export default function HerniaTreatmentGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/hernia-treatment-germany" />
+      <HreflangTags currentPath="/ar/hernia-treatment-germany" />
       {/* ── SECTION 1: HERO ─────────────────────────────────────── */}
       <section
         style={{

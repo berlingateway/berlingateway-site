@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function ComplexMedicalCases() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/complex-medical-cases-germany" />
+      <HreflangTags currentPath="/complex-medical-cases-germany" />
+      <MedicalConditionPage
       metaTitle="Complex Medical Cases in Germany"
       metaDescription="Structured coordination for diagnostically challenging or treatment-resistant cases at German university hospitals, for international patients."
       canonicalPath="/complex-medical-cases-germany"
@@ -22,5 +28,6 @@ export default function ComplexMedicalCases() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

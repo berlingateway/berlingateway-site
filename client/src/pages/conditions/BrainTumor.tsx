@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function BrainTumor() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/brain-tumor-treatment-germany" />
+      <HreflangTags currentPath="/brain-tumor-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Brain Tumor Treatment in Germany | Specialist Neurosurgery"
       metaDescription="Structured access to neurosurgical and neuro-oncological expertise at German university hospitals for brain tumor diagnosis and treatment planning."
       canonicalPath="/brain-tumor-treatment-germany"
@@ -72,5 +78,6 @@ export default function BrainTumor() {
       arabicSummaryTitle="متى تحتاج الحالة إلى مراجعة متخصصة؟"
       arabicSummary="أورام المخ ليست تشخيصًا واحدًا، بل مجموعة معقدة من الحالات تختلف في النوع، الموقع، وسرعة النمو. في بعض الحالات، قد يكون القرار العلاجي واضحًا. لكن في حالات أخرى، يكون التقييم غير كافٍ أو الخطة غير مكتملة. قد يغيّر التقييم المنظم من فريق متخصص مسار العلاج بالكامل. يمكن إرسال التقارير الطبية للحصول على تقييم أولي قبل اتخاذ أي قرار علاجي."
     />
+    </>
   );
 }

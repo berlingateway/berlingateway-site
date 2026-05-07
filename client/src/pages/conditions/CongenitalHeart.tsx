@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function CongenitalHeart() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/congenital-heart-treatment-germany" />
+      <HreflangTags currentPath="/congenital-heart-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Congenital Heart Disease Treatment Germany"
       metaDescription="Specialist pediatric and adult congenital cardiac care at German university heart centers, with structured evaluation for complex congenital heart conditions."
       canonicalPath="/congenital-heart-treatment-germany"
@@ -22,5 +28,6 @@ export default function CongenitalHeart() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

@@ -117,7 +117,7 @@ const entRelatedAR = [
 // ─── PEDIATRIC CLUSTER ───────────────────────────────────────────────────────
 
 const pediatricClusterAR = [
-  { href: "/ar/pediatric-general-medicine-germany", label: "طب الأطفال العام" },
+  { href: "/ar/pediatric-medicine-germany", label: "طب الأطفال العام" },
   { href: "/ar/pediatric-surgery-germany", label: "جراحة الأطفال" },
   { href: "/ar/pediatric-orthopedics-germany", label: "عظام وجراحة الأطفال" },
   { href: "/ar/pediatric-rehabilitation-germany", label: "تأهيل الأطفال" },
@@ -131,10 +131,149 @@ const pediatricRelatedAR = [
   { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
 ];
 
+// ─── NEUROLOGY CLUSTER ───────────────────────────────────────────────────────
+
+const neurologyClusterAR = [
+  { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
+  { href: "/ar/brain-tumor-treatment-germany", label: "أورام المخ" },
+  { href: "/ar/trigeminal-neuralgia-germany", label: "ألم العصب الخامس" },
+  { href: "/ar/parkinsons-treatment-germany", label: "مرض باركنسون" },
+  { href: "/ar/pediatric-neurology-germany", label: "أعصاب الأطفال" },
+];
+
+const neurologyClusterEN = [
+  { href: "/neurology-treatment-germany", label: "Neurology Treatment" },
+  { href: "/brain-tumor-treatment-germany", label: "Brain Tumor" },
+  { href: "/trigeminal-neuralgia-treatment-germany", label: "Trigeminal Neuralgia" },
+  { href: "/parkinson-treatment-germany", label: "Parkinson's Disease" },
+  { href: "/multiple-sclerosis-treatment-germany", label: "Multiple Sclerosis" },
+  { href: "/epilepsy-treatment-germany", label: "Epilepsy" },
+];
+
+const neurologyRelatedAR = [
+  { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
+  { href: "/ar/ent-germany", label: "الأنف والأذن والحنجرة" },
+  { href: "/ar/neurological-rehabilitation-germany", label: "التأهيل العصبي" },
+  { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+];
+
+const neurologyRelatedEN = [
+  { href: "/spine-surgery-germany", label: "Spine Surgery" },
+  { href: "/en/neurological-rehabilitation-germany", label: "Neurological Rehabilitation" },
+  { href: "/submit-case", label: "Submit Medical Reports" },
+];
+
+// ─── SPINE CLUSTER ───────────────────────────────────────────────────────────
+
+const spineClusterAR = [
+  { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
+  { href: "/ar/spinal-rehabilitation-germany", label: "تأهيل العمود الفقري" },
+];
+
+const spineClusterEN = [
+  { href: "/spine-surgery-germany", label: "Spine Surgery" },
+  { href: "/spinal-stenosis-treatment-germany", label: "Spinal Stenosis" },
+  { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
+];
+
+const spineRelatedAR = [
+  { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
+  { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
+  { href: "/ar/spinal-rehabilitation-germany", label: "تأهيل العمود الفقري" },
+  { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+];
+
+const spineRelatedEN = [
+  { href: "/neurology-treatment-germany", label: "Neurology" },
+  { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
+  { href: "/submit-case", label: "Submit Medical Reports" },
+];
+
+// ─── FERTILITY CLUSTER ───────────────────────────────────────────────────────
+
+const fertilityClusterAR = [
+  { href: "/ar/fertility-treatment-germany", label: "الخصوبة والإنجاب" },
+  { href: "/ar/ivf-germany", label: "أطفال الأنابيب" },
+  { href: "/ar/icsi-germany", label: "حقن الحيوانات المنوية" },
+  { href: "/ar/pgd-germany", label: "التشخيص الجيني" },
+  { href: "/ar/failed-ivf-causes-germany", label: "أسباب فشل التلقيح" },
+  { href: "/ar/repeated-miscarriage-causes-germany", label: "الإجهاض المتكرر" },
+  { href: "/ar/male-infertility-germany", label: "العقم عند الرجل" },
+];
+
+const fertilityRelatedAR = [
+  { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
+  { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+];
+
+// ─── ONCOLOGY CLUSTER ────────────────────────────────────────────────────────
+
+const oncologyClusterEN = [
+  { href: "/cancer-treatment-germany", label: "Cancer Treatment" },
+  { href: "/brain-tumor-treatment-germany", label: "Brain Tumor" },
+  { href: "/lung-cancer-treatment-germany", label: "Lung Cancer" },
+  { href: "/breast-cancer-treatment-germany", label: "Breast Cancer" },
+  { href: "/prostate-cancer-treatment-germany", label: "Prostate Cancer" },
+  { href: "/colon-cancer-treatment-germany", label: "Colon Cancer" },
+  { href: "/liver-cancer-treatment-germany", label: "Liver Cancer" },
+];
+
+const oncologyRelatedEN = [
+  { href: "/advanced-diagnostics-germany", label: "Advanced Diagnostics" },
+  { href: "/second-opinion-germany", label: "Second Opinion" },
+  { href: "/submit-case", label: "Submit Medical Reports" },
+];
+
+// ─── CARDIOLOGY CLUSTER ──────────────────────────────────────────────────────
+
+const cardiologyClusterEN = [
+  { href: "/cardiology-treatment-germany", label: "Cardiology Treatment" },
+  { href: "/heart-surgery-germany", label: "Heart Surgery" },
+  { href: "/arrhythmia-treatment-germany", label: "Arrhythmia" },
+  { href: "/congenital-heart-treatment-germany", label: "Congenital Heart" },
+];
+
+const cardiologyRelatedEN = [
+  { href: "/advanced-diagnostics-germany", label: "Advanced Diagnostics" },
+  { href: "/second-opinion-germany", label: "Second Opinion" },
+  { href: "/submit-case", label: "Submit Medical Reports" },
+];
+
+// ─── GENERAL SURGERY CLUSTER (AR) ────────────────────────────────────────────
+
+const generalSurgeryClusterAR = [
+  { href: "/ar/hernia-treatment-germany", label: "علاج الفتق" },
+  { href: "/ar/laparoscopic-surgery-germany", label: "الجراحة التنظيرية" },
+  { href: "/ar/gastrointestinal-surgery-germany", label: "جراحة الجهاز الهضمي" },
+];
+
+const generalSurgeryRelatedAR = [
+  { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
+  { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم" },
+  { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+];
+
+// ─── COSMETIC / RECONSTRUCTIVE CLUSTER (AR) ──────────────────────────────────
+
+const cosmeticClusterAR = [
+  { href: "/ar/reconstructive-surgery-germany", label: "الجراحة الترميمية" },
+  { href: "/ar/maxillofacial-surgery-germany", label: "جراحة الوجه والفكين" },
+  { href: "/ar/corrective-plastic-surgery-germany", label: "التجميل التصحيحي" },
+];
+
+const cosmeticRelatedAR = [
+  { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
+  { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
+  { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+];
+
 // ─── PAGE GRAPH ──────────────────────────────────────────────────────────────
 
 export const PAGE_GRAPH: Record<string, PageNode> = {
-  // ── AR REHABILITATION ──
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR REHABILITATION
+  // ══════════════════════════════════════════════════════════════════════════
   "/ar/advanced-rehabilitation-germany": {
     path: "/ar/advanced-rehabilitation-germany",
     label: "مركز التأهيل المتقدم",
@@ -227,7 +366,9 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     related: rehabRelatedAR,
   },
 
-  // ── EN REHABILITATION ──
+  // ══════════════════════════════════════════════════════════════════════════
+  // EN REHABILITATION
+  // ══════════════════════════════════════════════════════════════════════════
   "/en/advanced-rehabilitation-germany": {
     path: "/en/advanced-rehabilitation-germany",
     label: "Advanced Rehabilitation",
@@ -320,7 +461,9 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     related: rehabRelatedEN,
   },
 
-  // ── DE REHABILITATION ──
+  // ══════════════════════════════════════════════════════════════════════════
+  // DE REHABILITATION
+  // ══════════════════════════════════════════════════════════════════════════
   "/de/rehabilitation-deutschland": {
     path: "/de/rehabilitation-deutschland",
     label: "Rehabilitationszentrum",
@@ -413,7 +556,9 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     related: rehabRelatedDE,
   },
 
-  // ── AR ORTHOPEDICS ──
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR ORTHOPEDICS
+  // ══════════════════════════════════════════════════════════════════════════
   "/ar/orthopedics-germany": {
     path: "/ar/orthopedics-germany",
     label: "العظام والمفاصل",
@@ -421,7 +566,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     hub: "/ar/orthopedics-germany",
     hubLabel: "العظام والمفاصل",
     equivalents: {
-      en: "/en/advanced-rehabilitation-germany", // fallback to closest hub
+      en: "/orthopedic-surgery-germany",
       de: "/de/rehabilitation-deutschland",
     },
     cluster: orthoClusterAR,
@@ -434,14 +579,16 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     hub: "/ar/orthopedics-germany",
     hubLabel: "العظام والمفاصل",
     equivalents: {
-      en: "/en/advanced-rehabilitation-germany",
+      en: "/orthopedic-surgery-germany",
       de: "/de/rehabilitation-deutschland",
     },
     cluster: orthoClusterAR,
     related: orthoRelatedAR,
   },
 
-  // ── AR ENT ──
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR ENT
+  // ══════════════════════════════════════════════════════════════════════════
   "/ar/ent-germany": {
     path: "/ar/ent-germany",
     label: "الأنف والأذن والحنجرة",
@@ -449,22 +596,24 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     hub: "/ar/ent-germany",
     hubLabel: "الأنف والأذن والحنجرة",
     equivalents: {
-      en: "/neurology-treatment-germany", // closest EN equivalent
+      en: "/neurology-treatment-germany",
       de: "/de/neurologische-rehabilitation-deutschland",
     },
     cluster: entClusterAR,
     related: entRelatedAR,
   },
 
-  // ── AR PEDIATRICS ──
-  "/ar/pediatric-general-medicine-germany": {
-    path: "/ar/pediatric-general-medicine-germany",
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR PEDIATRICS
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/pediatric-medicine-germany": {
+    path: "/ar/pediatric-medicine-germany",
     label: "طب الأطفال العام",
     lang: "ar",
-    hub: "/ar/pediatric-general-medicine-germany",
+    hub: "/ar/pediatric-medicine-germany",
     hubLabel: "طب الأطفال",
     equivalents: {
-      en: "/en/advanced-rehabilitation-germany",
+      en: "/pediatric-neurology-germany",
       de: "/de/rehabilitation-deutschland",
     },
     cluster: pediatricClusterAR,
@@ -474,10 +623,10 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     path: "/ar/pediatric-surgery-germany",
     label: "جراحة الأطفال",
     lang: "ar",
-    hub: "/ar/pediatric-general-medicine-germany",
+    hub: "/ar/pediatric-medicine-germany",
     hubLabel: "طب الأطفال",
     equivalents: {
-      en: "/en/advanced-rehabilitation-germany",
+      en: "/pediatric-neurology-germany",
       de: "/de/rehabilitation-deutschland",
     },
     cluster: pediatricClusterAR,
@@ -487,7 +636,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     path: "/ar/pediatric-rehabilitation-germany",
     label: "تأهيل الأطفال",
     lang: "ar",
-    hub: "/ar/pediatric-general-medicine-germany",
+    hub: "/ar/pediatric-medicine-germany",
     hubLabel: "طب الأطفال",
     equivalents: {
       en: "/en/advanced-rehabilitation-germany",
@@ -500,14 +649,619 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     path: "/ar/pediatric-neurology-germany",
     label: "أعصاب الأطفال",
     lang: "ar",
-    hub: "/ar/pediatric-general-medicine-germany",
+    hub: "/ar/pediatric-medicine-germany",
     hubLabel: "طب الأطفال",
     equivalents: {
-      en: "/en/advanced-rehabilitation-germany",
-      de: "/de/rehabilitation-deutschland",
+      en: "/pediatric-neurology-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
     },
     cluster: pediatricClusterAR,
     related: pediatricRelatedAR,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR NEUROLOGY
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/neurology-treatment-germany": {
+    path: "/ar/neurology-treatment-germany",
+    label: "الأعصاب والجهاز العصبي",
+    lang: "ar",
+    hub: "/ar/neurology-treatment-germany",
+    hubLabel: "الأعصاب والجهاز العصبي",
+    equivalents: {
+      en: "/neurology-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterAR,
+    related: neurologyRelatedAR,
+  },
+  "/ar/brain-tumor-treatment-germany": {
+    path: "/ar/brain-tumor-treatment-germany",
+    label: "أورام المخ",
+    lang: "ar",
+    hub: "/ar/neurology-treatment-germany",
+    hubLabel: "الأعصاب والجهاز العصبي",
+    equivalents: {
+      en: "/brain-tumor-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterAR,
+    related: neurologyRelatedAR,
+  },
+  "/ar/trigeminal-neuralgia-germany": {
+    path: "/ar/trigeminal-neuralgia-germany",
+    label: "ألم العصب الخامس",
+    lang: "ar",
+    hub: "/ar/neurology-treatment-germany",
+    hubLabel: "الأعصاب والجهاز العصبي",
+    equivalents: {
+      en: "/trigeminal-neuralgia-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterAR,
+    related: neurologyRelatedAR,
+  },
+  "/ar/parkinsons-treatment-germany": {
+    path: "/ar/parkinsons-treatment-germany",
+    label: "مرض باركنسون",
+    lang: "ar",
+    hub: "/ar/neurology-treatment-germany",
+    hubLabel: "الأعصاب والجهاز العصبي",
+    equivalents: {
+      en: "/parkinson-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterAR,
+    related: neurologyRelatedAR,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // EN NEUROLOGY
+  // ══════════════════════════════════════════════════════════════════════════
+  "/neurology-treatment-germany": {
+    path: "/neurology-treatment-germany",
+    label: "Neurology Treatment",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/neurology-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+  "/brain-tumor-treatment-germany": {
+    path: "/brain-tumor-treatment-germany",
+    label: "Brain Tumor Treatment",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/brain-tumor-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+  "/trigeminal-neuralgia-treatment-germany": {
+    path: "/trigeminal-neuralgia-treatment-germany",
+    label: "Trigeminal Neuralgia",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/trigeminal-neuralgia-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+  "/parkinson-treatment-germany": {
+    path: "/parkinson-treatment-germany",
+    label: "Parkinson's Disease",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/parkinsons-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+  "/multiple-sclerosis-treatment-germany": {
+    path: "/multiple-sclerosis-treatment-germany",
+    label: "Multiple Sclerosis",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/neurology-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+  "/epilepsy-treatment-germany": {
+    path: "/epilepsy-treatment-germany",
+    label: "Epilepsy Treatment",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/neurology-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+  "/pediatric-neurology-germany": {
+    path: "/pediatric-neurology-germany",
+    label: "Pediatric Neurology",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/pediatric-neurology-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR SPINE
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/spine-surgery-germany": {
+    path: "/ar/spine-surgery-germany",
+    label: "جراحة العمود الفقري",
+    lang: "ar",
+    hub: "/ar/spine-surgery-germany",
+    hubLabel: "العمود الفقري",
+    equivalents: {
+      en: "/spine-surgery-germany",
+      de: "/de/spinale-rehabilitation-deutschland",
+    },
+    cluster: spineClusterAR,
+    related: spineRelatedAR,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // EN SPINE
+  // ══════════════════════════════════════════════════════════════════════════
+  "/spine-surgery-germany": {
+    path: "/spine-surgery-germany",
+    label: "Spine Surgery",
+    lang: "en",
+    hub: "/spine-surgery-germany",
+    hubLabel: "Spine",
+    equivalents: {
+      ar: "/ar/spine-surgery-germany",
+      de: "/de/spinale-rehabilitation-deutschland",
+    },
+    cluster: spineClusterEN,
+    related: spineRelatedEN,
+  },
+  "/spinal-stenosis-treatment-germany": {
+    path: "/spinal-stenosis-treatment-germany",
+    label: "Spinal Stenosis",
+    lang: "en",
+    hub: "/spine-surgery-germany",
+    hubLabel: "Spine",
+    equivalents: {
+      ar: "/ar/spine-surgery-germany",
+      de: "/de/spinale-rehabilitation-deutschland",
+    },
+    cluster: spineClusterEN,
+    related: spineRelatedEN,
+  },
+  "/herniated-disc-treatment-germany": {
+    path: "/herniated-disc-treatment-germany",
+    label: "Herniated Disc",
+    lang: "en",
+    hub: "/spine-surgery-germany",
+    hubLabel: "Spine",
+    equivalents: {
+      ar: "/ar/spine-surgery-germany",
+      de: "/de/spinale-rehabilitation-deutschland",
+    },
+    cluster: spineClusterEN,
+    related: spineRelatedEN,
+  },
+  "/brain-surgery-germany": {
+    path: "/brain-surgery-germany",
+    label: "Brain Surgery",
+    lang: "en",
+    hub: "/neurology-treatment-germany",
+    hubLabel: "Neurology",
+    equivalents: {
+      ar: "/ar/neurology-treatment-germany",
+      de: "/de/neurologische-rehabilitation-deutschland",
+    },
+    cluster: neurologyClusterEN,
+    related: neurologyRelatedEN,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR FERTILITY
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/fertility-treatment-germany": {
+    path: "/ar/fertility-treatment-germany",
+    label: "الخصوبة والإنجاب",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: {
+      en: "/submit-case",
+      de: "/de/rehabilitation-deutschland",
+    },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+  "/ar/ivf-germany": {
+    path: "/ar/ivf-germany",
+    label: "أطفال الأنابيب",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: { en: "/submit-case" },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+  "/ar/icsi-germany": {
+    path: "/ar/icsi-germany",
+    label: "حقن الحيوانات المنوية",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: { en: "/submit-case" },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+  "/ar/pgd-germany": {
+    path: "/ar/pgd-germany",
+    label: "التشخيص الجيني",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: { en: "/submit-case" },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+  "/ar/failed-ivf-causes-germany": {
+    path: "/ar/failed-ivf-causes-germany",
+    label: "أسباب فشل التلقيح",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: { en: "/submit-case" },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+  "/ar/repeated-miscarriage-causes-germany": {
+    path: "/ar/repeated-miscarriage-causes-germany",
+    label: "الإجهاض المتكرر",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: { en: "/submit-case" },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+  "/ar/male-infertility-germany": {
+    path: "/ar/male-infertility-germany",
+    label: "العقم عند الرجل",
+    lang: "ar",
+    hub: "/ar/fertility-treatment-germany",
+    hubLabel: "الخصوبة والإنجاب",
+    equivalents: { en: "/submit-case" },
+    cluster: fertilityClusterAR,
+    related: fertilityRelatedAR,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // EN ONCOLOGY
+  // ══════════════════════════════════════════════════════════════════════════
+  "/cancer-treatment-germany": {
+    path: "/cancer-treatment-germany",
+    label: "Cancer Treatment",
+    lang: "en",
+    hub: "/cancer-treatment-germany",
+    hubLabel: "Oncology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: oncologyClusterEN,
+    related: oncologyRelatedEN,
+  },
+  "/lung-cancer-treatment-germany": {
+    path: "/lung-cancer-treatment-germany",
+    label: "Lung Cancer",
+    lang: "en",
+    hub: "/cancer-treatment-germany",
+    hubLabel: "Oncology",
+    equivalents: { ar: "/ar/lung-cancer-treatment-germany", de: "/de/rehabilitation-deutschland" },
+    cluster: oncologyClusterEN,
+    related: oncologyRelatedEN,
+  },
+  "/ar/lung-cancer-treatment-germany": {
+    path: "/ar/lung-cancer-treatment-germany",
+    label: "سرطان الرئة",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/lung-cancer-treatment-germany" },
+    cluster: [],
+    related: [
+      { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
+      { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+    ],
+  },
+  "/breast-cancer-treatment-germany": {
+    path: "/breast-cancer-treatment-germany",
+    label: "Breast Cancer",
+    lang: "en",
+    hub: "/cancer-treatment-germany",
+    hubLabel: "Oncology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: oncologyClusterEN,
+    related: oncologyRelatedEN,
+  },
+  "/prostate-cancer-treatment-germany": {
+    path: "/prostate-cancer-treatment-germany",
+    label: "Prostate Cancer",
+    lang: "en",
+    hub: "/cancer-treatment-germany",
+    hubLabel: "Oncology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: oncologyClusterEN,
+    related: oncologyRelatedEN,
+  },
+  "/colon-cancer-treatment-germany": {
+    path: "/colon-cancer-treatment-germany",
+    label: "Colon Cancer",
+    lang: "en",
+    hub: "/cancer-treatment-germany",
+    hubLabel: "Oncology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: oncologyClusterEN,
+    related: oncologyRelatedEN,
+  },
+  "/liver-cancer-treatment-germany": {
+    path: "/liver-cancer-treatment-germany",
+    label: "Liver Cancer",
+    lang: "en",
+    hub: "/cancer-treatment-germany",
+    hubLabel: "Oncology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: oncologyClusterEN,
+    related: oncologyRelatedEN,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // EN CARDIOLOGY
+  // ══════════════════════════════════════════════════════════════════════════
+  "/cardiology-treatment-germany": {
+    path: "/cardiology-treatment-germany",
+    label: "Cardiology Treatment",
+    lang: "en",
+    hub: "/cardiology-treatment-germany",
+    hubLabel: "Cardiology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: cardiologyClusterEN,
+    related: cardiologyRelatedEN,
+  },
+  "/heart-surgery-germany": {
+    path: "/heart-surgery-germany",
+    label: "Heart Surgery",
+    lang: "en",
+    hub: "/cardiology-treatment-germany",
+    hubLabel: "Cardiology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: cardiologyClusterEN,
+    related: cardiologyRelatedEN,
+  },
+  "/arrhythmia-treatment-germany": {
+    path: "/arrhythmia-treatment-germany",
+    label: "Arrhythmia Treatment",
+    lang: "en",
+    hub: "/cardiology-treatment-germany",
+    hubLabel: "Cardiology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: cardiologyClusterEN,
+    related: cardiologyRelatedEN,
+  },
+  "/congenital-heart-treatment-germany": {
+    path: "/congenital-heart-treatment-germany",
+    label: "Congenital Heart",
+    lang: "en",
+    hub: "/cardiology-treatment-germany",
+    hubLabel: "Cardiology",
+    equivalents: { ar: "/ar", de: "/de/rehabilitation-deutschland" },
+    cluster: cardiologyClusterEN,
+    related: cardiologyRelatedEN,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // EN ORTHOPEDICS
+  // ══════════════════════════════════════════════════════════════════════════
+  "/orthopedic-surgery-germany": {
+    path: "/orthopedic-surgery-germany",
+    label: "Orthopedic Surgery",
+    lang: "en",
+    hub: "/orthopedic-surgery-germany",
+    hubLabel: "Orthopedics",
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    cluster: [
+      { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
+      { href: "/knee-replacement-germany", label: "Knee Replacement" },
+      { href: "/hip-replacement-germany", label: "Hip Replacement" },
+      { href: "/scoliosis-treatment-germany", label: "Scoliosis" },
+    ],
+    related: [
+      { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
+      { href: "/en/prosthetics-germany", label: "Prosthetics" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+  "/knee-replacement-germany": {
+    path: "/knee-replacement-germany",
+    label: "Knee Replacement",
+    lang: "en",
+    hub: "/orthopedic-surgery-germany",
+    hubLabel: "Orthopedics",
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    cluster: [
+      { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
+      { href: "/knee-replacement-germany", label: "Knee Replacement" },
+      { href: "/hip-replacement-germany", label: "Hip Replacement" },
+    ],
+    related: [
+      { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+  "/hip-replacement-germany": {
+    path: "/hip-replacement-germany",
+    label: "Hip Replacement",
+    lang: "en",
+    hub: "/orthopedic-surgery-germany",
+    hubLabel: "Orthopedics",
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    cluster: [
+      { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
+      { href: "/knee-replacement-germany", label: "Knee Replacement" },
+      { href: "/hip-replacement-germany", label: "Hip Replacement" },
+    ],
+    related: [
+      { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+  "/scoliosis-treatment-germany": {
+    path: "/scoliosis-treatment-germany",
+    label: "Scoliosis Treatment",
+    lang: "en",
+    hub: "/orthopedic-surgery-germany",
+    hubLabel: "Orthopedics",
+    equivalents: { ar: "/ar/orthopedics-germany", de: "/de/rehabilitation-deutschland" },
+    cluster: [
+      { href: "/orthopedic-surgery-germany", label: "Orthopedic Surgery" },
+      { href: "/scoliosis-treatment-germany", label: "Scoliosis" },
+    ],
+    related: [
+      { href: "/spine-surgery-germany", label: "Spine Surgery" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR GENERAL SURGERY
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/hernia-treatment-germany": {
+    path: "/ar/hernia-treatment-germany",
+    label: "علاج الفتق",
+    lang: "ar",
+    hub: "/ar/hernia-treatment-germany",
+    hubLabel: "الجراحة العامة",
+    equivalents: { en: "/submit-case", de: "/de/rehabilitation-deutschland" },
+    cluster: generalSurgeryClusterAR,
+    related: generalSurgeryRelatedAR,
+  },
+  "/ar/laparoscopic-surgery-germany": {
+    path: "/ar/laparoscopic-surgery-germany",
+    label: "الجراحة التنظيرية",
+    lang: "ar",
+    hub: "/ar/hernia-treatment-germany",
+    hubLabel: "الجراحة العامة",
+    equivalents: { en: "/submit-case", de: "/de/rehabilitation-deutschland" },
+    cluster: generalSurgeryClusterAR,
+    related: generalSurgeryRelatedAR,
+  },
+  "/ar/gastrointestinal-surgery-germany": {
+    path: "/ar/gastrointestinal-surgery-germany",
+    label: "جراحة الجهاز الهضمي",
+    lang: "ar",
+    hub: "/ar/hernia-treatment-germany",
+    hubLabel: "الجراحة العامة",
+    equivalents: { en: "/submit-case", de: "/de/rehabilitation-deutschland" },
+    cluster: generalSurgeryClusterAR,
+    related: generalSurgeryRelatedAR,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // AR COSMETIC / RECONSTRUCTIVE
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/reconstructive-surgery-germany": {
+    path: "/ar/reconstructive-surgery-germany",
+    label: "الجراحة الترميمية",
+    lang: "ar",
+    hub: "/ar/reconstructive-surgery-germany",
+    hubLabel: "الجراحة التجميلية والترميمية",
+    equivalents: { en: "/submit-case", de: "/de/rehabilitation-deutschland" },
+    cluster: cosmeticClusterAR,
+    related: cosmeticRelatedAR,
+  },
+  "/ar/maxillofacial-surgery-germany": {
+    path: "/ar/maxillofacial-surgery-germany",
+    label: "جراحة الوجه والفكين",
+    lang: "ar",
+    hub: "/ar/reconstructive-surgery-germany",
+    hubLabel: "الجراحة التجميلية والترميمية",
+    equivalents: { en: "/submit-case", de: "/de/rehabilitation-deutschland" },
+    cluster: cosmeticClusterAR,
+    related: cosmeticRelatedAR,
+  },
+  "/ar/corrective-plastic-surgery-germany": {
+    path: "/ar/corrective-plastic-surgery-germany",
+    label: "التجميل التصحيحي",
+    lang: "ar",
+    hub: "/ar/reconstructive-surgery-germany",
+    hubLabel: "الجراحة التجميلية والترميمية",
+    equivalents: { en: "/submit-case", de: "/de/rehabilitation-deutschland" },
+    cluster: cosmeticClusterAR,
+    related: cosmeticRelatedAR,
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // UTILITY / CONSULTATION PAGES
+  // ══════════════════════════════════════════════════════════════════════════
+  "/second-opinion-germany": {
+    path: "/second-opinion-germany",
+    label: "Second Opinion",
+    lang: "en",
+    hub: "/second-opinion-germany",
+    hubLabel: "Consultation",
+    equivalents: {
+      ar: "/ar/second-medical-evaluation-germany",
+      de: "/de/medizinische-zweitbewertung-deutschland",
+    },
+    cluster: [
+      { href: "/second-opinion-germany", label: "Second Opinion" },
+      { href: "/advanced-diagnostics-germany", label: "Advanced Diagnostics" },
+      { href: "/specialist-referral-germany", label: "Specialist Referral" },
+    ],
+    related: [
+      { href: "/submit-case", label: "Submit Medical Reports" },
+      { href: "/neurology-treatment-germany", label: "Neurology" },
+    ],
+  },
+  "/advanced-diagnostics-germany": {
+    path: "/advanced-diagnostics-germany",
+    label: "Advanced Diagnostics",
+    lang: "en",
+    hub: "/advanced-diagnostics-germany",
+    hubLabel: "Diagnostics",
+    equivalents: {
+      ar: "/ar",
+      de: "/de/rehabilitation-deutschland",
+    },
+    cluster: [
+      { href: "/advanced-diagnostics-germany", label: "Advanced Diagnostics" },
+      { href: "/second-opinion-germany", label: "Second Opinion" },
+    ],
+    related: [
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
   },
 };
 

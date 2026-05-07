@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function AdvancedDiagnostics() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/advanced-diagnostics-germany" />
+      <HreflangTags currentPath="/advanced-diagnostics-germany" />
+      <MedicalConditionPage
       metaTitle="Advanced Medical Diagnostics in Germany"
       metaDescription="Comprehensive diagnostic evaluation using Germany's advanced imaging and laboratory technology, including 7T MRI, PET-CT, and molecular pathology."
       canonicalPath="/advanced-diagnostics-germany"
@@ -26,5 +32,6 @@ export default function AdvancedDiagnostics() {
       ]}
       sectionLabels={{ relatedLinks: "خدماتنا المتميزة" }}
     />
+    </>
   );
 }

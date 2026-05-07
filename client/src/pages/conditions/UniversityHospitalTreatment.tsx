@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function UniversityHospitalTreatment() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/university-hospital-treatment-germany" />
+      <HreflangTags currentPath="/university-hospital-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="University Hospital Treatment in Germany"
       metaDescription="Structured access to Germany's Universitätsklinika — the highest tier of academic medical care — for international patients with complex conditions."
       canonicalPath="/university-hospital-treatment-germany"
@@ -22,5 +28,6 @@ export default function UniversityHospitalTreatment() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

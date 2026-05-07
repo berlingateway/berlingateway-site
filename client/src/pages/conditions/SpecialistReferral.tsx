@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function SpecialistReferral() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/specialist-referral-germany" />
+      <HreflangTags currentPath="/specialist-referral-germany" />
+      <MedicalConditionPage
       metaTitle="Specialist Referral in Germany"
       metaDescription="Coordinated referral pathways to senior German specialists across all major medical disciplines, structured for international patients and referring physicians."
       canonicalPath="/specialist-referral-germany"
@@ -22,5 +28,6 @@ export default function SpecialistReferral() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

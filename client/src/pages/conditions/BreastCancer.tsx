@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function BreastCancer() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/breast-cancer-treatment-germany" />
+      <HreflangTags currentPath="/breast-cancer-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Breast Cancer Treatment in Germany"
       metaDescription="Certified breast cancer centers and multidisciplinary tumor boards at German university hospitals for comprehensive breast cancer care."
       canonicalPath="/breast-cancer-treatment-germany"
@@ -22,5 +28,6 @@ export default function BreastCancer() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

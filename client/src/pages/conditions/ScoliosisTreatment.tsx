@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function ScoliosisTreatment() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/scoliosis-treatment-germany" />
+      <HreflangTags currentPath="/scoliosis-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Scoliosis Treatment in Germany"
       metaDescription="Conservative and surgical management of spinal deformity at German university spine centers, covering adolescent and adult scoliosis with structured specialist evaluation."
       canonicalPath="/scoliosis-treatment-germany"
@@ -22,5 +28,6 @@ export default function ScoliosisTreatment() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

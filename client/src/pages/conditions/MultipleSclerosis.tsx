@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function MultipleSclerosis() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/multiple-sclerosis-treatment-germany" />
+      <HreflangTags currentPath="/multiple-sclerosis-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Multiple Sclerosis Treatment in Germany | MS Centres & Disease-Modifying Therapy"
       metaDescription="Advanced multiple sclerosis diagnostics and disease-modifying therapy at German MS centres, with specialist evaluation for relapsing-remitting, secondary progressive, and primary progressive MS."
       canonicalPath="/multiple-sclerosis-treatment-germany"
@@ -62,5 +68,6 @@ export default function MultipleSclerosis() {
       })}
       arabicSummary="التصلب المتعدد مرض مناعي يُصيب الجهاز العصبي المركزي ويُسبب تلفاً في غمد الميالين المحيط بالأعصاب. تتنوع أعراضه بين ضعف الأطراف واضطرابات البصر والإرهاق الشديد وصعوبات في التوازن. في ألمانيا، تتوفر مراكز متخصصة معتمدة تُقدم أحدث علاجات تعديل المرض، بما فيها الأدوية عالية الفاعلية وزراعة الخلايا الجذعية في الحالات المتقدمة. يُقيَّم كل مريض بشكل شامل لتحديد نوع المرض ومرحلته واختيار البروتوكول العلاجي الأنسب."
     />
+    </>
   );
 }

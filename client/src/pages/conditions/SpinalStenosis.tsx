@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function SpinalStenosis() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/spinal-stenosis-treatment-germany" />
+      <HreflangTags currentPath="/spinal-stenosis-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Spinal Stenosis Treatment in Germany"
       metaDescription="Decompression surgery and minimally invasive options for spinal stenosis at German university spine centers, with structured specialist evaluation."
       canonicalPath="/spinal-stenosis-treatment-germany"
@@ -22,5 +28,6 @@ export default function SpinalStenosis() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

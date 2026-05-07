@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function HerniatedDisc() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/ar/spine-surgery-germany" />
+      <HreflangTags currentPath="/ar/spine-surgery-germany" />
+      <MedicalConditionPage
       pageDir="rtl"
       hideGlobalHeader={true}
       metaTitle="علاج الانزلاق الغضروفي في ألمانيا | ميديكال كير جيرماني"
@@ -145,5 +151,6 @@ export default function HerniatedDisc() {
         footerNote: "يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR).",
       }}
     />
+    </>
   );
 }

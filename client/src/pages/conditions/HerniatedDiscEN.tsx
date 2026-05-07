@@ -1,8 +1,13 @@
 import { Link } from "wouter";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function HerniatedDiscEN() {
   return (
     <div className="min-h-screen bg-white text-slate-900" style={{ fontFamily: "inherit" }}>
+      <SmartNavLayer currentPath="/herniated-disc-treatment-germany" />
+      <HreflangTags currentPath="/herniated-disc-treatment-germany" />
       <main className="max-w-2xl mx-auto px-5 py-12 space-y-10">
 
         {/* Headline */}

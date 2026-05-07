@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function TreatmentInternationalPatients() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/treatment-in-germany-for-international-patients" />
+      <HreflangTags currentPath="/treatment-in-germany-for-international-patients" />
+      <MedicalConditionPage
       metaTitle="Treatment in Germany for International Patients"
       metaDescription="Structured medical access to Germany's university hospital system for international patients, government-sponsored cases, and diplomatic referrals."
       canonicalPath="/treatment-in-germany-for-international-patients"
@@ -23,5 +29,6 @@ export default function TreatmentInternationalPatients() {
       })}
       arabicSummary="يستقبل النظام الصحي في ألمانيا مرضى من جميع أنحاء العالم، سواء كانوا مرضى خاصين، أو حالات ممولة حكومياً، أو إحالات دبلوماسية. كل مسار له متطلبات إدارية وسريرية خاصة يجب تنسيقها مسبقاً. يبدأ الوصول إلى النظام بمراجعة سريرية لتحديد المتخصص والمؤسسة المناسبة، ويدير منسق طبي في برلين عملية التحويل والتوثيق اللازمة. يمكن إرسال التقارير الطبية للتقييم الأولي."
     />
+    </>
   );
 }

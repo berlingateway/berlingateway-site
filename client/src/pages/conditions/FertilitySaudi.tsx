@@ -1,8 +1,14 @@
 import { SymptomPage } from "../symptoms/_SymptomPageTemplate";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function FertilitySaudi() {
   return (
-    <SymptomPage
+    <>
+      <SmartNavLayer currentPath="/ar/fertility-treatment-germany" />
+      <HreflangTags currentPath="/ar/fertility-treatment-germany" />
+      <SymptomPage
       heroTitle="دقة التشخيص الجيني + خصوصية تامة"
       heroLine2="للمرضى السعوديين — علاج تأخر الإنجاب في ألمانيا بأعلى معايير الدقة والسرية"
       triggers={[
@@ -15,5 +21,6 @@ export default function FertilitySaudi() {
       warning="الخصوصية مكفولة بموجب قانون حماية البيانات الأوروبي (GDPR) — أحد أصرم الأنظمة في العالم. لا يُشارك أي ملف طبي دون موافقة صريحة من المريض."
       filterText="هذه الصفحة مخصصة للحالات التي تتطلب دقة تشخيصية متقدمة وسرية مطلقة في التعامل الطبي."
     />
+    </>
   );
 }

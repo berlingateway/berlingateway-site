@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function NeurologyTreatment() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/neurology-treatment-germany" />
+      <HreflangTags currentPath="/neurology-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Neurology Treatment in Germany | Specialist Neurological Care at University Hospitals"
       metaDescription="Specialist neurological evaluation and treatment at German university hospitals for complex neurological conditions including movement disorders, demyelinating diseases, and epilepsy."
       canonicalPath="/neurology-treatment-germany"
@@ -62,5 +68,6 @@ export default function NeurologyTreatment() {
       })}
       arabicSummary="تُعدّ ألمانيا من أبرز الوجهات الطبية في أوروبا لعلاج الأمراض العصبية المعقدة. تضمّ مستشفياتها الجامعية أقساماً متخصصة في أمراض الأوعية الدموية الدماغية، والصرع، واضطرابات الحركة، والتصلب المتعدد، والأمراض العصبية العضلية. يُتيح هذا التخصص الدقيق تقييم كل حالة من قِبل طبيب ذي خبرة محددة في مجالها. كما تتوفر أحدث أجهزة التصوير بالرنين المغناطيسي، وتخطيط الدماغ، والتحاليل الجينية، مما يضمن دقة التشخيص وفاعلية العلاج."
     />
+    </>
   );
 }

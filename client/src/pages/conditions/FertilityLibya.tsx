@@ -1,8 +1,14 @@
 import { SymptomPage } from "../symptoms/_SymptomPageTemplate";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function FertilityLibya() {
   return (
-    <SymptomPage
+    <>
+      <SmartNavLayer currentPath="/ar/fertility-treatment-germany" />
+      <HreflangTags currentPath="/ar/fertility-treatment-germany" />
+      <SymptomPage
       heroTitle="هل فشلت المحاولات السابقة؟ إعادة التقييم ممكنة"
       heroLine2="للمرضى القادمين من ليبيا — تقييم متخصص لحالات تأخر الإنجاب في ألمانيا"
       triggers={[
@@ -15,5 +21,6 @@ export default function FertilityLibya() {
       warning="كثير من الحالات التي لم تستجب للعلاج المحلي تحتاج إلى إعادة تقييم كاملة، لا إلى تكرار نفس البروتوكول. في ألمانيا، يبدأ الأمر بتشخيص شامل يكشف ما لم يُكتشف من قبل."
       filterText="هذه الصفحة مخصصة للحالات التي فشلت فيها المحاولات السابقة أو التي لم تحصل على تشخيص واضح."
     />
+    </>
   );
 }

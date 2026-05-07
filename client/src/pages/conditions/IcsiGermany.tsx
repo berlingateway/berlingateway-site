@@ -1,5 +1,8 @@
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const WA_HREF = "https://wa.me/4915781497451?text=" + encodeURIComponent("مرحباً، أود إرسال تقاريري الطبية لتقييم حالة الخصوبة");
@@ -8,6 +11,8 @@ const intakeHref = "/send-medical-reports";
 export default function IcsiGermany() {
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
+      <SmartNavLayer currentPath="/ar/icsi-germany" />
+      <HreflangTags currentPath="/ar/icsi-germany" />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
       {/* HERO */}

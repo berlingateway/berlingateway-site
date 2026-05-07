@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function ColonCancer() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/colon-cancer-treatment-germany" />
+      <HreflangTags currentPath="/colon-cancer-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Colon Cancer Treatment in Germany"
       metaDescription="Surgical and oncological management of colorectal cancer at German university medical centers, with multidisciplinary tumor board review for each case."
       canonicalPath="/colon-cancer-treatment-germany"
@@ -22,5 +28,6 @@ export default function ColonCancer() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

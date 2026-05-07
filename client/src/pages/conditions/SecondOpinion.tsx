@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function SecondOpinion() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/second-opinion-germany" />
+      <HreflangTags currentPath="/second-opinion-germany" />
+      <MedicalConditionPage
       metaTitle="Second Medical Opinion in Germany"
       metaDescription="Independent specialist review of complex diagnoses and treatment plans by German university physicians, structured for international patients."
       canonicalPath="/second-opinion-germany"
@@ -23,5 +29,6 @@ export default function SecondOpinion() {
       })}
       arabicSummary="الرأي الطبي الثاني هو تقييم مستقل للتشخيص أو خطة العلاج المقترحة من قبل طبيب متخصص آخر. يكون مفيداً بشكل خاص عندما يكون التشخيص غير مؤكد، أو عندما تتضمن خطة العلاج مخاطر كبيرة، أو عندما لم يستجب المريض للعلاج السابق. يعتمد الرأي الثاني في ألمانيا على مراجعة شاملة لجميع التقارير والصور ونتائج التحاليل، وينتهي بتقرير طبي مكتوب ومفصل. يمكن إرسال التقارير لبدء عملية التقييم."
     />
+    </>
   );
 }

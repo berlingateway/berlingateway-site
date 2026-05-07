@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function TrigeminalNeuralgia() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/trigeminal-neuralgia-treatment-germany" />
+      <HreflangTags currentPath="/trigeminal-neuralgia-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Trigeminal Neuralgia Treatment in Germany | Specialist Neurosurgery"
       metaDescription="Specialist evaluation and treatment for trigeminal neuralgia at German university hospitals, including microvascular decompression and radiosurgery."
       canonicalPath="/trigeminal-neuralgia-treatment-germany"
@@ -59,5 +65,6 @@ export default function TrigeminalNeuralgia() {
       })}
       arabicSummary="يُعتبر العصب الثلاثي التوائم من أكثر أسباب الألم الحاد في الوجه، حيث يشعر المريض بنوبات ألم مفاجئة وقوية تشبه الصدمة الكهربائية. هذا النوع من الألم قد يستمر لفترة طويلة ويؤثر بشكل كبير على جودة الحياة. في ألمانيا، يتم تقييم هذه الحالات بدقة من قبل أطباء متخصصين في الأعصاب وجراحة المخ والأعصاب لتحديد أفضل خيار علاجي، سواء كان دوائياً أو جراحياً. يمكن إرسال التقارير الطبية للتقييم الأولي قبل اتخاذ أي قرار علاجي."
     />
+    </>
   );
 }

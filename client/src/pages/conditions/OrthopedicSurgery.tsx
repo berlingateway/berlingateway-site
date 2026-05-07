@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function OrthopedicSurgery() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/orthopedic-surgery-germany" />
+      <HreflangTags currentPath="/orthopedic-surgery-germany" />
+      <MedicalConditionPage
       metaTitle="Orthopedic Surgery in Germany"
       metaDescription="Advanced orthopedic and musculoskeletal surgical care at German university hospitals, covering joint replacement, sports medicine, and complex reconstructive procedures."
       canonicalPath="/orthopedic-surgery-germany"
@@ -22,5 +28,6 @@ export default function OrthopedicSurgery() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

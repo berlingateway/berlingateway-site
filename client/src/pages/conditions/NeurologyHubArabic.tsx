@@ -1,5 +1,8 @@
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const intakeHref = "/send-medical-reports";
@@ -12,6 +15,8 @@ export default function NeurologyHubArabic() {
       dir="rtl"
       lang="ar"
     >
+      <SmartNavLayer currentPath="/ar/neurology-treatment-germany" />
+      <HreflangTags currentPath="/ar/neurology-treatment-germany" />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
 

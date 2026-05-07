@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function LiverCancer() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/liver-cancer-treatment-germany" />
+      <HreflangTags currentPath="/liver-cancer-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Liver Cancer Treatment in Germany"
       metaDescription="Hepatobiliary surgery and interventional oncology for liver cancer at German university centers, with multidisciplinary tumor board evaluation."
       canonicalPath="/liver-cancer-treatment-germany"
@@ -22,5 +28,6 @@ export default function LiverCancer() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

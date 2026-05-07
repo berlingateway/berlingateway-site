@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function BrainSurgery() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/brain-surgery-germany" />
+      <HreflangTags currentPath="/brain-surgery-germany" />
+      <MedicalConditionPage
       metaTitle="Brain Surgery in Germany | Neurosurgical Expertise at University Hospitals"
       metaDescription="Access to specialist neurosurgical evaluation and treatment at German university hospitals for complex intracranial conditions requiring surgical intervention."
       canonicalPath="/brain-surgery-germany"
@@ -59,5 +65,6 @@ export default function BrainSurgery() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

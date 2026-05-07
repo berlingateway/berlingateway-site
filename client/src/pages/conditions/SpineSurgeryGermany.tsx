@@ -5,6 +5,9 @@
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -43,6 +46,8 @@ const DOCUMENTS = [
 export default function SpineSurgeryGermany() {
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <SmartNavLayer currentPath="/ar/spine-surgery-germany" />
+      <HreflangTags currentPath="/ar/spine-surgery-germany" />
 
       {/* ── SEO META ─────────────────────────────────────────────── */}
       <title>جراحة العمود الفقري في ألمانيا | تقييم الحالات المعقدة</title>

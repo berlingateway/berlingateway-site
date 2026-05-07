@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function LungCancer() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/lung-cancer-treatment-germany" />
+      <HreflangTags currentPath="/lung-cancer-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Lung Cancer Treatment in Germany"
       metaDescription="Multidisciplinary oncological care for lung cancer at German university cancer centers, including molecular profiling, immunotherapy, and thoracic surgery."
       canonicalPath="/lung-cancer-treatment-germany"
@@ -22,5 +28,6 @@ export default function LungCancer() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

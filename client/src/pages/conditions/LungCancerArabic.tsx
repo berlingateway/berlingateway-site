@@ -1,4 +1,7 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 const WA_NUMBER = "4915781497451";
 
@@ -8,6 +11,8 @@ export default function LungCancerArabic() {
 
   return (
     <>
+      <SmartNavLayer currentPath="/ar/lung-cancer-treatment-germany" />
+      <HreflangTags currentPath="/ar/lung-cancer-treatment-germany" />
       <MedicalConditionPage
         pageDir="rtl"
         metaTitle="علاج سرطان الرئة في ألمانيا | ميديكال كير جيرماني"

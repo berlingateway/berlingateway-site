@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function KneeReplacement() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/knee-replacement-germany" />
+      <HreflangTags currentPath="/knee-replacement-germany" />
+      <MedicalConditionPage
       metaTitle="Knee Replacement Surgery in Germany"
       metaDescription="Total and partial knee arthroplasty at certified German orthopedic centers, with computer-assisted planning and structured rehabilitation pathways."
       canonicalPath="/knee-replacement-germany"
@@ -22,5 +28,6 @@ export default function KneeReplacement() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

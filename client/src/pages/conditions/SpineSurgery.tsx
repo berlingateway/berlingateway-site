@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function SpineSurgery() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/spine-surgery-germany" />
+      <HreflangTags currentPath="/spine-surgery-germany" />
+      <MedicalConditionPage
       metaTitle="Spine Surgery in Germany"
       metaDescription="Advanced spinal surgical procedures at accredited German university hospitals, from minimally invasive techniques to complex spinal reconstruction."
       canonicalPath="/spine-surgery-germany"
@@ -27,5 +33,6 @@ export default function SpineSurgery() {
       ]}
       sectionLabels={{ relatedLinks: "خدماتنا المتميزة" }}
     />
+    </>
   );
 }

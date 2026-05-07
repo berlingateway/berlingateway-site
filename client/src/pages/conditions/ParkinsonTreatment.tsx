@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function ParkinsonTreatment() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/parkinson-treatment-germany" />
+      <HreflangTags currentPath="/parkinson-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Parkinson's Disease Treatment in Germany | Deep Brain Stimulation & Movement Disorder Specialists"
       metaDescription="Specialist Parkinson's disease evaluation and treatment at German university hospitals, including deep brain stimulation, advanced pharmacological management, and multidisciplinary rehabilitation."
       canonicalPath="/parkinson-treatment-germany"
@@ -64,5 +70,6 @@ export default function ParkinsonTreatment() {
       })}
       arabicSummary="مرض باركنسون اضطراب عصبي تنكسي تدريجي يُصيب الخلايا العصبية المنتجة للدوبامين في الدماغ، مما يُسبب رعشةً وتيبساً وبطءاً في الحركة. في ألمانيا، تُعالج هذه الحالات في وحدات متخصصة باضطرابات الحركة تجمع بين أفضل الأدوية وإمكانية التحفيز العميق للدماغ (DBS) عند المرضى المؤهلين. يُقيَّم كل مريض بشكل فردي من قِبل فريق متعدد التخصصات لتحديد الخيار العلاجي الأنسب وفق مرحلة المرض وأعراضه."
     />
+    </>
   );
 }

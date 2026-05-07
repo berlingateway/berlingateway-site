@@ -1,8 +1,14 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 export default function ArrhythmiaTreatment() {
   return (
-    <MedicalConditionPage
+    <>
+      <SmartNavLayer currentPath="/arrhythmia-treatment-germany" />
+      <HreflangTags currentPath="/arrhythmia-treatment-germany" />
+      <MedicalConditionPage
       metaTitle="Arrhythmia Treatment in Germany"
       metaDescription="Electrophysiology studies and catheter ablation for cardiac arrhythmia at German university heart centers, with structured specialist evaluation."
       canonicalPath="/arrhythmia-treatment-germany"
@@ -22,5 +28,6 @@ export default function ArrhythmiaTreatment() {
         "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://www.medicalcaregermany.com" }
       })}
     />
+    </>
   );
 }

@@ -1,4 +1,7 @@
 import MedicalConditionPage from "@/components/MedicalConditionPage";
+import SmartNavLayer from "@/components/SmartNavLayer";
+import HreflangTags from "@/components/HreflangTags";
+
 
 const WA_NUMBER = "4915781497451";
 
@@ -8,6 +11,8 @@ export default function TrigeminalNeuralgiaArabic() {
 
   return (
     <>
+      <SmartNavLayer currentPath="/ar/trigeminal-neuralgia-germany" />
+      <HreflangTags currentPath="/ar/trigeminal-neuralgia-germany" />
       <MedicalConditionPage
         pageDir="rtl"
         hideGlobalHeader={true}

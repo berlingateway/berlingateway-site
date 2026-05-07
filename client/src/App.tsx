@@ -119,6 +119,24 @@ import NeurologicalRehabilitationGermany from "./pages/conditions/NeurologicalRe
 import SecondMedicalEvaluationGermany from "./pages/conditions/SecondMedicalEvaluationGermany";
 import LongTermRehabilitationGermany from "./pages/conditions/LongTermRehabilitationGermany";
 
+// EN Rehabilitation Pages
+import AdvancedRehabilitationEN from "./pages/rehabilitation/AdvancedRehabilitationEN";
+import WarInjuryRehabilitationEN from "./pages/rehabilitation/WarInjuryRehabilitationEN";
+import ProstheticsEN from "./pages/rehabilitation/ProstheticsEN";
+import SpinalRehabilitationEN from "./pages/rehabilitation/SpinalRehabilitationEN";
+import NeurologicalRehabilitationEN from "./pages/rehabilitation/NeurologicalRehabilitationEN";
+import SecondMedicalEvaluationEN from "./pages/rehabilitation/SecondMedicalEvaluationEN";
+import LongTermRehabilitationEN from "./pages/rehabilitation/LongTermRehabilitationEN";
+
+// DE Rehabilitation Pages
+import RehabilitationDE from "./pages/rehabilitation/RehabilitationDE";
+import WarInjuryRehabilitationDE from "./pages/rehabilitation/WarInjuryRehabilitationDE";
+import ProstheticsDE from "./pages/rehabilitation/ProstheticsDE";
+import SpinalRehabilitationDE from "./pages/rehabilitation/SpinalRehabilitationDE";
+import NeurologicalRehabilitationDE from "./pages/rehabilitation/NeurologicalRehabilitationDE";
+import SecondMedicalEvaluationDE from "./pages/rehabilitation/SecondMedicalEvaluationDE";
+import LongTermRehabilitationDE from "./pages/rehabilitation/LongTermRehabilitationDE";
+
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
 import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
@@ -217,6 +235,22 @@ function Router() {
       <Route path={"/ar/neurological-rehabilitation-germany"} component={NeurologicalRehabilitationGermany} />
       <Route path={"/ar/second-medical-evaluation-germany"} component={SecondMedicalEvaluationGermany} />
       <Route path={"/ar/long-term-rehabilitation-germany"} component={LongTermRehabilitationGermany} />
+      {/* EN Rehabilitation Routes */}
+      <Route path={"/en/advanced-rehabilitation-germany"} component={AdvancedRehabilitationEN} />
+      <Route path={"/en/war-injury-rehabilitation-germany"} component={WarInjuryRehabilitationEN} />
+      <Route path={"/en/prosthetics-germany"} component={ProstheticsEN} />
+      <Route path={"/en/spinal-rehabilitation-germany"} component={SpinalRehabilitationEN} />
+      <Route path={"/en/neurological-rehabilitation-germany"} component={NeurologicalRehabilitationEN} />
+      <Route path={"/en/second-medical-evaluation-germany"} component={SecondMedicalEvaluationEN} />
+      <Route path={"/en/long-term-rehabilitation-germany"} component={LongTermRehabilitationEN} />
+      {/* DE Rehabilitation Routes */}
+      <Route path={"/de/rehabilitation-deutschland"} component={RehabilitationDE} />
+      <Route path={"/de/rehabilitation-kriegsverletzungen-deutschland"} component={WarInjuryRehabilitationDE} />
+      <Route path={"/de/prothetik-deutschland"} component={ProstheticsDE} />
+      <Route path={"/de/spinale-rehabilitation-deutschland"} component={SpinalRehabilitationDE} />
+      <Route path={"/de/neurologische-rehabilitation-deutschland"} component={NeurologicalRehabilitationDE} />
+      <Route path={"/de/medizinische-zweitbewertung-deutschland"} component={SecondMedicalEvaluationDE} />
+      <Route path={"/de/langzeit-rehabilitation-deutschland"} component={LongTermRehabilitationDE} />
       <Route path={"/ar/spine-surgery-germany"} component={SpineSurgeryGermany} />
       <Route path={"/ar/gastrointestinal-surgery-germany"} component={GastrointestinalSurgeryGermany} />
       <Route path={"/ar/maxillofacial-surgery-germany"} component={MaxillofacialSurgeryGermany} />

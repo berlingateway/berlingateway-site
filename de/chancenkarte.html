@@ -102,6 +102,52 @@
         .form-submit:active {
             background: #9a7c3f;
         }
+        .content-block {
+            margin: 40px 0;
+        }
+        .content-block h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .content-block ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content-block li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .demand-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .demand-table th, .demand-table td {
+            padding: 12px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+        .demand-table th {
+            background: #f9f9f9;
+            font-weight: 700;
+        }
+        .link-block {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .link-block a {
+            color: #C5A059;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            width: fit-content;
+        }
+        .link-block a:hover {
+            border-bottom-color: #C5A059;
+        }
     </style>
 </head>
 <body>
@@ -148,29 +194,39 @@
 <main>
     <div class="chancenkarte-container">
         <div class="chancenkarte-hero">
-            <h1>Ihre Chancenkarte für Deutschland</h1>
-            <p>Der direkte Weg zu Arbeit und Leben in Deutschland. Starten Sie jetzt Ihre Bewertung.</p>
+            <h1>Strategische Einschätzung Ihrer Chancen in Deutschland</h1>
+            <p>Basierend auf realen Anforderungen des deutschen Arbeitsmarktes.</p>
+            <p style="margin-top: 15px; font-size: 16px; color: #444;">Nicht jedes Profil ist gleich gut positioniert. Diese Einschätzung hilft Ihnen, Ihre reale Ausgangslage besser zu verstehen.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>Was viele Bewerber unterschätzen</h2>
+            <ul>
+              <li>Anerkennung & Dokumentation</li>
+              <li>Sprachrealität vs. Theorie</li>
+              <li>Arbeitsmarktrelevanz des Profils</li>
+              <li>Klare berufliche Zielrichtung</li>
+            </ul>
         </div>
 
         <div class="chancenkarte-form-wrapper">
-            <h2></h2>
             <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
                 
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="Neue Anfrage - Berlin Gateway">
                 
                 <div class="form-group">
-                    <label for="target-position"></label>
+                    <label for="target-position">Zielberuf</label>
                     <input type="text" id="target-position" name="Zielberuf" placeholder="z.B. Softwareentwickler" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="qualification"></label>
+                    <label for="qualification">Abschluss</label>
                     <input type="text" id="qualification" name="Abschluss" placeholder="z.B. Master Informatik" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="experience"></label>
+                    <label for="experience">Berufserfahrung</label>
                     <select id="experience" name="Berufserfahrung" required>
                         <option value="">-- Bitte wählen --</option>
                         <option value="0-2">0–2 Jahre</option>
@@ -180,7 +236,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="language"></label>
+                    <label for="language">Sprachkenntnisse</label>
                     <select id="language" name="Sprachkenntnisse" required>
                         <option value="">-- Bitte wählen --</option>
                         <option value="a1-a2">A1–A2</option>
@@ -191,7 +247,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="country"></label>
+                    <label for="country">Wohnsitzland</label>
                     <select id="country" name="Wohnsitzland" required>
                         <option value="">Bitte wählen</option>
                         <option value="Deutschland">Deutschland</option>
@@ -225,18 +281,69 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email"></label>
+                    <label for="email">E-Mail</label>
                     <input type="email" id="email" name="E-Mail" placeholder="ihre.email@example.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="cv-upload"></label>
+                    <label for="cv-upload">Lebenslauf (CV)</label>
                     <input type="file" id="cv-upload" name="CV Upload" accept=".pdf" required>
                     <small>PDF only, max 5MB</small>
                 </div>
 
                 <button type="submit" class="form-submit">Bewertung jetzt senden</button>
             </form>
+        </div>
+
+        <div class="content-block">
+            <h2>Gefragte Profile im deutschen Arbeitsmarkt</h2>
+            <table class="demand-table">
+              <thead>
+                <tr>
+                  <th>Bereich</th>
+                  <th>Nachfrage</th>
+                  <th>Vorbereitung</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IT / Softwareentwicklung</td>
+                  <td>Hoch</td>
+                  <td>Profil, Erfahrung, technische Nachweise</td>
+                </tr>
+                <tr>
+                  <td>Pflege / Gesundheit</td>
+                  <td>Sehr hoch</td>
+                  <td>Anerkennung, Sprache, Dokumente</td>
+                </tr>
+                <tr>
+                  <td>Ingenieurwesen</td>
+                  <td>Hoch</td>
+                  <td>Abschluss, Projekterfahrung, Spezialisierung</td>
+                </tr>
+                <tr>
+                  <td>Handwerk / Technik</td>
+                  <td>Stabil hoch</td>
+                  <td>Qualifikation, Praxis, Zielberuf</td>
+                </tr>
+                <tr>
+                  <td>Erneuerbare Energien</td>
+                  <td>Wachsend</td>
+                  <td>Technische Ausrichtung, Erfahrung, Nachweise</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+        <div class="link-block">
+            <a href="/de/systemlogik">Die deutsche Systemlogik verstehen</a>
+            <a href="/de/arbeit-in-deutschland">Arbeit in Deutschland strategisch verstehen</a>
+            <a href="/de/voraussetzungen">Voraussetzungen realistisch prüfen</a>
+        </div>
+
+        <div class="content-block">
+            <h2>Nächste Schritte: Welcher Weg passt zu Ihrem Profil?</h2>
+            <p>Nach der ersten Einschätzung sollte klarer werden, ob Ihr Profil eher über Chancenkarte, Direkteinstieg, Anerkennung, Ausbildung oder Studium positioniert werden sollte.</p>
         </div>
     </div>
 </main>

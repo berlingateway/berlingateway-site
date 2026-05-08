@@ -153,6 +153,10 @@ import HospitalsGermanyInternational from "./pages/seo/HospitalsGermanyInternati
 import TravelForTreatmentGermany from "./pages/seo/TravelForTreatmentGermany";
 import SendMedicalReportsArabic from "./pages/seo/SendMedicalReportsArabic";
 
+// Language Fallback + 404 Prevention Pages
+import GermanFallback from "./pages/GermanFallback";
+import ArabicSubmitCase from "./pages/ArabicSubmitCase";
+
 // Category Hub Pages
 import NeurologyHub from "./pages/hubs/NeurologyHub";
 import SpineHub from "./pages/hubs/SpineHub";
@@ -320,6 +324,9 @@ function Router() {
       <Route path={"/cardiology-germany"} component={CardiologyHub} />
       <Route path={"/consultation-services-germany"} component={ConsultationHub} />
 
+      {/* Language fallback + 404 prevention routes */}
+      <Route path={"/de"} component={GermanFallback} />
+      <Route path={"/ar/submit-case"} component={ArabicSubmitCase} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

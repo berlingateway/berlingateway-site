@@ -1360,6 +1360,22 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
       { href: "/submit-case", label: "Berichte einreichen" },
     ],
   },
+  "/ar/submit-case": {
+    path: "/ar/submit-case",
+    label: "إرسال التقارير الطبية",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { ar: "/ar/submit-case", en: "/submit-case", de: "/de" },
+    cluster: [
+      { href: "/ar/submit-case", label: "إرسال التقارير الطبية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/العلاج-في-المانيا-للعرب", label: "العلاج في ألمانيا" },
+    ],
+  },
 };
 
 /**

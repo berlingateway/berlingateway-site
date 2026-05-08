@@ -216,6 +216,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'weekly',
     priority: 0.7,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/submit-case`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 ];
 
 function generateSitemapXML(urls: SitemapUrl[]): string {

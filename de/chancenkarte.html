@@ -30,6 +30,67 @@
             line-height: 1.6;
             color: #666;
         }
+        .intelligence-card {
+            background: #f8f9fa;
+            border-left: 4px solid #0B3B8C;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .intelligence-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: #000;
+        }
+        .intelligence-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            margin: 0;
+        }
+        .assessment-container {
+            background: white;
+            padding: 40px;
+            border: 2px solid #0B3B8C;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        .assessment-disclaimer {
+            background: #f3f5f8;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .assessment-process {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+        .process-step {
+            flex: 1;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+        }
+        .process-step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #0B3B8C;
+            color: white;
+            border-radius: 50%;
+            line-height: 28px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
         .chancenkarte-form-wrapper {
             background: white;
             padding: 40px;
@@ -118,6 +179,72 @@
             margin-bottom: 10px;
             line-height: 1.6;
         }
+        .demand-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .demand-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .demand-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+            color: #000;
+        }
+        .demand-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #666;
+            margin: 8px 0;
+        }
+        .demand-card strong {
+            color: #0B3B8C;
+        }
+        .navigation-modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .navigation-module {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .navigation-module:hover {
+            border-color: #0B3B8C;
+            box-shadow: 0 4px 12px rgba(11, 59, 140, 0.1);
+        }
+        .navigation-module h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: #000;
+        }
+        .navigation-module p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #666;
+            margin: 0 0 12px 0;
+        }
+        .navigation-module a {
+            color: #C5A059;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .navigation-module a:hover {
+            text-decoration: underline;
+        }
         .demand-table {
             width: 100%;
             border-collapse: collapse;
@@ -147,6 +274,17 @@
         }
         .link-block a:hover {
             border-bottom-color: #C5A059;
+        }
+        @media (max-width: 768px) {
+            .assessment-process {
+                flex-direction: column;
+            }
+            .demand-cards {
+                grid-template-columns: 1fr;
+            }
+            .navigation-modules {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -200,16 +338,49 @@
         </div>
 
         <div class="content-block">
-            <h2>Was viele Bewerber unterschätzen</h2>
-            <ul>
-              <li>Anerkennung & Dokumentation</li>
-              <li>Sprachrealität vs. Theorie</li>
-              <li>Arbeitsmarktrelevanz des Profils</li>
-              <li>Klare berufliche Zielrichtung</li>
-            </ul>
+            <h2>Kritische Systembarrieren</h2>
+            <div class="intelligence-card">
+                <h3>Anerkennung & Dokumentation</h3>
+                <p>Viele internationale Abschlüsse erfordern formale Anerkennung. Ohne diese ist der Arbeitsmarktzugang stark begrenzt.</p>
+            </div>
+            <div class="intelligence-card">
+                <h3>Sprachrealität vs. Theorie</h3>
+                <p>B2 ist das Minimum für komplexe Tätigkeiten. Viele unterschätzen die praktischen Anforderungen im Arbeitsalltag.</p>
+            </div>
+            <div class="intelligence-card">
+                <h3>Arbeitsmarktrelevanz des Profils</h3>
+                <p>Ihre Qualifikation muss zur aktuellen Nachfrage passen. Spezialisierungen können ein Vorteil oder ein Hindernis sein.</p>
+            </div>
+            <div class="intelligence-card">
+                <h3>Klare berufliche Zielrichtung</h3>
+                <p>Arbeitgeber erwarten Klarheit über Ihre beruflichen Ziele. Unklare Positionierung reduziert Chancen deutlich.</p>
+            </div>
         </div>
 
-        <div class="chancenkarte-form-wrapper">
+        <div class="assessment-container">
+            <div class="assessment-disclaimer">
+                <strong>Dieser Bewertungsprozess dient nicht der Datenerfassung.</strong> Er strukturiert Ihre Selbsteinschätzung basierend auf realen Arbeitsmarktanforderungen und hilft Ihnen, Ihre Positionierung realistisch zu bewerten.
+            </div>
+            
+            <div class="assessment-process">
+                <div class="process-step">
+                    <div class="process-step-number">01</div>
+                    <div>Profilanalyse</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">02</div>
+                    <div>Systemlogik-Abgleich</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">03</div>
+                    <div>Strategische Einordnung</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">04</div>
+                    <div>Handlungsempfehlung</div>
+                </div>
+            </div>
+
             <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
                 
                 <input type="hidden" name="_captcha" value="false">
@@ -296,54 +467,78 @@
         </div>
 
         <div class="content-block">
-            <h2>Gefragte Profile im deutschen Arbeitsmarkt</h2>
-            <table class="demand-table">
-              <thead>
-                <tr>
-                  <th>Bereich</th>
-                  <th>Nachfrage</th>
-                  <th>Vorbereitung</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>IT / Softwareentwicklung</td>
-                  <td>Hoch</td>
-                  <td>Profil, Erfahrung, technische Nachweise</td>
-                </tr>
-                <tr>
-                  <td>Pflege / Gesundheit</td>
-                  <td>Sehr hoch</td>
-                  <td>Anerkennung, Sprache, Dokumente</td>
-                </tr>
-                <tr>
-                  <td>Ingenieurwesen</td>
-                  <td>Hoch</td>
-                  <td>Abschluss, Projekterfahrung, Spezialisierung</td>
-                </tr>
-                <tr>
-                  <td>Handwerk / Technik</td>
-                  <td>Stabil hoch</td>
-                  <td>Qualifikation, Praxis, Zielberuf</td>
-                </tr>
-                <tr>
-                  <td>Erneuerbare Energien</td>
-                  <td>Wachsend</td>
-                  <td>Technische Ausrichtung, Erfahrung, Nachweise</td>
-                </tr>
-              </tbody>
-            </table>
-        </div>
-
-        <div class="link-block">
-            <a href="/de/systemlogik">Die deutsche Systemlogik verstehen</a>
-            <a href="/de/arbeit-in-deutschland">Arbeit in Deutschland strategisch verstehen</a>
-            <a href="/de/voraussetzungen">Voraussetzungen realistisch prüfen</a>
+            <h2>Strategische Nachfragefelder im deutschen Arbeitsmarkt</h2>
+            <p>Diese Bereiche zeigen die höchste Nachfrage nach internationalen Fachkräften. Ihre Chancen hängen davon ab, wie Ihr Profil zu diesen Anforderungen passt.</p>
+            
+            <div class="demand-cards">
+                <div class="demand-card">
+                    <h3>IT & Softwareentwicklung</h3>
+                    <p><strong>Nachfrage:</strong> Hoch</p>
+                    <p><strong>Anforderungen:</strong> Profil, Erfahrung, technische Nachweise</p>
+                    <p><strong>Erfolgsfaktor:</strong> Portfolio und praktische Projekte</p>
+                </div>
+                <div class="demand-card">
+                    <h3>Pflege & Gesundheit</h3>
+                    <p><strong>Nachfrage:</strong> Sehr hoch</p>
+                    <p><strong>Anforderungen:</strong> Anerkennung, Sprache, Dokumente</p>
+                    <p><strong>Erfolgsfaktor:</strong> Formale Anerkennung ist Voraussetzung</p>
+                </div>
+                <div class="demand-card">
+                    <h3>Ingenieurwesen</h3>
+                    <p><strong>Nachfrage:</strong> Hoch</p>
+                    <p><strong>Anforderungen:</strong> Abschluss, Projekterfahrung, Spezialisierung</p>
+                    <p><strong>Erfolgsfaktor:</strong> Spezialisierung und Nachweise</p>
+                </div>
+                <div class="demand-card">
+                    <h3>Handwerk & Technik</h3>
+                    <p><strong>Nachfrage:</strong> Stabil hoch</p>
+                    <p><strong>Anforderungen:</strong> Qualifikation, Praxis, Zielberuf</p>
+                    <p><strong>Erfolgsfaktor:</strong> Klare berufliche Spezialisierung</p>
+                </div>
+            </div>
         </div>
 
         <div class="content-block">
-            <h2>Nächste Schritte: Welcher Weg passt zu Ihrem Profil?</h2>
-            <p>Nach der ersten Einschätzung sollte klarer werden, ob Ihr Profil eher über Chancenkarte, Direkteinstieg, Anerkennung, Ausbildung oder Studium positioniert werden sollte.</p>
+            <h2>Strategische Navigation</h2>
+            <p>Verstehen Sie die Systemlogik und finden Sie Ihren optimalen Weg in den deutschen Arbeitsmarkt.</p>
+            
+            <div class="navigation-modules">
+                <div class="navigation-module">
+                    <h3>Systemlogik</h3>
+                    <p>Verstehen Sie, wie das deutsche Einwanderungssystem funktioniert und welche Wege für Ihr Profil relevant sind.</p>
+                    <a href="/de/systemlogik">Zur Systemlogik →</a>
+                </div>
+                <div class="navigation-module">
+                    <h3>Anerkennung</h3>
+                    <p>Erfahren Sie, wie Ihre Qualifikation in Deutschland anerkannt wird und welche Schritte notwendig sind.</p>
+                    <a href="/de/anerkennung">Zur Anerkennung →</a>
+                </div>
+                <div class="navigation-module">
+                    <h3>Arbeit in Deutschland</h3>
+                    <p>Strategische Einblicke in den deutschen Arbeitsmarkt, Anforderungen und Chancen für Ihr Profil.</p>
+                    <a href="/de/arbeit-in-deutschland">Zum Arbeitsmarkt →</a>
+                </div>
+                <div class="navigation-module">
+                    <h3>Monitor</h3>
+                    <p>Aktuelle Daten und Trends zum deutschen Arbeitsmarkt und zur Fachkräftenachfrage.</p>
+                    <a href="/de/monitor">Zum Monitor →</a>
+                </div>
+                <div class="navigation-module">
+                    <h3>Punkte-Rechner</h3>
+                    <p>Berechnen Sie Ihre Punkte nach dem Chancenkarten-System und erfahren Sie Ihre Chancen.</p>
+                    <a href="/de/assessment">Zum Rechner →</a>
+                </div>
+                <div class="navigation-module">
+                    <h3>Insights</h3>
+                    <p>Detaillierte Analysen und Strategien für verschiedene Berufsgruppen und Qualifikationen.</p>
+                    <a href="/de/insights">Zu den Insights →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>Nächste Schritte</h2>
+            <p>Nach dieser Einschätzung sollte klarer werden, ob Ihr Profil eher über Chancenkarte, Direkteinstieg, Anerkennung, Ausbildung oder Studium positioniert werden sollte. Nutzen Sie die strategischen Ressourcen oben, um Ihren optimalen Weg zu finden.</p>
         </div>
     </div>
 </main>

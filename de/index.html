@@ -3,21 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — Professionelle Bewertung für Deutschland</title>
+    <title>Berlin Gateway — Strategische Bewertung für Fachkräfte in Deutschland</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .hero-compact {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero-compact h1 { color: white !important; margin-bottom: 20px; }
+        .hero-compact p { color: rgba(255,255,255,0.9) !important; max-width: 800px; margin: 0 auto 30px auto; font-size: 1.2rem; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn-gold { background: #0B3B8C !important; color: black !important; padding: 15px 30px; border-radius: 6px; font-weight: 700; }
+        .btn-outline { border: 2px solid white; color: white !important; padding: 13px 30px; border-radius: 6px; font-weight: 700; }
+        
+        .profession-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 60px 0; }
+        .prof-card { background: white; border: 1px solid #eee; padding: 25px; border-radius: 8px; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
+        .prof-card:hover { transform: translateY(-5px); border-color: #0B3B8C; }
+        .prof-card h3 { margin-bottom: 10px; font-size: 1.25rem; }
+        .prof-demand { color: #0B3B8C; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; }
+        .prof-desc { font-size: 0.95rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
+        .prof-cta { background: #000; color: #fff !important; text-align: center; padding: 10px; border-radius: 4px; font-weight: 600; margin-bottom: 10px; }
+        .prof-micro { text-align: center; font-size: 0.85rem; font-weight: 700; color: #888; text-decoration: underline; }
+        
+        .flow-section { background: #f9f9f9; padding: 80px 0; }
+        .flow-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; text-align: center; position: relative; }
+        .flow-step { position: relative; padding: 20px; }
+        .flow-step:not(:last-child)::after { content: '→'; position: absolute; right: -15px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: #ccc; }
+        .flow-icon { width: 50px; height: 50px; background: #000; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-weight: 900; }
+        .flow-step h4 { font-size: 1rem; margin-bottom: 5px; }
+        .flow-step p { font-size: 0.85rem; line-height: 1.3; }
+
+        @media (max-width: 1024px) { .profession-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { 
+            .profession-grid { grid-template-columns: 1fr; } 
+            .flow-grid { grid-template-columns: 1fr; }
+            .flow-step:not(:last-child)::after { content: '↓'; right: auto; left: 50%; bottom: -15px; top: auto; transform: translateX(-50%); }
+        }
+    </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
+            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+        </div>
         <div class="top-band__right">
             <a href="/ar" class="lang-switch">العربية</a>
             <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
@@ -25,7 +62,6 @@
     </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
 <header class="header">
     <div class="header__inner">
         <a href="/de" class="brand">
@@ -33,103 +69,111 @@
             Berlin Gateway
         </a>
         <nav class="nav">
+            <a href="/de/aerzte">Ärzte</a>
+            <a href="/de/ingenieure">Ingenieure</a>
+            <a href="/de/ausbildung">Pflegekräfte</a>
+            <a href="/de/arbeit-in-deutschland">Arbeiten</a>
             <a href="/de/chancenkarte">Chancenkarte</a>
-            <a href="/de/systemlogik">Systemlogik</a>
-            <a href="/de/monitor">Monitor</a>
-            <a href="/de/insights">Insights</a></nav>
+            <a href="/de/assessment">Assessment</a>
+        </nav>
     </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
-    </div>
-</nav>
-
-<!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero-compact">
         <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>Können Sie in Deutschland arbeiten?</h1>
-                    <p class="sub">Prüfen Sie jetzt in 60 Sekunden Ihre Chancen für die Chancenkarte 2026. Strukturierte Bewertung nach deutschen Standards.</p>
-                    <div class="badges">
-                        <span class="badge">Zertifizierte Bewertung</span>
-                        <span class="badge">Echtzeit-Analyse</span>
-                    </div>
+            <h1>Deutschland sucht qualifizierte Fachkräfte.<br>Doch viele Bewerber scheitern bereits vor dem ersten Schritt.</h1>
+            <p>Berlin Gateway unterstützt Ärzte, Ingenieure, Pflegekräfte und qualifizierte Fachkräfte dabei, den deutschen Weg realistisch, strategisch und professionell zu verstehen.</p>
+            <div class="hero-btns">
+                <a href="/de/assessment" class="btn-gold">Assessment starten</a>
+                <a href="/de/chancenkarte" class="btn-outline">Chancenkarte verstehen</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align:center;">Fokusbereiche des deutschen Arbeitsmarktes</h2>
+            <div class="profession-grid">
+                <!-- Card 1: Ärzte -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Extrem Hoch</div>
+                    <h3>Ärzte in Deutschland</h3>
+                    <p class="prof-desc">Die deutsche Approbation ist ein komplexer Prozess. Wir bewerten Ihre Unterlagen vor dem Start.</p>
+                    <a href="/de/aerzte" class="prof-cta">Approbation verstehen</a>
+                    <a href="/de/insights/gehaelter-deutschland" class="prof-micro">Gehalt & Bundesländer</a>
+                </div>
+                <!-- Card 2: Ingenieure -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Hoch</div>
+                    <h3>Ingenieure in Deutschland</h3>
+                    <p class="prof-desc">Ingenieure benötigen eine klare Positionierung ihres Profils für deutsche Arbeitgeber.</p>
+                    <a href="/de/ingenieure" class="prof-cta">Arbeitsmarkt prüfen</a>
+                    <a href="/de/struktur-vor-bewerbung" class="prof-micro">Lebenslauf verstehen</a>
+                </div>
+                <!-- Card 3: Pflege -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Sehr Hoch</div>
+                    <h3>Pflegekräfte in Deutschland</h3>
+                    <p class="prof-desc">Anerkennung und Sprache sind die Schlüssel. Wir zeigen Ihnen den strukturierten Weg.</p>
+                    <a href="/de/ausbildung" class="prof-cta">Anerkennung prüfen</a>
+                    <a href="/de/voraussetzungen" class="prof-micro">Sprachanforderungen</a>
+                </div>
+                <!-- Card 4: IT -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Wachsend</div>
+                    <h3>IT & Technical Professionals</h3>
+                    <p class="prof-desc">Direkteinstieg oder Chancenkarte? Wir analysieren die beste Strategie für Ihr Profil.</p>
+                    <a href="/de/chancenkarte" class="prof-cta">Chancenkarte & Jobs</a>
+                    <a href="/de/insights/gefragte-berufe" class="prof-micro">Nachfrage analysieren</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
+    <section class="flow-section">
         <div class="container">
-            <h2>Professionelle Einschätzung nach deutschen Maßstäben</h2>
-            <p>Wir analysieren Ihre Qualifikation nicht nach allgemeinen Kriterien, sondern nach den realen Anforderungen des deutschen Arbeitsmarkts.</p>
-        </div>
-    </section>
-
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>Für wen ist diese Bewertung?</h2>
-            <ul>
-                <li>Sie haben einen akademischen oder beruflichen Abschluss</li>
-                <li>Sie verfügen über relevante Berufserfahrung</li>
-                <li>Sie planen konkret den Schritt nach Deutschland</li>
-            </ul>
-            <p>Wenn diese Voraussetzungen nicht zutreffen, ist diese Bewertung nicht geeignet.</p>
-        </div>
-    </section>
-
-    <!-- FORM (GATE) -->
-    <section class="section form-gate">
-        <div class="container">
-            <div class="form-card">
-                <form class="assessment-form" id="assessment-form">
-                    <h3>Erste Einschätzung starten</h3>
-                    <label>Zielberuf</label>
-                    <input type="text" placeholder="z.B. Softwareentwickler" required>
-                    <label>Abschluss</label>
-                    <input type="text" placeholder="z.B. Master Informatik" required>
-                    <label>Berufserfahrung (Jahre)</label>
-                    <input type="number" placeholder="z.B. 5" required>
-                    <label>Sprachkenntnisse</label>
-                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
-                    <label>Lebenslauf / Dokumente hochladen</label>
-                    <input type="file" required>
-                    <button type="submit" class="cta">Fall Einreichen</button>
-                </form>
+            <h2 style="text-align:center;">Der Weg zur beruflichen Anerkennung</h2>
+            <div class="flow-grid">
+                <div class="flow-step">
+                    <div class="flow-icon">1</div>
+                    <h4>Assessment</h4>
+                    <p>Strategische Analyse Ihrer Qualifikation.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">2</div>
+                    <h4>Bewertung</h4>
+                    <p>Realistische Einschätzung der Chancen.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">3</div>
+                    <h4>Struktur</h4>
+                    <p>Aufbau der Dokumenten-Architektur.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">4</div>
+                    <h4>Bewerbung</h4>
+                    <p>Gezielte Positionierung am Markt.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">5</div>
+                    <h4>Einstieg</h4>
+                    <p>Berufsstart in Deutschland.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>Antwort innerhalb von 24–48 Stunden</li>
-                <li>Basierend auf aktuellen Arbeitsmarktdaten</li>
-                <li>Nur ernsthafte Anfragen werden bearbeitet</li>
-            </ul>
+    <section class="section">
+        <div class="container" style="max-width:800px; text-align:center;">
+            <h2>Was viele Bewerber unterschätzen</h2>
+            <p>Deutschland ist ein prozessorientiertes Land. Erfolg hängt nicht nur von Ihrem Talent ab, sondern von der korrekten Einordnung Ihrer Dokumente in das deutsche System. Berlin Gateway schließt die Lücke zwischen Ihrer Qualifikation und den deutschen Erwartungen.</p>
+            <br>
+            <a href="/de/assessment" class="btn-gold" style="display:inline-block; width:auto;">Profil jetzt strategisch bewerten</a>
         </div>
     </section>
-
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>Erhalten Sie eine klare, realistische Einschätzung Ihrer Chancen – bevor Sie Zeit und Geld investieren.</p>
-        </div>
-    </section>
-
 </main>
 
-<!-- FOOTER (BLACK) -->
 <footer class="footer">
     <div class="container">
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
@@ -138,20 +182,24 @@
                 <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
             </div>
             <div>
-                <h4>Navigation</h4>
+                <h4>Branchen</h4>
+                <a href="/de/aerzte">Ärzte</a>
+                <a href="/de/ingenieure">Ingenieure</a>
+                <a href="/de/ausbildung">Pflegekräfte</a>
                 <a href="/de/chancenkarte">Chancenkarte</a>
-                <a href="/de/systemlogik">Systemlogik</a>
-                <a href="/de/monitor">Monitor</a>
             </div>
             <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum">Impressum</a>
-                <a href="/de/datenschutz">Datenschutz</a>
+                <h4>Ressourcen</h4>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Arbeitsmarkt Monitor</a>
+                <a href="/de/insights">Insights</a>
+                <a href="/de/voraussetzungen">Voraussetzungen</a>
             </div>
             <div>
                 <h4>Kontakt</h4>
                 <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
+                <a href="/de/impressum">Impressum</a>
+                <a href="/de/datenschutz">Datenschutz</a>
             </div>
         </div>
         <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
@@ -159,15 +207,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-// Form submission logic will be handled here or via a separate JS file
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
-});
-</script>
 
 </body>
 </html>

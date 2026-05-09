@@ -606,7 +606,7 @@
 
           <div class="button-group" style="margin-top: 32px;">
             <button class="btn btn-secondary" onclick="resetAssessment()">Neu beginnen</button>
-            <button class="btn btn-primary" onclick="window.location.href='/de/chancenkarte-deutschland.html'">Mehr erfahren</button>
+            <button class="btn btn-primary" onclick="window.location.href='/de/chancenkarte'">Mehr erfahren</button>
           </div>
         </div>
       </div>

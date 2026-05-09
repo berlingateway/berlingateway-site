@@ -146,13 +146,13 @@ a:hover { opacity: 0.8; }
 }
 
 .lang-switch {
-  background: #0B3B8C !important;
-  color: #000000 !important;
+  background: #1A1D24 !important;
+  color: #FFFFFF !important;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 700;
-  border: none;
+  border: 1px solid #1A1D24;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -164,7 +164,7 @@ a:hover { opacity: 0.8; }
 
 .lang-switch:hover {
   opacity: 0.85;
-  background: #082B5C !important;
+  background: #2A2F3A !important;
 }
 
 @media (max-width: 968px) {
@@ -330,7 +330,7 @@ p {
   background: var(--black) !important;
   color: var(--white) !important;
   padding: 16px;
-  border: none;
+  border: 1px solid #1A1D24;
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;

@@ -9,6 +9,186 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .aerzte-hero {
+            background: #1A1D24;
+            color: #FFFFFF;
+            padding: 48px 0 40px 0;
+        }
+        .aerzte-hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .aerzte-hero p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 8px 0;
+            opacity: 0.95;
+        }
+        .aerzte-hero .subtitle {
+            font-size: 15px;
+            opacity: 0.85;
+            margin-top: 12px;
+        }
+        .section-dense {
+            padding: 48px 0;
+        }
+        .section-dense h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .barrier-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 0;
+        }
+        .barrier-card {
+            background: #f8f9fa;
+            border-left: 3px solid #1A1D24;
+            padding: 16px;
+            border-radius: 0;
+        }
+        .barrier-card h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .barrier-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #333;
+        }
+        .demand-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .demand-item {
+            background: #FFFFFF;
+            border: 1px solid #D9E1EA;
+            padding: 16px;
+            border-radius: 0;
+        }
+        .demand-item h3 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .demand-item p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 4px 0;
+        }
+        .structural-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 0 0;
+        }
+        .structural-list li {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .structural-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .nav-card {
+            background: #FFFFFF;
+            border: 1px solid #D9E1EA;
+            padding: 16px;
+            border-radius: 0;
+            transition: box-shadow 0.2s;
+        }
+        .nav-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+        .nav-card h3 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .nav-card p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .nav-card a {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #0B3B8C;
+            text-decoration: none;
+            margin-top: 6px;
+        }
+        .nav-card a:hover {
+            text-decoration: underline;
+        }
+        .cta-block {
+            background: #1A1D24;
+            color: #FFFFFF;
+            padding: 32px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .cta-block h2 {
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .cta-block p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .cta-button {
+            background: #0B3B8C;
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 0;
+            display: inline-block;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta-button:hover {
+            background: #082B5C;
+        }
+        @media (max-width: 768px) {
+            .aerzte-hero h1 {
+                font-size: 24px;
+            }
+            .barrier-grid, .demand-grid, .nav-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-dense {
+                padding: 32px 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -39,6 +219,8 @@
             <a href="/de/systemlogik" class="nav-link">Systemlogik</a>
             <a href="/de/monitor" class="nav-link">Monitor</a>
             <a href="/de/insights" class="nav-link">Insights</a>
+            <a href="/de/aerzte" class="nav-link active">Ärzte</a>
+            <a href="/de/ingenieure" class="nav-link">Ingenieure</a>
         </nav>
     </div>
 </header>
@@ -52,133 +234,152 @@
 </nav>
 
 <main>
-    <div class="chancenkarte-container">
-        <div class="chancenkarte-hero">
-            <h1>Ärzte in Deutschland – Strukturelle Chancen und Anforderungen</h1>
-            <p>Professionelle Einordnung für medizinische Fachkräfte in das deutsche Gesundheitssystem.</p>
-            <p style="margin-top: 15px; font-size: 16px; color: #444;">Der deutsche Arbeitsmarkt für Ärzte ist selektiv. Anerkennung, Sprache und Spezialisierung sind entscheidend.</p>
+    <!-- HERO SECTION -->
+    <section class="aerzte-hero">
+        <div class="container" style="max-width: 960px;">
+            <h1>Ärzte in Deutschland</h1>
+            <p>Strukturelle Chancen und Anforderungen für medizinische Fachkräfte.</p>
+            <p class="subtitle">Der deutsche Arbeitsmarkt für Ärzte ist selektiv. Anerkennung, Sprachniveau und Spezialisierung sind entscheidend für erfolgreiche Positionierung.</p>
         </div>
+    </section>
 
-        <div class="content-block">
-            <h2>Kritische Systembarrieren für Ärzte</h2>
-            <div class="intelligence-card">
-                <h3>Approbation & Anerkennung</h3>
-                <p>Internationale Abschlüsse erfordern formale Anerkennung durch die zuständige Ärztekammer. Dies ist Voraussetzung für die Berufsausübung.</p>
+    <!-- CONTENT SECTIONS -->
+    <div class="container" style="max-width: 960px;">
+        
+        <!-- CRITICAL BARRIERS SECTION -->
+        <section class="section-dense">
+            <h2>Kritische Systembarrieren</h2>
+            <div class="barrier-grid">
+                <div class="barrier-card">
+                    <h3>Approbation & Anerkennung</h3>
+                    <p>Internationale Abschlüsse erfordern formale Anerkennung durch die Ärztekammer. Dies ist Grundvoraussetzung.</p>
+                </div>
+                <div class="barrier-card">
+                    <h3>Sprachliche Anforderungen</h3>
+                    <p>Mindestens C1 Deutsch erforderlich. Komplexe medizinische Kommunikation ist essentiell.</p>
+                </div>
+                <div class="barrier-card">
+                    <h3>Arbeitsmarktposition</h3>
+                    <p>Spezialisierung und Erfahrung entscheidend. Allgemeinmediziner vs. Fachärzte haben unterschiedliche Chancen.</p>
+                </div>
+                <div class="barrier-card">
+                    <h3>Dokumentation & Nachweise</h3>
+                    <p>Vollständige medizinische Dokumentation und Zeugnisse erforderlich für Anerkennung.</p>
+                </div>
             </div>
-            <div class="intelligence-card">
-                <h3>Sprachliche Anforderungen</h3>
-                <p>Mindestens C1 Deutsch ist erforderlich. Ärzte müssen komplexe medizinische Kommunikation beherrschen.</p>
-            </div>
-            <div class="intelligence-card">
-                <h3>Arbeitsmarktposition</h3>
-                <p>Spezialisierung und Erfahrung sind entscheidend. Allgemeinmediziner haben andere Chancen als Fachärzte.</p>
-            </div>
-            <div class="intelligence-card">
-                <h3>Dokumentation & Nachweise</h3>
-                <p>Vollständige medizinische Dokumentation, Zeugnisse und Nachweise sind erforderlich für die Anerkennung.</p>
-            </div>
-        </div>
+        </section>
 
-        <div class="content-block">
+        <!-- DEMAND FIELDS SECTION -->
+        <section class="section-dense">
             <h2>Strategische Nachfragefelder</h2>
-            <p>Diese Bereiche zeigen die höchste Nachfrage nach ärztlichen Fachkräften:</p>
+            <p style="font-size: 14px; margin-bottom: 16px;">Diese Bereiche zeigen die höchste Nachfrage nach ärztlichen Fachkräften im deutschen Gesundheitssystem:</p>
             
-            <div class="demand-cards">
-                <div class="demand-card">
+            <div class="demand-grid">
+                <div class="demand-item">
                     <h3>Allgemeinmedizin</h3>
                     <p><strong>Nachfrage:</strong> Sehr hoch</p>
                     <p><strong>Anforderungen:</strong> Approbation, Sprache, Erfahrung</p>
                     <p><strong>Erfolgsfaktor:</strong> Bereitschaft für ländliche Regionen</p>
                 </div>
-                <div class="demand-card">
+                <div class="demand-item">
                     <h3>Innere Medizin</h3>
                     <p><strong>Nachfrage:</strong> Hoch</p>
                     <p><strong>Anforderungen:</strong> Fachkompetenz, Spezialisierung</p>
                     <p><strong>Erfolgsfaktor:</strong> Klinische Erfahrung</p>
                 </div>
-                <div class="demand-card">
+                <div class="demand-item">
                     <h3>Chirurgie & Spezialisierungen</h3>
                     <p><strong>Nachfrage:</strong> Hoch</p>
                     <p><strong>Anforderungen:</strong> Spezialisierte Qualifikation</p>
                     <p><strong>Erfolgsfaktor:</strong> Nachweise und Zertifikate</p>
                 </div>
-                <div class="demand-card">
+                <div class="demand-item">
                     <h3>Psychiatrie & Psychosomatik</h3>
                     <p><strong>Nachfrage:</strong> Stabil</p>
                     <p><strong>Anforderungen:</strong> Spezialisierung, Sprache</p>
                     <p><strong>Erfolgsfaktor:</strong> Kulturelle Kompetenz</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content-block">
+        <!-- STRUCTURAL FACTORS SECTION -->
+        <section class="section-dense">
             <h2>Strukturelle Faktoren der erfolgreichen Positionierung</h2>
-            <p>Ihre Chancen hängen von mehreren strukturellen Faktoren ab:</p>
-            <ul style="margin-top: 20px; padding-left: 0; list-style: none;">
-                <li style="margin-bottom: 12px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0;">→</span> <strong>Anerkennung:</strong> Klare Anerkennung durch die Ärztekammer ist Grundvoraussetzung</li>
-                <li style="margin-bottom: 12px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0;">→</span> <strong>Spezialisierung:</strong> Fachärzte haben bessere Chancen als Allgemeinmediziner</li>
-                <li style="margin-bottom: 12px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0;">→</span> <strong>Sprachniveau:</strong> C1 Deutsch ist praktische Voraussetzung</li>
-                <li style="margin-bottom: 12px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0;">→</span> <strong>Geografische Flexibilität:</strong> Bereitschaft für Regionen außerhalb großer Städte erhöht Chancen</li>
+            <p style="font-size: 14px; margin-bottom: 0;">Ihre Chancen hängen von mehreren strukturellen Faktoren ab:</p>
+            <ul class="structural-list">
+                <li><strong>Anerkennung:</strong> Klare Anerkennung durch die Ärztekammer ist Grundvoraussetzung</li>
+                <li><strong>Spezialisierung:</strong> Fachärzte haben bessere Chancen als Allgemeinmediziner</li>
+                <li><strong>Sprachniveau:</strong> C1 Deutsch ist praktische Voraussetzung</li>
+                <li><strong>Geografische Flexibilität:</strong> Bereitschaft für Regionen außerhalb großer Städte erhöht Chancen</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="content-block">
+        <!-- STRATEGIC NAVIGATION SECTION -->
+        <section class="section-dense">
             <h2>Strategische Navigation</h2>
-            <p>Verstehen Sie die Systemlogik und finden Sie Ihren optimalen Weg in das deutsche Gesundheitssystem.</p>
+            <p style="font-size: 14px; margin-bottom: 0;">Verstehen Sie die Systemlogik und finden Sie Ihren optimalen Weg:</p>
             
-            <div class="navigation-modules">
-                <div class="navigation-module">
+            <div class="nav-grid">
+                <div class="nav-card">
                     <h3>Chancenkarte</h3>
                     <p>Bewerten Sie Ihre Chancen im deutschen Fachkräftesystem.</p>
                     <a href="/de/chancenkarte">Zur Chancenkarte →</a>
                 </div>
-                <div class="navigation-module">
+                <div class="nav-card">
                     <h3>Anerkennung</h3>
-                    <p>Erfahren Sie, wie Ihre ärztliche Qualifikation in Deutschland anerkannt wird.</p>
+                    <p>Erfahren Sie, wie Ihre ärztliche Qualifikation anerkannt wird.</p>
                     <a href="/de/anerkennung">Zur Anerkennung →</a>
                 </div>
-                <div class="navigation-module">
+                <div class="nav-card">
                     <h3>Systemlogik</h3>
                     <p>Verstehen Sie die Struktur des deutschen Gesundheitssystems.</p>
                     <a href="/de/systemlogik">Zur Systemlogik →</a>
                 </div>
-                <div class="navigation-module">
+                <div class="nav-card">
                     <h3>Monitor</h3>
-                    <p>Aktuelle Daten zur Nachfrage nach Fachkräften im Gesundheitswesen.</p>
+                    <p>Aktuelle Daten zur Nachfrage nach Fachkräften.</p>
                     <a href="/de/monitor">Zum Monitor →</a>
                 </div>
-                <div class="navigation-module">
+                <div class="nav-card">
                     <h3>Punkte-Rechner</h3>
                     <p>Berechnen Sie Ihre Chancenkarten-Punkte.</p>
                     <a href="/de/assessment">Zum Rechner →</a>
                 </div>
-                <div class="navigation-module">
+                <div class="nav-card">
                     <h3>Insights</h3>
                     <p>Detaillierte Analysen für medizinische Fachkräfte.</p>
                     <a href="/de/insights">Zu den Insights →</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content-block">
-            <h2>Nächste Schritte</h2>
-            <p>Nach dieser Einschätzung sollte klarer werden, ob Ihre Qualifikation über Chancenkarte, Direkteinstieg oder Anerkennung positioniert werden sollte. Nutzen Sie die strategischen Ressourcen oben, um Ihren optimalen Weg zu finden.</p>
-        </div>
+        <!-- FINAL CTA SECTION -->
+        <section class="cta-block">
+            <h2>Strukturierte Qualifikationsbewertung</h2>
+            <p>Nutzen Sie unsere zertifizierte Bewertung, um Ihre Position im deutschen Fachkräftesystem zu verstehen.</p>
+            <a href="/de/assessment" class="cta-button">Bewertung Ihres Qualifikationsprofils</a>
+        </section>
+
     </div>
 </main>
 
 <!-- FOOTER (BLACK) -->
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+    <div class="container" style="max-width: 1120px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:32px; margin-bottom:32px;">
             <div>
                 <h4>Berlin Gateway</h4>
                 <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
             </div>
             <div>
-                <h4>Navigation</h4>
+                <h4>Branchen</h4>
+                <a href="/de/aerzte">Ärzte</a>
+                <a href="/de/ingenieure">Ingenieure</a>
+                <a href="/de/pflegekraefte">Pflegekräfte</a>
+            </div>
+            <div>
+                <h4>Ressourcen</h4>
                 <a href="/de/chancenkarte">Chancenkarte</a>
-                <a href="/de/assessment">Punkte-Rechner</a>
                 <a href="/de/systemlogik">Systemlogik</a>
                 <a href="/de/monitor">Monitor</a>
                 <a href="/de/insights">Insights</a>
@@ -194,7 +395,7 @@
                 <p>+49 30 25730875</p>
             </div>
         </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+        <div style="padding-top:16px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.6; text-align:center;">
             &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
         </div>
     </div>

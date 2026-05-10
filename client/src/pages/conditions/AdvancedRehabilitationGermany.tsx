@@ -3,9 +3,37 @@
  * Central Rehabilitation Authority Hub — MCG Arabic Cluster
  */
 
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
+
+const REHAB_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هي خيارات إعادة التأهيل المتاحة في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تشمل خيارات إعادة التأهيل في ألمانيا: إعادة التأهيل العصبي، التأهيل بعد إصابات الحرب والحوادث، الأطراف الصناعية، التأهيل الروبوتي، وإدارة الألم المزمن للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق برنامج إعادة التأهيل للمريض الدولي؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد برنامج إعادة التأهيل المناسب والمركز المتخصص قبل اتخاذ قرار السفر." }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن تقييم حالتي من بعد قبل السفر إلى ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "نعم. يمكن إرسال التقارير الطبية عبر البريد الإلكتروني أو واتسآب وسيتم تقييمها من برلين خلال 24–48 ساعة لتحديد مدى ملاءمة برنامج إعادة التأهيل في ألمانيا." }
+    },
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين إعادة التأهيل في ألمانيا وفي دول أخرى؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تتميز برامج إعادة التأهيل في ألمانيا بالتكامل بين التخصصات، استخدام التقنيات الروبوتية، والمتابعة المنتظمة عبر فريق متعدد التخصصات لضمان أفضل استعادة للوظيفة." }
+    }
+  ]
+};
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -37,8 +65,20 @@ const THEMES = [
 ];
 
 export default function AdvancedRehabilitationGermany() {
+  useEffect(() => {
+    document.title = "إعادة التأهيل المتقدم في ألمانيا — تنسيق متخصص للحالات الدولية | Medical Care Germany";
+    const descContent = "تنسيق متخصص لمسارات إعادة التأهيل المتقدم في ألمانيا — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي. للحالات الدولية من ليبيا والسودان ودول الخليج.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/advanced-rehabilitation-germany";
+  }, []);
+
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(REHAB_FAQ_JSONLD) }} />
       <SmartNavLayer currentPath="/ar/advanced-rehabilitation-germany" />
       <HreflangTags currentPath="/ar/advanced-rehabilitation-germany" />
       <title>إعادة التأهيل المتقدم في ألمانيا | تنسيق التأهيل الطبي المتخصص</title>
@@ -174,7 +214,7 @@ export default function AdvancedRehabilitationGermany() {
               { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
               { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
               { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
-              { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
+              { href: "/ar/complex-trauma-germany", label: "تقييم الصدمات المعقدة" },
               { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
               { href: "/ar/pediatric-rehabilitation-germany", label: "تأهيل الأطفال في ألمانيا" },
             ].map((link) => (

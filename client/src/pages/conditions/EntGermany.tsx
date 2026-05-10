@@ -3,9 +3,37 @@
  * Arabic ENT / HNO Hub — MCG Authority Page (expanded)
  */
 
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
+
+const ENT_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هي حالات الأنف والأذن والحنجرة التي يتم تنسيقها في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تشمل الحالات المنسقة: فقدان السمع، زراعة القوقعة الإلكترونية، الطنين المزمن، سرطان الحنجرة، بدائل الصوت، اضطرابات التوازن، وأورام الرأس والعنق للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تقييم حالة فقدان السمع من بعد؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم إرسال نتائج فحوصات السمع والتصوير عبر البريد الإلكتروني أو واتسآب، ويتم تقييمها من برلين خلال 24–48 ساعة لتحديد إمكانية زراعة القوقعة أو التدخل المناسب." }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن علاج الطنين المزمن في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "نعم. ألمانيا تمتلك مراكز متخصصة في تشخيص وعلاج الطنين بما يشمل العلاج الصوتي، العلاج المعرفي، والتدخل الجراحي عند الضرورة." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق حالات الأنف والأذن والحنجرة من ليبيا والسودان ودول الخليج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد المسار العلاجي المناسب داخل منظومة الأنف والأذن والحنجرة في ألمانيا." }
+    }
+  ]
+};
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -52,13 +80,25 @@ const RELATED = [
   { href: "/ar/dizziness-long-term",               label: "الدوار المزمن وضعف التوازن" },
   { href: "/ar/neurology-treatment-germany",        label: "الأعصاب والجهاز العصبي" },
   { href: "/ar/war-injury-rehabilitation-germany",  label: "تأهيل إصابات الحرب" },
-  { href: "/ar/complex-trauma-evaluation",          label: "تقييم الصدمات المعقدة" },
+  { href: "/ar/complex-trauma-germany",             label: "تقييم الصدمات المعقدة" },
   { href: "/ar/submit-case",                        label: "تقديم الحالة الطبية" },
 ];
 
 export default function EntGermany() {
+  useEffect(() => {
+    document.title = "علاج الأنف والأذن والحنجرة في ألمانيا — تنسيق الحالات المعقدة | Medical Care Germany";
+    const descContent = "تنسيق متخصص لحالات الأنف والأذن والحنجرة في ألمانيا. للحالات الدولية القادمة من ليبيا والسودان ودول الخليج — تنسيق طبي متخصص من برلين.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/ent-germany";
+  }, []);
+
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ENT_FAQ_JSONLD) }} />
       <SmartNavLayer currentPath="/ar/ent-germany" />
       <HreflangTags currentPath="/ar/ent-germany" />
       <title>علاج الأنف والأذن والحنجرة في ألمانيا | تقييم الحالات المعقدة</title>

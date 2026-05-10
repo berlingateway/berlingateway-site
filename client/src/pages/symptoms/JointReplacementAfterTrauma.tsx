@@ -1,14 +1,54 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 import ArabicHeaderLocked from "@/components/ArabicHeaderLocked";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+
+const JOINT_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "هل يمكن إنقاذ الطرف بدلاً من البتر؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "في بعض الحالات نعم. إنقاذ الطرف يعتمد على حجم الإصابة الوعائية والعصبية وسرعة التدخل. التقييم المتخصص في ألمانيا يحدد إمكانية الإنقاذ قبل اتخاذ قرار البتر للحالات الدولية القادمة من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "متى يكون استبدال المفصل ضرورياً بعد الإصابة؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يصبح استبدال المفصل ضرورياً عندما تكون المفاصل متضررة بشكل لا رجعة فيه أو عندما تفشل الخيارات التحافظية. التقييم المتخصص يحدد الخيار الأنسب لكل حالة." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق الحالات الدولية من ليبيا والسودان ودول الخليج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد إمكانية إنقاذ الطرف أو استبدال المفصل والجدول الزمني للتدخل قبل اتخاذ قرار السفر." }
+    },
+    {
+      "@type": "Question",
+      "name": "كم تستغرق إعادة التأهيل بعد استبدال المفصل؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تتراوح مدة إعادة التأهيل بين 6 أسابيع و6 أشهر حسب نوع المفصل ودرجة التلف. برامج إعادة التأهيل في ألمانيا مصممة لاستعادة الحركة الكاملة." }
+    }
+  ]
+};
 
 const FONT = { fontFamily: "'Cairo', 'Noto Sans Arabic', sans-serif" };
 const intakeHref = "/ar/send-medical-reports";
 const whatsappHref = "https://wa.me/4917647757767";
 
 export default function JointReplacementAfterTrauma() {
+  useEffect(() => {
+    document.title = "استبدال المفاصل بعد الإصابة في ألمانيا — إنقاذ الطرف أو تعويض المفصل | Medical Care Germany";
+    const descContent = "تقييم وعلاج إصابات المفاصل الجسيمة بعد الحوادث في ألمانيا. إنقاذ الطرف أو استبدال المفصل للحالات الدولية القادمة من ليبيا والسودان ودول الخليج.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/joint-replacement-after-trauma";
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JOINT_FAQ_JSONLD) }} />
       <ArabicHeaderLocked />
 
       {/* 1. HERO */}
@@ -214,7 +254,7 @@ export default function JointReplacementAfterTrauma() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               {
-                href: "/ar/complex-trauma-evaluation",
+                href: "/ar/complex-trauma-germany",
                 label: "تقييم إصابات معقدة",
               },
               {
@@ -256,7 +296,7 @@ export default function JointReplacementAfterTrauma() {
             بعض الحالات تكون أكثر تعقيداً وتحتاج تقييم شامل متعدد التخصصات.
           </p>
           <Link
-            href="/ar/complex-trauma-evaluation"
+            href="/ar/complex-trauma-germany"
             className="inline-block px-6 py-3 border border-slate-300 text-slate-700 text-sm hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
             style={FONT}
           >

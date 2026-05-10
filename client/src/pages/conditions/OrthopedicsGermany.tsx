@@ -3,9 +3,37 @@
  * Arabic Orthopedics Hub — MCG Authority Page
  */
 
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
+
+const ORTHO_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هي حالات العظام والمفاصل التي يتم تنسيقها في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تشمل الحالات المنسقة: إصابات المفاصل الكبرى، كسور العظام المعقدة، تآكل المفاصل، زراعة المفاصل، وإصابات الحوادث للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تقييم حالة كسر العظام من بعد؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم إرسال الأشعة والتقارير الطبية عبر البريد الإلكتروني أو واتسآب، ويتم تقييمها من برلين خلال 24–48 ساعة لتحديد الخيار الجراحي أو غير الجراحي المناسب." }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن علاج تآكل المفاصل في ألمانيا بدون جراحة؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يعتمد ذلك على درجة التآكل. في الحالات المبكرة يمكن العلاج بالحقن المفصلي أو العلاج الفيزيائي. في الحالات المتقدمة تكون زراعة المفصل الخيار الأمثل." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق حالات العظام والمفاصل من ليبيا والسودان ودول الخليج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد المسار العلاجي المناسب داخل منظومة طب العظام والمفاصل في ألمانيا." }
+    }
+  ]
+};
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -39,14 +67,26 @@ const RELATED = [
   { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم" },
   { href: "/ar/prosthetics-germany", label: "الأطراف الصناعية" },
   { href: "/ar/war-injury-rehabilitation-germany", label: "تأهيل إصابات الحرب" },
-  { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
+  { href: "/ar/complex-trauma-germany", label: "تقييم الصدمات المعقدة" },
   { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
   { href: "/ar/pediatric-orthopedics-germany", label: "عظام وجراحة الأطفال" }
 ];
 
 export default function OrthopedicsGermany() {
+  useEffect(() => {
+    document.title = "علاج العظام والمفاصل في ألمانيا — تنسيق الحالات الجراحية المعقدة | Medical Care Germany";
+    const descContent = "تنسيق متخصص لحالات العظام والمفاصل في ألمانيا. للحالات الدولية القادمة من ليبيا والسودان ودول الخليج — تنسيق طبي متخصص من برلين.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/orthopedics-germany";
+  }, []);
+
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORTHO_FAQ_JSONLD) }} />
       <SmartNavLayer currentPath="/ar/orthopedics-germany" />
       <HreflangTags currentPath="/ar/orthopedics-germany" />
       <title>علاج العظام والمفاصل في ألمانيا | تقييم الحالات الجراحية المعقدة</title>

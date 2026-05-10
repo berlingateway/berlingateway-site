@@ -1,5 +1,38 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+
+const NERVE_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "هل يمكن علاج إصابات الأعصاب بعد الحوادث؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "نعم، في كثير من الحالات يمكن استعادة الوظيفة العصبية جزئياً أو كلياً عبر الجراحة الدقيقة للأعصاب، خاصة إذا تم التقييم مبكراً. ألمانيا تمتلك مراكز متخصصة في إعادة توصيل الأعصاب الطرفية للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تشخيص إصابة الأعصاب الطرفية؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم التشخيص عبر تخطيط الأعصاب الكهربائي والرنين المغناطيسي. هذه الفحوصات تحدد موقع الإصابة ودرجتها وإمكانية التدخل الجراحي." }
+    },
+    {
+      "@type": "Question",
+      "name": "كم تستغرق إعادة التأهيل بعد إصابة الأعصاب؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تتراوح مدة إعادة التأهيل بين 3 أشهر وسنة كاملة حسب نوع الإصابة ومستوى التدخل الجراحي. برامج إعادة التأهيل في ألمانيا مكثفة ومصممة لتحقيق أقصى استعادة للوظيفة." }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن تجنب البتر في حالات إصابة الأعصاب؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "في بعض الحالات نعم. إنقاذ الطرف يعتمد على حجم الإصابة الوعائية والعصبية وسرعة التدخل. التقييم المتخصص في ألمانيا يحدد إمكانية الإنقاذ قبل اتخاذ قرار البتر." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق الحالات الدولية القادمة من ليبيا والسودان ودول الخليج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد المسار العلاجي المناسب داخل المنظومة الطبية الألمانية بما يشمل الجراحة الدقيقة للأعصاب أو إعادة التأهيل المتخصصة." }
+    }
+  ]
+};
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const intakeHref = "/send-medical-reports";
@@ -8,8 +41,20 @@ const whatsappHref =
   encodeURIComponent("أريد التحدث مع منسق طبي");
 
 export default function NerveInjuryAfterTraumaGermany() {
+  useEffect(() => {
+    document.title = "إصابات الأعصاب بعد الحوادث في ألمانيا — جراحة دقيقة وإعادة تأهيل | Medical Care Germany";
+    const descContent = "تقييم وعلاج إصابات الأعصاب الطرفية بعد الحوادث والإصابات الجسيمة في ألمانيا. للحالات الدولية القادمة من ليبيا والسودان ودول الخليج — تنسيق طبي متخصص من برلين.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/nerve-injury-after-trauma-germany";
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(NERVE_FAQ_JSONLD) }} />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
       {/* 1. HERO */}
@@ -322,29 +367,27 @@ export default function NerveInjuryAfterTraumaGermany() {
           </h3>
           <ul className="space-y-2">
             <li>
-              <a
-                href="/ar/shrapnel-brain-injury-germany"
-                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
-                style={FONT}
-              >
+              <a href="/ar/shrapnel-brain-injury-germany" className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors" style={FONT}>
                 إصابات الشظايا والدماغ
               </a>
             </li>
             <li>
-              <a
-                href="/ar/prosthetics-after-amputation-germany"
-                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
-                style={FONT}
-              >
+              <a href="/ar/prosthetics-after-amputation-germany" className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors" style={FONT}>
                 تركيب الأطراف الصناعية في ألمانيا
               </a>
             </li>
             <li>
-              <a
-                href="/ar/complex-trauma-germany"
-                className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
-                style={FONT}
-              >
+              <a href="/ar/joint-replacement-after-trauma" className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors" style={FONT}>
+                استبدال المفاصل بعد الإصابة
+              </a>
+            </li>
+            <li>
+              <a href="/ar/advanced-rehabilitation-germany" className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors" style={FONT}>
+                إعادة التأهيل المتقدمة في ألمانيا
+              </a>
+            </li>
+            <li>
+              <a href="/ar/complex-trauma-germany" className="block px-4 py-3 border border-slate-200 text-sm text-slate-700 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors" style={FONT}>
                 جميع الحالات المعقدة بعد الحوادث
               </a>
             </li>
@@ -365,7 +408,11 @@ export default function NerveInjuryAfterTraumaGermany() {
             {[
               {
                 q: "هل يمكن علاج إصابات الأعصاب بعد الحوادث؟",
-                a: "نعم، في كثير من الحالات يمكن استعادة الوظيفة العصبية جزئياً أو كلياً عبر الجراحة الدقيقة للأعصاب، خاصة إذا تم التقييم مبكراً. ألمانيا تمتلك مراكز متخصصة في إعادة توصيل الأعصاب الطرفية.",
+                a: "نعم، في كثير من الحالات يمكن استعادة الوظيفة العصبية جزئياً أو كلياً عبر الجراحة الدقيقة للأعصاب، خاصة إذا تم التقييم مبكراً. ألمانيا تمتلك مراكز متخصصة في إعادة توصيل الأعصاب الطرفية للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج.",
+              },
+              {
+                q: "كيف يتم تنسيق الحالات الدولية القادمة من ليبيا والسودان ودول الخليج؟",
+                a: "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد المسار العلاجي المناسب داخل المنظومة الطبية الألمانية بما يشمل الجراحة الدقيقة للأعصاب أو إعادة التأهيل المتخصصة.",
               },
               {
                 q: "كيف يتم تشخيص إصابة الأعصاب؟",

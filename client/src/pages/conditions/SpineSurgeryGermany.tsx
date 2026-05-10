@@ -4,10 +4,37 @@
  * Sovereign institutional layout — dark navy hero, ArabicFooterGuide.
  */
 
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
 
+const SPINE_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هي حالات العمود الفقري التي يتم تنسيقها في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تشمل الحالات المنسقة: الانزلاق الغضروفي، تضيق القناة الشوكية، فشل العمليات السابقة، إصابات الحوادث، وأمراض العمود الفقري المعقدة للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تقييم حالة الانزلاق الغضروفي من بعد؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم إرسال صور الرنين المغناطيسي (MRI) والتقارير الطبية عبر البريد الإلكتروني أو واتسآب، ويتم تقييمها من برلين خلال 24–48 ساعة لتحديد الخيار الجراحي المناسب." }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن علاج فشل العمليات السابقة في العمود الفقري في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "نعم. ألمانيا تمتلك مراكز متخصصة في تقييم وعلاج حالات فشل العمليات السابقة، بما يشمل التقييم المعمق وخيارات الجراحة التصحيحية." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق حالات العمود الفقري من ليبيا والسودان ودول الخليج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال صور الرنين والتقارير من برلين وتقييمها من قِبل المنسق الطبي، ثم تحديد المسار الجراحي المناسب داخل منظومة جراحة العمود الفقري في ألمانيا." }
+    }
+  ]
+};
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -44,8 +71,20 @@ const DOCUMENTS = [
 ];
 
 export default function SpineSurgeryGermany() {
+  useEffect(() => {
+    document.title = "جراحة العمود الفقري في ألمانيا — تقييم الحالات المعقدة | Medical Care Germany";
+    const descContent = "تنسيق متخصص لجراحة العمود الفقري في ألمانيا. للحالات الدولية القادمة من ليبيا والسودان ودول الخليج — تنسيق طبي متخصص من برلين.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/spine-surgery-germany";
+  }, []);
+
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SPINE_FAQ_JSONLD) }} />
       <SmartNavLayer currentPath="/ar/spine-surgery-germany" />
       <HreflangTags currentPath="/ar/spine-surgery-germany" />
 
@@ -557,7 +596,7 @@ export default function SpineSurgeryGermany() {
           >
             {[
               { href: "/ar/neurology-treatment-germany", label: "علاج الأعصاب في ألمانيا" },
-              { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
+              { href: "/ar/complex-trauma-germany", label: "تقييم الصدمات المعقدة" },
               { href: "/ar/orthopedics-germany", label: "العظام والمفاصل في ألمانيا" },
               { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
             ].map((link) => (

@@ -1,5 +1,33 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
+
+const PROSTHETICS_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هي أنواع الأطراف الصناعية المتوفرة في ألمانيا؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تتراوح بين الأطراف التقليدية والأطراف الذكية التي تعمل بإشارات العضلات. ألمانيا تضم شركات عالمية متخصصة تصنع أطرافاً متطورة للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم اختيار الطرف الصناعي المناسب؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يعتمد الاختيار على مستوى البتر، حالة الأنسجة المتبقية، وأهداف إعادة التأهيل. التقييم المتخصص يحدد أفضل خيار قبل اتخاذ أي قرار نهائي." }
+    },
+    {
+      "@type": "Question",
+      "name": "كم تستغرق إعادة التأهيل بعد البتر؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "تتراوح بين 3 أشهر وسنة كاملة حسب مستوى البتر ونوع الطرف الصناعي. برامج إعادة التأهيل في ألمانيا مكثفة ومصممة لتحقيق أقصى استعادة للحركة." }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يتم تنسيق حالات البتر الدولية من ليبيا والسودان ودول الخليج؟",
+      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد نوع الطرف الصناعي المناسب وبرنامج إعادة التأهيل قبل اتخاذ قرار السفر." }
+    }
+  ]
+};
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const intakeHref = "/send-medical-reports";
@@ -8,8 +36,20 @@ const whatsappHref =
   encodeURIComponent("أريد التحدث مع منسق طبي");
 
 export default function ProstheticsAfterAmputationGermany() {
+  useEffect(() => {
+    document.title = "تركيب الأطراف الصناعية بعد البتر في ألمانيا — تقييم وتأهيل متخصص | Medical Care Germany";
+    const descContent = "تركيب الأطراف الصناعية وإعادة التأهيل بعد البتر في ألمانيا. للحالات الدولية القادمة من ليبيا والسودان ودول الخليج — تنسيق طبي متخصص من برلين.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    c.href = "https://medicalcaregermany.com/ar/prosthetics-after-amputation-germany";
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PROSTHETICS_FAQ_JSONLD) }} />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
       {/* 1. HERO */}

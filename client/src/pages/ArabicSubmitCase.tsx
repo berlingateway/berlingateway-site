@@ -17,7 +17,7 @@ const WA_LINK = "https://wa.me/4917647757767";
 
 export default function ArabicSubmitCase() {
   return (
-    <div dir="rtl" style={{ ...AR, background: "#fff", color: NAVY }}>
+    <div dir="rtl" style={{ ...AR, background: "#fff", color: NAVY }} className="form-page-main">
       <SmartNavLayer currentPath="/ar/submit-case" />
       <HreflangTags currentPath="/ar/submit-case" />
       <title>إرسال التقارير الطبية | Medical Care Germany</title>

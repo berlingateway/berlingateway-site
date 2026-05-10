@@ -849,7 +849,7 @@ export default function ArabicHome() {
       )}
 
       {/* HERO */}
-      <section id="home" className="relative py-20 md:py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
+      <section id="home" className="relative py-14 md:py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-medium leading-tight mb-6" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", lineHeight: '1.5' }}>
             عندما تصبح الحالة الطبية معقدة…<br />

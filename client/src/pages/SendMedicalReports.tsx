@@ -124,7 +124,7 @@ export default function SendMedicalReports() {
       </nav>
 
       {/* Page Content */}
-      <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+      <main className="max-w-2xl mx-auto px-6 py-16 md:py-24 form-page-main">
 
         {!submitted ? (
           <>

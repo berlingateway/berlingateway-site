@@ -361,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 1: HERO - Elite Medical Authority Landing */}
-      <section id="home" className="relative py-16 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section id="home" className="relative py-10 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
           {/* H1: Clear Authority Statement */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-8 tracking-tight">

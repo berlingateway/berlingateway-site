@@ -46,7 +46,7 @@ export default function SubmitCase() {
       </nav>
 
       {/* Main content — semantic HTML for Google indexing */}
-      <main className="max-w-4xl mx-auto px-6 py-16">
+      <main className="max-w-4xl mx-auto px-6 py-16 form-page-main">
 
         {/* H1 — required for Google to understand page purpose */}
         <h1 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6 text-center">

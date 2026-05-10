@@ -230,3 +230,69 @@ body,
     font-size: 15px !important;
   }
 }
+
+/* ===============================
+   FLOATING WHATSAPP — MOBILE
+   =============================== */
+
+/*
+  On mobile (≤768px):
+  - Reduce button size by ~17% (text-xs, smaller padding, smaller icon)
+  - Shift to lower-right to avoid LTR form fields on the left
+  - Use safe-area-inset-bottom so it clears the iOS home indicator
+  - Add bottom padding to form sections so the button never overlaps submit
+*/
+@media (max-width: 768px) {
+  .whatsapp-float {
+    /* Smaller padding + text */
+    padding: 0.55rem 0.9rem !important;
+    font-size: 0.72rem !important;
+    /* Move to right side on mobile to avoid left-side form labels */
+    left: auto !important;
+    right: 1rem !important;
+    /* Safe-area bottom clearance (iOS notch / home bar) */
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+    /* Subtle shadow reduction */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18) !important;
+  }
+  .whatsapp-float__icon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+}
+
+/* RTL pages: keep button on left side on mobile */
+@media (max-width: 768px) {
+  [dir="rtl"] .whatsapp-float {
+    left: 1rem !important;
+    right: auto !important;
+  }
+}
+
+/* ===============================
+   MOBILE VERTICAL SPACING REDUCTION
+   =============================== */
+
+/*
+  Reduce excessive vertical whitespace on mobile by ~10%.
+  Targets common section padding patterns used across MCG pages.
+  Desktop (md: and above) is untouched.
+*/
+@media (max-width: 767px) {
+  /* Reduce large py-* section padding on mobile */
+  .mobile-section-spacing {
+    padding-top: clamp(2rem, 6vw, 3rem) !important;
+    padding-bottom: clamp(2rem, 6vw, 3rem) !important;
+  }
+
+  /* Add bottom clearance to form pages so WhatsApp button never covers submit */
+  .form-page-main {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Reduce hero padding on mobile */
+  .mobile-hero-reduce {
+    padding-top: clamp(2.5rem, 8vw, 4rem) !important;
+    padding-bottom: clamp(1.5rem, 5vw, 2.5rem) !important;
+  }
+}

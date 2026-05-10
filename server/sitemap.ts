@@ -210,7 +210,7 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.6,
   },
 
-  // ── Arabic Utility Pages ───────────────────────────────────────────────────
+   // ── Arabic Utility Pages ─────────────────────────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/videos`,
     changefreq: 'weekly',
@@ -220,6 +220,48 @@ const STATIC_ROUTES: SitemapUrl[] = [
     loc: `${CANONICAL_DOMAIN}/ar/submit-case`,
     changefreq: 'monthly',
     priority: 0.8,
+  },
+
+  // ── Arabic HNO/ENT Cluster ─────────────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/ent-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/ent-surgery-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hearing-implant-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/tinnitus-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/voice-prosthesis-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/head-neck-tumor-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/sleep-apnea-snoring-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/pediatric-ent-germany`,
+    changefreq: 'monthly',
+    priority: 0.7,
   },
 ];
 

@@ -120,6 +120,13 @@ import SecondMedicalEvaluationGermany from "./pages/conditions/SecondMedicalEval
 import LongTermRehabilitationGermany from "./pages/conditions/LongTermRehabilitationGermany";
 import OrthopedicsGermany from "./pages/conditions/OrthopedicsGermany";
 import EntGermany from "./pages/conditions/EntGermany";
+import EntSurgeryGermany from "./pages/conditions/EntSurgeryGermany";
+import HearingImplantGermany from "./pages/conditions/HearingImplantGermany";
+import TinnitusTreatmentGermany from "./pages/conditions/TinnitusTreatmentGermany";
+import VoiceProsthesisGermany from "./pages/conditions/VoiceProsthesisGermany";
+import HeadNeckTumorGermany from "./pages/conditions/HeadNeckTumorGermany";
+import SleepApneaSnoringGermany from "./pages/conditions/SleepApneaSnoringGermany";
+import PediatricEntGermany from "./pages/conditions/PediatricEntGermany";
 import PediatricMedicineGermany from "./pages/conditions/PediatricMedicineGermany";
 import PediatricSurgeryGermany from "./pages/conditions/PediatricSurgeryGermany";
 import PediatricOrthopedicsGermany from "./pages/conditions/PediatricOrthopedicsGermany";
@@ -249,6 +256,14 @@ function Router() {
       <Route path={"/ar/long-term-rehabilitation-germany"} component={LongTermRehabilitationGermany} />
       <Route path={"/ar/orthopedics-germany"} component={OrthopedicsGermany} />
       <Route path={"/ar/ent-germany"} component={EntGermany} />
+      {/* Arabic HNO/ENT Sub-Pages */}
+      <Route path={"/ar/ent-surgery-germany"} component={EntSurgeryGermany} />
+      <Route path={"/ar/hearing-implant-germany"} component={HearingImplantGermany} />
+      <Route path={"/ar/tinnitus-treatment-germany"} component={TinnitusTreatmentGermany} />
+      <Route path={"/ar/voice-prosthesis-germany"} component={VoiceProsthesisGermany} />
+      <Route path={"/ar/head-neck-tumor-germany"} component={HeadNeckTumorGermany} />
+      <Route path={"/ar/sleep-apnea-snoring-germany"} component={SleepApneaSnoringGermany} />
+      <Route path={"/ar/pediatric-ent-germany"} component={PediatricEntGermany} />
       <Route path={"/ar/pediatric-medicine-germany"} component={PediatricMedicineGermany} />
       <Route path={"/ar/pediatric-surgery-germany"} component={PediatricSurgeryGermany} />
       <Route path={"/ar/pediatric-orthopedics-germany"} component={PediatricOrthopedicsGermany} />

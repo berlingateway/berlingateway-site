@@ -104,7 +104,15 @@ const orthoRelatedAR = [
 // ─── ENT CLUSTER ─────────────────────────────────────────────────────────────
 
 const entClusterAR = [
-  { href: "/ar/ent-germany", label: "الأنف والأذن والحنجرة — المحور" },
+  { href: "/ar/ent-germany",                  label: "الأنف والأذن والحنجرة — المحور" },
+  { href: "/ar/ent-surgery-germany",          label: "جراحة الأنف والأذن والحنجرة" },
+  { href: "/ar/hearing-implant-germany",      label: "زراعة القوقعة وضعف السمع" },
+  { href: "/ar/tinnitus-treatment-germany",   label: "الطنين وطنين الأذن" },
+  { href: "/ar/voice-prosthesis-germany",     label: "بدائل الصوت وصمامات الكلام" },
+  { href: "/ar/head-neck-tumor-germany",      label: "أورام الرأس والعنق" },
+  { href: "/ar/sleep-apnea-snoring-germany",  label: "الشخير وانقطاع النفس" },
+  { href: "/ar/pediatric-ent-germany",        label: "أنف وأذن وحنجرة للأطفال" },
+  { href: "/ar/dizziness-long-term",          label: "الدوخة المزمنة واضطرابات التوازن" },
 ];
 
 const entRelatedAR = [
@@ -589,6 +597,76 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
   // ══════════════════════════════════════════════════════════════════════════
   // AR ENT
   // ══════════════════════════════════════════════════════════════════════════
+  "/ar/ent-surgery-germany": {
+    path: "/ar/ent-surgery-germany",
+    label: "جراحة الأنف والأذن والحنجرة",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
+  "/ar/hearing-implant-germany": {
+    path: "/ar/hearing-implant-germany",
+    label: "زراعة القوقعة وضعف السمع",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
+  "/ar/tinnitus-treatment-germany": {
+    path: "/ar/tinnitus-treatment-germany",
+    label: "الطنين وطنين الأذن",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
+  "/ar/voice-prosthesis-germany": {
+    path: "/ar/voice-prosthesis-germany",
+    label: "بدائل الصوت وصمامات الكلام",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
+  "/ar/head-neck-tumor-germany": {
+    path: "/ar/head-neck-tumor-germany",
+    label: "أورام الرأس والعنق",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
+  "/ar/sleep-apnea-snoring-germany": {
+    path: "/ar/sleep-apnea-snoring-germany",
+    label: "الشخير وانقطاع النفس أثناء النوم",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
+  "/ar/pediatric-ent-germany": {
+    path: "/ar/pediatric-ent-germany",
+    label: "أنف وأذن وحنجرة للأطفال",
+    lang: "ar",
+    hub: "/ar/ent-germany",
+    hubLabel: "الأنف والأذن والحنجرة",
+    equivalents: { en: "/", de: "/de" },
+    cluster: entClusterAR,
+    related: entRelatedAR,
+  },
   "/ar/ent-germany": {
     path: "/ar/ent-germany",
     label: "الأنف والأذن والحنجرة",

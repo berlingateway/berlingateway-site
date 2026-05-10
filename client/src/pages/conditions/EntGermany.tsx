@@ -1,6 +1,6 @@
 /**
  * /ar/ent-germany
- * Arabic ENT / HNO Hub — MCG Authority Page
+ * Arabic ENT / HNO Hub — MCG Authority Page (expanded)
  */
 
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
@@ -36,12 +36,24 @@ const PATHWAY = [
   { n: "05", title: "التنسيق مع التخصصات المرتبطة", body: "ربط الحالة بالأعصاب أو الجراحة أو التأهيل حسب الحاجة السريرية." },
 ];
 
+// HNO sub-pages cluster
+const HNO_CLUSTER = [
+  { href: "/ar/ent-surgery-germany",        label: "جراحة الأنف والأذن والحنجرة",                 desc: "الجراحات المتخصصة في الأنف والأذن والحنجرة" },
+  { href: "/ar/hearing-implant-germany",     label: "زراعة القوقعة وضعف السمع",                   desc: "تقييم وتنسيق زراعة القوقعة الإلكترونية" },
+  { href: "/ar/tinnitus-treatment-germany",  label: "علاج الطنين وطنين الأذن",                    desc: "تقييم الطنين المزمن وخيارات العلاج" },
+  { href: "/ar/voice-prosthesis-germany",    label: "بدائل الصوت وصمامات الكلام",                 desc: "بعد جراحات الحنجرة وإعادة التأهيل الصوتي" },
+  { href: "/ar/head-neck-tumor-germany",     label: "أورام الرأس والعنق",                          desc: "تقييم وتنسيق أورام الرأس والعنق" },
+  { href: "/ar/sleep-apnea-snoring-germany", label: "الشخير وانقطاع النفس أثناء النوم",            desc: "تشخيص وعلاج اضطرابات النوم التنفسية" },
+  { href: "/ar/pediatric-ent-germany",       label: "طب الأنف والأذن والحنجرة للأطفال",           desc: "الحالات الأنفية والأذنية والحنجرية عند الأطفال" },
+  { href: "/ar/dizziness-long-term",         label: "الدوخة المزمنة واضطرابات التوازن",            desc: "الدوار المزمن وضعف التوازن — مسار HNO المرتبط" },
+];
+
 const RELATED = [
-  { href: "/ar/dizziness-long-term", label: "الدوار المزمن وضعف التوازن" },
-  { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
-  { href: "/ar/war-injury-rehabilitation-germany", label: "تأهيل إصابات الحرب" },
-  { href: "/ar/complex-trauma-evaluation", label: "تقييم الصدمات المعقدة" },
-  { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
+  { href: "/ar/dizziness-long-term",               label: "الدوار المزمن وضعف التوازن" },
+  { href: "/ar/neurology-treatment-germany",        label: "الأعصاب والجهاز العصبي" },
+  { href: "/ar/war-injury-rehabilitation-germany",  label: "تأهيل إصابات الحرب" },
+  { href: "/ar/complex-trauma-evaluation",          label: "تقييم الصدمات المعقدة" },
+  { href: "/ar/submit-case",                        label: "تقديم الحالة الطبية" },
 ];
 
 export default function EntGermany() {
@@ -56,7 +68,7 @@ export default function EntGermany() {
       />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section style={{ background: "#0B1C2C", padding: "80px 24px 72px", textAlign: "center" }}>
+      <section style={{ background: "#0B1C2C", padding: "72px 24px 64px", textAlign: "center" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 11, letterSpacing: "0.18em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 20 }}>
             Medical Care Germany — Hals-Nasen-Ohren-Heilkunde
@@ -64,16 +76,41 @@ export default function EntGermany() {
           <h1 style={{ ...AR, fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.45, marginBottom: 20 }}>
             علاج الأنف والأذن والحنجرة في ألمانيا
           </h1>
-          <p style={{ ...AR, fontSize: 16, color: "#94a3b8", lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>
-            تقييم طبي متخصص لحالات الأنف والأذن والحنجرة المعقدة، خاصة تلك المرتبطة بالصدمات، الحوادث، وإصابات الحرب — بالتنسيق مع المختصين الألمان في مستشفيات الجامعات.
+          <p style={{ ...AR, fontSize: 16, color: "#94a3b8", lineHeight: 1.85, maxWidth: 640, margin: "0 auto 16px" }}>
+            تنسيق الحالات المعقدة في الأنف والأذن والحنجرة داخل ألمانيا، خاصة حالات السمع، الدوخة، الطنين، الحنجرة، اضطرابات الصوت، أورام الرأس والعنق، ومشاكل التنفس والجيوب.
           </p>
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 32 }}>
             <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none", border: "1px solid #fff" }}>
               إرسال التقارير الطبية للتقييم
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
               طلب تقييم أولي
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── HNO CLUSTER GRID ─────────────────────────────────────── */}
+      <section style={{ background: "#f8fafc", padding: "64px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>
+            تخصصات الأنف والأذن والحنجرة
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 36, textAlign: "center", lineHeight: 1.5 }}>
+            المسارات التخصصية المتاحة
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+            {HNO_CLUSTER.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                style={{ ...AR, background: "#fff", padding: "24px 20px", display: "flex", flexDirection: "column", gap: 8, textDecoration: "none", color: "inherit" }}
+              >
+                <span style={{ ...AR, fontSize: 14, fontWeight: 600, color: "#0B1C2C", lineHeight: 1.5 }}>{item.label}</span>
+                <span style={{ ...AR, fontSize: 12, color: "#64748b", lineHeight: 1.6 }}>{item.desc}</span>
+                <span style={{ ...AR, fontSize: 11, color: "#1E4A7A", marginTop: 4 }}>← عرض التفاصيل</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -97,12 +134,12 @@ export default function EntGermany() {
       </section>
 
       {/* ── CASES GRID ───────────────────────────────────────────── */}
-      <section style={{ background: "#f8fafc", padding: "72px 24px" }}>
+      <section style={{ background: "#fff", padding: "64px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>
             الحالات المُنسَّقة
           </p>
-          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 40, textAlign: "center", lineHeight: 1.5 }}>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 36, textAlign: "center", lineHeight: 1.5 }}>
             حالات الأنف والأذن والحنجرة التي نُنسِّق تقييمها
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 1, background: "#e2e8f0" }}>
@@ -117,16 +154,16 @@ export default function EntGermany() {
       </section>
 
       {/* ── PATHWAY ──────────────────────────────────────────────── */}
-      <section style={{ padding: "72px 24px", maxWidth: 760, margin: "0 auto" }}>
+      <section style={{ padding: "64px 24px", maxWidth: 760, margin: "0 auto" }}>
         <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
           مسار التقييم
         </p>
-        <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 40, lineHeight: 1.5 }}>
+        <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 36, lineHeight: 1.5 }}>
           كيف نُنسِّق حالات الأنف والأذن والحنجرة
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 0, borderRight: "2px solid #e2e8f0" }}>
           {PATHWAY.map((step) => (
-            <div key={step.n} style={{ paddingRight: 24, paddingBottom: 36, position: "relative" }}>
+            <div key={step.n} style={{ paddingRight: 24, paddingBottom: 32, position: "relative" }}>
               <span style={{ position: "absolute", right: -10, top: 0, width: 18, height: 18, borderRadius: "50%", background: "#0B1C2C", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#fff", display: "block" }} />
               </span>
@@ -139,7 +176,7 @@ export default function EntGermany() {
       </section>
 
       {/* ── DOCUMENTS ────────────────────────────────────────────── */}
-      <section style={{ background: "#0B1C2C", padding: "72px 24px" }}>
+      <section style={{ background: "#0B1C2C", padding: "64px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
             المستندات المطلوبة
@@ -168,7 +205,7 @@ export default function EntGermany() {
       </section>
 
       {/* ── RELATED LINKS ────────────────────────────────────────── */}
-      <section style={{ background: "#f8fafc", padding: "56px 24px" }}>
+      <section style={{ background: "#f8fafc", padding: "48px 24px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 20 }}>
             صفحات ذات صلة

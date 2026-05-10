@@ -572,7 +572,15 @@ export default function ArabicHome() {
                       <>
                         <span className="block text-[8px] text-[#9ca3af] uppercase tracking-[0.18em] font-semibold mb-3 border-b border-[#f0f0f0] pb-2" style={AR_FONT}>الأنف والأذن والحنجرة</span>
                         {[
-                          { href: '/ar/ent-germany', label: 'الأنف والأذن والحنجرة — المحور الرئيسي' },
+                          { href: '/ar/ent-germany',                 label: 'الأنف والأذن والحنجرة — المحور' },
+                          { href: '/ar/ent-surgery-germany',         label: 'جراحة الأنف والأذن والحنجرة' },
+                          { href: '/ar/hearing-implant-germany',     label: 'زراعة القوقعة وضعف السمع' },
+                          { href: '/ar/tinnitus-treatment-germany',  label: 'الطنين وطنين الأذن' },
+                          { href: '/ar/voice-prosthesis-germany',    label: 'بدائل الصوت وصمامات الكلام' },
+                          { href: '/ar/head-neck-tumor-germany',     label: 'أورام الرأس والعنق' },
+                          { href: '/ar/sleep-apnea-snoring-germany', label: 'الشخير وانقطاع النفس' },
+                          { href: '/ar/pediatric-ent-germany',       label: 'أنف وأذن وحنجرة للأطفال' },
+                          { href: '/ar/dizziness-long-term',         label: 'الدوخة المزمنة واضطرابات التوازن' },
                         ].map(item => (
                           <Link key={item.label} href={item.href} onClick={() => setConditionsOpen(false)}
                             className="block transition-colors"
@@ -829,7 +837,15 @@ export default function ArabicHome() {
               </button>
               {mobileAccordion === 'ent' && (
                 <div className="flex flex-col gap-0.5 px-4 py-2 bg-slate-50">
-                  <a href="/ar/ent-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">الأنف والأذن والحنجرة — المحور</a>
+                  <a href="/ar/ent-germany"                 onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900 font-medium">الأنف والأذن والحنجرة — المحور</a>
+                  <a href="/ar/ent-surgery-germany"         onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">جراحة الأنف والأذن والحنجرة</a>
+                  <a href="/ar/hearing-implant-germany"     onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">زراعة القوقعة وضعف السمع</a>
+                  <a href="/ar/tinnitus-treatment-germany"  onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الطنين وطنين الأذن</a>
+                  <a href="/ar/voice-prosthesis-germany"    onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">بدائل الصوت وصمامات الكلام</a>
+                  <a href="/ar/head-neck-tumor-germany"     onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">أورام الرأس والعنق</a>
+                  <a href="/ar/sleep-apnea-snoring-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الشخير وانقطاع النفس</a>
+                  <a href="/ar/pediatric-ent-germany"       onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">أنف وأذن وحنجرة للأطفال</a>
+                  <a href="/ar/dizziness-long-term"         onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-600 py-1.5 hover:text-slate-900">الدوخة المزمنة واضطرابات التوازن</a>
                 </div>
               )}
               {/* Direct links */}

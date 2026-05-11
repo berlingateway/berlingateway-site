@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Ausbildung – Berlin Gateway</title>
-  <meta name="description" content="Analyse Ihrer Chancen basierend auf Marktbedarf und Qualifikation." />
+  <title>Duales Ausbildungssystem – Berlin Gateway</title>
+  <meta name="description" content="Strukturierte Analyse Ihrer Integrationsfähigkeit in das deutsche duale Ausbildungssystem." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,255 +11,54 @@
   <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/ausbildung.html" />
   <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/ausbildung.html" />
   <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/cluster-system.css" />
   <style>
-    .assessment-hero {
-      text-align: center;
-      margin-bottom: 42px;
-      padding: 40px 20px;
+    /* Institutional Density Overrides */
+    .ausbildung-hero {
+      background: #1A1D24;
+      color: #FFFFFF;
+      padding: 60px 0;
+      text-align: left;
     }
-    .assessment-hero h1 {
-      font-size: 36px;
+    .ausbildung-hero h1 {
+      font-size: 38px;
       font-weight: 800;
-      color: var(--black);
-      margin: 0 0 16px 0;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #FFFFFF;
     }
-    .assessment-hero p {
+    .ausbildung-hero p {
       font-size: 18px;
-      color: #4B5563;
-      max-width: 600px;
-      margin: 0 auto;
+      color: #D1D5DB;
+      max-width: 800px;
       line-height: 1.6;
     }
-    .assessment-container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .progress-bar {
-      width: 100%;
-      height: 6px;
-      background: #e2e8f0;
-      border-radius: 3px;
-      margin-bottom: 32px;
-      overflow: hidden;
-    }
-    .progress-fill {
-      height: 100%;
-      background: #0B3B8C;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-    .step {
-      display: none;
-      animation: fadeIn 0.3s ease;
-    }
-    .step.active {
+    .eyebrow {
       display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .step-title {
-      color: var(--black);
-      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 12px;
       font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .step-description {
-      color: #4B5563;
-      font-size: 16px;
-      margin-bottom: 32px;
-      line-height: 1.6;
-    }
-    .option-group {
-      margin-bottom: 24px;
-    }
-    .option-label {
-      display: flex;
-      align-items: center;
-      padding: 16px;
-      border: 2px solid #E5E7EB;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
       margin-bottom: 12px;
-      background: white;
-    }
-    .option-label:hover {
-      border-color: #0B3B8C;
-      background: #fafaf8;
-    }
-    .option-label input[type="radio"] {
-      margin-right: 12px;
-      cursor: pointer;
-      width: 20px;
-      height: 20px;
-      accent-color: #0B3B8C;
-    }
-    .option-text {
-      flex: 1;
-    }
-    .option-points {
-      color: #0B3B8C;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .button-group {
-      display: flex;
-      gap: 12px;
-      margin-top: 40px;
-      justify-content: space-between;
-    }
-    .btn {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .btn-primary {
-      background: #0B3B8C;
-      color: white;
-      flex: 1;
-    }
-    .btn-primary:hover {
-      background: #9a6f08;
-    }
-    .btn-secondary {
-      background: #E5E7EB;
-      color: #4B5563;
-      padding: 14px 28px;
-    }
-    .btn-secondary:hover {
-      background: #D1D5DB;
-    }
-    .result-section {
-      display: none;
-      background: white;
-      border: 1px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .result-section.active {
-      display: block;
-      animation: fadeIn 0.3s ease;
-    }
-    .result-score {
-      font-size: 64px;
-      font-weight: 800;
-      color: #0B3B8C;
-      margin-bottom: 12px;
-    }
-    .result-status {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .result-status.excellent {
-      color: #10b981;
-    }
-    .result-status.good {
-      color: #0B3B8C;
-    }
-    .result-status.early {
-      color: #ef4444;
-    }
-    .result-message {
-      color: #4B5563;
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .result-cta {
-      margin-top: 32px;
-    }
-    .result-cta a {
-      display: inline-block;
-      padding: 14px 32px;
-      background: #0B3B8C;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 700;
-      transition: background 0.2s ease;
-    }
-    .result-cta a:hover {
-      background: #9a6f08;
-    }
-    .micro-trust {
-      background: #f9f8f6;
-      border-radius: 8px;
-      padding: 24px;
-      margin: 40px 0;
-      text-align: center;
-    }
-    .micro-trust p {
-      color: #4B5563;
-      font-size: 14px;
-      margin: 8px 0;
-      font-weight: 600;
-    }
-    .final-cta {
-      text-align: center;
-      margin: 60px 0;
-    }
-    .final-cta a {
-      display: inline-block;
-      padding: 16px 40px;
-      background: #0B3B8C;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 16px;
-      transition: background 0.2s ease;
-    }
-    .final-cta a:hover {
-      background: #9a6f08;
-    }
-    @media (max-width: 768px) {
-      .assessment-hero h1 {
-        font-size: 28px;
-      }
-      .assessment-hero p {
-        font-size: 16px;
-      }
-      .result-score {
-        font-size: 48px;
-      }
-      .button-group {
-        flex-direction: column;
-      }
-      .btn-secondary {
-        width: 100%;
-      }
+      color: #9CA3AF;
     }
   </style>
 </head>
 <body>
-  <!-- BAND 1: TOP BAND (BLACK) -->
+
+<!-- BAND 1: TOP BAND -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
+            <a href="mailto:info@berlingateway.de?subject=Ausbildung Request" target="_blank">✉ info@berlingateway.de</a>
+        </div>
         <div class="top-band__right">
             <a href="/ar/ausbildung" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
         </div>
     </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- BAND 2: MAIN HEADER -->
 <header class="header">
     <div class="header__inner">
         <a href="/de" class="brand">
@@ -267,286 +66,261 @@
             Berlin Gateway
         </a>
         <nav class="nav">
-            <a href="/de/chancenkarte" class="nav-link ">Chancenkarte</a>
-            <a href="/de/assessment" class="nav-link ">Punkte-Rechner</a>
-            <a href="/de/systemlogik" class="nav-link ">Systemlogik</a>
-            <a href="/de/monitor" class="nav-link ">Monitor</a>
-            <a href="/de/insights" class="nav-link ">Insights</a>
+            <a href="/de/chancenkarte" class="nav-link">Chancenkarte</a>
+            <a href="/de/aerzte" class="nav-link">Ärzte</a>
+            <a href="/de/ingenieure" class="nav-link">Ingenieure</a>
+            <a href="/de/pflegekraefte" class="nav-link">Pflegekräfte</a>
+            <a href="/de/ausbildung" class="nav-link active">Ausbildung</a>
         </nav>
     </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<!-- BAND 3: SUB NAV BAND -->
 <nav class="subnav">
     <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
+        <a href="/de/voraussetzungen">Voraussetzungen</a>
+        <a href="/de/systemlogik">Systemlogik</a>
+        <a href="/de/assessment">Assessment</a>
     </div>
 </nav>
 
-  <main style="padding-top: 130px;">
+<main>
     <!-- HERO SECTION -->
-    <section class="assessment-hero">
-      <h1>Ist Ausbildung in Deutschland wirklich Ihre Chance – oder der falsche Weg?</h1>
-      <p>Analyse Ihrer Chancen basierend auf Marktbedarf und Qualifikation.</p>
+    <section class="ausbildung-hero">
+        <div class="container">
+            <span class="eyebrow">VOCATIONAL TRAINING CLUSTER</span>
+            <h1>Das deutsche Duale System: Qualifikation durch industrielle Integration.</h1>
+            <p>Die Berufsausbildung in Deutschland ist kein reiner Lernprozess, sondern eine systemische Verzahnung von Betrieb und Berufsschule. Erfolg erfordert mehr als nur einen Ausbildungsvertrag.</p>
+        </div>
     </section>
 
-    <!-- ASSESSMENT TOOL -->
-    <div class="assessment-container">
-      <!-- PROGRESS BAR -->
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-
-      <!-- STEP 1: QUALIFICATION -->
-      <div class="step active" id="step1">
-        <div class="step-title">Schritt 1: Ihre Qualifikation</div>
-        <div class="step-description">Was ist Ihr höchster Abschluss?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="qualification" value="3">
-            <span class="option-text">Universitätsabschluss (Bachelor/Master)</span>
-            <span class="option-points">3 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="qualification" value="2">
-            <span class="option-text">Berufsausbildung / Fachschule</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="qualification" value="0">
-            <span class="option-text">Keine formale Qualifikation</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-primary" onclick="nextStep(2)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 2: PROFESSIONAL EXPERIENCE -->
-      <div class="step" id="step2">
-        <div class="step-title">Schritt 2: Berufserfahrung</div>
-        <div class="step-description">Wie viele Jahre relevanter Berufserfahrung haben Sie?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="experience" value="3">
-            <span class="option-text">5+ Jahre</span>
-            <span class="option-points">3 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="experience" value="2">
-            <span class="option-text">2-4 Jahre</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="experience" value="0">
-            <span class="option-text">Weniger als 2 Jahre</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(1)">Zurück</button>
-          <button class="btn btn-primary" onclick="nextStep(3)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 3: GERMAN LANGUAGE SKILLS -->
-      <div class="step" id="step3">
-        <div class="step-title">Schritt 3: Deutschkenntnisse</div>
-        <div class="step-description">Was ist Ihr aktuelles Deutsch-Niveau?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="german" value="3">
-            <span class="option-text">B2 oder höher</span>
-            <span class="option-points">3 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="german" value="2">
-            <span class="option-text">B1</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="german" value="1">
-            <span class="option-text">A2</span>
-            <span class="option-points">1 Punkt</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="german" value="0">
-            <span class="option-text">A1 oder niedriger</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(2)">Zurück</button>
-          <button class="btn btn-primary" onclick="nextStep(4)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 4: AGE -->
-      <div class="step" id="step4">
-        <div class="step-title">Schritt 4: Ihr Alter</div>
-        <div class="step-description">Wie alt sind Sie?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="age" value="2">
-            <span class="option-text">Unter 35</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="age" value="1">
-            <span class="option-text">35-40</span>
-            <span class="option-points">1 Punkt</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="age" value="0">
-            <span class="option-text">Über 40</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(3)">Zurück</button>
-          <button class="btn btn-primary" onclick="nextStep(5)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 5: CONNECTION TO GERMANY -->
-      <div class="step" id="step5">
-        <div class="step-title">Schritt 5: Verbindung zu Deutschland</div>
-        <div class="step-description">Haben Sie eine Verbindung zu Deutschland?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="connection" value="2">
-            <span class="option-text">Früherer Aufenthalt in Deutschland</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="connection" value="1">
-            <span class="option-text">Verwandte in Deutschland</span>
-            <span class="option-points">1 Punkt</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="connection" value="0">
-            <span class="option-text">Keine Verbindung</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(4)">Zurück</button>
-          <button class="btn btn-primary" onclick="calculateResult()">Ergebnis berechnen</button>
-        </div>
-      </div>
-
-      <!-- RESULT SECTION -->
-      <div class="result-section" id="resultSection">
-        <div class="result-score" id="resultScore"></div>
-        <div class="result-status" id="resultStatus"></div>
-        <div class="result-message" id="resultMessage"></div>
-        <div class="result-cta" id="resultCta"></div>
-      </div>
-
-      <!-- MICRO-TRUST SECTION -->
-      <div class="micro-trust">
-        <p>✓ 100% kostenlos und unverbindlich</p>
-        <p>✓ Basiert auf offiziellen Kriterien</p>
-        <p>✓ Sofortiges Ergebnis</p>
-      </div>
-
-      <!-- FINAL CTA -->
-      <div class="final-cta">
-        <a href="/de/chancenkarte">Ausbildung prüfen</a>
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
+    <!-- REALITY LAYER: SYSTEM BARRIERS -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 class="section-title">Strukturelle Hürden der Ausbildungsmigration</h2>
+            <div class="intelligence-grid">
+                <div class="intelligence-card">
+                    <h3>Schulabschluss-Anerkennung</h3>
+                    <p>Ohne die formale Gleichwertigkeit Ihres Schulabschlusses ist der Zugang zum dualen System rechtlich blockiert. Die Bewertung durch die Zeugnisbewertungsstelle ist der erste kritische Pfad.</p>
+                </div>
+                <div class="intelligence-card">
+                    <h3>Berufsschul-Sprachrealität</h3>
+                    <p>Während im Betrieb B1 oft ausreicht, erfordert die theoretische Ausbildung in der Berufsschule ein sicheres B2-Niveau. Sprachdefizite führen oft zum Scheitern in der Zwischenprüfung.</p>
+                </div>
+                <div class="intelligence-card">
+                    <h3>Berufsorientierung & Alter</h3>
+                    <p>Das deutsche System ist auf Kontinuität ausgelegt. Ein hohes Alter oder ein radikaler Fachrichtungswechsel ohne plausible Begründung erhöht das Ablehnungsrisiko bei der Visaerteilung.</p>
+                </div>
+                <div class="intelligence-card">
+                    <h3>Finanzielle Tragfähigkeit</h3>
+                    <p>Die Ausbildungsvergütung deckt oft nicht die vollen Lebenshaltungskosten. Die Differenz muss durch Sperrkonten oder Verpflichtungserklärungen nachgewiesen werden.</p>
+                </div>
             </div>
-            <div>
-                <h4>Navigation</h4>
+        </div>
+    </section>
+
+    <!-- INSTITUTIONELLER ABLAUF -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Der Weg in das Duale System (01–05)</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h4>Orientierung & Analyse</h4>
+                    <p>Bewertung der Schulzeugnisse und Abgleich mit den Anforderungen von IHK oder HWK.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h4>Sprachliche Qualifikation</h4>
+                    <p>Erreichen des B2-Niveaus zur Sicherstellung der Ausbildungsfähigkeit in der Berufsschule.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h4>Ausbildungsvertrag</h4>
+                    <p>Sicherung eines Platzes in einem zertifizierten Ausbildungsbetrieb mit Eintragung im Verzeichnis.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h4>Visum & Einreise</h4>
+                    <p>Nachweis der Finanzierung und der systemischen Eignung gegenüber der Botschaft.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h4>Abschluss & Übernahme</h4>
+                    <p>Erfolgreiche Gesellenprüfung und nahtlose Integration in den deutschen Arbeitsmarkt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DECISION MATRIX -->
+    <section class="section-institutional">
+        <div class="container">
+            <h2 class="section-title">Entscheidungsmatrix: Ausbildungssektoren</h2>
+            <div class="matrix-container">
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Sektor</th>
+                            <th>Bedarf</th>
+                            <th>Sprachdruck</th>
+                            <th>Schulabschluss</th>
+                            <th>Empfohlener Pfad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Sektor"><strong>Handwerk (HWK)</strong></td>
+                            <td data-label="Bedarf">Extrem Hoch</td>
+                            <td data-label="Sprachdruck">Mittel (B1+)</td>
+                            <td data-label="Schulabschluss">Haupt/Real</td>
+                            <td data-label="Empfohlener Pfad">Direkteinstieg</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Sektor"><strong>Industrie (IHK)</strong></td>
+                            <td data-label="Bedarf">Hoch</td>
+                            <td data-label="Sprachdruck">Hoch (B2)</td>
+                            <td data-label="Schulabschluss">Abitur/Real</td>
+                            <td data-label="Empfohlener Pfad">Vorpraktikum</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Sektor"><strong>Gesundheit/Pflege</strong></td>
+                            <td data-label="Bedarf">Kritisch</td>
+                            <td data-label="Sprachdruck">Sehr Hoch (B2)</td>
+                            <td data-label="Schulabschluss">Real/Abitur</td>
+                            <td data-label="Empfohlener Pfad">Direkteinstieg</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Sektor"><strong>IT/Digital</strong></td>
+                            <td data-label="Bedarf">Hoch</td>
+                            <td data-label="Sprachdruck">Hoch (B2/Engl)</td>
+                            <td data-label="Schulabschluss">Abitur</td>
+                            <td data-label="Empfohlener Pfad">Studienabbrecher</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT SECTION -->
+    <section class="section-light">
+        <div class="container">
+            <div class="assessment-container">
+                <div class="assessment-header">
+                    <h2>Strukturierte Ausbildungsbewertung</h2>
+                    <p>Prüfen Sie Ihre systemische Eignung für das duale System in Deutschland.</p>
+                </div>
+                <div class="assessment-disclaimer">
+                    <strong>Institutioneller Hinweis:</strong> Diese Bewertung ersetzt keine behördliche Prüfung, sondern dient der strategischen Einschätzung Ihrer Visums- und Integrationschancen.
+                </div>
+                <div class="process-bar">
+                    <div class="process-bar-fill" style="width: 25%;"></div>
+                </div>
+                <div class="assessment-content" style="text-align: center; padding: 40px 0;">
+                    <p>Beginnen Sie mit der Analyse Ihres Qualifikationsprofils.</p>
+                    <a href="/de/assessment" class="cta-button">Bewertung starten</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SYSTEM -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 class="section-title">Häufige Fragen zum Ausbildungssystem</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Was ist das Berichtsheft?</div>
+                    <div class="faq-answer">
+                        <p>Das Berichtsheft ist der offizielle Ausbildungsnachweis. Es muss wöchentlich geführt werden und ist die rechtliche Voraussetzung für die Zulassung zur Abschlussprüfung.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Wer ist für mich zuständig: IHK oder HWK?</div>
+                    <div class="faq-answer">
+                        <p>Das hängt von Ihrem Beruf ab. Handwerkliche Berufe fallen unter die Handwerkskammer (HWK), kaufmännische und industrielle Berufe unter die Industrie- und Handelskammer (IHK).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Kann ich die Ausbildung verkürzen?</div>
+                    <div class="faq-answer">
+                        <p>Bei sehr guten Leistungen oder entsprechenden Vorqualifikationen (z.B. Abitur oder Studium) kann die Ausbildungszeit um 6 bis 12 Monate verkürzt werden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGIC NAVIGATION -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Zugehörige System-Cluster</h2>
+            <div class="navigation-modules">
+                <a href="/de/voraussetzungen" class="nav-card">
+                    <h4>Voraussetzungen</h4>
+                    <p>Rechtliche Rahmenbedingungen für Ausbildungsvisa.</p>
+                </a>
+                <a href="/de/systemlogik" class="nav-card">
+                    <h4>Systemlogik</h4>
+                    <p>Verständnis der deutschen Arbeitsmarktstrukturen.</p>
+                </a>
+                <a href="/de/chancenkarte" class="nav-card">
+                    <h4>Chancenkarte</h4>
+                    <p>Alternative Pfade für qualifizierte Fachkräfte.</p>
+                </a>
+                <a href="/de/assessment" class="nav-card">
+                    <h4>Assessment</h4>
+                    <p>Vollständige Analyse Ihres Integrationspotenzials.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section-institutional" style="text-align: center; padding: 80px 0;">
+        <div class="container">
+            <h2 style="margin-bottom: 24px;">Bereit für die industrielle Integration?</h2>
+            <p style="margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Lassen Sie Ihr Profil gegen die Anforderungen des dualen Systems prüfen.</p>
+            <a href="/de/assessment" class="cta-button">Ausbildungs-Check durchführen</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h5>System-Navigation</h5>
                 <a href="/de/chancenkarte">Chancenkarte</a>
-                <a href="/de/assessment">Punkte-Rechner</a>
-                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/voraussetzungen">Voraussetzungen</a>
+                <a href="/de/assessment">Assessment</a>
+            </div>
+            <div class="footer__col">
+                <h5>Fachkräfte-Cluster</h5>
+                <a href="/de/aerzte">Ärzte</a>
+                <a href="/de/ingenieure">Ingenieure</a>
+                <a href="/de/pflegekraefte">Pflegekräfte</a>
+                <a href="/de/ausbildung">Ausbildung</a>
+            </div>
+            <div class="footer__col">
+                <h5>Ressourcen</h5>
                 <a href="/de/monitor">Monitor</a>
                 <a href="/de/insights">Insights</a>
+                <a href="/de/systemlogik">Systemlogik</a>
             </div>
-            <div>
-                <h4>Rechtliches</h4>
+            <div class="footer__col">
+                <h5>Rechtliches</h5>
                 <a href="/de/impressum">Impressum</a>
                 <a href="/de/datenschutz">Datenschutz</a>
             </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
         </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        <div class="footer__bottom">
+            &copy; 2024 Berlin Gateway. Institutionelle Qualifikationsbewertung.
         </div>
     </div>
 </footer>
 
-  <script>
-    let currentStep = 1;
-    const totalSteps = 5;
-
-    function nextStep(step) {
-      document.getElementById(`step${currentStep}`).classList.remove("active");
-      document.getElementById(`step${step}`).classList.add("active");
-      currentStep = step;
-      updateProgress();
-    }
-
-    function prevStep(step) {
-      document.getElementById(`step${currentStep}`).classList.remove("active");
-      document.getElementById(`step${step}`).classList.add("active");
-      currentStep = step;
-      updateProgress();
-    }
-
-    function updateProgress() {
-      const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
-      document.getElementById("progressFill").style.width = `${progress}%`;
-    }
-
-    function calculateResult() {
-      let totalPoints = 0;
-      const form = document.querySelector(".assessment-container");
-      const formData = new FormData(form);
-
-      for (const [key, value] of formData.entries()) {
-        totalPoints += parseInt(value, 10);
-      }
-
-      const resultSection = document.getElementById("resultSection");
-      const resultScore = document.getElementById("resultScore");
-      const resultStatus = document.getElementById("resultStatus");
-      const resultMessage = document.getElementById("resultMessage");
-      const resultCta = document.getElementById("resultCta");
-
-      resultScore.textContent = `${totalPoints} Punkte`;
-
-      if (totalPoints >= 6) {
-        resultStatus.textContent = "Ihre Ausbildung-Chancen sind gut!";
-        resultStatus.className = "result-status good";
-        resultMessage.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für eine Ausbildung. Fahren Sie fort, um Ihre Chancenkarte-Bewertung zu starten.";
-        resultCta.innerHTML = `<a href="/de/chancenkarte">Zur Chancenkarte-Bewertung</a>`;
-      } else {
-        resultStatus.textContent = "Ihre Ausbildung-Chancen sind begrenzt.";
-        resultStatus.className = "result-status early";
-        resultMessage.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für eine Ausbildung nicht vollständig. Prüfen Sie die Systemlogik, um Ihre Optionen zu verstehen.";
-        resultCta.innerHTML = `<a href="/de/systemlogik">Systemlogik prüfen</a>`;
-      }
-
-      resultSection.classList.add("active");
-      resultSection.scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
+<script src="/assets/js/cluster-system.js"></script>
 </body>
 </html>

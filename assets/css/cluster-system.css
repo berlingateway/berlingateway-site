@@ -300,8 +300,8 @@
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
-    color: #0B3B8C;
-    text-decoration: none;
+    color: #1A1D24;
+    text-decoration: underline;
     margin-top: 6px;
 }
 
@@ -355,7 +355,7 @@
 }
 
 .contextual-cta-btn {
-    background: #0B3B8C;
+    background: #1A1D24;
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
@@ -369,7 +369,7 @@
 }
 
 .contextual-cta-btn:hover {
-    background: #082B5C;
+    background: #000000;
 }
 
 .contextual-cta-btn-secondary {

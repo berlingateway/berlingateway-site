@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ärzte in Deutschland – Medizinische Integrations-Infrastruktur | Berlin Gateway</title>
-    <meta name="description" content="Strukturierte medizinische Integration für international ausgebildete Ärzte: Approbation, Bundesland-Variationen, klinische Hierarchie, Facharzt-Positionierung und Arbeitsmarkt-Realität.">
-    <link rel="canonical" href="https://berlingateway.de/de/aerzte">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/css/layout-system.css">
-    <link rel="stylesheet" href="/assets/css/cluster-system.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ärzte in Deutschland – Medizinische Integrations-Infrastruktur | Berlin Gateway</title>
+<meta content="Strukturierte medizinische Integration für international ausgebildete Ärzte: Approbation, Bundesland-Variationen, klinische Hierarchie, Facharzt-Positionierung und Arbeitsmarkt-Realität." name="description"/>
+<link href="https://berlingateway.de/de/aerzte" rel="canonical"/>
+<link href="/assets/css/app.css" rel="stylesheet"/>
+<link href="/assets/css/layout-system.css" rel="stylesheet"/>
+<link href="/assets/css/cluster-system.css" rel="stylesheet"/>
+<style>
         .aerzte-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .aerzte-hero { background: #1A1D24; color: #FFFFFF; padding: 60px 20px; text-align: center; margin-bottom: 40px; }
         .aerzte-hero h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
@@ -30,226 +31,303 @@
         }
     </style>
 </head>
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="brand"><a href="/" class="brand-icon">Berlin Gateway</a></div>
-            <nav class="nav">
-                <a href="/de/chancenkarte">Chancenkarte</a>
-                <a href="/de/aerzte">Ärzte</a>
-                <a href="/de/ingenieure">Ingenieure</a>
-                <a href="/de/anerkennung">Anerkennung</a>
-                <a href="/de/systemlogik">Systemlogik</a>
-            </nav>
-            <div class="lang-switch"><a href="/ar/aerzte">العربية</a></div>
-        </div>
-    </header>
+<body><div class="top-band bg-black text-white text-xs py-1 px-4 flex justify-between items-center">
+<div class="top-band-left">
+<a class="text-white hover:text-gray-300" href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+</div>
+<div class="top-band-right flex items-center space-x-4">
+<a class="text-white hover:text-gray-300" href="/ar/">العربية</a>
+<a class="text-white hover:text-gray-300" href="/de/zertifizierte-bewertung.html">Zertifizierte Bewertung</a>
+</div>
+</div><header class="main-header bg-white shadow-md py-4 px-4">
+<div class="container mx-auto flex justify-between items-center">
+<div class="brand">
+<a class="text-black text-2xl font-bold" href="/de/">BERLIN GATEWAY</a>
+</div>
+<nav class="main-nav hidden md:flex space-x-6">
+<a class="text-black hover:text-gray-700" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="text-black hover:text-gray-700" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="text-black hover:text-gray-700" href="/de/systemlogik.html">Systemlogik</a>
+<a class="text-black hover:text-gray-700" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="text-black hover:text-gray-700" href="/de/assessment.html">Assessment</a>
+<a class="text-black hover:text-gray-700" href="/de/aerzte.html">Ärzte</a>
+<a class="text-black hover:text-gray-700" href="/de/ingenieure.html">Ingenieure</a>
+<a class="text-black hover:text-gray-700" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="text-black hover:text-gray-700" href="/de/ausbildung.html">Ausbildung</a>
+</nav>
+<div class="hamburger-menu md:hidden">
+<button class="text-black focus:outline-none" id="mobile-menu-button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<div class="sub-nav-system bg-black text-white py-2 px-4 hidden md:block">
+<div class="container mx-auto flex space-x-6">
+<a class="hover:text-gray-300" href="/de/aerzte.html">Ärzte</a>
+<a class="hover:text-gray-300" href="/de/ingenieure.html">Ingenieure</a>
+<a class="hover:text-gray-300" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="hover:text-gray-300" href="/de/ausbildung.html">Ausbildung</a>
+</div>
+</div>
+<nav class="mobile-menu hidden md:hidden bg-black text-white px-4 py-2" id="mobile-menu">
+<a class="block py-2 hover:bg-gray-800" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/systemlogik.html">Systemlogik</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/assessment.html">Assessment</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/aerzte.html">Ärzte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/ingenieure.html">Ingenieure</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/ausbildung.html">Ausbildung</a>
+</nav>
 
-    <main>
-        <section class="aerzte-hero">
-            <div class="aerzte-container">
-                <h1>Ärzte in Deutschland</h1>
-                <p>Strukturierte medizinische Integration, klinische Hierarchie und Facharzt-Positionierung im deutschen Gesundheitssystem</p>
-            </div>
-        </section>
 
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Die Realität der medizinischen Integration</h2>
-                <p>Das deutsche Gesundheitssystem ist eine hochstrukturierte medizinische Hierarchie. Approbation ist nicht das Ende des Prozesses – es ist der Anfang einer komplexen klinischen Integration. Bundesland-Variationen, Sprachanforderungen, Fachkompetenz-Validierung und Arbeitsmarkt-Segmentierung bestimmen Ihren tatsächlichen Zugang.</p>
-            </div>
-        </section>
+<main>
+<section class="aerzte-hero">
+<div class="aerzte-container">
+<h1>Ärzte in Deutschland</h1>
+<p>Strukturierte medizinische Integration, klinische Hierarchie und Facharzt-Positionierung im deutschen Gesundheitssystem</p>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Die Realität der medizinischen Integration</h2>
+<p>Das deutsche Gesundheitssystem ist eine hochstrukturierte medizinische Hierarchie. Approbation ist nicht das Ende des Prozesses – es ist der Anfang einer komplexen klinischen Integration. Bundesland-Variationen, Sprachanforderungen, Fachkompetenz-Validierung und Arbeitsmarkt-Segmentierung bestimmen Ihren tatsächlichen Zugang.</p>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Kritische Integrations-Barrieren</h2>
+<div class="barrier-cards">
+<div class="barrier-card">
+<h3>Approbation &amp; Bundesland-Variation</h3>
+<p>Unterschiedliche Anforderungen je nach Bundesland. Prozesszeiten: 3-12 Monate. Dokumentations-Tiefe entscheidend.</p>
+</div>
+<div class="barrier-card">
+<h3>Klinische Sprachanforderung (C1+)</h3>
+<p>Fachsprachprüfung ist Minimum. Realität: Chirurgie, Psychiatrie, Anästhesiologie erfordern C1+ für sichere Praxis.</p>
+</div>
+<div class="barrier-card">
+<h3>Fachkompetenz-Validierung</h3>
+<p>Kenntnisprüfung für nicht-äquivalente Ausbildungen. Fokus: deutsches Gesundheitssystem, Dokumentation, klinische Prozesse.</p>
+</div>
+<div class="barrier-card">
+<h3>Klinische Hierarchie &amp; Integration</h3>
+<p>Assistenzarzt-Positionen erfordern Anpassung an deutsche Klinikkultur, Dokumentation, Kommunikation und Weisungsgebundenheit.</p>
+</div>
+<div class="barrier-card">
+<h3>Facharzt-Positionierung</h3>
+<p>Spezialisierung ist Arbeitsmarkt-Realität. Allgemeinmedizin vs. Fachrichtungen haben unterschiedliche Chancen und Anforderungen.</p>
+</div>
+<div class="barrier-card">
+<h3>Arbeitsmarkt-Segmentierung</h3>
+<p>Mangelfachrichtungen (Psychiatrie, Allgemeinmedizin) vs. kompetitive Felder (Chirurgie, Radiologie). Regionale Unterschiede entscheidend.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Approbation: Bundesland-spezifische Realität</h2>
+<div class="regulatory-block">
+<h3>Anerkennungsverfahren nach Bundesland</h3>
+<ul>
+<li><strong>Berlin/Brandenburg:</strong> Schnelleres Verfahren, durchschnittlich 4-6 Monate. Ärztekammer Berlin ist zentral.</li>
+<li><strong>Bayern/Baden-Württemberg:</strong> Strengere Anforderungen, 6-12 Monate. Regionale Spezialisierungen berücksichtigt.</li>
+<li><strong>Nordrhein-Westfalen:</strong> Größter Arbeitsmarkt, aber auch höchste Konkurrenz. Prozess: 5-8 Monate.</li>
+<li><strong>Hessen/Rheinland-Pfalz:</strong> Mittlere Anforderungen, 4-8 Monate. Gute Chancen für Spezialisierungen.</li>
+</ul>
+</div>
+<div class="regulatory-block">
+<h3>Dokumentations-Anforderungen</h3>
+<ul>
+<li>Beglaubigte Kopien aller Abschlüsse (Beglaubigung durch deutsche Botschaft/Konsulat)</li>
+<li>Beglaubigte Übersetzung ins Deutsche (von zertifiziertem Übersetzer)</li>
+<li>Nachweis von Berufserfahrung (Arbeitszeugnisse, Referenzen)</li>
+<li>Fachsprachprüfung oder Äquivalenznachweis</li>
+<li>Ärztliche Unbedenklichkeitsbescheinigung (je nach Herkunftsland)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Klinische Integration: Hierarchie und Pathways</h2>
+<div class="regulatory-block">
+<h3>University Hospital Pathways (Unikliniken)</h3>
+<ul>
+<li><strong>Observership/Hospitation:</strong> 3-6 Monate unbezahltes Praktikum zur Anpassung an deutsche Klinikprozesse</li>
+<li><strong>Assistenzarzt-Position:</strong> Nach erfolgreicher Integration. Tariflich geregelt (TVÄrztVKA). Einstiegsgehalt: 60.000-65.000 EUR/Jahr</li>
+<li><strong>Facharzt-Weiterbildung:</strong> 5-6 Jahre je nach Fachrichtung. Strukturierte Ausbildung mit Prüfungen</li>
+<li><strong>Oberarzt/Leitende Position:</strong> Nach Facharzt-Abschluss und Erfahrung</li>
+</ul>
+</div>
+<div class="regulatory-block">
+<h3>Krankenhäuser (Nicht-Universitär)</h3>
+<ul>
+<li><strong>Direkter Einstieg:</strong> In Mangelfachrichtungen oft möglich (Psychiatrie, Allgemeinmedizin)</li>
+<li><strong>Facharzt-Positionen:</strong> Häufig schneller erreichbar als in Unikliniken</li>
+<li><strong>Gehalt:</strong> Tariflich, aber oft 5-10% unter Unikliniken</li>
+<li><strong>Weiterbildung:</strong> Weniger strukturiert, aber praktisch orientiert</li>
+</ul>
+</div>
+<div class="regulatory-block">
+<h3>Praxen (Niedergelassene Ärzte)</h3>
+<ul>
+<li><strong>Einstieg:</strong> Angestellter Arzt oder Praxispartner</li>
+<li><strong>Anforderungen:</strong> Approbation + Fachsprachprüfung + ggf. Spezialisierung</li>
+<li><strong>Gehalt:</strong> 50.000-70.000 EUR/Jahr (angestellet), höher bei Partnerschaft</li>
+<li><strong>Chancen:</strong> Allgemeinmedizin und Spezialisierungen mit Mangel</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Facharzt-Positionierung und Arbeitsmarkt-Realität</h2>
+<div class="ablauf-container">
+<div class="ablauf-step">
+<div class="ablauf-step-number">01</div>
+<div class="ablauf-step-title">Approbation</div>
+<div class="ablauf-step-desc">Behördliche Anerkennung (3-12 Monate)</div>
+</div>
+<div class="ablauf-step">
+<div class="ablauf-step-number">02</div>
+<div class="ablauf-step-title">Sprachvalidierung</div>
+<div class="ablauf-step-desc">FSP oder C1-Nachweis (Klinische Realität)</div>
+</div>
+<div class="ablauf-step">
+<div class="ablauf-step-number">03</div>
+<div class="ablauf-step-title">Observership/Integration</div>
+<div class="ablauf-step-desc">Klinische Anpassung (3-6 Monate)</div>
+</div>
+<div class="ablauf-step">
+<div class="ablauf-step-number">04</div>
+<div class="ablauf-step-title">Assistenzarzt-Position</div>
+<div class="ablauf-step-desc">Strukturierte Facharzt-Weiterbildung</div>
+</div>
+<div class="ablauf-step">
+<div class="ablauf-step-number">05</div>
+<div class="ablauf-step-title">Facharzt/Spezialisierung</div>
+<div class="ablauf-step-desc">Oberarzt oder Praxis-Einstieg</div>
+</div>
+</div>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Arbeitsmarkt-Segmentierung: Fachrichtungs-Realität</h2>
+<div class="matrix-container">
+<table class="matrix-table">
+<thead><tr><th>Fachrichtung</th><th>Arbeitsmarkt-Status</th><th>Integrations-Anforderung</th><th>Sprachniveau</th><th>Facharzt-Chancen</th></tr></thead>
+<tbody>
+<tr><td class="matrix-profile-type" data-label="Fachrichtung">Allgemeinmedizin</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-low">Hohe Nachfrage</span></td><td data-label="Integrations-Anforderung">Mittel (Hausarzt-Kultur)</td><td data-label="Sprachniveau">C1</td><td data-label="Facharzt-Chancen">Sehr gut</td></tr>
+<tr><td class="matrix-profile-type" data-label="Fachrichtung">Psychiatrie</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-low">Hohe Nachfrage</span></td><td data-label="Integrations-Anforderung">Hoch (Kommunikation)</td><td data-label="Sprachniveau">C1+</td><td data-label="Facharzt-Chancen">Gut</td></tr>
+<tr><td class="matrix-profile-type" data-label="Fachrichtung">Innere Medizin</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-medium">Mittlere Nachfrage</span></td><td data-label="Integrations-Anforderung">Mittel</td><td data-label="Sprachniveau">C1</td><td data-label="Facharzt-Chancen">Gut</td></tr>
+<tr><td class="matrix-profile-type" data-label="Fachrichtung">Chirurgie</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-high">Kompetitiv</span></td><td data-label="Integrations-Anforderung">Sehr hoch (Hierarchie)</td><td data-label="Sprachniveau">C1+</td><td data-label="Facharzt-Chancen">Schwierig</td></tr>
+<tr><td class="matrix-profile-type" data-label="Fachrichtung">Radiologie</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-high">Sehr kompetitiv</span></td><td data-label="Integrations-Anforderung">Hoch</td><td data-label="Sprachniveau">C1</td><td data-label="Facharzt-Chancen">Schwierig</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Häufig gestellte Fragen – Medizinische Integration</h2>
+<div class="faq-container">
+<div class="faq-item"><div class="faq-question"><span>Wie lange dauert die komplette Integration bis zur Facharzt-Position?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Approbation (3-12 Monate) + Observership (3-6 Monate) + Assistenzarzt (2-3 Jahre bis erste Spezialisierung) = 5-8 Jahre insgesamt. Schneller in Mangelfachrichtungen.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>Was ist Observership/Hospitation und ist es bezahlt?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Observership ist ein unbezahltes oder gering bezahltes Praktikum (3-6 Monate) zur Anpassung an deutsche Klinikprozesse. Es ist oft Voraussetzung für Assistenzarzt-Positionen, besonders in Unikliniken.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>Welche Bundesländer haben die besten Chancen?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Berlin/Brandenburg: Schnellere Approbation. NRW: Größter Arbeitsmarkt, aber kompetitiv. Bayern: Strengere Anforderungen, aber gute Chancen in Mangelfachrichtungen. Regional-Unterschiede sind entscheidend.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>Kann ich direkt als Facharzt arbeiten oder muss ich als Assistenzarzt anfangen?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Mit ausländischem Facharzt-Abschluss: Anerkennung erforderlich. In Mangelfachrichtungen oft direkt möglich. In kompetitiven Feldern: Assistenzarzt-Position wahrscheinlich.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>Wie realistisch ist die Praxis-Gründung für ausländische Ärzte?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Nach Facharzt-Abschluss und 5+ Jahren Erfahrung möglich. Kassenzulassung ist begrenzt. Privatpraxis ist schneller, aber erfordert Kapital und Patientenbasis.</p></div></div>
+</div>
+</div>
+</section>
+<section class="cluster-section">
+<div class="aerzte-container">
+<h2>Strategische Navigation</h2>
+<div class="cluster-nav">
+<a class="cluster-nav-item" href="/de/anerkennung"><div class="cluster-nav-item-title">Anerkennung</div><div class="cluster-nav-item-desc">Detaillierte Approbation und Bundesland-Variationen</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
+<a class="cluster-nav-item" href="/de/systemlogik"><div class="cluster-nav-item-title">Systemlogik</div><div class="cluster-nav-item-desc">Deutsche Gesundheitssystem-Struktur und Hierarchie</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
+<a class="cluster-nav-item" href="/de/chancenkarte"><div class="cluster-nav-item-title">Chancenkarte</div><div class="cluster-nav-item-desc">Bewerten Sie Ihr medizinisches Profil</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
+<a class="cluster-nav-item" href="/de/monitor"><div class="cluster-nav-item-title">Monitor</div><div class="cluster-nav-item-desc">Arbeitsmarkt-Daten für Ärzte</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
+<a class="cluster-nav-item" href="/de/assessment"><div class="cluster-nav-item-title">Assessment</div><div class="cluster-nav-item-desc">Strukturierte Qualifikationsbewertung</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
+<a class="cluster-nav-item" href="/de/arbeit-in-deutschland"><div class="cluster-nav-item-title">Arbeit in Deutschland</div><div class="cluster-nav-item-desc">Praktische Integrations-Information</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
+</div>
+</div>
+</section>
+<section class="contextual-cta">
+<div class="aerzte-container">
+<h3>Nächster Schritt: Strukturierte Medizinische Bewertung</h3>
+<p>Erhalten Sie eine detaillierte Analyse Ihrer medizinischen Qualifikation, Integrations-Chancen und realistischen Facharzt-Pathway im deutschen System.</p>
+<div class="contextual-cta-buttons">
+<a class="contextual-cta-btn" href="/de/assessment">Bewertung starten</a>
+<a class="contextual-cta-btn contextual-cta-btn-secondary" href="/de/chancenkarte">Chancenkarte erkunden</a>
+</div>
+</div>
+</section>
+</main>
+<script src="/assets/js/cluster-system.js"></script>
 
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Kritische Integrations-Barrieren</h2>
-                <div class="barrier-cards">
-                    <div class="barrier-card">
-                        <h3>Approbation & Bundesland-Variation</h3>
-                        <p>Unterschiedliche Anforderungen je nach Bundesland. Prozesszeiten: 3-12 Monate. Dokumentations-Tiefe entscheidend.</p>
-                    </div>
-                    <div class="barrier-card">
-                        <h3>Klinische Sprachanforderung (C1+)</h3>
-                        <p>Fachsprachprüfung ist Minimum. Realität: Chirurgie, Psychiatrie, Anästhesiologie erfordern C1+ für sichere Praxis.</p>
-                    </div>
-                    <div class="barrier-card">
-                        <h3>Fachkompetenz-Validierung</h3>
-                        <p>Kenntnisprüfung für nicht-äquivalente Ausbildungen. Fokus: deutsches Gesundheitssystem, Dokumentation, klinische Prozesse.</p>
-                    </div>
-                    <div class="barrier-card">
-                        <h3>Klinische Hierarchie & Integration</h3>
-                        <p>Assistenzarzt-Positionen erfordern Anpassung an deutsche Klinikkultur, Dokumentation, Kommunikation und Weisungsgebundenheit.</p>
-                    </div>
-                    <div class="barrier-card">
-                        <h3>Facharzt-Positionierung</h3>
-                        <p>Spezialisierung ist Arbeitsmarkt-Realität. Allgemeinmedizin vs. Fachrichtungen haben unterschiedliche Chancen und Anforderungen.</p>
-                    </div>
-                    <div class="barrier-card">
-                        <h3>Arbeitsmarkt-Segmentierung</h3>
-                        <p>Mangelfachrichtungen (Psychiatrie, Allgemeinmedizin) vs. kompetitive Felder (Chirurgie, Radiologie). Regionale Unterschiede entscheidend.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Approbation: Bundesland-spezifische Realität</h2>
-                <div class="regulatory-block">
-                    <h3>Anerkennungsverfahren nach Bundesland</h3>
-                    <ul>
-                        <li><strong>Berlin/Brandenburg:</strong> Schnelleres Verfahren, durchschnittlich 4-6 Monate. Ärztekammer Berlin ist zentral.</li>
-                        <li><strong>Bayern/Baden-Württemberg:</strong> Strengere Anforderungen, 6-12 Monate. Regionale Spezialisierungen berücksichtigt.</li>
-                        <li><strong>Nordrhein-Westfalen:</strong> Größter Arbeitsmarkt, aber auch höchste Konkurrenz. Prozess: 5-8 Monate.</li>
-                        <li><strong>Hessen/Rheinland-Pfalz:</strong> Mittlere Anforderungen, 4-8 Monate. Gute Chancen für Spezialisierungen.</li>
-                    </ul>
-                </div>
-                <div class="regulatory-block">
-                    <h3>Dokumentations-Anforderungen</h3>
-                    <ul>
-                        <li>Beglaubigte Kopien aller Abschlüsse (Beglaubigung durch deutsche Botschaft/Konsulat)</li>
-                        <li>Beglaubigte Übersetzung ins Deutsche (von zertifiziertem Übersetzer)</li>
-                        <li>Nachweis von Berufserfahrung (Arbeitszeugnisse, Referenzen)</li>
-                        <li>Fachsprachprüfung oder Äquivalenznachweis</li>
-                        <li>Ärztliche Unbedenklichkeitsbescheinigung (je nach Herkunftsland)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Klinische Integration: Hierarchie und Pathways</h2>
-                <div class="regulatory-block">
-                    <h3>University Hospital Pathways (Unikliniken)</h3>
-                    <ul>
-                        <li><strong>Observership/Hospitation:</strong> 3-6 Monate unbezahltes Praktikum zur Anpassung an deutsche Klinikprozesse</li>
-                        <li><strong>Assistenzarzt-Position:</strong> Nach erfolgreicher Integration. Tariflich geregelt (TVÄrztVKA). Einstiegsgehalt: 60.000-65.000 EUR/Jahr</li>
-                        <li><strong>Facharzt-Weiterbildung:</strong> 5-6 Jahre je nach Fachrichtung. Strukturierte Ausbildung mit Prüfungen</li>
-                        <li><strong>Oberarzt/Leitende Position:</strong> Nach Facharzt-Abschluss und Erfahrung</li>
-                    </ul>
-                </div>
-                <div class="regulatory-block">
-                    <h3>Krankenhäuser (Nicht-Universitär)</h3>
-                    <ul>
-                        <li><strong>Direkter Einstieg:</strong> In Mangelfachrichtungen oft möglich (Psychiatrie, Allgemeinmedizin)</li>
-                        <li><strong>Facharzt-Positionen:</strong> Häufig schneller erreichbar als in Unikliniken</li>
-                        <li><strong>Gehalt:</strong> Tariflich, aber oft 5-10% unter Unikliniken</li>
-                        <li><strong>Weiterbildung:</strong> Weniger strukturiert, aber praktisch orientiert</li>
-                    </ul>
-                </div>
-                <div class="regulatory-block">
-                    <h3>Praxen (Niedergelassene Ärzte)</h3>
-                    <ul>
-                        <li><strong>Einstieg:</strong> Angestellter Arzt oder Praxispartner</li>
-                        <li><strong>Anforderungen:</strong> Approbation + Fachsprachprüfung + ggf. Spezialisierung</li>
-                        <li><strong>Gehalt:</strong> 50.000-70.000 EUR/Jahr (angestellet), höher bei Partnerschaft</li>
-                        <li><strong>Chancen:</strong> Allgemeinmedizin und Spezialisierungen mit Mangel</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Facharzt-Positionierung und Arbeitsmarkt-Realität</h2>
-                <div class="ablauf-container">
-                    <div class="ablauf-step">
-                        <div class="ablauf-step-number">01</div>
-                        <div class="ablauf-step-title">Approbation</div>
-                        <div class="ablauf-step-desc">Behördliche Anerkennung (3-12 Monate)</div>
-                    </div>
-                    <div class="ablauf-step">
-                        <div class="ablauf-step-number">02</div>
-                        <div class="ablauf-step-title">Sprachvalidierung</div>
-                        <div class="ablauf-step-desc">FSP oder C1-Nachweis (Klinische Realität)</div>
-                    </div>
-                    <div class="ablauf-step">
-                        <div class="ablauf-step-number">03</div>
-                        <div class="ablauf-step-title">Observership/Integration</div>
-                        <div class="ablauf-step-desc">Klinische Anpassung (3-6 Monate)</div>
-                    </div>
-                    <div class="ablauf-step">
-                        <div class="ablauf-step-number">04</div>
-                        <div class="ablauf-step-title">Assistenzarzt-Position</div>
-                        <div class="ablauf-step-desc">Strukturierte Facharzt-Weiterbildung</div>
-                    </div>
-                    <div class="ablauf-step">
-                        <div class="ablauf-step-number">05</div>
-                        <div class="ablauf-step-title">Facharzt/Spezialisierung</div>
-                        <div class="ablauf-step-desc">Oberarzt oder Praxis-Einstieg</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Arbeitsmarkt-Segmentierung: Fachrichtungs-Realität</h2>
-                <div class="matrix-container">
-                    <table class="matrix-table">
-                        <thead><tr><th>Fachrichtung</th><th>Arbeitsmarkt-Status</th><th>Integrations-Anforderung</th><th>Sprachniveau</th><th>Facharzt-Chancen</th></tr></thead>
-                        <tbody>
-                            <tr><td class="matrix-profile-type" data-label="Fachrichtung">Allgemeinmedizin</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-low">Hohe Nachfrage</span></td><td data-label="Integrations-Anforderung">Mittel (Hausarzt-Kultur)</td><td data-label="Sprachniveau">C1</td><td data-label="Facharzt-Chancen">Sehr gut</td></tr>
-                            <tr><td class="matrix-profile-type" data-label="Fachrichtung">Psychiatrie</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-low">Hohe Nachfrage</span></td><td data-label="Integrations-Anforderung">Hoch (Kommunikation)</td><td data-label="Sprachniveau">C1+</td><td data-label="Facharzt-Chancen">Gut</td></tr>
-                            <tr><td class="matrix-profile-type" data-label="Fachrichtung">Innere Medizin</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-medium">Mittlere Nachfrage</span></td><td data-label="Integrations-Anforderung">Mittel</td><td data-label="Sprachniveau">C1</td><td data-label="Facharzt-Chancen">Gut</td></tr>
-                            <tr><td class="matrix-profile-type" data-label="Fachrichtung">Chirurgie</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-high">Kompetitiv</span></td><td data-label="Integrations-Anforderung">Sehr hoch (Hierarchie)</td><td data-label="Sprachniveau">C1+</td><td data-label="Facharzt-Chancen">Schwierig</td></tr>
-                            <tr><td class="matrix-profile-type" data-label="Fachrichtung">Radiologie</td><td data-label="Arbeitsmarkt-Status"><span class="matrix-risk-high">Sehr kompetitiv</span></td><td data-label="Integrations-Anforderung">Hoch</td><td data-label="Sprachniveau">C1</td><td data-label="Facharzt-Chancen">Schwierig</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Häufig gestellte Fragen – Medizinische Integration</h2>
-                <div class="faq-container">
-                    <div class="faq-item"><div class="faq-question"><span>Wie lange dauert die komplette Integration bis zur Facharzt-Position?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Approbation (3-12 Monate) + Observership (3-6 Monate) + Assistenzarzt (2-3 Jahre bis erste Spezialisierung) = 5-8 Jahre insgesamt. Schneller in Mangelfachrichtungen.</p></div></div>
-                    <div class="faq-item"><div class="faq-question"><span>Was ist Observership/Hospitation und ist es bezahlt?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Observership ist ein unbezahltes oder gering bezahltes Praktikum (3-6 Monate) zur Anpassung an deutsche Klinikprozesse. Es ist oft Voraussetzung für Assistenzarzt-Positionen, besonders in Unikliniken.</p></div></div>
-                    <div class="faq-item"><div class="faq-question"><span>Welche Bundesländer haben die besten Chancen?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Berlin/Brandenburg: Schnellere Approbation. NRW: Größter Arbeitsmarkt, aber kompetitiv. Bayern: Strengere Anforderungen, aber gute Chancen in Mangelfachrichtungen. Regional-Unterschiede sind entscheidend.</p></div></div>
-                    <div class="faq-item"><div class="faq-question"><span>Kann ich direkt als Facharzt arbeiten oder muss ich als Assistenzarzt anfangen?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Mit ausländischem Facharzt-Abschluss: Anerkennung erforderlich. In Mangelfachrichtungen oft direkt möglich. In kompetitiven Feldern: Assistenzarzt-Position wahrscheinlich.</p></div></div>
-                    <div class="faq-item"><div class="faq-question"><span>Wie realistisch ist die Praxis-Gründung für ausländische Ärzte?</span><span class="faq-toggle">▼</span></div><div class="faq-answer"><p>Nach Facharzt-Abschluss und 5+ Jahren Erfahrung möglich. Kassenzulassung ist begrenzt. Privatpraxis ist schneller, aber erfordert Kapital und Patientenbasis.</p></div></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cluster-section">
-            <div class="aerzte-container">
-                <h2>Strategische Navigation</h2>
-                <div class="cluster-nav">
-                    <a href="/de/anerkennung" class="cluster-nav-item"><div class="cluster-nav-item-title">Anerkennung</div><div class="cluster-nav-item-desc">Detaillierte Approbation und Bundesland-Variationen</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
-                    <a href="/de/systemlogik" class="cluster-nav-item"><div class="cluster-nav-item-title">Systemlogik</div><div class="cluster-nav-item-desc">Deutsche Gesundheitssystem-Struktur und Hierarchie</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
-                    <a href="/de/chancenkarte" class="cluster-nav-item"><div class="cluster-nav-item-title">Chancenkarte</div><div class="cluster-nav-item-desc">Bewerten Sie Ihr medizinisches Profil</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
-                    <a href="/de/monitor" class="cluster-nav-item"><div class="cluster-nav-item-title">Monitor</div><div class="cluster-nav-item-desc">Arbeitsmarkt-Daten für Ärzte</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
-                    <a href="/de/assessment" class="cluster-nav-item"><div class="cluster-nav-item-title">Assessment</div><div class="cluster-nav-item-desc">Strukturierte Qualifikationsbewertung</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
-                    <a href="/de/arbeit-in-deutschland" class="cluster-nav-item"><div class="cluster-nav-item-title">Arbeit in Deutschland</div><div class="cluster-nav-item-desc">Praktische Integrations-Information</div><div class="cluster-nav-item-link">Mehr erfahren →</div></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="contextual-cta">
-            <div class="aerzte-container">
-                <h3>Nächster Schritt: Strukturierte Medizinische Bewertung</h3>
-                <p>Erhalten Sie eine detaillierte Analyse Ihrer medizinischen Qualifikation, Integrations-Chancen und realistischen Facharzt-Pathway im deutschen System.</p>
-                <div class="contextual-cta-buttons">
-                    <a href="/de/assessment" class="contextual-cta-btn">Bewertung starten</a>
-                    <a href="/de/chancenkarte" class="contextual-cta-btn contextual-cta-btn-secondary">Chancenkarte erkunden</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section"><h4>Intelligenz-Systeme</h4><a href="/de/monitor">Monitor</a><a href="/de/insights">Insights</a><a href="/de/systemlogik">Systemlogik</a></div>
-            <div class="footer-section"><h4>Entscheidungs-Engine</h4><a href="/de/chancenkarte">Chancenkarte</a><a href="/de/assessment">Assessment</a><a href="/de/voraussetzungen">Voraussetzungen</a></div>
-            <div class="footer-section"><h4>Anerkennung & Visa</h4><a href="/de/anerkennung">Anerkennung</a><a href="/de/arbeit-in-deutschland">Arbeit in Deutschland</a></div>
-            <div class="footer-section"><h4>Rechtliches</h4><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p></div>
-    </footer>
-
-    <script src="/assets/js/cluster-system.js"></script>
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+<footer class="footer bg-black text-white py-8 px-4">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">BERLIN GATEWAY</h3>
+<p class="text-sm">Professionelle Einordnung in das deutsche Berufssystem.</p>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">SYSTEM</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a></li>
+<li><a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a></li>
+<li><a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a></li>
+<li><a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a></li>
+<li><a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">FACHKRÄFTE</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/aerzte.html">Ärzte</a></li>
+<li><a class="hover:text-gray-300" href="/de/ingenieure.html">Ingenieure</a></li>
+<li><a class="hover:text-gray-300" href="/de/pflegekraefte.html">Pflegekräfte</a></li>
+<li><a class="hover:text-gray-300" href="/de/ausbildung.html">Ausbildung</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">RESSOURCEN</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/monitor.html">Monitor</a></li>
+<li><a class="hover:text-gray-300" href="/de/insights.html">Insights</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">KONTAKT &amp; RECHTLICHES</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="mailto:info@berlingateway.de">info@berlingateway.de</a></li>
+<li><a class="hover:text-gray-300" href="tel:+493025730875">+49 30 25730875</a></li>
+<li><a class="hover:text-gray-300" href="/de/impressum.html">Impressum</a></li>
+<li><a class="hover:text-gray-300" href="/de/datenschutz.html">Datenschutz</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom text-center text-sm mt-8">
+<p>© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+</div>
+</footer>
 </body>
 </html>

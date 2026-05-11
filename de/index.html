@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway – Institutionelles Navigationssystem für Fachkräfte</title>
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Berlin Gateway – Institutionelles Navigationssystem für Fachkräfte</title>
+<link href="/assets/css/app.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         /* Global Styles for Institutional Density */
         body { margin: 0; font-family: 'Inter', sans-serif; color: #1A1D24; background-color: #FFFFFF; }
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
@@ -31,7 +32,7 @@
         .nav a { margin-left: 25px; font-weight: 600; color: #1A1D24; }
 
         /* LAYER 01 - ROOT AUTHORITY HERO */
-        .hero-authority { background-color: #1A1D24; color: #FFFFFF; padding: 100px 0; text-align: center; }
+      .hero-authority { background-color: #1A1D24; color: #FFFFFF; padding: 78px 0; text-align: center; }
         .hero-authority .eyebrow { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; margin-bottom: 15px; display: block; letter-spacing: 1px; }
         .hero-authority h1 { font-size: 3.2rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; color: #FFFFFF; max-width: 900px; margin-left: auto; margin-right: auto; }
         .hero-authority p { font-size: 1.3rem; line-height: 1.5; max-width: 800px; margin: 0 auto 40px auto; opacity: 0.9; }
@@ -117,217 +118,258 @@
         }
     </style>
 </head>
-<body>
-
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-        </div>
-        <div class="top-band__right">
-            <a href="/ar" class="lang-switch">العربية</a>
-            <span>Zertifizierte Bewertung</span>
-        </div>
-    </div>
+<body><div class="top-band bg-black text-white text-xs py-1 px-4 flex justify-between items-center">
+<div class="top-band-left">
+<a class="text-white hover:text-gray-300" href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
 </div>
-
-<header class="header">
-    <div class="header__inner">
-        <a href="/de" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/aerzte.html">Ärzte</a>
-            <a href="/de/ingenieure.html">Ingenieure</a>
-            <a href="/de/pflegekraefte.html">Pflegekräfte</a>
-            <a href="/de/ausbildung.html">Ausbildung</a>
-            <a href="/de/arbeit-in-deutschland.html">Arbeiten</a>
-            <a href="/de/chancenkarte.html">Chancenkarte</a>
-            <a href="/de/assessment.html">Assessment</a>
-        </nav>
-    </div>
+<div class="top-band-right flex items-center space-x-4">
+<a class="text-white hover:text-gray-300" href="/ar/">العربية</a>
+<a class="text-white hover:text-gray-300" href="/de/zertifizierte-bewertung.html">Zertifizierte Bewertung</a>
+</div>
+</div><header class="main-header bg-white shadow-md py-4 px-4">
+<div class="container mx-auto flex justify-between items-center">
+<div class="brand">
+<a class="text-black text-2xl font-bold" href="/de/">BERLIN GATEWAY</a>
+</div>
+<nav class="main-nav hidden md:flex space-x-6">
+<a class="text-black hover:text-gray-700" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="text-black hover:text-gray-700" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="text-black hover:text-gray-700" href="/de/systemlogik.html">Systemlogik</a>
+<a class="text-black hover:text-gray-700" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="text-black hover:text-gray-700" href="/de/assessment.html">Assessment</a>
+<a class="text-black hover:text-gray-700" href="/de/aerzte.html">Ärzte</a>
+<a class="text-black hover:text-gray-700" href="/de/ingenieure.html">Ingenieure</a>
+<a class="text-black hover:text-gray-700" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="text-black hover:text-gray-700" href="/de/ausbildung.html">Ausbildung</a>
+</nav>
+<div class="hamburger-menu md:hidden">
+<button class="text-black focus:outline-none" id="mobile-menu-button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
 </header>
+<div class="sub-nav-system bg-black text-white py-2 px-4 hidden md:block">
+<div class="container mx-auto flex space-x-6">
+<a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a>
+<a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a>
+</div>
+</div>
+<nav class="mobile-menu hidden md:hidden bg-black text-white px-4 py-2" id="mobile-menu">
+<a class="block py-2 hover:bg-gray-800" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/systemlogik.html">Systemlogik</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/assessment.html">Assessment</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/aerzte.html">Ärzte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/ingenieure.html">Ingenieure</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/ausbildung.html">Ausbildung</a>
+</nav>
+
 
 <main>
-    <!-- LAYER 01 - ROOT AUTHORITY HERO -->
-    <section class="hero-authority">
-        <div class="container">
-            <span class="eyebrow">STRATEGISCHES GATEWAY</span>
-            <h1>DEUTSCHLAND: SYSTEMINTEGRATION FÜR FACHKRÄFTE</h1>
-            <p>Berlin Gateway ist Ihr institutioneller Navigationsrahmen. Wir dekodieren die komplexen Strukturen des deutschen Arbeitsmarktes und der Verwaltung, um Ihre strategische Positionierung zu optimieren.</p>
-            <div class="cta-group">
-                <a href="/de/assessment.html" class="cta-primary">KLASSIFIZIERUNG STARTEN</a>
-                <a href="/de/systemlogik.html" class="cta-secondary">SYSTEMPFAD PRÜFEN</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- LAYER 02 - SYSTEM NAVIGATION GRID -->
-    <section class="system-grid-section">
-        <div class="container">
-            <h2>Die vier Säulen der Systemintegration</h2>
-            <div class="system-grid">
-                <div class="system-card">
-                    <span class="label">SÄULE 01</span>
-                    <h3>Voraussetzungen</h3>
-                    <p>Prüfen Sie Ihre dokumentarische Startbereitschaft und rechtliche Eignung für das deutsche System.</p>
-                    <a href="/de/voraussetzungen.html" class="deep-link">Details prüfen</a>
-                </div>
-                <div class="system-card">
-                    <span class="label">SÄULE 02</span>
-                    <h3>Systemlogik</h3>
-                    <p>Verstehen Sie die administrativen Prozessketten, Zuständigkeiten und Abhängigkeiten in Deutschland.</p>
-                    <a href="/de/systemlogik.html" class="deep-link">Prozess dekodieren</a>
-                </div>
-                <div class="system-card">
-                    <span class="label">SÄULE 03</span>
-                    <h3>Assessment</h3>
-                    <p>Lassen Sie Ihr Profil institutionell bewerten und erhalten Sie eine strategische Routing-Empfehlung.</p>
-                    <a href="/de/assessment.html" class="deep-link">Profil klassifizieren</a>
-                </div>
-                <div class="system-card">
-                    <span class="label">SÄULE 04</span>
-                    <h3>Chancenkarte</h3>
-                    <p>Analysieren Sie das Punktesystem und die strategischen Vorteile der Chancenkarte für Ihre Migration.</p>
-                    <a href="/de/chancenkarte.html" class="deep-link">Chancenkarte verstehen</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LAYER 03 - INSTITUTIONAL EXPLANATION BLOCK -->
-    <section class="explanation-block">
-        <div class="container">
-            <h2>Warum Deutschland eine strategische Herangehensweise erfordert</h2>
-            <p>Das deutsche System ist durch föderale Strukturen, komplexe Anerkennungsverfahren und eine spezifische administrative Logik gekennzeichnet. Ohne eine präzise Einordnung Ihres Profils und Ihrer Dokumente können selbst hochqualifizierte Fachkräfte an strukturellen Barrieren scheitern.</p>
-            <ul>
-                <li>Komplexe Anerkennungsprozesse</li>
-                <li>Föderale Zuständigkeitsfragmentierung</li>
-                <li>Dokumenten-Abhängigkeitsketten</li>
-                <li>Spezifische Bewerbungskultur</li>
-                <li>Administrative Bottlenecks</li>
-                <li>Sprachliche Druckpunkte</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- LAYER 04 - SECTOR ARCHITECTURE CLUSTERS -->
-    <section class="sector-clusters">
-        <div class="container">
-            <h2>Sektorale Architektur: Spezialisierte Integrationspfade</h2>
-            <div class="sector-grid">
-                <div class="sector-card">
-                    <span class="sector-label">SEKTOR MEDIZIN</span>
-                    <h3>Ärzte in Deutschland</h3>
-                    <p>Detaillierte Analyse der Approbationsverfahren und klinischen Integrationspfade.</p>
-                    <a href="/de/aerzte.html" class="sector-cta">Sektor prüfen</a>
-                </div>
-                <div class="sector-card">
-                    <span class="sector-label">SEKTOR TECHNIK</span>
-                    <h3>Ingenieure in Deutschland</h3>
-                    <p>Positionierung in der deutschen Industrielandschaft und Anerkennung technischer Qualifikationen.</p>
-                    <a href="/de/ingenieure.html" class="sector-cta">Sektor prüfen</a>
-                </div>
-                <div class="sector-card">
-                    <span class="sector-label">SEKTOR PFLEGE</span>
-                    <h3>Pflegekräfte in Deutschland</h3>
-                    <p>Strukturierte Wege zur Anerkennung ausländischer Pflegeabschlüsse und Integration.</p>
-                    <a href="/de/pflegekraefte.html" class="sector-cta">Sektor prüfen</a>
-                </div>
-                <div class="sector-card">
-                    <span class="sector-label">SEKTOR IT & TECH</span>
-                    <h3>IT & Technical Professionals</h3>
-                    <p>Strategien für den Direkteinstieg und die Nutzung der Chancenkarte in der Tech-Branche.</p>
-                    <a href="/de/arbeit-in-deutschland.html" class="sector-cta">Sektor prüfen</a>
-                </div>
-                <div class="sector-card">
-                    <span class="sector-label">SEKTOR AUSBILDUNG</span>
-                    <h3>Ausbildung in Deutschland</h3>
-                    <p>Das duale System: Qualifikation durch industrielle Integration und berufliche Anerkennung.</p>
-                    <a href="/de/ausbildung.html" class="sector-cta">Sektor prüfen</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LAYER 05 - PROCESS INTELLIGENCE TIMELINE -->
-    <section class="timeline-section">
-        <div class="container">
-            <h2>Der institutionelle Integrationspfad: 5 Phasen der System-Einordnung</h2>
-            <div class="timeline-grid">
-                <div class="timeline-step">
-                    <div class="icon">1</div>
-                    <h4>Profil-Analyse</h4>
-                    <p>Detaillierte Bewertung Ihrer Qualifikationen und Erfahrung.</p>
-                </div>
-                <div class="timeline-step">
-                    <div class="icon">2</div>
-                    <h4>Pfad-Definition</h4>
-                    <p>Identifikation des optimalen administrativen und beruflichen Weges.</p>
-                </div>
-                <div class="timeline-step">
-                    <div class="icon">3</div>
-                    <h4>Dossier-Architektur</h4>
-                    <p>Strukturierung und Vorbereitung aller notwendigen Dokumente.</p>
-                </div>
-                <div class="timeline-step">
-                    <div class="icon">4</div>
-                    <h4>System-Interaktion</h4>
-                    <p>Gezielte Kommunikation mit Behörden und Arbeitgebern.</p>
-                </div>
-                <div class="timeline-step">
-                    <div class="icon">5</div>
-                    <h4>Integration</h4>
-                    <p>Erfolgreicher Berufsstart und nachhaltige Etablierung in Deutschland.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LAYER 06 - ASSESSMENT AUTHORITY GATEWAY -->
-    <section class="assessment-gateway">
-        <div class="container">
-            <h2>Ihr Profil: Strategisch im deutschen System positionieren</h2>
-            <p>Die korrekte Einordnung Ihrer Qualifikationen ist entscheidend. Starten Sie jetzt eine präzise, institutionelle Bewertung, um Ihren optimalen Integrationspfad zu definieren und administrative Risiken zu minimieren.</p>
-            <a href="/de/assessment.html" class="cta-button">KLASSIFIZIERUNG STARTEN</a>
-        </div>
-    </section>
+<!-- LAYER 01 - ROOT AUTHORITY HERO -->
+<section class="hero-authority">
+<div class="container">
+<span class="eyebrow">STRATEGISCHES GATEWAY</span>
+<h1>DEUTSCHLAND: SYSTEMINTEGRATION FÜR FACHKRÄFTE</h1>
+<p>Berlin Gateway ist Ihr institutioneller Navigationsrahmen. Wir dekodieren die komplexen Strukturen des deutschen Arbeitsmarktes und der Verwaltung, um Ihre strategische Positionierung zu optimieren.</p>
+<div class="cta-group">
+<a class="cta-primary" href="/de/assessment.html">KLASSIFIZIERUNG STARTEN</a>
+<a class="cta-secondary" href="/de/systemlogik.html">SYSTEMPFAD PRÜFEN</a>
+</div>
+</div>
+</section>
+<!-- LAYER 02 - SYSTEM NAVIGATION GRID -->
+<section class="system-grid-section">
+<div class="container">
+<h2>Die vier Säulen der Systemintegration</h2>
+<div class="system-grid">
+<div class="system-card">
+<span class="label">SÄULE 01</span>
+<h3>Voraussetzungen</h3>
+<p>Prüfen Sie Ihre dokumentarische Startbereitschaft und rechtliche Eignung für das deutsche System.</p>
+<a class="deep-link" href="/de/voraussetzungen.html">Details prüfen</a>
+</div>
+<div class="system-card">
+<span class="label">SÄULE 02</span>
+<h3>Systemlogik</h3>
+<p>Verstehen Sie die administrativen Prozessketten, Zuständigkeiten und Abhängigkeiten in Deutschland.</p>
+<a class="deep-link" href="/de/systemlogik.html">Prozess dekodieren</a>
+</div>
+<div class="system-card">
+<span class="label">SÄULE 03</span>
+<h3>Assessment</h3>
+<p>Lassen Sie Ihr Profil institutionell bewerten und erhalten Sie eine strategische Routing-Empfehlung.</p>
+<a class="deep-link" href="/de/assessment.html">Profil klassifizieren</a>
+</div>
+<div class="system-card">
+<span class="label">SÄULE 04</span>
+<h3>Chancenkarte</h3>
+<p>Analysieren Sie das Punktesystem und die strategischen Vorteile der Chancenkarte für Ihre Migration.</p>
+<a class="deep-link" href="/de/chancenkarte.html">Chancenkarte verstehen</a>
+</div>
+</div>
+</div>
+</section>
+<!-- LAYER 03 - INSTITUTIONAL EXPLANATION BLOCK -->
+<section class="explanation-block">
+<div class="container">
+<h2>Warum Deutschland eine strategische Herangehensweise erfordert</h2>
+<p>Das deutsche System ist durch föderale Strukturen, komplexe Anerkennungsverfahren und eine spezifische administrative Logik gekennzeichnet. Ohne eine präzise Einordnung Ihres Profils und Ihrer Dokumente können selbst hochqualifizierte Fachkräfte an strukturellen Barrieren scheitern.</p>
+<ul>
+<li>Komplexe Anerkennungsprozesse</li>
+<li>Föderale Zuständigkeitsfragmentierung</li>
+<li>Dokumenten-Abhängigkeitsketten</li>
+<li>Spezifische Bewerbungskultur</li>
+<li>Administrative Bottlenecks</li>
+<li>Sprachliche Druckpunkte</li>
+</ul>
+</div>
+</section>
+<!-- LAYER 04 - SECTOR ARCHITECTURE CLUSTERS -->
+<section class="sector-clusters">
+<div class="container">
+<h2>Sektorale Architektur: Spezialisierte Integrationspfade</h2>
+<div class="sector-grid">
+<div class="sector-card">
+<span class="sector-label">SEKTOR MEDIZIN</span>
+<h3>Ärzte in Deutschland</h3>
+<p>Detaillierte Analyse der Approbationsverfahren und klinischen Integrationspfade.</p>
+<a class="sector-cta" href="/de/aerzte.html">Sektor prüfen</a>
+</div>
+<div class="sector-card">
+<span class="sector-label">SEKTOR TECHNIK</span>
+<h3>Ingenieure in Deutschland</h3>
+<p>Positionierung in der deutschen Industrielandschaft und Anerkennung technischer Qualifikationen.</p>
+<a class="sector-cta" href="/de/ingenieure.html">Sektor prüfen</a>
+</div>
+<div class="sector-card">
+<span class="sector-label">SEKTOR PFLEGE</span>
+<h3>Pflegekräfte in Deutschland</h3>
+<p>Strukturierte Wege zur Anerkennung ausländischer Pflegeabschlüsse und Integration.</p>
+<a class="sector-cta" href="/de/pflegekraefte.html">Sektor prüfen</a>
+</div>
+<div class="sector-card">
+<span class="sector-label">SEKTOR IT &amp; TECH</span>
+<h3>IT &amp; Technical Professionals</h3>
+<p>Strategien für den Direkteinstieg und die Nutzung der Chancenkarte in der Tech-Branche.</p>
+<a class="sector-cta" href="/de/arbeit-in-deutschland.html">Sektor prüfen</a>
+</div>
+<div class="sector-card">
+<span class="sector-label">SEKTOR AUSBILDUNG</span>
+<h3>Ausbildung in Deutschland</h3>
+<p>Das duale System: Qualifikation durch industrielle Integration und berufliche Anerkennung.</p>
+<a class="sector-cta" href="/de/ausbildung.html">Sektor prüfen</a>
+</div>
+</div>
+</div>
+</section>
+<!-- LAYER 05 - PROCESS INTELLIGENCE TIMELINE -->
+<section class="timeline-section">
+<div class="container">
+<h2>Der institutionelle Integrationspfad: 5 Phasen der System-Einordnung</h2>
+<div class="timeline-grid">
+<div class="timeline-step">
+<div class="icon">1</div>
+<h4>Profil-Analyse</h4>
+<p>Detaillierte Bewertung Ihrer Qualifikationen und Erfahrung.</p>
+</div>
+<div class="timeline-step">
+<div class="icon">2</div>
+<h4>Pfad-Definition</h4>
+<p>Identifikation des optimalen administrativen und beruflichen Weges.</p>
+</div>
+<div class="timeline-step">
+<div class="icon">3</div>
+<h4>Dossier-Architektur</h4>
+<p>Strukturierung und Vorbereitung aller notwendigen Dokumente.</p>
+</div>
+<div class="timeline-step">
+<div class="icon">4</div>
+<h4>System-Interaktion</h4>
+<p>Gezielte Kommunikation mit Behörden und Arbeitgebern.</p>
+</div>
+<div class="timeline-step">
+<div class="icon">5</div>
+<h4>Integration</h4>
+<p>Erfolgreicher Berufsstart und nachhaltige Etablierung in Deutschland.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- LAYER 06 - ASSESSMENT AUTHORITY GATEWAY -->
+<section class="assessment-gateway">
+<div class="container">
+<h2>Ihr Profil: Strategisch im deutschen System positionieren</h2>
+<p>Die korrekte Einordnung Ihrer Qualifikationen ist entscheidend. Starten Sie jetzt eine präzise, institutionelle Bewertung, um Ihren optimalen Integrationspfad zu definieren und administrative Risiken zu minimieren.</p>
+<a class="cta-button" href="/de/assessment.html">KLASSIFIZIERUNG STARTEN</a>
+</div>
+</section>
 </main>
 
-<footer class="footer">
-    <div class="container">
-        <div>
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Branchen</h4>
-                <a href="/de/aerzte.html">Ärzte</a>
-                <a href="/de/ingenieure.html">Ingenieure</a>
-                <a href="/de/pflegekraefte.html">Pflegekräfte</a>
-                <a href="/de/ausbildung.html">Ausbildung</a>
-            </div>
-            <div>
-                <h4>System</h4>
-                <a href="/de/systemlogik.html">Systemlogik</a>
-                <a href="/de/voraussetzungen.html">Voraussetzungen</a>
-                <a href="/de/assessment.html">Assessment</a>
-                <a href="/de/chancenkarte.html">Chancenkarte</a>
-            </div>
-            <div>
-                <h4>Kontakt & Rechtliches</h4>
-                <p>info@berlingateway.de</p>
-                <a href="/de/impressum.html">Impressum</a>
-                <a href="/de/datenschutz.html">Datenschutz</a>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
-</footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+<footer class="footer bg-black text-white py-8 px-4">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">BERLIN GATEWAY</h3>
+<p class="text-sm">Professionelle Einordnung in das deutsche Berufssystem.</p>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">SYSTEM</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a></li>
+<li><a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a></li>
+<li><a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a></li>
+<li><a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a></li>
+<li><a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">FACHKRÄFTE</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/aerzte.html">Ärzte</a></li>
+<li><a class="hover:text-gray-300" href="/de/ingenieure.html">Ingenieure</a></li>
+<li><a class="hover:text-gray-300" href="/de/pflegekraefte.html">Pflegekräfte</a></li>
+<li><a class="hover:text-gray-300" href="/de/ausbildung.html">Ausbildung</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">RESSOURCEN</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/monitor.html">Monitor</a></li>
+<li><a class="hover:text-gray-300" href="/de/insights.html">Insights</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">KONTAKT &amp; RECHTLICHES</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="mailto:info@berlingateway.de">info@berlingateway.de</a></li>
+<li><a class="hover:text-gray-300" href="tel:+493025730875">+49 30 25730875</a></li>
+<li><a class="hover:text-gray-300" href="/de/impressum.html">Impressum</a></li>
+<li><a class="hover:text-gray-300" href="/de/datenschutz.html">Datenschutz</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom text-center text-sm mt-8">
+<p>© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+</div>
+</footer>
 </body>
 </html>

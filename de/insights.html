@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights – Berlin Gateway</title>
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights – Berlin Gateway</title>
+<link href="/assets/css/app.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
         .insights-hero {
             text-align: center;
             padding: 80px 20px;
@@ -99,109 +100,151 @@
         }
     </style>
 </head>
-<body>
-
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/insights" class="lang-switch">العربية</a>
-        </div>
-    </div>
+<body><div class="top-band bg-black text-white text-xs py-1 px-4 flex justify-between items-center">
+<div class="top-band-left">
+<a class="text-white hover:text-gray-300" href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
 </div>
-
+<div class="top-band-right flex items-center space-x-4">
+<a class="text-white hover:text-gray-300" href="/ar/">العربية</a>
+<a class="text-white hover:text-gray-300" href="/de/zertifizierte-bewertung.html">Zertifizierte Bewertung</a>
+</div>
+</div><header class="main-header bg-white shadow-md py-4 px-4">
+<div class="container mx-auto flex justify-between items-center">
+<div class="brand">
+<a class="text-black text-2xl font-bold" href="/de/">BERLIN GATEWAY</a>
+</div>
+<nav class="main-nav hidden md:flex space-x-6">
+<a class="text-black hover:text-gray-700" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="text-black hover:text-gray-700" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="text-black hover:text-gray-700" href="/de/systemlogik.html">Systemlogik</a>
+<a class="text-black hover:text-gray-700" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="text-black hover:text-gray-700" href="/de/assessment.html">Assessment</a>
+<a class="text-black hover:text-gray-700" href="/de/aerzte.html">Ärzte</a>
+<a class="text-black hover:text-gray-700" href="/de/ingenieure.html">Ingenieure</a>
+<a class="text-black hover:text-gray-700" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="text-black hover:text-gray-700" href="/de/ausbildung.html">Ausbildung</a>
+</nav>
+<div class="hamburger-menu md:hidden">
+<button class="text-black focus:outline-none" id="mobile-menu-button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header><nav class="mobile-menu hidden md:hidden bg-black text-white px-4 py-2" id="mobile-menu">
+<a class="block py-2 hover:bg-gray-800" href="/de/chancenkarte.html">Chancenkarte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/voraussetzungen.html">Voraussetzungen</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/systemlogik.html">Systemlogik</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/assessment.html">Assessment</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/aerzte.html">Ärzte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/ingenieure.html">Ingenieure</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/pflegekraefte.html">Pflegekräfte</a>
+<a class="block py-2 hover:bg-gray-800" href="/de/ausbildung.html">Ausbildung</a>
+</nav>
+<!-- BAND 1: TOP BAND (BLACK) -->
 <!-- BAND 2: MINIMAL HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-    </div>
-</header>
-
 <!-- BAND 3: INTERNAL NAV BAR -->
 <div class="internal-nav">
-    <div class="internal-nav__inner">
-        <a href="/de/chancenkarte" class="nav-link ">Chancenkarte</a>
-        <a href="/de/systemlogik" class="nav-link ">Systemlogik</a>
-        <a href="/de/monitor" class="nav-link ">Monitor</a>
-        <a href="/de/insights" class="nav-link active">Insights</a>
-    </div>
+<div class="internal-nav__inner">
+<a class="nav-link" href="/de/chancenkarte">Chancenkarte</a>
+<a class="nav-link" href="/de/systemlogik">Systemlogik</a>
+<a class="nav-link" href="/de/monitor">Monitor</a>
+<a class="nav-link active" href="/de/insights">Insights</a>
 </div>
-
+</div>
 <!-- MAIN CONTENT -->
 <main style="padding-top: 130px;">
-    <!-- HERO SECTION -->
-    <section class="insights-hero">
-        <h1>Ihre Situation. Unsere Realität.</h1>
-        <p>Erkennen Sie sich in diesen Szenarien wieder? Dann sind Sie hier richtig.</p>
-    </section>
-
-    <!-- SCENARIOS SECTION -->
-    <section class="scenarios-container">
-        <ul class="scenario-list">
-                        <li>Sie haben einen exzellenten Abschluss, aber keine deutsche Arbeitserfahrung.</li>
-            <li>Ihre Qualifikation ist im Ausland hoch angesehen, in Deutschland jedoch unbekannt.</li>
-            <div class="inline-link-container">
-                <a href="/de/chancenkarte" class="inline-cta-link">Ihre Chancenkarte-Bewertung starten</a>
-            </div>
-            <li>Sie sprechen gut Englisch, aber Ihr Deutsch ist noch nicht auf B1-Niveau.</li>
-            <li>Sie erhalten Absagen, weil Ihr Profil nicht 'passt', obwohl Sie qualifiziert sind.</li>
-            <div class="inline-link-container">
-                <a href="/de/chancenkarte" class="inline-cta-link">Ihre Chancenkarte-Bewertung starten</a>
-            </div>
-            <li>Sie suchen nach einer klaren Strategie, um in den deutschen Arbeitsmarkt einzusteigen.</li>
-            <li>Sie möchten Ihre Chancen maximieren und Fehler vermeiden.</li>
-
-        </ul>
-    </section>
-
-    <!-- MIRROR STATEMENT -->
-    <section class="mirror-statement">
-        <p>Wenn diese Punkte auf Sie zutreffen, verstehen wir Ihre Herausforderung.</p>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="insights-cta">
-        <a href="/de/chancenkarte" class="insights-cta-button">Lassen Sie Ihre Situation bewerten</a>
-    </section>
+<!-- HERO SECTION -->
+<section class="insights-hero">
+<h1>Ihre Situation. Unsere Realität.</h1>
+<p>Erkennen Sie sich in diesen Szenarien wieder? Dann sind Sie hier richtig.</p>
+</section>
+<!-- SCENARIOS SECTION -->
+<section class="scenarios-container">
+<ul class="scenario-list">
+<li>Sie haben einen exzellenten Abschluss, aber keine deutsche Arbeitserfahrung.</li>
+<li>Ihre Qualifikation ist im Ausland hoch angesehen, in Deutschland jedoch unbekannt.</li>
+<div class="inline-link-container">
+<a class="inline-cta-link" href="/de/chancenkarte">Ihre Chancenkarte-Bewertung starten</a>
+</div>
+<li>Sie sprechen gut Englisch, aber Ihr Deutsch ist noch nicht auf B1-Niveau.</li>
+<li>Sie erhalten Absagen, weil Ihr Profil nicht 'passt', obwohl Sie qualifiziert sind.</li>
+<div class="inline-link-container">
+<a class="inline-cta-link" href="/de/chancenkarte">Ihre Chancenkarte-Bewertung starten</a>
+</div>
+<li>Sie suchen nach einer klaren Strategie, um in den deutschen Arbeitsmarkt einzusteigen.</li>
+<li>Sie möchten Ihre Chancen maximieren und Fehler vermeiden.</li>
+</ul>
+</section>
+<!-- MIRROR STATEMENT -->
+<section class="mirror-statement">
+<p>Wenn diese Punkte auf Sie zutreffen, verstehen wir Ihre Herausforderung.</p>
+</section>
+<!-- CTA SECTION -->
+<section class="insights-cta">
+<a class="insights-cta-button" href="/de/chancenkarte">Lassen Sie Ihre Situation bewerten</a>
+</section>
 </main>
-
 <!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de">Startseite</a>
-                <a href="/de/systemlogik">Systemlogik</a>
-                <a href="/de/monitor">Monitor</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum">Impressum</a>
-                <a href="/de/datenschutz">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
-</footer>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+<footer class="footer bg-black text-white py-8 px-4">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">BERLIN GATEWAY</h3>
+<p class="text-sm">Professionelle Einordnung in das deutsche Berufssystem.</p>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">SYSTEM</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a></li>
+<li><a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a></li>
+<li><a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a></li>
+<li><a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a></li>
+<li><a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">FACHKRÄFTE</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/aerzte.html">Ärzte</a></li>
+<li><a class="hover:text-gray-300" href="/de/ingenieure.html">Ingenieure</a></li>
+<li><a class="hover:text-gray-300" href="/de/pflegekraefte.html">Pflegekräfte</a></li>
+<li><a class="hover:text-gray-300" href="/de/ausbildung.html">Ausbildung</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">RESSOURCEN</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="/de/monitor.html">Monitor</a></li>
+<li><a class="hover:text-gray-300" href="/de/insights.html">Insights</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3 class="text-lg font-bold mb-4">KONTAKT &amp; RECHTLICHES</h3>
+<ul>
+<li><a class="hover:text-gray-300" href="mailto:info@berlingateway.de">info@berlingateway.de</a></li>
+<li><a class="hover:text-gray-300" href="tel:+493025730875">+49 30 25730875</a></li>
+<li><a class="hover:text-gray-300" href="/de/impressum.html">Impressum</a></li>
+<li><a class="hover:text-gray-300" href="/de/datenschutz.html">Datenschutz</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom text-center text-sm mt-8">
+<p>© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+</div>
+</footer>
 </body>
 </html>

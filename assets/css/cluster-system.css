@@ -1,0 +1,445 @@
+/* Master Cross-Cluster System CSS */
+/* Reusable institutional modules for Berlin Gateway */
+
+/* ============================================
+   INSTITUTIONELLER ABLAUF (Process Steps)
+   ============================================ */
+
+.ablauf-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.ablauf-step {
+    background: #FFFFFF;
+    border: 1px solid #D9E1EA;
+    border-radius: 0;
+    padding: 16px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.ablauf-step:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ablauf-step-number {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #1A1D24;
+    color: #FFFFFF;
+    border-radius: 50%;
+    line-height: 36px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.ablauf-step-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+}
+
+.ablauf-step-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 6px;
+}
+
+@media (max-width: 1024px) {
+    .ablauf-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ablauf-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .ablauf-step {
+        padding: 12px;
+    }
+    
+    .ablauf-step-number {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+    }
+    
+    .ablauf-step-title {
+        font-size: 11px;
+    }
+    
+    .ablauf-step-desc {
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   ENTSCHEIDUNGSMATRIX (Decision Matrix)
+   ============================================ */
+
+.matrix-container {
+    overflow-x: auto;
+    margin: 24px 0;
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: #FFFFFF;
+}
+
+.matrix-table th {
+    background: #1A1D24;
+    color: #FFFFFF;
+    padding: 12px;
+    text-align: left;
+    font-weight: 700;
+    border: 1px solid #1A1D24;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.matrix-table td {
+    padding: 12px;
+    border: 1px solid #D9E1EA;
+    line-height: 1.5;
+}
+
+.matrix-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.matrix-table tr:hover {
+    background: #f3f5f8;
+}
+
+.matrix-profile-type {
+    font-weight: 700;
+    color: #1A1D24;
+}
+
+.matrix-risk-high {
+    color: #c41e3a;
+    font-weight: 600;
+}
+
+.matrix-risk-medium {
+    color: #e67e22;
+    font-weight: 600;
+}
+
+.matrix-risk-low {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .matrix-container {
+        margin: 16px -16px;
+        padding: 0 16px;
+        overflow-x: auto;
+    }
+    
+    .matrix-table {
+        font-size: 11px;
+        min-width: 600px;
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+        padding: 8px;
+    }
+}
+
+/* ============================================
+   FAQ SYSTEM (SEO-Rich FAQ)
+   ============================================ */
+
+.faq-container {
+    margin: 24px 0;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    border: 1px solid #D9E1EA;
+    border-radius: 0;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    transition: background 0.2s;
+}
+
+.faq-question:hover {
+    background: #f8f9fa;
+}
+
+.faq-question.active {
+    background: #f3f5f8;
+}
+
+.faq-toggle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1D24;
+    transition: transform 0.2s;
+}
+
+.faq-question.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #D9E1EA;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-answer p {
+    margin: 0 0 8px 0;
+}
+
+.faq-answer ul,
+.faq-answer ol {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+.faq-answer li {
+    margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .faq-answer {
+        padding: 12px;
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   CLUSTER NAVIGATION LINKS
+   ============================================ */
+
+.cluster-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.cluster-nav-item {
+    background: #FFFFFF;
+    border: 1px solid #D9E1EA;
+    border-radius: 0;
+    padding: 16px;
+    text-decoration: none;
+    color: #1A1D24;
+    transition: box-shadow 0.2s;
+}
+
+.cluster-nav-item:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cluster-nav-item-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.cluster-nav-item-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.cluster-nav-item-link {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0B3B8C;
+    text-decoration: none;
+    margin-top: 6px;
+}
+
+.cluster-nav-item-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cluster-nav {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .cluster-nav-item {
+        padding: 12px;
+    }
+}
+
+/* ============================================
+   CONTEXTUAL CTA BLOCKS
+   ============================================ */
+
+.contextual-cta {
+    background: #1A1D24;
+    color: #FFFFFF;
+    padding: 24px;
+    margin: 24px 0;
+    text-align: center;
+    border-radius: 0;
+}
+
+.contextual-cta h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.contextual-cta p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    opacity: 0.95;
+}
+
+.contextual-cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contextual-cta-btn {
+    background: #0B3B8C;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.contextual-cta-btn:hover {
+    background: #082B5C;
+}
+
+.contextual-cta-btn-secondary {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.contextual-cta-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .contextual-cta {
+        padding: 16px;
+    }
+    
+    .contextual-cta h3 {
+        font-size: 14px;
+    }
+    
+    .contextual-cta-buttons {
+        gap: 8px;
+    }
+    
+    .contextual-cta-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.cluster-section {
+    margin: 32px 0;
+}
+
+.cluster-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1A1D24;
+}
+
+.cluster-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1A1D24;
+}
+
+.cluster-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .cluster-section {
+        margin: 20px 0;
+    }
+    
+    .cluster-section h2 {
+        font-size: 16px;
+    }
+    
+    .cluster-section h3 {
+        font-size: 14px;
+    }
+}

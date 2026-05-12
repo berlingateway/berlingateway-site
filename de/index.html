@@ -1,375 +1,212 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Berlin Gateway – Institutionelles Navigationssystem für Fachkräfte</title>
-<link href="/assets/css/app.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<style>
-        /* Global Styles for Institutional Density */
-        body { margin: 0; font-family: 'Inter', sans-serif; color: #1A1D24; background-color: #FFFFFF; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 60px 0; }
-        h1, h2, h3, h4, p { margin-top: 0; }
-        a { text-decoration: none; color: #1A1D24; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berlin Gateway — Strategische Bewertung für Fachkräfte in Deutschland</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .hero-compact {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero-compact h1 { color: white !important; margin-bottom: 20px; }
+        .hero-compact p { color: rgba(255,255,255,0.9) !important; max-width: 800px; margin: 0 auto 30px auto; font-size: 1.2rem; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn-gold { background: #0B3B8C !important; color: black !important; padding: 15px 30px; border-radius: 6px; font-weight: 700; }
+        .btn-outline { border: 2px solid white; color: white !important; padding: 13px 30px; border-radius: 6px; font-weight: 700; }
+        
+        .profession-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 60px 0; }
+        .prof-card { background: white; border: 1px solid #eee; padding: 25px; border-radius: 8px; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
+        .prof-card:hover { transform: translateY(-5px); border-color: #0B3B8C; }
+        .prof-card h3 { margin-bottom: 10px; font-size: 1.25rem; }
+        .prof-demand { color: #0B3B8C; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; }
+        .prof-desc { font-size: 0.95rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
+        .prof-cta { background: #000; color: #fff !important; text-align: center; padding: 10px; border-radius: 4px; font-weight: 600; margin-bottom: 10px; }
+        .prof-micro { text-align: center; font-size: 0.85rem; font-weight: 700; color: #888; text-decoration: underline; }
+        
+        .flow-section { background: #f9f9f9; padding: 80px 0; }
+        .flow-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; text-align: center; position: relative; }
+        .flow-step { position: relative; padding: 20px; }
+        .flow-step:not(:last-child)::after { content: '→'; position: absolute; right: -15px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: #ccc; }
+        .flow-icon { width: 50px; height: 50px; background: #000; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-weight: 900; }
+        .flow-step h4 { font-size: 1rem; margin-bottom: 5px; }
+        .flow-step p { font-size: 0.85rem; line-height: 1.3; }
 
-        /* Top Band */
-        .top-band { background-color: #1A1D24; color: #FFFFFF; padding: 8px 0; font-size: 0.85rem; }
-        .top-band__inner { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        .top-band__left a { color: #FFFFFF; opacity: 0.8; }
-        .top-band__right a { color: #FFFFFF; opacity: 0.8; margin-left: 15px; }
-        .top-band__right span { opacity: 0.7; margin-left: 15px; }
-
-        /* Header */
-        .header { background-color: #FFFFFF; padding: 20px 0; border-bottom: 1px solid #eee; }
-        .header__inner { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        .brand { display: flex; align-items: center; font-size: 1.5rem; font-weight: 800; color: #1A1D24; }
-        .brand-icon { width: 30px; height: 30px; background-color: #1A1D24; margin-right: 10px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
-        .nav a { margin-left: 25px; font-weight: 600; color: #1A1D24; }
-
-        /* LAYER 01 - ROOT AUTHORITY HERO */
-      .hero-authority { background-color: #1A1D24; color: #FFFFFF; padding: 78px 0; text-align: center; }
-        .hero-authority .eyebrow { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; margin-bottom: 15px; display: block; letter-spacing: 1px; }
-        .hero-authority h1 { font-size: 3.2rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; color: #FFFFFF; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero-authority p { font-size: 1.3rem; line-height: 1.5; max-width: 800px; margin: 0 auto 40px auto; opacity: 0.9; }
-        .hero-authority .cta-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .hero-authority .cta-primary { background-color: #FFFFFF; color: #1A1D24; padding: 18px 35px; border-radius: 6px; font-weight: 700; font-size: 1.1rem; border: 2px solid #FFFFFF; transition: all 0.2s ease; }
-        .hero-authority .cta-primary:hover { background-color: #1A1D24; color: #FFFFFF; border-color: #FFFFFF; }
-        .hero-authority .cta-secondary { border: 2px solid rgba(255,255,255,0.5); color: #FFFFFF; padding: 16px 35px; border-radius: 6px; font-weight: 600; font-size: 1.1rem; transition: all 0.2s ease; }
-        .hero-authority .cta-secondary:hover { background-color: rgba(255,255,255,0.1); }
-
-        /* LAYER 02 - SYSTEM NAVIGATION GRID */
-        .system-grid-section { background-color: #FFFFFF; padding: 80px 0; }
-        .system-grid-section h2 { text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 60px; color: #1A1D24; }
-        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-        .system-card { border: 1px solid #D1D5DB; padding: 30px; border-radius: 8px; display: flex; flex-direction: column; transition: all 0.2s ease; background-color: #F9FAFB; }
-        .system-card:hover { border-color: #1A1D24; transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.05); }
-        .system-card .label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #555; margin-bottom: 10px; }
-        .system-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 15px; color: #1A1D24; }
-        .system-card p { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 20px; flex-grow: 1; }
-        .system-card .deep-link { font-weight: 700; color: #1A1D24; display: flex; align-items: center; gap: 5px; }
-        .system-card .deep-link::after { content: '→'; margin-left: 5px; }
-
-        /* LAYER 03 - INSTITUTIONAL EXPLANATION BLOCK */
-        .explanation-block { background-color: #1A1D24; color: #FFFFFF; padding: 80px 0; text-align: center; }
-        .explanation-block h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 30px; color: #FFFFFF; }
-        .explanation-block p { font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto 20px auto; opacity: 0.9; }
-        .explanation-block ul { list-style: none; padding: 0; max-width: 700px; margin: 40px auto 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
-        .explanation-block ul li { font-size: 1rem; opacity: 0.8; line-height: 1.6; position: relative; padding-left: 25px; }
-        .explanation-block ul li::before { content: '✓'; position: absolute; left: 0; color: #FFFFFF; opacity: 0.6; font-weight: 700; }
-
-        /* LAYER 04 - SECTOR ARCHITECTURE CLUSTERS */
-        .sector-clusters { background-color: #FFFFFF; padding: 80px 0; }
-        .sector-clusters h2 { text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 60px; color: #1A1D24; }
-        .sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .sector-card { border: 1px solid #D1D5DB; padding: 30px; border-radius: 8px; display: flex; flex-direction: column; transition: all 0.2s ease; background-color: #F9FAFB; }
-        .sector-card:hover { border-color: #1A1D24; transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.05); }
-        .sector-card .sector-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #555; margin-bottom: 10px; }
-        .sector-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 15px; color: #1A1D24; }
-        .sector-card p { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 20px; flex-grow: 1; }
-        .sector-card .sector-cta { font-weight: 700; color: #1A1D24; display: flex; align-items: center; gap: 5px; }
-        .sector-card .sector-cta::after { content: '→'; margin-left: 5px; }
-
-        /* LAYER 05 - PROCESS INTELLIGENCE TIMELINE */
-        .timeline-section { background-color: #1A1D24; color: #FFFFFF; padding: 80px 0; }
-        .timeline-section h2 { text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 60px; color: #FFFFFF; }
-        .timeline-grid { display: flex; justify-content: space-between; position: relative; padding-top: 40px; }
-        .timeline-grid::before { content: ''; position: absolute; top: 50px; left: 0; right: 0; height: 2px; background-color: rgba(255,255,255,0.2); }
-        .timeline-step { flex: 1; text-align: center; position: relative; padding: 20px 10px; }
-        .timeline-step .icon { width: 50px; height: 50px; background-color: #FFFFFF; color: #1A1D24; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-weight: 900; font-size: 1.2rem; border: 2px solid #FFFFFF; position: relative; z-index: 1; }
-        .timeline-step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: #FFFFFF; }
-        .timeline-step p { font-size: 0.9rem; line-height: 1.5; opacity: 0.8; color: #FFFFFF; }
-
-        /* LAYER 06 - ASSESSMENT AUTHORITY GATEWAY */
-        .assessment-gateway { background-color: #1A1D24; color: #FFFFFF; padding: 100px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
-        .assessment-gateway h2 { font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 25px; color: #FFFFFF; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .assessment-gateway p { font-size: 1.2rem; line-height: 1.6; max-width: 800px; margin: 0 auto 40px auto; opacity: 0.9; }
-        .assessment-gateway .cta-button { background-color: #FFFFFF; color: #1A1D24; padding: 18px 40px; border-radius: 6px; font-weight: 700; font-size: 1.2rem; border: 2px solid #FFFFFF; transition: all 0.2s ease; }
-        .assessment-gateway .cta-button:hover { background-color: #1A1D24; color: #FFFFFF; border-color: #FFFFFF; }
-
-        /* LAYER 07 - INSTITUTIONAL FOOTER SYSTEM */
-        .footer { background-color: #1A1D24; color: #FFFFFF; padding: 60px 0 20px 0; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); }
-        .footer .container > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: #FFFFFF; }
-        .footer p, .footer a { color: #FFFFFF; opacity: 0.7; line-height: 1.8; display: block; }
-        .footer a:hover { opacity: 1; }
-        .footer .copyright { padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.5; text-align: center; }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .header__inner { flex-direction: column; align-items: flex-start; }
-            .nav { margin-top: 20px; width: 100%; display: flex; flex-direction: column; align-items: flex-start; }
-            .nav a { margin: 5px 0; }
-            .hero-authority h1 { font-size: 2.2rem; }
-            .hero-authority p { font-size: 1rem; }
-            .system-grid { grid-template-columns: 1fr; }
-            .explanation-block ul { grid-template-columns: 1fr; }
-            .sector-grid { grid-template-columns: 1fr; }
-            .timeline-grid { flex-direction: column; align-items: center; padding-top: 0; }
-            .timeline-grid::before { display: none; }
-            .timeline-step { width: 100%; max-width: 300px; margin-bottom: 30px; }
-            .assessment-gateway h2 { font-size: 2rem; }
-            .assessment-gateway p { font-size: 1rem; }
-            .footer .container > div { grid-template-columns: 1fr; }
+        @media (max-width: 1024px) { .profession-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { 
+            .profession-grid { grid-template-columns: 1fr; } 
+            .flow-grid { grid-template-columns: 1fr; }
+            .flow-step:not(:last-child)::after { content: '↓'; right: auto; left: 50%; bottom: -15px; top: auto; transform: translateX(-50%); }
         }
     </style>
 </head>
-<body><div class="top-band bg-black text-white text-xs py-1 px-4 flex justify-between items-center">
-<div class="top-band-left">
-<a class="text-white hover:text-gray-300" href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-</div>
-<div class="top-band-right flex items-center space-x-4">
-<a class="text-white hover:text-gray-300" href="/ar/">العربية</a>
-<a class="text-white hover:text-gray-300" href="/de/zertifizierte-bewertung.html">Zertifizierte Bewertung</a>
-</div>
-</div><header class="main-header bg-white shadow-md py-4 px-4">
-<div class="container mx-auto flex justify-between items-center">
-<div class="brand">
-<a class="text-black text-2xl font-bold" href="/de/">BERLIN GATEWAY</a>
-</div>
-<nav class="main-nav hidden md:flex space-x-6">
-<a class="text-black hover:text-gray-700" href="/de/chancenkarte.html">Chancenkarte</a>
-<a class="text-black hover:text-gray-700" href="/de/voraussetzungen.html">Voraussetzungen</a>
-<a class="text-black hover:text-gray-700" href="/de/systemlogik.html">Systemlogik</a>
-<a class="text-black hover:text-gray-700" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
-<a class="text-black hover:text-gray-700" href="/de/assessment.html">Assessment</a>
-<a class="text-black hover:text-gray-700" href="/de/aerzte.html">Ärzte</a>
-<a class="text-black hover:text-gray-700" href="/de/ingenieure.html">Ingenieure</a>
-<a class="text-black hover:text-gray-700" href="/de/pflegekraefte.html">Pflegekräfte</a>
-<a class="text-black hover:text-gray-700" href="/de/ausbildung.html">Ausbildung</a>
-</nav>
-<div class="hamburger-menu md:hidden">
-<button class="text-black focus:outline-none" id="mobile-menu-button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-</header>
-<div class="sub-nav-system bg-black text-white py-2 px-4 hidden md:block">
-<div class="container mx-auto flex space-x-6">
-<a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a>
-<a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a>
-<a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a>
-<a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
-<a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a>
-</div>
-</div>
-<nav class="mobile-menu hidden md:hidden bg-black text-white px-4 py-2" id="mobile-menu">
-<a class="block py-2 hover:bg-gray-800" href="/de/chancenkarte.html">Chancenkarte</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/voraussetzungen.html">Voraussetzungen</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/systemlogik.html">Systemlogik</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/assessment.html">Assessment</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/aerzte.html">Ärzte</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/ingenieure.html">Ingenieure</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/pflegekraefte.html">Pflegekräfte</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/ausbildung.html">Ausbildung</a>
-</nav>
+<body>
 
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+        </div>
+        <div class="top-band__right">
+            <a href="/ar" class="lang-switch">العربية</a>
+            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="header__inner">
+        <a href="/de" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/de/aerzte">Ärzte</a>
+            <a href="/de/ingenieure">Ingenieure</a>
+            <a href="/de/ausbildung">Pflegekräfte</a>
+            <a href="/de/arbeit-in-deutschland">Arbeiten</a>
+            <a href="/de/chancenkarte">Chancenkarte</a>
+            <a href="/de/assessment">Assessment</a>
+        </nav>
+    </div>
+</header>
 
 <main>
-<!-- LAYER 01 - ROOT AUTHORITY HERO -->
-<section class="hero-authority">
-<div class="container">
-<span class="eyebrow">STRATEGISCHES GATEWAY</span>
-<h1>DEUTSCHLAND: SYSTEMINTEGRATION FÜR FACHKRÄFTE</h1>
-<p>Berlin Gateway ist Ihr institutioneller Navigationsrahmen. Wir dekodieren die komplexen Strukturen des deutschen Arbeitsmarktes und der Verwaltung, um Ihre strategische Positionierung zu optimieren.</p>
-<div class="cta-group">
-<a class="cta-primary" href="/de/assessment.html">KLASSIFIZIERUNG STARTEN</a>
-<a class="cta-secondary" href="/de/systemlogik.html">SYSTEMPFAD PRÜFEN</a>
-</div>
-</div>
-</section>
-<!-- LAYER 02 - SYSTEM NAVIGATION GRID -->
-<section class="system-grid-section">
-<div class="container">
-<h2>Die vier Säulen der Systemintegration</h2>
-<div class="system-grid">
-<div class="system-card">
-<span class="label">SÄULE 01</span>
-<h3>Voraussetzungen</h3>
-<p>Prüfen Sie Ihre dokumentarische Startbereitschaft und rechtliche Eignung für das deutsche System.</p>
-<a class="deep-link" href="/de/voraussetzungen.html">Details prüfen</a>
-</div>
-<div class="system-card">
-<span class="label">SÄULE 02</span>
-<h3>Systemlogik</h3>
-<p>Verstehen Sie die administrativen Prozessketten, Zuständigkeiten und Abhängigkeiten in Deutschland.</p>
-<a class="deep-link" href="/de/systemlogik.html">Prozess dekodieren</a>
-</div>
-<div class="system-card">
-<span class="label">SÄULE 03</span>
-<h3>Assessment</h3>
-<p>Lassen Sie Ihr Profil institutionell bewerten und erhalten Sie eine strategische Routing-Empfehlung.</p>
-<a class="deep-link" href="/de/assessment.html">Profil klassifizieren</a>
-</div>
-<div class="system-card">
-<span class="label">SÄULE 04</span>
-<h3>Chancenkarte</h3>
-<p>Analysieren Sie das Punktesystem und die strategischen Vorteile der Chancenkarte für Ihre Migration.</p>
-<a class="deep-link" href="/de/chancenkarte.html">Chancenkarte verstehen</a>
-</div>
-</div>
-</div>
-</section>
-<!-- LAYER 03 - INSTITUTIONAL EXPLANATION BLOCK -->
-<section class="explanation-block">
-<div class="container">
-<h2>Warum Deutschland eine strategische Herangehensweise erfordert</h2>
-<p>Das deutsche System ist durch föderale Strukturen, komplexe Anerkennungsverfahren und eine spezifische administrative Logik gekennzeichnet. Ohne eine präzise Einordnung Ihres Profils und Ihrer Dokumente können selbst hochqualifizierte Fachkräfte an strukturellen Barrieren scheitern.</p>
-<ul>
-<li>Komplexe Anerkennungsprozesse</li>
-<li>Föderale Zuständigkeitsfragmentierung</li>
-<li>Dokumenten-Abhängigkeitsketten</li>
-<li>Spezifische Bewerbungskultur</li>
-<li>Administrative Bottlenecks</li>
-<li>Sprachliche Druckpunkte</li>
-</ul>
-</div>
-</section>
-<!-- LAYER 04 - SECTOR ARCHITECTURE CLUSTERS -->
-<section class="sector-clusters">
-<div class="container">
-<h2>Sektorale Architektur: Spezialisierte Integrationspfade</h2>
-<div class="sector-grid">
-<div class="sector-card">
-<span class="sector-label">SEKTOR MEDIZIN</span>
-<h3>Ärzte in Deutschland</h3>
-<p>Detaillierte Analyse der Approbationsverfahren und klinischen Integrationspfade.</p>
-<a class="sector-cta" href="/de/aerzte.html">Sektor prüfen</a>
-</div>
-<div class="sector-card">
-<span class="sector-label">SEKTOR TECHNIK</span>
-<h3>Ingenieure in Deutschland</h3>
-<p>Positionierung in der deutschen Industrielandschaft und Anerkennung technischer Qualifikationen.</p>
-<a class="sector-cta" href="/de/ingenieure.html">Sektor prüfen</a>
-</div>
-<div class="sector-card">
-<span class="sector-label">SEKTOR PFLEGE</span>
-<h3>Pflegekräfte in Deutschland</h3>
-<p>Strukturierte Wege zur Anerkennung ausländischer Pflegeabschlüsse und Integration.</p>
-<a class="sector-cta" href="/de/pflegekraefte.html">Sektor prüfen</a>
-</div>
-<div class="sector-card">
-<span class="sector-label">SEKTOR IT &amp; TECH</span>
-<h3>IT &amp; Technical Professionals</h3>
-<p>Strategien für den Direkteinstieg und die Nutzung der Chancenkarte in der Tech-Branche.</p>
-<a class="sector-cta" href="/de/arbeit-in-deutschland.html">Sektor prüfen</a>
-</div>
-<div class="sector-card">
-<span class="sector-label">SEKTOR AUSBILDUNG</span>
-<h3>Ausbildung in Deutschland</h3>
-<p>Das duale System: Qualifikation durch industrielle Integration und berufliche Anerkennung.</p>
-<a class="sector-cta" href="/de/ausbildung.html">Sektor prüfen</a>
-</div>
-</div>
-</div>
-</section>
-<!-- LAYER 05 - PROCESS INTELLIGENCE TIMELINE -->
-<section class="timeline-section">
-<div class="container">
-<h2>Der institutionelle Integrationspfad: 5 Phasen der System-Einordnung</h2>
-<div class="timeline-grid">
-<div class="timeline-step">
-<div class="icon">1</div>
-<h4>Profil-Analyse</h4>
-<p>Detaillierte Bewertung Ihrer Qualifikationen und Erfahrung.</p>
-</div>
-<div class="timeline-step">
-<div class="icon">2</div>
-<h4>Pfad-Definition</h4>
-<p>Identifikation des optimalen administrativen und beruflichen Weges.</p>
-</div>
-<div class="timeline-step">
-<div class="icon">3</div>
-<h4>Dossier-Architektur</h4>
-<p>Strukturierung und Vorbereitung aller notwendigen Dokumente.</p>
-</div>
-<div class="timeline-step">
-<div class="icon">4</div>
-<h4>System-Interaktion</h4>
-<p>Gezielte Kommunikation mit Behörden und Arbeitgebern.</p>
-</div>
-<div class="timeline-step">
-<div class="icon">5</div>
-<h4>Integration</h4>
-<p>Erfolgreicher Berufsstart und nachhaltige Etablierung in Deutschland.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- LAYER 06 - ASSESSMENT AUTHORITY GATEWAY -->
-<section class="assessment-gateway">
-<div class="container">
-<h2>Ihr Profil: Strategisch im deutschen System positionieren</h2>
-<p>Die korrekte Einordnung Ihrer Qualifikationen ist entscheidend. Starten Sie jetzt eine präzise, institutionelle Bewertung, um Ihren optimalen Integrationspfad zu definieren und administrative Risiken zu minimieren.</p>
-<a class="cta-button" href="/de/assessment.html">KLASSIFIZIERUNG STARTEN</a>
-</div>
-</section>
+    <section class="hero-compact">
+        <div class="container">
+            <h1>Deutschland sucht qualifizierte Fachkräfte.<br>Doch viele Bewerber scheitern bereits vor dem ersten Schritt.</h1>
+            <p>Berlin Gateway unterstützt Ärzte, Ingenieure, Pflegekräfte und qualifizierte Fachkräfte dabei, den deutschen Weg realistisch, strategisch und professionell zu verstehen.</p>
+            <div class="hero-btns">
+                <a href="/de/assessment" class="btn-gold">Assessment starten</a>
+                <a href="/de/chancenkarte" class="btn-outline">Chancenkarte verstehen</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align:center;">Fokusbereiche des deutschen Arbeitsmarktes</h2>
+            <div class="profession-grid">
+                <!-- Card 1: Ärzte -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Extrem Hoch</div>
+                    <h3>Ärzte in Deutschland</h3>
+                    <p class="prof-desc">Die deutsche Approbation ist ein komplexer Prozess. Wir bewerten Ihre Unterlagen vor dem Start.</p>
+                    <a href="/de/aerzte" class="prof-cta">Approbation verstehen</a>
+                    <a href="/de/insights/gehaelter-deutschland" class="prof-micro">Gehalt & Bundesländer</a>
+                </div>
+                <!-- Card 2: Ingenieure -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Hoch</div>
+                    <h3>Ingenieure in Deutschland</h3>
+                    <p class="prof-desc">Ingenieure benötigen eine klare Positionierung ihres Profils für deutsche Arbeitgeber.</p>
+                    <a href="/de/ingenieure" class="prof-cta">Arbeitsmarkt prüfen</a>
+                    <a href="/de/struktur-vor-bewerbung" class="prof-micro">Lebenslauf verstehen</a>
+                </div>
+                <!-- Card 3: Pflege -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Sehr Hoch</div>
+                    <h3>Pflegekräfte in Deutschland</h3>
+                    <p class="prof-desc">Anerkennung und Sprache sind die Schlüssel. Wir zeigen Ihnen den strukturierten Weg.</p>
+                    <a href="/de/ausbildung" class="prof-cta">Anerkennung prüfen</a>
+                    <a href="/de/voraussetzungen" class="prof-micro">Sprachanforderungen</a>
+                </div>
+                <!-- Card 4: IT -->
+                <div class="prof-card">
+                    <div class="prof-demand">Bedarf: Wachsend</div>
+                    <h3>IT & Technical Professionals</h3>
+                    <p class="prof-desc">Direkteinstieg oder Chancenkarte? Wir analysieren die beste Strategie für Ihr Profil.</p>
+                    <a href="/de/chancenkarte" class="prof-cta">Chancenkarte & Jobs</a>
+                    <a href="/de/insights/gefragte-berufe" class="prof-micro">Nachfrage analysieren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flow-section">
+        <div class="container">
+            <h2 style="text-align:center;">Der Weg zur beruflichen Anerkennung</h2>
+            <div class="flow-grid">
+                <div class="flow-step">
+                    <div class="flow-icon">1</div>
+                    <h4>Assessment</h4>
+                    <p>Strategische Analyse Ihrer Qualifikation.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">2</div>
+                    <h4>Bewertung</h4>
+                    <p>Realistische Einschätzung der Chancen.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">3</div>
+                    <h4>Struktur</h4>
+                    <p>Aufbau der Dokumenten-Architektur.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">4</div>
+                    <h4>Bewerbung</h4>
+                    <p>Gezielte Positionierung am Markt.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">5</div>
+                    <h4>Einstieg</h4>
+                    <p>Berufsstart in Deutschland.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width:800px; text-align:center;">
+            <h2>Was viele Bewerber unterschätzen</h2>
+            <p>Deutschland ist ein prozessorientiertes Land. Erfolg hängt nicht nur von Ihrem Talent ab, sondern von der korrekten Einordnung Ihrer Dokumente in das deutsche System. Berlin Gateway schließt die Lücke zwischen Ihrer Qualifikation und den deutschen Erwartungen.</p>
+            <br>
+            <a href="/de/assessment" class="btn-gold" style="display:inline-block; width:auto;">Profil jetzt strategisch bewerten</a>
+        </div>
+    </section>
 </main>
 
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    });
-</script>
-<footer class="footer bg-black text-white py-8 px-4">
-<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">BERLIN GATEWAY</h3>
-<p class="text-sm">Professionelle Einordnung in das deutsche Berufssystem.</p>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">SYSTEM</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a></li>
-<li><a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a></li>
-<li><a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a></li>
-<li><a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a></li>
-<li><a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">FACHKRÄFTE</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="/de/aerzte.html">Ärzte</a></li>
-<li><a class="hover:text-gray-300" href="/de/ingenieure.html">Ingenieure</a></li>
-<li><a class="hover:text-gray-300" href="/de/pflegekraefte.html">Pflegekräfte</a></li>
-<li><a class="hover:text-gray-300" href="/de/ausbildung.html">Ausbildung</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">RESSOURCEN</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="/de/monitor.html">Monitor</a></li>
-<li><a class="hover:text-gray-300" href="/de/insights.html">Insights</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">KONTAKT &amp; RECHTLICHES</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="mailto:info@berlingateway.de">info@berlingateway.de</a></li>
-<li><a class="hover:text-gray-300" href="tel:+493025730875">+49 30 25730875</a></li>
-<li><a class="hover:text-gray-300" href="/de/impressum.html">Impressum</a></li>
-<li><a class="hover:text-gray-300" href="/de/datenschutz.html">Datenschutz</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom text-center text-sm mt-8">
-<p>© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
-</div>
+<footer class="footer">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
+            </div>
+            <div>
+                <h4>Branchen</h4>
+                <a href="/de/aerzte">Ärzte</a>
+                <a href="/de/ingenieure">Ingenieure</a>
+                <a href="/de/ausbildung">Pflegekräfte</a>
+                <a href="/de/chancenkarte">Chancenkarte</a>
+            </div>
+            <div>
+                <h4>Ressourcen</h4>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Arbeitsmarkt Monitor</a>
+                <a href="/de/insights">Insights</a>
+                <a href="/de/voraussetzungen">Voraussetzungen</a>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>info@berlingateway.de</p>
+                <a href="/de/impressum">Impressum</a>
+                <a href="/de/datenschutz">Datenschutz</a>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        </div>
+    </div>
 </footer>
+
 </body>
 </html>

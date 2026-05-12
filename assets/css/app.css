@@ -22,10 +22,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; text-decoration: none; transition: opacity 0.2s.nav a:hover { opacity: 0.8; }
-.nav a.active { border-bottom-color: var(--black); }
-.subnav a:hover { opacity: 0.7; }
-.subnav a.active { border-bottom-color: var(--white); }
+a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; }
+
 .container {
   max-width: var(--container);
   margin: 0 auto;
@@ -115,7 +114,7 @@ a { color: inherit; text-decoration: none; transition: opacity 0.2s.nav a:hover 
   color: var(--black) !important;
   font-weight: 900;
   font-size: 18px;
-  letter-spacing: 0.5px; /* Adjusted for stronger sovereign presence */
+  letter-spacing: -0.8px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -131,7 +130,7 @@ a { color: inherit; text-decoration: none; transition: opacity 0.2s.nav a:hover 
 
 .nav {
   display: flex;
-  gap: 20px; /* Reduced spacing */
+  gap: 28px;
   align-items: center;
   flex-wrap: nowrap;
   flex-shrink: 1;
@@ -139,14 +138,11 @@ a { color: inherit; text-decoration: none; transition: opacity 0.2s.nav a:hover 
 
 .nav a {
   font-size: 15px;
-  font-weight: 800; /* Increased font-weight */
+  font-weight: 700;
   color: var(--black) !important;
   text-transform: capitalize;
   white-space: nowrap;
   flex-shrink: 0;
-  padding-bottom: 4px; /* For active state */
-  border-bottom: 2px solid transparent; /* For active state */
-  transition: border-color 0.2s ease; /* For active state */
 }
 
 .lang-switch {
@@ -203,7 +199,7 @@ a { color: inherit; text-decoration: none; transition: opacity 0.2s.nav a:hover 
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  gap: 24px; /* Reduced spacing */
+  gap: 32px;
   align-items: center;
 }
 
@@ -211,10 +207,6 @@ a { color: inherit; text-decoration: none; transition: opacity 0.2s.nav a:hover 
   color: var(--white) !important;
   text-transform: capitalize;
   letter-spacing: 0.3px;
-  font-weight: 700; /* Increased font-weight */
-  padding-bottom: 4px; /* For active state */
-  border-bottom: 2px solid transparent; /* For active state */
-  transition: border-color 0.2s ease; /* For active state */
 }
 
 .subnav a:hover {
@@ -272,7 +264,7 @@ p {
    HERO SECTION
    ======================================== */
 .hero {
-  padding: 55px 0;
+  padding: 70px 0;
   background: var(--white) !important;
 }
 
@@ -394,22 +386,22 @@ p {
 .footer {
   background: var(--black) !important;
   color: var(--white) !important;
-  padding: 40px 0 20px 0; /* Reduced vertical padding for institutional density */
+  padding: 60px 0 30px 0;
 }
 
 .footer h4 { 
   color: var(--white); 
-  margin-bottom: 15px; /* Reduced margin for tighter grouping */
+  margin-bottom: 20px; 
   font-weight: 700;
-  font-size: 15px; /* Slightly increased font size for hierarchy */
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.8px; /* Increased letter spacing for stronger presence */
+  letter-spacing: 0.5px;
 }
 
 .footer a { 
   color: rgba(255,255,255,0.7); 
   font-size: 14px; 
-  margin-bottom: 8px; /* Reduced margin for tighter grouping */
+  margin-bottom: 10px; 
   display: block; 
   transition: color 0.2s;
 }
@@ -418,10 +410,8 @@ p {
 
 .footer p {
   color: rgba(255,255,255,0.6);
-  font-size: 13px; /* Slightly reduced font size for legal text */
+  font-size: 14px;
   margin: 0;
-  padding-top: 15px; /* Added padding for legal section rhythm */
-  border-top: 1px solid rgba(255,255,255,0.1); /* Muted separator */
 }
 
 /* ========================================
@@ -589,7 +579,8 @@ html[lang="ar"] .subnav__inner { justify-content: flex-end; }
 @media (max-width: 768px) {
     .internal-nav {
         top: 65px; /* Adjust for smaller mobile header */
-        padding: 78px 0;    }
+        padding: 10px 0;
+    }
     .internal-nav__inner {
         gap: 20px;
         justify-content: flex-start; /* Align items to start for scrolling */

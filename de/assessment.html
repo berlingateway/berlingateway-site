@@ -1,480 +1,551 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<title>Institutional Classification &amp; Strategic Routing – Berlin Gateway</title>
-<meta content="Institutionelle Triage-Logik zur Bestimmung der strategischen Routing-Effizienz und administrativen Risikobewertung beruflicher Profile." name="description"/>
-<meta content="index, follow, max-snippet:-1, max-image-preview:large" name="robots"/>
-<meta content="Berlin Gateway" name="author"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="https://berlingateway.de/de/assessment.html" rel="canonical"/>
-<link href="https://berlingateway.de/de/assessment.html" hreflang="de" rel="alternate"/>
-<link href="https://berlingateway.de/ar/assessment.html" hreflang="ar" rel="alternate"/>
-<link href="/assets/css/app.css" rel="stylesheet"/>
-<link href="/assets/css/cluster-system.css" rel="stylesheet"/>
-<style>
-    /* Institutional Density Overrides */
+  <meta charset="utf-8" />
+  <title>Chancenkarte Punkte Rechner – Testen Sie Ihre Chancen für Deutschland</title>
+  <meta name="description" content="Erhalten Sie sofort eine realistische Einschätzung basierend auf Ihren Angaben." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="author" content="Berlin Gateway" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://berlingateway.de/de/assessment.html" />
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/assessment.html" />
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/assessment.html" />
+  <link rel="stylesheet" href="/assets/css/app.css" />
+  <style>
     .assessment-hero {
-      background: #1A1D24;
-      color: #FFFFFF;
-      padding: 48px 0;
-      text-align: left;
+      text-align: center;
+      margin-bottom: 42px;
+      padding: 40px 20px;
     }
     .assessment-hero h1 {
-      font-size: 38px;
+      font-size: 36px;
       font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      color: #FFFFFF;
+      color: var(--black);
+      margin: 0 0 16px 0;
     }
     .assessment-hero p {
       font-size: 18px;
-      color: #D1D5DB;
-      max-width: 800px;
+      color: #4B5563;
+      max-width: 600px;
+      margin: 0 auto;
       line-height: 1.6;
     }
-    .eyebrow {
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #9CA3AF;
+    .assessment-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    .cta-button-dark {
-      display: inline-block;
-      background: #1A1D24;
-      color: #FFFFFF;
-      padding: 14px 32px;
-      font-weight: 700;
-      text-decoration: none;
-      border: 1px solid #1A1D24;
-      transition: all 0.2s ease;
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: 0.05em;
-    }
-    .cta-button-dark:hover {
-      background: transparent;
-      color: #1A1D24;
-    }
-    /* Triage Architecture Styles */
-    .triage-frame {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #FFFFFF;
-      border: 1px solid #1A1D24;
-      padding: 50px;
-    }
-    .triage-header {
-      border-bottom: 3px solid #1A1D24;
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-    }
-    .triage-header h2 {
-      font-size: 22px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin: 0;
-    }
-    .triage-notice {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      color: #6B7280;
-      margin-top: 8px;
-    }
-    .triage-disclaimer {
-      font-size: 14px;
-      color: #1A1D24;
-      line-height: 1.6;
-      margin-bottom: 40px;
-      padding: 20px;
-      background: #F3F4F6;
-      border-left: 5px solid #1A1D24;
-    }
-    .triage-section {
-      margin-bottom: 40px;
-    }
-    .triage-section h3 {
-      font-size: 14px;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #E5E7EB;
-      padding-bottom: 10px;
-    }
-    .form-group {
-      margin-bottom: 30px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      color: #374151;
-    }
-    .form-control {
+    .progress-bar {
       width: 100%;
-      padding: 14px;
-      border: 1px solid #D1D5DB;
-      font-size: 15px;
-      font-family: inherit;
-      background: #FFFFFF;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      margin-bottom: 32px;
+      overflow: hidden;
     }
-    .form-control:focus {
-      outline: none;
-      border-color: #1A1D24;
+    .progress-fill {
+      height: 100%;
+      background: #0B3B8C;
+      width: 0%;
+      transition: width 0.3s ease;
     }
-    .checkbox-group {
-      display: grid;
-      gap: 12px;
+    .step {
+      display: none;
+      animation: fadeIn 0.3s ease;
     }
-    .checkbox-option {
+    .step.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .step-title {
+      color: var(--black);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .step-description {
+      color: #4B5563;
+      font-size: 16px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .option-group {
+      margin-bottom: 24px;
+    }
+    .option-label {
       display: flex;
-      align-items: flex-start;
-      padding: 14px;
-      border: 1px solid #E5E7EB;
+      align-items: center;
+      padding: 16px;
+      border: 2px solid #E5E7EB;
+      border-radius: 8px;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
+      margin-bottom: 12px;
+      background: white;
     }
-    .checkbox-option:hover {
-      border-color: #1A1D24;
-      background: #F9FAFB;
+    .option-label:hover {
+      border-color: #0B3B8C;
+      background: #fafaf8;
     }
-    .checkbox-option input {
-      margin-top: 3px;
-      margin-right: 15px;
+    .option-label input[type="radio"] {
+      margin-right: 12px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      accent-color: #0B3B8C;
     }
-    .checkbox-option span {
+    .option-text {
+      flex: 1;
+    }
+    .option-points {
+      color: #0B3B8C;
+      font-weight: 700;
       font-size: 14px;
+    }
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      justify-content: space-between;
+    }
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #0B3B8C;
+      color: white;
+      flex: 1;
+    }
+    .btn-primary:hover {
+      background: #9a6f08;
+    }
+    .btn-secondary {
+      background: #E5E7EB;
+      color: #4B5563;
+      padding: 14px 28px;
+    }
+    .btn-secondary:hover {
+      background: #D1D5DB;
+    }
+    .result-section {
+      display: none;
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .result-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    .result-score {
+      font-size: 64px;
+      font-weight: 800;
+      color: #0B3B8C;
+      margin-bottom: 12px;
+    }
+    .result-status {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .result-status.excellent {
+      color: #10b981;
+    }
+    .result-status.good {
+      color: #0B3B8C;
+    }
+    .result-status.early {
+      color: #ef4444;
+    }
+    .result-message {
+      color: #4B5563;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .result-cta {
+      margin-top: 32px;
+    }
+    .result-cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #0B3B8C;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+    .result-cta a:hover {
+      background: #9a6f08;
+    }
+    .micro-trust {
+      background: #f9f8f6;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .micro-trust p {
+      color: #4B5563;
+      font-size: 14px;
+      margin: 8px 0;
       font-weight: 600;
-      line-height: 1.4;
+    }
+    .final-cta {
+      text-align: center;
+      margin: 60px 0;
+    }
+    .final-cta a {
+      display: inline-block;
+      padding: 16px 40px;
+      background: #0B3B8C;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: background 0.2s ease;
+    }
+    .final-cta a:hover {
+      background: #9a6f08;
+    }
+    @media (max-width: 768px) {
+      .assessment-hero h1 {
+        font-size: 28px;
+      }
+      .assessment-hero p {
+        font-size: 16px;
+      }
+      .result-score {
+        font-size: 48px;
+      }
+      .button-group {
+        flex-direction: column;
+      }
+      .btn-secondary {
+        width: 100%;
+      }
     }
   </style>
 </head>
-<body><div class="top-band bg-black text-white text-xs py-1 px-4 flex justify-between items-center">
-<div class="top-band-left">
-<a class="text-white hover:text-gray-300" href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+<body>
+  <!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/ar/assessment" class="lang-switch">العربية</a>
+            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+        </div>
+    </div>
 </div>
-<div class="top-band-right flex items-center space-x-4">
-<a class="text-white hover:text-gray-300" href="/ar/">العربية</a>
-<a class="text-white hover:text-gray-300" href="/de/zertifizierte-bewertung.html">Zertifizierte Bewertung</a>
-</div>
-</div><header class="main-header bg-white shadow-md py-4 px-4">
-<div class="container mx-auto flex justify-between items-center">
-<div class="brand">
-<a class="text-black text-2xl font-bold" href="/de/">BERLIN GATEWAY</a>
-</div>
-<nav class="main-nav hidden md:flex space-x-6">
-<a class="text-black hover:text-gray-700" href="/de/chancenkarte.html">Chancenkarte</a>
-<a class="text-black hover:text-gray-700" href="/de/voraussetzungen.html">Voraussetzungen</a>
-<a class="text-black hover:text-gray-700" href="/de/systemlogik.html">Systemlogik</a>
-<a class="text-black hover:text-gray-700" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
-<a class="text-black hover:text-gray-700" href="/de/assessment.html">Assessment</a>
-<a class="text-black hover:text-gray-700" href="/de/aerzte.html">Ärzte</a>
-<a class="text-black hover:text-gray-700" href="/de/ingenieure.html">Ingenieure</a>
-<a class="text-black hover:text-gray-700" href="/de/pflegekraefte.html">Pflegekräfte</a>
-<a class="text-black hover:text-gray-700" href="/de/ausbildung.html">Ausbildung</a>
-</nav>
-<div class="hamburger-menu md:hidden">
-<button class="text-black focus:outline-none" id="mobile-menu-button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/de" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/de/chancenkarte" class="nav-link ">Chancenkarte</a>
+            <a href="/de/assessment" class="nav-link active">Punkte-Rechner</a>
+            <a href="/de/systemlogik" class="nav-link ">Systemlogik</a>
+            <a href="/de/monitor" class="nav-link ">Monitor</a>
+            <a href="/de/insights" class="nav-link ">Insights</a>
+        </nav>
+    </div>
 </header>
-<div class="sub-nav-system bg-black text-white py-2 px-4 hidden md:block">
-<div class="container mx-auto flex space-x-6">
-<a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a>
-<a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a>
-<a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a>
-<a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
-<a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a>
-</div>
-</div>
-<nav class="mobile-menu hidden md:hidden bg-black text-white px-4 py-2" id="mobile-menu">
-<a class="block py-2 hover:bg-gray-800" href="/de/chancenkarte.html">Chancenkarte</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/voraussetzungen.html">Voraussetzungen</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/systemlogik.html">Systemlogik</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/assessment.html">Assessment</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/aerzte.html">Ärzte</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/ingenieure.html">Ingenieure</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/pflegekraefte.html">Pflegekräfte</a>
-<a class="block py-2 hover:bg-gray-800" href="/de/ausbildung.html">Ausbildung</a>
+
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
+    </div>
 </nav>
 
+  <main style="padding-top: 130px;">
+    <!-- HERO SECTION -->
+    <section class="assessment-hero">
+      <h1>Prüfen Sie Ihre Chancenkarte-Punkte jetzt</h1>
+      <p>Erhalten Sie sofort eine realistische Einschätzung basierend auf Ihren Angaben.</p>
+    </section>
 
-<!-- BAND 1: TOP BAND -->
-<!-- BAND 2: MAIN HEADER -->
-<!-- BAND 3: SUB NAV BAND -->
-<main>
-<!-- HERO SECTION -->
-<section class="assessment-hero">
-<div class="container">
-<span class="eyebrow">STRATEGIC CLASSIFICATION &amp; ROUTING ENGINE</span>
-<h1>Assessment: Institutionelle Triage-Logik.</h1>
-<p>Das Assessment dient nicht der Eignungsprüfung, sondern der strategischen Pfadbestimmung. Wir klassifizieren Profile nach ihrer Routing-Effizienz, administrativen Reibungswiderständen und ihrer systemischen Kompatibilität.</p>
-</div>
-</section>
-<!-- CLASSIFICATION HIERARCHY -->
-<section class="section-dark">
-<div class="container">
-<h2 class="section-title">Klassifizierungs-Parameter</h2>
-<div class="intelligence-grid">
-<div class="intelligence-card">
-<h3>Positionierungs-Qualität</h3>
-<p>Bewertung der Marktfähigkeit Ihres Profils im Vergleich zum lokalen Wettbewerb. Wir bestimmen den strategischen Hebel für den Markteintritt.</p>
-</div>
-<div class="intelligence-card">
-<h3>Routing-Effizienz</h3>
-<p>Identifikation des Pfades mit dem geringsten administrativen Widerstand (Low-Friction vs. High-Friction Routing).</p>
-</div>
-<div class="intelligence-card">
-<h3>Dossier-Maturität</h3>
-<p>Analyse der dokumentarischen Reife. Wir bewerten die Konsequenzen unvollständiger Dossiers auf die Prozessgeschwindigkeit.</p>
-</div>
-<div class="intelligence-card">
-<h3>Systemische Reibung</h3>
-<p>Messung der erwarteten Widerstände in der Behördeninteraktion basierend auf Ihrer spezifischen Qualifikations-Asymmetrie.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- TRIAGE INTAKE FRAME -->
-<section class="section-light">
-<div class="container">
-<div class="triage-frame">
-<div class="triage-header">
-<h2>TRIAGE PROTOCOL 01-A</h2>
-<div class="triage-notice">Classification Authority: Berlin Gateway</div>
-</div>
-<div class="triage-disclaimer">
-<strong>Institutionelle Richtlinie:</strong> Dieses Protokoll dient der Triage Ihres Profils. Die Bewertung fokussiert auf die **prozedurale Risikobelastung** und die **strategische Pfad-Viabilität**. Unplausible Angaben führen zum Abbruch der Klassifizierung.
-                </div>
-<form id="triage-form">
-<div class="triage-section">
-<h3>01. Qualifikations-Asymmetrie</h3>
-<div class="form-group">
-<label>Art der Qualifikation</label>
-<select class="form-control">
-<option value="">Wählen Sie die Klassifizierung...</option>
-<option value="regulated">Regulierter Beruf (Approbation/Anerkennungspflicht)</option>
-<option value="non-regulated">Nicht regulierter Fachberuf</option>
-<option value="it-specialist">IT-Spezialist (Berufserfahrung-basiert)</option>
-<option value="vocational">Duale Ausbildung (Gleichwertigkeit erforderlich)</option>
-</select>
-</div>
-</div>
-<div class="triage-section">
-<h3>02. Dossier-Status &amp; Dokumentenreife</h3>
-<div class="checkbox-group">
-<label class="checkbox-option">
-<input type="checkbox"/>
-<span>Vollständige Transcripts &amp; Diplome im Original vorhanden</span>
-</label>
-<label class="checkbox-option">
-<input type="checkbox"/>
-<span>Nachweise über einschlägige Berufserfahrung (min. 2 Jahre)</span>
-</label>
-<label class="checkbox-option">
-<input type="checkbox"/>
-<span>Gültiger Sprachnachweis (min. B1) eines zertifizierten Instituts</span>
-</label>
-<label class="checkbox-option">
-<input type="checkbox"/>
-<span>Finanzielle Deckung für die Initialphase gesichert</span>
-</label>
-</div>
-</div>
-<div class="triage-section">
-<h3>03. Strategische Zeitplanung</h3>
-<div class="form-group">
-<label>Geplanter Markteintritt</label>
-<select class="form-control">
-<option value="immediate">Sofort (Dossier-Audit abgeschlossen)</option>
-<option value="q1-q2">In 3-6 Monaten (Vorbereitungsphase)</option>
-<option value="long-term">Langfristig (&gt; 6 Monate)</option>
-</select>
-</div>
-</div>
-<div style="margin-top: 50px;">
-<button class="cta-button-dark" style="width: 100%;" type="button">KLASSIFIZIERUNG ANFORDERN</button>
-<p style="text-align: center; font-size: 11px; color: #9CA3AF; margin-top: 15px;">Durch Absenden fordern Sie eine institutionelle Routing-Empfehlung an.</p>
-</div>
-</form>
-</div>
-</div>
-</section>
-<!-- ROUTING MATRIX -->
-<section class="section-institutional">
-<div class="container">
-<h2 class="section-title">Triage-Matrix: Routing-Entscheidungen</h2>
-<div class="matrix-container">
-<table class="matrix-table">
-<thead>
-<tr>
-<th>Profil-Gewichtung</th>
-<th>Routing-Pfad</th>
-<th>Reibungswiderstand</th>
-<th>Strategie</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-label="Profil-Gewichtung"><strong>High-Performance</strong></td>
-<td data-label="Routing-Pfad">Direkt-Routing</td>
-<td data-label="Reibungswiderstand">Niedrig</td>
-<td data-label="Strategie">Sofortige Einreichung</td>
-</tr>
-<tr>
-<td data-label="Profil-Gewichtung"><strong>Kompatibel</strong></td>
-<td data-label="Routing-Pfad">Chancen-Routing</td>
-<td data-label="Reibungswiderstand">Mittel</td>
-<td data-label="Strategie">Sequenzielle Vorbereitung</td>
-</tr>
-<tr>
-<td data-label="Profil-Gewichtung"><strong>Asymmetrisch</strong></td>
-<td data-label="Routing-Pfad">Anerkennungs-Routing</td>
-<td data-label="Reibungswiderstand">Hoch</td>
-<td data-label="Strategie">Strategischer Verzug</td>
-</tr>
-<tr>
-<td data-label="Profil-Gewichtung"><strong>Inkonsistent</strong></td>
-<td data-label="Routing-Pfad">Qualifizierungs-Routing</td>
-<td data-label="Reibungswiderstand">Kritisch</td>
-<td data-label="Strategie">Eskalations-Vermeidung</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<!-- FAQ SYSTEM -->
-<section class="section-dark">
-<div class="container">
-<h2 class="section-title">Häufige Fragen zur Triage-Logik</h2>
-<div class="faq-container">
-<div class="faq-item">
-<div class="faq-question">Warum wird mein Profil "geroutet" und nicht einfach akzeptiert?</div>
-<div class="faq-answer">
-<p>Das deutsche System verzeiht keine prozeduralen Fehler. Ein falsches Routing führt zu Deadlocks und Ablehnungen. Die Triage bestimmt den Pfad, der Ihre Erfolgsquote unter Berücksichtigung administrativer Reibung maximiert.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">Was bedeutet "Strategischer Verzug"?</div>
-<div class="faq-answer">
-<p>In Fällen hoher Qualifikations-Asymmetrie oder unzureichender Dossier-Maturität empfehlen wir einen bewussten Verzug der Antragstellung. Dies verhindert eine Eskalation bei den Behörden und ermöglicht die notwendige Nachbesserung.</p>
-</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">Wie wird die administrative Risikobelastung gemessen?</div>
-<div class="faq-answer">
-<p>Wir bewerten die Wahrscheinlichkeit von Nachforderungen, Ablehnungsrisiken und Zeitverzögerungen basierend auf der aktuellen Behördenpraxis und Ihrer dokumentarischen Ausgangslage.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- STRATEGIC NAVIGATION -->
-<section class="section-light">
-<div class="container">
-<h2 class="section-title">Zugehörige System-Cluster</h2>
-<div class="navigation-modules">
-<a class="nav-card" href="/de/voraussetzungen">
-<h4>Voraussetzungen</h4>
-<p>Basis der dokumentarischen Reifeprüfung.</p>
-</a>
-<a class="nav-card" href="/de/systemlogik">
-<h4>Systemlogik</h4>
-<p>Administrative Pfade nach der Triage.</p>
-</a>
-<a class="nav-card" href="/de/monitor">
-<h4>Monitor</h4>
-<p>Marktdaten zur Positionierungs-Bewertung.</p>
-</a>
-<a class="nav-card" href="/de/chancenkarte">
-<h4>Chancenkarte</h4>
-<p>Spezifisches Routing-Modul für das Punktesystem.</p>
-</a>
-</div>
-</div>
-</section>
-<!-- FINAL CTA -->
-<section class="section-institutional" style="text-align: center; padding: 80px 0;">
-<div class="container">
-<h2 style="margin-bottom: 24px;">Bereit für die strategische Klassifizierung?</h2>
-<p style="margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Vermeiden Sie administrative Eskalationen durch eine professionelle Triage Ihres Profils.</p>
-<a class="cta-button-dark" href="/de/assessment">TRIAGE STARTEN</a>
-</div>
-</section>
-</main>
-<script src="/assets/js/cluster-system.js"></script>
+    <!-- ASSESSMENT TOOL -->
+    <div class="assessment-container">
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
 
+      <!-- STEP 1: QUALIFICATION -->
+      <div class="step active" id="step1">
+        <div class="step-title">Schritt 1: Ihre Qualifikation</div>
+        <div class="step-description">Was ist Ihr höchster Abschluss?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="qualification" value="3">
+            <span class="option-text">Universitätsabschluss (Bachelor/Master)</span>
+            <span class="option-points">3 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="qualification" value="2">
+            <span class="option-text">Berufsausbildung / Fachschule</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="qualification" value="0">
+            <span class="option-text">Keine formale Qualifikation</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-primary" onclick="nextStep(2)">Weiter</button>
+        </div>
+      </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <!-- STEP 2: PROFESSIONAL EXPERIENCE -->
+      <div class="step" id="step2">
+        <div class="step-title">Schritt 2: Berufserfahrung</div>
+        <div class="step-description">Wie viele Jahre relevanter Berufserfahrung haben Sie?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="experience" value="3">
+            <span class="option-text">5+ Jahre</span>
+            <span class="option-points">3 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="experience" value="2">
+            <span class="option-text">2-4 Jahre</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="experience" value="0">
+            <span class="option-text">Weniger als 2 Jahre</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep(1)">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep(3)">Weiter</button>
+        </div>
+      </div>
 
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    });
-</script>
-<footer class="footer bg-black text-white py-8 px-4">
-<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">BERLIN GATEWAY</h3>
-<p class="text-sm">Professionelle Einordnung in das deutsche Berufssystem.</p>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">SYSTEM</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="/de/voraussetzungen.html">Voraussetzungen</a></li>
-<li><a class="hover:text-gray-300" href="/de/systemlogik.html">Systemlogik</a></li>
-<li><a class="hover:text-gray-300" href="/de/assessment.html">Assessment</a></li>
-<li><a class="hover:text-gray-300" href="/de/chancenkarte.html">Chancenkarte</a></li>
-<li><a class="hover:text-gray-300" href="/de/arbeit-in-deutschland.html">Arbeitsmarkt</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">FACHKRÄFTE</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="/de/aerzte.html">Ärzte</a></li>
-<li><a class="hover:text-gray-300" href="/de/ingenieure.html">Ingenieure</a></li>
-<li><a class="hover:text-gray-300" href="/de/pflegekraefte.html">Pflegekräfte</a></li>
-<li><a class="hover:text-gray-300" href="/de/ausbildung.html">Ausbildung</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">RESSOURCEN</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="/de/monitor.html">Monitor</a></li>
-<li><a class="hover:text-gray-300" href="/de/insights.html">Insights</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h3 class="text-lg font-bold mb-4">KONTAKT &amp; RECHTLICHES</h3>
-<ul>
-<li><a class="hover:text-gray-300" href="mailto:info@berlingateway.de">info@berlingateway.de</a></li>
-<li><a class="hover:text-gray-300" href="tel:+493025730875">+49 30 25730875</a></li>
-<li><a class="hover:text-gray-300" href="/de/impressum.html">Impressum</a></li>
-<li><a class="hover:text-gray-300" href="/de/datenschutz.html">Datenschutz</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom text-center text-sm mt-8">
-<p>© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
-</div>
+      <!-- STEP 3: GERMAN LANGUAGE SKILLS -->
+      <div class="step" id="step3">
+        <div class="step-title">Schritt 3: Deutschkenntnisse</div>
+        <div class="step-description">Was ist Ihr aktuelles Deutsch-Niveau?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="german" value="3">
+            <span class="option-text">B2 oder höher</span>
+            <span class="option-points">3 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="german" value="2">
+            <span class="option-text">B1</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="german" value="1">
+            <span class="option-text">A2</span>
+            <span class="option-points">1 Punkt</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="german" value="0">
+            <span class="option-text">A1 oder niedriger</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep(2)">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep(4)">Weiter</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: AGE -->
+      <div class="step" id="step4">
+        <div class="step-title">Schritt 4: Ihr Alter</div>
+        <div class="step-description">Wie alt sind Sie?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="age" value="2">
+            <span class="option-text">Unter 35</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="age" value="1">
+            <span class="option-text">35-40</span>
+            <span class="option-points">1 Punkt</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="age" value="0">
+            <span class="option-text">Über 40</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep(3)">Zurück</button>
+          <button class="btn btn-primary" onclick="nextStep(5)">Weiter</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: CONNECTION TO GERMANY -->
+      <div class="step" id="step5">
+        <div class="step-title">Schritt 5: Verbindung zu Deutschland</div>
+        <div class="step-description">Haben Sie eine Verbindung zu Deutschland?</div>
+        <div class="option-group">
+          <label class="option-label">
+            <input type="radio" name="connection" value="2">
+            <span class="option-text">Früherer Aufenthalt in Deutschland</span>
+            <span class="option-points">2 Punkte</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="connection" value="1">
+            <span class="option-text">Verwandte in Deutschland</span>
+            <span class="option-points">1 Punkt</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="connection" value="0">
+            <span class="option-text">Keine Verbindung</span>
+            <span class="option-points">0 Punkte</span>
+          </label>
+        </div>
+        <div class="button-group">
+          <button class="btn btn-secondary" onclick="prevStep(4)">Zurück</button>
+          <button class="btn btn-primary" onclick="calculateResult()">Ergebnis berechnen</button>
+        </div>
+      </div>
+
+      <!-- RESULT SECTION -->
+      <div class="result-section" id="resultSection">
+        <div class="result-score" id="resultScore"></div>
+        <div class="result-status" id="resultStatus"></div>
+        <div class="result-message" id="resultMessage"></div>
+        <div class="result-cta" id="resultCta"></div>
+      </div>
+
+      <!-- MICRO-TRUST SECTION -->
+      <div class="micro-trust">
+        <p>✓ 100% kostenlos und unverbindlich</p>
+        <p>✓ Basiert auf offiziellen Kriterien</p>
+        <p>✓ Sofortiges Ergebnis</p>
+      </div>
+
+      <!-- FINAL CTA -->
+      <div class="final-cta">
+        <a href="/de/chancenkarte">Ihre Chancenkarte-Bewertung starten</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (BLACK) -->
+<footer class="footer">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <a href="/de/chancenkarte">Chancenkarte</a>
+                <a href="/de/assessment">Punkte-Rechner</a>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Monitor</a>
+                <a href="/de/insights">Insights</a>
+            </div>
+            <div>
+                <h4>Rechtliches</h4>
+                <a href="/de/impressum">Impressum</a>
+                <a href="/de/datenschutz">Datenschutz</a>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 30 25730875</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        </div>
+    </div>
 </footer>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    function nextStep(step) {
+      document.getElementById(`step${currentStep}`).classList.remove("active");
+      document.getElementById(`step${step}`).classList.add("active");
+      currentStep = step;
+      updateProgress();
+    }
+
+    function prevStep(step) {
+      document.getElementById(`step${currentStep}`).classList.remove("active");
+      document.getElementById(`step${step}`).classList.add("active");
+      currentStep = step;
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+      document.getElementById("progressFill").style.width = `${progress}%`;
+    }
+
+    function calculateResult() {
+      let totalPoints = 0;
+      const inputs = document.querySelectorAll('.assessment-container input[type="radio"]:checked');
+      
+      inputs.forEach(input => {
+        totalPoints += parseInt(input.value, 10);
+      });
+
+      const resultSection = document.getElementById("resultSection");
+      const resultScore = document.getElementById("resultScore");
+      const resultStatus = document.getElementById("resultStatus");
+      const resultMessage = document.getElementById("resultMessage");
+      const resultCta = document.getElementById("resultCta");
+
+      resultScore.textContent = `${totalPoints} Punkte`;
+
+      if (totalPoints >= 6) {
+        resultStatus.textContent = "Sie erfüllen die Mindestanforderung.";
+        resultStatus.className = "result-status good";
+        resultMessage.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für die Chancenkarte. Fahren Sie fort, um Ihre Chancenkarte-Bewertung zu starten.";
+        resultCta.innerHTML = `<a href="/de/chancenkarte">Zur Bewertung fortfahren</a>`;
+      } else {
+        resultStatus.textContent = "Aktuell erfüllen Sie die Anforderungen nicht vollständig.";
+        resultStatus.className = "result-status early";
+        resultMessage.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für die Chancenkarte nicht vollständig. Prüfen Sie die Systemlogik, um Ihre Optionen zu verstehen.";
+        resultCta.innerHTML = `<a href="/de/systemlogik">Systemlogik prüfen</a>`;
+      }
+
+      resultSection.classList.add("active");
+      resultSection.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>

@@ -270,6 +270,13 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+
+  // ── Arabic Rehabilitation Cluster ──────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/advanced-rehabilitation-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 ];
 
 function generateSitemapXML(urls: SitemapUrl[]): string {

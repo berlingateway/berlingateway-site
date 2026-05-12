@@ -1,40 +1,99 @@
 /**
  * /ar/advanced-rehabilitation-germany
- * Central Rehabilitation Authority Hub — MCG Arabic Cluster
+ * Central Recovery Intelligence Hub — MCG Arabic Cluster
+ * 9-Section Authority Architecture
  */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 
-const REHAB_FAQ_JSONLD = {
+// ── JSON-LD ────────────────────────────────────────────────────────────────
+const MEDICAL_WEB_PAGE_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "إعادة التأهيل المتقدم في ألمانيا — المحور المركزي للتعافي",
+  "url": "https://medicalcaregermany.com/ar/advanced-rehabilitation-germany",
+  "description": "تنسيق مسارات إعادة التأهيل المتقدم في ألمانيا للحالات المعقدة — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي، الحبل الشوكي، والتقييم الطبي الثاني.",
+  "inLanguage": "ar",
+  "about": { "@type": "MedicalCondition", "name": "Advanced Rehabilitation" },
+  "audience": { "@type": "Patient" }
+};
+
+const FAQ_JSONLD = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "ما هي خيارات إعادة التأهيل المتاحة في ألمانيا؟",
-      "acceptedAnswer": { "@type": "Answer", "text": "تشمل خيارات إعادة التأهيل في ألمانيا: إعادة التأهيل العصبي، التأهيل بعد إصابات الحرب والحوادث، الأطراف الصناعية، التأهيل الروبوتي، وإدارة الألم المزمن للمرضى الدوليين القادمين من ليبيا والسودان ودول الخليج." }
+      "name": "ما هي الحالات التي تستوجب إعادة التأهيل المتقدم في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "تشمل الحالات التي تستوجب إعادة التأهيل المتقدم: إصابات الحرب والحوادث المعقدة، شلل الأطراف، إصابات الحبل الشوكي، الإصابات العصبية المزمنة، البتر، والحالات التي فشل فيها التأهيل الأولي. يُنصح بالتقييم المتخصص قبل اتخاذ قرار السفر إلى ألمانيا."
+      }
     },
     {
       "@type": "Question",
-      "name": "كيف يتم تنسيق برنامج إعادة التأهيل للمريض الدولي؟",
-      "acceptedAnswer": { "@type": "Answer", "text": "يتم استقبال التوثيق الطبي من برلين وتقييمه من قِبل المنسق الطبي، ثم تحديد برنامج إعادة التأهيل المناسب والمركز المتخصص قبل اتخاذ قرار السفر." }
+      "name": "كيف يختلف التأهيل العصبي عن التأهيل الجراحي في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "التأهيل العصبي يستهدف استعادة الوظائف العصبية والحركية بعد السكتة الدماغية وإصابات الدماغ والحبل الشوكي. التأهيل الجراحي يركز على استعادة الوظيفة بعد العمليات الكبرى كاستبدال المفاصل وجراحة العمود الفقري."
+      }
     },
     {
       "@type": "Question",
-      "name": "هل يمكن تقييم حالتي من بعد قبل السفر إلى ألمانيا؟",
-      "acceptedAnswer": { "@type": "Answer", "text": "نعم. يمكن إرسال التقارير الطبية عبر البريد الإلكتروني أو واتسآب وسيتم تقييمها من برلين خلال 24–48 ساعة لتحديد مدى ملاءمة برنامج إعادة التأهيل في ألمانيا." }
+      "name": "هل يمكن تقييم حالتي عن بُعد قبل السفر إلى ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. يمكن إرسال التقارير الطبية والصور الإشعاعية عبر البريد الإلكتروني أو واتسآب وسيتم تقييمها من برلين خلال 24–48 ساعة لتحديد مدى ملاءمة برنامج إعادة التأهيل في ألمانيا."
+      }
     },
     {
       "@type": "Question",
-      "name": "ما الفرق بين إعادة التأهيل في ألمانيا وفي دول أخرى؟",
-      "acceptedAnswer": { "@type": "Answer", "text": "تتميز برامج إعادة التأهيل في ألمانيا بالتكامل بين التخصصات، استخدام التقنيات الروبوتية، والمتابعة المنتظمة عبر فريق متعدد التخصصات لضمان أفضل استعادة للوظيفة." }
+      "name": "ما مدة برامج إعادة التأهيل المتقدم في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "تتراوح مدة برامج التأهيل بين 3 أسابيع للحالات الجراحية البسيطة وعدة أشهر للحالات العصبية والإصابات الشديدة. يُحدد البرنامج بناءً على التقييم السريري الأولي وأهداف التعافي الفردية."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يُقبل المرضى من ليبيا والسودان والعراق ودول الخليج في برامج التأهيل الألمانية؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. نُنسق مسارات التأهيل للمرضى الدوليين من ليبيا، السودان، العراق، والمملكة العربية السعودية وسائر دول الخليج. يشمل التنسيق تقييم الوثائق الطبية، اختيار المركز المتخصص، وتحديد البرنامج التأهيلي المناسب قبل السفر."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما دور التقييم الطبي الثاني في مسار إعادة التأهيل؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "التقييم الطبي الثاني يُحدد ما إذا كان التشخيص الأولي صحيحًا وما إذا كان البرنامج التأهيلي المُتبع مناسبًا. في حالات الفشل التأهيلي أو الألم المزمن المستمر، يُعدّ التقييم الثاني خطوة أساسية قبل أي قرار علاجي جديد."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما الفرق بين التأهيل الروبوتي والتأهيل التقليدي في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "التأهيل الروبوتي يستخدم أجهزة متخصصة (Lokomat، Armeo) لتحفيز الأنماط الحركية الطبيعية وتسريع إعادة التعلم الحركي — مفيد بشكل خاص في إصابات الحبل الشوكي والسكتة الدماغية. التأهيل التقليدي يعتمد على المعالج الفيزيائي مباشرة ويُكمل التأهيل الروبوتي في البرامج المتكاملة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يُغطي التأمين الصحي الدولي برامج التأهيل في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يعتمد التغطية التأمينية على نوع الوثيقة وشركة التأمين. نُساعد في توثيق الحالة الطبية بالشكل المطلوب لتقديمه لشركات التأمين الدولية. للمرضى غير المؤمَّنين، نُقدم تقديرات تكلفة مفصلة قبل بدء البرنامج."
+      }
     }
   ]
 };
 
+// ── STYLE CONSTANTS ────────────────────────────────────────────────────────
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
   direction: "rtl",
@@ -43,186 +102,391 @@ const AR: React.CSSProperties = {
 const WA_LINK =
   "https://wa.me/4915781497451?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C%20%D8%A3%D9%88%D8%AF%20%D8%A5%D8%B1%D8%B3%D8%A7%D9%84%20%D9%85%D9%84%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%20%D9%84%D9%84%D8%AA%D9%82%D9%8A%D9%8A%D9%85";
 
-const CLUSTER_PAGES = [
-  { href: "/ar/war-injury-rehabilitation-germany", label: "إعادة تأهيل إصابات الحرب" },
-  { href: "/ar/prosthetics-germany", label: "الأطراف الصناعية في ألمانيا" },
-  { href: "/ar/spinal-rehabilitation-germany", label: "إعادة تأهيل العمود الفقري" },
-  { href: "/ar/neurological-rehabilitation-germany", label: "إعادة التأهيل العصبي" },
-  { href: "/ar/second-medical-evaluation-germany", label: "التقييم الطبي الثاني" },
-  { href: "/ar/long-term-rehabilitation-germany", label: "العلاج التأهيلي طويل المدى" },
+// ── DATA ───────────────────────────────────────────────────────────────────
+const CLINICAL_INDICATORS = [
+  "إصابات الحرب والحوادث غير المُعالجة أو المُعالجة جزئيًا",
+  "شلل أو ضعف في الأطراف بعد إصابة أو جراحة",
+  "إصابات الحبل الشوكي مع ضعف حركي أو حسي",
+  "فشل برنامج التأهيل الأولي في استعادة الوظيفة",
+  "ألم مزمن مستمر بعد الجراحة أو الإصابة",
+  "اضطرابات التوازن والمشي بعد إصابة عصبية أو رأسية",
+  "البتر مع الحاجة إلى تركيب طرف صناعي متقدم",
+  "إصابات الدماغ الرضية مع تداعيات معرفية أو حركية",
 ];
 
-const THEMES = [
-  "إعادة تأهيل إصابات الحرب والحوادث",
-  "الأطراف الصناعية واستعادة الحركة",
-  "إعادة التأهيل العصبي والحبل الشوكي",
-  "التأهيل الروبوتي المتقدم",
-  "إعادة التأهيل بعد البتر",
-  "إدارة الألم المزمن",
-  "التقييم الطبي الثاني",
-  "العلاج التأهيلي متعدد التخصصات",
-  "استمرارية التأهيل طويل المدى",
+const TRAUMA_PATHWAYS = [
+  { title: "إصابات الحرب والحوادث الشديدة", desc: "تنسيق مسارات التأهيل متعدد التخصصات للحالات القادمة من مناطق النزاع — تقييم شامل للإصابات المتعددة، الكسور المعقدة، وإصابات الأعصاب.", href: "/ar/complex-trauma-germany" },
+  { title: "إعادة التأهيل بعد البتر", desc: "تنسيق مسار التأهيل ما بعد البتر — من الجراحة التحضيرية إلى تركيب الطرف الصناعي المتقدم وبرنامج التدريب الحركي.", href: "/ar/prosthetics-after-amputation-germany" },
+  { title: "الكسور المعقدة وإصابات المفاصل", desc: "تقييم الكسور متعددة الشظايا، الكسور المفصلية، وإصابات الأربطة الشديدة — تنسيق التدخل الجراحي والتأهيل اللاحق.", href: "/ar/orthopedics-germany" },
+  { title: "إصابات الأعصاب الطرفية", desc: "تقييم إصابات الأعصاب الطرفية بعد الصدمات — تحديد مدى الحاجة للتدخل الجراحي وبروتوكول التأهيل العصبي المناسب.", href: "/ar/nerve-injury-after-trauma-germany" },
+  { title: "متلازمة ما بعد الحادث", desc: "تقييم الأعراض المزمنة بعد الحوادث — الألم المزمن، اضطرابات التوازن، الصداع المزمن، والتداعيات النفسية الجسدية.", href: "/ar/dizziness-long-term" },
+  { title: "إعادة التقييم بعد فشل التأهيل", desc: "مراجعة مسار التأهيل للحالات التي لم تستجب للبرامج الأولية — تحليل أسباب الفشل وتصميم بروتوكول بديل.", href: "/ar/complex-trauma-germany" },
 ];
 
+const SPINE_REHAB = [
+  { phase: "المرحلة الأولى (0–6 أسابيع)", content: "تحفيز مبكر، تمارين التنفس، الوقاية من الجلطات، وإدارة الألم الحاد بعد جراحة العمود الفقري." },
+  { phase: "المرحلة الثانية (6–12 أسبوعًا)", content: "تقوية عضلات الجذع والظهر، تحسين الوضعية، وإعادة تعليم الحركة الوظيفية." },
+  { phase: "المرحلة الثالثة (3–6 أشهر)", content: "برامج التحمل والقوة، العودة التدريجية للنشاط، وتقييم نتائج الجراحة." },
+  { phase: "التأهيل بعد فشل جراحة العمود الفقري", content: "تقييم أسباب الفشل الجراحي، تحديد الخيارات البديلة، وتصميم برنامج تأهيل للألم المزمن." },
+  { phase: "الدوخة الرقبية بعد جراحة العنق", content: "تقييم الأعراض الدهليزية والرقبية بعد جراحات الرقبة — تنسيق مع أخصائيي الأنف والأذن والحنجرة." },
+  { phase: "الاستمرارية طويلة المدى", content: "متابعة دورية لتقييم نتائج التأهيل وتعديل البرنامج وفق التطور السريري." },
+];
+
+const NEURO_REHAB = [
+  { condition: "السكتة الدماغية", indicators: "شلل نصفي، اضطرابات الكلام، صعوبات البلع", approach: "تأهيل عصبي مكثف، تحفيز كهربائي، علاج النطق", link: "/ar/neurology-treatment-germany" },
+  { condition: "إصابات الدماغ الرضية", indicators: "اضطرابات معرفية، تغيرات سلوكية، صداع مزمن", approach: "تأهيل معرفي، إدارة الأعراض، دعم نفسي", link: "/ar/complex-trauma-germany" },
+  { condition: "إصابات الحبل الشوكي", indicators: "شلل كامل أو جزئي، اضطرابات المثانة والأمعاء", approach: "تأهيل روبوتي (Lokomat)، تحفيز عصبي، إدارة المضاعفات", link: "/ar/spine-surgery-germany" },
+  { condition: "الشلل الرعاشي", indicators: "رعشة، تيبس، بطء الحركة", approach: "علاج حركي متخصص، تعديل الأدوية، دعم وظيفي", link: "/ar/neurology-treatment-germany" },
+  { condition: "التصلب المتعدد", indicators: "إرهاق، اضطرابات التوازن، ضعف الأطراف", approach: "تأهيل وظيفي، إدارة الإرهاق، تمارين التوازن", link: "/ar/neurology-treatment-germany" },
+];
+
+const VESTIBULAR_REHAB = [
+  { title: "إعادة تأهيل الدهليز", desc: "بروتوكولات متخصصة لاستعادة التوازن بعد إصابات الأذن الداخلية — تمارين Epley، Cawthorne-Cooksey." },
+  { title: "الدوخة بعد الصدمة الرأسية", desc: "تقييم وعلاج الدوخة الموضعية الانتيابية الحميدة (BPPV) وغيرها من اضطرابات التوازن بعد إصابات الرأس." },
+  { title: "اضطرابات التوازن المزمنة", desc: "برامج تأهيل طويلة المدى لحالات عدم التوازن المزمن — تدريب التكيف البصري والحسي الجسدي." },
+  { title: "الدوخة الرقبية", desc: "تقييم وعلاج الدوخة الناجمة عن إصابات الرقبة أو الجراحة الرقبية — تنسيق مع أخصائيي الأنف والأذن والحنجرة." },
+];
+
+const PROSTHETICS_DATA = [
+  { type: "الأطراف الصناعية الإلكترونية", desc: "أطراف صناعية تعمل بالتحكم العضلي الكهربائي (myoelectric) للذراعين والساقين — أعلى مستوى من الوظيفة الحركية." },
+  { type: "الأطراف الصناعية الكربونية", desc: "أطراف صناعية خفيفة الوزن عالية الأداء للمرضى النشطين — مناسبة للعودة للنشاط البدني." },
+  { type: "الأطراف الصناعية للأطفال", desc: "أطراف صناعية قابلة للتعديل مع نمو الطفل — تقييم دوري وتعديل منتظم." },
+  { type: "تأهيل ما بعد البتر", desc: "برنامج تأهيل متكامل من الجراحة إلى التركيب والتدريب — يشمل إدارة الألم الوهمي والتأهيل النفسي." },
+  { type: "الأجهزة التعويضية والدعامات", desc: "تقييم وتركيب الأجهزة التعويضية (orthoses) لدعم الوظيفة الحركية دون بتر." },
+  { type: "إعادة التأهيل الروبوتي للحركة", desc: "استخدام الروبوتات العلاجية (Armeo، Lokomat) لاستعادة الأنماط الحركية الطبيعية." },
+];
+
+const CHRONIC_CASES = [
+  { title: "الألم المزمن بعد الإصابة", desc: "إدارة الألم المزمن المستمر بعد الصدمات أو الجراحات — تقييم متعدد التخصصات وبروتوكولات الألم المزمن.", link: "/ar/complex-trauma-germany" },
+  { title: "الإصابات المزمنة من الحروب", desc: "تقييم وعلاج الإصابات المزمنة الناجمة عن النزاعات المسلحة — شظايا معدنية، إصابات انفجارية، وإصابات متعددة.", link: "/ar/complex-trauma-germany" },
+  { title: "فشل الجراحة المتكرر", desc: "مراجعة شاملة للحالات التي خضعت لجراحات متعددة دون تحسن — تحليل الأسباب وتقديم خيارات بديلة.", link: "/ar/spine-surgery-germany" },
+  { title: "اضطرابات الحركة المزمنة", desc: "تقييم وعلاج اضطرابات المشي والحركة المزمنة — تحليل الخطوة، تقييم الجهاز العصبي الحركي.", link: "/ar/neurology-treatment-germany" },
+  { title: "الإصابات العصبية المزمنة", desc: "متابعة طويلة المدى لإصابات الأعصاب المزمنة — تقييم دوري للوظيفة العصبية وتعديل بروتوكول التأهيل.", link: "/ar/nerve-injury-after-trauma-germany" },
+  { title: "التأهيل النفسي الجسدي", desc: "دعم نفسي متخصص للمرضى الذين يعانون من تداعيات نفسية للإصابات المزمنة — اضطراب ما بعد الصدمة والاكتئاب المزمن.", link: "/ar/complex-trauma-germany" },
+];
+
+const FAQ_ITEMS = [
+  { q: "ما هي الحالات التي تستوجب إعادة التأهيل المتقدم في ألمانيا؟", a: "تشمل الحالات التي تستوجب إعادة التأهيل المتقدم: إصابات الحرب والحوادث المعقدة، شلل الأطراف، إصابات الحبل الشوكي، الإصابات العصبية المزمنة، البتر، والحالات التي فشل فيها التأهيل الأولي. يُنصح بالتقييم المتخصص قبل اتخاذ قرار السفر إلى ألمانيا." },
+  { q: "كيف يختلف التأهيل العصبي عن التأهيل الجراحي في ألمانيا؟", a: "التأهيل العصبي يستهدف استعادة الوظائف العصبية والحركية بعد السكتة الدماغية وإصابات الدماغ والحبل الشوكي. التأهيل الجراحي يركز على استعادة الوظيفة بعد العمليات الكبرى كاستبدال المفاصل وجراحة العمود الفقري." },
+  { q: "هل يمكن تقييم حالتي عن بُعد قبل السفر إلى ألمانيا؟", a: "نعم. يمكن إرسال التقارير الطبية والصور الإشعاعية عبر البريد الإلكتروني أو واتسآب وسيتم تقييمها من برلين خلال 24–48 ساعة لتحديد مدى ملاءمة برنامج إعادة التأهيل في ألمانيا." },
+  { q: "ما مدة برامج إعادة التأهيل المتقدم في ألمانيا؟", a: "تتراوح مدة برامج التأهيل بين 3 أسابيع للحالات الجراحية البسيطة وعدة أشهر للحالات العصبية والإصابات الشديدة. يُحدد البرنامج بناءً على التقييم السريري الأولي وأهداف التعافي الفردية." },
+  { q: "هل يُقبل المرضى من ليبيا والسودان والعراق ودول الخليج في برامج التأهيل الألمانية؟", a: "نعم. نُنسق مسارات التأهيل للمرضى الدوليين من ليبيا، السودان، العراق، والمملكة العربية السعودية وسائر دول الخليج. يشمل التنسيق تقييم الوثائق الطبية، اختيار المركز المتخصص، وتحديد البرنامج التأهيلي المناسب قبل السفر." },
+  { q: "ما دور التقييم الطبي الثاني في مسار إعادة التأهيل؟", a: "التقييم الطبي الثاني يُحدد ما إذا كان التشخيص الأولي صحيحًا وما إذا كان البرنامج التأهيلي المُتبع مناسبًا. في حالات الفشل التأهيلي أو الألم المزمن المستمر، يُعدّ التقييم الثاني خطوة أساسية قبل أي قرار علاجي جديد." },
+  { q: "ما الفرق بين التأهيل الروبوتي والتأهيل التقليدي في ألمانيا؟", a: "التأهيل الروبوتي يستخدم أجهزة متخصصة (Lokomat، Armeo) لتحفيز الأنماط الحركية الطبيعية وتسريع إعادة التعلم الحركي — مفيد بشكل خاص في إصابات الحبل الشوكي والسكتة الدماغية." },
+  { q: "هل يُغطي التأمين الصحي الدولي برامج التأهيل في ألمانيا؟", a: "يعتمد التغطية التأمينية على نوع الوثيقة وشركة التأمين. نُساعد في توثيق الحالة الطبية بالشكل المطلوب لتقديمه لشركات التأمين الدولية. للمرضى غير المؤمَّنين، نُقدم تقديرات تكلفة مفصلة قبل بدء البرنامج." },
+];
+
+// ── COMPONENT ──────────────────────────────────────────────────────────────
 export default function AdvancedRehabilitationGermany() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   useEffect(() => {
-    document.title = "إعادة التأهيل المتقدم في ألمانيا — تنسيق متخصص للحالات الدولية | Medical Care Germany";
-    const descContent = "تنسيق متخصص لمسارات إعادة التأهيل المتقدم في ألمانيا — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي. للحالات الدولية من ليبيا والسودان ودول الخليج.";
+    document.title = "إعادة التأهيل المتقدم في ألمانيا — المحور المركزي للتعافي | Medical Care Germany";
+    const descContent =
+      "تنسيق مسارات إعادة التأهيل المتقدم في ألمانيا للحالات المعقدة — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي، الحبل الشوكي، والتقييم الطبي الثاني. للمرضى من ليبيا والسودان والعراق ودول الخليج.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
-    else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = descContent;
+      document.head.appendChild(n);
+    }
     let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!c) { c = document.createElement("link") as HTMLLinkElement; c.rel = "canonical"; document.head.appendChild(c); }
+    if (!c) {
+      c = document.createElement("link") as HTMLLinkElement;
+      c.rel = "canonical";
+      document.head.appendChild(c);
+    }
     c.href = "https://medicalcaregermany.com/ar/advanced-rehabilitation-germany";
   }, []);
 
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(REHAB_FAQ_JSONLD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(MEDICAL_WEB_PAGE_JSONLD) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }} />
       <SmartNavLayer currentPath="/ar/advanced-rehabilitation-germany" />
       <HreflangTags currentPath="/ar/advanced-rehabilitation-germany" />
-      <title>إعادة التأهيل المتقدم في ألمانيا | تنسيق التأهيل الطبي المتخصص</title>
-      <meta
-        name="description"
-        content="تنسيق متخصص لمسارات إعادة التأهيل المتقدم في ألمانيا — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي، الحبل الشوكي، والتقييم الطبي الثاني."
-      />
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
+      {/* ══ S1: HERO ══════════════════════════════════════════════════════ */}
       <section style={{ background: "#0B1C2C", padding: "80px 24px 72px", textAlign: "center" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 11, letterSpacing: "0.18em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 20 }}>
-            Medical Care Germany — تنسيق التأهيل الطبي المتقدم
+            Medical Care Germany — المحور المركزي للتعافي
           </p>
-          <h1 style={{ ...AR, fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.45, marginBottom: 20 }}>
+          <h1 style={{ ...AR, fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.45, marginBottom: 20 }}>
             إعادة التأهيل المتقدم في ألمانيا
           </h1>
-          <p style={{ ...AR, fontSize: 16, color: "#94a3b8", lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>
-            تنسيق مسارات التأهيل الطبي المعقدة داخل ألمانيا — للحالات القادمة من الخارج أو الموجودة داخل ألمانيا والتي تحتاج استمرارية علاجية أو تقييمًا تخصصيًا متقدمًا.
+          <p style={{ ...AR, fontSize: 16, color: "#94a3b8", lineHeight: 1.85, maxWidth: 640, margin: "0 auto 16px" }}>
+            تنسيق مسارات التعافي الطبي المعقدة داخل ألمانيا — للحالات التي تتجاوز التأهيل الأولي وتحتاج تقييمًا متخصصًا متعدد التخصصات.
+          </p>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, maxWidth: 600, margin: "0 auto 36px" }}>
+            إصابات الحرب والحوادث · الأطراف الصناعية · التأهيل العصبي · الحبل الشوكي · الألم المزمن · فشل الجراحة
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none", border: "1px solid #fff" }}>
-              أرسل التقارير الطبية للتقييم الأولي
+            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>
+              أرسل التقارير الطبية للتقييم
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
-              طلب تقييم أولي
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
+              تواصل عبر واتسآب
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── STRATEGIC MAGNETIC BLOCK ─────────────────────────────── */}
-      <section style={{ background: "#0B1C2C", padding: "64px 24px", borderTop: "1px solid #1e3a52" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <h2 style={{ ...AR, fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: "#f8fafc", marginBottom: 20, lineHeight: 1.55 }}>
-            بعض حالات التأهيل تحتاج أكثر من مرحلة علاجية
-          </h2>
-          <p style={{ ...AR, fontSize: 15, color: "#94a3b8", lineHeight: 1.9, marginBottom: 20 }}>
-            في بعض إصابات الأعصاب، الحبل الشوكي، البتر، وإصابات الحركة المعقدة، قد تتطلب الخطة العلاجية مراحل إضافية من التقييم، التأهيل، والمتابعة متعددة التخصصات داخل ألمانيا وفق تطور الحالة السريرية واستجابة المريض للعلاج.
-          </p>
-          <p style={{ ...AR, fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>
-            يعمل فريقنا على تنسيق المسارات الطبية والتأهيلية للحالات القادمة من الخارج أو الموجودة داخل ألمانيا والتي تحتاج تقييمًا تخصصيًا، استمرارية علاجية، أو متابعة متعددة التخصصات.
-          </p>
-          <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
-            أرسل التقارير الطبية للتقييم الأولي
-          </a>
-          <p style={{ ...AR, fontSize: 12, color: "#475569", marginTop: 12 }}>
-            تنسيق طبي وتأهيلي للحالات المعقدة داخل ألمانيا
-          </p>
-        </div>
-      </section>
-
-      {/* ── CLUSTER THEMES ───────────────────────────────────────── */}
+      {/* ══ S2: CLINICAL INDICATORS ══════════════════════════════════════ */}
       <section style={{ background: "#f8fafc", padding: "72px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>
-            محاور التأهيل
+            المؤشرات السريرية
           </p>
-          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 40, textAlign: "center", lineHeight: 1.5 }}>
-            مجالات التأهيل المتقدم المُنسَّقة
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 12, textAlign: "center", lineHeight: 1.5 }}>
+            متى يُشير التقييم إلى الحاجة لإعادة التأهيل المتقدم؟
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 1, background: "#e2e8f0" }}>
-            {THEMES.map((t) => (
-              <div key={t} style={{ background: "#fff", padding: "24px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
-                <p style={{ ...AR, fontSize: 14, color: "#1e293b", lineHeight: 1.6, margin: 0 }}>{t}</p>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, textAlign: "center", marginBottom: 40, maxWidth: 600, marginLeft: "auto", marginRight: "auto" }}>
+            الحالات التالية تستدعي تقييمًا تخصصيًا قبل اتخاذ أي قرار علاجي أو تأهيلي
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+            {CLINICAL_INDICATORS.map((item, i) => (
+              <div key={i} style={{ background: "#fff", padding: "20px 20px", display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#059669", marginTop: 7, flexShrink: 0 }} />
+                <p style={{ ...AR, fontSize: 14, color: "#1e293b", lineHeight: 1.65, margin: 0 }}>{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CLUSTER SUB-PAGES ────────────────────────────────────── */}
-      <section style={{ padding: "72px 24px", maxWidth: 900, margin: "0 auto" }}>
-        <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
-          صفحات التأهيل التخصصية
-        </p>
-        <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 32, lineHeight: 1.5 }}>
-          مسارات التأهيل المتخصصة
-        </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 1, background: "#e2e8f0" }}>
-          {CLUSTER_PAGES.map((p) => (
-            <a key={p.href} href={p.href} style={{ background: "#fff", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", textDecoration: "none", gap: 12 }}>
-              <span style={{ ...AR, fontSize: 14, color: "#0B1C2C", fontWeight: 500 }}>{p.label}</span>
-              <span style={{ color: "#94a3b8", fontSize: 18, flexShrink: 0 }}>←</span>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SECOND PATHWAY BLOCK ─────────────────────────────────── */}
-      <section style={{ background: "#0B1C2C", padding: "72px 24px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <h2 style={{ ...AR, fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: "#f8fafc", marginBottom: 20, lineHeight: 1.55 }}>
-            عندما لا تكون المرحلة الأولى كافية
+      {/* ══ S3: POST-TRAUMA REHABILITATION PATHWAYS ══════════════════════ */}
+      <section style={{ padding: "72px 24px" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
+            مسارات التأهيل بعد الصدمة
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 12, lineHeight: 1.5 }}>
+            التأهيل بعد الصدمات والإصابات الشديدة
           </h2>
-          <p style={{ ...AR, fontSize: 15, color: "#94a3b8", lineHeight: 1.9, marginBottom: 20 }}>
-            بعض الحالات المعقدة قد تحتاج إعادة تقييم تخصصي أو مسار تأهيلي أكثر تقدمًا داخل ألمانيا، خاصة في إصابات الأعصاب، الألم المزمن، البتر، وإصابات الحركة المعقدة.
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, marginBottom: 40, maxWidth: 640 }}>
+            تنسيق مسارات التأهيل للحالات القادمة من مناطق النزاع أو الحوادث الشديدة — تقييم شامل قبل السفر وتحديد البرنامج المناسب.
           </p>
-          <p style={{ ...AR, fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>
-            قد تشمل بعض الحالات مراحل إضافية من التقييم والمتابعة التأهيلية وفق احتياجات الحالة السريرية وتطور الخطة العلاجية.
-          </p>
-          <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
-            طلب مراجعة التقارير الطبية
-          </a>
-        </div>
-      </section>
-
-      {/* ── COORDINATION BLOCK ───────────────────────────────────── */}
-      <section style={{ padding: "72px 24px", maxWidth: 760, margin: "0 auto" }}>
-        <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
-          التنسيق الطبي
-        </p>
-        <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 20, lineHeight: 1.5 }}>
-          الحالات القادمة من خارج ألمانيا أو الموجودة داخلها
-        </h2>
-        <p style={{ ...AR, fontSize: 15, color: "#475569", lineHeight: 1.9, marginBottom: 32 }}>
-          يقدم فريقنا تنسيقًا للحالات التي تحتاج تقييمًا طبيًا، إعادة تأهيل متقدمة، أو متابعة علاجية داخل ألمانيا، سواء للمرضى القادمين من الخارج أو الموجودين داخل ألمانيا ممن يحتاجون استمرارية علاجية أو إعادة تقييم تخصصي.
-        </p>
-        <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#0B1C2C", color: "#fff", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
-          إرسال الملف الطبي للتقييم
-        </a>
-      </section>
-
-      {/* ── RELATED LINKS ────────────────────────────────────────── */}
-      <section style={{ background: "#f8fafc", padding: "56px 24px" }}>
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 20 }}>
-            صفحات ذات صلة
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-            {[
-              { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
-              { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
-              { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
-              { href: "/ar/complex-trauma-germany", label: "تقييم الصدمات المعقدة" },
-              { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
-              { href: "/ar/pediatric-rehabilitation-germany", label: "تأهيل الأطفال في ألمانيا" },
-            ].map((link) => (
-              <a key={link.href} href={link.href} style={{ ...AR, fontSize: 13, color: "#0B1C2C", textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#fff", display: "inline-block" }}>
-                {link.label}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+            {TRAUMA_PATHWAYS.map((p) => (
+              <a key={p.href} href={p.href} style={{ background: "#fff", padding: "28px 24px", textDecoration: "none", display: "block" }}>
+                <h3 style={{ ...AR, fontSize: 15, fontWeight: 600, color: "#0B1C2C", marginBottom: 10, lineHeight: 1.5 }}>{p.title}</h3>
+                <p style={{ ...AR, fontSize: 13, color: "#475569", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
+                <span style={{ ...AR, fontSize: 12, color: "#94a3b8", display: "block", marginTop: 12 }}>اقرأ المزيد ←</span>
               </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══ S4: POST-SPINE REHABILITATION ════════════════════════════════ */}
+      <section style={{ background: "#0B1C2C", padding: "72px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#64748b", textTransform: "uppercase", marginBottom: 12 }}>
+            التأهيل بعد جراحة العمود الفقري
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#f8fafc", marginBottom: 12, lineHeight: 1.5 }}>
+            مراحل التأهيل بعد جراحات العمود الفقري
+          </h2>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, marginBottom: 40, maxWidth: 640 }}>
+            كل مرحلة من مراحل التأهيل لها بروتوكول محدد — من الأسابيع الأولى بعد الجراحة حتى الاستمرارية طويلة المدى.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 1, background: "#1e3a52" }}>
+            {SPINE_REHAB.map((item, i) => (
+              <div key={i} style={{ background: "#0f2235", padding: "24px 20px" }}>
+                <p style={{ ...AR, fontSize: 11, color: "#059669", fontWeight: 600, marginBottom: 8, letterSpacing: "0.05em" }}>{item.phase}</p>
+                <p style={{ ...AR, fontSize: 13, color: "#94a3b8", lineHeight: 1.7, margin: 0 }}>{item.content}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 32, textAlign: "center" }}>
+            <a href="/ar/spine-surgery-germany" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
+              مزيد من المعلومات حول جراحة العمود الفقري في ألمانيا
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ S5: NEUROLOGICAL REHABILITATION ══════════════════════════════ */}
+      <section style={{ background: "#f8fafc", padding: "72px 24px" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
+            التأهيل العصبي
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 12, lineHeight: 1.5 }}>
+            إعادة التأهيل العصبي — الحالات والمقاربات
+          </h2>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, marginBottom: 40, maxWidth: 640 }}>
+            التأهيل العصبي يتطلب تقييمًا دقيقًا لكل حالة وتصميم برنامج مخصص — لا توجد بروتوكولات موحدة لجميع الحالات.
+          </p>
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 600 }}>
+              <thead>
+                <tr style={{ background: "#0B1C2C" }}>
+                  <th style={{ ...AR, padding: "14px 16px", color: "#94a3b8", fontSize: 12, fontWeight: 500, textAlign: "right", borderBottom: "1px solid #1e3a52" }}>الحالة</th>
+                  <th style={{ ...AR, padding: "14px 16px", color: "#94a3b8", fontSize: 12, fontWeight: 500, textAlign: "right", borderBottom: "1px solid #1e3a52" }}>المؤشرات السريرية</th>
+                  <th style={{ ...AR, padding: "14px 16px", color: "#94a3b8", fontSize: 12, fontWeight: 500, textAlign: "right", borderBottom: "1px solid #1e3a52" }}>المقاربة التأهيلية</th>
+                </tr>
+              </thead>
+              <tbody>
+                {NEURO_REHAB.map((row, i) => (
+                  <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#f8fafc", borderBottom: "1px solid #e2e8f0" }}>
+                    <td style={{ padding: "14px 16px" }}>
+                      <a href={row.link} style={{ ...AR, fontSize: 13, color: "#0B1C2C", fontWeight: 600, textDecoration: "none" }}>{row.condition}</a>
+                    </td>
+                    <td style={{ ...AR, padding: "14px 16px", fontSize: 13, color: "#475569", lineHeight: 1.6 }}>{row.indicators}</td>
+                    <td style={{ ...AR, padding: "14px 16px", fontSize: 13, color: "#475569", lineHeight: 1.6 }}>{row.approach}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ S6: VESTIBULAR / BALANCE REHABILITATION ══════════════════════ */}
+      <section style={{ padding: "72px 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
+            إعادة تأهيل التوازن والدهليز
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 12, lineHeight: 1.5 }}>
+            التأهيل الدهليزي واضطرابات التوازن
+          </h2>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, marginBottom: 40, maxWidth: 640 }}>
+            اضطرابات التوازن بعد الإصابات تحتاج تقييمًا متخصصًا يجمع بين الأنف والأذن والحنجرة وطب الأعصاب وإعادة التأهيل.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+            {VESTIBULAR_REHAB.map((item, i) => (
+              <div key={i} style={{ background: "#fff", padding: "28px 24px" }}>
+                <h3 style={{ ...AR, fontSize: 15, fontWeight: 600, color: "#0B1C2C", marginBottom: 10, lineHeight: 1.5 }}>{item.title}</h3>
+                <p style={{ ...AR, fontSize: 13, color: "#475569", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 24 }}>
+            <a href="/ar/dizziness-long-term" style={{ ...AR, display: "inline-block", padding: "10px 24px", background: "#0B1C2C", color: "#fff", fontSize: 13, textDecoration: "none" }}>
+              اقرأ عن الدوخة المزمنة واضطرابات التوازن
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ S7: PROSTHETICS + MOBILITY RESTORATION ═══════════════════════ */}
+      <section style={{ background: "#0B1C2C", padding: "72px 24px" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#64748b", textTransform: "uppercase", marginBottom: 12 }}>
+            الأطراف الصناعية واستعادة الحركة
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#f8fafc", marginBottom: 12, lineHeight: 1.5 }}>
+            الأطراف الصناعية المتقدمة وإعادة الحركة
+          </h2>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, marginBottom: 40, maxWidth: 640 }}>
+            تنسيق مسارات تركيب الأطراف الصناعية المتقدمة والتأهيل الحركي — من التقييم الأولي إلى إتقان استخدام الطرف الصناعي.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 1, background: "#1e3a52" }}>
+            {PROSTHETICS_DATA.map((item, i) => (
+              <div key={i} style={{ background: "#0f2235", padding: "24px 20px" }}>
+                <h3 style={{ ...AR, fontSize: 14, fontWeight: 600, color: "#e2e8f0", marginBottom: 10, lineHeight: 1.5 }}>{item.type}</h3>
+                <p style={{ ...AR, fontSize: 13, color: "#64748b", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 32, textAlign: "center" }}>
+            <a href="/ar/prosthetics-after-amputation-germany" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
+              مزيد من المعلومات حول الأطراف الصناعية في ألمانيا
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ S8: LONG-TERM CHRONIC RECOVERY ═══════════════════════════════ */}
+      <section style={{ background: "#f8fafc", padding: "72px 24px" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
+            الحالات المزمنة طويلة المدى
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 12, lineHeight: 1.5 }}>
+            التعافي طويل المدى والحالات المزمنة
+          </h2>
+          <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, marginBottom: 40, maxWidth: 640 }}>
+            بعض الحالات تحتاج متابعة تأهيلية ممتدة لأشهر أو سنوات — تنسيق الاستمرارية العلاجية جزء أساسي من مسار التعافي.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 1, background: "#e2e8f0" }}>
+            {CHRONIC_CASES.map((item, i) => (
+              <a key={i} href={item.link} style={{ background: "#fff", padding: "28px 24px", textDecoration: "none", display: "block" }}>
+                <h3 style={{ ...AR, fontSize: 15, fontWeight: 600, color: "#0B1C2C", marginBottom: 10, lineHeight: 1.5 }}>{item.title}</h3>
+                <p style={{ ...AR, fontSize: 13, color: "#475569", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ S9: FAQ ACCORDION ════════════════════════════════════════════ */}
+      <section style={{ padding: "72px 24px" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12 }}>
+            الأسئلة الشائعة
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 40, lineHeight: 1.5 }}>
+            أسئلة حول إعادة التأهيل المتقدم في ألمانيا
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "#e2e8f0" }}>
+            {FAQ_ITEMS.map((item, i) => (
+              <div key={i} style={{ background: "#fff" }}>
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{ ...AR, width: "100%", padding: "20px 24px", background: "none", border: "none", cursor: "pointer", textAlign: "right", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}
+                >
+                  <span style={{ ...AR, fontSize: 14, color: "#0B1C2C", fontWeight: 500, lineHeight: 1.6, flex: 1 }}>{item.q}</span>
+                  <span style={{ color: "#94a3b8", fontSize: 18, flexShrink: 0, marginTop: 2 }}>{openFaq === i ? "−" : "+"}</span>
+                </button>
+                {openFaq === i && (
+                  <div style={{ padding: "0 24px 20px" }}>
+                    <p style={{ ...AR, fontSize: 13, color: "#475569", lineHeight: 1.8, margin: 0 }}>{item.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ CROSS-CLUSTER SECTION ════════════════════════════════════════ */}
+      <CrossClusterSection
+        clusters={["trauma_mri_rehab", "neuro_spine", "vestibular_audiology", "hno_neuro"]}
+        excludeCurrentHref="/ar/advanced-rehabilitation-germany"
+      />
+
+      {/* ══ S10: AUTHORITY CTA ═══════════════════════════════════════════ */}
+      <section style={{ background: "#0B1C2C", padding: "80px 24px", textAlign: "center" }}>
+        <div style={{ maxWidth: 640, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 11, letterSpacing: "0.18em", color: "#64748b", textTransform: "uppercase", marginBottom: 20 }}>
+            تنسيق طبي متخصص
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(22px, 3.5vw, 36px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.5, marginBottom: 20 }}>
+            هل حالتك تحتاج إلى تقييم تأهيلي متخصص في ألمانيا؟
+          </h2>
+          <p style={{ ...AR, fontSize: 15, color: "#64748b", lineHeight: 1.85, marginBottom: 16 }}>
+            نُقيّم التقارير الطبية من برلين ونُحدد مدى ملاءمة برامج التأهيل المتقدم في ألمانيا — للحالات القادمة من ليبيا، السودان، العراق، ودول الخليج.
+          </p>
+          <p style={{ ...AR, fontSize: 13, color: "#475569", lineHeight: 1.8, marginBottom: 36 }}>
+            لا يُتخذ قرار السفر إلا بعد التقييم الأولي وتحديد البرنامج المناسب.
+          </p>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
+              أرسل التقارير الطبية للتقييم
+            </a>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "transparent", color: "#94a3b8", fontSize: 14, textDecoration: "none", border: "1px solid #334155" }}>
+              تواصل عبر واتسآب
+            </a>
+          </div>
+          <p style={{ ...AR, fontSize: 11, color: "#334155", marginTop: 20 }}>
+            تنسيق طبي وتأهيلي للحالات المعقدة داخل ألمانيا — Medical Care Germany، برلين
+          </p>
         </div>
       </section>
 

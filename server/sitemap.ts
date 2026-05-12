@@ -277,6 +277,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/orthopedics-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 ];
 
 function generateSitemapXML(urls: SitemapUrl[]): string {

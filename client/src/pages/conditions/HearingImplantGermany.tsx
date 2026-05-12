@@ -3,6 +3,7 @@
  * زراعة القوقعة وضعف السمع في ألمانيا
  */
 
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
@@ -144,6 +145,10 @@ export default function HearingImplantGermany() {
         </div>
       </section>
 
+      <CrossClusterSection
+        clusters={["vestibular_audiology", "hno_neuro", "head_neck_tumor"]}
+        excludeCurrentHref="/ar/hearing-implant-germany"
+      />
       <ArabicFooterGuide />
     </div>
   );

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
@@ -336,6 +337,10 @@ export default function ComplexTraumaGermany() {
         </div>
       </section>
 
+      <CrossClusterSection
+        clusters={["trauma_mri_rehab", "neuro_spine", "hno_neuro"]}
+        excludeCurrentHref="/ar/complex-trauma-germany"
+      />
       <ArabicFooterGuide />
     </div>
   );

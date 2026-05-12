@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useEffect } from "react";
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const NERVE_FAQ_JSONLD = {
@@ -442,7 +443,11 @@ export default function NerveInjuryAfterTraumaGermany() {
 
       {/* FOOTER */}
       <footer className="bg-white border-t border-slate-100">
-        <ArabicFooterGuide />
+        <CrossClusterSection
+        clusters={["trauma_mri_rehab", "neuro_spine"]}
+        excludeCurrentHref="/ar/nerve-injury-after-trauma-germany"
+      />
+      <ArabicFooterGuide />
         <div className="py-8 px-6 text-center">
           <p className="text-xs text-slate-400" style={FONT}>
             ميديكال كير جيرماني · برلين، ألمانيا

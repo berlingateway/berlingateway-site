@@ -4,6 +4,7 @@
  */
 
 import { useEffect } from "react";
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
@@ -260,6 +261,10 @@ export default function EntGermany() {
         </div>
       </section>
 
+      <CrossClusterSection
+        clusters={["hno_neuro", "vestibular_audiology", "head_neck_tumor", "neuro_spine"]}
+        excludeCurrentHref="/ar/ent-germany"
+      />
       <ArabicFooterGuide />
     </div>
   );

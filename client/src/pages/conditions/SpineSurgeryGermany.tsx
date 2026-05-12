@@ -5,6 +5,7 @@
  */
 
 import { useEffect } from "react";
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
@@ -622,6 +623,10 @@ export default function SpineSurgeryGermany() {
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────────── */}
+      <CrossClusterSection
+        clusters={["neuro_spine", "trauma_mri_rehab", "hno_neuro"]}
+        excludeCurrentHref="/ar/spine-surgery-germany"
+      />
       <ArabicFooterGuide />
     </div>
   );

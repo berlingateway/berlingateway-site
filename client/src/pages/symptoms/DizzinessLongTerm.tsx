@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
+import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT: React.CSSProperties = {
@@ -919,6 +920,11 @@ export default function DizzinessLongTerm() {
         </div>
       </section>
 
+      {/* ── CROSS-CLUSTER INTELLIGENCE ─────────────────────────── */}
+      <CrossClusterSection
+        clusters={["hno_neuro", "neuro_spine", "trauma_mri_rehab", "vestibular_audiology", "head_neck_tumor"]}
+        excludeCurrentHref="/ar/dizziness-long-term"
+      />
       {/* ── FOOTER ──────────────────────────────────────────────── */}
       <ArabicFooterGuide />
     </div>

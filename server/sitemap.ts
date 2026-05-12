@@ -263,6 +263,13 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.7,
   },
+
+  // ── Arabic Spine + Orthopedics Cluster ──────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/spine-surgery-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 ];
 
 function generateSitemapXML(urls: SitemapUrl[]): string {

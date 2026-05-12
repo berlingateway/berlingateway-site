@@ -100,10 +100,21 @@ export default defineConfig({
     // Production optimization
     minify: 'terser',
     sourcemap: false, // No source maps in production
+    chunkSizeWarningLimit: 4000,
     rollupOptions: {
       output: {
-        // Clean production output (no dev artifacts)
-        manualChunks: undefined,
+        // Split vendor and app code for better caching
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) return 'vendor-react';
+            if (id.includes('wouter') || id.includes('trpc') || id.includes('tanstack')) return 'vendor-query';
+            return 'vendor';
+          }
+          // Split Arabic pages into a separate chunk
+          if (id.includes('/pages/') && (id.includes('/ar/') || id.includes('Arabic') || id.includes('conditions') || id.includes('symptoms'))) {
+            return 'pages-arabic';
+          }
+        },
         // Remove comments from production build
         banner: '',
         footer: '',

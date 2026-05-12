@@ -78,7 +78,7 @@ const STATIC_ROUTES: SitemapUrl[] = [
   {
     loc: `${CANONICAL_DOMAIN}/ar/dizziness-long-term`,
     changefreq: 'monthly',
-    priority: 0.75,
+    priority: 0.9,
   },
   {
     loc: `${CANONICAL_DOMAIN}/ar/vertigo-unknown-cause`,
@@ -241,7 +241,7 @@ const STATIC_ROUTES: SitemapUrl[] = [
   {
     loc: `${CANONICAL_DOMAIN}/ar/tinnitus-treatment-germany`,
     changefreq: 'monthly',
-    priority: 0.7,
+    priority: 0.9,
   },
   {
     loc: `${CANONICAL_DOMAIN}/ar/voice-prosthesis-germany`,

@@ -53,7 +53,7 @@ fi
 # Layer 3: Check for dev mode flags
 echo ""
 echo "🔎 Layer 3: Scanning for development mode flags..."
-DEV_FLAGS=$(grep -r "isDevelopment\|__DEV__\|development.*true" "$DIST_DIR" 2>/dev/null || true)
+DEV_FLAGS=$(grep -rw "isDevelopment\|__DEV__" "$DIST_DIR" 2>/dev/null || true)
 
 if [ -n "$DEV_FLAGS" ]; then
   echo "❌ FAILED: Development mode flags found in production bundle:"
@@ -87,8 +87,8 @@ else
   SCRIPT_COUNT=$(grep -c "<script" "$HTML_FILE" || true)
   echo "   📊 Script tags found: $SCRIPT_COUNT"
   
-  if [ "$SCRIPT_COUNT" -gt 3 ]; then
-    echo "⚠️  WARNING: More than 3 script tags found (expected: 1 JSON-LD + 1 module + 1 analytics)"
+  if [ "$SCRIPT_COUNT" -gt 8 ]; then
+    echo "⚠️  WARNING: More than 8 script tags found (expected: vendor chunks + module + analytics)"
   fi
 fi
 

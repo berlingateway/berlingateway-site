@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <title>{{ page_title }}</title>
-  <meta name="description" content="{{ hero_subtitle }}" />
+  <meta name="description" content="{{ meta_description }}" />
+  <meta property="og:title" content="{{ og_title }}" />
+  <meta property="og:description" content="{{ og_description }}" />
+  <meta property="og:type" content="website" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="author" content="Berlin Gateway" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://berlingateway.de/de/{{ page_slug }}.html" />
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/{{ page_slug }}.html" />
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/{{ page_slug }}.html" />
+  <link rel="canonical" href="https://berlingateway.de/de/{{ page_slug }}/" />
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/{{ page_slug }}/" />
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/{{ page_slug }}/" />
   <link rel="stylesheet" href="/assets/css/app.css" />
   <style>
     .assessment-hero {

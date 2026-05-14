@@ -9,486 +9,475 @@
     <meta property="og:title" content="Chancenkarte Deutschland: Ihre professionelle Bewertung">
     <meta property="og:description" content="Erhalten Sie eine strategische Bewertung Ihrer Chancen im deutschen Fachkräftesystem. Basierend auf Anerkennung, Sprache und Arbeitsmarktrelevanz.">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/css/layout-system.css">
-    <link rel="stylesheet" href="/assets/css/cluster-system.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bg-core.css">
     <style>
-        .chancenkarte-container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .chancenkarte-hero {
-            background: #1A1D24;
-            color: #FFFFFF;
-            padding: 48px 0 40px 0;
-            margin-bottom: 0;
-        }
-        .chancenkarte-hero h1 {
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 12px;
-            color: #FFFFFF;
-        }
-        .chancenkarte-hero p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 8px 0;
-            opacity: 0.95;
-        }
-        .chancenkarte-hero .subtitle {
-            font-size: 15px;
-            opacity: 0.85;
-            margin-top: 12px;
-        }
-        .intelligence-card {
-            background: #f8f9fa;
-            border-left: 3px solid #1A1D24;
-            padding: 16px;
-            margin: 12px 0;
-            border-radius: 0;
-        }
-        .intelligence-card h3 {
-            font-size: 14px;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        .intelligence-card p {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #555;
+        /* CHANCENKARTE-SPEZIFISCHE ERGÄNZUNGEN */
+        .chancenkarte-faq {
+            list-style: none;
+            padding: 0;
             margin: 0;
         }
-        .assessment-container {
-            background: white;
-            padding: 32px;
-            border: 2px solid #1A1D24;
-            border-radius: 0;
-            max-width: 600px;
-            margin: 32px auto;
+
+        .chancenkarte-faq li {
+            border-bottom: 1px solid var(--bg-border);
+            padding-block: var(--bg-space-md);
         }
-        .assessment-disclaimer {
-            background: #f3f5f8;
-            border: 1px solid #D9E1EA;
-            padding: 12px;
-            border-radius: 0;
-            font-size: 12px;
-            line-height: 1.5;
-            color: #555;
-            margin-bottom: 20px;
+
+        .chancenkarte-faq li:last-child {
+            border-bottom: none;
         }
-        .assessment-process {
+
+        .faq-question {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 24px;
-            gap: 8px;
-        }
-        .process-step {
-            flex: 1;
-            text-align: center;
-            font-size: 11px;
-            font-weight: 600;
-            color: #666;
-        }
-        .process-step-number {
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            background: #1A1D24;
-            color: white;
-            border-radius: 50%;
-            line-height: 28px;
-            margin-bottom: 6px;
+            align-items: center;
+            cursor: pointer;
             font-weight: 700;
-            font-size: 12px;
+            color: var(--bg-black);
+            user-select: none;
         }
-        .chancenkarte-form-wrapper {
-            background: white;
-            padding: 0;
-            border-radius: 0;
-            box-shadow: none;
-            max-width: 100%;
-            margin: 0;
+
+        .faq-answer {
+            display: none;
+            padding-top: var(--bg-space-md);
+            color: var(--bg-text-muted);
+            line-height: 1.6;
         }
-        .chancenkarte-form-wrapper h2 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: left;
-            color: #000;
-        }
-        .form-group {
-            margin-bottom: 16px;
-        }
-        .form-group label {
+
+        .faq-answer.active {
             display: block;
-            font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 13px;
-            color: #333;
         }
-        .form-group input,
-        .form-group select {
+
+        .faq-toggle {
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        /* MATRIX TABLE STYLING */
+        .chancenkarte-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--bg-space-lg) 0;
+        }
+
+        .chancenkarte-matrix thead {
+            background-color: var(--bg-light-grey);
+        }
+
+        .chancenkarte-matrix th {
+            padding: var(--bg-space-md);
+            text-align: left;
+            font-weight: 700;
+            font-size: var(--bg-fs-small);
+            color: var(--bg-black);
+            border-bottom: 1px solid var(--bg-border);
+        }
+
+        .chancenkarte-matrix td {
+            padding: var(--bg-space-md);
+            border-bottom: 1px solid var(--bg-border);
+            font-size: var(--bg-fs-small);
+        }
+
+        .chancenkarte-matrix tr:hover {
+            background-color: var(--bg-light-grey);
+        }
+
+        .matrix-risk-high {
+            color: #DC2626;
+            font-weight: 700;
+        }
+
+        .matrix-risk-medium {
+            color: #F59E0B;
+            font-weight: 700;
+        }
+
+        .matrix-risk-low {
+            color: #10B981;
+            font-weight: 700;
+        }
+
+        /* FORM STYLING */
+        .chancenkarte-form {
+            background-color: var(--bg-white);
+            border: 1px solid var(--bg-border);
+            border-radius: 6px;
+            padding: var(--bg-space-lg);
+            margin: var(--bg-space-lg) 0;
+        }
+
+        .chancenkarte-form-group {
+            margin-bottom: var(--bg-space-md);
+        }
+
+        .chancenkarte-form label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: var(--bg-fs-small);
+            color: var(--bg-black);
+        }
+
+        .chancenkarte-form input,
+        .chancenkarte-form select {
             width: 100%;
             padding: 10px;
-            border: 1px solid #D9E1EA;
-            border-radius: 0;
-            font-size: 13px;
-            font-family: Inter, sans-serif;
+            border: 1px solid var(--bg-border);
+            border-radius: 4px;
+            font-size: var(--bg-fs-small);
+            font-family: var(--bg-font-main);
             box-sizing: border-box;
         }
-        .form-group input:focus,
-        .form-group select:focus {
+
+        .chancenkarte-form input:focus,
+        .chancenkarte-form select:focus {
             outline: none;
-            border-color: #1A1D24;
-            box-shadow: 0 0 0 2px rgba(26, 29, 36, 0.1);
+            border-color: var(--bg-blue);
+            box-shadow: 0 0 0 2px rgba(11, 59, 140, 0.1);
         }
-        .form-group small {
+
+        .chancenkarte-form-small {
             display: block;
-            font-size: 11px;
-            color: #999;
+            font-size: var(--bg-fs-xs);
+            color: var(--bg-text-muted);
             margin-top: 4px;
         }
-        .form-submit {
+
+        .chancenkarte-form-submit {
             width: 100%;
             min-height: 44px;
-            background: #1A1D24;
-            color: #ffffff;
-            font-size: 14px;
+            background: var(--bg-blue);
+            color: var(--bg-white);
+            font-size: var(--bg-fs-small);
             font-weight: 700;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            border-radius: 4px;
             border: none;
             cursor: pointer;
             margin-top: 8px;
             transition: background 0.2s ease;
-            opacity: 1;
-            visibility: visible;
         }
-        .form-submit:hover {
-            background: #111111;
+
+        .chancenkarte-form-submit:hover {
+            background: var(--bg-blue-hover);
         }
-        .content-block {
-            margin: 32px 0;
-            padding: 0 20px;
-        }
-        .content-block h2 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .content-block h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .content-block p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-        .demand-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-            margin: 20px 0;
-        }
-        .demand-card {
-            background: white;
-            border: 1px solid #D9E1EA;
-            border-radius: 0;
-            padding: 16px;
-            box-shadow: none;
-        }
-        .demand-card h3 {
-            font-size: 14px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            color: #000;
-        }
-        .demand-card p {
-            font-size: 12px;
-            line-height: 1.5;
-            color: #666;
-            margin: 6px 0;
-        }
-        .demand-card strong {
-            color: #1A1D24;
-            font-weight: 700;
-        }
-        .navigation-modules {
+
+        /* PROCESS STEPS GRID */
+        .process-steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin: 20px 0;
+            gap: var(--bg-space-md);
+            margin: var(--bg-space-lg) 0;
         }
-        .navigation-module {
-            background: white;
-            border: 1px solid #D9E1EA;
-            border-radius: 0;
-            padding: 16px;
-            transition: box-shadow 0.2s;
-        }
-        .navigation-module:hover {
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-        }
-        .navigation-module h3 {
-            font-size: 13px;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        .navigation-module p {
-            font-size: 12px;
-            line-height: 1.5;
-            color: #666;
-            margin: 0 0 10px 0;
-        }
-        .navigation-module a {
-            color: #1A1D24;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 13px;
-        }
-        .navigation-module a:hover {
-            text-decoration: underline;
-            color: #333;
-        }
-        .contextual-cta {
-            background: #1A1D24;
-            color: #FFFFFF;
-            padding: 20px;
-            margin: 24px 0;
+
+        .process-step-item {
             text-align: center;
-            border-radius: 0;
+            padding: var(--bg-space-md);
         }
-        .contextual-cta h3 {
-            font-size: 16px;
+
+        .process-step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: var(--bg-blue);
+            color: var(--bg-white);
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: var(--bg-fs-h2);
+            margin-bottom: var(--bg-space-sm);
+        }
+
+        .process-step-title {
             font-weight: 700;
+            font-size: var(--bg-fs-small);
+            color: var(--bg-black);
+            margin-bottom: 4px;
+        }
+
+        .process-step-desc {
+            font-size: var(--bg-fs-xs);
+            color: var(--bg-text-muted);
+        }
+
+        /* DEMAND CARDS */
+        .demand-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--bg-space-md);
+            margin: var(--bg-space-lg) 0;
+        }
+
+        .demand-card {
+            background: var(--bg-white);
+            border: 1px solid var(--bg-border);
+            border-radius: 6px;
+            padding: var(--bg-space-lg);
+            transition: border-color 0.15s ease;
+        }
+
+        .demand-card:hover {
+            border-color: var(--bg-blue);
+        }
+
+        .demand-card h3 {
+            font-size: var(--bg-fs-h3);
+            font-weight: 800;
+            margin-bottom: var(--bg-space-sm);
+            color: var(--bg-black);
+        }
+
+        .demand-card p {
+            font-size: var(--bg-fs-small);
+            color: var(--bg-text-muted);
             margin-bottom: 8px;
-            color: #FFFFFF;
-        }
-        .contextual-cta p {
-            font-size: 13px;
             line-height: 1.5;
-            margin-bottom: 12px;
-            opacity: 0.95;
         }
-        .contextual-cta-btn {
-            background: #1A1D24;
-            color: #FFFFFF;
-            border: none;
-            padding: 10px 20px;
-            font-size: 12px;
+
+        .demand-card strong {
+            color: var(--bg-black);
             font-weight: 700;
-            cursor: pointer;
-            border-radius: 0;
+        }
+
+        /* NAVIGATION MODULES */
+        .nav-modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--bg-space-md);
+            margin: var(--bg-space-lg) 0;
+        }
+
+        .nav-module {
+            background: var(--bg-white);
+            border: 1px solid var(--bg-border);
+            border-radius: 6px;
+            padding: var(--bg-space-lg);
+            transition: box-shadow 0.15s ease;
+        }
+
+        .nav-module:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .nav-module h3 {
+            font-size: var(--bg-fs-small);
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--bg-black);
+        }
+
+        .nav-module p {
+            font-size: var(--bg-fs-xs);
+            color: var(--bg-text-muted);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .nav-module a {
+            color: var(--bg-blue);
             text-decoration: none;
-            display: inline-block;
-            transition: background 0.2s;
+            font-weight: 700;
+            font-size: var(--bg-fs-xs);
         }
-        .contextual-cta-btn:hover {
-            background: #111111;
+
+        .nav-module a:hover {
+            text-decoration: underline;
         }
+
+        /* DISCLAIMER BOX */
+        .assessment-disclaimer {
+            background: var(--bg-light-grey);
+            border: 1px solid var(--bg-border);
+            border-radius: 6px;
+            padding: var(--bg-space-md);
+            margin-bottom: var(--bg-space-lg);
+            font-size: var(--bg-fs-xs);
+            line-height: 1.6;
+            color: var(--bg-text-muted);
+        }
+
         @media (max-width: 768px) {
-            .chancenkarte-hero h1 {
-                font-size: 24px;
-            }
-            .assessment-process {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .demand-cards {
+            .process-steps-grid,
+            .demand-cards-grid,
+            .nav-modules-grid {
                 grid-template-columns: 1fr;
             }
-            .navigation-modules {
-                grid-template-columns: 1fr;
+
+            .chancenkarte-matrix {
+                font-size: var(--bg-fs-xs);
             }
-            .content-block {
-                padding: 0;
-            }
-            .assessment-container {
-                padding: 20px;
-            }
-            /* Matrix Mobile Card Layout */
-            .matrix-container {
-                overflow-x: visible;
-                margin: 16px 0;
-            }
-            .matrix-table {
-                display: block;
-                width: 100%;
-                border-collapse: collapse;
-            }
-            .matrix-table thead {
-                display: none;
-            }
-            .matrix-table tbody {
-                display: block;
-            }
-            .matrix-table tr {
-                display: block;
-                border: 1px solid #D9E1EA;
-                margin-bottom: 12px;
-                border-radius: 0;
-                background: white;
-            }
-            .matrix-table td {
-                display: block;
-                padding: 10px;
-                border: none;
-                border-bottom: 1px solid #D9E1EA;
-                font-size: 12px;
-                text-align: left;
-            }
-            .matrix-table td:last-child {
-                border-bottom: none;
-            }
-            .matrix-table td:before {
-                content: attr(data-label);
-                font-weight: 700;
-                color: #1A1D24;
-                display: block;
-                margin-bottom: 4px;
-                font-size: 11px;
-                text-transform: uppercase;
-                letter-spacing: 0.3px;
-            }
-            .matrix-profile-type {
-                font-weight: 700;
-                font-size: 13px;
+
+            .chancenkarte-matrix th,
+            .chancenkarte-matrix td {
+                padding: 8px;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/chancenkarte/" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+    <!-- 1. TOP BAR -->
+    <div class="bg-bg-black bg-text-white" style="padding-block: 8px; font-size: 13px;">
+        <div class="bg-container">
+            <div class="bg-cluster" style="justify-content: space-between;">
+                <div class="bg-cluster bg-hide-mobile">
+                    <span>Berlin Headquarter: +49 (0) 30 12345678</span>
+                    <span>E-Mail: info@berlingateway.de</span>
+                </div>
+                <div class="bg-cluster" style="margin-left: auto;">
+                    <span style="font-weight: 700;">DE</span>
+                    <a href="/ar/chancenkarte/" style="text-decoration: none; color: var(--bg-white);">AR</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/chancenkarte/" class="nav-link active">Chancenkarte</a>
-            <a href="/de/assessment/" class="nav-link">Punkte-Rechner</a>
-            <a href="/de/systemlogik/" class="nav-link">Systemlogik</a>
-            <a href="/de/monitor/" class="nav-link">Monitor</a>
-            <a href="/de/insights/" class="nav-link">Insights</a>
-        </nav>
-    </div>
-</header>
+    <!-- 2. MAIN HEADER -->
+    <header style="padding-block: 20px; border-bottom: 1px solid var(--bg-border);">
+        <div class="bg-container">
+            <div class="bg-cluster" style="justify-content: space-between;">
+                <div style="width: 100%;">
+                    <div class="bg-cluster" style="justify-content: space-between; width: 100%;">
+                        <a href="/de/" style="text-decoration: none; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: var(--bg-black);">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></a>
+                        <nav class="bg-cluster bg-hide-mobile">
+                            <a href="/de/chancenkarte/" style="text-decoration: none; color: var(--bg-blue); font-weight: 700; font-size: 14px;">Chancenkarte</a>
+                            <a href="/de/assessment/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Punkte-Rechner</a>
+                            <a href="/de/systemlogik/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Systemlogik</a>
+                            <a href="/de/monitor/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Monitor</a>
+                            <a href="/de/insights/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Insights</a>
+                        </nav>
+                    </div>
+                    <nav class="bg-mobile-nav">
+                        <a href="/de/chancenkarte/" class="bg-mobile-nav-link" style="color: var(--bg-blue); font-weight: 700;">Chancenkarte</a>
+                        <a href="/de/assessment/" class="bg-mobile-nav-link">Punkte-Rechner</a>
+                        <a href="/de/systemlogik/" class="bg-mobile-nav-link">Systemlogik</a>
+                        <a href="/de/monitor/" class="bg-mobile-nav-link">Monitor</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
-    </div>
-</nav>
-
-<main>
-    <!-- HERO SECTION -->
-    <section class="chancenkarte-hero">
-        <div class="chancenkarte-container">
-            <h1>Chancenkarte Deutschland: Strategische Bewertung</h1>
-            <p>Basierend auf realen Anforderungen des deutschen Arbeitsmarktes.</p>
-            <p class="subtitle">Nicht jedes Profil ist gleich gut positioniert. Diese strukturierte Einschätzung hilft Ihnen, Ihre reale Ausgangslage besser zu verstehen.</p>
+    <!-- 3. HERO SECTION -->
+    <section class="bg-section bg-section-dark">
+        <div class="bg-container">
+            <div class="bg-stack">
+                <span class="bg-label">Chancenkarte Deutschland</span>
+                <h1 class="bg-heading-hero">Strategische Bewertung Ihrer Chancen</h1>
+                <p class="bg-text-body">
+                    Basierend auf realen Anforderungen des deutschen Arbeitsmarktes. Nicht jedes Profil ist gleich gut positioniert. Diese strukturierte Einschätzung hilft Ihnen, Ihre reale Ausgangslage besser zu verstehen.
+                </p>
+                <div class="bg-cluster">
+                    <a href="#bewertung" class="bg-btn bg-btn-primary">Bewertung starten</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- MAIN CONTENT -->
-    <div class="chancenkarte-container">
-        
-        <!-- INSTITUTIONELLER ABLAUF (5-Step Process) -->
-        <section class="cluster-section">
-            <h2>Institutioneller Bewertungsprozess</h2>
-            <p>Unsere strukturierte Methode zur Einschätzung Ihrer Chancen im deutschen Fachkräftesystem:</p>
-            
-            <div class="ablauf-container">
-                <div class="ablauf-step">
-                    <div class="ablauf-step-number">01</div>
-                    <div class="ablauf-step-title">Profilanalyse</div>
-                    <div class="ablauf-step-desc">Erfassung Ihrer Qualifikation, Erfahrung und Ziele</div>
-                </div>
-                <div class="ablauf-step">
-                    <div class="ablauf-step-number">02</div>
-                    <div class="ablauf-step-title">Anerkennung & Systemlogik</div>
-                    <div class="ablauf-step-desc">Bewertung der Anerkennungschancen und Systemkompatibilität</div>
-                </div>
-                <div class="ablauf-step">
-                    <div class="ablauf-step-number">03</div>
-                    <div class="ablauf-step-title">Sprachrealität & Marktreife</div>
-                    <div class="ablauf-step-desc">Analyse der Sprachanforderungen und Arbeitsmarktreife</div>
-                </div>
-                <div class="ablauf-step">
-                    <div class="ablauf-step-number">04</div>
-                    <div class="ablauf-step-title">Bewerbungsfähigkeit</div>
-                    <div class="ablauf-step-desc">Bewertung Ihrer Positionierung für den Arbeitsmarkt</div>
-                </div>
-                <div class="ablauf-step">
-                    <div class="ablauf-step-number">05</div>
-                    <div class="ablauf-step-title">Strategische Empfehlung</div>
-                    <div class="ablauf-step-desc">Personalisierter Handlungsplan für Ihren Weg</div>
-                </div>
+    <!-- 4. TRUST STRIP -->
+    <div class="bg-trust-strip">
+        <div class="bg-container">
+            <div class="bg-trust-flex">
+                <div class="bg-trust-item">DEUTSCHE ARBEITSMARKT-REALITÄT</div>
+                <div class="bg-trust-item">STRUKTURIERTE BEWERTUNG</div>
+                <div class="bg-trust-item">STRATEGISCHE EMPFEHLUNG</div>
+                <div class="bg-trust-item">OPERATIVE BEGLEITUNG</div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- KRITISCHE SYSTEMBARRIEREN -->
-        <section class="cluster-section">
-            <h2>Kritische Systembarrieren</h2>
-            <p>Diese Faktoren beeinflussen Ihre Chancen im deutschen Fachkräftesystem entscheidend:</p>
-            
-            <div class="intelligence-card">
-                <h3>Anerkennung & Dokumentation</h3>
-                <p>Viele internationale Abschlüsse erfordern formale Anerkennung. Ohne diese ist der Arbeitsmarktzugang stark begrenzt.</p>
+    <!-- 5. PROCESS SECTION -->
+    <section class="bg-section">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">Bewertungsprozess</span>
+                <h2 class="bg-heading-section">Institutioneller Bewertungsprozess</h2>
+                <p class="bg-text-body">Unsere strukturierte Methode zur Einschätzung Ihrer Chancen im deutschen Fachkräftesystem:</p>
             </div>
-            <div class="intelligence-card">
-                <h3>Sprachrealität vs. Theorie</h3>
-                <p>B2 ist das Minimum für komplexe Tätigkeiten. Viele unterschätzen die praktischen Anforderungen im Arbeitsalltag.</p>
+            <div class="process-steps-grid">
+                <div class="process-step-item">
+                    <div class="process-step-number">01</div>
+                    <div class="process-step-title">Profilanalyse</div>
+                    <div class="process-step-desc">Erfassung Ihrer Qualifikation, Erfahrung und Ziele</div>
+                </div>
+                <div class="process-step-item">
+                    <div class="process-step-number">02</div>
+                    <div class="process-step-title">Anerkennung & Systemlogik</div>
+                    <div class="process-step-desc">Bewertung der Anerkennungschancen und Systemkompatibilität</div>
+                </div>
+                <div class="process-step-item">
+                    <div class="process-step-number">03</div>
+                    <div class="process-step-title">Sprachrealität & Marktreife</div>
+                    <div class="process-step-desc">Analyse der Sprachanforderungen und Arbeitsmarktreife</div>
+                </div>
+                <div class="process-step-item">
+                    <div class="process-step-number">04</div>
+                    <div class="process-step-title">Bewerbungsfähigkeit</div>
+                    <div class="process-step-desc">Bewertung Ihrer Positionierung für den Arbeitsmarkt</div>
+                </div>
+                <div class="process-step-item">
+                    <div class="process-step-number">05</div>
+                    <div class="process-step-title">Strategische Empfehlung</div>
+                    <div class="process-step-desc">Personalisierter Handlungsplan für Ihren Weg</div>
+                </div>
             </div>
-            <div class="intelligence-card">
-                <h3>Arbeitsmarktrelevanz des Profils</h3>
-                <p>Ihre Qualifikation muss zur aktuellen Nachfrage passen. Spezialisierungen können ein Vorteil oder ein Hindernis sein.</p>
-            </div>
-            <div class="intelligence-card">
-                <h3>Klare berufliche Zielrichtung</h3>
-                <p>Arbeitgeber erwarten Klarheit über Ihre beruflichen Ziele. Unklare Positionierung reduziert Chancen deutlich.</p>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ENTSCHEIDUNGSMATRIX -->
-        <section class="cluster-section">
-            <h2>Entscheidungsmatrix: Welcher Weg passt zu Ihrem Profil?</h2>
-            <p>Diese Matrix zeigt, wie verschiedene Profiltypen im deutschen System positioniert werden:</p>
-            
-            <div class="matrix-container">
-                <table class="matrix-table">
+    <!-- 6. BARRIERS SECTION -->
+    <section class="bg-section" style="background-color: var(--bg-light-grey);">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">Systembarrieren</span>
+                <h2 class="bg-heading-section">Kritische Systembarrieren</h2>
+                <p class="bg-text-body">Diese Faktoren beeinflussen Ihre Chancen im deutschen Fachkräftesystem entscheidend:</p>
+            </div>
+            <div class="bg-grid bg-grid-3">
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Anerkennung & Dokumentation</h3>
+                    <p class="bg-text-small">Viele internationale Abschlüsse erfordern formale Anerkennung. Ohne diese ist der Arbeitsmarktzugang stark begrenzt.</p>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Sprachrealität vs. Theorie</h3>
+                    <p class="bg-text-small">B2 ist das Minimum für komplexe Tätigkeiten. Viele unterschätzen die praktischen Anforderungen im Arbeitsalltag.</p>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Arbeitsmarktrelevanz des Profils</h3>
+                    <p class="bg-text-small">Ihre Qualifikation muss zur aktuellen Nachfrage passen. Spezialisierungen können ein Vorteil oder ein Hindernis sein.</p>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Klare berufliche Zielrichtung</h3>
+                    <p class="bg-text-small">Arbeitgeber erwarten Klarheit über Ihre beruflichen Ziele. Unklare Positionierung reduziert Chancen deutlich.</p>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Visum & Rechtsstatus</h3>
+                    <p class="bg-text-small">Der richtige Visum-Status ist Voraussetzung. Chancenkarte, Fachkräfte-Visum und Arbeitsvisum haben unterschiedliche Anforderungen.</p>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Arbeitsmarkt-Timing</h3>
+                    <p class="bg-text-small">Der richtige Zeitpunkt für Ihren Einstieg ist entscheidend. Saisonale und konjunkturelle Faktoren spielen eine Rolle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. DECISION MATRIX -->
+    <section class="bg-section">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">Profiltypen</span>
+                <h2 class="bg-heading-section">Entscheidungsmatrix: Welcher Weg passt zu Ihrem Profil?</h2>
+                <p class="bg-text-body">Diese Matrix zeigt, wie verschiedene Profiltypen im deutschen System positioniert werden:</p>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="chancenkarte-matrix">
                     <thead>
                         <tr>
                             <th>Profiltyp</th>
@@ -500,169 +489,155 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="matrix-profile-type" data-label="Profiltyp">Ärzte</td>
-                            <td data-label="Systemrisiko"><span class="matrix-risk-high">Hoch</span></td>
-                            <td data-label="Anerkennung">Approbation erforderlich</td>
-                            <td data-label="Sprache">C1 Deutsch</td>
-                            <td data-label="Empfohlener Pfad">Anerkennung → Prüfung</td>
+                            <td><strong>Ärzte</strong></td>
+                            <td><span class="matrix-risk-high">Hoch</span></td>
+                            <td>Approbation erforderlich</td>
+                            <td>C1 Deutsch</td>
+                            <td>Anerkennung → Prüfung</td>
                         </tr>
                         <tr>
-                            <td class="matrix-profile-type" data-label="Profiltyp">Ingenieure</td>
-                            <td data-label="Systemrisiko"><span class="matrix-risk-medium">Mittel</span></td>
-                            <td data-label="Anerkennung">Anerkennung/Äquivalenz</td>
-                            <td data-label="Sprache">B2-C1 Deutsch</td>
-                            <td data-label="Empfohlener Pfad">Chancenkarte/Direkteinstieg</td>
+                            <td><strong>Ingenieure</strong></td>
+                            <td><span class="matrix-risk-medium">Mittel</span></td>
+                            <td>Anerkennung/Äquivalenz</td>
+                            <td>B2-C1 Deutsch</td>
+                            <td>Chancenkarte/Direkteinstieg</td>
                         </tr>
                         <tr>
-                            <td class="matrix-profile-type" data-label="Profiltyp">Pflegekräfte</td>
-                            <td data-label="Systemrisiko"><span class="matrix-risk-high">Hoch</span></td>
-                            <td data-label="Anerkennung">Anerkennung erforderlich</td>
-                            <td data-label="Sprache">C1 Deutsch</td>
-                            <td data-label="Empfohlener Pfad">Anerkennung → Arbeit</td>
+                            <td><strong>Pflegekräfte</strong></td>
+                            <td><span class="matrix-risk-high">Hoch</span></td>
+                            <td>Anerkennung erforderlich</td>
+                            <td>C1 Deutsch</td>
+                            <td>Anerkennung → Arbeit</td>
                         </tr>
                         <tr>
-                            <td class="matrix-profile-type" data-label="Profiltyp">IT-Spezialisten</td>
-                            <td data-label="Systemrisiko"><span class="matrix-risk-low">Niedrig</span></td>
-                            <td data-label="Anerkennung">Portfolio statt Anerkennung</td>
-                            <td data-label="Sprache">B2 Deutsch</td>
-                            <td data-label="Empfohlener Pfad">Chancenkarte/Direkteinstieg</td>
+                            <td><strong>IT-Spezialisten</strong></td>
+                            <td><span class="matrix-risk-low">Niedrig</span></td>
+                            <td>Portfolio statt Anerkennung</td>
+                            <td>B2 Deutsch</td>
+                            <td>Chancenkarte/Direkteinstieg</td>
                         </tr>
                         <tr>
-                            <td class="matrix-profile-type" data-label="Profiltyp">Ausbildung</td>
-                            <td data-label="Systemrisiko"><span class="matrix-risk-medium">Mittel</span></td>
-                            <td data-label="Anerkennung">Keine Anerkennung nötig</td>
-                            <td data-label="Sprache">B1-B2 Deutsch</td>
-                            <td data-label="Empfohlener Pfad">Ausbildung/Umschulung</td>
+                            <td><strong>Ausbildung</strong></td>
+                            <td><span class="matrix-risk-medium">Mittel</span></td>
+                            <td>Keine Anerkennung nötig</td>
+                            <td>B1-B2 Deutsch</td>
+                            <td>Ausbildung/Umschulung</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ASSESSMENT FORM -->
-        <section class="cluster-section">
-            <h2>Strukturierte Qualifikationsbewertung</h2>
-            <p>Nutzen Sie unser zertifiziertes Bewertungssystem, um Ihre Position im deutschen Fachkräftesystem zu verstehen:</p>
-            
-            <div class="assessment-container">
-                <div class="assessment-disclaimer">
-                    <strong>Dieser Bewertungsprozess dient nicht der Datenerfassung.</strong> Er strukturiert Ihre Selbsteinschätzung basierend auf realen Arbeitsmarktanforderungen und hilft Ihnen, Ihre Positionierung realistisch zu bewerten.
-                </div>
-                
-                <div class="assessment-process">
-                    <div class="process-step">
-                        <div class="process-step-number">01</div>
-                        <div>Profilanalyse</div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step-number">02</div>
-                        <div>Systemlogik-Abgleich</div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step-number">03</div>
-                        <div>Strategische Einordnung</div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step-number">04</div>
-                        <div>Handlungsempfehlung</div>
-                    </div>
-                </div>
-
-                <div class="chancenkarte-form-wrapper">
-                    <h2>Ihre Bewertung</h2>
-                    <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
-                        
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="Neue Anfrage - Berlin Gateway Chancenkarte">
-                        
-                        <div class="form-group">
-                            <label for="target-position">Zielberuf</label>
-                            <input type="text" id="target-position" name="Zielberuf" placeholder="z.B. Softwareentwickler" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="qualification">Abschluss</label>
-                            <input type="text" id="qualification" name="Abschluss" placeholder="z.B. Master Informatik" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="experience">Berufserfahrung</label>
-                            <select id="experience" name="Berufserfahrung" required>
-                                <option value="">-- Bitte wählen --</option>
-                                <option value="0-2">0–2 Jahre</option>
-                                <option value="2-5">2–5 Jahre</option>
-                                <option value="5+">5+ Jahre</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="language">Sprachkenntnisse Deutsch</label>
-                            <select id="language" name="Sprachkenntnisse" required>
-                                <option value="">-- Bitte wählen --</option>
-                                <option value="a1-a2">A1–A2</option>
-                                <option value="b1">B1</option>
-                                <option value="b2">B2</option>
-                                <option value="c1+">C1+</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="country">Wohnsitzland</label>
-                            <select id="country" name="Wohnsitzland" required>
-                                <option value="">-- Bitte wählen --</option>
-                                <option value="Deutschland">Deutschland</option>
-                                <option value="Ägypten">Ägypten</option>
-                                <option value="Libyen">Libyen</option>
-                                <option value="Tunesien">Tunesien</option>
-                                <option value="Algerien">Algerien</option>
-                                <option value="Marokko">Marokko</option>
-                                <option value="Sudan">Sudan</option>
-                                <option value="Saudi-Arabien">Saudi-Arabien</option>
-                                <option value="Vereinigte Arabische Emirate">Vereinigte Arabische Emirate</option>
-                                <option value="Katar">Katar</option>
-                                <option value="Kuwait">Kuwait</option>
-                                <option value="Oman">Oman</option>
-                                <option value="Bahrain">Bahrain</option>
-                                <option value="Jordanien">Jordanien</option>
-                                <option value="Libanon">Libanon</option>
-                                <option value="Syrien">Syrien</option>
-                                <option value="Irak">Irak</option>
-                                <option value="Palästina">Palästina</option>
-                                <option value="Jemen">Jemen</option>
-                                <option value="Türkei">Türkei</option>
-                                <option value="Pakistan">Pakistan</option>
-                                <option value="Indien">Indien</option>
-                                <option value="Bangladesch">Bangladesch</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Kamerun">Kamerun</option>
-                                <option value="Andere">Andere</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">E-Mail</label>
-                            <input type="email" id="email" name="E-Mail" placeholder="ihre.email@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cv-upload">Lebenslauf (CV)</label>
-                            <input type="file" id="cv-upload" name="CV Upload" accept=".pdf" required>
-                            <small>PDF only, max 5MB</small>
-                        </div>
-
-                        <button type="submit" class="form-submit">Bewertung jetzt senden</button>
-                    </form>
-                </div>
+    <!-- 8. ASSESSMENT FORM -->
+    <section class="bg-section" id="bewertung">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">Bewertung</span>
+                <h2 class="bg-heading-section">Strukturierte Qualifikationsbewertung</h2>
+                <p class="bg-text-body">Nutzen Sie unser zertifiziertes Bewertungssystem, um Ihre Position im deutschen Fachkräftesystem zu verstehen:</p>
             </div>
-        </section>
 
-        <!-- STRATEGISCHE NACHFRAGEFELDER -->
-        <section class="cluster-section">
-            <h2>Strategische Nachfragefelder im deutschen Arbeitsmarkt</h2>
-            <p>Diese Bereiche zeigen die höchste Nachfrage nach internationalen Fachkräften. Ihre Chancen hängen davon ab, wie Ihr Profil zu diesen Anforderungen passt.</p>
-            
-            <div class="demand-cards">
+            <div class="assessment-disclaimer">
+                <strong>Dieser Bewertungsprozess dient nicht der Datenerfassung.</strong> Er strukturiert Ihre Selbsteinschätzung basierend auf realen Arbeitsmarktanforderungen und hilft Ihnen, Ihre Positionierung realistisch zu bewerten.
+            </div>
+
+            <div class="chancenkarte-form">
+                <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Neue Anfrage - Berlin Gateway Chancenkarte">
+
+                    <div class="chancenkarte-form-group">
+                        <label for="target-position">Zielberuf</label>
+                        <input type="text" id="target-position" name="Zielberuf" placeholder="z.B. Softwareentwickler" required>
+                    </div>
+
+                    <div class="chancenkarte-form-group">
+                        <label for="qualification">Abschluss</label>
+                        <input type="text" id="qualification" name="Abschluss" placeholder="z.B. Master Informatik" required>
+                    </div>
+
+                    <div class="chancenkarte-form-group">
+                        <label for="experience">Berufserfahrung</label>
+                        <select id="experience" name="Berufserfahrung" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="0-2">0–2 Jahre</option>
+                            <option value="2-5">2–5 Jahre</option>
+                            <option value="5+">5+ Jahre</option>
+                        </select>
+                    </div>
+
+                    <div class="chancenkarte-form-group">
+                        <label for="language">Sprachkenntnisse Deutsch</label>
+                        <select id="language" name="Sprachkenntnisse" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="a1-a2">A1–A2</option>
+                            <option value="b1">B1</option>
+                            <option value="b2">B2</option>
+                            <option value="c1+">C1+</option>
+                        </select>
+                    </div>
+
+                    <div class="chancenkarte-form-group">
+                        <label for="country">Wohnsitzland</label>
+                        <select id="country" name="Wohnsitzland" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="Deutschland">Deutschland</option>
+                            <option value="Ägypten">Ägypten</option>
+                            <option value="Libyen">Libyen</option>
+                            <option value="Tunesien">Tunesien</option>
+                            <option value="Algerien">Algerien</option>
+                            <option value="Marokko">Marokko</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Saudi-Arabien">Saudi-Arabien</option>
+                            <option value="Vereinigte Arabische Emirate">Vereinigte Arabische Emirate</option>
+                            <option value="Katar">Katar</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Jordanien">Jordanien</option>
+                            <option value="Libanon">Libanon</option>
+                            <option value="Syrien">Syrien</option>
+                            <option value="Irak">Irak</option>
+                            <option value="Palästina">Palästina</option>
+                            <option value="Jemen">Jemen</option>
+                            <option value="Türkei">Türkei</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Indien">Indien</option>
+                            <option value="Bangladesch">Bangladesch</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Kamerun">Kamerun</option>
+                            <option value="Andere">Andere</option>
+                        </select>
+                    </div>
+
+                    <div class="chancenkarte-form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="E-Mail" placeholder="ihre.email@example.com" required>
+                    </div>
+
+                    <div class="chancenkarte-form-group">
+                        <label for="cv-upload">Lebenslauf (CV)</label>
+                        <input type="file" id="cv-upload" name="CV Upload" accept=".pdf" required>
+                        <span class="chancenkarte-form-small">PDF only, max 5MB</span>
+                    </div>
+
+                    <button type="submit" class="chancenkarte-form-submit">Bewertung jetzt senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DEMAND FIELDS -->
+    <section class="bg-section" style="background-color: var(--bg-light-grey);">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">Nachfrage</span>
+                <h2 class="bg-heading-section">Strategische Nachfragefelder im deutschen Arbeitsmarkt</h2>
+                <p class="bg-text-body">Diese Bereiche zeigen die höchste Nachfrage nach internationalen Fachkräften. Ihre Chancen hängen davon ab, wie Ihr Profil zu diesen Anforderungen passt.</p>
+            </div>
+            <div class="demand-cards-grid">
                 <div class="demand-card">
                     <h3>IT & Softwareentwicklung</h3>
                     <p><strong>Nachfrage:</strong> Hoch</p>
@@ -688,15 +663,19 @@
                     <p><strong>Erfolgsfaktor:</strong> Klare berufliche Spezialisierung</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FAQ SYSTEM -->
-        <section class="cluster-section">
-            <h2>Häufig gestellte Fragen zur Chancenkarte</h2>
-            <p>Finden Sie Antworten auf die wichtigsten Fragen zum Chancenkarten-System und Ihren Chancen in Deutschland:</p>
-            
-            <div class="faq-container">
-                <div class="faq-item">
+    <!-- 10. FAQ -->
+    <section class="bg-section">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">FAQ</span>
+                <h2 class="bg-heading-section">Häufig gestellte Fragen zur Chancenkarte</h2>
+                <p class="bg-text-body">Finden Sie Antworten auf die wichtigsten Fragen zum Chancenkarten-System und Ihren Chancen in Deutschland:</p>
+            </div>
+            <ul class="chancenkarte-faq">
+                <li>
                     <div class="faq-question">
                         <span>Was ist die Chancenkarte und wie funktioniert sie?</span>
                         <span class="faq-toggle">▼</span>
@@ -704,9 +683,8 @@
                     <div class="faq-answer">
                         <p>Die Chancenkarte ist ein Punktesystem des deutschen Staates, das internationale Fachkräfte bewertet. Sie basiert auf Kriterien wie Berufsabschluss, Berufserfahrung, Sprachkenntnisse und Arbeitsmarktrelevanz. Mit 6 Punkten können Sie in Deutschland arbeiten.</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
+                </li>
+                <li>
                     <div class="faq-question">
                         <span>Welche Voraussetzungen muss ich erfüllen?</span>
                         <span class="faq-toggle">▼</span>
@@ -714,9 +692,8 @@
                     <div class="faq-answer">
                         <p>Die Grundvoraussetzungen sind: ein anerkannter Berufsabschluss, Berufserfahrung, ausreichende Deutschkenntnisse (mindestens B1) und ein Arbeitsangebot oder Arbeitsmarktrelevanz. Die genauen Anforderungen hängen von Ihrem Beruf ab.</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
+                </li>
+                <li>
                     <div class="faq-question">
                         <span>Wie wird mein Abschluss anerkannt?</span>
                         <span class="faq-toggle">▼</span>
@@ -724,9 +701,8 @@
                     <div class="faq-answer">
                         <p>Die Anerkennung hängt von Ihrem Beruf ab. Für reglementierte Berufe (Ärzte, Pflegekräfte) ist eine formale Anerkennung erforderlich. Für nicht-reglementierte Berufe kann eine Äquivalenzfeststellung ausreichen oder Ihr Abschluss wird direkt anerkannt.</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
+                </li>
+                <li>
                     <div class="faq-question">
                         <span>Welche Sprachanforderungen gibt es?</span>
                         <span class="faq-toggle">▼</span>
@@ -734,9 +710,8 @@
                     <div class="faq-answer">
                         <p>Für die Chancenkarte benötigen Sie mindestens B1 Deutschkenntnisse. Für viele Berufe ist B2 oder höher erforderlich. Die praktischen Anforderungen im Arbeitsalltag sind oft höher als die formalen Anforderungen.</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
+                </li>
+                <li>
                     <div class="faq-question">
                         <span>Wie lange dauert der gesamte Prozess?</span>
                         <span class="faq-toggle">▼</span>
@@ -744,94 +719,105 @@
                     <div class="faq-answer">
                         <p>Der Zeitrahmen variiert je nach Beruf und Anerkennung. Für reglementierte Berufe kann es 3-12 Monate dauern. Für nicht-reglementierte Berufe kann es schneller gehen. Unser Bewertungsprozess hilft Ihnen, realistische Erwartungen zu setzen.</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <!-- STRATEGISCHE NAVIGATION -->
-        <section class="cluster-section">
-            <h2>Strategische Navigation</h2>
-            <p>Verstehen Sie die Systemlogik und finden Sie Ihren optimalen Weg in den deutschen Arbeitsmarkt:</p>
-            
-            <div class="navigation-modules">
-                <div class="navigation-module">
+    <!-- 11. NAVIGATION MODULES -->
+    <section class="bg-section" style="background-color: var(--bg-light-grey);">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-lg);">
+                <span class="bg-label">Weitere Ressourcen</span>
+                <h2 class="bg-heading-section">Strategische Navigation</h2>
+                <p class="bg-text-body">Verstehen Sie die Systemlogik und finden Sie Ihren optimalen Weg in den deutschen Arbeitsmarkt:</p>
+            </div>
+            <div class="nav-modules-grid">
+                <div class="nav-module">
                     <h3>Systemlogik</h3>
                     <p>Verstehen Sie, wie das deutsche Einwanderungssystem funktioniert und welche Wege für Ihr Profil relevant sind.</p>
                     <a href="/de/systemlogik/">Zur Systemlogik →</a>
                 </div>
-                <div class="navigation-module">
-                    <h3>Anerkennung</h3>
-                    <p>Erfahren Sie, wie Ihre Qualifikation in Deutschland anerkannt wird und welche Schritte notwendig sind.</p>
-                    <a href="/de/anerkennung/">Zur Anerkennung →</a>
-                </div>
-                <div class="navigation-module">
-                    <h3>Arbeit in Deutschland</h3>
-                    <p>Strategische Einblicke in den deutschen Arbeitsmarkt, Anforderungen und Chancen für Ihr Profil.</p>
-                    <a href="/de/arbeit-in-deutschland/">Zum Arbeitsmarkt →</a>
-                </div>
-                <div class="navigation-module">
-                    <h3>Monitor</h3>
-                    <p>Aktuelle Daten und Trends zum deutschen Arbeitsmarkt und zur Fachkräftenachfrage.</p>
-                    <a href="/de/monitor/">Zum Monitor →</a>
-                </div>
-                <div class="navigation-module">
+                <div class="nav-module">
                     <h3>Punkte-Rechner</h3>
                     <p>Berechnen Sie Ihre Punkte nach dem Chancenkarten-System und erfahren Sie Ihre Chancen.</p>
                     <a href="/de/assessment/">Zum Rechner →</a>
                 </div>
-                <div class="navigation-module">
+                <div class="nav-module">
+                    <h3>Monitor</h3>
+                    <p>Aktuelle Daten und Trends zum deutschen Arbeitsmarkt und zur Fachkräftenachfrage.</p>
+                    <a href="/de/monitor/">Zum Monitor →</a>
+                </div>
+                <div class="nav-module">
                     <h3>Insights</h3>
                     <p>Detaillierte Analysen und Strategien für verschiedene Berufsgruppen und Qualifikationen.</p>
                     <a href="/de/insights/">Zu den Insights →</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CONTEXTUAL CTA -->
-        <section class="contextual-cta">
-            <h3>Nächste Schritte</h3>
-            <p>Nach dieser Einschätzung sollte klarer werden, ob Ihr Profil eher über Chancenkarte, Direkteinstieg, Anerkennung, Ausbildung oder Studium positioniert werden sollte.</p>
-            <a href="/de/assessment/" class="contextual-cta-btn">Zur Bewertung →</a>
-        </section>
-
-    </div>
-</main>
-
-<!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/chancenkarte/">Chancenkarte</a>
-                <a href="/de/assessment/">Punkte-Rechner</a>
-                <a href="/de/systemlogik/">Systemlogik</a>
-                <a href="/de/monitor/">Monitor</a>
-                <a href="/de/insights/">Insights</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum/">Impressum</a>
-                <a href="/de/datenschutz/">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
+    <!-- 12. FINAL CTA -->
+    <section class="bg-section bg-section-dark bg-text-center">
+        <div class="bg-container">
+            <div class="bg-stack">
+                <h2 class="bg-heading-section">Sprechen wir über Ihren Weg.</h2>
+                <p class="bg-text-body" style="max-width: 600px; margin-inline: auto;">
+                    Unsere Berater in Berlin geben Ihnen eine ehrliche Einschätzung Ihrer Chancen im deutschen Arbeitsmarkt. Klar, professionell und ohne Umwege.
+                </p>
+                <div class="bg-cluster" style="justify-content: center;">
+                    <a href="https://wa.me/4915781497451" class="bg-btn" style="background-color: #25D366; color: white;">Per WhatsApp kontaktieren</a>
+                    <a href="mailto:info@berlingateway.de?subject=Beratungsanfrage" class="bg-btn bg-btn-primary">Beratung anfordern</a>
+                </div>
             </div>
         </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
-</footer>
+    </section>
 
-<script src="/assets/js/layout-system.js"></script>
-<script src="/assets/js/cluster-system.js"></script>
+    <!-- 13. FOOTER -->
+    <footer style="padding-block: 60px; border-top: 1px solid var(--bg-border);">
+        <div class="bg-container">
+            <div class="bg-grid bg-grid-3" style="gap: 40px;">
+                <div class="bg-stack">
+                    <div style="font-weight: 900; font-size: 18px; letter-spacing: -0.02em;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
+                    <p class="bg-text-small" style="max-width: 240px;">Operative Begleitung für die Fachkräftemigration nach Deutschland.</p>
+                </div>
+                <div class="bg-stack">
+                    <span class="bg-label">Navigation</span>
+                    <nav class="bg-stack" style="--bg-space-md: 8px;">
+                        <a href="/de/chancenkarte/" class="bg-text-small" style="text-decoration: none;">Chancenkarte</a>
+                        <a href="/de/assessment/" class="bg-text-small" style="text-decoration: none;">Punkte-Rechner</a>
+                        <a href="/de/systemlogik/" class="bg-text-small" style="text-decoration: none;">Systemlogik</a>
+                        <a href="/de/monitor/" class="bg-text-small" style="text-decoration: none;">Monitor</a>
+                    </nav>
+                </div>
+                <div class="bg-stack">
+                    <span class="bg-label">Rechtliches</span>
+                    <nav class="bg-stack" style="--bg-space-md: 8px;">
+                        <a href="#" class="bg-text-small" style="text-decoration: none;">Impressum</a>
+                        <a href="#" class="bg-text-small" style="text-decoration: none;">Datenschutz</a>
+                        <a href="#" class="bg-text-small" style="text-decoration: none;">Compliance</a>
+                    </nav>
+                </div>
+            </div>
+            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--bg-border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <p class="bg-text-small">&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+                <p class="bg-text-small">Operating within established professional qualification frameworks.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

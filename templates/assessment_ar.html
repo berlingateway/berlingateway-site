@@ -420,7 +420,7 @@
 
       <!-- FINAL CTA -->
       <div class="final-cta">
-        <a href="/ar/chancenkarte">{{ cta_text }}</a>
+        <a href="/ar/chancenkarte/">{{ cta_text }}</a>
       </div>
     </div>
   </main>
@@ -470,12 +470,12 @@
         resultStatus.textContent = "{{ assessment_cta_headline_success }}";
         resultStatus.className = "result-status good";
         resultMessage.textContent = "{{ assessment_cta_text_success }}";
-        resultCta.innerHTML = `<a href="{{ assessment_cta_link_success }}">{{ assessment_cta_button_success }}</a>`;
+        resultCta.innerHTML = `<a href="{{ assessment_cta_link_success }}/">{{ assessment_cta_button_success }}</a>`;
       } else {
         resultStatus.textContent = "{{ assessment_cta_headline_fail }}";
         resultStatus.className = "result-status early";
         resultMessage.textContent = "{{ assessment_cta_text_fail }}";
-        resultCta.innerHTML = `<a href="{{ assessment_cta_link_fail }}">{{ assessment_cta_button_fail }}</a>`;
+        resultCta.innerHTML = `<a href="{{ assessment_cta_link_fail }}/">{{ assessment_cta_button_fail }}</a>`;
       }
 
       resultSection.classList.add("active");

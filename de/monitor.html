@@ -3,188 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markteinblicke für Fachkräfte – Berlin Gateway</title>
+    <title>Arbeitsmarkt Monitor Deutschland – Berlin Gateway</title>
+    <meta name="description" content="Aktuelle Trends, Nachfrageanalysen und Marktbeobachtungen für Fachkräfte im deutschen Arbeitsmarkt. Institutionelle Einblicke direkt aus Berlin.">
     <link rel="canonical" href="https://berlingateway.de/de/monitor/">
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/bg-core.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        .monitor-hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: var(--white);
-        }
-        .monitor-hero h1 {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 20px;
-            color: var(--black);
-        }
-        .monitor-hero p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .insights-container {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .insights-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-bottom: 42px;
-        }
-        .insight-block {
-            padding: 30px;
-            background: white;
-            border: 1px solid #E5E7EB;
-            border-radius: 8px;
-            transition: border-color 0.2s;
-        }
-        .insight-block:hover {
-            border-color: var(--black);
-        }
-        .insight-block h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0 0 12px 0;
-            color: var(--black);
-            line-height: 1.3;
-        }
-        .insight-block p {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #4B5563;
-            margin: 0;
-        }
-        .monitor-cta {
-            text-align: center;
-            padding: 60px 20px;
-            background: white;
-        }
-        .monitor-cta-button {
-            display: inline-block;
-            padding: 16px 40px;
-            background-color: #B8860B;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 16px;
-            transition: background-color 0.2s;
-        }
-        .monitor-cta-button:hover {
-            background-color: #9a6f08;
-        }
-        @media (max-width: 768px) {
-            .monitor-hero {
-                padding: 60px 20px;
-            }
-            .monitor-hero h1 {
-                font-size: 24px;
-            }
-            .insights-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            .insight-block {
-                padding: 20px;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="bg-body">
 
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/monitor/" class="lang-switch">العربية</a>
+    <!-- 1. TOP BAR -->
+    <div class="bg-bg-black" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="bg-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: white; font-size: 13px; font-weight: 600;">
+                <span style="opacity: 0.6; margin-right: 8px;">GOVERNANCE:</span> GERMAN LABOR MARKET INTELLIGENCE
+            </div>
+            <div style="display: flex; gap: 20px;">
+                <a href="mailto:info@berlingateway.de" style="color: white; text-decoration: none; font-size: 13px; font-weight: 600;">✉ info@berlingateway.de</a>
+                <a href="/ar/monitor/" style="color: white; text-decoration: none; font-size: 13px; font-weight: 600;">العربية</a>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- BAND 2: MINIMAL HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
+    <!-- 2. MAIN HEADER -->
+    <header style="background: white; padding: 25px 0; border-bottom: 1px solid var(--bg-border);">
+        <div class="bg-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/de/" style="text-decoration: none; color: var(--bg-black); font-weight: 900; font-size: 22px; letter-spacing: -0.03em;">
+                BERLIN<span style="color: var(--bg-blue);">GATEWAY</span>
+            </a>
+            <nav style="display: flex; gap: 35px;">
+                <a href="/de/chancenkarte/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">CHANCENKARTE</a>
+                <a href="/de/aerzte/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">ÄRZTE</a>
+                <a href="/de/pflegekraefte/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">PFLEGEKRÄFTE</a>
+                <a href="/de/voraussetzungen/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">VORAUSSETZUNGEN</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. SUB NAVIGATION -->
+    <div style="background: #F8FAFC; padding: 15px 0; border-bottom: 1px solid var(--bg-border);">
+        <div class="bg-container" style="display: flex; gap: 30px;">
+            <a href="/de/assessment/" style="text-decoration: none; color: var(--bg-text-muted); font-weight: 700; font-size: 12px; letter-spacing: 0.05em;">ASSESSMENT</a>
+            <a href="/de/systemlogik/" style="text-decoration: none; color: var(--bg-text-muted); font-weight: 700; font-size: 12px; letter-spacing: 0.05em;">SYSTEMLOGIK</a>
+            <a href="/de/monitor/" style="text-decoration: none; color: var(--bg-blue); font-weight: 800; font-size: 12px; letter-spacing: 0.05em;">MONITOR</a>
+        </div>
     </div>
-</header>
 
-<!-- BAND 3: INTERNAL NAV BAR -->
-<div class="internal-nav">
-    <div class="internal-nav__inner">
-        <a href="/de/chancenkarte/" class="nav-link ">Chancenkarte</a>
-        <a href="/de/systemlogik/" class="nav-link ">Systemlogik</a>
-        <a href="/de/monitor/" class="nav-link active">Monitor</a>
-        <a href="/de/insights/" class="nav-link ">Insights</a>
-    </div>
-</div>
-
-<!-- MAIN CONTENT -->
-<main style="padding-top: 130px;">
-    <!-- HERO SECTION -->
-    <section class="monitor-hero">
-        <h1>Markteinblicke für Fachkräfte</h1>
-        <p>Aktuelle Trends und Chancen im deutschen Arbeitsmarkt. Direkt. Faktenbasiert.</p>
+    <!-- 4. HERO SECTION -->
+    <section class="bg-section" style="background: var(--bg-black); color: white; padding: 100px 0;">
+        <div class="bg-container">
+            <div class="bg-stack" style="max-width: 800px;">
+                <span class="bg-label" style="color: var(--bg-blue); margin-bottom: 20px; display: block;">MARKET INTELLIGENCE</span>
+                <h1 class="bg-heading-hero" style="color: white; margin-bottom: 25px;">Arbeitsmarkt Monitor Deutschland</h1>
+                <p class="bg-text-lead" style="color: rgba(255,255,255,0.7);">
+                    Strukturierte Analyse der Nachfragesignale und sektorspezifischen Trends im deutschen Beschäftigungssystem. Direkt. Faktenbasiert. Institutionell.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <!-- INSIGHTS SECTION -->
-    <section class="insights-container">
-        <div class="insights-grid">
-            
+    <!-- 5. MARKET INTELLIGENCE LAYER -->
+    <section class="bg-section">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-md);">
+                <span class="bg-label">Sektorale Analyse</span>
+                <h2 class="bg-heading-section">Fokus-Branchen mit Hochdruck-Nachfrage</h2>
+            </div>
+            <div class="bg-grid bg-grid-3">
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Medizin & Kliniken</h3>
+                    <p class="bg-text-small">Kritischer Mangel an Fachärzten in der klinischen Versorgung. Fokus auf Innere Medizin, Chirurgie und Anästhesie.</p>
+                    <a href="/de/aerzte/" style="color: var(--bg-blue); font-weight: 700; font-size: 12px; text-decoration: none; margin-top: 15px; display: block;">ZUM ÄRZTE-PFAD →</a>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Pflege & Gesundheit</h3>
+                    <p class="bg-text-small">Systemrelevante Nachfrage in Krankenhäusern und Altenpflege. Hohe Priorität für Anerkennungsverfahren.</p>
+                    <a href="/de/pflegekraefte/" style="color: var(--bg-blue); font-weight: 700; font-size: 12px; text-decoration: none; margin-top: 15px; display: block;">ZUM PFLEGE-PFAD →</a>
+                </div>
+                <div class="bg-card">
+                    <h3 class="bg-fs-h3">Engineering & IT</h3>
+                    <p class="bg-text-small">Starke industrielle Nachfrage nach spezialisierten Ingenieuren und Software-Entwicklern für den Mittelstand.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="monitor-cta">
-        <a href="/de/chancenkarte/" class="monitor-cta-button">Lassen Sie Ihre Situation bewerten</a>
+    <!-- 6. DEMAND SIGNALS LAYER -->
+    <section class="bg-section" style="background: #F8FAFC;">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-md);">
+                <span class="bg-label">Indikatoren</span>
+                <h2 class="bg-heading-section">Strategische Marktsignale</h2>
+            </div>
+            <div class="bg-grid bg-grid-2">
+                <div class="bg-card" style="background: white;">
+                    <h4 class="bg-fs-h3">Regionale Dynamik</h4>
+                    <p class="bg-text-body">Starke Diskrepanz zwischen urbanen Zentren (Berlin, München) und industriellen Clustern in Süd- und Westdeutschland. Regionale Zuweisungen spielen bei der Chancenkarte eine operative Rolle.</p>
+                </div>
+                <div class="bg-card" style="background: white;">
+                    <h4 class="bg-fs-h3">Sprach-Validierung</h4>
+                    <p class="bg-text-body">Der Arbeitsmarkt reagiert zunehmend sensibel auf das Sprachniveau. B2 ist der Standard für die operative Integration, C1 für reglementierte Berufe zwingend erforderlich.</p>
+                </div>
+            </div>
+        </div>
     </section>
-</main>
 
-<!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/">Startseite</a>
-                <a href="/de/systemlogik/">Systemlogik</a>
-                <a href="/de/monitor/">Monitor</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum/">Impressum</a>
-                <a href="/de/datenschutz/">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
+    <!-- 7. SYSTEM REALITY LAYER -->
+    <section class="bg-section">
+        <div class="bg-container">
+            <div class="bg-grid bg-grid-2" style="align-items: center; gap: 60px;">
+                <div class="bg-stack">
+                    <span class="bg-label">System Reality</span>
+                    <h2 class="bg-heading-section">Qualifikation vs. Anerkennung</h2>
+                    <p class="bg-text-body">Der deutsche Arbeitsmarkt ist stark formalisiert. Eine hohe Qualifikation im Herkunftsland korreliert nicht automatisch mit einem direkten Marktzugang. Die institutionelle Anerkennung bleibt die kritische Barriere für die langfristige Integration.</p>
+                    <ul class="bg-stack" style="list-style: none; padding: 0; margin-top: 25px; --bg-space-md: 12px;">
+                        <li class="bg-text-small" style="display: flex; gap: 10px;"><span>✓</span> Dokumentenprüfung als Basis</li>
+                        <li class="bg-text-small" style="display: flex; gap: 10px;"><span>✓</span> Reglementierte Berufe beachten</li>
+                        <li class="bg-text-small" style="display: flex; gap: 10px;"><span>✓</span> Arbeitgeber-Erwartungen erfüllen</li>
+                    </ul>
+                </div>
+                <div class="bg-card" style="background: var(--bg-black); color: white; padding: 40px;">
+                    <h3 class="bg-fs-h3" style="color: white;">Operative Vorbereitung</h3>
+                    <p class="bg-text-small" style="opacity: 0.7; margin-bottom: 25px;">Erfolgreiche Marktteilnehmer bereiten ihre Dokumente und Sprachzertifikate Monate vor der eigentlichen Migration vor.</p>
+                    <a href="/de/voraussetzungen/" class="bg-button-primary" style="display: block; text-align: center;">Voraussetzungen prüfen</a>
+                </div>
             </div>
         </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+    </section>
+
+    <!-- 8. STRATEGIC ORIENTATION LAYER -->
+    <section class="bg-section" style="background: #F8FAFC; border-top: 1px solid var(--bg-border);">
+        <div class="bg-container">
+            <div class="bg-stack" style="text-align: center; margin-bottom: 50px;">
+                <span class="bg-label">Navigation</span>
+                <h2 class="bg-heading-section">Strategische Einordnung</h2>
+            </div>
+            <div class="bg-grid bg-grid-4">
+                <a href="/de/chancenkarte/" style="text-decoration: none; color: inherit;">
+                    <div class="bg-card" style="background: white; text-align: center; padding: 30px;">
+                        <h4 class="bg-fs-h3" style="margin-bottom: 10px;">Chancenkarte</h4>
+                        <p class="bg-text-small" style="opacity: 0.6;">Punktesystem & Suche</p>
+                    </div>
+                </a>
+                <a href="/de/voraussetzungen/" style="text-decoration: none; color: inherit;">
+                    <div class="bg-card" style="background: white; text-align: center; padding: 30px;">
+                        <h4 class="bg-fs-h3" style="margin-bottom: 10px;">Voraussetzungen</h4>
+                        <p class="bg-text-small" style="opacity: 0.6;">Kriterien & Dokumente</p>
+                    </div>
+                </a>
+                <a href="/de/assessment/" style="text-decoration: none; color: inherit;">
+                    <div class="bg-card" style="background: white; text-align: center; padding: 30px;">
+                        <h4 class="bg-fs-h3" style="margin-bottom: 10px;">Assessment</h4>
+                        <p class="bg-text-small" style="opacity: 0.6;">Qualifikations-Check</p>
+                    </div>
+                </a>
+                <a href="/de/orientierung/" style="text-decoration: none; color: inherit;">
+                    <div class="bg-card" style="background: white; text-align: center; padding: 30px;">
+                        <h4 class="bg-fs-h3" style="margin-bottom: 10px;">Orientierung</h4>
+                        <p class="bg-text-small" style="opacity: 0.6;">Pfad-Ermittlung</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
+
+    <!-- 9. FAQ BLOCK -->
+    <section class="bg-section" style="background: white;">
+        <div class="bg-container">
+            <div class="bg-stack" style="margin-bottom: var(--bg-space-md);">
+                <span class="bg-label">FAQ</span>
+                <h2 class="bg-heading-section">Markt-Monitor Fragen</h2>
+            </div>
+            <div class="bg-stack" style="--bg-space-md: 0;">
+                <div style="border-bottom: 1px solid var(--bg-border); padding: 20px 0;">
+                    <h4 class="bg-fs-h3">Welche Berufe haben die höchste Nachfrage?</h4>
+                    <p class="bg-text-body" style="margin-top: 10px;">Aktuell führen Medizin, Pflege, IT-Sicherheit und spezialisiertes Handwerk die Nachfrageliste an. In diesen Bereichen sind die Anerkennungsverfahren am stärksten strukturiert.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--bg-border); padding: 20px 0;">
+                    <h4 class="bg-fs-h3">Spielt der Wohnort eine Rolle?</h4>
+                    <p class="bg-text-body" style="margin-top: 10px;">Ja. Während Berlin und Hamburg populär sind, bieten Bundesländer wie Bayern, Baden-Württemberg oder NRW oft eine höhere Dichte an industriellen Vakanzen.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--bg-border); padding: 20px 0;">
+                    <h4 class="bg-fs-h3">Wie verlässlich sind Marktdaten?</h4>
+                    <p class="bg-text-body" style="margin-top: 10px;">Unsere Daten basieren auf offiziellen Meldungen der Bundesagentur für Arbeit und institutionellen Bedarfsanalysen der Krankenhausgesellschaften.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FINAL CTA -->
+    <section class="bg-section" style="background: var(--bg-black); color: white; text-align: center;">
+        <div class="bg-container">
+            <h2 class="bg-heading-section" style="color: white; margin-bottom: 20px;">Individuelle Marktanalyse anfordern</h2>
+            <p class="bg-text-body" style="color: rgba(255,255,255,0.7); margin-bottom: 40px;">Lassen Sie Ihr Profil im Kontext der aktuellen Marktnachfrage bewerten.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="/de/assessment/" class="bg-button-primary" style="background: var(--bg-blue); border: none; padding: 18px 45px;">Bewertung starten</a>
+                <a href="https://wa.me/493025730875" class="bg-button-primary" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); padding: 18px 45px;">Per WhatsApp kontaktieren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: var(--bg-black); color: white; padding: 80px 0 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="bg-container">
+            <div class="bg-grid bg-grid-3" style="gap: 40px;">
+                <div class="bg-stack">
+                    <div style="font-weight: 900; font-size: 18px; letter-spacing: -0.02em;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
+                    <p class="bg-text-small" style="max-width: 240px; opacity: 0.7;">Operative Begleitung für die Fachkräftemigration nach Deutschland.</p>
+                </div>
+                <div class="bg-stack">
+                    <span class="bg-label" style="color: rgba(255,255,255,0.5);">Navigation</span>
+                    <nav class="bg-stack" style="--bg-space-md: 8px;">
+                        <a href="/de/chancenkarte/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Chancenkarte</a>
+                        <a href="/de/assessment/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Assessment</a>
+                        <a href="/de/systemlogik/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Systemlogik</a>
+                        <a href="/de/monitor/" class="nav-link active" style="text-decoration: none; color: var(--bg-blue); font-weight: 700;">Monitor</a>
+                    </nav>
+                </div>
+                <div class="bg-stack">
+                    <span class="bg-label" style="color: rgba(255,255,255,0.5);">Rechtliches</span>
+                    <nav class="bg-stack" style="--bg-space-md: 8px;">
+                        <a href="/de/impressum/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Impressum</a>
+                        <a href="/de/datenschutz/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Datenschutz</a>
+                    </nav>
+                </div>
+            </div>
+            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; opacity: 0.5;">
+                <p class="bg-text-small">&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+                <p class="bg-text-small">Market observation based on official labor statistics.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

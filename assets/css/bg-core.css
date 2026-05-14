@@ -1,0 +1,273 @@
+@layer foundation, components, utilities;
+
+@layer foundation {
+    :root {
+        /* DESIGN TOKENS - BG CORE */
+        --bg-black: #111111;
+        --bg-blue: #0B3B8C;
+        --bg-blue-hover: #082B5C;
+        --bg-white: #FFFFFF;
+        --bg-border: #E2E8F0;
+        --bg-light-grey: #F8FAFC;
+        
+        /* TEXT TOKENS */
+        --bg-text-main: #111111;
+        --bg-text-muted: #475569;
+        --bg-text-on-dark: rgba(255, 255, 255, 0.85);
+        
+        /* SPACING TOKENS */
+        --bg-space-xs: clamp(0.5rem, 0.4vw + 0.4rem, 0.75rem);
+        --bg-space-sm: clamp(0.75rem, 0.6vw + 0.6rem, 1rem);
+        --bg-space-md: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+        --bg-space-lg: clamp(2rem, 2vw + 1.5rem, 3rem);
+        --bg-space-xl: clamp(3.5rem, 4vw + 2.5rem, 5.5rem);
+        
+        /* TYPOGRAPHY TOKENS */
+        --bg-font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        --bg-fs-h1: clamp(2rem, 5vw + 1rem, 2.875rem);
+        --bg-fs-h2: clamp(1.75rem, 3vw + 1rem, 2.25rem);
+        --bg-fs-h3: clamp(1.25rem, 2vw + 0.75rem, 1.3125rem);
+        --bg-fs-body: 1.1875rem;
+        --bg-fs-small: 0.875rem;
+        --bg-fs-xs: 0.8125rem;
+        --bg-fs-tiny: 0.6875rem;
+    }
+}
+
+@layer components {
+    /* 1. LAYOUT PRIMITIVES */
+    .bg-container {
+        inline-size: 100%;
+        max-inline-size: 1140px;
+        margin-inline: auto;
+        padding-inline: clamp(1.875rem, 4vw, 2.5rem);
+    }
+
+    .bg-section {
+        padding-block: var(--bg-space-xl);
+    }
+
+    .bg-section-dark {
+        background-color: var(--bg-black);
+        color: var(--bg-white);
+    }
+
+    .bg-grid {
+        display: grid;
+        gap: var(--bg-space-md);
+    }
+
+    .bg-grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+
+    /* ASYMMETRIC GRID PRIMITIVES */
+    .bg-grid-2-3 {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .bg-grid-3-2 {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    @media (max-width: 992px) {
+        .bg-grid-2-3, .bg-grid-3-2 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* 2. COMPONENT PRIMITIVES */
+    .bg-card {
+        background-color: var(--bg-white);
+        border: 1px solid var(--bg-border);
+        border-radius: 6px;
+        padding: var(--bg-space-lg);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .bg-card:hover {
+        border-color: var(--bg-blue);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    }
+
+    .bg-card-action {
+        margin-top: auto;
+        padding-top: var(--bg-space-md);
+    }
+
+    .bg-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.9375rem 1.875rem;
+        font-size: var(--bg-fs-small);
+        font-weight: 700;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        border: 1px solid transparent;
+    }
+
+    .bg-btn-primary {
+        background-color: var(--bg-blue);
+        color: var(--bg-white);
+        box-shadow: 0 4px 12px rgba(11, 59, 140, 0.12);
+    }
+
+    .bg-btn-primary:hover {
+        background-color: var(--bg-blue-hover);
+        transform: translateY(-1px);
+    }
+
+    .bg-btn-outline {
+        background-color: var(--bg-white);
+        border-color: var(--bg-border);
+        color: var(--bg-black);
+    }
+
+    .bg-btn-outline:hover {
+        background-color: var(--bg-light-grey);
+        border-color: var(--bg-text-muted);
+    }
+
+    .bg-btn:focus-visible {
+        outline: 2px solid var(--bg-blue);
+        outline-offset: 2px;
+    }
+
+    /* INSTITUTIONAL CHECKLIST */
+    .bg-list-check {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bg-list-check li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: var(--bg-space-sm);
+        font-size: var(--bg-fs-body);
+        line-height: 1.5;
+    }
+
+    .bg-list-check li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 18px;
+        height: 18px;
+        background-color: var(--bg-blue);
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    }
+
+    .bg-section-dark .bg-list-check li::before {
+        background-color: var(--bg-white);
+    }
+
+    /* TRUST STRIP PRIMITIVE */
+    .bg-trust-strip {
+        background-color: var(--bg-light-grey);
+        padding-block: var(--bg-space-md);
+        border-block: 1px solid var(--bg-border);
+    }
+
+    .bg-trust-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--bg-space-md);
+    }
+
+    .bg-trust-item {
+        font-size: var(--bg-fs-xs);
+        font-weight: 700;
+        color: var(--bg-black);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        letter-spacing: 0.02em;
+    }
+
+    /* 3. ATOMIC PRIMITIVES */
+    .bg-heading-hero {
+        font-size: var(--bg-fs-h1);
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+        color: var(--bg-black);
+    }
+
+    .bg-heading-section {
+        font-size: var(--bg-fs-h2);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--bg-black);
+    }
+
+    .bg-text-body {
+        font-size: var(--bg-fs-body);
+        color: var(--bg-text-muted);
+        line-height: 1.6;
+    }
+
+    .bg-text-small {
+        font-size: var(--bg-fs-small);
+        color: var(--bg-text-muted);
+    }
+
+    .bg-label {
+        font-size: var(--bg-fs-tiny);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--bg-blue);
+    }
+
+    /* DARK SECTION ADAPTATION */
+    .bg-section-dark .bg-heading-hero,
+    .bg-section-dark .bg-heading-section,
+    .bg-section-dark .bg-text-body,
+    .bg-section-dark .bg-text-small {
+        color: var(--bg-white);
+    }
+
+    .bg-section-dark .bg-text-body {
+        color: var(--bg-text-on-dark);
+    }
+}
+
+@layer utilities {
+    .bg-stack > * + * {
+        margin-block-start: var(--bg-space-md);
+    }
+
+    .bg-cluster {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--bg-space-sm);
+        align-items: center;
+    }
+
+    .bg-bg-black { background-color: var(--bg-black); }
+    .bg-text-white { color: var(--bg-white); }
+    .bg-text-center { text-align: center; }
+    
+    .bg-hide-mobile {
+        @media (max-width: 992px) {
+            display: none !important;
+        }
+    }
+    
+    .bg-show-mobile {
+        display: none;
+        @media (max-width: 992px) {
+            display: flex !important;
+        }
+    }
+}

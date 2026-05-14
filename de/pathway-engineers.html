@@ -13,11 +13,11 @@
     <div class="bg-bg-black bg-text-white" style="padding-block: 8px; font-size: 13px;">
         <div class="bg-container">
             <div class="bg-cluster" style="justify-content: space-between;">
-                <div class="bg-cluster">
+                <div class="bg-cluster bg-hide-mobile">
                     <span>Berlin Headquarter: +49 (0) 30 12345678</span>
-                    <span class="bg-hide-mobile">E-Mail: info@berlingateway.de</span>
+                    <span>E-Mail: info@berlingateway.de</span>
                 </div>
-                <div class="bg-cluster">
+                <div class="bg-cluster" style="margin-left: auto;">
                     <span style="font-weight: 700;">DE</span>
                     <span>EN</span>
                     <span>AR</span>
@@ -30,13 +30,23 @@
     <header style="padding-block: 20px; border-bottom: 1px solid var(--bg-border);">
         <div class="bg-container">
             <div class="bg-cluster" style="justify-content: space-between;">
-                <div style="font-weight: 900; font-size: 20px; letter-spacing: -0.02em;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
-                <nav class="bg-cluster bg-hide-mobile">
-                    <a href="/de/bg-master-template-v1.html" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">System-Logik</a>
-                    <a href="#" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Chancenkarte</a>
-                    <a href="/de/pathway-doctors.html" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Ärzte</a>
-                    <a href="#" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Kontakt</a>
-                </nav>
+                <div style="width: 100%;">
+                    <div class="bg-cluster" style="justify-content: space-between; width: 100%;">
+                        <div style="font-weight: 900; font-size: 20px; letter-spacing: -0.02em;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
+                        <nav class="bg-cluster bg-hide-mobile">
+                            <a href="/de/bg-master-template-v1.html" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">System-Logik</a>
+                            <a href="#" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Chancenkarte</a>
+                            <a href="/de/pathway-doctors.html" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Ärzte</a>
+                            <a href="#" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Kontakt</a>
+                        </nav>
+                    </div>
+                    <nav class="bg-mobile-nav">
+                        <a href="/de/pathway-doctors.html" class="bg-mobile-nav-link">Ärzte</a>
+                        <a href="/de/pathway-engineers.html" class="bg-mobile-nav-link">Ingenieure</a>
+                        <a href="/de/pathway-nursing.html" class="bg-mobile-nav-link">Pflege</a>
+                        <a href="/de/kontakt.html" class="bg-mobile-nav-link">Kontakt</a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -52,7 +62,6 @@
                 </p>
                 <div class="bg-cluster">
                     <a href="#" class="bg-btn bg-btn-primary">Profil-Check starten</a>
-                    <a href="#" class="bg-btn bg-btn-outline" style="color: var(--bg-white); border-color: rgba(255,255,255,0.3);">Verfahrens-Übersicht</a>
                 </div>
             </div>
         </div>
@@ -178,7 +187,6 @@
                 </p>
                 <div class="bg-cluster" style="justify-content: center;">
                     <a href="#" class="bg-btn bg-btn-primary">Beratung anfordern</a>
-                    <a href="#" class="bg-btn bg-btn-outline" style="color: var(--bg-white); border-color: rgba(255,255,255,0.3);">WhatsApp Kontakt</a>
                 </div>
             </div>
         </div>

@@ -1,552 +1,315 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <title>Ausbildung – Berlin Gateway</title>
-  <meta name="description" content="Analyse Ihrer Chancen basierend auf Marktbedarf und Qualifikation." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-  <meta name="author" content="Berlin Gateway" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://berlingateway.de/de/ausbildung.html" />
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/ausbildung.html" />
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/ausbildung.html" />
-  <link rel="stylesheet" href="/assets/css/app.css" />
-  <style>
-    .assessment-hero {
-      text-align: center;
-      margin-bottom: 42px;
-      padding: 40px 20px;
-    }
-    .assessment-hero h1 {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--black);
-      margin: 0 0 16px 0;
-    }
-    .assessment-hero p {
-      font-size: 18px;
-      color: #4B5563;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    .assessment-container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .progress-bar {
-      width: 100%;
-      height: 6px;
-      background: #e2e8f0;
-      border-radius: 3px;
-      margin-bottom: 32px;
-      overflow: hidden;
-    }
-    .progress-fill {
-      height: 100%;
-      background: #0B3B8C;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-    .step {
-      display: none;
-      animation: fadeIn 0.3s ease;
-    }
-    .step.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .step-title {
-      color: var(--black);
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .step-description {
-      color: #4B5563;
-      font-size: 16px;
-      margin-bottom: 32px;
-      line-height: 1.6;
-    }
-    .option-group {
-      margin-bottom: 24px;
-    }
-    .option-label {
-      display: flex;
-      align-items: center;
-      padding: 16px;
-      border: 2px solid #E5E7EB;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      margin-bottom: 12px;
-      background: white;
-    }
-    .option-label:hover {
-      border-color: #0B3B8C;
-      background: #fafaf8;
-    }
-    .option-label input[type="radio"] {
-      margin-right: 12px;
-      cursor: pointer;
-      width: 20px;
-      height: 20px;
-      accent-color: #0B3B8C;
-    }
-    .option-text {
-      flex: 1;
-    }
-    .option-points {
-      color: #0B3B8C;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .button-group {
-      display: flex;
-      gap: 12px;
-      margin-top: 40px;
-      justify-content: space-between;
-    }
-    .btn {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .btn-primary {
-      background: #0B3B8C;
-      color: white;
-      flex: 1;
-    }
-    .btn-primary:hover {
-      background: #9a6f08;
-    }
-    .btn-secondary {
-      background: #E5E7EB;
-      color: #4B5563;
-      padding: 14px 28px;
-    }
-    .btn-secondary:hover {
-      background: #D1D5DB;
-    }
-    .result-section {
-      display: none;
-      background: white;
-      border: 1px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .result-section.active {
-      display: block;
-      animation: fadeIn 0.3s ease;
-    }
-    .result-score {
-      font-size: 64px;
-      font-weight: 800;
-      color: #0B3B8C;
-      margin-bottom: 12px;
-    }
-    .result-status {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .result-status.excellent {
-      color: #10b981;
-    }
-    .result-status.good {
-      color: #0B3B8C;
-    }
-    .result-status.early {
-      color: #ef4444;
-    }
-    .result-message {
-      color: #4B5563;
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .result-cta {
-      margin-top: 32px;
-    }
-    .result-cta a {
-      display: inline-block;
-      padding: 14px 32px;
-      background: #0B3B8C;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 700;
-      transition: background 0.2s ease;
-    }
-    .result-cta a:hover {
-      background: #9a6f08;
-    }
-    .micro-trust {
-      background: #f9f8f6;
-      border-radius: 8px;
-      padding: 24px;
-      margin: 40px 0;
-      text-align: center;
-    }
-    .micro-trust p {
-      color: #4B5563;
-      font-size: 14px;
-      margin: 8px 0;
-      font-weight: 600;
-    }
-    .final-cta {
-      text-align: center;
-      margin: 60px 0;
-    }
-    .final-cta a {
-      display: inline-block;
-      padding: 16px 40px;
-      background: #0B3B8C;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 16px;
-      transition: background 0.2s ease;
-    }
-    .final-cta a:hover {
-      background: #9a6f08;
-    }
-    @media (max-width: 768px) {
-      .assessment-hero h1 {
-        font-size: 28px;
-      }
-      .assessment-hero p {
-        font-size: 16px;
-      }
-      .result-score {
-        font-size: 48px;
-      }
-      .button-group {
-        flex-direction: column;
-      }
-      .btn-secondary {
-        width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ausbildung in Deutschland: Duales System für internationale Fachkräfte</title>
+    <meta name="description" content="Ausbildung in Deutschland: Das Duale System für internationale Fachkräfte. Strukturierte Vorbereitung, Berufsfelder und institutionelle Integration.">
+    <meta property="og:title" content="Ausbildung in Deutschland: Duales System für internationale Fachkräfte">
+    <meta property="og:description" content="Erhalten Sie eine strategische Bewertung Ihrer Chancen im deutschen Ausbildungssystem. Basierend auf Qualifikation, Sprache und Arbeitsmarktrelevanz.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://berlingateway.de/de/ausbildung/">
+    <link rel="stylesheet" href="../assets/css/bg-core.css">
+    <style>
+        /* AUSBILDUNG-SPEZIFISCHE ERGÄNZUNGEN */
+        .ausbildung-faq {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ausbildung-faq li {
+            border-bottom: 1px solid var(--bg-border);
+            padding-block: var(--bg-space-md);
+        }
+
+        .ausbildung-faq li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--bg-black);
+            user-select: none;
+        }
+
+        .faq-answer {
+            display: none;
+            padding-top: var(--bg-space-md);
+            color: var(--bg-text-muted);
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-toggle {
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 <body>
-  <!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/ausbildung/" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+    <!-- TOP BAR -->
+    <div style="background: var(--bg-black); color: var(--bg-white); padding: 12px 0; font-size: 13px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div>Berlin Headquarter: +49 (0) 30 12345678 | E-Mail: info@berlingateway.de</div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <span style="font-weight: 700;">DE</span>
+                <a href="/ar/" style="text-decoration: none; color: var(--bg-white);">AR</a>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/chancenkarte/" class="nav-link ">Chancenkarte</a>
-            <a href="/de/assessment/" class="nav-link ">Punkte-Rechner</a>
-            <a href="/de/systemlogik/" class="nav-link ">Systemlogik</a>
-            <a href="/de/monitor/" class="nav-link ">Monitor</a>
-            <a href="/de/insights/" class="nav-link ">Insights</a>
-        </nav>
+    <!-- MAIN HEADER -->
+    <div style="background: var(--bg-white); border-bottom: 1px solid var(--bg-border); padding: 16px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/de/" style="font-size: 18px; font-weight: 800; color: var(--bg-black); text-decoration: none;">BERLINGATEWAY</a>
+            <div style="display: flex; gap: 32px;">
+                <a href="/de/chancenkarte/" style="color: var(--bg-black); text-decoration: none; font-weight: 500; font-size: 14px;">Chancenkarte</a>
+                <a href="/de/aerzte/" style="color: var(--bg-black); text-decoration: none; font-weight: 500; font-size: 14px;">Ärzte</a>
+                <a href="/de/pflegekraefte/" style="color: var(--bg-black); text-decoration: none; font-weight: 500; font-size: 14px;">Pflege</a>
+                <a href="/de/assessment/" style="color: var(--bg-black); text-decoration: none; font-weight: 500; font-size: 14px;">Assessment</a>
+            </div>
+        </div>
     </div>
-</header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
-    </div>
-</nav>
-
-  <main style="padding-top: 130px;">
     <!-- HERO SECTION -->
-    <section class="assessment-hero">
-      <h1>Ist Ausbildung in Deutschland wirklich Ihre Chance – oder der falsche Weg?</h1>
-      <p>Analyse Ihrer Chancen basierend auf Marktbedarf und Qualifikation.</p>
-    </section>
-
-    <!-- ASSESSMENT TOOL -->
-    <div class="assessment-container">
-      <!-- PROGRESS BAR -->
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-
-      <!-- STEP 1: QUALIFICATION -->
-      <div class="step active" id="step1">
-        <div class="step-title">Schritt 1: Ihre Qualifikation</div>
-        <div class="step-description">Was ist Ihr höchster Abschluss?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="qualification" value="3">
-            <span class="option-text">Universitätsabschluss (Bachelor/Master)</span>
-            <span class="option-points">3 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="qualification" value="2">
-            <span class="option-text">Berufsausbildung / Fachschule</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="qualification" value="0">
-            <span class="option-text">Keine formale Qualifikation</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-primary" onclick="nextStep(2)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 2: PROFESSIONAL EXPERIENCE -->
-      <div class="step" id="step2">
-        <div class="step-title">Schritt 2: Berufserfahrung</div>
-        <div class="step-description">Wie viele Jahre relevanter Berufserfahrung haben Sie?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="experience" value="3">
-            <span class="option-text">5+ Jahre</span>
-            <span class="option-points">3 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="experience" value="2">
-            <span class="option-text">2-4 Jahre</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="experience" value="0">
-            <span class="option-text">Weniger als 2 Jahre</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(1)">Zurück</button>
-          <button class="btn btn-primary" onclick="nextStep(3)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 3: GERMAN LANGUAGE SKILLS -->
-      <div class="step" id="step3">
-        <div class="step-title">Schritt 3: Deutschkenntnisse</div>
-        <div class="step-description">Was ist Ihr aktuelles Deutsch-Niveau?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="german" value="3">
-            <span class="option-text">B2 oder höher</span>
-            <span class="option-points">3 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="german" value="2">
-            <span class="option-text">B1</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="german" value="1">
-            <span class="option-text">A2</span>
-            <span class="option-points">1 Punkt</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="german" value="0">
-            <span class="option-text">A1 oder niedriger</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(2)">Zurück</button>
-          <button class="btn btn-primary" onclick="nextStep(4)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 4: AGE -->
-      <div class="step" id="step4">
-        <div class="step-title">Schritt 4: Ihr Alter</div>
-        <div class="step-description">Wie alt sind Sie?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="age" value="2">
-            <span class="option-text">Unter 35</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="age" value="1">
-            <span class="option-text">35-40</span>
-            <span class="option-points">1 Punkt</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="age" value="0">
-            <span class="option-text">Über 40</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(3)">Zurück</button>
-          <button class="btn btn-primary" onclick="nextStep(5)">Weiter</button>
-        </div>
-      </div>
-
-      <!-- STEP 5: CONNECTION TO GERMANY -->
-      <div class="step" id="step5">
-        <div class="step-title">Schritt 5: Verbindung zu Deutschland</div>
-        <div class="step-description">Haben Sie eine Verbindung zu Deutschland?</div>
-        <div class="option-group">
-          <label class="option-label">
-            <input type="radio" name="connection" value="2">
-            <span class="option-text">Früherer Aufenthalt in Deutschland</span>
-            <span class="option-points">2 Punkte</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="connection" value="1">
-            <span class="option-text">Verwandte in Deutschland</span>
-            <span class="option-points">1 Punkt</span>
-          </label>
-          <label class="option-label">
-            <input type="radio" name="connection" value="0">
-            <span class="option-text">Keine Verbindung</span>
-            <span class="option-points">0 Punkte</span>
-          </label>
-        </div>
-        <div class="button-group">
-          <button class="btn btn-secondary" onclick="prevStep(4)">Zurück</button>
-          <button class="btn btn-primary" onclick="calculateResult()">Ergebnis berechnen</button>
-        </div>
-      </div>
-
-      <!-- RESULT SECTION -->
-      <div class="result-section" id="resultSection">
-        <div class="result-score" id="resultScore"></div>
-        <div class="result-status" id="resultStatus"></div>
-        <div class="result-message" id="resultMessage"></div>
-        <div class="result-cta" id="resultCta"></div>
-      </div>
-
-      <!-- MICRO-TRUST SECTION -->
-      <div class="micro-trust">
-        <p>✓ 100% kostenlos und unverbindlich</p>
-        <p>✓ Basiert auf offiziellen Kriterien</p>
-        <p>✓ Sofortiges Ergebnis</p>
-      </div>
-
-      <!-- FINAL CTA -->
-      <div class="final-cta">
-        <a href="/de/chancenkarte/">Ausbildung prüfen</a>
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
+    <div style="background: var(--bg-black); color: var(--bg-white); padding: 60px 0 50px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 16px 0; opacity: 0.7;">BERLIN GATEWAY SYSTEM</p>
+            <h1 style="font-size: 42px; font-weight: 800; margin: 0 0 16px 0; line-height: 1.2;">Ausbildung in Deutschland</h1>
+            <p style="font-size: 18px; line-height: 1.6; margin: 0 0 8px 0; opacity: 0.95;">Das Duale System für internationale Fachkräfte. Strukturierte Vorbereitung, Berufsfelder und institutionelle Integration in den deutschen Arbeitsmarkt.</p>
+            <div style="margin-top: 24px;">
+                <a href="#assessment" style="display: inline-block; background: #0B3B8C; color: var(--bg-white); padding: 12px 28px; text-decoration: none; font-weight: 600; border-radius: 4px;">Bewertung starten</a>
             </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/chancenkarte/">Chancenkarte</a>
-                <a href="/de/assessment/">Punkte-Rechner</a>
-                <a href="/de/systemlogik/">Systemlogik</a>
-                <a href="/de/monitor/">Monitor</a>
-                <a href="/de/insights/">Insights</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum/">Impressum</a>
-                <a href="/de/datenschutz/">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
         </div>
     </div>
-</footer>
 
-  <script>
-    let currentStep = 1;
-    const totalSteps = 5;
+    <!-- TRUST STRIP -->
+    <div style="background: #F5F5F5; padding: 24px 0; border-bottom: 1px solid var(--bg-border);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin: 0;">
+                <div style="text-align: center;">
+                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #666;">BERUFS-ORIENTIERUNG</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #666;">FACHKRÄFTE-NACHFRAGE</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #666;">QUALIFIKATIONS-BEWERTUNG</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #666;">STRATEGISCHE POSITIONIERUNG</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    function nextStep(step) {
-      document.getElementById(`step${currentStep}`).classList.remove("active");
-      document.getElementById(`step${step}`).classList.add("active");
-      currentStep = step;
-      updateProgress();
-    }
+    <!-- MAIN CONTENT -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <!-- PROCESS SECTION -->
+        <div style="padding: 48px 0; border-bottom: 1px solid var(--bg-border);">
+            <h2 style="font-size: 26px; font-weight: 700; margin: 0 0 24px 0;">Der strukturierte Ausbildungs-Einstieg</h2>
+            <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px 0; color: #333;">Unser strukturiertes Verfahren zur Bewertung Ihrer Chancen im deutschen Ausbildungssystem:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 32px; font-weight: 800; color: #0B3B8C; margin-bottom: 8px;">01</div>
+                    <div style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Berufs-Orientierung</div>
+                    <div style="font-size: 14px; color: #666; line-height: 1.5;">Analyse Ihrer Qualifikation und Fachrichtung</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 32px; font-weight: 800; color: #0B3B8C; margin-bottom: 8px;">02</div>
+                    <div style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Arbeitsmarkt-Fit</div>
+                    <div style="font-size: 14px; color: #666; line-height: 1.5;">Nachfrage in Ihrer Spezialität und Region</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 32px; font-weight: 800; color: #0B3B8C; margin-bottom: 8px;">03</div>
+                    <div style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Ausbildungs-Pfad</div>
+                    <div style="font-size: 14px; color: #666; line-height: 1.5;">Duales System, Vollzeitausbildung oder Umschulung</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 32px; font-weight: 800; color: #0B3B8C; margin-bottom: 8px;">04</div>
+                    <div style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Vorbereitung</div>
+                    <div style="font-size: 14px; color: #666; line-height: 1.5;">Dokumenten-Architektur und Sprachvalidierung</div>
+                </div>
+            </div>
+        </div>
 
-    function prevStep(step) {
-      document.getElementById(`step${currentStep}`).classList.remove("active");
-      document.getElementById(`step${step}`).classList.add("active");
-      currentStep = step;
-      updateProgress();
-    }
+        <!-- BERUFSGRUPPEN / DEMAND FIELDS -->
+        <div style="padding: 48px 0; border-bottom: 1px solid var(--bg-border);">
+            <h2 style="font-size: 26px; font-weight: 700; margin: 0 0 24px 0;">Nachfragefelder im deutschen Ausbildungssystem</h2>
+            <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px 0; color: #333;">Diese Berufsgruppen haben hohe Nachfrage und gute Integrationschancen:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 24px;">
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Handwerk & Technik</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Elektrotechnik, Metallbau, Sanitär. Starke Nachfrage in allen Bundesländern.</p>
+                    <a href="/de/assessment/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Bewertung starten →</a>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Pflege & Gesundheit</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Pflegeausbildung, Gesundheitsfachberufe. Massiver Fachkräftemangel.</p>
+                    <a href="/de/assessment/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Bewertung starten →</a>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Industrie & Produktion</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Industriemechanik, CNC-Technik, Logistik. Regionale Schwerpunkte.</p>
+                    <a href="/de/assessment/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Bewertung starten →</a>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Gastronomie & Tourismus</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Köche, Restaurantfachleute. Saisonale und permanente Chancen.</p>
+                    <a href="/de/assessment/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Bewertung starten →</a>
+                </div>
+            </div>
+        </div>
 
-    function updateProgress() {
-      const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
-      document.getElementById("progressFill").style.width = `${progress}%`;
-    }
+        <!-- REALITY LAYER -->
+        <div style="padding: 48px 0; border-bottom: 1px solid var(--bg-border);">
+            <h2 style="font-size: 26px; font-weight: 700; margin: 0 0 24px 0;">Institutionelle Realität</h2>
+            <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px 0; color: #333;">Diese Faktoren beeinflussen Ihre Chancen im deutschen Ausbildungssystem entscheidend:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Sprachanforderungen</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">B1/B2 Deutsch ist Standard. Fachsprache und Kommunikation sind kritisch für den Erfolg.</p>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Schulabschluss-Äquivalenz</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Ihr Schulabschluss muss anerkannt sein. Dokumentenqualität entscheidet über Erfolg.</p>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Altersanforderungen</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Ausbildung ist primär für Schulabgänger. Umschulung für Berufserfahrene.</p>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Aufenthaltstitel</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Ausbildungsvisum ist möglich. Chancenkarte und Arbeitsvisum sind Alternativen.</p>
+                </div>
+            </div>
+        </div>
 
-    function calculateResult() {
-      let totalPoints = 0;
-      const form = document.querySelector(".assessment-container");
-      const formData = new FormData(form);
+        <!-- AUTHORITY LAYER -->
+        <div style="padding: 48px 0; border-bottom: 1px solid var(--bg-border);">
+            <h2 style="font-size: 26px; font-weight: 700; margin: 0 0 24px 0;">Verstehen Sie die Systemlogik</h2>
+            <p style="font-size: 16px; line-height: 1.6; margin: 0 0 24px 0; color: #333;">Lernen Sie die Logik des deutschen Ausbildungssystems und der institutionellen Anforderungen:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Systemlogik</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Wie das deutsche Ausbildungssystem funktioniert und warum Struktur entscheidend ist.</p>
+                    <a href="/de/systemlogik/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Systemlogik öffnen →</a>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Monitor</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Aktuelle Nachfragesignale und regionale Unterschiede am deutschen Arbeitsmarkt.</p>
+                    <a href="/de/monitor/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Monitor öffnen →</a>
+                </div>
+                <div style="border: 1px solid #E0E0E0; padding: 24px; border-radius: 4px;">
+                    <h3 style="margin-top: 0; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Insights</h3>
+                    <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;">Warum Auszubildende scheitern und wie Sie Fehler vermeiden. Analytische Ebene.</p>
+                    <a href="/de/insights/" style="color: #0B3B8C; text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block;">Insights öffnen →</a>
+                </div>
+            </div>
+        </div>
 
-      for (const [key, value] of formData.entries()) {
-        totalPoints += parseInt(value, 10);
-      }
+        <!-- FAQ SECTION -->
+        <div style="padding: 48px 0; border-bottom: 1px solid var(--bg-border);">
+            <h2 style="font-size: 26px; font-weight: 700; margin: 0 0 24px 0;">Häufige Fragen</h2>
+            <ul class="ausbildung-faq">
+                <li>
+                    <div class="faq-question">
+                        <span>Ist mein Schulabschluss in Deutschland anerkannt?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Das hängt von Ihrem Herkunftsland und Ihrem Schulabschluss ab. Eine professionelle Bewertung ist notwendig. Starten Sie mit unserem Assessment.</div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>Kann ich mit Chancenkarte ausbilden?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Chancenkarte ist primär für Fachkräfte. Ausbildung hat separate Visa-Regelungen. Wir prüfen Ihre beste Option.</div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>Wie lange dauert eine Ausbildung?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Duale Ausbildung dauert 2-3 Jahre. Vollzeitausbildung kann schneller sein. Umschulung variiert nach Beruf.</div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>Welche Sprachanforderungen gibt es?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">B1/B2 Deutsch ist Standard. Fachsprache und Kommunikation sind kritisch. Sprachzertifikate sind dokumentarisch obligatorisch.</div>
+                </li>
+                <li>
+                    <div class="faq-question">
+                        <span>Verdiene ich während der Ausbildung?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">Ja, duale Ausbildung ist bezahlt. Vollzeitausbildung kann unbezahlt sein. Umschulung hat separate Regelungen.</div>
+                </li>
+            </ul>
+        </div>
 
-      const resultSection = document.getElementById("resultSection");
-      const resultScore = document.getElementById("resultScore");
-      const resultStatus = document.getElementById("resultStatus");
-      const resultMessage = document.getElementById("resultMessage");
-      const resultCta = document.getElementById("resultCta");
+        <!-- FINAL CTA -->
+        <div style="padding: 60px 0; text-align: center; border-bottom: 1px solid var(--bg-border);">
+            <h2 style="font-size: 26px; font-weight: 700; margin: 0 0 16px 0;">Bereit für die Bewertung?</h2>
+            <p style="font-size: 18px; margin: 0 0 24px 0; color: #666;">Starten Sie jetzt die strukturierte Analyse Ihres Ausbildungs-Profils.</p>
+            <a href="/de/assessment/" style="display: inline-block; background: #0B3B8C; color: var(--bg-white); padding: 14px 32px; text-decoration: none; font-weight: 600; border-radius: 4px; font-size: 16px;">Bewertung starten</a>
+        </div>
+    </div>
 
-      resultScore.textContent = `${totalPoints} Punkte`;
+    <!-- FOOTER -->
+    <div style="background: var(--bg-black); color: var(--bg-white); padding: 40px 0; margin-top: 60px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 700; margin: 0 0 16px 0; text-transform: uppercase; letter-spacing: 0.5px;">Pfade</h4>
+                    <a href="/de/aerzte/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Ärzte</a>
+                    <a href="/de/pflegekraefte/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Pflegekräfte</a>
+                    <a href="/de/chancenkarte/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Chancenkarte</a>
+                    <a href="/de/voraussetzungen/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Voraussetzungen</a>
+                </div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 700; margin: 0 0 16px 0; text-transform: uppercase; letter-spacing: 0.5px;">System</h4>
+                    <a href="/de/assessment/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Assessment</a>
+                    <a href="/de/systemlogik/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Systemlogik</a>
+                    <a href="/de/monitor/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Monitor</a>
+                    <a href="/de/insights/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Insights</a>
+                </div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 700; margin: 0 0 16px 0; text-transform: uppercase; letter-spacing: 0.5px;">Orientierung</h4>
+                    <a href="/de/orientierung/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Pfad-Finder</a>
+                    <a href="/de/arbeit-in-deutschland/" style="display: block; font-size: 14px; color: #CCCCCC; text-decoration: none; margin-bottom: 12px;">Arbeitsmarkt</a>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #333; padding-top: 24px; font-size: 13px; color: #999; text-align: center;">
+                © 2026 Berlin Gateway. Alle Rechte vorbehalten. | <a href="/de/impressum/" style="color: #999; text-decoration: none;">Impressum</a> | <a href="/de/datenschutz/" style="color: #999; text-decoration: none;">Datenschutz</a>
+            </div>
+        </div>
+    </div>
 
-      if (totalPoints >= 6) {
-        resultStatus.textContent = "Ihre Ausbildung-Chancen sind gut!";
-        resultStatus.className = "result-status good";
-        resultMessage.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für eine Ausbildung. Fahren Sie fort, um Ihre Chancenkarte-Bewertung zu starten.";
-        resultCta.innerHTML = `<a href="/de/chancenkarte/">Zur Chancenkarte-Bewertung</a>`;
-      } else {
-        resultStatus.textContent = "Ihre Ausbildung-Chancen sind begrenzt.";
-        resultStatus.className = "result-status early";
-        resultMessage.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für eine Ausbildung nicht vollständig. Prüfen Sie die Systemlogik, um Ihre Optionen zu verstehen.";
-        resultCta.innerHTML = `<a href="/de/systemlogik/">Systemlogik prüfen</a>`;
-      }
-
-      resultSection.classList.add("active");
-      resultSection.scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

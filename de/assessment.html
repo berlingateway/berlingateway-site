@@ -129,6 +129,35 @@
             line-height: 1.6;
         }
         .faq-answer.active { display: block; }
+
+        /* V1.5 MINIMAL BUTTON PATCH */
+        button, .bg-btn-local {
+            background: var(--bg-blue);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 2px;
+        }
+        button:hover, .bg-btn-local:hover {
+            opacity: 0.9;
+            color: white;
+            text-decoration: none;
+        }
+        .whatsapp-cta {
+            background: var(--bg-blue) !important;
+            color: white !important;
+            text-decoration: none !important;
+            font-weight: 700 !important;
+            padding: 18px 45px !important;
+            display: inline-block !important;
+            border-radius: 2px !important;
+        }
     </style>
 </head>
 <body class="bg-body">
@@ -396,10 +425,10 @@
     <!-- 8. FINAL CTA -->
     <section class="bg-section" style="background: var(--bg-black); color: white; text-align: center;">
         <div class="bg-container">
-            <h2 class="bg-heading-section" style="color: white; margin-bottom: 20px;">Individuelle Analyse anfordern</h2>
-            <p class="bg-text-body" style="color: rgba(255,255,255,0.7); margin-bottom: 40px;">Lassen Sie Ihr Profil von unseren Experten für den deutschen Arbeitsmarkt validieren.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/493025730875" class="bg-button-primary" style="background: var(--bg-blue); border: none; padding: 18px 45px;">Per WhatsApp kontaktieren</a>
+            <div class="bg-stack" style="align-items: center;">
+                <h2 class="bg-heading-section" style="color: white; margin-bottom: 15px;">Individuelle Analyse anfordern</h2>
+                <p class="bg-text-body" style="color: rgba(255,255,255,0.85); max-width: 600px; margin-inline: auto; margin-bottom: 35px;">Lassen Sie Ihr Profil von unseren Experten für den deutschen Arbeitsmarkt validieren.</p>
+                <a href="https://wa.me/493025730875" class="whatsapp-cta" style="min-width: 280px; text-align: center;">Per WhatsApp kontaktieren</a>
             </div>
         </div>
     </section>
@@ -409,29 +438,29 @@
         <div class="bg-container">
             <div class="bg-grid bg-grid-3" style="gap: 40px;">
                 <div class="bg-stack">
-                    <div style="font-weight: 900; font-size: 18px; letter-spacing: -0.02em;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
-                    <p class="bg-text-small" style="max-width: 240px; opacity: 0.7;">Operative Begleitung für die Fachkräftemigration nach Deutschland.</p>
+                    <div style="font-weight: 900; font-size: 18px; letter-spacing: -0.02em; color: white;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
+                    <p class="bg-text-small" style="max-width: 240px; color: rgba(255,255,255,0.85);">Operative Begleitung für die Fachkräftemigration nach Deutschland.</p>
                 </div>
                 <div class="bg-stack">
-                    <span class="bg-label" style="color: rgba(255,255,255,0.5);">Navigation</span>
-                    <nav class="bg-stack" style="--bg-space-md: 8px;">
-                        <a href="/de/chancenkarte/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Chancenkarte</a>
+                    <span class="bg-label" style="color: rgba(255,255,255,0.6);">Navigation</span>
+                    <nav class="bg-stack" style="--bg-space-md: 10px;">
+                        <a href="/de/chancenkarte/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Chancenkarte</a>
                         <a href="/de/assessment/" class="bg-text-small" style="text-decoration: none; color: var(--bg-blue); font-weight: 700;">Assessment</a>
-                        <a href="/de/systemlogik/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Systemlogik</a>
-                        <a href="/de/monitor/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Monitor</a>
+                        <a href="/de/systemlogik/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Systemlogik</a>
+                        <a href="/de/monitor/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Monitor</a>
                     </nav>
                 </div>
                 <div class="bg-stack">
-                    <span class="bg-label" style="color: rgba(255,255,255,0.5);">Rechtliches</span>
-                    <nav class="bg-stack" style="--bg-space-md: 8px;">
-                        <a href="/de/impressum/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Impressum</a>
-                        <a href="/de/datenschutz/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Datenschutz</a>
+                    <span class="bg-label" style="color: rgba(255,255,255,0.6);">Rechtliches</span>
+                    <nav class="bg-stack" style="--bg-space-md: 10px;">
+                        <a href="/de/impressum/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Impressum</a>
+                        <a href="/de/datenschutz/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Datenschutz</a>
                     </nav>
                 </div>
             </div>
-            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; opacity: 0.5;">
-                <p class="bg-text-small">&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
-                <p class="bg-text-small">Operating within established professional qualification frameworks.</p>
+            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <p class="bg-text-small" style="color: rgba(255,255,255,0.6);">&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+                <p class="bg-text-small" style="color: rgba(255,255,255,0.6);">Operating within established professional qualification frameworks.</p>
             </div>
         </div>
     </footer>

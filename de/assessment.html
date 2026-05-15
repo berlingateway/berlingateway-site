@@ -134,34 +134,45 @@
 <body class="bg-body">
 
     <!-- 1. TOP BAR -->
-    <div class="bg-bg-black" style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <div class="bg-container" style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="color: white; font-size: 13px; font-weight: 600;">
-                <span style="opacity: 0.6; margin-right: 8px;">GOVERNANCE:</span> GERMAN QUALIFICATION FRAMEWORK
-            </div>
-            <div style="display: flex; gap: 20px;">
-                <a href="mailto:info@berlingateway.de" style="color: white; text-decoration: none; font-size: 13px; font-weight: 600;">✉ info@berlingateway.de</a>
-                <a href="/ar/assessment/" style="color: white; text-decoration: none; font-size: 13px; font-weight: 600;">العربية</a>
+    <div class="bg-bg-black bg-text-white" style="padding-block: 8px; font-size: 13px;">
+        <div class="bg-container">
+            <div class="bg-cluster" style="justify-content: space-between;">
+                <div class="bg-cluster bg-hide-mobile">
+                    <span>Berlin Headquarter: +49 30 25730875</span>
+                    <span>E-Mail: info@berlingateway.de</span>
+                </div>
+                <div class="bg-cluster" style="margin-left: auto;">
+                    <span style="font-weight: 700;">DE</span>
+                    <a href="/ar/assessment/" style="text-decoration: none; color: var(--bg-white);">AR</a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- 2. MAIN HEADER -->
-    <header style="background: white; padding: 25px 0; border-bottom: 1px solid var(--bg-border);">
-        <div class="bg-container" style="display: flex; justify-content: space-between; align-items: center;">
-            <a href="/de/" style="text-decoration: none; color: var(--bg-black); font-weight: 900; font-size: 22px; letter-spacing: -0.03em;">
-                BERLIN<span style="color: var(--bg-blue);">GATEWAY</span>
-            </a>
-            <nav style="display: flex; gap: 35px;">
-                <a href="/de/chancenkarte/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">CHANCENKARTE</a>
-                <a href="/de/aerzte/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">ÄRZTE</a>
-                <a href="/de/pflegekraefte/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">PFLEGEKRÄFTE</a>
-                <a href="/de/voraussetzungen/" style="text-decoration: none; color: var(--bg-black); font-weight: 700; font-size: 14px;">VORAUSSETZUNGEN</a>
-            </nav>
+    <header style="padding-block: 20px; border-bottom: 1px solid var(--bg-border); background: var(--bg-white);">
+        <div class="bg-container">
+            <div style="width: 100%;">
+                <div class="bg-cluster" style="justify-content: space-between; width: 100%;">
+                    <a href="/de/" style="text-decoration: none; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: var(--bg-black);">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></a>
+                    <nav class="bg-cluster bg-hide-mobile">
+                        <a href="/de/chancenkarte/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Chancenkarte</a>
+                        <a href="/de/aerzte/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Ärzte</a>
+                        <a href="/de/pflegekraefte/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Pflege</a>
+                        <a href="/de/assessment/" style="text-decoration: none; color: var(--bg-blue); font-weight: 800; font-size: 14px;">Assessment</a>
+                    </nav>
+                </div>
+                <nav class="bg-mobile-nav">
+                    <a href="/de/chancenkarte/" class="bg-mobile-nav-link">Chancenkarte</a>
+                    <a href="/de/aerzte/" class="bg-mobile-nav-link">Ärzte</a>
+                    <a href="/de/pflegekraefte/" class="bg-mobile-nav-link">Pflege</a>
+                    <a href="/de/assessment/" class="bg-mobile-nav-link" style="color: var(--bg-blue); font-weight: 800;">Assessment</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- 3. SUB NAVIGATION -->
+    <!-- 3. SUB NAVIGATION (SYSTEM INTELLIGENCE SPECIFIC) -->
     <div style="background: #F8FAFC; padding: 15px 0; border-bottom: 1px solid var(--bg-border);">
         <div class="bg-container" style="display: flex; gap: 30px;">
             <a href="/de/assessment/" style="text-decoration: none; color: var(--bg-blue); font-weight: 800; font-size: 12px; letter-spacing: 0.05em;">ASSESSMENT</a>
@@ -393,8 +404,8 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer style="background: var(--bg-black); color: white; padding: 80px 0 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+    <!-- 11. FOOTER (SYSTEM INTELLIGENCE MODE) -->
+    <footer style="padding-block: 60px; border-top: 1px solid rgba(255,255,255,0.1); background: var(--bg-black); color: white;">
         <div class="bg-container">
             <div class="bg-grid bg-grid-3" style="gap: 40px;">
                 <div class="bg-stack">
@@ -405,8 +416,9 @@
                     <span class="bg-label" style="color: rgba(255,255,255,0.5);">Navigation</span>
                     <nav class="bg-stack" style="--bg-space-md: 8px;">
                         <a href="/de/chancenkarte/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Chancenkarte</a>
-                        <a href="/de/assessment/" class="nav-link active" style="text-decoration: none; color: var(--bg-blue); font-weight: 700;">Punkte-Rechner</a>
+                        <a href="/de/assessment/" class="bg-text-small" style="text-decoration: none; color: var(--bg-blue); font-weight: 700;">Assessment</a>
                         <a href="/de/systemlogik/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Systemlogik</a>
+                        <a href="/de/monitor/" class="bg-text-small" style="text-decoration: none; color: white; opacity: 0.7;">Monitor</a>
                     </nav>
                 </div>
                 <div class="bg-stack">

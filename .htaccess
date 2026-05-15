@@ -19,6 +19,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Block and remove all feed URLs with 410 Gone
+  RewriteRule ^(.*/)?feed(/.*)?$ - [G,L]
+  RewriteRule ^comments/feed(/.*)?$ - [G,L]
   
   # Redirect .html to clean URLs
   RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /comments/feed/
+Disallow: */feed/
 
 Sitemap: https://berlingateway.de/sitemap.xml

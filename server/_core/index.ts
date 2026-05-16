@@ -33,20 +33,40 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Canonical URL Enforcement - 301 Redirects (SEO Authority Pack)
-  app.use((req, res, next) => {
-    const host = req.get('host') || '';
-    const protocol = req.protocol;
+  // Trust the Cloudflare/Manus reverse proxy so req.protocol reflects the
+  // original scheme and req.hostname reflects the original host.
+  app.set('trust proxy', 1);
 
-    if (process.env.NODE_ENV === 'production') {
-      // Enforce HTTPS
-      if (protocol !== 'https') {
-        return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
-      }
-      // Enforce non-www (canonical: medicalcaregermany.com)
-      if (host === 'www.medicalcaregermany.com') {
-        return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
-      }
+  // ─────────────────────────────────────────────────────────────────────────
+  // CANONICAL HOST ENFORCEMENT
+  // Primary canonical: https://medicalcaregermany.com  (non-www, HTTPS)
+  // Rule 1: www → non-www  (301, direct, no chain)
+  // Rule 2: HTTP → HTTPS   (301, direct, no chain)
+  // Both rules fire independently so there is never a double-hop.
+  // ─────────────────────────────────────────────────────────────────────────
+  app.use((req, res, next) => {
+    if (process.env.NODE_ENV !== 'production') return next();
+
+    // Resolve actual host: prefer x-forwarded-host (set by Cloudflare/proxy)
+    // then fall back to the Host header.
+    const forwardedHost = (req.headers['x-forwarded-host'] as string || '').split(',')[0].trim();
+    const host = forwardedHost || req.get('host') || '';
+
+    // Resolve actual protocol via x-forwarded-proto (set by Cloudflare)
+    const forwardedProto = (req.headers['x-forwarded-proto'] as string || '').split(',')[0].trim();
+    const protocol = forwardedProto || req.protocol;
+
+    const isWww = host === 'www.medicalcaregermany.com';
+    const isHttp = protocol === 'http';
+
+    // www → non-www (single 301, preserves full path + query)
+    if (isWww) {
+      return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
+    }
+
+    // HTTP → HTTPS (single 301, preserves full path + query)
+    if (isHttp) {
+      return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
     }
 
     next();

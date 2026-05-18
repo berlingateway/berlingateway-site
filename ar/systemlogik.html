@@ -1,346 +1,294 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منطق النظام – Berlin Gateway</title>
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        html[dir="rtl"] .systemlogik-hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: var(--white);
-        }
-        html[dir="rtl"] .systemlogik-hero h1 {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 20px;
-            color: var(--black);
-        }
-        html[dir="rtl"] .systemlogik-hero p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        html[dir="rtl"] .filters-container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        html[dir="rtl"] .filters-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 42px;
-        }
-        html[dir="rtl"] .filter-block {
-            padding: 30px;
-            background: white;
-            border: 1px solid #E5E7EB;
-            border-radius: 8px;
-            text-align: center;
-        }
-        html[dir="rtl"] .filter-block h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            color: var(--black);
-        }
-        html[dir="rtl"] .filter-block p {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #4B5563;
-            margin: 0;
-        }
-        html[dir="rtl"] .exclusion-statement {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 600;
-            color: #CC0000; /* Red for emphasis */
-            line-height: 1.6;
-        }
-        html[dir="rtl"] .systemlogik-cta {
-            text-align: center;
-            padding: 60px 20px;
-            background: var(--white);
-        }
-        html[dir="rtl"] .systemlogik-cta-button {
-            display: inline-block;
-            padding: 16px 40px;
-            background-color: #B8860B;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 16px;
-            transition: background-color 0.2s;
-        }
-        html[dir="rtl"] .systemlogik-cta-button:hover {
-            background-color: #9a6f08;
-        }
-        html[dir="rtl"] .routing-section {
-            max-width: 1000px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-        html[dir="rtl"] .routing-section-title {
-            font-size: 28px;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 15px;
-            color: var(--black);
-        }
-        html[dir="rtl"] .routing-section-intro {
-            font-size: 16px;
-            text-align: center;
-            color: #4B5563;
-            margin-bottom: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        html[dir="rtl"] .routing-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 42px;
-        }
-        html[dir="rtl"] .routing-card {
-            padding: 30px;
-            background: white;
-            border: 1px solid #E5E7EB;
-            border-radius: 8px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-        html[dir="rtl"] .routing-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            color: var(--black);
-        }
-        html[dir="rtl"] .routing-card p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #4B5563;
-            margin: 0 0 20px 0;
-            flex-grow: 1;
-        }
-        html[dir="rtl"] .routing-card-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #B8860B;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: background-color 0.2s;
-            align-self: center;
-        }
-        html[dir="rtl"] .routing-card-button:hover {
-            background-color: #9a6f08;
-        }
-        html[dir="rtl"] .decision-cta-section {
-            max-width: 800px;
-            margin: 80px auto;
-            padding: 60px 20px;
-            background: white;
-            text-align: center;
-            border: 1px solid #E5E7EB;
-            border-radius: 8px;
-        }
-        html[dir="rtl"] .decision-cta-section h2 {
-            font-size: 28px;
-            font-weight: 800;
-            margin: 0 0 15px 0;
-            color: var(--black);
-        }
-        html[dir="rtl"] .decision-cta-section p {
-            font-size: 16px;
-            color: #4B5563;
-            margin: 0 0 30px 0;
-            line-height: 1.6;
-        }
-        html[dir="rtl"] .decision-cta-primary {
-            display: inline-block;
-            padding: 16px 40px;
-            background-color: #B8860B;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 16px;
-            transition: background-color 0.2s;
-            margin-bottom: 30px;
-        }
-        html[dir="rtl"] .decision-cta-primary:hover {
-            background-color: #9a6f08;
-        }
-        html[dir="rtl"] .decision-cta-secondary {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            justify-content: center;
-        }
-        html[dir="rtl"] .decision-cta-secondary a {
-            color: #B8860B;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: opacity 0.2s;
-        }
-        html[dir="rtl"] .decision-cta-secondary a:hover {
-            opacity: 0.8;
-        }
-        @media (max-width: 768px) {
-            html[dir="rtl"] .systemlogik-hero {
-                padding: 60px 20px;
-            }
-            html[dir="rtl"] .systemlogik-hero h1 {
-                font-size: 24px;
-            }
-            html[dir="rtl"] .filters-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            html[dir="rtl"] .filter-block {
-                padding: 20px;
-            }
-            html[dir="rtl"] .exclusion-statement {
-                font-size: 16px;
-            }
-            html[dir="rtl"] .routing-cards-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            html[dir="rtl"] .routing-section-title {
-                font-size: 22px;
-            }
-            html[dir="rtl"] .decision-cta-section {
-                padding: 40px 20px;
-            }
-            html[dir="rtl"] .decision-cta-section h2 {
-                font-size: 22px;
-            }
-        }
-    </style>
-  <link rel="canonical" href="https://berlingateway.de/ar/systemlogik" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منطق النظام الألماني — كيف يعمل فعلاً | Berlin Gateway</title>
+  <meta name="description" content="النظام الألماني للهجرة المهنية معقد — لكنه منطقي. افهم كيف يعمل قبل أن تبدأ أي خطوة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'IBM Plex Sans Arabic',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
+    .inner{max-width:780px;margin:0 auto}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
+
+    /* VISA GRID */
+    .visa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .visa-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
+    .visa-card h4{font-size:15px;font-weight:700;margin-bottom:10px;color:#0B1F3A}
+    .visa-card p{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:12px}
+    .visa-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+    .tag-blue{background:#EFF6FF;color:#1D4ED8}
+    .tag-green{background:#DCFCE7;color:#15803D}
+    .tag-amber{background:#FEF3C7;color:#92400E}
+
+    /* FLOW */
+    .flow-list{list-style:none;padding:0;margin:32px 0 0}
+    .flow-item{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E5E7EB;position:relative}
+    .flow-item:last-child{border-bottom:none}
+    .flow-num{width:32px;height:32px;background:#0B3B8C;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .flow-content h4{font-size:15px;font-weight:600;margin-bottom:4px;color:#0D1117}
+    .flow-content p{font-size:14px;color:#6B7280;line-height:1.6}
+
+    /* BARRIER TABLE */
+    .barrier-list{margin-top:32px}
+    .barrier-item{display:flex;gap:16px;align-items:flex-start;padding:20px;border:1.5px solid #E5E7EB;border-radius:10px;margin-bottom:12px;background:#FFFFFF}
+    .barrier-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+    .barrier-content h4{font-size:15px;font-weight:600;margin-bottom:4px;color:#0D1117}
+    .barrier-content p{font-size:13px;color:#6B7280;line-height:1.6}
+
+    /* INSIGHT BOX */
+    .insight-box{background:#0B1F3A;border-radius:12px;padding:32px;margin-top:32px;color:#FFFFFF}
+    .insight-box h4{font-size:17px;font-weight:700;margin-bottom:12px}
+    .insight-box p{font-size:15px;color:rgba(255,255,255,0.75);line-height:1.75;font-weight:300}
+
+    /* MYTH GRID */
+    .myth-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+    .myth-card{border-radius:10px;padding:20px}
+    .myth-card--wrong{background:#FEF2F2;border:1.5px solid #FECACA}
+    .myth-card--right{background:#F0FDF4;border:1.5px solid #BBF7D0}
+    .myth-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:10px;display:block}
+    .myth-label--wrong{color:#B91C1C}
+    .myth-label--right{color:#15803D}
+    .myth-card h4{font-size:14px;font-weight:600;margin-bottom:6px;color:#0D1117}
+    .myth-card p{font-size:13px;color:#374151;line-height:1.6}
+
+    /* CTA */
+    .cta-block{background:#0B1F3A;border-radius:12px;padding:48px 40px;text-align:center}
+    .cta-block h2{color:#FFFFFF;font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:16px;line-height:1.3}
+    .cta-block p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-btn{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none}
+    .wa-link{display:block;color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;margin-top:16px}
+
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+
+    @media(max-width:640px){
+      .nav{display:none}
+      .visa-grid{grid-template-columns:1fr}
+      .myth-grid{grid-template-columns:1fr}
+      .cta-block{padding:32px 24px}
+    }
+  </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/de/systemlogik/" class="lang-switch">Deutsch</a>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/de/systemlogik" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5">تقييم معتمد</span>
     </div>
+  </div>
 </div>
 
-<!-- BAND 2: MINIMAL HEADER (WHITE) -->
 <header class="header">
-    <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-    </div>
+  <div class="header__inner">
+    <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/assessment">التقييم</a>
+      <a href="/ar/aerzte">أطباء</a>
+      <a href="/ar/pflege">تمريض</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BAND 3: INTERNAL NAV BAR -->
-<div class="internal-nav">
-    <div class="internal-nav__inner">
-        <a href="/ar/chancenkarte/" class="nav-link ">بطاقة الفرصة</a>
-        <a href="/ar/systemlogik/" class="nav-link active">منطق النظام</a>
-        <a href="/ar/monitor/" class="nav-link ">المرصد</a>
-        <a href="/ar/insights/" class="nav-link ">الرؤى</a>
+<!-- HERO -->
+<section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
+  <div class="inner">
+    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">منطق النظام — Systemlogik</p>
+    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">النظام الألماني معقد.<br>لكنه <em style="font-style:normal;color:#93C5FD;">منطقي تماماً — إذا فهمته.</em></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:540px;margin:0 auto;line-height:1.7;font-weight:300;">معظم من يفشلون في ألمانيا لم يفشلوا بسبب مؤهلاتهم — بل لأنهم لم يفهموا كيف يعمل النظام قبل البداية.</p>
+  </div>
+</section>
+
+<!-- VISA TYPES -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">مسارات الدخول</p>
+    <h2>ثلاثة مسارات — وليس مساراً واحداً</h2>
+    <p class="lead">ألمانيا لا تملك "تأشيرة عمل" واحدة. كل مسار له شروطه ومتطلباته — واختيار المسار الخطأ يضيع أشهراً.</p>
+    <div class="visa-grid">
+      <div class="visa-card">
+        <span class="visa-tag tag-blue" style="margin-bottom:12px;display:inline-block;">للباحثين عن عمل</span>
+        <h4>Chancenkarte</h4>
+        <p>تأشيرة مؤقتة (12 شهراً) للبحث عن عمل داخل ألمانيا. تحتاج نقاطاً كافية من: الخبرة، اللغة، العمر، الروابط بألمانيا.</p>
+        <span class="visa-tag tag-blue">نقاط + مؤهل معترف</span>
+      </div>
+      <div class="visa-card">
+        <span class="visa-tag tag-green" style="margin-bottom:12px;display:inline-block;">للمتخصصين</span>
+        <h4>Fachkräfte-Visum</h4>
+        <p>تأشيرة عمل مباشر. تحتاج عقد عمل + اعتراف بالمؤهل + مستوى لغوي محدد. أسرع وأكثر استقراراً من Chancenkarte.</p>
+        <span class="visa-tag tag-green">عقد + اعتراف + لغة</span>
+      </div>
+      <div class="visa-card">
+        <span class="visa-tag tag-amber" style="margin-bottom:12px;display:inline-block;">للمهن المنظمة</span>
+        <h4>Berufsanerkennung</h4>
+        <p>للمهن المنظمة كالطب والتمريض والهندسة. الاعتراف بالمؤهل شرط مسبق قبل أي تأشيرة. العملية طويلة لكن ضرورية.</p>
+        <span class="visa-tag tag-amber">اعتراف قبل كل شيء</span>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
-<!-- MAIN CONTENT -->
-<main style="padding-top: 130px;">
-    <!-- HERO SECTION -->
-    <section class="systemlogik-hero">
-        <h1>أساس تعاوننا</h1>
-        <p>نحن نعمل حصريًا مع المرشحين الذين يستوفون معاييرنا العالية. تحقق مما إذا كنت مؤهلاً.</p>
-    </section>
-
-    <!-- FILTERS SECTION -->
-    <section class="filters-container">
-        <div class="filters-grid">
-            
+<!-- HOW IT WORKS -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">كيف يعمل النظام</p>
+    <h2>الترتيب الصحيح — خطوة بخطوة</h2>
+    <p class="lead">النظام الألماني يعمل بتسلسل منطقي. من يتجاوز خطوة يعود إليها لاحقاً — بتكلفة أعلى ووقت أطول.</p>
+    <ul class="flow-list">
+      <li class="flow-item">
+        <div class="flow-num">1</div>
+        <div class="flow-content">
+          <h4>تحديد المسار المناسب لملفك</h4>
+          <p>Chancenkarte أم Fachkräfte-Visum أم Berufsanerkennung؟ الإجابة تعتمد على مؤهلك وخبرتك ومجالك وهدفك الزمني. هذه الخطوة وحدها توفر أشهراً.</p>
         </div>
-    </section>
-
-    <!-- EXCLUSION STATEMENT -->
-    <section class="exclusion-statement">
-        <p>إذا لم تستوف هذه المعايير، فلا يمكننا دعمك حاليًا.</p>
-    </section>
-
-    <!-- ROUTING SECTION -->
-    <section class="routing-section">
-        <h2 class="routing-section-title">الخطوة التالية — ما الصفحة المناسبة لك الآن؟</h2>
-        <p class="routing-section-intro">ليس كل زائر يحتاج نفس الصفحة. اختر المسار المناسب حسب ما تحتاجه الآن.</p>
-        <div class="routing-cards-grid">
-            
+      </li>
+      <li class="flow-item">
+        <div class="flow-num">2</div>
+        <div class="flow-content">
+          <h4>الاعتراف بالمؤهل — إذا كان مطلوباً</h4>
+          <p>ليس كل المهن تحتاج اعترافاً. IT والهندسة أحياناً لا تحتاجه. الطب والتمريض والصيدلة تحتاجه دائماً. معرفة الفرق توفر سنة كاملة.</p>
         </div>
-    </section>
-
-    <!-- DECISION CTA SECTION -->
-    <section class="decision-cta-section">
-        <h2>خذ القرار الصحيح الآن</h2>
-        <p>بعد أن فهمت منطق النظام، لا تؤجل الخطوة التالية.</p>
-        <a href="/ar/chancenkarte/" class="decision-cta-primary">ابدأ تقييم بطاقة الفرصة</a>
-        <div class="decision-cta-secondary">
-            
+      </li>
+      <li class="flow-item">
+        <div class="flow-num">3</div>
+        <div class="flow-content">
+          <h4>اللغة — المستوى الحقيقي المطلوب</h4>
+          <p>ليس B2 دائماً. وليس C1 دائماً. كل مجال له متطلب لغوي مختلف. والفرق بين C1 عام وC1 متخصص كبير جداً في بعض المهن.</p>
         </div>
-    </section>
-</main>
+      </li>
+      <li class="flow-item">
+        <div class="flow-num">4</div>
+        <div class="flow-content">
+          <h4>ملف الوثائق — الأكثر إرهاقاً</h4>
+          <p>القائمة طويلة: شهادات مترجمة، خبرات موثقة، سيرة ذاتية بالمعيار الألماني، عقود سابقة، وأحياناً توثيق نوتاري. كل وثيقة ناقصة تأخير.</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <div class="flow-num">5</div>
+        <div class="flow-content">
+          <h4>التأشيرة — الخطوة الأخيرة فقط</h4>
+          <p>كثيرون يبدؤون من هنا — وهذا الخطأ الأكبر. التأشيرة نتيجة لعملية صحيحة، ليست البداية. من يجهز ملفه جيداً ينتظر أسابيع — لا أشهر.</p>
+        </div>
+      </li>
+    </ul>
 
-<!-- FOOTER (BLACK) -->
+    <div class="insight-box">
+      <h4>الفهم الحقيقي للنظام</h4>
+      <p>ألمانيا لا ترفض الكفاءات الأجنبية — بل ترفض الملفات الناقصة والمسارات الخاطئة. النظام مصمم لمن يفهمه ويحضّر له بشكل صحيح.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BARRIERS -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">عوائق النظام</p>
+    <h2>أين يتعثر معظم الناس؟</h2>
+    <p class="lead">هذه ليست مشاكل استثنائية — هي الأسباب الأكثر شيوعاً للتأخير أو الرفض.</p>
+    <div class="barrier-list">
+      <div class="barrier-item">
+        <div class="barrier-icon">⚖️</div>
+        <div class="barrier-content">
+          <h4>اختلاف أنظمة التعليم</h4>
+          <p>ما يُعتبر "بكالوريوس" في بلدك قد يُصنَّف بشكل مختلف في ألمانيا. المدة والمحتوى والمؤسسة — كلها تؤثر على قرار الاعتراف.</p>
+        </div>
+      </div>
+      <div class="barrier-item">
+        <div class="barrier-icon">🗣️</div>
+        <div class="barrier-content">
+          <h4>الفجوة اللغوية الحقيقية</h4>
+          <p>كثيرون يصلون بمستوى لغوي يكفي للتواصل اليومي — لكنه لا يكفي لبيئة العمل المتخصصة. الفجوة تظهر في المقابلات والعمل الفعلي.</p>
+        </div>
+      </div>
+      <div class="barrier-item">
+        <div class="barrier-icon">📋</div>
+        <div class="barrier-content">
+          <h4>ملف وثائق غير مكتمل</h4>
+          <p>الجهات الألمانية لا تطلب وثائق إضافية — تطلب كل شيء من البداية. ملف ناقص = توقف كامل حتى يكتمل.</p>
+        </div>
+      </div>
+      <div class="barrier-item">
+        <div class="barrier-icon">🗺️</div>
+        <div class="barrier-content">
+          <h4>اختيار الولاية الخطأ</h4>
+          <p>ألمانيا 16 ولاية — وكل ولاية لها آليات معالجة مختلفة. بعضها يعالج ملفات التمريض في 3 أشهر، وبعضها يأخذ 14 شهراً.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MYTHS -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">مفاهيم خاطئة</p>
+    <h2>ما الذي يُقال — وما الذي يحدث فعلاً؟</h2>
+    <p class="lead">هذه المفاهيم الخاطئة تكلف الناس أشهراً وأحياناً سنوات.</p>
+    <div class="myth-grid">
+      <div class="myth-card myth-card--wrong">
+        <span class="myth-label myth-label--wrong">❌ ما يُقال</span>
+        <h4>"ألمانيا تحتاج عمال — يمكنني الذهاب بأي مؤهل"</h4>
+        <p>الطلب حقيقي — لكنه على مؤهلات محددة في مهن محددة بمستويات لغوية محددة.</p>
+      </div>
+      <div class="myth-card myth-card--right">
+        <span class="myth-label myth-label--right">✓ الواقع</span>
+        <h4>الطلب على الكفاءات المتخصصة — ليس على أي عامل</h4>
+        <p>المهن ذات الطلب الأعلى: تمريض، IT، هندسة، حرف يدوية متخصصة. لكل منها متطلبات واضحة.</p>
+      </div>
+      <div class="myth-card myth-card--wrong">
+        <span class="myth-label myth-label--wrong">❌ ما يُقال</span>
+        <h4>"B2 كافٍ للعمل في أي مجال"</h4>
+        <p>B2 قد يكفي للمقابلة — لكن بيئة العمل المتخصصة تتطلب مستوى أعلى في معظم الحالات.</p>
+      </div>
+      <div class="myth-card myth-card--right">
+        <span class="myth-label myth-label--right">✓ الواقع</span>
+        <h4>المستوى المطلوب يعتمد على المجال والمهنة</h4>
+        <p>IT: B2 في كثير من الأحيان. طب وتمريض: C1 متخصص دائماً. هندسة: B2–C1 حسب الشركة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="inner">
+    <div class="cta-block">
+      <h2>فهمت النظام — الآن وقت تقييم ملفك.</h2>
+      <p>المعلومات العامة مهمة — لكن ما يهمك أنت تحديداً هو: أين تقف في هذا النظام؟ ما مسارك؟ ما الذي ينقصك؟</p>
+      <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
+      <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px;">رد خلال 24–48 ساعة · بدون التزام</p>
+      <a href="https://wa.me/4915781497451" class="wa-link">أو تواصل مباشرة عبر واتساب ←</a>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي في النظام الوظيفي الألماني.</p>
-            </div>
-            <div>
-                <h4>التنقل</h4>
-                <a href="/ar/">الصفحة الرئيسية</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المراقب</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum/">بيانات الاتصال</a>
-                <a href="/ar/datenschutz/">سياسة الخصوصية</a>
-            </div>
-            <div>
-                <h4>التواصل</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
-        </div>
-    </div>
+  <p>Berlin Gateway — تقييم مهني لألمانيا</p>
+  <p style="margin-top:8px;">
+    <a href="/ar/impressum">بصمة الموقع</a>
+    <a href="/ar/datenschutz">خصوصية البيانات</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
 
 </body>

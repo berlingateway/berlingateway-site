@@ -1,278 +1,391 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بطاقة الفرصة لألمانيا – تقييم احترافي</title>
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        .chancenkarte-container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .chancenkarte-hero {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        .chancenkarte-hero h1 {
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 15px;
-            color: #000;
-        }
-        .chancenkarte-hero p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #666;
-        }
-        .chancenkarte-form-wrapper {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .chancenkarte-form-wrapper h2 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #000;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #333;
-        }
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-            font-family: Inter, sans-serif;
-            box-sizing: border-box;
-        }
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #0B3B8C;
-            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
-        }
-        .form-group small {
-            display: block;
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
-        }
-        .form-submit {
-            width: 100%;
-            min-height: 58px;
-            background: #0B3B8C;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.3s ease;
-            opacity: 1;
-            visibility: visible;
-        }
-        .form-submit:hover {
-            background: #082B5C;
-        }
-        .form-submit:active {
-            background: #082B5C;
-        }
-    </style>
-  <link rel="canonical" href="https://berlingateway.de/ar/chancenkarte" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقة الفرص — تقييم الأهلية | Berlin Gateway</title>
+  <meta name="description" content="بطاقة الفرص ليست لكل أحد. اكتشف إذا كنت مؤهلاً قبل أن تضيع أشهراً في المسار الخطأ.">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── PAGE VARIABLES ── */
+    :root {
+      --ink:     #0D1117;
+      --ink-mid: #374151;
+      --ink-low: #6B7280;
+      --white:   #FFFFFF;
+      --off:     #F8F9FA;
+      --border:  #E5E7EB;
+      --blue:    #0B3B8C;
+      --blue-dk: #0B1F3A;
+      --red:     #B91C1C;
+      --gold:    #D97706;
+    }
+
+    body { font-family: 'IBM Plex Sans Arabic', sans-serif; color: var(--ink); background: var(--white); margin: 0; }
+
+    /* ── TOP BAND ── */
+    .top-band { background: var(--blue-dk); color: var(--white); padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+
+    /* ── HEADER ── */
+    .header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.3px; }
+    .brand span { color: var(--blue); }
+    .nav a { color: var(--ink-mid); text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav a:hover { color: var(--blue); }
+
+    /* ── HERO — HOOK ── */
+    .hero-hook {
+      background: var(--blue-dk);
+      padding: 64px 24px 60px; /* Reduced height */
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-hook::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(11,59,140,0.3) 0%, transparent 70%); /* Reduced glow */
+      pointer-events: none;
+    }
+    .hero-hook .kicker {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero-hook h1 {
+      color: var(--white);
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 720px;
+      margin: 0 auto 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero-hook h1 em {
+      font-style: normal;
+      color: #60A5FA; /* Darker blue, higher quality */
+      text-shadow: none; /* Removed glow */
+      font-weight: 800;
+    }
+    .hero-hook .sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 17px;
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .cta-primary {
+      display: inline-block;
+      background: var(--white);
+      color: var(--blue-dk);
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-size: 16px; /* Slightly larger */
+      font-weight: 700;
+      padding: 16px 40px; /* Slightly stronger */
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .cta-note { color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 12px; }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 64px 24px; } /* Reduced height */
+    .section--alt { background: var(--off); }
+    .inner { max-width: 780px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 16px;
+      letter-spacing: -0.3px;
+    }
+    .section .lead {
+      font-size: 17px;
+      color: var(--ink-mid);
+      line-height: 1.75;
+      margin: 0 0 32px;
+      font-weight: 300;
+    }
+
+    /* ── FILTER SECTION ── */
+    .filter-box {
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .filter-box__header {
+      background: var(--ink);
+      color: var(--white);
+      padding: 16px 24px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .filter-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-item:last-child { border-bottom: none; }
+    .filter-check {
+      width: 22px; height: 22px;
+      background: #DCFCE7;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    .filter-item p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ink-mid); }
+    .filter-item strong { color: var(--ink); display: block; margin-bottom: 2px; }
+
+    .exclusion-box {
+      background: #FEF2F2;
+      border: 1.5px solid #FECACA;
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .exclusion-box .icon { font-size: 20px; flex-shrink: 0; }
+    .exclusion-box p { margin: 0; font-size: 15px; color: #7F1D1D; line-height: 1.65; }
+
+    /* ── RISK SECTION ── */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .risk-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-right: 4px solid var(--red);
+      border-radius: 8px;
+      padding: 20px 20px 20px 16px;
+    }
+    .risk-card h4 { margin: 0 0 6px; font-size: 15px; color: var(--ink); font-weight: 600; }
+    .risk-card p { margin: 0; font-size: 13px; color: var(--ink-low); line-height: 1.6; }
+
+    /* ── POSITIONING ── */
+    .position-block {
+      background: var(--blue-dk);
+      border-radius: 12px;
+      padding: 32px 40px; /* Reduced vertical padding */
+      color: var(--white);
+      margin-top: 0;
+      border: 1px solid rgba(255,255,255,0.05); /* Subtle border for premium feel */
+    }
+    .position-block h3 { font-size: 22px; font-weight: 700; margin: 0 0 16px; }
+    .position-block p { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.75; margin: 0 0 24px; font-weight: 300; }
+    .position-list { list-style: none; margin: 0; padding: 0; }
+    .position-list li {
+      display: flex; align-items: center; gap: 12px; /* Increased gap */
+      font-size: 14px; color: rgba(255,255,255,0.85);
+      margin-bottom: 12px; /* Luftiger */
+      line-height: 1.5;
+    }
+    .position-list li::before { content: '—'; color: #60A5FA; flex-shrink: 0; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--off);
+      border-top: 1px solid var(--border);
+      padding: 64px 24px; /* Reduced height */
+      text-align: center;
+    }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 34px); font-weight: 700; margin: 0 0 16px; letter-spacing: -0.3px; }
+    .final-cta p { font-size: 16px; color: var(--ink-mid); max-width: 480px; margin: 0 auto 32px; line-height: 1.7; font-weight: 300; }
+    .cta-primary--dark {
+      display: inline-block;
+      background: var(--blue-dk);
+      color: var(--white);
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-primary--dark:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,31,58,0.25); }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
+    .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .nav { display: none; }
+      .risk-grid { grid-template-columns: 1fr; }
+      .position-block { padding: 28px 24px; }
+      .hero-hook { padding: 48px 20px 44px; } /* Reduced mobile height */
+      .section { padding: 48px 20px; } /* Reduced mobile section padding */
+      .position-list li { margin-bottom: 14px; } /* Even airier on mobile */
+    }
+  </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
+<!-- TOP BAND -->
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/de/" class="lang-switch">Deutsch</a>
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/de/chancenkarte" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5;">تقييم معتمد</span>
     </div>
+  </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- HEADER -->
 <header class="header">
-    <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte/" class="nav-link active">بطاقة الفرص</a>
-            <a href="/ar/assessment/" class="nav-link ">حاسبة النقاط</a>
-            <a href="/ar/systemlogik/" class="nav-link ">منطق النظام</a>
-            <a href="/ar/monitor/" class="nav-link ">المرصد</a>
-            <a href="/ar/insights/" class="nav-link ">الرؤى</a>
-        </nav>
-    </div>
+  <div class="header__inner">
+    <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/assessment">التقييم</a>
+      <a href="/ar/aerzte">أطباء</a>
+      <a href="/ar/pflege">تمريض</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
+<!-- 1. HOOK — ILLUSION BREAK -->
+<section class="hero-hook">
+  <div class="inner" style="position:relative;z-index:1;">
+    <p class="kicker">فلتر الأهلية — Chancenkarte</p>
+    <h1>بطاقة الفرص ليست مناسبة<br>لكل <em>شخص.</em></h1>
+    <p class="sub">والمشكلة أن كثيرين يكتشفون ذلك بعد أشهر من إضاعة الوقت والجهد في المسار الخطأ.</p>
+    <a href="/ar/assessment" class="cta-primary">ابدأ تقييمك الآن ←</a>
+    <p class="cta-note">دقيقتان فقط — بدون التزام</p>
+  </div>
+</section>
+
+<!-- 2. QUALIFICATION FILTER -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">فلتر الأهلية</p>
+    <h2>هل أنت مناسب لبطاقة الفرص؟</h2>
+    <p class="lead">قبل أي خطوة، ثلاثة معايير حقيقية. إذا انطبقت عليك — تابع. إذا لم تنطبق — هذا التقييم سيوفر عليك وقتاً ثميناً.</p>
+
+    <div class="filter-box">
+      <div class="filter-box__header">المعايير الأساسية</div>
+
+      <div class="filter-item">
+        <div class="filter-check">✓</div>
+        <p><strong>شهادة أكاديمية أو مهنية معترف بها</strong>ليس كل مؤهل يُقبل في ألمانيا. النوع والمستوى والبلد — كلها تحدد فرصتك الفعلية.</p>
+      </div>
+      <div class="filter-item">
+        <div class="filter-check">✓</div>
+        <p><strong>خبرة عمل حقيقية وموثقة</strong>على الأقل سنتان في مجال ذي صلة مباشرة. الخبرة العامة لا تكفي.</p>
+      </div>
+      <div class="filter-item">
+        <div class="filter-check">✓</div>
+        <p><strong>جدية حقيقية في الانتقال خلال 12 شهراً</strong>بطاقة الفرص مسار استراتيجي — ليست تصريح سفر.</p>
+      </div>
     </div>
-</nav>
 
-<main>
-    <div class="chancenkarte-container">
-        <div class="chancenkarte-hero">
-            <h1>بطاقة الفرصة الخاصة بك لألمانيا</h1>
-            <p>الطريق المباشر للعمل والعيش في ألمانيا. ابدأ تقييمك الآن.</p>
-        </div>
-
-        <div class="chancenkarte-form-wrapper">
-            <h2></h2>
-            <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
-                
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Neue Anfrage - Berlin Gateway">
-                
-                <div class="form-group">
-                    <label for="target-position"></label>
-                    <input type="text" id="target-position" name="Zielberuf" placeholder="مثال: مهندس برمجيات" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="qualification"></label>
-                    <input type="text" id="qualification" name="Abschluss" placeholder="مثال: ماجستير علوم الحاسوب" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="experience"></label>
-                    <select id="experience" name="Berufserfahrung" required>
-                        <option value="">-- يرجى الاختيار --</option>
-                        <option value="0-2">0–2 سنة</option>
-                        <option value="2-5">2–5 سنوات</option>
-                        <option value="5+">5+ سنوات</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="language"></label>
-                    <select id="language" name="Sprachkenntnisse" required>
-                        <option value="">-- يرجى الاختيار --</option>
-                        <option value="a1-a2">A1–A2</option>
-                        <option value="b1">B1</option>
-                        <option value="b2">B2</option>
-                        <option value="c1+">C1+</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="country"></label>
-                    <select id="country" name="Wohnsitzland" required>
-                        <option value="">يرجى الاختيار</option>
-                        <option value="ألمانيا">ألمانيا</option>
-                        <option value="مصر">مصر</option>
-                        <option value="ليبيا">ليبيا</option>
-                        <option value="تونس">تونس</option>
-                        <option value="الجزائر">الجزائر</option>
-                        <option value="المغرب">المغرب</option>
-                        <option value="السودان">السودان</option>
-                        <option value="السعودية">السعودية</option>
-                        <option value="الإمارات">الإمارات</option>
-                        <option value="قطر">قطر</option>
-                        <option value="الكويت">الكويت</option>
-                        <option value="عُمان">عُمان</option>
-                        <option value="البحرين">البحرين</option>
-                        <option value="الأردن">الأردن</option>
-                        <option value="لبنان">لبنان</option>
-                        <option value="سوريا">سوريا</option>
-                        <option value="العراق">العراق</option>
-                        <option value="فلسطين">فلسطين</option>
-                        <option value="اليمن">اليمن</option>
-                        <option value="تركيا">تركيا</option>
-                        <option value="باكستان">باكستان</option>
-                        <option value="الهند">الهند</option>
-                        <option value="بنغلاديش">بنغلاديش</option>
-                        <option value="نيجيريا">نيجيريا</option>
-                        <option value="غانا">غانا</option>
-                        <option value="الكاميرون">الكاميرون</option>
-                        <option value="أخرى">أخرى</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="email"></label>
-                    <input type="email" id="email" name="E-Mail" placeholder="بريدك@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cv-upload"></label>
-                    <input type="file" id="cv-upload" name="CV Upload" accept=".pdf" required>
-                    <small>PDF فقط، الحد الأقصى 5MB</small>
-                </div>
-
-                <button type="submit" class="form-submit">إرسال الطلب الآن</button>
-            </form>
-        </div>
+    <div class="exclusion-box">
+      <div class="icon">⚠</div>
+      <p>إذا كنت تبحث عن <strong>"أي طريقة للدخول إلى ألمانيا"</strong> — فهذه الصفحة ليست لك. Berlin Gateway مخصصة للمهنيين الجادين فقط.</p>
     </div>
-</main>
+  </div>
+</section>
 
-<!-- FOOTER (BLACK) -->
+<!-- 3. DECISION RISK -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">مخاطر القرار الخاطئ</p>
+    <h2>ماذا يحدث عندما يُختار المسار الخطأ؟</h2>
+    <p class="lead">معظم الطلبات لا تُرفض لأن المتقدم غير مؤهل — بل لأن المسار اختير بشكل خاطئ من البداية.</p>
+
+    <div class="risk-grid">
+      <div class="risk-card">
+        <h4>رفض الطلب</h4>
+        <p>بسبب نقص في الوثائق oder اختيار نوع التأشيرة الخطأ منذ البداية.</p>
+      </div>
+      <div class="risk-card">
+        <h4>خسارة الوقت</h4>
+        <p>أشهر من الانتظار والتحضير — ثم اكتشاف أن الأساس غير صحيح.</p>
+      </div>
+      <div class="risk-card">
+        <h4>تأخير فرص العمل</h4>
+        <p>سوق العمل الألماني لا ينتظر. كل شهر تأخير هو فرصة يأخذها غيرك.</p>
+      </div>
+      <div class="risk-card">
+        <h4>مشاكل الاعتراف بالمؤهلات</h4>
+        <p>الاعتراف بالشهادات عملية منفصلة ومعقدة — وإذا لم تُحضّر لها مبكراً، تتأخر كل شيء.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. POSITIONING -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">Berlin Gateway</p>
+    <div class="position-block">
+      <h3>نحن لا نبيع حلماً — نقيّم المسار.</h3>
+      <p>Berlin Gateway ليست وكالة هجرة. نحن نقيّم وضعك الفعلي وفق المعايير الحقيقية للنظام الألماني — ونخبرك بصدق إذا كنت مؤهلاً، وأين تقف فعلاً.</p>
+      <ul class="position-list">
+        <li>تقييم مبني على بيانات سوق العمل الحالية</li>
+        <li>تحليل مؤهلاتك وفق قوانين الاعتراف الألمانية</li>
+        <li>مسار واضح — أو إجابة صريحة بأن الوقت لم يحن بعد</li>
+        <li>بدون وعود مبالغ فيها، بدون شورت كات</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FINAL CTA -->
+<section class="final-cta">
+  <div class="inner">
+    <h2>لا تحتاج معلومات أكثر.<br>تحتاج تقييماً حقيقياً لحالتك.</h2>
+    <p>دقيقتان، أسئلة محددة، إجابة واضحة. هذا كل ما في الأمر.</p>
+    <a href="/ar/assessment" class="cta-primary--dark">ابدأ التقييم الآن ←</a>
+    <p style="margin-top:16px;font-size:13px;color:#9CA3AF;">الرد خلال 24–48 ساعة · معالجة الطلبات الجادة فقط</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
-            </div>
-            <div>
-                <h4>التنقل</h4>
-                <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-                <a href="/ar/assessment/">حاسبة النقاط</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المرصد</a>
-                <a href="/ar/insights/">الرؤى</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum/">بيان قانوني</a>
-                <a href="/ar/datenschutz/">سياسة الخصوصية</a>
-            </div>
-            <div>
-                <h4>اتصل</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
-        </div>
-    </div>
+  <p>Berlin Gateway &mdash; تقييم مهني لألمانيا</p>
+  <p style="margin-top:8px;">
+    <a href="/ar/impressum">بصمة الموقع</a>
+    <a href="/ar/datenschutz">خصوصية البيانات</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
 
 </body>

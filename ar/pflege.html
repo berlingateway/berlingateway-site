@@ -1,97 +1,221 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التمريض – قيد الإعداد | Berlin Gateway</title>
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        /* MINIMAL MOBILE NAV ENHANCEMENT */
-        @media (max-width: 768px) {
-            .header { height: auto !important; padding: 12px 0; }
-            .header__inner { flex-direction: column; align-items: center; gap: 12px; }
-            .nav { width: 100%; overflow-x: auto; white-space: nowrap; padding: 4px 0; justify-content: flex-start; gap: 16px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-            .nav::-webkit-scrollbar { display: none; }
-            .nav-link { font-size: 13px !important; padding: 4px 0; }
-        }
-        .shell-container { max-width: 800px; margin: 100px auto; padding: 0 20px; text-align: center; min-height: 40vh; }
-        .shell-container h1 { font-size: 32px; font-weight: 800; margin-bottom: 20px; color: #000; }
-        .shell-container p { font-size: 18px; color: #666; margin-bottom: 40px; }
-        .shell-cta { display: inline-block; background: #0B3B8C; color: #fff; padding: 15px 30px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: background 0.3s; }
-        .shell-cta:hover { background: #082B5C; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التمريض في ألمانيا — المسار الحقيقي | Berlin Gateway</title>
+  <meta name="description" content="ألمانيا تحتاج كوادر تمريض — لكن المسار يمر عبر اعتراف رسمي ولغة متخصصة. تقييم مهني حقيقي لملفك.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'IBM Plex Sans Arabic',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
+    .inner{max-width:780px;margin:0 auto}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
+    .step-list{list-style:none;padding:0;margin:0}
+    .step-item{display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #E5E7EB}
+    .step-item:last-child{border-bottom:none}
+    .step-num{width:36px;height:36px;background:#0B1F3A;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .step-content h4{font-size:16px;font-weight:600;margin-bottom:6px;color:#0D1117}
+    .step-content p{font-size:14px;color:#6B7280;line-height:1.65}
+    .step-tag{display:inline-block;background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;margin-top:8px}
+    .step-tag--warn{background:#FEF3C7;color:#92400E}
+    .risk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+    .risk-card{background:#FFFFFF;border:1.5px solid #E5E7EB;border-right:4px solid #B91C1C;border-radius:8px;padding:20px}
+    .risk-card h4{margin:0 0 6px;font-size:15px;color:#0D1117;font-weight:600}
+    .risk-card p{margin:0;font-size:13px;color:#6B7280;line-height:1.6}
+    .demand-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+    .demand-card{background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:10px;padding:24px}
+    .demand-card h4{font-size:15px;font-weight:700;margin-bottom:10px;color:#0B1F3A}
+    .demand-card p{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:10px}
+    .demand-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+    .badge-high{background:#DCFCE7;color:#15803D}
+    .badge-very-high{background:#BBF7D0;color:#166534}
+    .reality-box{background:#F8F9FA;border:1.5px solid #E5E7EB;border-right:4px solid #0B3B8C;border-radius:10px;padding:24px;margin-top:24px}
+    .reality-box p{font-size:15px;color:#374151;line-height:1.7}
+    .reality-box strong{color:#0D1117}
+    .cta-block{background:#0B1F3A;border-radius:12px;padding:48px 40px;text-align:center}
+    .cta-block h2{color:#FFFFFF;font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:16px;line-height:1.3}
+    .cta-block p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-btn{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none}
+    .wa-link{display:block;color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;margin-top:16px}
+    .wa-link:hover{color:#FFFFFF}
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    @media(max-width:640px){
+      .nav{display:none}
+      .risk-grid{grid-template-columns:1fr}
+      .demand-grid{grid-template-columns:1fr}
+      .cta-block{padding:32px 24px}
+    }
+  </style>
 </head>
 <body>
 
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">✉ info@berlingateway.de</a>
-        </div>
-        <div class="top-band__right">
-            <a href="/de/pflegekraefte.html" class="lang-switch">Deutsch</a>
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/de/pflege" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5">تقييم معتمد</span>
     </div>
+  </div>
 </div>
 
 <header class="header">
-    <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte/" class="nav-link">بطاقة الفرص</a>
-            <a href="/ar/assessment/" class="nav-link">حاسبة النقاط</a>
-            <a href="/ar/systemlogik/" class="nav-link">منطق النظام</a>
-            <a href="/ar/monitor/" class="nav-link">المرصد</a>
-            <a href="/ar/insights/" class="nav-link">الرؤى</a>
-        </nav>
-    </div>
+  <div class="header__inner">
+    <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/assessment">التقييم</a>
+      <a href="/ar/aerzte">أطباء</a>
+      <a href="/ar/pflege">تمريض</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-    <div class="shell-container">
-        <h1>التمريض – قيد الإعداد</h1>
-        <p>هذه الصفحة قيد الإعداد حاليًا. الرجاء العودة لاحقًا.</p>
-        <a href="/ar/assessment/" class="shell-cta">ابدأ التقييم الآن</a>
+<!-- HERO -->
+<section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
+  <div class="inner" style="position:relative;z-index:1;">
+    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">التمريض — المسار الألماني</p>
+    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">الطلب على التمريض في ألمانيا حقيقي.<br>لكن المسار <em style="font-style:normal;color:#93C5FD;">يبدأ بالاعتراف — لا بالسفر.</em></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto 36px;line-height:1.7;font-weight:300;">كثير من الممرضين يصلون إلى ألمانيا بمؤهلات غير معترف بها — ويجدون أنفسهم أمام سنة كاملة من الإجراءات. هذه الصفحة تشرح النظام كما هو.</p>
+    <a href="/ar/assessment" style="display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييم ملفك ←</a>
+    <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:12px;">مجاني — رد خلال 24 ساعة</p>
+  </div>
+</section>
+
+<!-- REALITY -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">الواقع أولاً</p>
+    <h2>ما الذي يواجهه كادر التمريض فعلاً؟</h2>
+    <p class="lead">ألمانيا تحتاج أكثر من 200,000 ممرض وممرضة — هذا رقم حقيقي. لكن الوصول إلى سوق العمل يمر عبر ثلاث بوابات إلزامية لا يمكن تجاوزها.</p>
+    <ul class="step-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Anerkennung — الاعتراف بالمؤهل</h4>
+          <p>شهادة التمريض من خارج الاتحاد الأوروبي لا تُقبل تلقائياً. الجهة المختصة في الولاية تدرس ملفك وتحدد إذا كانت مؤهلاتك مكافئة للمعيار الألماني — أو تحتاج لتدريب تكميلي.</p>
+          <span class="step-tag">المدة: 3–12 شهراً</span>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Sprachnachweis — إثبات اللغة</h4>
+          <p>C1 تمريضي متخصص — ليس C1 عاماً. اللغة الطبية والتمريضية تختلف جذرياً عن اللغة اليومية. معظم المستشفيات والمرافق الصحية تطلب شهادة متخصصة من Telc أو OSD.</p>
+          <span class="step-tag step-tag--warn">إلزامي دائماً — لا استثناء</span>
+        </div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Anpassungslehrgang أو Kenntnisprüfung</h4>
+          <p>إذا وجدت الجهة المختصة فجوات في مؤهلاتك، ستحتاج إما لتدريب تكميلي (6–12 شهراً) أو اختبار معرفة شامل. كلاهما باللغة الألمانية وفي بيئة عمل حقيقية.</p>
+          <span class="step-tag">مطلوب في كثير من الحالات</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="reality-box">
+      <p><strong>الواقع الذي لا يقوله أحد:</strong> كثير من الممرضين يصلون بعقود عمل جاهزة — ثم يكتشفون أن العقد مشروط بالاعتراف الذي يستغرق أشهراً. الأفضل دائماً: ابدأ بالاعتراف قبل السفر.</p>
     </div>
-</main>
+  </div>
+</section>
+
+<!-- DEMAND -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">سوق العمل</p>
+    <h2>أين الطلب الحقيقي على التمريض؟</h2>
+    <p class="lead">ليس كل التخصصات متساوية في الطلب. هذه المجالات تُظهر أعلى نسبة توظيف لكوادر التمريض الدولية.</p>
+    <div class="demand-grid">
+      <div class="demand-card">
+        <span class="demand-badge badge-very-high">طلب مرتفع جداً</span>
+        <h4>تمريض المسنين</h4>
+        <p>Altenpflege — أعلى طلب في السوق الألماني. فرص في كل الولايات. لكن اللغة والاعتراف إلزاميان.</p>
+      </div>
+      <div class="demand-card">
+        <span class="demand-badge badge-very-high">طلب مرتفع جداً</span>
+        <h4>تمريض المستشفيات</h4>
+        <p>Krankenpflege — طلب مستمر في المستشفيات الكبرى والمتوسطة. يتطلب C1 طبي متخصص.</p>
+      </div>
+      <div class="demand-card">
+        <span class="demand-badge badge-high">طلب مرتفع</span>
+        <h4>تمريض الأطفال</h4>
+        <p>Kinderkrankenpflege — تخصص منفصل باعتراف منفصل. طلب ثابت في المدن الكبرى.</p>
+      </div>
+      <div class="demand-card">
+        <span class="demand-badge badge-high">طلب مرتفع</span>
+        <h4>التمريض المنزلي</h4>
+        <p>Ambulante Pflege — نمو سريع. مرونة أكبر في العمل. يناسب من يريد ساعات عمل مرنة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RISK -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">أخطاء شائعة</p>
+    <h2>أين يخطئ معظم كوادر التمريض؟</h2>
+    <p class="lead">هذه الأخطاء لا تُلغي فرصتك — لكنها تضيع أشهراً ثمينة وتكاليف غير ضرورية.</p>
+    <div class="risk-grid">
+      <div class="risk-card">
+        <h4>السفر قبل الاعتراف</h4>
+        <p>الوصول بمؤهل غير معترف به يعني التوقف عن العمل وانتظار القرار — وأحياناً العودة.</p>
+      </div>
+      <div class="risk-card">
+        <h4>B2 بدلاً من C1</h4>
+        <p>معظم المرافق الصحية ترفض B2 لوظائف التمريض المباشر. الوقت الضائع لا يُعوَّض.</p>
+      </div>
+      <div class="risk-card">
+        <h4>اختيار الولاية عشوائياً</h4>
+        <p>سرعة معالجة ملفات الاعتراف تختلف بين الولايات من 3 أشهر إلى أكثر من سنة.</p>
+      </div>
+      <div class="risk-card">
+        <h4>ملف وثائق ناقص</h4>
+        <p>نقص في ترجمة أو توثيق وثيقة واحدة يوقف الملف كاملاً. القائمة طويلة ودقيقة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="inner">
+    <div class="cta-block">
+      <h2>ملفك التمريضي يستحق تقييماً حقيقياً — قبل أي خطوة.</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;">أخبرنا عن تخصصك ومؤهلاتك وخبرتك. سنحدد لك المسار الأمثل — أو نخبرك بصدق ما الذي يجب تجهيزه أولاً.</p>
+      <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
+      <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px;">رد خلال 24–48 ساعة · بدون التزام</p>
+      <a href="https://wa.me/4915781497451" class="wa-link">أو تواصل مباشرة عبر واتساب ←</a>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
-            </div>
-            <div>
-                <h4>التنقل</h4>
-                <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-                <a href="/ar/assessment/">حاسبة النقاط</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المرصد</a>
-                <a href="/ar/insights/">الرؤى</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum/">بيان قانوني</a>
-                <a href="/ar/datenschutz/">سياسة الخصوصية</a>
-            </div>
-            <div>
-                <h4>اتصل</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
-        </div>
-    </div>
+  <p>Berlin Gateway — تقييم مهني لألمانيا</p>
+  <p style="margin-top:8px;">
+    <a href="/ar/impressum">بصمة الموقع</a>
+    <a href="/ar/datenschutz">خصوصية البيانات</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
 
 </body>

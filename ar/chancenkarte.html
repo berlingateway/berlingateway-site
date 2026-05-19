@@ -23,25 +23,25 @@
       --gold:    #D97706;
     }
 
-    body { font-family: 'IBM Plex Sans Arabic', sans-serif; color: var(--ink); background: var(--white); margin: 0; }
+    body { font-family: 'IBM Plex Sans Arabic', sans-serif; color: #0D1117; background: #FFFFFF; margin: 0; }
 
     /* ── TOP BAND ── */
-    .top-band { background: var(--blue-dk); color: var(--white); padding: 10px 0; font-size: 13px; }
+    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
     .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
     .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
     .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
 
     /* ── HEADER ── */
-    .header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
     .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-size: 18px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.3px; }
-    .brand span { color: var(--blue); }
-    .nav a { color: var(--ink-mid); text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
-    .nav a:hover { color: var(--blue); }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
+    .brand span { color: #0B3B8C; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav a:hover { color: #0B3B8C; }
 
     /* ── HERO — HOOK ── */
     .hero-hook {
-      background: var(--blue-dk);
+      background: #0B1F3A;
       padding: 64px 24px 60px; /* Reduced height */
       text-align: center;
       position: relative;
@@ -69,7 +69,7 @@
       margin-bottom: 24px;
     }
     .hero-hook h1 {
-      color: var(--white);
+      color: #FFFFFF;
       font-size: clamp(26px, 5vw, 44px);
       font-weight: 700;
       line-height: 1.2;
@@ -93,8 +93,8 @@
     }
     .cta-primary {
       display: inline-block;
-      background: var(--white);
-      color: var(--blue-dk);
+      background: #FFFFFF;
+      color: #0B1F3A;
       font-family: 'IBM Plex Sans Arabic', sans-serif;
       font-size: 16px; /* Slightly larger */
       font-weight: 700;
@@ -108,14 +108,14 @@
 
     /* ── SECTION BASE ── */
     .section { padding: 64px 24px; } /* Reduced height */
-    .section--alt { background: var(--off); }
+    .section--alt { background: #F8F9FA; }
     .inner { max-width: 780px; margin: 0 auto; }
     .section-label {
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--blue);
+      color: #0B3B8C;
       margin-bottom: 16px;
     }
     .section h2 {
@@ -127,7 +127,7 @@
     }
     .section .lead {
       font-size: 17px;
-      color: var(--ink-mid);
+      color: #374151;
       line-height: 1.75;
       margin: 0 0 32px;
       font-weight: 300;
@@ -135,14 +135,14 @@
 
     /* ── FILTER SECTION ── */
     .filter-box {
-      border: 1.5px solid var(--border);
+      border: 1.5px solid #E5E7EB;
       border-radius: 12px;
       overflow: hidden;
       margin-bottom: 24px;
     }
     .filter-box__header {
-      background: var(--ink);
-      color: var(--white);
+      background: #0D1117;
+      color: #FFFFFF;
       padding: 16px 24px;
       font-weight: 600;
       font-size: 15px;
@@ -152,7 +152,7 @@
       align-items: flex-start;
       gap: 16px;
       padding: 18px 24px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #E5E7EB;
     }
     .filter-item:last-child { border-bottom: none; }
     .filter-check {
@@ -164,8 +164,8 @@
       font-size: 12px;
       margin-top: 2px;
     }
-    .filter-item p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--ink-mid); }
-    .filter-item strong { color: var(--ink); display: block; margin-bottom: 2px; }
+    .filter-item p { margin: 0; font-size: 15px; line-height: 1.6; color: #374151; }
+    .filter-item strong { color: #0D1117; display: block; margin-bottom: 2px; }
 
     .exclusion-box {
       background: #FEF2F2;
@@ -187,21 +187,21 @@
       margin-top: 32px;
     }
     .risk-card {
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-right: 4px solid var(--red);
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-right: 4px solid #B91C1C;
       border-radius: 8px;
       padding: 20px 20px 20px 16px;
     }
-    .risk-card h4 { margin: 0 0 6px; font-size: 15px; color: var(--ink); font-weight: 600; }
-    .risk-card p { margin: 0; font-size: 13px; color: var(--ink-low); line-height: 1.6; }
+    .risk-card h4 { margin: 0 0 6px; font-size: 15px; color: #0D1117; font-weight: 600; }
+    .risk-card p { margin: 0; font-size: 13px; color: #6B7280; line-height: 1.6; }
 
     /* ── POSITIONING ── */
     .position-block {
-      background: var(--blue-dk);
+      background: #0B1F3A;
       border-radius: 12px;
       padding: 32px 40px; /* Reduced vertical padding */
-      color: var(--white);
+      color: #FFFFFF;
       margin-top: 0;
       border: 1px solid rgba(255,255,255,0.05); /* Subtle border for premium feel */
     }
@@ -218,17 +218,17 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: var(--off);
-      border-top: 1px solid var(--border);
+      background: #F8F9FA;
+      border-top: 1px solid #E5E7EB;
       padding: 64px 24px; /* Reduced height */
       text-align: center;
     }
     .final-cta h2 { font-size: clamp(22px, 4vw, 34px); font-weight: 700; margin: 0 0 16px; letter-spacing: -0.3px; }
-    .final-cta p { font-size: 16px; color: var(--ink-mid); max-width: 480px; margin: 0 auto 32px; line-height: 1.7; font-weight: 300; }
+    .final-cta p { font-size: 16px; color: #374151; max-width: 480px; margin: 0 auto 32px; line-height: 1.7; font-weight: 300; }
     .cta-primary--dark {
       display: inline-block;
-      background: var(--blue-dk);
-      color: var(--white);
+      background: #0B1F3A;
+      color: #FFFFFF;
       font-family: 'IBM Plex Sans Arabic', sans-serif;
       font-size: 15px;
       font-weight: 700;
@@ -240,7 +240,7 @@
     .cta-primary--dark:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,31,58,0.25); }
 
     /* ── FOOTER ── */
-    .footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
+    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
     .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
 
     /* ── MOBILE ── */
@@ -283,11 +283,11 @@
 <!-- 1. HOOK — ILLUSION BREAK -->
 <section class="hero-hook" style="background:#0B1F3A !important;">
   <div class="inner" style="position:relative;z-index:1;">
-    <p class="kicker">فلتر الأهلية — Chancenkarte</p>
-    <h1>بطاقة الفرص ليست مناسبة<br>لكل <em>شخص.</em></h1>
-    <p class="sub">والمشكلة أن كثيرين يكتشفون ذلك بعد أشهر من إضاعة الوقت والجهد في المسار الخطأ.</p>
-    <a href="/ar/assessment" class="cta-primary" style="display:inline-block;background:#FFFFFF;color:#0B1F3A;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييمك الآن ←</a>
-    <p class="cta-note">دقيقتان فقط — بدون التزام</p>
+    <p class="kicker" style="color:rgba(255,255,255,0.7) !important;">فلتر الأهلية — Chancenkarte</p>
+    <h1 style="color:#FFFFFF !important;">بطاقة الفرص ليست مناسبة<br>لكل <em style="font-style:normal;color:#93C5FD !important;">شخص.</em></h1>
+    <p class="sub" style="color:rgba(255,255,255,0.65) !important;">والمشكلة أن كثيرين يكتشفون ذلك بعد أشهر من إضاعة الوقت والجهد في المسار الخطأ.</p>
+    <a href="/ar/assessment" class="cta-primary" style="display:inline-block;background:#FFFFFF !important;color:#0B1F3A !important;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييمك الآن ←</a>
+    <p class="cta-note" style="color:rgba(255,255,255,0.4) !important;">دقيقتان فقط — بدون التزام</p>
   </div>
 </section>
 
@@ -354,9 +354,9 @@
 <section class="section">
   <div class="inner">
     <p class="section-label">Berlin Gateway</p>
-    <div class="position-block" style="background:#0B1F3A;border-radius:12px;padding:40px;">
-      <h3>نحن لا نبيع حلماً — نقيّم المسار.</h3>
-      <p style="color:rgba(255,255,255,0.85);font-size:16px;line-height:1.75;font-weight:300;">Berlin Gateway ليست وكالة هجرة. نحن نقيّم وضعك الفعلي وفق المعايير الحقيقية للنظام الألماني — ونخبرك بصدق إذا كنت مؤهلاً، وأين تقف فعلاً.</p>
+    <div style="background:#0B1F3A;border-radius:12px;padding:40px;">
+      <h3 style="color:#FFFFFF !important;font-size:22px;font-weight:700;margin:0 0 16px;">نحن لا نبيع حلماً — نقيّم المسار.</h3>
+      <p style="color:rgba(255,255,255,0.85) !important;font-size:16px;line-height:1.75;font-weight:300;">Berlin Gateway ليست وكالة هجرة. نحن نقيّم وضعك الفعلي وفق المعايير الحقيقية للنظام الألماني — ونخبرك بصدق إذا كنت مؤهلاً، وأين تقف فعلاً.</p>
       <ul class="position-list">
         <li>تقييم مبني على بيانات سوق العمل الحالية</li>
         <li>تحليل مؤهلاتك وفق قوانين الاعتراف الألمانية</li>
@@ -394,9 +394,9 @@
         <p style="font-size:12px;color:#6B7280;">المسارات، الخطوات، العوائق</p>
       </a>
       <a href="/ar/assessment" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">التقييم</p>
-        <p style="font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:4px;">ابدأ تقييمك الآن</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.6);">مجاني — رد خلال 24 ساعة</p>
+        <p style="font-size:12px;color:#93C5FD !important;font-weight:600;margin-bottom:4px;">التقييم</p>
+        <p style="font-size:14px;color:#FFFFFF !important;font-weight:600;margin-bottom:4px;">ابدأ تقييمك الآن</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6) !important;">مجاني — رد خلال 24 ساعة</p>
       </a>
     </div>
   </div>

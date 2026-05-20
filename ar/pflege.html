@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>التمريض في ألمانيا — المسار الحقيقي | Berlin Gateway</title>
-  <meta name="description" content="ألمانيا تحتاج كوادر تمريض — لكن المسار يمر عبر اعتراف رسمي ولغة متخصصة. تقييم مهني حقيقي لملفك.">
+  <title>التمريض في ألمانيا — من داخل المستشفيات | Berlin Gateway</title>
+  <meta name="description" content="نعمل داخل مرافق التمريض الألمانية. نعرف أين تناسبك، أي ولاية تفتح أبوابها — ونتابعك من اليوم الأول بعد الوصول.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -19,9 +19,11 @@
     .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
     .brand span{color:#0B3B8C}
     .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-right:0 !important}
     .inner{max-width:780px;margin:0 auto}
     .section{padding:72px 24px}
     .section--alt{background:#F8F9FA}
+    .section--dark{background:#0B1F3A}
     .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
     .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
     .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
@@ -43,22 +45,29 @@
     .demand-card p{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:10px}
     .demand-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
     .badge-high{background:#DCFCE7;color:#15803D}
-    .badge-very-high{background:#BBF7D0;color:#166534}
+    .badge-very-high{background:#BBF7D0;color:#166634}
+    .advantage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+    .advantage-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:24px}
+    .advantage-card h4{font-size:15px;font-weight:700;color:#FFFFFF;margin-bottom:8px}
+    .advantage-card p{font-size:13px;color:rgba(255,255,255,0.65);line-height:1.65}
     .reality-box{background:#F8F9FA;border:1.5px solid #E5E7EB;border-right:4px solid #0B3B8C;border-radius:10px;padding:24px;margin-top:24px}
     .reality-box p{font-size:15px;color:#374151;line-height:1.7}
     .reality-box strong{color:#0D1117}
+    .warning-box{background:#FEF2F2;border:1.5px solid #FECACA;border-radius:12px;padding:28px;margin-top:32px}
+    .warning-box h4{font-size:16px;font-weight:700;color:#B91C1C;margin-bottom:8px}
+    .warning-box p{font-size:14px;color:#7F1D1D;line-height:1.65}
     .cta-block{background:#0B1F3A;border-radius:12px;padding:48px 40px;text-align:center}
     .cta-block h2{color:#FFFFFF;font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:16px;line-height:1.3}
     .cta-block p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto}
     .cta-btn{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none}
     .wa-link{display:block;color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;margin-top:16px}
-    .wa-link:hover{color:#FFFFFF}
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
     @media(max-width:640px){
-      .nav{display:none}
+      .nav a:not(.nav-cta){display:none}
       .risk-grid{grid-template-columns:1fr}
       .demand-grid{grid-template-columns:1fr}
+      .advantage-grid{grid-template-columns:1fr}
       .cta-block{padding:32px 24px}
     }
   </style>
@@ -70,7 +79,7 @@
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="/de/pflege" class="lang-badge">Deutsch</a>
-      <span style="opacity:.5">تقييم معتمد</span>
+      <span style="opacity:.5">مقيمون في ألمانيا</span>
     </div>
   </div>
 </div>
@@ -80,44 +89,72 @@
     <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
     <nav class="nav">
       <a href="/ar/chancenkarte">بطاقة الفرص</a>
-      <a href="/ar/assessment">التقييم</a>
       <a href="/ar/aerzte">أطباء</a>
       <a href="/ar/pflege">تمريض</a>
+      <a href="/ar/systemlogik">النظام</a>
+      <a href="/ar/assessment" class="nav-cta">ابدأ التقييم</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
-  <div class="inner" style="position:relative;z-index:1;">
-    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">التمريض — المسار الألماني</p>
-    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">الطلب على التمريض في ألمانيا حقيقي.<br>لكن المسار <em style="font-style:normal;color:#93C5FD;">يبدأ بالاعتراف — لا بالسفر.</em></h1>
-    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto 36px;line-height:1.7;font-weight:300;">كثير من الممرضين يصلون إلى ألمانيا بمؤهلات غير معترف بها — ويجدون أنفسهم أمام سنة كاملة من الإجراءات. هذه الصفحة تشرح النظام كما هو.</p>
-    <a href="/ar/assessment" style="display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييم ملفك ←</a>
-    <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:12px;">مجاني — رد خلال 24 ساعة</p>
+  <div class="inner">
+    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">التمريض — من داخل المرافق الصحية الألمانية</p>
+    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">الطلب حقيقي.<br><em style="font-style:normal;color:#93C5FD;">لكن النجاح يبدأ قبل السفر — معنا.</em></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:540px;margin:0 auto 36px;line-height:1.7;font-weight:300;">نعمل داخل مرافق التمريض الألمانية. نعرف أي مستشفى يناسبك، أي ولاية تفتح أبوابها — ونتابعك من اليوم الأول بعد الوصول.</p>
+    <a href="/ar/assessment" style="display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييم ملفك التمريضي ←</a>
+    <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:12px;">مجاني — رد من فريق يعيش في ألمانيا</p>
   </div>
 </section>
 
-<!-- REALITY -->
+<!-- OUR ADVANTAGE -->
+<section class="section--dark" style="padding:56px 24px;">
+  <div class="inner">
+    <p class="section-label" style="color:#93C5FD;">ما يميزنا</p>
+    <h2 style="color:#FFFFFF;margin-bottom:16px;">نحن داخل النظام — ليس خارجه</h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.75;margin-bottom:32px;font-weight:300;">كثير من الممرضين يصلون بمعلومات من الإنترنت — ويكتشفون الواقع بعد فوات الأوان. نحن نعرف الواقع لأننا نعيشه.</p>
+    <div class="advantage-grid">
+      <div class="advantage-card">
+        <h4>🏥 داخل مرافق التمريض</h4>
+        <p>نعرف المستشفيات ودور الرعاية من الداخل — أي منها يناسب تخصصك وأي منها يسهّل الاعتراف.</p>
+      </div>
+      <div class="advantage-card">
+        <h4>🗺️ نعرف الولايات</h4>
+        <p>بعض الولايات تعالج ملفات الاعتراف في 3 أشهر — وبعضها يأخذ 14 شهراً. لا تختر قبل مشورتنا.</p>
+      </div>
+      <div class="advantage-card">
+        <h4>🤝 نفهم بيئة العمل</h4>
+        <p>العمل في التمريض الألماني يختلف تماماً. نجهزك قبل الوصول — لا بعد الأزمة.</p>
+      </div>
+      <div class="advantage-card">
+        <h4>📋 في دائرة الأجانب</h4>
+        <p>نعرف الوثائق المطلوبة لكل ولاية — ونوفر عليك أشهراً من التجربة والخطأ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE REAL PATH -->
 <section class="section">
   <div class="inner">
-    <p class="section-label">الواقع أولاً</p>
-    <h2>ما الذي يواجهه كادر التمريض فعلاً؟</h2>
-    <p class="lead">ألمانيا تحتاج أكثر من 200,000 ممرض وممرضة — هذا رقم حقيقي. لكن الوصول إلى سوق العمل يمر عبر ثلاث بوابات إلزامية لا يمكن تجاوزها.</p>
+    <p class="section-label">المسار الحقيقي</p>
+    <h2>ثلاث بوابات — قبل العمل في التمريض</h2>
+    <p class="lead">ألمانيا تحتاج أكثر من 200,000 ممرض وممرضة — لكن الوصول يمر عبر بوابات إلزامية لا يمكن تجاوزها.</p>
     <ul class="step-list">
       <li class="step-item">
         <div class="step-num">1</div>
         <div class="step-content">
           <h4>Anerkennung — الاعتراف بالمؤهل</h4>
-          <p>شهادة التمريض من خارج الاتحاد الأوروبي لا تُقبل تلقائياً. الجهة المختصة في الولاية تدرس ملفك وتحدد إذا كانت مؤهلاتك مكافئة للمعيار الألماني — أو تحتاج لتدريب تكميلي.</p>
-          <span class="step-tag">المدة: 3–12 شهراً</span>
+          <p>شهادة التمريض من خارج الاتحاد الأوروبي لا تُقبل تلقائياً. الجهة المختصة تدرس ملفك وتحدد إذا كانت مؤهلاتك مكافئة — أو تحتاج تدريباً تكميلياً. نحن نعرف كيف نقدم ملفك بشكل صحيح.</p>
+          <span class="step-tag">نحن نعرف أسرع الولايات</span>
         </div>
       </li>
       <li class="step-item">
         <div class="step-num">2</div>
         <div class="step-content">
-          <h4>Sprachnachweis — إثبات اللغة</h4>
-          <p>C1 تمريضي متخصص — ليس C1 عاماً. اللغة الطبية والتمريضية تختلف جذرياً عن اللغة اليومية. معظم المستشفيات والمرافق الصحية تطلب شهادة متخصصة من Telc أو OSD.</p>
+          <h4>Fachsprachprüfung — اللغة التمريضية</h4>
+          <p>C1 تمريضي متخصص — ليس C1 عاماً. اختبار لغة طبية متخصصة يختلف عن Goethe العادي. نوجهك إلى الاختبار الصحيح وندعمك في التحضير.</p>
           <span class="step-tag step-tag--warn">إلزامي دائماً — لا استثناء</span>
         </div>
       </li>
@@ -125,14 +162,14 @@
         <div class="step-num">3</div>
         <div class="step-content">
           <h4>Anpassungslehrgang أو Kenntnisprüfung</h4>
-          <p>إذا وجدت الجهة المختصة فجوات في مؤهلاتك، ستحتاج إما لتدريب تكميلي (6–12 شهراً) أو اختبار معرفة شامل. كلاهما باللغة الألمانية وفي بيئة عمل حقيقية.</p>
-          <span class="step-tag">مطلوب في كثير من الحالات</span>
+          <p>إذا وُجدت فجوات في مؤهلاتك — تدريب تكميلي أو اختبار معرفة. كلاهما باللغة الألمانية وفي بيئة عمل حقيقية. نحن نعرف أين تتدرب وكيف تنجح.</p>
+          <span class="step-tag">نتابعك في كل خطوة</span>
         </div>
       </li>
     </ul>
 
     <div class="reality-box">
-      <p><strong>الواقع الذي لا يقوله أحد:</strong> كثير من الممرضين يصلون بعقود عمل جاهزة — ثم يكتشفون أن العقد مشروط بالاعتراف الذي يستغرق أشهراً. الأفضل دائماً: ابدأ بالاعتراف قبل السفر.</p>
+      <p><strong>الواقع الذي لا يقوله أحد:</strong> كثير من الممرضين يصلون بعقود عمل جاهزة — ثم يكتشفون أن العقد مشروط بالاعتراف الذي يستغرق أشهراً. ابدأ بالاعتراف قبل السفر — نحن نساعدك في ذلك.</p>
     </div>
   </div>
 </section>
@@ -140,57 +177,62 @@
 <!-- DEMAND -->
 <section class="section section--alt">
   <div class="inner">
-    <p class="section-label">سوق العمل</p>
-    <h2>أين الطلب الحقيقي على التمريض؟</h2>
-    <p class="lead">ليس كل التخصصات متساوية في الطلب. هذه المجالات تُظهر أعلى نسبة توظيف لكوادر التمريض الدولية.</p>
+    <p class="section-label">أين نوجهك</p>
+    <h2>نعرف أين الطلب الحقيقي — وأين تناسبك</h2>
+    <p class="lead">ليس كل المناطق متساوية في الطلب. نحن نعرف من الداخل أين تجد أفضل فرصة لملفك تحديداً.</p>
     <div class="demand-grid">
       <div class="demand-card">
-        <span class="demand-badge badge-very-high">طلب مرتفع جداً</span>
-        <h4>تمريض المسنين</h4>
-        <p>Altenpflege — أعلى طلب في السوق الألماني. فرص في كل الولايات. لكن اللغة والاعتراف إلزاميان.</p>
+        <span class="demand-badge badge-very-high">طلب عاجل</span>
+        <h4>تمريض المسنين — Altenpflege</h4>
+        <p>أعلى طلب في ألمانيا. فرص في كل الولايات. نحن نعرف أي دور رعاية تناسب ملفك وتسهّل الاعتراف.</p>
       </div>
       <div class="demand-card">
-        <span class="demand-badge badge-very-high">طلب مرتفع جداً</span>
-        <h4>تمريض المستشفيات</h4>
-        <p>Krankenpflege — طلب مستمر في المستشفيات الكبرى والمتوسطة. يتطلب C1 طبي متخصص.</p>
-      </div>
-      <div class="demand-card">
-        <span class="demand-badge badge-high">طلب مرتفع</span>
-        <h4>تمريض الأطفال</h4>
-        <p>Kinderkrankenpflege — تخصص منفصل باعتراف منفصل. طلب ثابت في المدن الكبرى.</p>
+        <span class="demand-badge badge-very-high">طلب عاجل</span>
+        <h4>تمريض المستشفيات — Krankenpflege</h4>
+        <p>طلب مستمر في المستشفيات الكبرى والمتوسطة. نعرف أي مستشفى يوظف ويدعم الاعتراف في نفس الوقت.</p>
       </div>
       <div class="demand-card">
         <span class="demand-badge badge-high">طلب مرتفع</span>
-        <h4>التمريض المنزلي</h4>
-        <p>Ambulante Pflege — نمو سريع. مرونة أكبر في العمل. يناسب من يريد ساعات عمل مرنة.</p>
+        <h4>تمريض الأطفال — Kinderkrankenpflege</h4>
+        <p>تخصص منفصل باعتراف منفصل. طلب ثابت في المدن الكبرى. نوجهك للمسار الصحيح من البداية.</p>
+      </div>
+      <div class="demand-card">
+        <span class="demand-badge badge-high">طلب مرتفع</span>
+        <h4>التمريض المنزلي — Ambulante Pflege</h4>
+        <p>نمو سريع. مرونة في العمل. يناسب من يريد ساعات عمل مرنة مع استقرار حقيقي.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RISK -->
+<!-- RISKS -->
 <section class="section">
   <div class="inner">
-    <p class="section-label">أخطاء شائعة</p>
-    <h2>أين يخطئ معظم كوادر التمريض؟</h2>
-    <p class="lead">هذه الأخطاء لا تُلغي فرصتك — لكنها تضيع أشهراً ثمينة وتكاليف غير ضرورية.</p>
+    <p class="section-label">ما لا يقوله أحد</p>
+    <h2>الأخطاء التي تكلف أشهراً</h2>
+    <p class="lead">من يبدأ معنا من البداية لا يقع في هذه الأخطاء.</p>
     <div class="risk-grid">
       <div class="risk-card">
         <h4>السفر قبل الاعتراف</h4>
         <p>الوصول بمؤهل غير معترف به يعني التوقف عن العمل وانتظار القرار — وأحياناً العودة.</p>
       </div>
       <div class="risk-card">
-        <h4>B2 بدلاً من C1</h4>
-        <p>معظم المرافق الصحية ترفض B2 لوظائف التمريض المباشر. الوقت الضائع لا يُعوَّض.</p>
+        <h4>اختيار الولاية الخطأ</h4>
+        <p>سرعة معالجة ملفات الاعتراف تختلف من 3 أشهر إلى 14 شهراً. نحن نعرف الفرق.</p>
       </div>
       <div class="risk-card">
-        <h4>اختيار الولاية عشوائياً</h4>
-        <p>سرعة معالجة ملفات الاعتراف تختلف بين الولايات من 3 أشهر إلى أكثر من سنة.</p>
+        <h4>اللغة العامة بدل التمريضية</h4>
+        <p>C1 العام لا يكفي. اللغة التمريضية المتخصصة مختلفة تماماً — ونساعدك في التحضير الصحيح.</p>
       </div>
       <div class="risk-card">
-        <h4>ملف وثائق ناقص</h4>
-        <p>نقص في ترجمة أو توثيق وثيقة واحدة يوقف الملف كاملاً. القائمة طويلة ودقيقة.</p>
+        <h4>الأسبوع الأول في العمل</h4>
+        <p>بيئة العمل الألمانية مختلفة. كثير من الممرضين يواجهون صعوبات غير متوقعة — نجهزك قبل الوصول.</p>
       </div>
+    </div>
+
+    <div class="warning-box">
+      <h4>⚠ الحقيقة التي لا يقولها أحد</h4>
+      <p>كثيرون يتصلون بنا بعد Kündigung. كثيرون على وشك العودة. كثيراً جداً ساعدناهم — وكثيراً جداً كان متأخراً جداً. تسفير الرجوع وخيبة الأهل — ليست معنا.</p>
     </div>
   </div>
 </section>
@@ -199,8 +241,8 @@
 <section class="section section--alt">
   <div class="inner">
     <div class="cta-block">
-      <h2>ملفك التمريضي يستحق تقييماً حقيقياً — قبل أي خطوة.</h2>
-      <p style="color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;">أخبرنا عن تخصصك ومؤهلاتك وخبرتك. سنحدد لك المسار الأمثل — أو نخبرك بصدق ما الذي يجب تجهيزه أولاً.</p>
+      <h2>ملفك التمريضي يستحق فريقاً داخل النظام — لا موقع معلومات.</h2>
+      <p>نقيّم ملفك، نحدد الولاية المناسبة، ونتابعك من اليوم الأول في العمل.</p>
       <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
       <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px;">رد خلال 24–48 ساعة · بدون التزام</p>
       <a href="https://wa.me/4915781497451" class="wa-link">أو تواصل مباشرة عبر واتساب ←</a>
@@ -216,7 +258,7 @@
       <a href="/ar/voraussetzungen" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
         <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">المتطلبات</p>
         <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">الوثائق المطلوبة</p>
-        <p style="font-size:12px;color:#6B7280;">قائمة كاملة بالمتطلبات</p>
+        <p style="font-size:12px;color:#6B7280;">قائمة كاملة</p>
       </a>
       <a href="/ar/aerzte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
         <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">الأطباء</p>
@@ -224,16 +266,16 @@
         <p style="font-size:12px;color:#6B7280;">Approbation والمسار الطبي</p>
       </a>
       <a href="/ar/assessment" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">التقييم</p>
-        <p style="font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:4px;">قيّم ملفك التمريضي</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.6);">مجاني — رد خلال 24 ساعة</p>
+        <p style="font-size:12px;color:#93C5FD !important;font-weight:600;margin-bottom:4px;">التقييم</p>
+        <p style="font-size:14px;color:#FFFFFF !important;font-weight:600;margin-bottom:4px;">ابدأ تقييمك الآن</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6) !important;">مجاني — رد خلال 24 ساعة</p>
       </a>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <p>Berlin Gateway — تقييم مهني لألمانيا</p>
+  <p>Berlin Gateway — من داخل النظام الألماني</p>
   <p style="margin-top:8px;">
     <a href="/ar/impressum">بصمة الموقع</a>
     <a href="/ar/datenschutz">خصوصية البيانات</a>

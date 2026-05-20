@@ -1,545 +1,338 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chancenkarte Bewertung – Berlin Gateway</title>
-    <meta name="description" content="Strukturierte Qualifikationsprüfung für die Chancenkarte Deutschland. Erhalten Sie eine institutionelle Einschätzung Ihrer Möglichkeiten.">
-    <link rel="canonical" href="https://berlingateway.de/de/assessment/">
-    <link rel="stylesheet" href="/assets/css/bg-core.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-blue: #0B3B8C;
-            --bg-blue-hover: #082B5C;
-            --bg-black: #1A1D24;
-            --bg-white: #FFFFFF;
-            --bg-border: #D9E1EA;
-            --bg-text-muted: #64748B;
-            --bg-space-lg: 80px;
-            --bg-space-md: 40px;
-        }
-
-        /* Hero Dark Mode */
-        .bg-hero-dark {
-            background: var(--bg-black);
-            color: var(--bg-white);
-            padding: 120px 0 80px 0;
-            text-align: center;
-        }
-
-        /* Assessment Container */
-        .assessment-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border: 1px solid var(--bg-border);
-            padding: 40px;
-            border-radius: 4px;
-        }
-
-        .step-indicator {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-        .step-dot {
-            height: 6px;
-            flex: 1;
-            background: #E2E8F0;
-            border-radius: 3px;
-        }
-        .step-dot.active {
-            background: var(--bg-blue);
-        }
-
-        .assessment-step {
-            display: none;
-        }
-        .assessment-step.active {
-            display: block;
-        }
-
-        .option-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 25px;
-        }
-        .option-item {
-            padding: 20px;
-            border: 2px solid #F1F5F9;
-            border-radius: 6px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.2s;
-        }
-        .option-item:hover {
-            border-color: var(--bg-blue);
-            background: #F8FAFC;
-        }
-        .option-item.selected {
-            border-color: var(--bg-blue);
-            background: #F0F7FF;
-        }
-        .option-points {
-            font-weight: 800;
-            color: var(--bg-blue);
-            font-size: 14px;
-        }
-
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        /* Result View */
-        .result-view {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .score-display {
-            font-size: 72px;
-            font-weight: 900;
-            color: var(--bg-blue);
-            margin-bottom: 10px;
-        }
-
-        /* FAQ Styling */
-        .faq-item {
-            border-bottom: 1px solid var(--bg-border);
-            padding: 20px 0;
-        }
-        .faq-question {
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-answer {
-            display: none;
-            padding-top: 15px;
-            color: var(--bg-text-muted);
-            line-height: 1.6;
-        }
-        .faq-answer.active { display: block; }
-
-        /* V1.5 MINIMAL BUTTON PATCH */
-        button, .bg-btn-local {
-            background: var(--bg-blue);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 2px;
-        }
-        button:hover, .bg-btn-local:hover {
-            opacity: 0.9;
-            color: white;
-            text-decoration: none;
-        }
-        .whatsapp-cta {
-            background: var(--bg-blue) !important;
-            color: white !important;
-            text-decoration: none !important;
-            font-weight: 700 !important;
-            padding: 18px 45px !important;
-            display: inline-block !important;
-            border-radius: 2px !important;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment starten — Berlin Gateway | Experten vor Ort in Deutschland</title>
+  <meta name="description" content="Professionelle Bewertung Ihres Profils von einem Team, das in Deutschland lebt und arbeitet. Kein Bot — echte Experten, die das System von innen kennen.">
+  <link rel="canonical" href="https://berlingateway.de/de/assessment">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/assessment">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:0 !important}
+    .inner{max-width:780px;margin:0 auto}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
+    .trust-strip{background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:20px 24px}
+    .trust-strip__inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500}
+    .trust-item span{color:#15803D;font-size:15px}
+    .form-wrap{max-width:640px;margin:0 auto}
+    .form-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:24px;display:block}
+    .form-title{font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:8px;line-height:1.3}
+    .form-sub{font-size:15px;color:#374151;margin-bottom:36px;line-height:1.6;font-weight:300}
+    .field-group{margin-bottom:20px}
+    .field-group label{display:block;font-size:13px;font-weight:600;color:#0D1117;margin-bottom:8px}
+    .field-group select,
+    .field-group input[type="text"],
+    .field-group input[type="email"],
+    .field-group textarea{width:100%;padding:12px 16px;border:1.5px solid #E5E7EB;border-radius:8px;font-family:'Inter',sans-serif;font-size:15px;color:#0D1117;background:#FFFFFF;appearance:none;outline:none;transition:border-color 0.15s}
+    .field-group select:focus,
+    .field-group input:focus,
+    .field-group textarea:focus{border-color:#0B3B8C}
+    .field-group textarea{resize:vertical;min-height:100px}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .file-upload{width:100%;padding:20px;border:1.5px dashed #E5E7EB;border-radius:8px;text-align:center;cursor:pointer;background:#F8F9FA;font-size:14px;color:#6B7280;transition:border-color 0.15s;display:block}
+    .file-upload:hover{border-color:#0B3B8C;color:#0B3B8C}
+    .file-upload input{display:none}
+    .submit-btn{width:100%;padding:16px;background:#0B1F3A;color:#FFFFFF;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:8px;cursor:pointer;margin-top:8px;transition:opacity 0.15s}
+    .submit-btn:hover{opacity:0.9}
+    .form-note{font-size:12px;color:#6B7280;text-align:center;margin-top:12px;line-height:1.6}
+    .or-divider{display:flex;align-items:center;gap:16px;margin:32px 0;color:#6B7280;font-size:13px}
+    .or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:#E5E7EB}
+    .wa-block{background:#F0FDF4;border:1.5px solid #BBF7D0;border-radius:12px;padding:24px;text-align:center}
+    .wa-block p{font-size:14px;color:#166534;margin-bottom:16px;line-height:1.6}
+    .wa-btn{display:inline-flex;align-items:center;gap:10px;background:#15803D;color:#FFFFFF;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .step-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF;text-align:center}
+    .step-num{width:40px;height:40px;background:#0B1F3A;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;margin:0 auto 16px}
+    .step-card h4{font-size:15px;font-weight:600;margin-bottom:8px;color:#0D1117}
+    .step-card p{font-size:13px;color:#6B7280;line-height:1.6}
+    .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+    .diff-card{border-radius:10px;padding:24px}
+    .diff-card--others{background:#FEF2F2;border:1.5px solid #FECACA}
+    .diff-card--us{background:#F0FDF4;border:1.5px solid #BBF7D0}
+    .diff-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:12px;display:block}
+    .diff-label--others{color:#B91C1C}
+    .diff-label--us{color:#15803D}
+    .diff-card ul{list-style:none;padding:0}
+    .diff-card ul li{font-size:14px;color:#374151;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px;line-height:1.5}
+    .diff-card ul li:last-child{border-bottom:none}
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    @media(max-width:640px){
+      .nav a:not(.nav-cta){display:none}
+      .field-row{grid-template-columns:1fr}
+      .steps-grid{grid-template-columns:1fr}
+      .diff-grid{grid-template-columns:1fr}
+      .trust-strip__inner{gap:20px}
+    }
+  </style>
 </head>
-<body class="bg-body">
+<body>
 
-    <!-- 1. TOP BAR -->
-    <div class="bg-bg-black bg-text-white" style="padding-block: 8px; font-size: 13px;">
-        <div class="bg-container">
-            <div class="bg-cluster" style="justify-content: space-between;">
-                <div class="bg-cluster bg-hide-mobile">
-                    <span>Berlin Headquarter: +49 30 25730875</span>
-                    <span>E-Mail: info@berlingateway.de</span>
-                </div>
-                <div class="bg-cluster" style="margin-left: auto;">
-                    <span style="font-weight: 700;">DE</span>
-                    <a href="/ar/assessment/" style="text-decoration: none; color: var(--bg-white);">AR</a>
-                </div>
-            </div>
-        </div>
+<div class="top-band">
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/ar/assessment" class="lang-badge">العربية</a>
+      <span style="opacity:.5">Experten vor Ort</span>
     </div>
+  </div>
+</div>
 
-    <!-- 2. MAIN HEADER -->
-    <header style="padding-block: 20px; border-bottom: 1px solid var(--bg-border); background: var(--bg-white);">
-        <div class="bg-container">
-            <div style="width: 100%;">
-                <div class="bg-cluster" style="justify-content: space-between; width: 100%;">
-                    <a href="/de/" style="text-decoration: none; font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: var(--bg-black);">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></a>
-                    <nav class="bg-cluster bg-hide-mobile">
-                        <a href="/de/chancenkarte/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Chancenkarte</a>
-                        <a href="/de/aerzte/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Ärzte</a>
-                        <a href="/de/pflegekraefte/" style="text-decoration: none; color: var(--bg-black); font-weight: 600; font-size: 14px;">Pflege</a>
-                        <a href="/de/assessment/" style="text-decoration: none; color: var(--bg-blue); font-weight: 800; font-size: 14px;">Assessment</a>
-                    </nav>
-                </div>
-                <nav class="bg-mobile-nav">
-                    <a href="/de/chancenkarte/" class="bg-mobile-nav-link">Chancenkarte</a>
-                    <a href="/de/aerzte/" class="bg-mobile-nav-link">Ärzte</a>
-                    <a href="/de/pflegekraefte/" class="bg-mobile-nav-link">Pflege</a>
-                    <a href="/de/assessment/" class="bg-mobile-nav-link" style="color: var(--bg-blue); font-weight: 800;">Assessment</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+<header class="header">
+  <div class="header__inner">
+    <a href="/de" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflegekraefte">Pflege</a>
+      <a href="/de/systemlogik">System</a>
+      <a href="/de/assessment" class="nav-cta">Assessment</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- 3. SUB NAVIGATION (SYSTEM INTELLIGENCE SPECIFIC) -->
-    <div style="background: #F8FAFC; padding: 15px 0; border-bottom: 1px solid var(--bg-border);">
-        <div class="bg-container" style="display: flex; gap: 30px;">
-            <a href="/de/assessment/" style="text-decoration: none; color: var(--bg-blue); font-weight: 800; font-size: 12px; letter-spacing: 0.05em;">ASSESSMENT</a>
-            <a href="/de/systemlogik/" style="text-decoration: none; color: var(--bg-text-muted); font-weight: 700; font-size: 12px; letter-spacing: 0.05em;">SYSTEMLOGIK</a>
-            <a href="/de/monitor/" style="text-decoration: none; color: var(--bg-text-muted); font-weight: 700; font-size: 12px; letter-spacing: 0.05em;">MONITOR</a>
+<!-- HERO -->
+<section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
+  <div class="inner">
+    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">Assessment — Erster echter Schritt</p>
+    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">Das ist kein Fragebogen.<br><em style="font-style:normal;color:#93C5FD;">Das ist der Beginn einer echten Begleitung.</em></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto;line-height:1.7;font-weight:300;">Unser Team lebt in Deutschland, arbeitet in Kliniken und Behörden. Ihre Bewertung erreicht echte Menschen — keine Algorithmen.</p>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust-strip">
+  <div class="trust-strip__inner">
+    <div class="trust-item"><span>✓</span> Team vor Ort in Deutschland</div>
+    <div class="trust-item"><span>✓</span> Echte menschliche Antwort</div>
+    <div class="trust-item"><span>✓</span> Antwort in 24–48 Stunden</div>
+    <div class="trust-item"><span>✓</span> Kostenlos & unverbindlich</div>
+  </div>
+</div>
+
+<!-- FORM -->
+<section class="section">
+  <div class="form-wrap">
+    <span class="form-label">Schritt 1</span>
+    <h2 class="form-title">Erzählen Sie uns von Ihrem Profil</h2>
+    <p class="form-sub">Jedes Feld hilft uns, Ihre Situation präzise zu bewerten. Wir sammeln keine Daten für Marketing — nur für Ihre Bewertung.</p>
+
+    <form action="#" method="post">
+      <div class="field-row">
+        <div class="field-group">
+          <label>Ihr Ziel</label>
+          <select name="path">
+            <option value="">Was möchten Sie?</option>
+            <option>In Deutschland arbeiten</option>
+            <option>In Deutschland studieren</option>
+            <option>Berufsausbildung in Deutschland</option>
+            <option>Unsicher — Beratung gewünscht</option>
+          </select>
         </div>
+        <div class="field-group">
+          <label>Berufsfeld</label>
+          <select name="field">
+            <option value="">Wählen Sie Ihr Feld</option>
+            <option>Medizin & Gesundheit</option>
+            <option>Pflege & Betreuung</option>
+            <option>Ingenieurwesen & Technik</option>
+            <option>IT & Software</option>
+            <option>Wirtschaft & Management</option>
+            <option>Bildung & Training</option>
+            <option>Handwerk & Industrie</option>
+            <option>Student / Studium</option>
+            <option>Anderes</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label>Höchster Abschluss</label>
+          <select name="degree">
+            <option value="">Abschluss wählen</option>
+            <option>Promotion / PhD</option>
+            <option>Master / Magister</option>
+            <option>Bachelor</option>
+            <option>Diplom / Techniker</option>
+            <option>Berufsausbildung</option>
+            <option>Abitur / Hochschulreife</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Berufserfahrung</label>
+          <select name="experience">
+            <option value="">Dauer wählen</option>
+            <option>Student / keine Erfahrung</option>
+            <option>Weniger als 1 Jahr</option>
+            <option>1–2 Jahre</option>
+            <option>3–5 Jahre</option>
+            <option>6–10 Jahre</option>
+            <option>Mehr als 10 Jahre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label>Deutschkenntnisse</label>
+          <select name="german">
+            <option value="">Niveau wählen</option>
+            <option>Keine Deutschkenntnisse</option>
+            <option>A1 – A2 (Anfänger)</option>
+            <option>B1 (Mittelstufe)</option>
+            <option>B2 (Obere Mittelstufe)</option>
+            <option>C1 – C2 (Fortgeschritten)</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Aktuelles Wohnsitzland</label>
+          <input type="text" name="country" placeholder="z.B. Syrien, Ägypten, Marokko">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Kurze Beschreibung Ihrer Situation <span style="color:#6B7280;font-weight:400">(optional, aber sehr hilfreich)</span></label>
+        <textarea name="message" placeholder="z.B.: Ich bin Arzt aus Syrien, 8 Jahre Erfahrung, B2 Deutsch, möchte in einem deutschen Krankenhaus arbeiten. Wo fange ich an?"></textarea>
+      </div>
+
+      <div class="field-group">
+        <label>E-Mail-Adresse</label>
+        <input type="email" name="email" placeholder="ihre@email.com" required>
+      </div>
+
+      <div class="field-group">
+        <label>Lebenslauf <span style="color:#6B7280;font-weight:400">(optional)</span></label>
+        <label class="file-upload">
+          <input type="file" name="cv" accept=".pdf">
+          📎 &nbsp;Lebenslauf anhängen — nur PDF, max. 5MB
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Assessment-Anfrage senden →</button>
+      <p class="form-note">Ihr Profil wird von unserem Team in Deutschland geprüft — echte Menschen, die das System kennen.<br>Datenschutz garantiert · Keine Weitergabe an Dritte.</p>
+    </form>
+
+    <div class="or-divider">oder direkt kontaktieren</div>
+
+    <div class="wa-block">
+      <p>Lieber persönlich sprechen? Unser Team ist auf WhatsApp erreichbar — wir antworten persönlich, kein Bot.</p>
+      <a href="https://wa.me/4915781497451" class="wa-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp kontaktieren
+      </a>
     </div>
+  </div>
+</section>
 
-    <!-- 4. HERO SECTION -->
-    <section class="bg-hero-dark">
-        <div class="bg-container">
-            <span class="bg-label" style="color: var(--bg-blue); margin-bottom: 20px; display: block;">QUALIFICATION GATEWAY</span>
-            <h1 class="bg-heading-hero" style="color: white; margin-bottom: 25px;">Prüfen Sie Ihre Chancenkarte-Punkte</h1>
-            <p class="bg-text-lead" style="color: rgba(255,255,255,0.7); max-width: 800px; margin: 0 auto;">
-                Erhalten Sie eine strukturierte Einschätzung Ihrer Qualifikation basierend auf den offiziellen Kriterien des Fachkräfteeinwanderungsgesetzes.
-            </p>
-        </div>
-    </section>
+<!-- WHAT HAPPENS -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">Was passiert danach?</p>
+    <h2>Keine automatische Antwort — echte Bewertung</h2>
+    <p class="lead">Das passiert nach Ihrer Anfrage — Schritt für Schritt.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>Profil-Prüfung</h4>
+        <p>Unser Team in Deutschland prüft Ihr Profil innerhalb von 24–48 Stunden. Kein Bot — Menschen, die das System kennen.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>Ehrliche Bewertung</h4>
+        <p>Wir sagen Ihnen ehrlich, wo Sie stehen — welcher Weg passt zu Ihnen und was Ihnen konkret fehlt.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>Klarer Plan</h4>
+        <p>Wenn Ihr Profil bereit ist — ein Aktionsplan. Wenn nicht — eine ehrliche Antwort, was zuerst geändert werden muss.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 5. ASSESSMENT TOOL -->
-    <section class="bg-section">
-        <div class="bg-container">
-            <div class="assessment-wrapper">
-                <div class="step-indicator" id="stepIndicator">
-                    <div class="step-dot active"></div>
-                    <div class="step-dot"></div>
-                    <div class="step-dot"></div>
-                    <div class="step-dot"></div>
-                    <div class="step-dot"></div>
-                </div>
+<!-- DIFFERENCE -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">Der echte Unterschied</p>
+    <h2>Warum Berlin Gateway — und kein anderes Informationsportal?</h2>
+    <p class="lead">Der Unterschied liegt nicht in den Informationen — sondern darin, wer hinter der Bewertung steht.</p>
+    <div class="diff-grid">
+      <div class="diff-card diff-card--others">
+        <span class="diff-label diff-label--others">❌ Andere Portale</span>
+        <ul>
+          <li><span>—</span>Allgemeine Informationen aus dem Internet</li>
+          <li><span>—</span>Automatische Antworten und Vorlagen</li>
+          <li><span>—</span>Niemand kennt Sie persönlich</li>
+          <li><span>—</span>Endet bei der Ankunft in Deutschland</li>
+          <li><span>—</span>Keine Nachbetreuung</li>
+        </ul>
+      </div>
+      <div class="diff-card diff-card--us">
+        <span class="diff-label diff-label--us">✓ Berlin Gateway</span>
+        <ul>
+          <li><span>—</span>Team vor Ort — kennt das System von innen</li>
+          <li><span>—</span>Persönliche Antwort auf Ihr Profil</li>
+          <li><span>—</span>Wir kennen jedes Bundesland und jede Klinik</li>
+          <li><span>—</span>Begleitung ab dem ersten Tag nach Ankunft</li>
+          <li><span>—</span>Rückflug und Enttäuschung — nicht mit uns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <form id="assessmentForm">
-                    <!-- Step 1: Qualification -->
-                    <div class="assessment-step active" data-step="1">
-                        <h2 class="bg-fs-h3">Schritt 1: Ihre Qualifikation</h2>
-                        <p class="bg-text-small">Was ist Ihr höchster berufsqualifizierender Abschluss?</p>
-                        <div class="option-list">
-                            <div class="option-item" onclick="selectOption(this, 3)">
-                                <span>Universitätsabschluss (Bachelor/Master)</span>
-                                <span class="option-points">3 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 2)">
-                                <span>Berufsausbildung / Fachschule</span>
-                                <span class="option-points">2 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 0)">
-                                <span>Keine formale Qualifikation</span>
-                                <span class="option-points">0 Punkte</span>
-                            </div>
-                        </div>
-                        <div class="nav-buttons">
-                            <button type="button" class="bg-button-primary" style="flex: 1;" onclick="nextStep()">Weiter</button>
-                        </div>
-                    </div>
+<!-- INTERNAL LINKS -->
+<section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
+  <div style="max-width:780px;margin:0 auto;">
+    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">Auch interessant</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+      <a href="/de/chancenkarte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Chancenkarte</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Sind Sie qualifiziert?</p>
+        <p style="font-size:12px;color:#6B7280;">Kriterien und Eignungsfilter</p>
+      </a>
+      <a href="/de/aerzte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Ärzte</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Weg für Mediziner</p>
+        <p style="font-size:12px;color:#6B7280;">Approbation & Anerkennung</p>
+      </a>
+      <a href="/de/pflegekraefte" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">Pflege</p>
+        <p style="font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:4px;">Weg für Pflegekräfte</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6);">Anerkennung & Integration</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-                    <!-- Step 2: Experience -->
-                    <div class="assessment-step" data-step="2">
-                        <h2 class="bg-fs-h3">Schritt 2: Berufserfahrung</h2>
-                        <p class="bg-text-small">Wie viele Jahre relevanter Berufserfahrung haben Sie?</p>
-                        <div class="option-list">
-                            <div class="option-item" onclick="selectOption(this, 3)">
-                                <span>5+ Jahre (in den letzten 7 Jahren)</span>
-                                <span class="option-points">3 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 2)">
-                                <span>2-4 Jahre (in den letzten 5 Jahren)</span>
-                                <span class="option-points">2 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 0)">
-                                <span>Weniger als 2 Jahre</span>
-                                <span class="option-points">0 Punkte</span>
-                            </div>
-                        </div>
-                        <div class="nav-buttons">
-                            <button type="button" class="bg-button-secondary" onclick="prevStep()">Zurück</button>
-                            <button type="button" class="bg-button-primary" style="flex: 1;" onclick="nextStep()">Weiter</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Language -->
-                    <div class="assessment-step" data-step="3">
-                        <h2 class="bg-fs-h3">Schritt 3: Deutschkenntnisse</h2>
-                        <p class="bg-text-small">Was ist Ihr aktuelles, zertifiziertes Deutsch-Niveau?</p>
-                        <div class="option-list">
-                            <div class="option-item" onclick="selectOption(this, 3)">
-                                <span>B2 oder höher</span>
-                                <span class="option-points">3 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 2)">
-                                <span>B1</span>
-                                <span class="option-points">2 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 1)">
-                                <span>A2</span>
-                                <span class="option-points">1 Punkt</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 0)">
-                                <span>A1 oder niedriger</span>
-                                <span class="option-points">0 Punkte</span>
-                            </div>
-                        </div>
-                        <div class="nav-buttons">
-                            <button type="button" class="bg-button-secondary" onclick="prevStep()">Zurück</button>
-                            <button type="button" class="bg-button-primary" style="flex: 1;" onclick="nextStep()">Weiter</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Age -->
-                    <div class="assessment-step" data-step="4">
-                        <h2 class="bg-fs-h3">Schritt 4: Ihr Alter</h2>
-                        <p class="bg-text-small">Wie alt sind Sie zum Zeitpunkt der Antragstellung?</p>
-                        <div class="option-list">
-                            <div class="option-item" onclick="selectOption(this, 2)">
-                                <span>Unter 35 Jahre</span>
-                                <span class="option-points">2 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 1)">
-                                <span>35 bis 40 Jahre</span>
-                                <span class="option-points">1 Punkt</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 0)">
-                                <span>Über 40 Jahre</span>
-                                <span class="option-points">0 Punkte</span>
-                            </div>
-                        </div>
-                        <div class="nav-buttons">
-                            <button type="button" class="bg-button-secondary" onclick="prevStep()">Zurück</button>
-                            <button type="button" class="bg-button-primary" style="flex: 1;" onclick="nextStep()">Weiter</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 5: Connection -->
-                    <div class="assessment-step" data-step="5">
-                        <h2 class="bg-fs-h3">Schritt 5: Deutschland-Bezug</h2>
-                        <p class="bg-text-small">Haben Sie eine nachweisbare Verbindung zu Deutschland?</p>
-                        <div class="option-list">
-                            <div class="option-item" onclick="selectOption(this, 2)">
-                                <span>Früherer legaler Aufenthalt (min. 6 Monate)</span>
-                                <span class="option-points">2 Punkte</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 1)">
-                                <span>Verwandte in Deutschland</span>
-                                <span class="option-points">1 Punkt</span>
-                            </div>
-                            <div class="option-item" onclick="selectOption(this, 0)">
-                                <span>Keine Verbindung</span>
-                                <span class="option-points">0 Punkte</span>
-                            </div>
-                        </div>
-                        <div class="nav-buttons">
-                            <button type="button" class="bg-button-secondary" onclick="prevStep()">Zurück</button>
-                            <button type="button" class="bg-button-primary" style="flex: 1;" onclick="showResult()">Ergebnis berechnen</button>
-                        </div>
-                    </div>
-
-                    <!-- Result Step -->
-                    <div class="assessment-step" id="resultStep">
-                        <div class="result-view">
-                            <div class="score-display" id="totalScore">0</div>
-                            <div class="bg-fs-h3" id="resultTitle">Bewertung wird erstellt...</div>
-                            <p class="bg-text-body" id="resultText" style="margin: 20px 0;"></p>
-                            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
-                                <a href="/de/chancenkarte/#bewertung" class="bg-button-primary" id="resultCta">Bewertung starten</a>
-                                <a href="/de/systemlogik/" class="bg-button-secondary" id="secondaryCta">Systemlogik prüfen</a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. REALITY LAYER -->
-    <section class="bg-section" style="background: #F8FAFC;">
-        <div class="bg-container">
-            <div class="bg-stack" style="margin-bottom: var(--bg-space-md);">
-                <span class="bg-label">Institutional Reality</span>
-                <h2 class="bg-heading-section">Wichtige Hinweise zur Bewertung</h2>
-            </div>
-            <div class="bg-grid bg-grid-3">
-                <div class="bg-card">
-                    <h4 class="bg-fs-h3">Keine Erfolgsgarantie</h4>
-                    <p class="bg-text-small">Diese Bewertung dient der Orientierung. Die finale Entscheidung obliegt ausschließlich den deutschen Behörden.</p>
-                </div>
-                <div class="bg-card">
-                    <h4 class="bg-fs-h3">Dokumentenqualität</h4>
-                    <p class="bg-text-small">Punkte werden nur anerkannt, wenn sie durch beglaubigte Übersetzungen und offizielle Zertifikate belegbar sind.</p>
-                </div>
-                <div class="bg-card">
-                    <h4 class="bg-fs-h3">Sprachanforderungen</h4>
-                    <p class="bg-text-small">Anerkannte Zertifikate (Goethe, ÖSD, Telc) sind zwingend erforderlich für die Punktevergabe.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FAQ BLOCK -->
-    <section class="bg-section" style="background: white;">
-        <div class="bg-container">
-            <div class="bg-stack" style="margin-bottom: var(--bg-space-md);">
-                <span class="bg-label">FAQ</span>
-                <h2 class="bg-heading-section">Fragen zum Assessment</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Wie viele Punkte brauche ich? <span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer">Für die Chancenkarte sind in der Regel mindestens 6 Punkte erforderlich, sofern Sie nicht als Fachkraft (mit anerkannter Qualifikation) direkt berechtigt sind.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Zählt mein Studium als Punkt? <span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer">Ja, ein in Deutschland anerkannter Hochschulabschluss bringt 3 Punkte im System der Chancenkarte.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Was ist, wenn ich 0 Punkte habe? <span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer">Ohne Punkte ist der Weg über die Chancenkarte nicht möglich. Wir prüfen dann alternative Pfade wie die Anerkennungspartnerschaft oder Direkteinstieg.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. FINAL CTA -->
-    <section class="bg-section" style="background: var(--bg-black); color: white; text-align: center;">
-        <div class="bg-container">
-            <div class="bg-stack" style="align-items: center;">
-                <h2 class="bg-heading-section" style="color: white; margin-bottom: 15px;">Individuelle Analyse anfordern</h2>
-                <p class="bg-text-body" style="color: rgba(255,255,255,0.85); max-width: 600px; margin-inline: auto; margin-bottom: 35px;">Lassen Sie Ihr Profil von unseren Experten für den deutschen Arbeitsmarkt validieren.</p>
-                <a href="https://wa.me/493025730875" class="whatsapp-cta" style="min-width: 280px; text-align: center;">Per WhatsApp kontaktieren</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 11. FOOTER (SYSTEM INTELLIGENCE MODE) -->
-    <footer style="padding-block: 60px; border-top: 1px solid rgba(255,255,255,0.1); background: var(--bg-black); color: white;">
-        <div class="bg-container">
-            <div class="bg-grid bg-grid-3" style="gap: 40px;">
-                <div class="bg-stack">
-                    <div style="font-weight: 900; font-size: 18px; letter-spacing: -0.02em; color: white;">BERLIN<span style="color: var(--bg-blue);">GATEWAY</span></div>
-                    <p class="bg-text-small" style="max-width: 240px; color: rgba(255,255,255,0.85);">Operative Begleitung für die Fachkräftemigration nach Deutschland.</p>
-                </div>
-                <div class="bg-stack">
-                    <span class="bg-label" style="color: rgba(255,255,255,0.6);">Navigation</span>
-                    <nav class="bg-stack" style="--bg-space-md: 10px;">
-                        <a href="/de/chancenkarte/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Chancenkarte</a>
-                        <a href="/de/assessment/" class="bg-text-small" style="text-decoration: none; color: var(--bg-blue); font-weight: 700;">Assessment</a>
-                        <a href="/de/systemlogik/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Systemlogik</a>
-                        <a href="/de/monitor/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Monitor</a>
-                    </nav>
-                </div>
-                <div class="bg-stack">
-                    <span class="bg-label" style="color: rgba(255,255,255,0.6);">Rechtliches</span>
-                    <nav class="bg-stack" style="--bg-space-md: 10px;">
-                        <a href="/de/impressum/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Impressum</a>
-                        <a href="/de/datenschutz/" class="bg-text-small" style="text-decoration: none; color: rgba(255,255,255,0.85);">Datenschutz</a>
-                    </nav>
-                </div>
-            </div>
-            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-                <p class="bg-text-small" style="color: rgba(255,255,255,0.6);">&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
-                <p class="bg-text-small" style="color: rgba(255,255,255,0.6);">Operating within established professional qualification frameworks.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        let currentStep = 1;
-        const totalPoints = { 1:0, 2:0, 3:0, 4:0, 5:0 };
-
-        function selectOption(element, points) {
-            const step = element.closest('.assessment-step').dataset.step;
-            const options = element.parentNode.querySelectorAll('.option-item');
-            options.forEach(opt => opt.classList.remove('selected'));
-            element.classList.add('selected');
-            totalPoints[step] = points;
-        }
-
-        function nextStep() {
-            const step = document.querySelector(`.assessment-step[data-step="${currentStep}"]`);
-            if (!step.querySelector('.option-item.selected')) {
-                alert('Bitte wählen Sie eine Option aus.');
-                return;
-            }
-            step.classList.remove('active');
-            currentStep++;
-            document.querySelector(`.assessment-step[data-step="${currentStep}"]`).classList.add('active');
-            updateIndicator();
-        }
-
-        function prevStep() {
-            document.querySelector(`.assessment-step[data-step="${currentStep}"]`).classList.remove('active');
-            currentStep--;
-            document.querySelector(`.assessment-step[data-step="${currentStep}"]`).classList.add('active');
-            updateIndicator();
-        }
-
-        function updateIndicator() {
-            const dots = document.querySelectorAll('.step-dot');
-            dots.forEach((dot, idx) => {
-                if (idx < currentStep) dot.classList.add('active');
-                else dot.classList.remove('active');
-            });
-        }
-
-        function showResult() {
-            const step = document.querySelector(`.assessment-step[data-step="5"]`);
-            if (!step.querySelector('.option-item.selected')) {
-                alert('Bitte wählen Sie eine Option aus.');
-                return;
-            }
-            
-            let finalScore = 0;
-            for (let s in totalPoints) finalScore += totalPoints[s];
-            
-            step.classList.remove('active');
-            document.getElementById('resultStep').classList.add('active');
-            document.getElementById('totalScore').textContent = finalScore + " Punkte";
-            
-            const title = document.getElementById('resultTitle');
-            const text = document.getElementById('resultText');
-            
-            if (finalScore >= 6) {
-                title.textContent = "Sie erfüllen die Mindestanforderung.";
-                text.textContent = "Basierend auf Ihrer Bewertung erfüllen Sie die Mindestanforderungen für die Chancenkarte. Fahren Sie fort, um Ihre individuelle Analyse zu starten.";
-            } else {
-                title.textContent = "Anforderungen nicht vollständig erfüllt.";
-                text.textContent = "Aktuell erreichen Sie nicht die notwendige Punktzahl für die Chancenkarte. Wir empfehlen eine Prüfung alternativer Pfade über unsere Systemlogik.";
-            }
-            updateIndicator();
-        }
-
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                q.nextElementSibling.classList.toggle('active');
-                const toggle = q.querySelector('.faq-toggle');
-                toggle.textContent = q.nextElementSibling.classList.contains('active') ? '▲' : '▼';
-            });
-        });
-    </script>
+<footer class="footer">
+  <p>Berlin Gateway — Experten vor Ort in Deutschland</p>
+  <p style="margin-top:8px;">
+    <a href="/de/impressum">Impressum</a>
+    <a href="/de/datenschutz">Datenschutz</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+</footer>
 
 </body>
 </html>

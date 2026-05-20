@@ -3,19 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ابدأ تقييمك — Berlin Gateway</title>
-  <meta name="description" content="تقييم مهني حقيقي لوضعك في سوق العمل الألماني. ليس استبياناً — بل تحليل فعلي لملفك.">
+  <title>ابدأ تقييمك — Berlin Gateway | من داخل النظام الألماني</title>
+  <meta name="description" content="تقييم حقيقي لملفك من فريق يعيش in ألمانيا ويعمل داخل المستشفيات والمؤسسات. ليس استبياناً — بل أول خطوة in طريق النجاح.">
+  <link rel="canonical" href="https://berlingateway.de/ar/assessment">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --ink:#0D1117;--ink-mid:#374151;--ink-low:#6B7280;
-      --white:#FFFFFF;--off:#F8F9FA;--border:#E5E7EB;
-      --blue:#0B3B8C;--blue-dk:#0B1F3A;--green:#15803D;
-    }
-    body{font-family:'IBM Plex Sans Arabic',sans-serif;color:var(--ink);background:var(--white);margin:0}
-    .top-band{background:#0B1F3A;color:var(--white);padding:10px 0;font-size:13px}
+    body{font-family:'IBM Plex Sans Arabic',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
     .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
     .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
     .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
@@ -24,11 +20,21 @@
     .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
     .brand span{color:#0B3B8C}
     .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-right:0 !important}
+    .inner{max-width:780px;margin:0 auto}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
+
+    /* TRUST STRIP */
     .trust-strip{background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:20px 24px}
-    .trust-strip__inner{max-width:780px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+    .trust-strip__inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
     .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500}
     .trust-item span{color:#15803D;font-size:15px}
-    .form-section{padding:56px 24px 72px}
+
+    /* FORM */
     .form-wrap{max-width:640px;margin:0 auto}
     .form-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:24px;display:block}
     .form-title{font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:8px;line-height:1.3}
@@ -37,13 +43,16 @@
     .field-group label{display:block;font-size:13px;font-weight:600;color:#0D1117;margin-bottom:8px}
     .field-group select,
     .field-group input[type="text"],
-    .field-group input[type="email"]{
+    .field-group input[type="email"],
+    .field-group textarea{
       width:100%;padding:12px 16px;border:1.5px solid #E5E7EB;border-radius:8px;
       font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;color:#0D1117;
       background:#FFFFFF;appearance:none;outline:none;transition:border-color 0.15s;
     }
     .field-group select:focus,
-    .field-group input:focus{border-color:#0B3B8C}
+    .field-group input:focus,
+    .field-group textarea:focus{border-color:#0B3B8C}
+    .field-group textarea{resize:vertical;min-height:100px}
     .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .file-upload{width:100%;padding:20px;border:1.5px dashed #E5E7EB;border-radius:8px;text-align:center;cursor:pointer;background:#F8F9FA;font-size:14px;color:#6B7280;transition:border-color 0.15s;display:block}
     .file-upload:hover{border-color:#0B3B8C;color:#0B3B8C}
@@ -56,21 +65,34 @@
     .wa-block{background:#F0FDF4;border:1.5px solid #BBF7D0;border-radius:12px;padding:24px;text-align:center}
     .wa-block p{font-size:14px;color:#166534;margin-bottom:16px;line-height:1.6}
     .wa-btn{display:inline-flex;align-items:center;gap:10px;background:#15803D;color:#FFFFFF;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;text-decoration:none}
-    .why-section{background:#F8F9FA;border-top:1px solid #E5E7EB;padding:56px 24px}
-    .why-section .inner{max-width:780px;margin:0 auto}
-    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-    .why-card{background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:10px;padding:24px}
-    .why-card h4{font-size:15px;font-weight:600;margin-bottom:8px;color:#0D1117}
-    .why-card p{font-size:13px;color:#6B7280;line-height:1.6}
-    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
-    .section-h2{font-size:clamp(20px,3vw,28px);font-weight:700;line-height:1.3;margin-bottom:8px}
-    .section-lead{font-size:16px;color:#374151;line-height:1.7;font-weight:300}
+
+    /* WHAT HAPPENS */
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .step-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF;text-align:center}
+    .step-num{width:40px;height:40px;background:#0B1F3A;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;margin:0 auto 16px}
+    .step-card h4{font-size:15px;font-weight:600;margin-bottom:8px;color:#0D1117}
+    .step-card p{font-size:13px;color:#6B7280;line-height:1.6}
+
+    /* DIFFERENCE */
+    .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+    .diff-card{border-radius:10px;padding:24px}
+    .diff-card--others{background:#FEF2F2;border:1.5px solid #FECACA}
+    .diff-card--us{background:#F0FDF4;border:1.5px solid #BBF7D0}
+    .diff-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:12px;display:block}
+    .diff-label--others{color:#B91C1C}
+    .diff-label--us{color:#15803D}
+    .diff-card ul{list-style:none;padding:0}
+    .diff-card ul li{font-size:14px;color:#374151;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+    .diff-card ul li:last-child{border-bottom:none}
+
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+
     @media(max-width:640px){
-      .nav{display:none}
+      .nav a:not(.nav-cta){display:none}
       .field-row{grid-template-columns:1fr}
-      .why-grid{grid-template-columns:1fr}
+      .steps-grid{grid-template-columns:1fr}
+      .diff-grid{grid-template-columns:1fr}
       .trust-strip__inner{gap:20px}
     }
   </style>
@@ -82,7 +104,7 @@
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="/de/assessment" class="lang-badge">Deutsch</a>
-      <span style="opacity:.5">تقييم معتمد</span>
+      <span style="opacity:.5">مقيمون in ألمانيا</span>
     </div>
   </div>
 </div>
@@ -92,37 +114,52 @@
     <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
     <nav class="nav">
       <a href="/ar/chancenkarte">بطاقة الفرص</a>
-      <a href="/ar/assessment">التقييم</a>
       <a href="/ar/aerzte">أطباء</a>
       <a href="/ar/pflege">تمريض</a>
+      <a href="/ar/systemlogik">النظام</a>
+      <a href="/ar/assessment" class="nav-cta">التقييم</a>
     </nav>
   </div>
 </header>
 
-<section style="background:#0B1F3A;padding:64px 24px 56px;text-align:center;">
-  <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px;">التقييم المهني — Berlin Gateway</p>
-  <h1 style="color:#FFFFFF;font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.3;max-width:600px;margin:0 auto 16px;">ابدأ تقييمك الحقيقي.<br>ليس استبياناً — بل تحليل فعلي.</h1>
-  <p style="color:rgba(255,255,255,0.65);font-size:16px;max-width:480px;margin:0 auto;line-height:1.7;font-weight:300;">نراجع ملفك وفق المعايير الحقيقية للنظام الألماني ونخبرك بصدق أين تقف.</p>
+<!-- HERO -->
+<section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
+  <div class="inner">
+    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">التقييم — أول خطوة حقيقية</p>
+    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">هذا ليس استبياناً.<br><em style="font-style:normal;color:#93C5FD;">هذا بداية علاقة حقيقية.</em></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto;line-height:1.7;font-weight:300;">فريقنا يعيش in ألمانيا، يعمل داخل المستشفيات والمؤسسات، ويعرف النظام من الداخل. تقييمك سيصل إلى أناس حقيقيين — لا خوارزميات.</p>
+  </div>
 </section>
 
+<!-- TRUST -->
 <div class="trust-strip">
   <div class="trust-strip__inner">
+    <div class="trust-item"><span>✓</span> فريق مقيم in ألمانيا</div>
+    <div class="trust-item"><span>✓</span> رد بشري حقيقي — لا أتمتة</div>
+    <div class="trust-item"><span>✓</span> خلال 24–48 ساعة</div>
     <div class="trust-item"><span>✓</span> مجاني وبدون التزام</div>
-    <div class="trust-item"><span>✓</span> رد خلال 24–48 ساعة</div>
-    <div class="trust-item"><span>✓</span> تقييم بمعايير ألمانية حقيقية</div>
-    <div class="trust-item"><span>✓</span> بيانات محمية وسرية</div>
   </div>
 </div>
 
-<section class="form-section">
+<!-- FORM -->
+<section class="section">
   <div class="form-wrap">
     <span class="form-label">الخطوة الأولى</span>
-    <h2 class="form-title">أخبرنا عن ملفك المهني</h2>
-    <p class="form-sub">كل حقل يساعدنا على تقييم وضعك بدقة. لا نجمع البيانات للتسويق — نستخدمها فقط للتقييم.</p>
+    <h2 class="form-title">أخبرنا عن ملفك — نخبرك بصدق أين تقف</h2>
+    <p class="form-sub">كل حقل يساعدنا على فهم وضعك بدقة. لا نجمع بيانات للتسويق — نستخدمها فقط لتقييمك.</p>
 
     <form action="#" method="post">
-
       <div class="field-row">
+        <div class="field-group">
+          <label>المسار المطلوب</label>
+          <select name="path">
+            <option value="">ما هدفك؟</option>
+            <option>العمل in ألمانيا</option>
+            <option>الدراسة in ألمانيا</option>
+            <option>التدريب المهني</option>
+            <option>لست متأكداً — أحتاج مشورة</option>
+          </select>
+        </div>
         <div class="field-group">
           <label>المجال المهني</label>
           <select name="field">
@@ -134,17 +171,8 @@
             <option>اقتصاد وإدارة</option>
             <option>تعليم وتدريب</option>
             <option>حرف وصناعة</option>
+            <option>طالب / دراسة</option>
             <option>مجال آخر</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label>الزمن المستهدف للانتقال</label>
-          <select name="timeline">
-            <option value="">متى تخطط؟</option>
-            <option>خلال 6 أشهر</option>
-            <option>خلال 12 شهراً</option>
-            <option>خلال سنتين</option>
-            <option>أكثر من سنتين</option>
           </select>
         </div>
       </div>
@@ -158,13 +186,15 @@
             <option>ماجستير</option>
             <option>بكالوريوس</option>
             <option>دبلوم / تقني</option>
-            <option>تدريب مهني</option>
+            <option>التدريب المهني</option>
+            <option>ثانوية عامة</option>
           </select>
         </div>
         <div class="field-group">
           <label>سنوات الخبرة المهنية</label>
           <select name="experience">
             <option value="">اختر المدة</option>
+            <option>طالب / بدون خبرة</option>
             <option>أقل من سنة</option>
             <option>1–2 سنة</option>
             <option>3–5 سنوات</option>
@@ -188,8 +218,13 @@
         </div>
         <div class="field-group">
           <label>بلد الإقامة الحالي</label>
-          <input type="text" name="country" placeholder="مثال: المغرب، مصر، الجزائر">
+          <input type="text" name="country" placeholder="مثال: المغرب، مصر، سوريا، العراق">
         </div>
+      </div>
+
+      <div class="field-group">
+        <label>أخبرنا عن وضعك باختصار <span style="color:#6B7280;font-weight:400">(اختياري لكن مفيد جداً)</span></label>
+        <textarea name="message" placeholder="مثلاً: طبيب من الجزائر، 5 سنوات خبرة، أريد العمل in مستشفى ألماني. عندي B2 ألماني. أين أبدأ؟"></textarea>
       </div>
 
       <div class="field-group">
@@ -198,7 +233,7 @@
       </div>
 
       <div class="field-group">
-        <label>السيرة الذاتية (اختياري)</label>
+        <label>السيرة الذاتية <span style="color:#6B7280;font-weight:400">(اختياري)</span></label>
         <label class="file-upload">
           <input type="file" name="cv" accept=".pdf">
           📎 &nbsp;أرفق سيرتك الذاتية — PDF فقط، بحد أقصى 5MB
@@ -206,13 +241,13 @@
       </div>
 
       <button type="submit" class="submit-btn">إرسال طلب التقييم ←</button>
-      <p class="form-note">بإرسال الطلب، توافق على معالجة بياناتك لأغراض التقييم فقط.<br>لن نشارك معلوماتك مع أي طرف ثالث.</p>
+      <p class="form-note">سيراجع ملفك فريقنا in ألمانيا — أناس حقيقيون يعرفون النظام من الداخل.<br>بيانات محمية · لن نشاركها مع أي طرف ثالث.</p>
     </form>
 
     <div class="or-divider">أو تواصل مباشرة</div>
 
     <div class="wa-block">
-      <p>تفضل التواصل المباشر؟ فريقنا متاح على واتساب للإجابة على أسئلتك وتحديد موعد للتقييم.</p>
+      <p>تفضل التحدث مباشرة؟ فريقنا متاح على واتساب — نرد بشكل شخصي، لا بوت.</p>
       <a href="https://wa.me/4915781497451" class="wa-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         تواصل عبر واتساب
@@ -221,23 +256,58 @@
   </div>
 </section>
 
-<section class="why-section">
+<!-- WHAT HAPPENS NEXT -->
+<section class="section section--alt">
   <div class="inner">
-    <p class="section-label">لماذا التقييم؟</p>
-    <h2 class="section-h2">ما الفرق بين التقييم والمعلومات العامة؟</h2>
-    <p class="section-lead">الإنترنت مليء بالمعلومات العامة عن ألمانيا. التقييم يجيبك على سؤال واحد: أنت شخصياً — أين تقف؟</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <h4>تحليل مؤهلاتك</h4>
-        <p>نقيّم شهادتك وفق آليات الاعتراف الألمانية الحقيقية — ليس فقط ما إذا كانت معترفاً بها، بل كيف ومتى وبأي شروط.</p>
+    <p class="section-label">ماذا يحدث بعدها؟</p>
+    <h2>ليس رداً آلياً — بل تقييم حقيقي</h2>
+    <p class="lead">هذا ما يحدث بعد إرسال طلبك — خطوة بخطوة.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>مراجعة الملف</h4>
+        <p>فريقنا in ألمانيا يراجع ملفك خلال 24–48 ساعة. ليس بوتاً — أناس يعرفون النظام.</p>
       </div>
-      <div class="why-card">
-        <h4>واقع سوق العمل</h4>
-        <p>نربط ملفك بالطلب الفعلي في السوق الألماني. هناك فرق كبير بين "مطلوب بشكل عام" و"مطلوب لملفك تحديداً".</p>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>تقييم صادق</h4>
+        <p>نخبرك بصدق أين تقف — ما المسار المناسب، وما الذي ينقصك تحديداً.</p>
       </div>
-      <div class="why-card">
-        <h4>مسار واضح أو إجابة صريحة</h4>
-        <p>إذا كان وضعك جاهزاً — نعطيك خطة. إذا لم يكن — نخبرك بصدق ما الذي يجب تغييره أولاً.</p>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>خطة واضحة</h4>
+        <p>إذا كان ملفك جاهزاً — خطة عمل. إذا لم يكن — إجابة صريحة بما يجب تغييره أولاً.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">الفرق الحقيقي</p>
+    <h2>لماذا Berlin Gateway — ليس موقع معلومات آخر؟</h2>
+    <p class="lead">الفرق ليس in المعلومات — بل in من يقف خلف التقييم.</p>
+    <div class="diff-grid">
+      <div class="diff-card diff-card--others">
+        <span class="diff-label diff-label--others">❌ المواقع الأخرى</span>
+        <ul>
+          <li><span>—</span>معلومات عامة من الإنترنت</li>
+          <li><span>—</span>ردود آلية وقوالب جاهزة</li>
+          <li><span>—</span>لا أحد يعرفك شخصياً</li>
+          <li><span>—</span>تنتهي عند الوصول</li>
+          <li><span>—</span>لا أحد يتابعك بعدها</li>
+        </ul>
+      </div>
+      <div class="diff-card diff-card--us">
+        <span class="diff-label diff-label--us">✓ Berlin Gateway</span>
+        <ul>
+          <li><span>—</span>فريق مقيم in ألمانيا يعرف النظام</li>
+          <li><span>—</span>رد شخصي حقيقي على ملفك</li>
+          <li><span>—</span>نعرف كل ولاية وكل مستشفى</li>
+          <li><span>—</span>نتابعك من اليوم الأول بعد الوصول</li>
+          <li><span>—</span>تسفير الرجوع — ليس معنا</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -253,22 +323,22 @@
         <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">هل أنت مؤهل؟</p>
         <p style="font-size:12px;color:#6B7280;">فلتر الأهلية والمعايير</p>
       </a>
-      <a href="/ar/systemlogik" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">منطق النظام</p>
-        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">كيف يعمل النظام؟</p>
-        <p style="font-size:12px;color:#6B7280;">المسارات، الخطوات، العوائق</p>
+      <a href="/ar/aerzte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">الأطباء</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">مسار الأطباء</p>
+        <p style="font-size:12px;color:#6B7280;">Approbation والمسار الطبي</p>
       </a>
-      <a href="/ar/voraussetzungen" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">المتطلبات</p>
-        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">ما الذي تحتاجه؟</p>
-        <p style="font-size:12px;color:#6B7280;">المؤهلات، اللغة، الوثائق</p>
+      <a href="/ar/pflege" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#93C5FD !important;font-weight:600;margin-bottom:4px;">التمريض</p>
+        <p style="font-size:14px;color:#FFFFFF !important;font-weight:600;margin-bottom:4px;">مسار التمريض</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6) !important;">الاعتراف واللغة</p>
       </a>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <p>Berlin Gateway — تقييم مهني لألمانيا</p>
+  <p>Berlin Gateway — من داخل النظام الألماني</p>
   <p style="margin-top:8px;">
     <a href="/ar/impressum">بصمة الموقع</a>
     <a href="/ar/datenschutz">خصوصية البيانات</a>

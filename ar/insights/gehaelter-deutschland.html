@@ -2,194 +2,358 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <title>الرواتب في ألمانيا 2026: متوسط الرواتب للكفاءات — Berlin Gateway</title>
-  <meta name="description" content="اكتشف متوسط الرواتب في ألمانيا حسب القطاع والمؤهل. فرص للكفاءات الدولية." />
+  <title>الرواتب في ألمانيا 2026 | متوسط الأجور للكفاءات العربية</title>
+  <meta name="description" content="دليل الرواتب في ألمانيا لعام 2026. اكتشف متوسط الأجور في تكنولوجيا المعلومات، الهندسة، والتمريض. كيف تفاوض على راتبك وتفهم الضرائب الألمانية." />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="canonical" href="https://berlingateway.de/ar/insights/gehaelter-deutschland" />
+  
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/app.css" />
+
+  <style>
+    :root {
+      --primary-blue: #0B3B8C;
+      --accent-blue: #3b82f6;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+    }
+
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Hero Compact Design */
+    .hero-compact {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 100px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-compact .badge {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .hero-compact h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .hero-compact p {
+      font-size: clamp(18px, 2vw, 20px);
+      max-width: 800px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    /* Content Layout */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .salary-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .salary-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .salary-card .icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .salary-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary-blue);
+    }
+
+    .salary-card .amount {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .salary-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    /* Steps Section */
+    .factors-box {
+      background: var(--bg-light);
+      border-radius: 24px;
+      padding: 40px;
+      margin: 60px 0;
+    }
+
+    .factor-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .factor-number {
+      background: var(--primary-blue);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin: 80px 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 24px 0;
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--primary-blue);
+    }
+
+    /* CTA Button */
+    .btn-primary {
+      display: inline-block;
+      background: white;
+      color: var(--primary-blue);
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #f1f5f9;
+      transform: scale(1.02);
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "الرواتب في ألمانيا 2026: دليل الكفاءات العربية",
+    "description": "دليل شامل حول متوسط الرواتب في ألمانيا لعام 2026، يشمل قطاعات الـ IT، الهندسة، والتمريض.",
+    "author": {
+      "@type": "Organization",
+      "name": "Berlin Gateway"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Berlin Gateway",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://berlingateway.de/assets/img/logo.png"
+      }
+    },
+    "datePublished": "2026-05-19",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://berlingateway.de/ar/insights/gehaelter-deutschland"
+    }
+  }
+  </script>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
+<!-- TOP BAND -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
+            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+        </div>
         <div class="top-band__right">
             <a href="/de/insights/gehaelter-deutschland/" class="lang-switch">Deutsch</a>
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+            <span class="status-badge">تحديثات 2026</span>
         </div>
     </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- HEADER -->
 <header class="header">
     <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
+        <a href="/ar/" class="brand">Berlin Gateway</a>
         <nav class="nav">
-            <a href="/ar/chancenkarte/" class="nav-link ">بطاقة الفرص</a>
-            <a href="/ar/assessment/" class="nav-link ">حاسبة النقاط</a>
-            <a href="/ar/systemlogik/" class="nav-link ">منطق النظام</a>
-            <a href="/ar/monitor/" class="nav-link ">المرصد</a>
-            <a href="/ar/insights/" class="nav-link ">الرؤى</a>
+            <a href="/ar/العمل-في-ألمانيا" class="nav-link">العمل</a>
+            <a href="/ar/تأشيرة-ألمانيا" class="nav-link">التأشيرة</a>
+            <a href="/ar/assessment" class="nav-link">التقييم</a>
+            <a href="/ar/monitor" class="nav-link">المرصد</a>
         </nav>
     </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero-compact">
+        <div class="container">
+            <span class="badge">سوق العمل الألماني – رؤى 2026</span>
+            <h1>الرواتب في ألمانيا:<br>كم تحتاج فعلياً للعيش بكرامة؟</h1>
+            <p>فهم هيكل الأجور هو الخطوة الأولى للتفاوض الناجح. اكتشف متوسط الرواتب في قطاعك وما يتبقى لك بعد الضرائب.</p>
+            <a href="/ar/assessment" class="btn-primary">احسب فرصك المهنية ←</a>
+        </div>
+    </section>
+
+    <div class="container" style="padding: 60px 20px;">
+        
+        <!-- SALARY CARDS -->
+        <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 40px; text-align: center;">متوسط الرواتب السنوية (إجمالي)</h2>
+        
+        <div class="content-grid">
+            <div class="salary-card">
+                <div class="icon">💻</div>
+                <h3>تكنولوجيا المعلومات (IT)</h3>
+                <span class="amount">€55,000 – €85,000</span>
+                <p>يشمل مطوري البرمجيات، مهندسي البيانات، وخبراء الأمن السيبراني. الخبرة في الذكاء الاصطناعي ترفع الراتب بنسبة 20%.</p>
+            </div>
+            
+            <div class="salary-card">
+                <div class="icon">⚙️</div>
+                <h3>الهندسة</h3>
+                <span class="amount">€58,000 – €82,000</span>
+                <p>المهندسون الميكانيكيون والكهربائيون ومهندسو الطاقة المتجددة هم الأكثر طلباً في عام 2026.</p>
+            </div>
+            
+            <div class="salary-card">
+                <div class="icon">🏥</div>
+                <h3>التمريض والرعاية</h3>
+                <span class="amount">€38,000 – €52,000</span>
+                <p>الرواتب تحسنت بشكل كبير مع بدلات المناوبات الليلية والعمل في العطلات.</p>
+            </div>
+            
+            <div class="salary-card">
+                <div class="icon">🏗️</div>
+                <h3>الحرف والتقنيات</h3>
+                <span class="amount">€42,000 – €62,000</span>
+                <p>الكهربائيون، الفنيون، وخبراء التدفئة يكسبون رواتب تنافسية جداً بسبب نقص العمالة.</p>
+            </div>
+        </div>
+
+        <!-- FACTORS SECTION -->
+        <div class="factors-box">
+            <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 32px;">عوامل تحدد راتبك في ألمانيا</h2>
+            
+            <div class="factor-item">
+                <div class="factor-number">1</div>
+                <div>
+                    <h4 style="font-weight: 700; margin-bottom: 4px;">الموقع الجغرافي</h4>
+                    <p style="color: var(--text-muted);">الرواتب في الجنوب (ميونخ، شتوتغارت) أعلى بـ 15%، لكن تكاليف المعيشة هناك أغلى أيضاً.</p>
+                </div>
+            </div>
+            
+            <div class="factor-item">
+                <div class="factor-number">2</div>
+                <div>
+                    <h4 style="font-weight: 700; margin-bottom: 4px;">حجم الشركة</h4>
+                    <p style="color: var(--text-muted);">الشركات الكبرى (DAX) تدفع رواتب أعلى ومزايا إضافية مقارنة بالشركات المتوسطة.</p>
+                </div>
+            </div>
+            
+            <div class="factor-item">
+                <div class="factor-number">3</div>
+                <div>
+                    <h4 style="font-weight: 700; margin-bottom: 4px;">اللغة الألمانية</h4>
+                    <p style="color: var(--text-muted);">إتقان اللغة (مستوى B2/C1) يفتح لك أبواب الوظائف القيادية والرواتب الأعلى.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+            <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 40px; text-align: center;">أسئلة شائعة حول الأجور</h2>
+            
+            <div class="faq-item">
+                <h3>ما هو الفرق بين الراتب الإجمالي (Brutto) والصافي (Netto)؟</h3>
+                <p>في ألمانيا، يتم خصم الضرائب والتأمينات الاجتماعية (الصحي، التقاعد، البطالة) من الراتب الإجمالي. عادة ما يتبقى لك بين 60% إلى 70% من الراتب كصافي في حسابك البنكي.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>هل الراتب يكفي لعائلة؟</h3>
+                <p>نعم، متوسط راتب مهندس أو مبرمج (60 ألف يورو) يكفي لعائلة متوسطة للعيش بمستوى جيد، مع الاستفادة من معونة الأطفال (Kindergeld) التي تمنحها الحكومة.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>كيف أفاوض على راتبي؟</h3>
+                <p>الألمان يقدرون الأرقام والوقائع. ابحث عن متوسط الرواتب في موقعك وقطاعك، وقدم حججاً مبنية على مهاراتك التقنية وخبراتك السابقة.</p>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section style="background: var(--primary-blue); border-radius: 24px; padding: 60px 40px; text-align: center; color: white;">
+            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">هل مؤهلاتك تستحق راتباً ألمانياً؟</h2>
+            <p style="font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                قم بإجراء التقييم الأولي الآن وسنقوم بمراجعة ملفك وتحديد فرصك في الحصول على عقد عمل براتب مجزي.
+            </p>
+            <a href="/ar/assessment" class="btn-primary" style="background: white; color: var(--primary-blue);">ابدأ التقييم المجاني الآن</a>
+        </section>
     </div>
-</nav>
-
-<main class="container" style="padding: 80px 20px;">
-  <article style="max-width: 900px; margin: 0 auto;">
-    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">رؤى السوق</p>
-    <h1 class="h1" style="font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: #000; margin-bottom: 24px;">الرواتب في ألمانيا 2026: متوسط الرواتب للكفاءات</h1>
-    
-    <p style="font-size: 18px; line-height: 1.6; color: #4B5563; margin-bottom: 40px;">
-      أحد أهم المعايير عند اتخاذ قرار الذهاب للعمل بالخارج هو السؤال: "كم سأكسب هناك؟" توفر ألمانيا ليس فقط وظائف آمنة وظروف عمل جيدة، بل أيضاً رواتب جذابة. مع سوق عمل مستقر واتفاقيات تجارية قوية، تعتبر ألمانيا من بين الدول ذات الرواتب الأعلى في أوروبا.
-    </p>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">متوسط الرواتب حسب القطاع</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px;">
-      تختلف الرواتب حسب القطاع والمنطقة والخبرة. إليك متوسط الرواتب في أكثر القطاعات طلباً:
-    </p>
-
-    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px;">
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">تكنولوجيا المعلومات وتطوير البرمجيات</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>متوسط الراتب: 50,000 – 80,000 يورو سنوياً</strong><br/>
-          يكسب مطورو البرمجيات في ألمانيا رواتب عالية جداً. يبدأ المطورون الجدد غالباً بـ 45,000 يورو، بينما يمكن لكبار المطورين والقادة التقنيين كسب 80,000 إلى 120,000 يورو. في برلين وميونخ، الرواتب غالباً ما تكون أعلى قليلاً. بالإضافة إلى الراتب الأساسي، يحصل العديد من محترفي تكنولوجيا المعلومات على مكافآت وخيارات أسهم ومزايا إضافية أخرى.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">الهندسة</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>متوسط الراتب: 55,000 – 85,000 يورو سنوياً</strong><br/>
-          المهندسون مطلوبون جداً في ألمانيا ويكسبون رواتب جيدة جداً. يكسب مهندس الميكانيكا ذو الخبرة حوالي 60,000 إلى 85,000 يورو. المهندسون الكهربائيون ومهندسو العمليات في نطاقات مماثلة. مع مسؤولية القيادة، يمكن للمهندسين كسب 100,000 يورو وأكثر.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">التمريض والرعاية الصحية</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>متوسط الراتب: 35,000 – 50,000 يورو سنوياً</strong><br/>
-          يكسب الممرضون والعاملون في رعاية المسنين أقل من متخصصي تكنولوجيا المعلومات، لكن الراتب مستقر وغالباً ما يتم تعزيزه ببدلات المناوبات. تكسب الممرضة ذات الخبرة حوالي 40,000 إلى 50,000 يورو. بالإضافة إلى ذلك، هناك بدلات للمناوبات الليلية والعمل في عطلات نهاية الأسبوع. يوفر قطاع التمريض أيضاً فرصاً جيدة للترقي.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">الحرف اليدوية والتكنولوجيا</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>متوسط الراتب: 40,000 – 60,000 يورو سنوياً</strong><br/>
-          يكسب الحرفيون مثل الكهربائيين والسباكين والنجارين رواتب صلبة. يكسب الكهربائي ذو الخبرة حوالي 45,000 إلى 60,000 يورو. يمكن للعديد من الحرفيين زيادة دخلهم بشكل كبير من خلال العمل الحر أو امتحانات المعلم (Meister).
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">اللوجستيات والنقل</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>متوسط الراتب: 35,000 – 65,000 يورو سنوياً</strong><br/>
-          يختلف راتب متخصصي اللوجستيات ومديري سلسلة التوريد حسب المؤهل والمسؤولية. يكسب مدير المستودع حوالي 40,000 إلى 50,000 يورو، بينما يمكن لمدير سلسلة التوريد كسب 60,000 إلى 80,000 يورو.
-        </p>
-      </div>
-    </div>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">العوامل التي تؤثر على الراتب</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
-      يعتمد الراتب على عدة عوامل:
-    </p>
-
-    <div style="margin-bottom: 32px;">
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>الخبرة المهنية:</strong> كلما زادت خبرتك، زاد راتبك. يكسب المطور المبتدئ أقل من المطور الخبير. عادة ما يرتفع الراتب مع كل سنة خبرة.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>المؤهلات:</strong> الشهادة من جامعة أو مدرسة فنية معترف بها تزيد من الراتب. المهندس الحاصل على دبلوم يكسب أكثر من الفني.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>المنطقة:</strong> الرواتب في ميونخ وهامبورغ غالباً ما تكون أعلى منها في المدن الصغيرة. برلين حل وسط – رواتب جيدة، ولكن ليست عالية كما في ميونخ.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>حجم الشركة:</strong> الشركات الكبرى غالباً ما تدفع أكثر من الشركات المتوسطة الصغيرة. ولكن حتى الشركات الصغيرة يمكن أن تقدم رواتب جذابة ومزايا إضافية.
-      </p>
-    </div>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">كيف يمكن للكفاءات الدولية الاستفادة</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
-      تفتح بطاقة الفرص الأبواب أمام هذه الرواتب. مع بطاقة الفرص، يمكنك:
-    </p>
-
-    <ul style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px; padding-right: 20px;">
-      <li style="margin-bottom: 8px;">التعرف على ألمانيا والبحث عن وظيفة</li>
-      <li style="margin-bottom: 8px;">الاعتراف بمؤهلاتك</li>
-      <li style="margin-bottom: 8px;">بناء شبكات تواصل</li>
-      <li style="margin-bottom: 8px;">التفاوض على عقود عمل برواتب جذابة</li>
-    </ul>
-
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 40px;">
-      يفيد العديد من المتخصصين الدوليين بأنهم يكسبون في ألمانيا أكثر مما يكسبون في بلدانهم الأصلية. بالإضافة إلى الراتب، توفر ألمانيا أيضاً مزايا اجتماعية جيدة مثل التأمين الصحي وتأمين التقاعد والإجازات المدفوعة.
-    </p>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">كيف تتحقق من فرصك؟</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px;">
-      الخطوة الأولى هي تقييم صادق لمؤهلاتك وخبراتك. استخدم أداة التقييم المجانية الخاصة بنا لمعرفة مدى جودة فرصك في الحصول على بطاقة الفرص.
-    </p>
-
-    <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 48px;">
-      <strong>معلومات إضافية:</strong> تعرف على المزيد حول <a href="/ar/insights/chancenkarte-voraussetzungen/" style="color: #0B3B8C; text-decoration: underline;">شروط بطاقة الفرص</a>، <a href="/ar/insights/chancenkarte-punkte/" style="color: #0B3B8C; text-decoration: underline;">نظام النقاط</a>، و<a href="/ar/insights/gefragte-berufe/" style="color: #0B3B8C; text-decoration: underline;">المهن المطلوبة في ألمانيا</a>.
-    </p>
-  </article>
-
-  <!-- BOTTOM CTA -->
-  <section class="section" style="text-align: center; padding: 60px 0; border-top: 1px solid #E5E7EB;">
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 12px;">ابدأ التقييم المهني الأولي</h2>
-    <p style="font-size: 18px; color: #4B5563; margin-bottom: 32px;">أرسل ملفك وسنحدد المسار المناسب لك نحو ألمانيا</p>
-    <div style="margin-bottom: 24px;">
-      <a href="/ar/assessment/" style="display: inline-block; padding: 18px 40px; background-color: #0B3B8C; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 18px; transition: background-color 0.2s;">ابدأ التقييم الآن</a>
-    </div>
-  </section>
 </main>
 
-<!-- FOOTER (BLACK) -->
 <footer class="footer">
     <div class="container">
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
+                <h4 style="color: white; margin-bottom: 20px;">Berlin Gateway</h4>
+                <p style="font-size: 14px; opacity: 0.7;">بوابتك الموثوقة للعمل والدراسة في ألمانيا. نحن نجمع بين التكنولوجيا والخبرة القانونية.</p>
             </div>
             <div>
-                <h4>التنقل</h4>
-                <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-                <a href="/ar/assessment/">حاسبة النقاط</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المرصد</a>
-                <a href="/ar/insights/">الرؤى</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum/">بيان قانوني</a>
-                <a href="/ar/datenschutz/">سياسة الخصوصية</a>
-            </div>
-            <div>
-                <h4>اتصل</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
+                <h4 style="color: white; margin-bottom: 20px;">روابط سريعة</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="/ar/العمل-في-ألمانيا" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">العمل في ألمانيا</a></li>
+                    <li><a href="/ar/تأشيرة-ألمانيا" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">أنواع التأشيرات</a></li>
+                    <li><a href="/ar/assessment" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">تقييم النقاط</a></li>
+                </ul>
             </div>
         </div>
         <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">

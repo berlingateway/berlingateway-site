@@ -2,204 +2,304 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <title>المهن المطلوبة في ألمانيا 2026 — Berlin Gateway</title>
-  <meta name="description" content="اكتشف أكثر المهن والقطاعات طلباً في ألمانيا. فرص للكفاءات الدولية." />
+  <title>المهن المطلوبة في ألمانيا 2026 | قائمة الوظائف الأكثر طلباً</title>
+  <meta name="description" content="تعرف على أكثر المهن طلباً في ألمانيا لعام 2026. فرص عمل في تكنولوجيا المعلومات، الهندسة، الرعاية الصحية، والحرف اليدوية للكفاءات الدولية." />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="canonical" href="https://berlingateway.de/ar/insights/gefragte-berufe" />
+  
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/app.css" />
+
+  <style>
+    :root {
+      --primary-blue: #0B3B8C;
+      --accent-blue: #3b82f6;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+    }
+
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Hero Compact Design */
+    .hero-compact {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 100px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-compact .badge {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .hero-compact h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .hero-compact p {
+      font-size: clamp(18px, 2vw, 20px);
+      max-width: 800px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    /* Content Layout */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .job-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-card .icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .job-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--primary-blue);
+    }
+
+    .job-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .job-card .salary-tag {
+      display: inline-block;
+      background: var(--bg-light);
+      color: var(--primary-blue);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: var(--bg-light);
+      border-radius: 24px;
+      padding: 40px;
+      margin: 60px 0;
+      border-right: 6px solid var(--accent-blue);
+    }
+
+    /* CTA Button */
+    .btn-primary {
+      display: inline-block;
+      background: white;
+      color: var(--primary-blue);
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #f1f5f9;
+      transform: scale(1.02);
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "المهن المطلوبة في ألمانيا 2026: دليل الكفاءات الدولية",
+    "description": "قائمة شاملة بأكثر المهن طلباً في ألمانيا لعام 2026، تشمل تكنولوجيا المعلومات، الهندسة، والتمريض.",
+    "author": {
+      "@type": "Organization",
+      "name": "Berlin Gateway"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Berlin Gateway",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://berlingateway.de/assets/img/logo.png"
+      }
+    },
+    "datePublished": "2026-05-19",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://berlingateway.de/ar/insights/gefragte-berufe"
+    }
+  }
+  </script>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
+<!-- TOP BAND -->
 <div class="top-band">
     <div class="top-band__inner">
         <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
+            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+        </div>
         <div class="top-band__right">
             <a href="/de/insights/gefragte-berufe/" class="lang-switch">Deutsch</a>
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
+            <span class="status-badge">تحديثات 2026</span>
         </div>
     </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- HEADER -->
 <header class="header">
     <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
+        <a href="/ar/" class="brand">Berlin Gateway</a>
         <nav class="nav">
-            <a href="/ar/chancenkarte/" class="nav-link ">بطاقة الفرص</a>
-            <a href="/ar/assessment/" class="nav-link ">حاسبة النقاط</a>
-            <a href="/ar/systemlogik/" class="nav-link ">منطق النظام</a>
-            <a href="/ar/monitor/" class="nav-link ">المرصد</a>
-            <a href="/ar/insights/" class="nav-link ">الرؤى</a>
+            <a href="/ar/العمل-في-ألمانيا" class="nav-link">العمل</a>
+            <a href="/ar/تأشيرة-ألمانيا" class="nav-link">التأشيرة</a>
+            <a href="/ar/assessment" class="nav-link">التقييم</a>
+            <a href="/ar/monitor" class="nav-link">المرصد</a>
         </nav>
     </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل</a>
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero-compact">
+        <div class="container">
+            <span class="badge">سوق العمل الألماني – تحليل 2026</span>
+            <h1>المهن المطلوبة في ألمانيا:<br>أين توجد أفضل فرصك؟</h1>
+            <p>تواجه ألمانيا نقصاً في العمالة الماهرة يتجاوز 400,000 وظيفة سنوياً. اكتشف القطاعات التي تبحث عن خبراتك الآن.</p>
+            <a href="/ar/assessment" class="btn-primary">تحقق من فرصك المهنية ←</a>
+        </div>
+    </section>
+
+    <div class="container" style="padding: 60px 20px;">
+        
+        <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 40px; text-align: center;">أهم 5 قطاعات تبحث عن كفاءات</h2>
+        
+        <div class="content-grid">
+            <div class="job-card">
+                <div class="icon">💻</div>
+                <h3>تكنولوجيا المعلومات (IT)</h3>
+                <p>مطلوب مطورو برمجيات، خبراء أمن سيبراني، ومهندسو سحابة. الشركات الألمانية تتبنى التحول الرقمي بسرعة فائقة.</p>
+                <span class="salary-tag">متوسط الدخل: €55k - €85k</span>
+            </div>
+            
+            <div class="job-card">
+                <div class="icon">⚙️</div>
+                <h3>الهندسة والتقنية</h3>
+                <p>المهندسون الميكانيكيون والكهربائيون، خاصة في مجالات الطاقة المتجددة وصناعة السيارات الكهربائية.</p>
+                <span class="salary-tag">متوسط الدخل: €58k - €82k</span>
+            </div>
+            
+            <div class="job-card">
+                <div class="icon">🏥</div>
+                <h3>الرعاية الصحية</h3>
+                <p>نقص حاد في الممرضين، الأطباء، والمتخصصين في رعاية المسنين. إجراءات الاعتراف المهني أصبحت أسرع.</p>
+                <span class="salary-tag">متوسط الدخل: €38k - €55k</span>
+            </div>
+            
+            <div class="job-card">
+                <div class="icon">🏗️</div>
+                <h3>الحرف الماهرة</h3>
+                <p>الكهربائيون، الفنيون، وخبراء التدفئة والتبريد. الحرف اليدوية في ألمانيا مهن محترمة وذات دخل ممتاز.</p>
+                <span class="salary-tag">متوسط الدخل: €40k - €60k</span>
+            </div>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="info-box">
+            <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 20px;">لماذا هذا هو الوقت المثالي؟</h2>
+            <p style="margin-bottom: 16px;">
+                ألمانيا قامت بتحديث قوانين الهجرة (قانون FEG) لتسهيل دخول الكفاءات. لم يعد عقد العمل المسبق شرطاً إلزامياً للدخول إذا كنت تمتلك <strong>بطاقة الفرص (Chancenkarte)</strong>.
+            </p>
+            <p>
+                الشركات الألمانية أصبحت أكثر انفتاحاً على توظيف الكفاءات التي تتحدث الإنجليزية، مع توفير دورات لغة ألمانية مدمجة في العمل.
+            </p>
+        </div>
+
+        <!-- STEPS SECTION -->
+        <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 32px;">كيف تستفيد من هذا الطلب؟</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 60px;">
+            <div style="padding: 24px; background: white; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="color: var(--primary-blue); margin-bottom: 12px;">1. الاعتراف المهني</h4>
+                <p style="font-size: 14px; color: var(--text-muted);">تأكد من أن شهادتك معترف بها في ألمانيا لزيادة فرصك في الحصول على راتب أعلى.</p>
+            </div>
+            <div style="padding: 24px; background: white; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="color: var(--primary-blue); margin-bottom: 12px;">2. اللغة الألمانية</h4>
+                <p style="font-size: 14px; color: var(--text-muted);">حتى لو كان عملك بالإنجليزية، تعلم الألمانية (مستوى B1/B2) يضاعف فرصك الوظيفية.</p>
+            </div>
+            <div style="padding: 24px; background: white; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h4 style="color: var(--primary-blue); margin-bottom: 12px;">3. بطاقة الفرص</h4>
+                <p style="font-size: 14px; color: var(--text-muted);">استخدم نظام النقاط للدخول إلى ألمانيا والبحث عن عمل مباشرة من الداخل.</p>
+            </div>
+        </div>
+
+        <!-- FINAL CTA -->
+        <section style="background: var(--primary-blue); border-radius: 24px; padding: 60px 40px; text-align: center; color: white;">
+            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">هل مهنتك مطلوبة في ألمانيا؟</h2>
+            <p style="font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                لا تضيع الوقت في التخمين. قم بإجراء التقييم المهني الآن وسنخبرك بمدى طلب مهنتك في السوق الألماني.
+            </p>
+            <a href="/ar/assessment" class="btn-primary" style="background: white; color: var(--primary-blue);">ابدأ التقييم المهني المجاني</a>
+        </section>
     </div>
-</nav>
-
-<main class="container" style="padding: 80px 20px;">
-  <article style="max-width: 900px; margin: 0 auto;">
-    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">سوق العمل</p>
-    <h1 class="h1" style="font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: #000; margin-bottom: 24px;">المهن المطلوبة في ألمانيا 2026</h1>
-    
-    <p style="font-size: 18px; line-height: 1.6; color: #4B5563; margin-bottom: 40px;">
-      تواجه ألمانيا تحدياً غير مسبوق: سوق العمل يبحث بشدة عن كفاءات مهنية مؤهلة. مع أكثر من 400 ألف وظيفة شاغرة وشيخوخة السكان، الطلب على المواهب الدولية أكبر من أي وقت مضى. تم تطوير بطاقة الفرص بالضبط لهذا الوضع – لفتح الطريق أمام أفضل العقول من جميع أنحاء العالم للعمل في ألمانيا.
-    </p>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">القطاعات ذات الطلب الأعلى</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px;">
-      ما هي المهن الأكثر طلباً؟ إليك القطاعات الخمسة التي تبحث فيها ألمانيا عن معظم الكفاءات:
-    </p>
-
-    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px;">
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">1. تكنولوجيا المعلومات وتطوير البرمجيات</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          قطاع تكنولوجيا المعلومات هو محرك النمو في ألمانيا. مطورو البرمجيات ومسؤولو قواعد البيانات والمهندسون المعماريون للسحابة وخبراء أمان تكنولوجيا المعلومات مطلوبون بشدة. بمتوسط رواتب بين 50,000 و 80,000 يورو سنوياً، يوفر هذا القطاع فرصاً ممتازة للمواهب الدولية. تعد بطاقة الفرص جذابة بشكل خاص لمتخصصي تكنولوجيا المعلومات، حيث تبحث العديد من الشركات بشكل محدد عن مرشحين دوليين.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">2. الهندسة</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          من الهندسة الميكانيكية إلى الهندسة الكهربائية إلى هندسة العمليات – المهندسون هم العمود الفقري للصناعة الألمانية. نقص المهندسين حاد، خاصة في الولايات الاتحادية الجديدة. تتراوح الرواتب المتوسطة بين 55,000 و 85,000 يورو سنوياً. المهندسون الدوليون الذين لديهم مؤهلات معترف بها لديهم فرص ممتازة في سوق العمل الألماني.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">3. التمريض والرعاية الصحية</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          نقص الممرضات درامي. الممرضات والعاملون في رعاية المسنين والمتخصصون الطبيون مطلوبون في كل مكان. توفر ألمانيا للعاملين في الرعاية الصحية وظائف مستقرة وفوائد اجتماعية جيدة ورواتب متوسطة من 35,000 إلى 50,000 يورو سنوياً. تفتح بطاقة الفرص الأبواب أمام الكوادر التمريضية المؤهلة من الخارج.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">4. الحرف اليدوية والتكنولوجيا</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          الكهربائيون والسباكون والنجارون وغيرهم من الحرفيين نادرون. قطاع الحرف اليدوية هو صاحب عمل مستقر مع فرص كسب جيدة (40,000 إلى 60,000 يورو سنوياً). تبحث العديد من الشركات الحرفية بشكل محدد عن كفاءات دولية مستعدة للعمل في ألمانيا.
-        </p>
-      </div>
-
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-right: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">5. اللوجستيات والنقل</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          مع ازدهار التجارة الإلكترونية وسلاسل التوريد العالمية، زاد الطلب على متخصصي اللوجستيات. مديرو المستودعات ومديرو سلسلة التوريد والسائقون مطلوبون. تتراوح الرواتب بين 35,000 و 65,000 يورو سنوياً، حسب المؤهل والخبرة.
-        </p>
-      </div>
-    </div>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">لماذا تبحث ألمانيا عن كفاءات؟</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
-      أسباب نقص الكفاءات هيكلية:
-    </p>
-
-    <div style="margin-bottom: 32px;">
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>التغيير الديموغرافي:</strong> المجتمع الألماني يشيخ. يتقاعد عدد أكبر من الناس مما يدخل من الشباب إلى سوق العمل. هذا يخلق فجوات يجب سدها من خلال المواهب الدولية.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>النمو الاقتصادي:</strong> تظل ألمانيا واحدة من أقوى الاقتصادات في أوروبا. تتوسع الشركات وتحتاج إلى المزيد من الموظفين.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>التحول الرقمي:</strong> يخلق التحول الرقمي مهناً جديدة ويزيد الطلب على الكفاءات التقنية في جميع أنحاء العالم.
-      </p>
-    </div>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">فرص المتقدمين الدوليين</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
-      إذا كنت كفاءة مهنية مؤهلة بمهارات مطلوبة، فإن ألمانيا لديها الكثير لتقدمه:
-    </p>
-
-    <div style="margin-bottom: 32px;">
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>بطاقة الفرص:</strong> مع بطاقة الفرص، يمكنك التعرف على ألمانيا والبحث عن وظيفة دون أن يكون لديك عقد عمل مسبق. يمنحك هذا المرونة والوقت للعثور على الشركة المناسبة.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>الاعتراف بالشهادات:</strong> لدى ألمانيا إجراءات رسمية للاعتراف بالمؤهلات الأجنبية. العديد من المهن منظمة، ولكن طرق الاعتراف محددة بوضوح.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>ظروف عمل جيدة:</strong> تتمتع ألمانيا بحقوق قوية للعمال، وحد أدنى للأجور، ومزايا اجتماعية شاملة. غالباً ما تكون عقود العمل غير محددة المدة.
-      </p>
-
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
-        <strong>فرص ترقي:</strong> توفر ألمانيا فرصاً للترقي والتدريب المستمر. تستثمر العديد من الشركات في تطوير موظفيها.
-      </p>
-    </div>
-
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">كيف تتحقق من فرصك؟</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
-      الخطوة الأولى هي تقييم صادق لمؤهلاتك. تقيمك بطاقة الفرص بناءً على:
-    </p>
-
-    <ul style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px; padding-right: 20px;">
-      <li style="margin-bottom: 8px;">شهادتك (معترف بها أو معترف بها جزئياً)</li>
-      <li style="margin-bottom: 8px;">خبرتك المهنية</li>
-      <li style="margin-bottom: 8px;">مهاراتك اللغوية (الألمانية والإنجليزية)</li>
-      <li style="margin-bottom: 8px;">عمرك</li>
-      <li style="margin-bottom: 8px;">صلاتك بألمانيا</li>
-    </ul>
-
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px;">
-      بـ 6 نقاط على الأقل يمكنك التقدم للحصول على بطاقة الفرص. ولكن كم عدد نقاطك بالضبط؟ استخدم أداة التقييم المجانية الخاصة بنا لمعرفة مدى جودة فرصك.
-    </p>
-
-    <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 48px;">
-      <strong>معلومات إضافية:</strong> تعرف على المزيد حول <a href="/ar/insights/chancenkarte-voraussetzungen/" style="color: #0B3B8C; text-decoration: underline;">شروط بطاقة الفرص</a> وكيف <a href="/ar/insights/chancenkarte-punkte/" style="color: #0B3B8C; text-decoration: underline;">يعمل نظام النقاط</a>.
-    </p>
-  </article>
-
-  <!-- BOTTOM CTA -->
-  <section class="section" style="text-align: center; padding: 60px 0; border-top: 1px solid #E5E7EB;">
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 12px;">ابدأ التقييم المهني الأولي</h2>
-    <p style="font-size: 18px; color: #4B5563; margin-bottom: 32px;">أرسل ملفك وسنحدد المسار المناسب لك نحو ألمانيا</p>
-    <div style="margin-bottom: 24px;">
-      <a href="/ar/assessment/" style="display: inline-block; padding: 18px 40px; background-color: #0B3B8C; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 18px; transition: background-color 0.2s;">ابدأ التقييم الآن</a>
-    </div>
-  </section>
 </main>
 
-<!-- FOOTER (BLACK) -->
 <footer class="footer">
     <div class="container">
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
             <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم احترافي ضمن نظام العمل الألماني.</p>
+                <h4 style="color: white; margin-bottom: 20px;">Berlin Gateway</h4>
+                <p style="font-size: 14px; opacity: 0.7;">نحن نساعد الكفاءات الدولية على بناء مستقبل مهني ناجح في ألمانيا من خلال حلول تقنية وقانونية مبتكرة.</p>
             </div>
             <div>
-                <h4>التنقل</h4>
-                <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-                <a href="/ar/assessment/">حاسبة النقاط</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المرصد</a>
-                <a href="/ar/insights/">الرؤى</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum/">بيان قانوني</a>
-                <a href="/ar/datenschutz/">سياسة الخصوصية</a>
-            </div>
-            <div>
-                <h4>اتصل</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
+                <h4 style="color: white; margin-bottom: 20px;">استكشف المزيد</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="/ar/العمل-في-ألمانيا" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">دليل العمل في ألمانيا</a></li>
+                    <li><a href="/ar/insights/gehaelter-deutschland" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">الرواتب في ألمانيا</a></li>
+                    <li><a href="/ar/assessment" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">تقييم النقاط</a></li>
+                </ul>
             </div>
         </div>
         <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">

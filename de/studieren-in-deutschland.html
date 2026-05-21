@@ -1,359 +1,231 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <title>Studieren in Deutschland 2026 | Guide für internationale Studierende</title>
-  <meta name="description" content="Alles über das Studium in Deutschland 2026: Universitäten, Visum, Kosten und Karrierechancen. Der ultimative Guide für internationale Studenten." />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="canonical" href="https://berlingateway.de/de/studieren-in-deutschland" />
-  
-  <!-- Fonts & CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studieren in Deutschland 2026 | Berlin Gateway — Experten vor Ort</title>
+  <meta name="description" content="Ihr Weg zum Studium in Deutschland. Zulassung, Finanzierung, Sperrkonto und Visum — unser strukturierter Guide für internationale Studierende.">
+  <link rel="canonical" href="https://berlingateway.de/de/studieren-in-deutschland">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/study">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/app.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary-blue: #0B3B8C;
-      --accent-blue: #3b82f6;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --bg-light: #f8fafc;
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:#0D1117;background:#FFFFFF;line-height:1.6}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:0 !important}
+    
+    .hero{background:#0B1F3A;padding:80px 24px 64px;text-align:center;color:#FFFFFF}
+    .hero-label{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px}
+    .hero h1{font-size:clamp(28px,5vw,48px);font-weight:700;line-height:1.2;max-width:800px;margin:0 auto 24px}
+    .hero p{color:rgba(255,255,255,0.65);font-size:18px;max-width:600px;margin:0 auto;font-weight:300}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+    .trust-strip{background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:20px 24px}
+    .trust-strip__inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500}
+    .trust-item span{color:#15803D;font-size:15px}
 
-    /* Hero Compact Design */
-    .hero-compact {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      padding: 100px 20px 60px;
-      text-align: center;
-      color: white;
-    }
+    .section{padding:80px 24px;max-width:1080px;margin:0 auto}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px;display:block}
+    .section h2{font-size:clamp(24px,4vw,32px);font-weight:700;margin-bottom:24px;color:#0D1117}
+    
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+    .card{background:#FFFFFF;border:1px solid #E5E7EB;border-radius:12px;padding:32px;transition:border-color 0.2s}
+    .card:hover{border-color:#0B3B8C}
+    .card h3{font-size:18px;font-weight:700;margin-bottom:12px;color:#0D1117}
+    .card p{font-size:15px;color:#4B5563;line-height:1.6}
 
-    .hero-compact .badge {
-      background: rgba(59, 130, 246, 0.2);
-      color: #60a5fa;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin:40px 0}
+    .step{text-align:center}
+    .step-num{width:40px;height:40px;background:#0B3B8C;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-weight:700}
+    .step h4{font-size:14px;font-weight:700;margin-bottom:8px}
+    .step p{font-size:12px;color:#6B7280;line-height:1.4}
 
-    .hero-compact h1 {
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 800;
-      margin-bottom: 24px;
-      line-height: 1.1;
-    }
+    .cta-box{background:#F8F9FA;border-radius:16px;padding:48px;text-align:center;margin-top:40px}
+    .cta-box h2{margin-bottom:16px}
+    .cta-box p{font-size:17px;color:#4B5563;margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+    .btn{display:inline-block;background:#0B1F3A;color:#FFFFFF;text-decoration:none;padding:16px 32px;border-radius:8px;font-weight:700;transition:opacity 0.2s}
+    .btn:hover{opacity:0.9}
 
-    .hero-compact p {
-      font-size: clamp(18px, 2vw, 20px);
-      max-width: 800px;
-      margin: 0 auto 32px;
-      opacity: 0.9;
-    }
+    .faq{margin-top:64px}
+    .faq-item{border-bottom:1px solid #E5E7EB;padding:24px 0;cursor:pointer}
+    .faq-question{font-weight:700;font-size:17px;display:flex;justify-content:space-between;align-items:center}
+    .faq-answer{margin-top:16px;color:#4B5563;display:none;font-size:15px}
+    .faq-item.active .faq-answer{display:block}
+    .faq-item.active .faq-toggle{transform:rotate(180deg)}
 
-    /* Content Layout */
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      margin: 40px 0;
-    }
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:64px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
 
-    @media (min-width: 768px) {
-      .content-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .info-card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 32px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .info-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-
-    .info-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: var(--primary-blue);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    /* Steps Section */
-    .steps-container {
-      background: var(--bg-light);
-      border-radius: 24px;
-      padding: 48px;
-      margin: 64px 0;
-    }
-
-    .step-item {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-
-    .step-number {
-      background: var(--primary-blue);
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    /* CTA Button */
-    .btn-primary {
-      display: inline-block;
-      background: white;
-      color: var(--primary-blue);
-      padding: 16px 32px;
-      border-radius: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    .btn-primary:hover {
-      background: #f1f5f9;
-      transform: scale(1.02);
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      margin: 80px 0;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #e2e8f0;
-      padding: 24px 0;
-    }
-
-    .faq-item h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: var(--primary-blue);
+    @media(max-width:768px){
+      .grid-3, .steps{grid-template-columns:1fr}
+      .header__inner{padding:0 16px}
+      .nav a:not(.nav-cta){display:none}
+      .step{text-align:left;display:flex;gap:16px;align-items:flex-start}
+      .step-num{margin:0}
     }
   </style>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Studieren in Deutschland 2026: Der ultimative Guide",
-    "description": "Ein umfassender Leitfaden für internationale Studierende über das Studium in Deutschland, inklusive Kosten, Visum und Voraussetzungen.",
-    "author": {
-      "@type": "Organization",
-      "name": "Berlin Gateway"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Berlin Gateway",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://berlingateway.de/assets/img/logo.png"
-      }
-    },
-    "datePublished": "2026-05-19",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://berlingateway.de/de/studieren-in-deutschland"
-    }
-  }
-  </script>
 </head>
 <body>
 
-<!-- TOP BAND -->
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-        </div>
-        <div class="top-band__right">
-            <a href="/ar/الدراسة-في-ألمانيا/" class="lang-switch">العربية</a>
-            <span class="status-badge">Update 2026</span>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/ar/study" class="lang-badge">العربية</a>
+      <span style="opacity:.5">Experten vor Ort</span>
     </div>
+  </div>
 </div>
 
-<!-- HEADER -->
 <header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">Berlin Gateway</a>
-        <nav class="nav">
-            <a href="/de/chancenkarte" class="nav-link">Chancenkarte</a>
-            <a href="/de/systemlogik" class="nav-link">Systemlogik</a>
-            <a href="/de/monitor" class="nav-link">Monitor</a>
-            <a href="/de/assessment" class="nav-link">Assessment</a>
-        </nav>
-    </div>
+  <div class="header__inner">
+    <a href="/de" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflegekraefte">Pflege</a>
+      <a href="/de/systemlogik">System</a>
+      <a href="/de/assessment" class="nav-cta">Assessment</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-    <!-- HERO SECTION -->
-    <section class="hero-compact">
-        <div class="container">
-            <span class="badge">Akademische Bildung – Deutschland 2026</span>
-            <h1>Studieren in Deutschland:<br>Weltklasse Bildung, fast kostenlos.</h1>
-            <p>Deutschland ist das drittbeliebteste Ziel für internationale Studierende. Erfahren Sie, wie Sie Ihren Traum vom Studium in Europa verwirklichen.</p>
-            <a href="/de/assessment" class="btn-primary">Chancen-Check starten ←</a>
-        </div>
-    </section>
+<section class="hero">
+  <div class="inner">
+    <span class="hero-label">Akademische Reise 2026</span>
+    <h1>Studium in Deutschland:<br>Ihre Zukunft beginnt hier.</h1>
+    <p>Exzellente Bildung, keine Studiengebühren an öffentlichen Unis und beste Karrierechancen. Wir zeigen Ihnen den strukturierten Weg zur Zulassung.</p>
+  </div>
+</section>
 
-    <div class="container" style="padding: 60px 20px;">
-        
-        <h2 style="font-size: 32px; font-weight: 800; color: #000; margin-bottom: 40px; text-align: center;">Warum Deutschland wählen?</h2>
-        
-        <div class="content-grid">
-            <div class="info-card">
-                <h3><span>🎓</span> Keine Studiengebühren</h3>
-                <p>An den meisten öffentlichen Universitäten zahlen Sie nur einen geringen Semesterbeitrag. Die Bildung ist staatlich finanziert.</p>
-            </div>
-            
-            <div class="info-card">
-                <h3><span>💼</span> Arbeitsrecht nach dem Studium</h3>
-                <p>Nach dem Abschluss dürfen Sie 18 Monate in Deutschland bleiben, um einen Job zu finden. Die Chancen auf Übernahme sind exzellent.</p>
-            </div>
-            
-            <div class="info-card">
-                <h3><span>🌍</span> Internationale Programme</h3>
-                <p>Immer mehr Studiengänge (besonders Master) werden komplett auf Englisch angeboten – ideal für internationale Bewerber.</p>
-            </div>
-            
-            <div class="info-card">
-                <h3><span>🔬</span> Spitzenforschung</h3>
-                <p>Deutschland investiert massiv in R&D. Sie lernen an modernen Einrichtungen mit direktem Draht zur Industrie.</p>
-            </div>
-        </div>
+<div class="trust-strip">
+  <div class="trust-strip__inner">
+    <div class="trust-item"><span>✓</span> Zulassungs-Check</div>
+    <div class="trust-item"><span>✓</span> Sperrkonto-Beratung</div>
+    <div class="trust-item"><span>✓</span> Visum-Strategie</div>
+    <div class="trust-item"><span>✓</span> Begleitung vor Ort</div>
+  </div>
+</div>
 
-        <!-- STEPS SECTION -->
-        <div class="steps-container">
-            <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 40px;">In 5 Schritten zum Studium</h2>
-            
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div>
-                    <h4 style="font-weight: 700; margin-bottom: 4px;">Programm wählen</h4>
-                    <p style="color: var(--text-muted); font-size: 15px;">Finden Sie den passenden Kurs über die DAAD-Datenbank oder unsere Beratung.</p>
-                </div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div>
-                    <h4 style="font-weight: 700; margin-bottom: 4px;">Zulassung prüfen</h4>
-                    <p style="color: var(--text-muted); font-size: 15px;">Wird Ihr Schulabschluss anerkannt? Prüfen Sie die HZB (Hochschulzugangsberechtigung).</p>
-                </div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div>
-                    <h4 style="font-weight: 700; margin-bottom: 4px;">Finanzierung sichern</h4>
-                    <p style="color: var(--text-muted); font-size: 15px;">Sie benötigen ein Sperrkonto (ca. 11.904 € pro Jahr) oder ein Stipendium für das Visum.</p>
-                </div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">4</div>
-                <div>
-                    <h4 style="font-weight: 700; margin-bottom: 4px;">Visum beantragen</h4>
-                    <p style="color: var(--text-muted); font-size: 15px;">Reichen Sie Ihren Zulassungsbescheid bei der deutschen Botschaft ein.</p>
-                </div>
-            </div>
-            
-            <div class="step-item">
-                <div class="step-number">5</div>
-                <div>
-                    <h4 style="font-weight: 700; margin-bottom: 4px;">Ankunft & Immatrikulation</h4>
-                    <p style="color: var(--text-muted); font-size: 15px;">Schreiben Sie sich ein, finden Sie eine Unterkunft und starten Sie Ihr Semester.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ SECTION -->
-        <section class="faq-section">
-            <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 40px; text-align: center;">Häufige Fragen</h2>
-            
-            <div class="faq-item">
-                <h3>Muss ich Deutsch sprechen?</h3>
-                <p>Für englischsprachige Masterprogramme reicht oft ein IELTS/TOEFL. Für Bachelor-Studiengänge ist meist ein C1-Niveau in Deutsch erforderlich.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Darf ich während des Studiums arbeiten?</h3>
-                <p>Ja, internationale Studierende dürfen 140 volle Tage oder 280 halbe Tage pro Jahr arbeiten. Das hilft massiv bei den Lebenshaltungskosten.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Wie hoch sind die monatlichen Kosten?</h3>
-                <p>Rechnen Sie mit etwa 950 € bis 1.100 € pro Monat für Miete, Essen, Versicherung und Freizeit – je nach Stadt.</p>
-            </div>
-        </section>
-
-        <!-- FINAL CTA -->
-        <section style="background: var(--primary-blue); border-radius: 24px; padding: 60px 40px; text-align: center; color: white;">
-            <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">Bereit für Ihre akademische Reise?</h2>
-            <p style="font-size: 18px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Lassen Sie uns Ihre Voraussetzungen prüfen und den besten Weg für Ihr Studium in Deutschland finden.
-            </p>
-            <a href="/de/assessment" class="btn-primary" style="background: white; color: var(--primary-blue);">Kostenloses Assessment starten</a>
-        </section>
+<main class="section">
+  <span class="section-label">Vorteile</span>
+  <h2>Warum in Deutschland studieren?</h2>
+  
+  <div class="grid-3">
+    <div class="card">
+      <h3>Weltklasse Bildung</h3>
+      <p>Deutsche Universitäten genießen weltweit einen exzellenten Ruf, besonders in den MINT-Fächern, Medizin und Wirtschaftswissenschaften.</p>
     </div>
+    <div class="card">
+      <h3>Keine Studiengebühren</h3>
+      <p>An den meisten öffentlichen Hochschulen zahlen Sie nur einen geringen Semesterbeitrag, keine hohen Studiengebühren.</p>
+    </div>
+    <div class="card">
+      <h3>Arbeitsmarkt-Einstieg</h3>
+      <p>Nach dem Studium dürfen Sie 18 Monate zur Jobsuche in Deutschland bleiben. Die Chancen auf eine Übernahme sind hervorragend.</p>
+    </div>
+  </div>
+
+  <span class="section-label">Der Prozess</span>
+  <h2>Ihr Weg zur Immatrikulation</h2>
+  
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Uni-Wahl</h4>
+      <p>Passenden Kurs und Hochschule finden.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Zulassung</h4>
+      <p>Schulabschluss-Prüfung (HZB) & Bewerbung.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Finanzen</h4>
+      <p>Sperrkonto (ca. 11.904 €) einrichten.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Visum</h4>
+      <p>Antrag mit Zulassungsbescheid stellen.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <h4>Ankunft</h4>
+      <p>Einschreibung & Start des Semesters.</p>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <span class="section-label">Nächster Schritt</span>
+    <h2>Bereit für Ihre akademische Reise?</h2>
+    <p>Lassen Sie uns Ihre Voraussetzungen prüfen und den besten Weg für Ihr Studium in Deutschland finden — basierend auf Ihren Zielen.</p>
+    <a href="/de/assessment" class="btn">Kostenloses Assessment starten</a>
+  </div>
+
+  <div class="faq">
+    <span class="section-label">Fragen & Antworten</span>
+    <h2>Häufige Fragen zum Studium</h2>
+    
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>Muss ich Deutsch sprechen?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        Für englischsprachige Masterprogramme reicht oft ein IELTS/TOEFL. Für Bachelor-Studiengänge ist meist ein C1-Niveau in Deutsch erforderlich. Wir prüfen Ihre Optionen.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>Darf ich während des Studiums arbeiten?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        Ja, internationale Studierende dürfen 140 volle Tage oder 280 halbe Tage pro Jahr arbeiten. Das hilft massiv bei der Deckung der Lebenshaltungskosten.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>Wie hoch sind die monatlichen Kosten?</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        Rechnen Sie mit etwa 950 € bis 1.100 € pro Monat für Miete, Essen, Versicherung und Freizeit – je nach Stadt und Lebensstil.
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">Berlin Gateway</h4>
-                <p style="font-size: 14px; opacity: 0.7;">Wir begleiten internationale Talente auf ihrem Weg nach Deutschland – kompetent, digital und transparent.</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">Navigation</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="/de/chancenkarte" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">Chancenkarte 2026</a></li>
-                    <li><a href="/de/monitor" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">Arbeitsmarkt-Monitor</a></li>
-                    <li><a href="/de/assessment" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">Assessment</a></li>
-                </ul>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
+  <div class="inner">
+    <p><b>Berlin Gateway</b> — Experten vor Ort in Deutschland</p>
+    <div style="margin: 20px 0;">
+      <a href="/de/impressum">Impressum</a>
+      <a href="/de/datenschutz">Datenschutz</a>
+      <a href="mailto:info@berlingateway.de">Kontakt</a>
     </div>
+    <p style="opacity:0.5">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+  </div>
 </footer>
+
+<script>
+  function toggleFaq(el) {
+    el.classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>

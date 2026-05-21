@@ -24,15 +24,15 @@ export default function NeurologyHubArabic() {
       <section className="py-20 px-6 bg-[#0B1C2C] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs uppercase tracking-widest text-slate-400 mb-4" style={FONT}>
-            جراحة الأعصاب في ألمانيا · ميديكال كير جيرماني
+            رأي طبي ثانِ في الأعصاب · برلين · ألمانيا
           </p>
           <h1 className="text-3xl md:text-5xl font-light leading-tight mb-6" style={FONT}>
-            عندما تصبح الأعراض العصبية غير مفهومة…<br />
-            <span className="font-medium">القرار الخاطئ قد يُغلق أبواباً لا تعود</span>
+            قيل لك إن حالتك تحتاج جراحة أعصاب.<br />
+            <span className="font-medium">قبل أي قرار — حالتك تستحق مراجعة حقيقية في برلين.</span>
           </h1>
           <p className="text-base md:text-lg text-slate-300 mb-3 max-w-2xl mx-auto leading-relaxed" style={FONT}>
-            تقييم طبي متخصص لحالات الأعصاب خلال 24–48 ساعة<br />
-            ضمن شبكة المستشفيات الجامعية في ألمانيا.<br />
+            كثير من الحالات التي وصلتنا بقرار جراحي — تغيّر مسارها بعد التقييم.<br />
+            نراجع ملفك الطبي كاملاً مع متخصصين في المستشفيات الجامعية الألمانية.<br />
             مخصص للحالات المعقدة أو غير الواضحة فقط.
           </p>
           <p className="text-xs text-slate-500 mb-10" style={FONT}>
@@ -43,7 +43,7 @@ export default function NeurologyHubArabic() {
             className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
-            أرسل تقاريرك الآن للحصول على قرار طبي واضح
+            أرسل ملفك الآن للمراجعة
           </Link>
         </div>
       </section>
@@ -85,6 +85,21 @@ export default function NeurologyHubArabic() {
             الضغط على العصب الذي لم يُعالج اليوم قد يتحول إلى تلف دائم غداً.<br />
             والتشخيص الخاطئ لا يضيّع الوقت فقط، بل قد يُغلق خيارات علاجية كانت متاحة في البداية.
           </p>
+        </div>
+      </section>
+
+      {/* MID-PAGE CTA — after risk section */}
+      <section className="py-10 px-6 bg-white border-b border-slate-100">
+        <div className="max-w-2xl mx-auto text-center">
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-slate-800 transition-colors"
+            style={FONT}
+          >
+            أرسل ملفك الآن — مراجعة خلال 24 ساعة
+          </a>
         </div>
       </section>
 
@@ -152,6 +167,18 @@ export default function NeurologyHubArabic() {
             مريض من الجزائر، 44 عاماً — وصل بتشخيص أولي يشير إلى انزلاق غضروفي وقرار بجراحة عاجلة.
             بعد مراجعة الحالة في برلين، تبيّن أن السبب الحقيقي ضغط وعائي على العصب، ولم يحتج إلى جراحة.
             اليوم يعيش حياته الطبيعية بدون تدخل جراحي.
+          </blockquote>
+          <blockquote className="border-r-2 border-[#0B1C2C] pr-5 text-slate-700 text-sm leading-relaxed mt-8" style={FONT}>
+            مريضة من ليبيا، ٣٨ عاماً — تعاني من دوخة مستمرة واضطراب في التوازن منذ أكثر من سنة.
+            زارت أربعة أطباء، وتلقت تشخيصات مختلفة في كل مرة.
+            بعد مراجعة الملف الكامل في برلين، تبيّن أن السبب ضغط وعائي بسيط قابل للعلاج بدون تدخل جراحي.
+            اليوم حالتها مستقرة وتحت متابعة دقيقة.
+          </blockquote>
+          <blockquote className="border-r-2 border-[#0B1C2C] pr-5 text-slate-700 text-sm leading-relaxed mt-8" style={FONT}>
+            مريض من السعودية، ٥٥ عاماً — ألم مزمن في الظهر مع تنميل في الساقين، وقرار بجراحة عمود فقري عاجلة.
+            طلب رأياً ثانياً قبل الموعد الجراحي.
+            بعد مراجعة صور الرنين الكاملة، تبيّن أن التدخل الجراحي المقرر أشمل مما تتطلبه الحالة.
+            أُجريت جراحة أصغر وأدق — مع تعافٍ أسرع.
           </blockquote>
           <p className="mt-4 text-xs text-slate-400 text-center" style={FONT}>
             تُنشر التجارب بموافقة المريض وبدون بيانات شخصية.
@@ -251,20 +278,6 @@ export default function NeurologyHubArabic() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* RELATED SERVICES */}
-      <section className="py-10 px-6 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs text-slate-400 uppercase tracking-widest mb-3" style={FONT}>خدماتنا المتميزة</p>
-          <a
-            href="/ar/fertility-treatment-germany"
-            className="inline-block px-6 py-3 border border-[#0B1C2C] text-[#0B1C2C] text-sm hover:bg-[#0B1C2C] hover:text-white transition-colors"
-            style={FONT}
-          >
-            علاج تأخر الإنجاب في ألمانيا
-          </a>
         </div>
       </section>
 

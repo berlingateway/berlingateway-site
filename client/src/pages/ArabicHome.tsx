@@ -351,8 +351,8 @@ export default function ArabicHome() {
         {/* Desktop Navigation — mirrors English 1:1, RTL */}
         <div className="desktop-nav flex gap-8 text-sm text-slate-500 items-center">
           <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>الرئيسية</a>
-          <a href="#focus" className={`nav-link ${activeSection === 'focus' ? 'active' : ''}`}>الحوكمة</a>
-          <a href="#why-germany" className={`nav-link ${activeSection === 'why-germany' ? 'active' : ''}`}>كيف نعمل</a>
+          <a href="#focus" className={`nav-link ${activeSection === 'focus' ? 'active' : ''}`}>فلسفتنا الطبية</a>
+          <a href="#why-germany" className={`nav-link ${activeSection === 'why-germany' ? 'active' : ''}`}>العلاج في ألمانيا</a>
           <a href="/ar/videos" className="nav-link">مكتبة الفيديو</a>
           {/* Medical Conditions Mega-Menu (Arabic) — no scroll, full visibility */}
           <div className="relative" ref={conditionsRef}>
@@ -669,7 +669,7 @@ export default function ArabicHome() {
             </svg>
           </button>
           <a href="#home" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">الرئيسية</a>
-          <a href="#focus" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">مجالات التخصص</a>
+          <a href="#focus" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">فلسفتنا الطبية</a>
           <a href="#why-germany" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">لماذا ألمانيا</a>
           <a href="/ar/videos" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">مكتبة الفيديو</a>
           <a href="#submit-case" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">تقديم الحالة</a>
@@ -868,12 +868,12 @@ export default function ArabicHome() {
       <section id="home" className="relative py-14 md:py-32 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-medium leading-tight mb-6" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", lineHeight: '1.5' }}>
-            عندما تصبح الحالة الطبية معقدة…<br />
-            يحتاج القرار إلى خبرة أكبر
+            قيل لك إن الحالة معقدة.<br />
+            في برلين، نبدأ أولاً بفهم القصة الطبية كاملة — قبل أي قرار علاج.
           </h1>
 
           <p className="text-base md:text-lg text-slate-300 font-light mb-4 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            تنسيق مراجعة الحالات الطبية الدولية في ألمانيا ضمن شبكة المستشفيات الجامعية وكبار البروفيسورات المتخصصين.
+            تنسيق طبي متخصص للحالات المعقدة مع مستشفيات وأساتذة متخصصين في ألمانيا.
           </p>
           <p className="text-sm text-slate-400 font-light mb-10 tracking-wide">
             مراجعة أولية للحالة خلال 24 – 48 ساعة
@@ -888,12 +888,12 @@ export default function ArabicHome() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <a href="#submit-case">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-                إرسال التقارير الطبية للمراجعة
+                أرسل ملفك الطبي
               </Button>
             </a>
             <a href="https://wa.me/493025730875" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-                التحدث مع منسق طبي
+                تحدث مع منسق طبي
               </Button>
             </a>
           </div>
@@ -1030,16 +1030,16 @@ export default function ArabicHome() {
         <span id="intake-form" style={{ display: 'block', marginTop: '-90px', paddingTop: '90px', pointerEvents: 'none' }} aria-hidden="true" />
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            تقديم الحالة للمراجعة الطبية
+            أرسل ملفك الطبي — سيقرأه منسق متخصص
           </h2>
           <p className="text-center text-slate-500 text-sm mb-12 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            تُجرى مراجعات الحالات وفق ممارسات الحوكمة السريرية الألمانية.
+            لا بوابات. لا انتظار مجهول. شخص حقيقي يراجع حالتك خلال 24 ساعة.
           </p>
           <div className="border border-slate-200 bg-white shadow-sm">
             <ArabicIframeForm />
           </div>
           <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            يتم التعامل مع جميع الملفات بسرية تامة.
+            جميع الملفات تُعامَل بسرية تامة ولا تُشارك خارج فريق التنسيق.
           </p>
         </div>
       </section>
@@ -1058,20 +1058,20 @@ export default function ArabicHome() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-2xl md:text-3xl font-medium mb-8 text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-                لماذا ألمانيا
+                ألمانيا تملك الطب. نحن نعرف كيف تصل إليه.
               </h2>
               <div className="space-y-5">
                 <div className="flex items-start gap-3">
                   <div className="w-1 h-1 rounded-full bg-slate-400 mt-2.5 flex-shrink-0"></div>
-                  <p className="text-base text-slate-700" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>منظومة المستشفيات الجامعية</p>
+                  <p className="text-base text-slate-700" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>المستشفيات الجامعية الألمانية من أدق المنظومات الطبية في العالم — لكن الوصول إليها يحتاج من يعرف مساراتها من الداخل.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1 h-1 rounded-full bg-slate-400 mt-2.5 flex-shrink-0"></div>
-                  <p className="text-base text-slate-700" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>تقييم طبي متعدد التخصصات</p>
+                  <p className="text-base text-slate-700" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>نعمل من برلين. نفهم اللغة الطبية الألمانية. ونفهم ما يعنيه المريض العربي حين يصف حالته.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1 h-1 rounded-full bg-slate-400 mt-2.5 flex-shrink-0"></div>
-                  <p className="text-base text-slate-700" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>دقة التشخيص والبروتوكولات السريرية</p>
+                  <p className="text-base text-slate-700" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>البروفيسور الذي يعالج حالتك قد يُحيلك لزميل أدق تخصصاً — ونحن من يدير هذا الانتقال بسلاسة.</p>
                 </div>
               </div>
             </div>
@@ -1083,22 +1083,25 @@ export default function ArabicHome() {
       <section className="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-medium mb-12 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            مسار التنسيق
+            كيف نعمل معك خطوة بخطوة
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
             <div className="flex-1 text-center">
               <div className="text-sm font-medium text-slate-400 mb-2">الخطوة الأولى</div>
-              <h3 className="text-base font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>مراجعة أولية خلال 24–48 ساعة</h3>
+              <h3 className="text-base font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>المراجعة الأولية — خلال 24 إلى 48 ساعة</h3>
+              <p className="text-xs text-slate-500 mt-2" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>نقرأ ملفك كاملاً. لن تنتظر في الفراغ.</p>
             </div>
             <div className="hidden md:block text-slate-300 text-2xl">←</div>
             <div className="flex-1 text-center">
               <div className="text-sm font-medium text-slate-400 mb-2">الخطوة الثانية</div>
-              <h3 className="text-base font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>توجيه الحالة للتخصص المناسب خلال 3–5 أيام</h3>
+              <h3 className="text-base font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>التوجيه للتخصص الصحيح — خلال 3 إلى 5 أيام</h3>
+              <p className="text-xs text-slate-500 mt-2" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>نحن من نتحدث مع البروفيسور نيابةً عنك — بلغته وبمصطلحاته.</p>
             </div>
             <div className="hidden md:block text-slate-300 text-2xl">←</div>
             <div className="flex-1 text-center">
               <div className="text-sm font-medium text-slate-400 mb-2">الخطوة الثالثة</div>
-              <h3 className="text-base font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>توضيح المسار العلاجي خلال 7 أيام</h3>
+              <h3 className="text-base font-medium text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>قرار طبي واضح — خلال 7 أيام</h3>
+              <p className="text-xs text-slate-500 mt-2" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>مسار علاجي محدد. بدون تعقيد. بدون ضياع.</p>
             </div>
           </div>
         </div>
@@ -1108,14 +1111,14 @@ export default function ArabicHome() {
       <section className="py-16 md:py-20 px-6 bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-medium mb-12 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            خدمات التنسيق
+            ما نتولاه نيابةً عنك
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              'تنسيق المواعيد الطبية',
+              'تنسيق المواعيد مع البروفيسورات',
               'الترجمة الطبية المتخصصة',
-              'ترتيبات الإقامة للمريض والمرافقين',
-              'استقبال المريض عند الحاجة',
+              'ترتيبات الإقامة والاستقبال',
+              'متابعة الملف العلاجي كاملاً',
             ].map((item, i) => (
               <div key={i}>
                 <div className="text-4xl font-serif text-slate-200 mb-3">0{i + 1}</div>
@@ -1173,13 +1176,13 @@ export default function ArabicHome() {
               className="text-2xl md:text-3xl text-slate-900 mb-4"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", fontWeight: 500 }}
             >
-              حالة واقعية: كيف غيّر التقييم الطبي المسار العلاجي
+              بعد أشهر من الحيرة… تغيّر القرار الطبي بالكامل
             </h2>
             <p
               className="text-slate-500 text-base leading-relaxed max-w-xl mx-auto"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
-              توثيق واقعي لمسار علاجي في ألمانيا، من التقييم السريري الأولي إلى القرار العلاجي والمتابعة.
+              توثيق حقيقي لمسار علاجي في برلين — من التقييم الأول إلى القرار النهائي.
             </p>
           </div>
 
@@ -1248,7 +1251,7 @@ export default function ArabicHome() {
               className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm hover:bg-slate-700 transition-colors"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
-              تحدث مع منسق طبي
+              أرسل ملفك الطبي الآن عبر واتساب
             </a>
             <p
               className="mt-3 text-xs text-slate-400"
@@ -1290,18 +1293,17 @@ export default function ArabicHome() {
       {/* TRAUMA SEO ENTRY POINT */}
       <section style={{ marginTop: '60px', padding: '30px', background: '#0b1d2a', borderRadius: '12px' }} dir="rtl">
         <h2 style={{ color: 'white', fontSize: '22px', marginBottom: '15px', fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-          إصابات الحروب والحوادث المعقدة
+            بعض الإصابات تتجاوز ما تستطيع المستشفيات المحلية تقديمه
         </h2>
         <p style={{ color: '#cbd5e1', fontSize: '16px', lineHeight: '1.6', fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-          حالات البتر، إصابات الأعصاب، والشظايا تحتاج تقييم دقيق قبل اتخاذ أي قرار علاجي.
-          في ألمانيا، يتم التعامل مع هذه الحالات ضمن منظومة طبية متقدمة تشمل الجراحة،
-          إعادة التأهيل، وتركيب الأطراف الصناعية.
+          نحن معتادون على الحالات الثقيلة — البتر، إصابات الأعصاب، الشظايا، وإعادة التأهيل بعد الحوادث.
+          في ألمانيا، هذه الحالات لا تُعالج بجراحة واحدة. تُدار ضمن منظومة متكاملة تشمل التقييم، الجراحة، التأهيل، والأطراف الصناعية — كل ذلك تحت إشراف فريق متخصص. نحن نضع حالتك في المسار الصحيح منذ البداية.
         </p>
         <a
           href="/ar/complex-trauma-germany"
           style={{ display: 'inline-block', marginTop: '20px', padding: '12px 20px', background: '#1e3a5f', color: 'white', textDecoration: 'none', borderRadius: '6px', fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
         >
-          عرض جميع الحالات المعقدة في ألمانيا
+          تحدث معنا عن الحالة
         </a>
       </section>
 
@@ -1326,15 +1328,19 @@ export default function ArabicHome() {
         <div className="py-10">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
-            <a href="mailto:info@medicalcaregermany.com" className="block text-lg hover:text-slate-300 transition-colors">
+            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>واتساب — للحالات الطبية مباشرة</p>
+            <a href="https://wa.me/493025730875" target="_blank" rel="noopener noreferrer" className="block text-lg hover:text-slate-300 transition-colors">
+              +49 30 25730875
+            </a>
+            <a href="mailto:info@medicalcaregermany.com" className="block text-base hover:text-slate-300 transition-colors">
               info@medicalcaregermany.com
             </a>
-            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Sachsendamm 79 · 10829 برلين · ألمانيا</p>
+            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Sachsendamm 79 · 10829 Berlin · ألمانيا</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
-          <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
+          <p className="text-sm text-slate-400">Medical Care Germany © 2026 — جميع الحقوق محفوظة</p>
           <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85, fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            يُستشار رأيه قبل اتخاذ القرارات الطبية الحاسمة.
+            ليست كل الحالات تحتاج السفر إلى ألمانيا.<br />لكن بعض القرارات الطبية تستحق مراجعة أدق.
           </p>
         </div>
         </div>

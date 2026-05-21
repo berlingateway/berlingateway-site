@@ -159,28 +159,22 @@ export default function SpineSurgeryGermany() {
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 30% 50%, rgba(100,160,220,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 760, margin: "0 auto", position: "relative" }}>
           <p style={{ color: "#7EB8D4", fontSize: "clamp(11px, 2vw, 13px)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20, fontWeight: 500 }}>
-            Medical Care Germany — Berlin
+            رأي طبي ثانٍ في جراحة العمود الفقري · برلين · ألمانيا
           </p>
           <h1 style={{ color: "#fff", fontSize: "clamp(26px, 5vw, 44px)", fontWeight: 700, lineHeight: 1.35, marginBottom: 20 }}>
-            جراحة العمود الفقري وعلاج الألم المزمن في ألمانيا
+            ألم العمود الفقري لم يتوقف رغم العلاج؟<br />قبل أي قرار جراحي — حالتك تستحق مراجعة حقيقية في برلين.
           </h1>
           <p style={{ color: "#A8C8E0", fontSize: "clamp(15px, 2.5vw, 18px)", lineHeight: 1.8, marginBottom: 12 }}>
-            تنسيق متخصص لحالات العمود الفقري المعقدة: الجراحة الفاشلة، الألم المزمن، الدوخة العنقية، اضطرابات المشي، وتقييم صور MRI غير الواضحة.
-          </p>
-          <p style={{ color: "#6B9AB8", fontSize: "clamp(13px, 2vw, 15px)", lineHeight: 1.7 }}>
-            خدمة متاحة للمرضى الدوليين من ليبيا والسودان ودول الخليج العربي.
+            كثير من حالات العمود الفقري التي وصلتنا بقرار جراحي — أو بعد جراحة فاشلة — وجدت مساراً مختلفاً بعد التقييم.
+            نراجع ملفك وصور الرنين مع متخصصين في المستشفيات الجامعية الألمانية.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/ar/submit-case">
-              <a style={{ background: "#fff", color: "#0B1C2C", padding: "14px 32px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
-                إرسال الحالة للتقييم
-              </a>
-            </Link>
-            <Link href="/ar/send-medical-reports">
-              <a style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "14px 32px", fontWeight: 500, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
-                إرسال صور MRI
-              </a>
-            </Link>
+            <a href="/ar/submit-case" style={{ background: "#fff", color: "#0B1C2C", padding: "14px 32px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
+              أرسل ملفك الآن للمراجعة
+            </a>
+            <a href="https://wa.me/4930257308750" target="_blank" rel="noopener noreferrer" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "14px 32px", fontWeight: 500, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
+              تحدث مع منسق عبر واتساب
+            </a>
           </div>
         </div>
       </section>
@@ -194,7 +188,7 @@ export default function SpineSurgeryGermany() {
           الحالات التي تستدعي تقييماً متخصصاً في ألمانيا
         </h2>
         <p style={{ color: "#4A6B85", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 40, maxWidth: 680 }}>
-          في جراحة العمود الفقري، لا يكفي وجود ألم أو صورة MRI غير طبيعية لاتخاذ قرار جراحي. الحالات التالية تستدعي تقييماً متعدد التخصصات قبل أي تدخل.
+          إذا كنت تعاني من أي من هذه الأعراض — حالتك تستحق مراجعة متخصصة قبل أي قرار.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
           {SYMPTOM_INDICATORS.map((s, i) => (
@@ -209,39 +203,26 @@ export default function SpineSurgeryGermany() {
         </div>
       </section>
 
-      {/* ── SECTION 3: MRI INTERPRETATION LOGIC ─────────────────── */}
-      <section style={{ background: "#f8fafc", padding: "clamp(48px, 8vw, 80px) 24px" }}>
-        <div style={{ maxWidth: 960, margin: "0 auto" }}>
-          <p style={{ color: "#7EB8D4", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>
-            طبقة تفسير الصور
-          </p>
-          <h2 style={{ fontSize: "clamp(20px, 3.5vw, 30px)", fontWeight: 700, color: "#0B1C2C", marginBottom: 12, lineHeight: 1.4 }}>
-            منطق تفسير صور MRI في حالات العمود الفقري
-          </h2>
-          <p style={{ color: "#4A6B85", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 36, maxWidth: 700 }}>
-            صورة MRI وحدها لا تكفي لاتخاذ قرار جراحي. التفسير السريري يربط الصورة بالأعراض والفحص العصبي. الجدول التالي يوضح الحالات الشائعة وتداعياتها السريرية.
-          </p>
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "clamp(13px, 1.8vw, 15px)" }}>
-              <thead>
-                <tr style={{ background: "#0B1C2C", color: "#fff" }}>
-                  <th style={{ padding: "14px 16px", textAlign: "right", fontWeight: 600, borderBottom: "2px solid #1a3a5c" }}>الحالة (EN)</th>
-                  <th style={{ padding: "14px 16px", textAlign: "right", fontWeight: 600, borderBottom: "2px solid #1a3a5c" }}>المصطلح العربي</th>
-                  <th style={{ padding: "14px 16px", textAlign: "right", fontWeight: 600, borderBottom: "2px solid #1a3a5c" }}>التداعية السريرية</th>
-                </tr>
-              </thead>
-              <tbody>
-                {MRI_FINDINGS.map((row, i) => (
-                  <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#f0f5fa", borderBottom: "1px solid #e2eaf2" }}>
-                    <td style={{ padding: "14px 16px", color: "#1a3a5c", fontWeight: 600, fontSize: 13 }}>{row.finding}</td>
-                    <td style={{ padding: "14px 16px", color: "#0B1C2C", fontWeight: 600 }}>{row.arabic}</td>
-                    <td style={{ padding: "14px 16px", color: "#4A6B85", lineHeight: 1.6 }}>{row.implication}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+      {/* SECTION 3 REMOVED — MRI table deleted per content strategy */}
+      {/* Patient Stories — after Section 2 */}
+      <section style={{ background: "#f8fafc", padding: "clamp(48px, 8vw, 80px) 24px", maxWidth: 760, margin: "0 auto" }}>
+        <p style={{ color: "#7EB8D4", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>
+          من تجارب مرضانا
+        </p>
+        <h2 style={{ fontSize: "clamp(20px, 3.5vw, 28px)", fontWeight: 700, color: "#0B1C2C", marginBottom: 36, lineHeight: 1.4 }}>
+          من تجارب مرضانا
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+          <blockquote style={{ borderRight: "3px solid #7EB8D4", paddingRight: 20, margin: 0 }}>
+            <p style={{ color: "#0B1C2C", fontWeight: 600, fontSize: 15, marginBottom: 8 }}>مريض من العراق، 48 عاماً</p>
+            <p style={{ color: "#4A6B85", fontSize: 14, lineHeight: 1.8 }}>أجرى جراحة عمود فقري منذ سنة، الألم لم يتوقف. بعد مراجعة الملف والصور في برلين، تبيّن أن سبب الألم المستمر قابل للعلاج بدون جراحة ثانية. بدأ برنامج علاج موجّه — وتحسّن بشكل ملحوظ خلال ستة أسابيع.</p>
+          </blockquote>
+          <blockquote style={{ borderRight: "3px solid #7EB8D4", paddingRight: 20, margin: 0 }}>
+            <p style={{ color: "#0B1C2C", fontWeight: 600, fontSize: 15, marginBottom: 8 }}>مريضة من ليبيا، 52 عاماً</p>
+            <p style={{ color: "#4A6B85", fontSize: 14, lineHeight: 1.8 }}>دوخة مستمرة مرتبطة بحركة الرقبة وألم مزمن. ثلاثة أطباء، ثلاثة تشخيصات مختلفة. بعد التقييم المشترك في برلين — تحدد المصدر الحقيقي للمشكلة ووُضع مسار علاجي واضح.</p>
+          </blockquote>
         </div>
+        <p style={{ color: "#9BB5C8", fontSize: 12, marginTop: 24 }}>تُنشر التجارب بموافقة المريض وبدون بيانات شخصية.</p>
       </section>
 
       {/* ── SECTION 4: FAILED SURGERY EVALUATION ────────────────── */}
@@ -265,79 +246,9 @@ export default function SpineSurgeryGermany() {
         </div>
       </section>
 
-      {/* ── SECTION 5: NEURO-SPINE OVERLAP ──────────────────────── */}
-      <section style={{ background: "#0B1C2C", padding: "clamp(48px, 8vw, 80px) 24px" }}>
-        <div style={{ maxWidth: 960, margin: "0 auto" }}>
-          <p style={{ color: "#7EB8D4", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>
-            التداخل العصبي الشوكي
-          </p>
-          <h2 style={{ fontSize: "clamp(20px, 3.5vw, 30px)", fontWeight: 700, color: "#fff", marginBottom: 12, lineHeight: 1.4 }}>
-            العلاقة بين العمود الفقري والجهاز العصبي
-          </h2>
-          <p style={{ color: "#A8C8E0", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 36, maxWidth: 700 }}>
-            كثير من أعراض العمود الفقري تتداخل مع أمراض عصبية. التمييز الدقيق بين المصدر الشوكي والعصبي يحدد المسار العلاجي الصحيح.
-          </p>
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "clamp(13px, 1.8vw, 14px)" }}>
-              <thead>
-                <tr style={{ background: "rgba(255,255,255,0.08)" }}>
-                  <th style={{ padding: "14px 16px", textAlign: "right", color: "#7EB8D4", fontWeight: 600, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>مشكلة العمود الفقري</th>
-                  <th style={{ padding: "14px 16px", textAlign: "right", color: "#7EB8D4", fontWeight: 600, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>التداخل العصبي</th>
-                  <th style={{ padding: "14px 16px", textAlign: "right", color: "#7EB8D4", fontWeight: 600, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>الأعراض المشتركة</th>
-                </tr>
-              </thead>
-              <tbody>
-                {NEURO_SPINE_OVERLAP.map((row, i) => (
-                  <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                    <td style={{ padding: "14px 16px", color: "#fff", fontWeight: 600 }}>{row.spine}</td>
-                    <td style={{ padding: "14px 16px", color: "#A8C8E0" }}>{row.neuro}</td>
-                    <td style={{ padding: "14px 16px", color: "#7EB8D4", fontSize: 13 }}>{row.symptom}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div style={{ marginTop: 32, padding: "20px 24px", background: "rgba(126,184,212,0.08)", borderRight: "3px solid #7EB8D4" }}>
-            <p style={{ color: "#A8C8E0", fontSize: 14, lineHeight: 1.8 }}>
-              <strong style={{ color: "#fff" }}>ملاحظة سريرية:</strong> الدوخة المرتبطة بحركة الرقبة (Cervicogenic Dizziness) تستدعي تقييماً مشتركاً بين جراح العمود الفقري وطبيب الأعصاب وأخصائي التوازن.{" "}
-              <Link href="/ar/dizziness-long-term">
-                <a style={{ color: "#7EB8D4", textDecoration: "underline" }}>الدوخة المزمنة واضطرابات التوازن ←</a>
-              </Link>
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* SECTION 5 REMOVED — neuro-spine overlap table deleted per content strategy */}
 
-      {/* ── SECTION 6: REHABILITATION PATHWAYS ──────────────────── */}
-      <section style={{ padding: "clamp(48px, 8vw, 80px) 24px", maxWidth: 960, margin: "0 auto" }}>
-        <p style={{ color: "#7EB8D4", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16, fontWeight: 600 }}>
-          مسارات إعادة التأهيل
-        </p>
-        <h2 style={{ fontSize: "clamp(20px, 3.5vw, 30px)", fontWeight: 700, color: "#0B1C2C", marginBottom: 12, lineHeight: 1.4 }}>
-          بروتوكولات إعادة التأهيل بعد جراحة العمود الفقري
-        </h2>
-        <p style={{ color: "#4A6B85", fontSize: "clamp(14px, 2vw, 16px)", lineHeight: 1.8, marginBottom: 40, maxWidth: 700 }}>
-          إعادة التأهيل ليست مكملاً للجراحة — في كثير من الحالات هي البديل الأكثر فعالية. المراكز الألمانية المتخصصة تقدم برامج متكاملة تتجاوز العلاج الطبيعي التقليدي.
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
-          {REHAB_PROTOCOLS.map((item, i) => (
-            <div key={i} style={{ background: "#f8fafc", border: "1px solid #e2eaf2", padding: "22px 20px", display: "flex", gap: 14 }}>
-              <span style={{ color: "#7EB8D4", fontWeight: 700, fontSize: 20, lineHeight: 1, paddingTop: 2, minWidth: 28 }}>{i + 1}</span>
-              <div>
-                <h3 style={{ color: "#0B1C2C", fontWeight: 700, fontSize: 14, marginBottom: 8 }}>{item.title}</h3>
-                <p style={{ color: "#4A6B85", fontSize: 13, lineHeight: 1.7 }}>{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div style={{ marginTop: 32, textAlign: "center" }}>
-          <Link href="/ar/advanced-rehabilitation-germany">
-            <a style={{ color: "#0B1C2C", fontSize: 14, fontWeight: 600, textDecoration: "underline", textDecorationColor: "#7EB8D4" }}>
-              إعادة التأهيل المتقدم في ألمانيا ←
-            </a>
-          </Link>
-        </div>
-      </section>
+      {/* SECTION 6 REMOVED — rehab protocols deleted per content strategy */}
 
       {/* ── SECTION 7: DIAGNOSTIC TIMELINE ──────────────────────── */}
       <section style={{ background: "#f8fafc", padding: "clamp(48px, 8vw, 80px) 24px" }}>
@@ -404,23 +315,14 @@ export default function SpineSurgeryGermany() {
           <h2 style={{ color: "#fff", fontSize: "clamp(22px, 4vw, 36px)", fontWeight: 700, lineHeight: 1.4, marginBottom: 20 }}>
             تقييم حالة العمود الفقري من برلين
           </h2>
-          <p style={{ color: "#A8C8E0", fontSize: "clamp(14px, 2vw, 17px)", lineHeight: 1.8, marginBottom: 12 }}>
-            يمكن إرسال صور MRI والتقارير الطبية إلكترونياً للتقييم الأولي من برلين خلال 24–48 ساعة.
-          </p>
-          <p style={{ color: "#6B9AB8", fontSize: "clamp(12px, 1.8vw, 14px)", lineHeight: 1.7, marginBottom: 40 }}>
-            نخدم المرضى الدوليين من ليبيا والسودان ودول الخليج العربي ومصر والأردن.
+          <p style={{ color: "#A8C8E0", fontSize: "clamp(14px, 2vw, 17px)", lineHeight: 1.8, marginBottom: 40 }}>
+            قبل أي قرار جراحي في العمود الفقري — أو إذا استمر الألم بعد جراحة سابقة — حالتك تستحق مراجعة حقيقية.
+            أرسل ملفك وصور الرنين وسيتواصل معك منسق متخصص خلال 24 ساعة.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/ar/submit-case">
-              <a style={{ background: "#fff", color: "#0B1C2C", padding: "16px 36px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
-                إرسال الحالة للتقييم
-              </a>
-            </Link>
-            <Link href="/ar/send-medical-reports">
-              <a style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "16px 36px", fontWeight: 500, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
-                إرسال صور MRI
-              </a>
-            </Link>
+            <a href="/ar/submit-case" style={{ background: "#fff", color: "#0B1C2C", padding: "16px 36px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
+              أرسل ملفك الآن — مراجعة خلال 24 ساعة
+            </a>
           </div>
           <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap" }}>
             {[

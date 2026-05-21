@@ -3,7 +3,7 @@ import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
 
 
-const WA_HREF = `https://wa.me/4917647757767?text=${encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة انزلاق غضروفي")}`;
+const WA_HREF = `https://wa.me/4915781497451?text=${encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة انزلاق غضروفي")}`;
 
 export default function HerniatedDisc() {
   return (

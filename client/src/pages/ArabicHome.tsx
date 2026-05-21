@@ -891,7 +891,7 @@ export default function ArabicHome() {
                 أرسل ملفك الطبي
               </Button>
             </a>
-            <a href="https://wa.me/4917647757767" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
                 تحدث مع منسق طبي
               </Button>
@@ -1245,7 +1245,7 @@ export default function ArabicHome() {
           {/* CTA button */}
           <div className="mt-10 text-center">
             <a
-              href="https://wa.me/4917647757767?text=%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D8%AB%20%D9%85%D8%B9%20%D9%85%D9%86%D8%B3%D9%82%20%D8%B7%D8%A8%D9%8A%20%D8%AD%D9%88%D9%84%20%D8%AD%D8%A7%D9%84%D8%AA%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9."
+              href="https://wa.me/4915781497451?text=%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D8%AB%20%D9%85%D8%B9%20%D9%85%D9%86%D8%B3%D9%82%20%D8%B7%D8%A8%D9%8A%20%D8%AD%D9%88%D9%84%20%D8%AD%D8%A7%D9%84%D8%AA%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm hover:bg-slate-700 transition-colors"
@@ -1329,7 +1329,7 @@ export default function ArabicHome() {
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
             <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>واتساب — للحالات الطبية مباشرة</p>
-            <a href="https://wa.me/4917647757767" target="_blank" rel="noopener noreferrer" className="block text-lg hover:text-slate-300 transition-colors">
+            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" className="block text-lg hover:text-slate-300 transition-colors">
               +49 30 25730875
             </a>
             <a href="mailto:info@medicalcaregermany.com" className="block text-base hover:text-slate-300 transition-colors">

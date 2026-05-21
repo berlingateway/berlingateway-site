@@ -13,7 +13,7 @@ const NAVY = "#0B1C2C";
 const SLATE_TEXT = "#94a3b8";
 const SLATE_BODY = "#64748b";
 const WHITE = "#f8fafc";
-const WA_LINK = "https://wa.me/4917647757767";
+const WA_LINK = "https://wa.me/4915781497451";
 
 export default function ArabicSubmitCase() {
   return (

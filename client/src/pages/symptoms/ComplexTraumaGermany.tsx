@@ -6,7 +6,7 @@ import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const intakeHref = "/send-medical-reports";
 const whatsappHref =
-  "https://wa.me/4917647757767?text=" +
+  "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة إصابة معقدة");
 
 // ─── CLINICAL INDICATOR DATA ────────────────────────────────────────────────

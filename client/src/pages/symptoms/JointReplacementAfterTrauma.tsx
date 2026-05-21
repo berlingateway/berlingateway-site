@@ -32,7 +32,7 @@ const JOINT_FAQ_JSONLD = {
 
 const FONT = { fontFamily: "'Cairo', 'Noto Sans Arabic', sans-serif" };
 const intakeHref = "/ar/send-medical-reports";
-const whatsappHref = "https://wa.me/4917647757767";
+const whatsappHref = "https://wa.me/4915781497451";
 
 export default function JointReplacementAfterTrauma() {
   useEffect(() => {

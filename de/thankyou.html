@@ -4,118 +4,140 @@
   <meta charset="utf-8" />
   <title>Bewertung eingereicht — Berlin Gateway</title>
   <meta name="description" content="Ihre Bewertung wurde eingereicht. Interne Prüfsequenz aktiviert." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-  <meta name="author" content="Berlin Gateway" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://berlingateway.de/de/thankyou.html" />
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/thankyou.html" />
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/thankyou.html" />
-  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/index.html" />
-  <link rel="stylesheet" href="/assets/css/app.css" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://berlingateway.de",
-  "name": "Berlin Gateway",
-  "url": "https://berlingateway.de",
-  "description": "Strukturelle Eintrittsarchitektur für Fachkräfte in Deutschland.",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Germany"
-  }
-}
-</script>
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/thankyou.html">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/thankyou.html">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/thankyou.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --light: #f8fafc;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: var(--white); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Navigation */
+    .header { background: var(--primary); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+    .brand { color: var(--white); font-weight: 700; text-decoration: none; font-size: 1.25rem; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .btn-nav { background: var(--accent); color: var(--white) !important; padding: 0.5rem 1rem; border-radius: 4px; }
+
+    /* Hero Compact */
+    .hero { background: var(--primary); padding: 4rem 0 3rem; color: var(--white); text-align: center; }
+    .kicker { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem; }
+    .h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
+    .lead { font-size: 1.125rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 2rem; }
+
+    /* Content Section */
+    .section { padding: 4rem 0; }
+    .status-card { background: var(--light); border-radius: 12px; padding: 2.5rem; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; }
+    .status-card p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+    .status-card p:last-child { margin-bottom: 0; }
+    .aktenzeichen { font-family: monospace; background: #e2e8f0; padding: 0.5rem 1rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 1rem; color: var(--primary); font-weight: 600; }
+
+    /* Footer */
+    .footer { background: #0a0f1d; color: rgba(255,255,255,0.6); padding: 4rem 0 2rem; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand { color: var(--white); font-weight: 700; margin-bottom: 1rem; display: block; }
+    .footer-links h4 { color: var(--white); margin-bottom: 1.2rem; font-size: 1rem; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { color: inherit; text-decoration: none; transition: 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links { display: none; }
+      .h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
+
 <header class="header">
-  <div class="container wrap">
-    <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/de/monitor/">Arbeitsmarkt Monitor</a>
-      <a href="/de/systemlogik/">Systemlogik</a>
-      <a href="/de/chancenkarte/">Chancenkarte</a>
+  <div class="container nav-wrap">
+    <a href="/de/" class="brand">Berlin Gateway</a>
+    <nav class="nav-links">
+      <a href="/de/chancenkarte.html">Chancenkarte</a>
+      <a href="/de/visum-deutschland.html">Visum</a>
+      <a href="/de/arbeit-in-deutschland.html">Jobs</a>
+      <a href="/de/studieren-in-deutschland.html">Studium</a>
+      <a href="/de/assessment.html" class="btn-nav">Start Assessment</a>
     </nav>
-    <div class="lang-switcher">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 Deutsch</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/">العربية</a>
-      </div>
-    </div>
   </div>
 </header>
 
-
-
-
-<main class="container">
+<main>
   <section class="hero">
-    <p class="kicker">Confirmation</p>
-    <h1 class="h1">Eingang registriert.</h1>
+    <div class="container">
+      <p class="kicker">Bestätigung</p>
+      <h1 class="h1">Eingang registriert.</h1>
+      <p class="lead">Ihre Angaben wurden erfolgreich in unsere interne Prüfsequenz aufgenommen.</p>
+    </div>
   </section>
 
   <section class="section">
-    <p style="color:#334155; line-height:1.6; margin-bottom:16px;">
-      Ihre Angaben wurden in die interne Prüfsequenz aufgenommen.
-    </p>
-    
-    <p style="color:#334155; line-height:1.6; margin-bottom:16px;">
-      Die strukturierte Einordnung erfolgt nach interner Sichtung.
-      Sie erhalten eine Rückmeldung per E-Mail.
-    </p>
-    <p style="color:#334155; line-height:1.6; margin-bottom:24px;">
-      Bis dahin sind keine weiteren Schritte erforderlich.
-    </p>
-    <p style="color:#999; font-size:12px; line-height:1.6;">
-      Struktur schafft Klarheit.
-    </p>
+    <div class="container">
+      <div class="status-card">
+        <p>Die strukturierte Einordnung erfolgt nach interner Sichtung durch unsere Experten vor Ort. Sie erhalten eine Rückmeldung per E-Mail.</p>
+        <p>Bis dahin sind keine weiteren Schritte erforderlich.</p>
+        <div id="akten" class="aktenzeichen">Aktenzeichen: (wird per E-Mail bestätigt)</div>
+        <p style="margin-top: 2rem; font-size: 0.875rem; color: #64748b; font-style: italic;">Struktur schafft Klarheit.</p>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="container wrap">
-    <div><b>Berlin Gateway</b> — Strukturelle Eintrittsarchitektur für Fachkräfte</div>
-    <div class="footer-contact">Kontakt: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a> · Telefon: <a href="tel:+493025730875">+49 30 25730875</a></div>
-  </div>
   <div class="container">
-    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. Alle Rechte vorbehalten.</div>
-    <div class="footer-closing">Strukturiert. Selektiv. Systemisch.</div>
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">Berlin Gateway</span>
+        <p>Experten vor Ort in Deutschland. Wir begleiten Fachkräfte durch den gesamten Prozess der Anerkennung, Visabeantragung und Integration.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/de/chancenkarte.html">Chancenkarte</a></li>
+          <li><a href="/de/visum-deutschland.html">Visum</a></li>
+          <li><a href="/de/arbeit-in-deutschland.html">Arbeit</a></li>
+          <li><a href="/de/studieren-in-deutschland.html">Studium</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="/de/impressum.html">Impressum</a></li>
+          <li><a href="/de/datenschutz.html">Datenschutz</a></li>
+          <li><a href="/de/kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+      <p>Strukturiert. Selektiv. Systemisch.</p>
+    </div>
   </div>
 </footer>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 <script>
   const qs = new URLSearchParams(location.search);
   const id = qs.get('id');
-  document.getElementById('akten').innerHTML = id
-    ? `<b>Aktenzeichen:</b> ${id}`
-    : `<b>Aktenzeichen:</b> (wird per E-Mail bestätigt)`;
-</script>
-<script>
-function toggleLangDropdown(event) {
-  event.stopPropagation();
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('active');
+  if (id) {
+    document.getElementById('akten').textContent = `Aktenzeichen: ${id}`;
   }
-}
+</script>
 
-document.addEventListener('click', function(event) {
-  const langSwitcher = document.querySelector('.lang-switcher');
-  const dropdown = document.getElementById('langDropdown');
-  if (langSwitcher && !langSwitcher.contains(event.target) && dropdown) {
-    dropdown.classList.remove('active');
-  }
-});
-</script>
 </body>
 </html>

@@ -165,7 +165,6 @@ async function startServer() {
 
   // 301 Redirects: hybrid/English pages → canonical Arabic equivalents
   const REDIRECTS_301: Record<string, string> = {
-    '/intake-form-ar.html':                    '/ar',
     '/neurology-treatment-germany':           '/ar/neurology-treatment-germany',
     '/brain-tumor-treatment-germany':         '/ar/brain-tumor-treatment-germany',
     '/trigeminal-neuralgia-treatment-germany':'/ar/trigeminal-neuralgia-treatment-germany',

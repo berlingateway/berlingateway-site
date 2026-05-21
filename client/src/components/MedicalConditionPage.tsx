@@ -125,6 +125,12 @@ export interface MedicalConditionPageProps {
     title?: string;
     content: string | string[];
   };
+  /** Patient testimonials shown after whyGermany section */
+  patientTestimonials?: {
+    title?: string;
+    stories: Array<{ text: string }>;
+    footer?: string;
+  };
   /** Custom CTA that overrides the built-in CTA box entirely */
   customCTA?: {
     title?: string;
@@ -179,6 +185,7 @@ export default function MedicalConditionPage({
   documentsSection,
   authoritySection,
   customCTA,
+  patientTestimonials,
 }: MedicalConditionPageProps) {
   const [symptomsExpanded, setSymptomsExpanded] = useState(false);
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
@@ -498,6 +505,28 @@ export default function MedicalConditionPage({
             ? whyGermany.map((p, i) => <p key={i} className="text-base text-slate-700 leading-relaxed mb-3">{p}</p>)
             : <p className="text-base text-slate-700 leading-relaxed">{whyGermany}</p>}
         </section>
+
+        {patientTestimonials && patientTestimonials.stories.length > 0 && (
+          <>
+            <div className="h-px bg-slate-100" />
+            <section>
+              <h2 className="text-xl font-serif font-medium text-slate-900 mb-6">
+                {patientTestimonials.title ?? (isArabic ? "من تجارب مرضانا" : "Patient Experiences")}
+              </h2>
+              {patientTestimonials.stories.map((story, i) => (
+                <blockquote
+                  key={i}
+                  className="border-r-2 border-slate-900 pr-5 text-slate-700 text-sm leading-relaxed mt-6 first:mt-0"
+                >
+                  {story.text}
+                </blockquote>
+              ))}
+              {patientTestimonials.footer && (
+                <p className="mt-4 text-xs text-slate-400">{patientTestimonials.footer}</p>
+              )}
+            </section>
+          </>
+        )}
 
         <div className="h-px bg-slate-100" />
 

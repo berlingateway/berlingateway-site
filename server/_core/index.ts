@@ -170,7 +170,7 @@ async function startServer() {
     '/trigeminal-neuralgia-treatment-germany':'/ar/trigeminal-neuralgia-treatment-germany',
     '/lung-cancer-treatment-germany':         '/ar/lung-cancer-treatment-germany',
     '/herniated-disc-treatment-germany':      '/ar/herniated-disc',
-    '/spine-surgery-germany':                 '/ar/neurology-treatment-germany',
+    '/spine-surgery-germany':                 '/ar/spine-surgery-germany',
   };
 
   // 410 Gone: permanently deleted English-only pages

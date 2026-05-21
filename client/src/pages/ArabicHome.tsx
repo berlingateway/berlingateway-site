@@ -631,7 +631,7 @@ export default function ArabicHome() {
             )}
           </div>
           <a href="#submit-case" className={`nav-link ${activeSection === 'submit-case' ? 'active' : ''}`}>تقديم الحالة</a>
-          <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>تواصل</a>
+          <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>تواصل معنا</a>
         </div>
 
         {/* Send Medical Reports CTA + Language Switch */}
@@ -641,7 +641,7 @@ export default function ArabicHome() {
             className="hidden md:inline-block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
             style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
           >
-            إرسال التقارير الطبية
+            أرسل ملفك الطبي
           </a>
           <a href="/" className="text-xs text-slate-400 hover:text-slate-700 transition-colors">EN</a>
           <span className="text-slate-300 text-xs">|</span>
@@ -859,7 +859,7 @@ export default function ArabicHome() {
             className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors w-full mt-4 mb-24"
             style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
           >
-            إرسال التقارير الطبية
+            أرسل ملفك الطبي
           </a>
         </div>
       )}

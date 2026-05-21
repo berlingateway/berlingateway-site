@@ -354,7 +354,7 @@ export default function JointReplacementAfterTrauma() {
         <ArabicFooterGuide />
         <div className="py-8 px-6 text-center">
           <p className="text-xs text-slate-400" style={FONT}>
-            ميديكال كير جيرماني · برلين، ألمانيا
+            Medical Care Germany
           </p>
         </div>
       </footer>

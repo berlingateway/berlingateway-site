@@ -214,8 +214,8 @@ export default function MedicalConditionPage({
   const resolvedCtaHref = ctaHref ?? (isArabic ? "/ar#intake-form" : "/send-medical-reports");
 
   // ── Footer strings ───────────────────────────────────────────────────────
-  const footerLine1 = footerLabels?.line1 ?? footerLabels?.trustLine ?? (isArabic ? null : "Operating within established clinical coordination frameworks.");
-  const footerLine2 = footerLabels?.line2 ?? (footerLabels?.brand && footerLabels?.location ? `${footerLabels.brand} · ${footerLabels.location}` : null) ?? (isArabic ? null : "Medical Care Germany · Berlin, Germany");
+  const footerLine1 = footerLabels?.line1 ?? footerLabels?.trustLine ?? (isArabic ? "تنسيق طبي متخصص للحالات المعقدة بين المرضى الدوليين والمستشفيات الألمانية." : "Operating within established clinical coordination frameworks.");
+  const footerLine2 = footerLabels?.line2 ?? (footerLabels?.brand && footerLabels?.location ? `${footerLabels.brand} · ${footerLabels.location}` : null) ?? (isArabic ? "نعمل من برلين — بفهم طبي وثقافي للمريض العربي." : "Medical Care Germany · Berlin, Germany");
 
   // ── Footer note in CTA box ───────────────────────────────────────────────
   const footerNote = sectionLabels?.footerNote ?? (isArabic ? null : "All documentation is handled in accordance with German data protection regulations.");

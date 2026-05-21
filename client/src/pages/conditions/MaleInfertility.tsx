@@ -21,7 +21,7 @@ export default function MaleInfertility() {
       <section className="py-20 px-6 bg-[#0B1C2C] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs uppercase tracking-widest text-slate-400 mb-4" style={FONT}>
-            ميديكال كير جيرماني · برلين، ألمانيا
+            Medical Care Germany
           </p>
           <h1 className="text-3xl md:text-5xl font-light leading-tight mb-6" style={FONT}>
             عقم الرجال المستعصي — متى يحتاج الأمر إلى تقييم متخصص في ألمانيا؟
@@ -263,7 +263,7 @@ export default function MaleInfertility() {
       <footer className="bg-white border-t border-slate-100">
         <ArabicFooterGuide />
         <div className="py-8 px-6 text-center">
-          <p className="text-xs text-slate-400" style={FONT}>ميديكال كير جيرماني · برلين، ألمانيا</p>
+          <p className="text-xs text-slate-400" style={FONT}>Medical Care Germany</p>
         </div>
       </footer>
     </div>

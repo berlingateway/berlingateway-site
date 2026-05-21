@@ -286,10 +286,13 @@ export default function NeurologyHubArabic() {
         <ArabicFooterGuide />
         <div className="py-8 px-6 text-center">
           <p className="text-xs text-slate-400" style={FONT}>
-            ميديكال كير جيرماني · برلين، ألمانيا
+            Medical Care Germany
           </p>
           <p className="text-xs text-slate-300 mt-1" style={FONT}>
-            تنسيق طبي منظم ضمن المنظومة الصحية الألمانية.
+            تنسيق طبي متخصص للحالات المعقدة بين المرضى الدوليين والمستشفيات الألمانية.
+          </p>
+          <p className="text-xs text-slate-300 mt-1" style={FONT}>
+            نعمل من برلين — بفهم طبي وثقافي للمريض العربي.
           </p>
         </div>
       </footer>

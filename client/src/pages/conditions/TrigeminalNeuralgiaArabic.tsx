@@ -31,7 +31,7 @@ export default function TrigeminalNeuralgiaArabic() {
           topBarEmail: "info@medicalcaregermany.com",
         }}
 
-        heroEyebrow="ميديكال كير جيرماني · برلين، ألمانيا"
+        heroEyebrow="Medical Care Germany"
         headline="عندما يصبح الألم في الوجه لا يُحتمل… القرار لا يجب أن يكون عشوائياً."
         subtitle="ألم العصب الخامس ليس مجرد ألم عادي. في بعض الحالات، يكون من أشد أنواع الألم التي تؤثر على الحياة اليومية، ويتطلب تقييماً دقيقاً لتحديد المسار العلاجي الصحيح."
         trustLine="تقييم طبي منظم ضمن شبكة المستشفيات الجامعية في ألمانيا."
@@ -157,8 +157,8 @@ export default function TrigeminalNeuralgiaArabic() {
         gdprNote="يتم التعامل مع جميع الوثائق وفقاً للوائح حماية البيانات الألمانية (GDPR)."
 
         footerLabels={{
-          line1: "تنسيق طبي منظم ضمن الأطر السريرية المعتمدة.",
-          line2: "ميديكال كير جيرماني · برلين، ألمانيا",
+          line1: "تنسيق طبي متخصص للحالات المعقدة بين المرضى الدوليين والمستشفيات الألمانية.",
+          line2: "Medical Care Germany",
         }}
 
         structuredData={JSON.stringify({

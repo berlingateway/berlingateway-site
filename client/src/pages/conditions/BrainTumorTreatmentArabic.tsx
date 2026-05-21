@@ -139,8 +139,8 @@ export default function BrainTumorTreatmentArabic() {
         gdprNote="يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR)."
 
         footerLabels={{
-          line1: "تنسيق طبي منظم ضمن الأطر السريرية المعتمدة.",
-          line2: "ميديكال كير جيرماني · برلين، ألمانيا",
+          line1: "تنسيق طبي متخصص للحالات المعقدة بين المرضى الدوليين والمستشفيات الألمانية.",
+          line2: "Medical Care Germany",
         }}
 
         structuredData={JSON.stringify({

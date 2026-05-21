@@ -30,7 +30,7 @@ export default function LungCancerArabic() {
           topBarEmail: "info@medicalcaregermany.com",
         }}
 
-        heroEyebrow="ميديكال كير جيرماني · برلين، ألمانيا"
+        heroEyebrow="Medical Care Germany"
         headline="علاج سرطان الرئة في ألمانيا: عندما يكون التشخيص دقيقاً، يصبح الأمل واقعاً"
         subtitle="في مواجهة سرطان الرئة، الوقت والدقة هما المفتاح. نحن نوفر لك الوصول إلى أحدث العلاجات المناعية والجينية تحت إشراف نخبة من كبار الأطباء في مراكز الأورام الألمانية المعتمدة."
         trustLine="مراجعة طبية منظمة ضمن شبكة المستشفيات الجامعية في ألمانيا."
@@ -145,8 +145,8 @@ export default function LungCancerArabic() {
         gdprNote="يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR)."
 
         footerLabels={{
-          line1: "تنسيق طبي منظم ضمن الأطر السريرية المعتمدة.",
-          line2: "ميديكال كير جيرماني · برلين، ألمانيا",
+          line1: "تنسيق طبي متخصص للحالات المعقدة بين المرضى الدوليين والمستشفيات الألمانية.",
+          line2: "Medical Care Germany",
         }}
 
         structuredData={JSON.stringify({

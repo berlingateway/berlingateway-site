@@ -199,7 +199,7 @@ export default function FertilityHub() {
       <footer className="bg-white border-t border-slate-100">
         <ArabicFooterGuide />
         <div className="py-8 px-6 text-center">
-          <p className="text-xs text-slate-400" style={FONT}>ميديكال كير جيرماني · برلين، ألمانيا</p>
+          <p className="text-xs text-slate-400" style={FONT}>Medical Care Germany</p>
         </div>
       </footer>
     </div>

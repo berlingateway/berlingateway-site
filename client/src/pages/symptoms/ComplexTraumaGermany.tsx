@@ -269,7 +269,7 @@ export default function ComplexTraumaGermany() {
             className="text-xs uppercase tracking-widest text-slate-400 mb-4"
             style={FONT}
           >
-            ميديكال كير جيرماني · برلين، ألمانيا
+            Medical Care Germany
           </p>
           <h1
             className="text-3xl md:text-5xl font-light leading-tight mb-6"

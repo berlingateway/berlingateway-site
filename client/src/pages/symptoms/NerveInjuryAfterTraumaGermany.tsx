@@ -65,7 +65,7 @@ export default function NerveInjuryAfterTraumaGermany() {
             className="text-xs uppercase tracking-widest text-slate-400 mb-4"
             style={FONT}
           >
-            ميديكال كير جيرماني · برلين، ألمانيا
+            Medical Care Germany
           </p>
           <h1
             className="text-3xl md:text-5xl font-light leading-tight mb-6"
@@ -450,7 +450,7 @@ export default function NerveInjuryAfterTraumaGermany() {
       <ArabicFooterGuide />
         <div className="py-8 px-6 text-center">
           <p className="text-xs text-slate-400" style={FONT}>
-            ميديكال كير جيرماني · برلين، ألمانيا
+            Medical Care Germany
           </p>
         </div>
       </footer>

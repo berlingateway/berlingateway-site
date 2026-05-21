@@ -27,6 +27,8 @@ export interface MedicalConditionPageProps {
   arabicSummaryTitle?: string;
   trustLine?: string;
   ctaLabel?: string;
+  /** Optional second button shown next to ctaLabel in the Hero */
+  ctaSecondary?: { label: string; href: string };
   ctaTitle?: string;
   ctaText?: string;
   ctaButton?: string;
@@ -165,6 +167,7 @@ export default function MedicalConditionPage({
   arabicSummaryTitle,
   trustLine,
   ctaLabel,
+  ctaSecondary,
   ctaTitle,
   ctaText,
   ctaButton,
@@ -308,13 +311,24 @@ export default function MedicalConditionPage({
             <p className="text-xs text-slate-400 mt-4 tracking-wide">{trustLine}</p>
           )}
           {ctaLabel && (
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap gap-3 justify-center">
               <a
                 href={resolvedCtaHref}
                 className="inline-block bg-slate-900 text-white text-sm font-medium px-6 py-3 hover:bg-slate-700 transition-colors tracking-wide"
               >
                 {ctaLabel}
               </a>
+              {ctaSecondary && (
+                <a
+                  href={ctaSecondary.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium px-6 py-3 transition-colors tracking-wide"
+                  style={{ border: "1px solid rgba(15,23,42,0.25)", color: "#0f172a" }}
+                >
+                  {ctaSecondary.label}
+                </a>
+              )}
             </div>
           )}
         </div>

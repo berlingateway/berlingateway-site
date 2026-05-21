@@ -3,6 +3,8 @@ import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
 
 
+const WA_HREF = `https://wa.me/4917647757767?text=${encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة انزلاق غضروفي")}`;
+
 export default function HerniatedDisc() {
   return (
     <>
@@ -34,6 +36,7 @@ export default function HerniatedDisc() {
 نراجع ملفك مع متخصصين في العمود الفقري بالمستشفيات الجامعية الألمانية.
 مخصص للحالات التي لم تستجب للعلاج أو تحتاج قراراً دقيقاً."
       ctaLabel="أرسل ملفك الآن للمراجعة"
+      ctaSecondary={{ label: "تحدث مع منسق عبر واتساب", href: WA_HREF }}
 
       checklistSection={{
         title: "هل هذه حالتك؟",

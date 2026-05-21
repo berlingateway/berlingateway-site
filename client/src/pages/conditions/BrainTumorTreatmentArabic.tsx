@@ -37,6 +37,7 @@ export default function BrainTumorTreatmentArabic() {
 نراجع ملفك مع فريق Tumor Board متخصص في المستشفيات الجامعية الألمانية."
         trustLine="مراجعة طبية منظمة ضمن شبكة المستشفيات الجامعية في ألمانيا."
         ctaLabel="أرسل ملفك الآن للمراجعة"
+        ctaSecondary={{ label: "تحدث مع منسق عبر واتساب", href: waHref }}
 
         checklistSection={{
           title: "هل هذه حالتك؟",

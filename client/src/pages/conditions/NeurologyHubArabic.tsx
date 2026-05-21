@@ -38,13 +38,24 @@ export default function NeurologyHubArabic() {
           <p className="text-xs text-slate-500 mb-10" style={FONT}>
             نحن لا نقدم معلومات عامة — بل نحدد لك المسار الطبي الصحيح بناءً على ملفك.
           </p>
-          <Link
-            href={intakeHref}
-            className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
-            style={FONT}
-          >
-            أرسل ملفك الآن للمراجعة
-          </Link>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 8 }}>
+            <Link
+              href={intakeHref}
+              className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
+              style={FONT}
+            >
+              أرسل ملفك الآن للمراجعة
+            </Link>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 text-sm font-medium transition-colors"
+              style={{ ...FONT, border: "1px solid rgba(255,255,255,0.35)", color: "#fff" }}
+            >
+              تحدث مع منسق عبر واتساب
+            </a>
+          </div>
         </div>
       </section>
 

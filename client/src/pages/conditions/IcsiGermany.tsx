@@ -5,7 +5,7 @@ import HreflangTags from "@/components/HreflangTags";
 
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const WA_HREF = "https://wa.me/4915781497451?text=" + encodeURIComponent("مرحباً، أود إرسال تقاريري الطبية لتقييم حالة الخصوبة");
+const WA_HREF = "https://wa.me/4917647757767?text=" + encodeURIComponent("مرحباً، أود إرسال تقاريري الطبية لتقييم حالة الخصوبة");
 const intakeHref = "/send-medical-reports";
 
 export default function IcsiGermany() {

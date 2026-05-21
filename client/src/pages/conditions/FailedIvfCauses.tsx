@@ -5,7 +5,7 @@ import HreflangTags from "@/components/HreflangTags";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const WA =
-  "https://wa.me/4915781497451?text=" +
+  "https://wa.me/4917647757767?text=" +
   encodeURIComponent(
     "مرحباً، أود إرسال تقارير المحاولات السابقة لتقييم أسباب الفشل."
   );

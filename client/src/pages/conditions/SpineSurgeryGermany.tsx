@@ -172,7 +172,7 @@ export default function SpineSurgeryGermany() {
             <a href="/ar/submit-case" style={{ background: "#fff", color: "#0B1C2C", padding: "14px 32px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
               أرسل ملفك الآن للمراجعة
             </a>
-            <a href="https://wa.me/4930257308750" target="_blank" rel="noopener noreferrer" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "14px 32px", fontWeight: 500, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
+            <a href="https://wa.me/4917647757767" target="_blank" rel="noopener noreferrer" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "14px 32px", fontWeight: 500, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
               تحدث مع منسق عبر واتساب
             </a>
           </div>

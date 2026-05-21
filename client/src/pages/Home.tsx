@@ -385,7 +385,7 @@ export default function Home() {
                 Submit Medical File
               </Button>
             </a>
-            <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/4917647757767" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent">
                 Speak with a Medical Coordinator
               </Button>
@@ -1088,7 +1088,7 @@ export default function Home() {
             </p>
             {/* WhatsApp mobile */}
             <a
-              href="https://wa.me/4915781497451"
+              href="https://wa.me/4917647757767"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-green-400 transition-colors"

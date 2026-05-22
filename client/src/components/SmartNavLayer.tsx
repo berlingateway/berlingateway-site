@@ -200,6 +200,9 @@ const RELATED_LABELS: Record<Lang, string> = {
 };
 
 export default function SmartNavLayer({ currentPath }: SmartNavLayerProps) {
+  // Arabic pages have ArabicHeaderLocked as the global header — no duplicate nav needed
+  if (currentPath.startsWith("/ar")) return null;
+
   const node = PAGE_GRAPH[currentPath];
 
   // If page not in graph, render minimal language switcher only

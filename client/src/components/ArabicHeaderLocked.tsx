@@ -1,23 +1,38 @@
 /*
 LOCKED COMPONENT — DO NOT MODIFY
 Source: /ar/trigeminal-neuralgia-treatment-germany (MedicalConditionPage Arabic nav)
-Any modification breaks design system
+Updated: Added Medical Conditions dropdown with 7 specialties
 */
 
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Globe } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
+
+const MEDICAL_CONDITIONS = [
+  { label: "الأعصاب والجهاز العصبي", href: "/ar/neurology-treatment-germany" },
+  { label: "العمود الفقري والانزلاق الغضروفي", href: "/ar/herniated-disc" },
+  { label: "أورام المخ", href: "/ar/brain-tumor-treatment-germany" },
+  { label: "القلب والأوعية الدموية", href: "/ar/cardiology-treatment-germany" },
+  { label: "العظام والمفاصل", href: "/ar/orthopedics-germany" },
+  { label: "إعادة التأهيل المتقدم", href: "/ar/advanced-rehabilitation-germany" },
+  { label: "ألم العصب الخامس", href: "/ar/trigeminal-neuralgia-treatment-germany" },
+];
 
 export default function ArabicHeaderLocked() {
   const [location] = useLocation();
   const [langOpen, setLangOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [condOpen, setCondOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+  const condRef = useRef<HTMLDivElement>(null);
 
   // All hooks MUST be called before any conditional return
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
         setLangOpen(false);
+      }
+      if (condRef.current && !condRef.current.contains(e.target as Node)) {
+        setCondOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -29,7 +44,7 @@ export default function ArabicHeaderLocked() {
 
   return (
     <>
-      {/* Top Contact Bar — exact copy from MedicalConditionPage Arabic */}
+      {/* Top Contact Bar */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
         <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
           <a
@@ -41,7 +56,7 @@ export default function ArabicHeaderLocked() {
         </div>
       </div>
 
-      {/* Navigation — exact copy from MedicalConditionPage Arabic nav */}
+      {/* Main Navigation */}
       <nav
         className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm"
         style={{ top: "var(--banner-height, 0px)" }}
@@ -59,10 +74,41 @@ export default function ArabicHeaderLocked() {
           </span>
         </div>
 
-        {/* Right side: Globe dropdown + CTA */}
+        {/* Right side: Medical Conditions dropdown + Globe + CTA */}
         <div className="flex items-center gap-4">
-          {/* Globe language switch — defensive, never crashes */}
-          <div className="relative" ref={dropdownRef}>
+
+          {/* Medical Conditions dropdown */}
+          <div className="relative hidden md:block" ref={condRef}>
+            <button
+              type="button"
+              onClick={() => setCondOpen((v) => !v)}
+              className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium"
+              aria-label="الحالات الطبية"
+            >
+              الحالات الطبية
+              <ChevronDown size={14} strokeWidth={2} className={condOpen ? "rotate-180 transition-transform" : "transition-transform"} />
+            </button>
+            {condOpen && (
+              <div
+                className="absolute left-0 mt-2 w-64 bg-white border border-slate-200 shadow-lg z-50"
+                dir="rtl"
+              >
+                {MEDICAL_CONDITIONS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 border-b border-slate-100 last:border-0 text-right transition-colors"
+                    onClick={() => setCondOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Globe language switch */}
+          <div className="relative" ref={langRef}>
             <button
               type="button"
               onClick={() => setLangOpen((v) => !v)}
@@ -91,7 +137,7 @@ export default function ArabicHeaderLocked() {
             )}
           </div>
 
-          {/* CTA button — exact styling from MedicalConditionPage */}
+          {/* CTA button */}
           <Link
             href="/send-medical-reports"
             className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"

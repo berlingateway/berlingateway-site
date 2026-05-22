@@ -363,31 +363,28 @@ export default function Home() {
       {/* SECTION 1: HERO - Elite Medical Authority Landing */}
       <section id="home" className="relative py-10 md:py-24 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
-          {/* H1: Clear Authority Statement */}
+          {/* Eyebrow */}
+          <p className="text-xs text-slate-400 uppercase tracking-widest mb-6 font-medium">Second Medical Opinion · Berlin · Germany</p>
+          {/* H1 */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light leading-[1.1] mb-8 tracking-tight">
-            When medical cases become complex, the decision requires greater expertise.
+            You’ve been told your case is complex.<br className="hidden md:block" /> Before any decision — your case deserves a real review in Berlin.
           </h1>
           
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-slate-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
-            We help international patients access specialized doctors and hospitals in Germany, with an initial medical case review before any travel decision.
-          </p>
-          
-          {/* Targeting Line */}
-          <p className="text-xs text-slate-400 font-light mb-6 max-w-xl mx-auto tracking-wide uppercase" style={{ letterSpacing: '0.06em' }}>
-            Designed for complex or unresolved medical cases seeking specialist review in Germany.
+            Many cases that reached us with a surgical decision — found a different path after evaluation.<br /> We review your file with specialists at German university hospitals.<br /> For complex or unresolved cases only.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <a href="#submit-case">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg">
-                Submit Medical File
+                Send Your File for Review
               </Button>
             </a>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-400 text-slate-200 hover:bg-slate-800 hover:text-white rounded-none px-8 py-6 text-base font-light bg-transparent">
-                Speak with a Medical Coordinator
+                Speak with a Coordinator via WhatsApp
               </Button>
             </a>
           </div>
@@ -1043,13 +1040,13 @@ export default function Home() {
       {/* MEDICAL DECISION GATEWAY */}
       <section className="py-16 md:py-20 px-6 bg-slate-900 text-white border-b border-slate-800">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-serif mb-6">Before Traveling for Treatment</h2>
+          <h2 className="text-2xl md:text-3xl font-serif mb-6">Your medical decision deserves a second opinion — not a second guess.</h2>
           <p className="text-base text-slate-300 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
-            Submitting your medical file allows an initial review to determine whether treatment in Germany is appropriate and which specialty is required. This step prevents unnecessary travel and ensures the correct clinical pathway from the outset.
+            Send your medical file and a specialist coordinator will contact you within 24 hours.
           </p>
           <a href="#submit-case">
             <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium">
-              Submit Your Medical File
+              Send Your File Now — Review within 24 hours
             </Button>
           </a>
         </div>
@@ -1102,10 +1099,6 @@ export default function Home() {
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
-          <p className="text-xs text-slate-500 mt-1">Powered by Berlin Medical Care</p>
-          <p className="mt-6 mx-auto leading-relaxed text-center" style={{ fontSize: '13px', color: '#6B7280', opacity: 0.85 }}>
-            Consulted by decision-makers seeking clarity before irreversible medical steps.
-          </p>
         </div>
       </footer>
 

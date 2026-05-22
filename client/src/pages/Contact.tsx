@@ -61,6 +61,22 @@ export default function Contact() {
               </div>
             </Card>
 
+            {/* Phone */}
+            <Card className="p-8 bg-white border-slate-200 rounded-none">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                </div>
+                <h3 className="text-lg font-serif mb-4 text-slate-900">Phone</h3>
+                <a href="tel:+493025730875" className="text-slate-600 hover:text-slate-900 transition-colors hover:underline">
+                  +49 30 25730875
+                </a>
+                <p className="text-sm text-slate-500 mt-4">
+                  Office hours: Mon–Fri, 9:00–17:00 CET
+                </p>
+              </div>
+            </Card>
+
             {/* Address */}
             <Card className="p-8 bg-white border-slate-200 rounded-none">
               <div className="flex flex-col items-center text-center">
@@ -69,8 +85,8 @@ export default function Contact() {
                 </div>
                 <h3 className="text-lg font-serif mb-4 text-slate-900">Address</h3>
                 <p className="text-slate-600">
-                  Sachsendamm 79<br/>
-                  10829 Berlin<br/>
+                  Perleberger Str. 41<br/>
+                  10559 Berlin<br/>
                   Germany
                 </p>
                 <p className="text-sm text-slate-500 mt-4">

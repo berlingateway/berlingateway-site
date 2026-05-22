@@ -66,8 +66,8 @@ export default function SubmitCase() {
         {/* Address block — structured, semantic */}
         <address className="not-italic text-center text-sm text-slate-500 mb-12 leading-relaxed">
           <strong className="text-slate-700">Berlin Medical Care</strong><br />
-          Sachsendamm 79<br />
-          10829 Berlin<br />
+          Perleberger Str. 41<br />
+          10559 Berlin<br />
           Germany
         </address>
 
@@ -102,7 +102,7 @@ export default function SubmitCase() {
           <a href="mailto:info@medicalcaregermany.com" className="block text-sm hover:text-slate-300 transition-colors">
             info@medicalcaregermany.com
           </a>
-          <p className="text-sm text-slate-500">Sachsendamm 79 · 10829 Berlin · Germany</p>
+          <p className="text-sm text-slate-500">Perleberger Str. 41 · 10559 Berlin · Germany</p>
           <div className="w-16 h-[1px] bg-slate-700 mx-auto"></div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
         </div>

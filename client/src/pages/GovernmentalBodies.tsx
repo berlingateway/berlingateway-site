@@ -127,8 +127,8 @@ export default function GovernmentalBodies() {
           <h2 className="text-3xl font-serif text-slate-900 mb-12">Berlin Office</h2>
           <div className="space-y-4 text-lg text-slate-700">
             <p className="font-medium text-slate-900">Berlin Medical Care</p>
-            <p>Sachsendamm 79</p>
-            <p>10829 Berlin</p>
+            <p>Perleberger Str. 41</p>
+            <p>10559 Berlin</p>
             <p>Germany</p>
           </div>
           <p className="text-slate-600 leading-relaxed mt-8">

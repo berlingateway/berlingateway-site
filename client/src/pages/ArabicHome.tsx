@@ -1335,7 +1335,7 @@ export default function ArabicHome() {
             <a href="mailto:info@medicalcaregermany.com" className="block text-base hover:text-slate-300 transition-colors">
               info@medicalcaregermany.com
             </a>
-            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Sachsendamm 79 · 10829 Berlin · ألمانيا</p>
+            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Perleberger Str. 41 · 10559 Berlin · ألمانيا</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026 — جميع الحقوق محفوظة</p>

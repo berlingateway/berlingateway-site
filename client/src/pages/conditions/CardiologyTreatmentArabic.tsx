@@ -363,13 +363,13 @@ export default function CardiologyTreatmentArabic() {
               <p className="text-base text-slate-700 leading-relaxed mb-3" style={FONT}>
                 "كنت أعاني من ضيق في التنفس وخفقان متكرر لأكثر من سنة. في ليبيا قالوا لي إن عندي مشكلة في صمام القلب وأحتاج عملية. أرسلت ملفي لبرلين — الفريق الطبي راجع كل شيء وقال إن الوضع لا يستدعي جراحة الآن، وأعطوني بروتوكول علاجي بديل. مضت ثمانية أشهر وأنا بخير."
               </p>
-              <footer className="text-sm text-slate-400" style={FONT}>خالد، 54 عامًا — ليبيا</footer>
+              <footer className="text-sm text-slate-400" style={FONT}>مريض من ليبيا، 54 عامًا</footer>
             </blockquote>
             <blockquote className="border-r-4 border-[#0B1C2C] pr-6 py-2">
               <p className="text-base text-slate-700 leading-relaxed mb-3" style={FONT}>
                 "أُصبت بنوبة قلبية خفيفة وبعدها قالوا لي إن عندي انسداد في شريانين وأحتاج قسطرة عاجلة. طلبت رأيًا ثانيًا من ألمانيا — بعد مراجعة صور القسطرة والتقارير، أكد الفريق أن التدخل ضروري لكن في مركز متخصص بتقنية مختلفة. السفر كان القرار الصحيح."
               </p>
-              <footer className="text-sm text-slate-400" style={FONT}>أحمد، 61 عامًا — العراق</footer>
+              <footer className="text-sm text-slate-400" style={FONT}>مريض من العراق، 61 عامًا</footer>
             </blockquote>
           </div>
         </div>

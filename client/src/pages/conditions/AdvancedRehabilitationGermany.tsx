@@ -469,13 +469,13 @@ export default function AdvancedRehabilitationGermany() {
               <p style={{ ...AR, fontSize: 14, color: "#334155", lineHeight: 1.85, marginBottom: 12 }}>
                 "كنت في برنامج تأهيل في السودان بعد إصابة بالحبل الشوكي من حادث سيارة، لكن بعد ستة أشهر لم يتحسن الوضع. أرسلنا الملف لبرلين — التقييم كشف أن هناك ضغطًا على جذر عصبية لم يتم علاجها بعد، وتم تصحيح المسار التأهيلي كاملاً. بعد أربعة أشهر بدأت أمشي بشكل طبيعي."
               </p>
-              <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>محمد، 38 عامًا — السودان</footer>
+              <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>مريض من الجزائر، 38 عامًا</footer>
             </blockquote>
             <blockquote style={{ borderRight: "4px solid #0B1C2C", paddingRight: 24, paddingTop: 8, paddingBottom: 8, margin: 0 }}>
               <p style={{ ...AR, fontSize: 14, color: "#334155", lineHeight: 1.85, marginBottom: 12 }}>
                 "فقدت ساقي في حادثة وبعد البتر كنت أحتاج طرفًا صناعيًا. في ليبيا قالوا لي إن الخيارات محدودة. طلبت تقييمًا من ألمانيا — الفريق حدد نوع الطرف المناسب وبرنامج التدريب بدقة، والنتيجة تجاوزت توقعاتي."
               </p>
-              <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>عبدالله، 44 عامًا — ليبيا</footer>
+              <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>مريض من ليبيا، 44 عامًا</footer>
             </blockquote>
           </div>
         </div>

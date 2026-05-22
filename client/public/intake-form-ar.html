@@ -143,12 +143,27 @@
     }
 
     input[type="file"] {
-      display: block;
-      width: 100%;
-      margin-top: 10px;
+      display: none;
+    }
+    .file-choose-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 22px;
+      background: #1e293b;
+      color: #fff;
       font-size: 13px;
-      color: #374151;
-      direction: rtl;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      border-radius: 2px;
+    }
+    .file-choose-btn:hover { background: #334155; }
+    .file-names-label {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #6b7280;
     }
 
     .confidentiality-notice {
@@ -300,7 +315,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
         </svg>
         <p class="file-upload-text"><strong>رفع التقارير والصور والملفات الطبية</strong><br />PDF، JPEG، PNG، DICOM — حد أقصى 10 ميجابايت لكل ملف</p>
-        <input type="file" name="Medical Documents" multiple accept=".pdf,.jpg,.jpeg,.png,.dcm" />
+        <input type="file" id="file-input-ar" name="Medical Documents" multiple accept=".pdf,.jpg,.jpeg,.png,.dcm" onchange="document.getElementById('file-names-ar').textContent = this.files.length > 0 ? Array.from(this.files).map(function(f){return f.name;}).join(', ') : 'No files selected'" />
+        <button type="button" class="file-choose-btn" onclick="document.getElementById('file-input-ar').click()">Choose Files</button>
+        <span class="file-names-label" id="file-names-ar">No files selected</span>
       </div>
     </div>
 

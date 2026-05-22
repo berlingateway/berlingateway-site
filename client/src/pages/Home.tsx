@@ -1098,7 +1098,7 @@ export default function Home() {
               </svg>
               WhatsApp: +49 1578 1497451
             </a>
-            <p className="text-sm text-slate-500">Perleberger Str. 41 · 10559 Berlin · Germany</p>
+            <p className="text-sm text-slate-500">Medical Care Germany · Patient Coordination Office · Perleberger Str. 41 · 10559 Berlin · Germany</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>

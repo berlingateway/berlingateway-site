@@ -144,7 +144,7 @@ const pediatricRelatedAR = [
 const neurologyClusterAR = [
   { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
   { href: "/ar/brain-tumor-treatment-germany", label: "أورام المخ" },
-  { href: "/ar/trigeminal-neuralgia-germany", label: "ألم العصب الخامس" },
+  { href: "/ar/trigeminal-neuralgia-treatment-germany", label: "ألم العصب الخامس" },
   { href: "/ar/parkinsons-treatment-germany", label: "مرض باركنسون" },
   { href: "/ar/pediatric-neurology-germany", label: "أعصاب الأطفال" },
 ];
@@ -766,8 +766,8 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     cluster: neurologyClusterAR,
     related: neurologyRelatedAR,
   },
-  "/ar/trigeminal-neuralgia-germany": {
-    path: "/ar/trigeminal-neuralgia-germany",
+  "/ar/trigeminal-neuralgia-treatment-germany": {
+    path: "/ar/trigeminal-neuralgia-treatment-germany",
     label: "ألم العصب الخامس",
     lang: "ar",
     hub: "/ar/neurology-treatment-germany",
@@ -829,7 +829,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     hub: "/neurology-treatment-germany",
     hubLabel: "Neurology",
     equivalents: {
-      ar: "/ar/trigeminal-neuralgia-germany",
+      ar: "/ar/trigeminal-neuralgia-treatment-germany",
       de: "/de/neurologische-rehabilitation-deutschland",
     },
     cluster: neurologyClusterEN,

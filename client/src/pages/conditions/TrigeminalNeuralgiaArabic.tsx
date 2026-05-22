@@ -11,8 +11,8 @@ export default function TrigeminalNeuralgiaArabic() {
 
   return (
     <>
-      <SmartNavLayer currentPath="/ar/trigeminal-neuralgia-germany" />
-      <HreflangTags currentPath="/ar/trigeminal-neuralgia-germany" />
+      <SmartNavLayer currentPath="/ar/trigeminal-neuralgia-treatment-germany" />
+      <HreflangTags currentPath="/ar/trigeminal-neuralgia-treatment-germany" />
       <MedicalConditionPage
         pageDir="rtl"
         hideGlobalHeader={true}

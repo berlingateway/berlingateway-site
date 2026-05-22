@@ -23,24 +23,35 @@ export default function CardiologyTreatmentArabic() {
       <section className="py-20 px-6 bg-[#0B1C2C] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs uppercase tracking-widest text-slate-400 mb-4" style={FONT}>
-            أمراض وجراحة القلب في ألمانيا
+            رأي طبي ثانٍ في أمراض القلب · برلين · ألمانيا
           </p>
           <h1
             className="text-2xl md:text-4xl font-medium leading-snug mb-6 text-white"
             style={FONT}
           >
-            عندما تصبح حالة القلب معقدة… نحدد لك المسار العلاجي أو الجراحي الصحيح في ألمانيا
+            قبل أن تقرر العملية أو القسطرة — اعرف رأيًا طبيًا ثانيًا من ألمانيا
           </h1>
           <p className="text-base text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed" style={FONT}>
-            تقييم طبي وجراحي للحالات القلبية المعقدة خلال 24–48 ساعة وربطها بالمركز المناسب.
+            كثير من الحالات القلبية التي وصلتنا كانت تحمل قرارًا جراحيًا لم يكن ضروريًا — أو العكس، تأخير علاجي كان خطيرًا. التقييم الصحيح يبدأ بمراجعة الملف الطبي كاملاً من برلين.
           </p>
-          <Link
-            href="/send-medical-reports"
-            className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
-            style={FONT}
-          >
-            أرسل تقاريرك ليتم تقييم حالتك القلبية
-          </Link>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link
+              href="/send-medical-reports"
+              className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
+              style={FONT}
+            >
+              أرسل ملفك الآن للمراجعة
+            </Link>
+            <a
+              href="https://wa.me/4915781497451?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C%20%D8%A3%D9%88%D8%AF%20%D8%A5%D8%B1%D8%B3%D8%A7%D9%84%20%D9%85%D9%84%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%20%D9%84%D9%84%D8%AA%D9%82%D9%8A%D9%8A%D9%85"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-4 text-slate-300 text-sm border border-slate-600 hover:border-slate-400 transition-colors"
+              style={FONT}
+            >
+              تحدث مع منسق عبر واتساب
+            </a>
+          </div>
         </div>
       </section>
 
@@ -319,17 +330,51 @@ export default function CardiologyTreatmentArabic() {
       <section className="py-20 px-6 bg-[#0B1C2C] text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-medium mb-8" style={FONT}>
-            ابدأ الآن
+            قرارك القلبي يستحق مراجعة دقيقة
           </h2>
-          <Link
-            href="/send-medical-reports"
-            className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
-            style={FONT}
-          >
-            أرسل ملفك الطبي الآن — ليتم تحديد القرار المناسب لحالتك
-          </Link>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link
+              href="/send-medical-reports"
+              className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
+              style={FONT}
+            >
+              أرسل ملفك الآن للمراجعة
+            </Link>
+            <a
+              href="https://wa.me/4915781497451?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C%20%D8%A3%D9%88%D8%AF%20%D8%A5%D8%B1%D8%B3%D8%A7%D9%84%20%D9%85%D9%84%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%20%D9%84%D9%84%D8%AA%D9%82%D9%8A%D9%8A%D9%85"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-4 text-slate-300 text-sm border border-slate-600 hover:border-slate-400 transition-colors"
+              style={FONT}
+            >
+              تحدث مع منسق عبر واتساب
+            </a>
+          </div>
         </div>
       </section>
+      {/* PATIENT STORIES */}
+      <section className="py-16 px-6 bg-white border-b border-slate-200">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 text-center mb-10" style={FONT}>
+            من ملفات المرضى
+          </h2>
+          <div className="space-y-8">
+            <blockquote className="border-r-4 border-[#0B1C2C] pr-6 py-2">
+              <p className="text-base text-slate-700 leading-relaxed mb-3" style={FONT}>
+                "كنت أعاني من ضيق في التنفس وخفقان متكرر لأكثر من سنة. في ليبيا قالوا لي إن عندي مشكلة في صمام القلب وأحتاج عملية. أرسلت ملفي لبرلين — الفريق الطبي راجع كل شيء وقال إن الوضع لا يستدعي جراحة الآن، وأعطوني بروتوكول علاجي بديل. مضت ثمانية أشهر وأنا بخير."
+              </p>
+              <footer className="text-sm text-slate-400" style={FONT}>خالد، 54 عامًا — ليبيا</footer>
+            </blockquote>
+            <blockquote className="border-r-4 border-[#0B1C2C] pr-6 py-2">
+              <p className="text-base text-slate-700 leading-relaxed mb-3" style={FONT}>
+                "أُصبت بنوبة قلبية خفيفة وبعدها قالوا لي إن عندي انسداد في شريانين وأحتاج قسطرة عاجلة. طلبت رأيًا ثانيًا من ألمانيا — بعد مراجعة صور القسطرة والتقارير، أكد الفريق أن التدخل ضروري لكن في مركز متخصص بتقنية مختلفة. السفر كان القرار الصحيح."
+              </p>
+              <footer className="text-sm text-slate-400" style={FONT}>أحمد، 61 عامًا — العراق</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       {/* INTERNAL LINKING */}
       <section className="py-16 px-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-3xl mx-auto">

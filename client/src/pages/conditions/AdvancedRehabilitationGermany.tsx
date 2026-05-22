@@ -212,23 +212,23 @@ export default function AdvancedRehabilitationGermany() {
       <section style={{ background: "#0B1C2C", padding: "80px 24px 72px", textAlign: "center" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <p style={{ ...AR, fontSize: 11, letterSpacing: "0.18em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 20 }}>
-            Medical Care Germany — المحور المركزي للتعافي
+            رأي طبي ثانٍ في إعادة التأهيل · برلين · ألمانيا
           </p>
           <h1 style={{ ...AR, fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.45, marginBottom: 20 }}>
-            إعادة التأهيل المتقدم في ألمانيا
+            برنامجك التأهيلي لم ينجح — هل جربت تقييمًا متخصصًا في ألمانيا؟
           </h1>
           <p style={{ ...AR, fontSize: 16, color: "#94a3b8", lineHeight: 1.85, maxWidth: 640, margin: "0 auto 16px" }}>
-            تنسيق مسارات التعافي الطبي المعقدة داخل ألمانيا — للحالات التي تتجاوز التأهيل الأولي وتحتاج تقييمًا متخصصًا متعدد التخصصات.
+            كثير من حالات إعادة التأهيل التي وصلتنا كانت تتبع برنامجًا غير مناسب لطبيعة الإصابة — أو كانت تحتاج تدخلاً جراحيًا إضافيًا لم يتم تشخيصه. التقييم الصحيح يبدأ بمراجعة الملف كاملاً من برلين.
           </p>
           <p style={{ ...AR, fontSize: 14, color: "#64748b", lineHeight: 1.8, maxWidth: 600, margin: "0 auto 36px" }}>
             إصابات الحرب والحوادث · الأطراف الصناعية · التأهيل العصبي · الحبل الشوكي · الألم المزمن · فشل الجراحة
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>
-              أرسل التقارير الطبية للتقييم
+              أرسل ملفك الآن للمراجعة
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
-              تواصل عبر واتسآب
+              تحدث مع منسق عبر واتساب
             </a>
           </div>
         </div>
@@ -455,7 +455,33 @@ export default function AdvancedRehabilitationGermany() {
         </div>
       </section>
 
-      {/* ══ CROSS-CLUSTER SECTION ════════════════════════════════════════ */}
+      {/* ══ PATIENT STORIES ══════════════════════════════════════════════════════ */}
+      <section style={{ padding: "72px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ ...AR, fontSize: 10, letterSpacing: "0.2em", color: "#94a3b8", textTransform: "uppercase", marginBottom: 12, textAlign: "center" }}>
+            من ملفات المرضى
+          </p>
+          <h2 style={{ ...AR, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 500, color: "#0B1C2C", marginBottom: 40, lineHeight: 1.5, textAlign: "center" }}>
+            تجارب وصلتنا
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+            <blockquote style={{ borderRight: "4px solid #0B1C2C", paddingRight: 24, paddingTop: 8, paddingBottom: 8, margin: 0 }}>
+              <p style={{ ...AR, fontSize: 14, color: "#334155", lineHeight: 1.85, marginBottom: 12 }}>
+                "كنت في برنامج تأهيل في السودان بعد إصابة بالحبل الشوكي من حادث سيارة، لكن بعد ستة أشهر لم يتحسن الوضع. أرسلنا الملف لبرلين — التقييم كشف أن هناك ضغطًا على جذر عصبية لم يتم علاجها بعد، وتم تصحيح المسار التأهيلي كاملاً. بعد أربعة أشهر بدأت أمشي بشكل طبيعي."
+              </p>
+              <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>محمد، 38 عامًا — السودان</footer>
+            </blockquote>
+            <blockquote style={{ borderRight: "4px solid #0B1C2C", paddingRight: 24, paddingTop: 8, paddingBottom: 8, margin: 0 }}>
+              <p style={{ ...AR, fontSize: 14, color: "#334155", lineHeight: 1.85, marginBottom: 12 }}>
+                "فقدت ساقي في حادثة وبعد البتر كنت أحتاج طرفًا صناعيًا. في ليبيا قالوا لي إن الخيارات محدودة. طلبت تقييمًا من ألمانيا — الفريق حدد نوع الطرف المناسب وبرنامج التدريب بدقة، والنتيجة تجاوزت توقعاتي."
+              </p>
+              <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>عبدالله، 44 عامًا — ليبيا</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ CROSS-CLUSTER SECTION ══════════════════════════════════════════════════ */}
       <CrossClusterSection
         clusters={["trauma_mri_rehab", "neuro_spine", "vestibular_audiology", "hno_neuro"]}
         excludeCurrentHref="/ar/advanced-rehabilitation-germany"
@@ -468,7 +494,7 @@ export default function AdvancedRehabilitationGermany() {
             تنسيق طبي متخصص
           </p>
           <h2 style={{ ...AR, fontSize: "clamp(22px, 3.5vw, 36px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.5, marginBottom: 20 }}>
-            هل حالتك تحتاج إلى تقييم تأهيلي متخصص في ألمانيا؟
+            مسارك التأهيلي يبدأ بتقييم دقيق من برلين
           </h2>
           <p style={{ ...AR, fontSize: 15, color: "#64748b", lineHeight: 1.85, marginBottom: 16 }}>
             نُقيّم التقارير الطبية من برلين ونُحدد مدى ملاءمة برامج التأهيل المتقدم في ألمانيا — للحالات القادمة من ليبيا، السودان، العراق، ودول الخليج.
@@ -478,10 +504,10 @@ export default function AdvancedRehabilitationGermany() {
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
-              أرسل التقارير الطبية للتقييم
+              أرسل ملفك الآن للمراجعة
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "transparent", color: "#94a3b8", fontSize: 14, textDecoration: "none", border: "1px solid #334155" }}>
-              تواصل عبر واتسآب
+              تحدث مع منسق عبر واتساب
             </a>
           </div>
           <p style={{ ...AR, fontSize: 11, color: "#334155", marginTop: 20 }}>

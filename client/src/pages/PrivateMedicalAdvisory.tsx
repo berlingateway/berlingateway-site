@@ -1,9 +1,15 @@
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import ContactBar from "@/components/ContactBar";
 import PremiumFooter from "@/components/PremiumFooter";
 
 export default function PrivateMedicalAdvisory() {
+  const [, navigate] = useLocation();
+  useEffect(() => {
+    navigate("/", { replace: true });
+  }, [navigate]);
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       

@@ -25,7 +25,7 @@ export default function GermanFallback() {
   return (
     <div style={{ ...FONT, background: "#fff", color: NAVY, minHeight: "100vh" }}>
       {/* Meta */}
-      <title>Medical Care Germany — Institutionelle Medizinkoordination | Berlin</title>
+      <title>Medical Care Germany | Berlin</title>
       <meta
         name="description"
         content="Medical Care Germany — strukturierter medizinischer Zugang zum deutschen Gesundheitssystem für internationale Patienten, Botschaften und institutionelle Partner."
@@ -130,7 +130,7 @@ export default function GermanFallback() {
       {/* ── FOOTER ── */}
       <footer style={{ padding: "32px 24px", textAlign: "center", borderTop: "1px solid #e2e8f0" }}>
         <p style={{ fontSize: 12, color: SLATE_BODY, marginBottom: 8 }}>
-          Medical Care Germany — Institutionelle Medizinkoordination
+          Medical Care Germany | Berlin
         </p>
         <p style={{ fontSize: 11, color: "#94a3b8", marginBottom: 16 }}>
           info@medicalcaregermany.com

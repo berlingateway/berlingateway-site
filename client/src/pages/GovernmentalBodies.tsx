@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
 import { Building2, FileText, Shield, Lock } from "lucide-react";
 import { Link } from "wouter";
 import ContactBar from "@/components/ContactBar";
@@ -7,6 +8,9 @@ import PremiumFooter from "@/components/PremiumFooter";
 export default function GovernmentalBodies() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       
       <ContactBar />
       

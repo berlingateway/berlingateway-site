@@ -1328,7 +1328,7 @@ export default function ArabicHome() {
         <div className="py-10">
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-3">
-            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>واتساب — للحالات الطبية مباشرة</p>
+            <p className="text-sm text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>Landline — Hessquartier</p>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" className="block text-lg hover:text-slate-300 transition-colors">
               +49 30 25730875
             </a>

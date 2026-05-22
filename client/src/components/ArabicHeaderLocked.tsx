@@ -46,12 +46,19 @@ export default function ArabicHeaderLocked() {
     <>
       {/* Top Contact Bar */}
       <div className="w-full bg-slate-900 text-white py-3 px-6">
-        <div className="max-w-7xl mx-auto flex justify-center items-center text-sm">
+        <div className="max-w-7xl mx-auto flex justify-center items-center gap-6 text-sm">
           <a
             href="mailto:info@medicalcaregermany.com"
             className="hover:text-slate-300 transition-colors"
           >
             info@medicalcaregermany.com
+          </a>
+          <span className="text-slate-600">|</span>
+          <a
+            href="tel:+493025730875"
+            className="hover:text-slate-300 transition-colors"
+          >
+            +49 30 25730875
           </a>
         </div>
       </div>

@@ -467,7 +467,7 @@ export default function AdvancedRehabilitationGermany() {
           <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
             <blockquote style={{ borderRight: "4px solid #0B1C2C", paddingRight: 24, paddingTop: 8, paddingBottom: 8, margin: 0 }}>
               <p style={{ ...AR, fontSize: 14, color: "#334155", lineHeight: 1.85, marginBottom: 12 }}>
-                "كنت في برنامج تأهيل في السودان بعد إصابة بالحبل الشوكي من حادث سيارة، لكن بعد ستة أشهر لم يتحسن الوضع. أرسلنا الملف لبرلين — التقييم كشف أن هناك ضغطًا على جذر عصبية لم يتم علاجها بعد، وتم تصحيح المسار التأهيلي كاملاً. بعد أربعة أشهر بدأت أمشي بشكل طبيعي."
+                "كنت أعاني من ألم مزمن في الظهر مع ضعف في الساق بعد جراحة فقرات أجريتها منذ عام، لكن الوضع لم يتحسن. أرسلنا الملف لبرلين — التقييم كشف أن هناك ضغطًا على جذر عصبي لم يُعالَج بعد، وتم تصحيح المسار التأهيلي كاملاً. بعد أربعة أشهر بدأت أمشي بشكل طبيعي."
               </p>
               <footer style={{ ...AR, fontSize: 13, color: "#64748b" }}>مريض من الجزائر، 38 عامًا</footer>
             </blockquote>

@@ -40,27 +40,26 @@ export default function GermanFallback() {
       <section style={{ background: NAVY, padding: "72px 24px 64px", textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <p style={{ fontSize: 10, letterSpacing: "0.2em", color: SLATE_TEXT, textTransform: "uppercase", marginBottom: 20 }}>
-            Medical Care Germany — Berlin
+            Medizinische Koordination · Berlin
           </p>
           <h1 style={{ fontSize: "clamp(24px, 4vw, 38px)", fontWeight: 500, color: WHITE, lineHeight: 1.45, marginBottom: 18 }}>
-            Institutionelle Medizinkoordination
+            Komplexe Fälle brauchen den richtigen Weg ins deutsche Gesundheitssystem.
           </h1>
           <p style={{ fontSize: 15, color: SLATE_TEXT, lineHeight: 1.85, maxWidth: 560, margin: "0 auto 32px" }}>
-            Medical Care Germany koordiniert den strukturierten Zugang zum deutschen Gesundheitssystem
-            für internationale Patienten, Botschaften und institutionelle Partner.
+            Medical Care Germany koordiniert den Zugang zu spezialisierten Ärzten und Universitätskliniken in Deutschland — für internationale Patienten, arabischsprachige Ärzte und institutionelle Partner.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a
               href="/send-medical-reports"
               style={{ display: "inline-block", padding: "12px 28px", background: "#fff", color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}
             >
-              Medizinische Unterlagen einreichen
+              Unterlagen einreichen
             </a>
             <a
-              href="/"
+              href="/contact"
               style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: SLATE_TEXT, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}
             >
-              English Homepage
+              Kontakt aufnehmen
             </a>
           </div>
         </div>
@@ -114,17 +113,16 @@ export default function GermanFallback() {
       <section style={{ background: NAVY, padding: "64px 24px", textAlign: "center" }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(18px, 2.5vw, 24px)", fontWeight: 500, color: WHITE, marginBottom: 16, lineHeight: 1.5 }}>
-            Medizinische Unterlagen einreichen
+            Sie haben einen Fall — wir kennen den richtigen Ansprechpartner.
           </h2>
           <p style={{ fontSize: 14, color: SLATE_TEXT, lineHeight: 1.8, marginBottom: 28 }}>
-            Für eine erste Fallbewertung können medizinische Berichte, Bildgebung und Befunde
-            über das sichere Einreichungsformular übermittelt werden.
+            Senden Sie uns die medizinischen Unterlagen. Ein Koordinator meldet sich innerhalb von 24 Stunden.
           </p>
           <a
             href="/send-medical-reports"
             style={{ display: "inline-block", padding: "13px 32px", background: "#fff", color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}
           >
-            Unterlagen einreichen
+            Jetzt Unterlagen einreichen
           </a>
         </div>
       </section>

@@ -56,7 +56,7 @@ export default function GermanFallback() {
               Unterlagen einreichen
             </a>
             <a
-              href="/contact"
+              href="/send-medical-reports"
               style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: SLATE_TEXT, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}
             >
               Kontakt aufnehmen

@@ -55,5 +55,9 @@
 
 # New Unique Redirects
 /impressum/ /de/impressum 301
+/de/apply /de/assessment 301
+/de/framework /de/systemlogik 301
+/de/orientierung /de/voraussetzungen 301
+/de/struktur-vor-bewerbung /de/voraussetzungen 301
 
 /* /index.html 200

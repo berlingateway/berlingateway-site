@@ -67,6 +67,7 @@ import InternationalPatients from "./pages/InternationalPatients";
 
 // Arabic Symptom Entry Pages
 import DizzinessLongTerm from "./pages/symptoms/DizzinessLongTerm";
+import UnexplainedDizziness from "./pages/symptoms/UnexplainedDizziness";
 import VertigoUnknownCause from "./pages/symptoms/VertigoUnknownCause";
 import UnexplainedBalanceLoss from "./pages/symptoms/UnexplainedBalanceLoss";
 import NumbnessOneSideBody from "./pages/symptoms/NumbnessOneSideBody";
@@ -215,6 +216,7 @@ function Router() {
       <Route path={"/ar/lung-cancer-treatment-germany"} component={LungCancerArabic} />
       {/* Arabic Symptom Entry Pages */}
       <Route path={"/ar/dizziness-long-term"} component={DizzinessLongTerm} />
+      <Route path={"/ar/unexplained-dizziness"} component={UnexplainedDizziness} />
       <Route path={"/ar/vertigo-unknown-cause"} component={VertigoUnknownCause} />
       <Route path={"/ar/unexplained-balance-loss"} component={UnexplainedBalanceLoss} />
       <Route path={"/ar/numbness-one-side-body"} component={NumbnessOneSideBody} />

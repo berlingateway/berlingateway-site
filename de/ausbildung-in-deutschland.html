@@ -13,309 +13,271 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;color:#0D1117;background:#FFFFFF}
-    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
-    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
-    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
-    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
-    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
-    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
-    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
-    .brand span{color:#0B3B8C}
-    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
-    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:0 !important}
-    .inner{max-width:780px;margin:0 auto}
-    .section{padding:72px 24px}
-    .section--alt{background:#F8F9FA}
-    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
-    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
-    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
-    .trust-strip{background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:20px 24px}
-    .trust-strip__inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
-    .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500}
-    .trust-item span{color:#15803D;font-size:15px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
-    .card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
-    .card h4{font-size:15px;font-weight:600;margin-bottom:8px;color:#0D1117}
-    .card p{font-size:13px;color:#6B7280;line-height:1.6}
-    .faq-list{list-style:none;padding:0;margin:0}
-    .faq-item{border-bottom:1px solid #E5E7EB;padding:24px 0}
-    .faq-item:last-child{border-bottom:none}
-    .faq-question{font-weight:600;color:#0D1117;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px}
-    .faq-toggle{display:inline-block;transition:transform 0.2s}
-    .faq-toggle.active{transform:rotate(180deg)}
-    .faq-answer{display:none;margin-top:16px;font-size:14px;color:#6B7280;line-height:1.6}
-    .faq-answer.active{display:block}
-    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
-    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
-    @media(max-width:640px){
-      .nav a:not(.nav-cta){display:none}
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .trust-strip__inner{gap:20px}
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --light: #f8fafc;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: var(--white); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Navigation */
+    .header { background: var(--primary); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+    .brand { color: var(--white); font-weight: 700; text-decoration: none; font-size: 1.25rem; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .btn-nav { background: var(--accent); color: var(--white) !important; padding: 0.5rem 1rem; border-radius: 4px; }
+
+    /* Hero Compact */
+    .hero { background: var(--primary); padding: 4rem 0 3rem; color: var(--white); text-align: center; }
+    .kicker { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; margin-bottom: 1rem; }
+    .h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
+    .lead { font-size: 1.125rem; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 2rem; }
+
+    /* Trust Strip */
+    .trust-strip { background: var(--light); border-bottom: 1px solid #e2e8f0; padding: 1.25rem 0; }
+    .trust-wrap { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; color: var(--primary); }
+    .trust-item span { color: #22c55e; }
+
+    /* Sections */
+    .section { padding: 5rem 0; }
+    .section--alt { background: var(--light); }
+    .section-header { text-align: center; max-width: 700px; margin: 0 auto 3.5rem; }
+    .section-header h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary); }
+    
+    /* Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; transition: 0.3s; }
+    .card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+    .card p { font-size: 0.95rem; color: var(--text); }
+    .card .salary { display: inline-block; background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; margin-top: 1rem; }
+
+    /* Process List */
+    .process-list { max-width: 800px; margin: 0 auto; }
+    .process-item { display: flex; gap: 1.5rem; margin-bottom: 2rem; }
+    .process-number { flex-shrink: 0; width: 32px; height: 32px; background: var(--accent); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; }
+    .process-content h4 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+
+    /* FAQ */
+    .faq-item { background: var(--white); border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 1rem; overflow: hidden; }
+    .faq-question { width: 100%; padding: 1.25rem; text-align: left; background: none; border: none; font-weight: 600; font-size: 1rem; color: var(--primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { padding: 0 1.25rem 1.25rem; color: var(--text); display: none; }
+    .faq-answer.active { display: block; }
+
+    /* CTA Block */
+    .cta-block { background: var(--primary); color: var(--white); padding: 4rem 2rem; border-radius: 16px; text-align: center; margin-top: 4rem; }
+    .cta-block h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .btn-white { background: var(--white); color: var(--primary); padding: 0.75rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block; margin-bottom: 1rem; }
+    .whatsapp-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; display: block; }
+
+    /* Footer */
+    .footer { background: #0a0f1d; color: rgba(255,255,255,0.6); padding: 4rem 0 2rem; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand { color: var(--white); font-weight: 700; margin-bottom: 1rem; display: block; }
+    .footer-links h4 { color: var(--white); margin-bottom: 1.2rem; font-size: 1rem; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { color: inherit; text-decoration: none; transition: 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links { display: none; }
+      .h1 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
 
-<div class="top-band">
-  <div class="top-band__inner">
-    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-    <div style="display:flex;gap:12px;align-items:center">
-      <a href="/ar/ausbildung-in-deutschland" class="lang-badge">العربية</a>
-      <span style="opacity:.5">Experten vor Ort</span>
-    </div>
-  </div>
-</div>
-
 <header class="header">
-  <div class="header__inner">
-    <a href="/de" class="brand">Berlin <span>Gateway</span></a>
-    <nav class="nav">
-      <a href="/de/chancenkarte">Chancenkarte</a>
-      <a href="/de/aerzte">Ärzte</a>
-      <a href="/de/pflegekraefte">Pflege</a>
-      <a href="/de/systemlogik">System</a>
-      <a href="/de/assessment" class="nav-cta">Assessment</a>
+  <div class="container nav-wrap">
+    <a href="/de/" class="brand">Berlin Gateway</a>
+    <nav class="nav-links">
+      <a href="/de/chancenkarte.html">Chancenkarte</a>
+      <a href="/de/visum-deutschland.html">Visum</a>
+      <a href="/de/arbeit-in-deutschland.html">Jobs</a>
+      <a href="/de/studieren-in-deutschland.html">Studium</a>
+      <a href="/de/assessment.html" class="btn-nav">Start Assessment</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
-  <div class="inner">
-    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">Ausbildung — Ihr Start</p>
-    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">Ausbildung in Deutschland<br><em style="font-style:normal;color:#93C5FD;">für internationale Bewerber.</em></h1>
-    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto;line-height:1.7;font-weight:300;">Starten Sie Ihre Karriere mit dem dualen System. Praxisorientiert, bezahlt und mit exzellenten Zukunftsperspektiven.</p>
-  </div>
-</section>
+<main>
+  <section class="hero">
+    <div class="container">
+      <p class="kicker">Ausbildung in Deutschland</p>
+      <h1 class="h1">Nicht nur lernen —<br>Vom ersten Tag an verdienen.</h1>
+      <p class="lead">Das duale Ausbildungssystem kombiniert erstklassige Theorie mit bezahlter Praxis. Starten Sie Ihre Karriere direkt im deutschen Betrieb.</p>
+    </div>
+  </section>
 
-<!-- TRUST -->
-<div class="trust-strip">
-  <div class="trust-strip__inner">
-    <div class="trust-item"><span>✓</span> Duales System</div>
-    <div class="trust-item"><span>✓</span> Bezahlte Ausbildung</div>
-    <div class="trust-item"><span>✓</span> Sprach-Vorbereitung</div>
-    <div class="trust-item"><span>✓</span> Begleitung vor Ort</div>
-  </div>
-</div>
-
-<!-- WAS IST AUSBILDUNG -->
-<section class="section">
-  <div class="inner">
-    <p class="section-label">System-Überblick</p>
-    <h2>Das duale System</h2>
-    <p class="lead">Die Kombination aus Theorie und Praxis ist der Schlüssel zum Erfolg auf dem deutschen Arbeitsmarkt.</p>
-    
-    <div class="grid-2">
-      <div class="card">
-        <h4 style="color:#0B3B8C;">Theorie & Praxis</h4>
-        <p>Sie lernen im Betrieb die praktische Arbeit und in der Berufsschule die theoretischen Grundlagen. Beides wird eng verzahnt.</p>
-      </div>
-      <div class="card">
-        <h4 style="color:#0B3B8C;">Vergütung</h4>
-        <p>Im Gegensatz zum Studium erhalten Sie in der Ausbildung vom ersten Monat an ein Gehalt (Ausbildungsvergütung).</p>
-      </div>
+  <div class="trust-strip">
+    <div class="container trust-wrap">
+      <div class="trust-item"><span>✓</span> Duales System</div>
+      <div class="trust-item"><span>✓</span> Bezahlte Ausbildung</div>
+      <div class="trust-item"><span>✓</span> Sprach-Vorbereitung</div>
+      <div class="trust-item"><span>✓</span> Experten vor Ort</div>
     </div>
   </div>
-</section>
 
-<!-- BERUFE -->
-
-<!-- RELATED PAGES -->
-<section class="section section--alt" style="padding:48px 24px" >
-  <div class="inner">
-    <p class="section-label">Weitere Informationen</p>
-    <div class="grid-3" style="margin-top:0">
-
-      <a href="/de/visum-deutschland" style="text-decoration:none">
-        <div class="card" style="padding:16px;text-align:center;transition:border-color 0.2s" onmouseover="this.style.borderColor='#0B3B8C'" onmouseout="this.style.borderColor='#E5E7EB'">
-          <h4 style="margin-bottom:4px;font-size:14px">Visum Guide</h4>
-          <p style="font-size:12px">Arbeit & Studium</p>
-        </div>
-      </a>
-      <a href="/de/berufe-in-deutschland" style="text-decoration:none">
-        <div class="card" style="padding:16px;text-align:center;transition:border-color 0.2s" onmouseover="this.style.borderColor='#0B3B8C'" onmouseout="this.style.borderColor='#E5E7EB'">
-          <h4 style="margin-bottom:4px;font-size:14px">Berufe</h4>
-          <p style="font-size:12px">Gefragte Jobs</p>
-        </div>
-      </a>
-      <a href="/de/chancenkarte" style="text-decoration:none">
-        <div class="card" style="padding:16px;text-align:center;transition:border-color 0.2s" onmouseover="this.style.borderColor='#0B3B8C'" onmouseout="this.style.borderColor='#E5E7EB'">
-          <h4 style="margin-bottom:4px;font-size:14px">Chancenkarte</h4>
-          <p style="font-size:12px">Punktesystem</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt">
-  <div class="inner">
-    <p class="section-label">Berufsauswahl</p>
-    <h2>Beliebte Ausbildungsberufe</h2>
-    <p class="lead">In diesen Bereichen haben internationale Bewerber besonders gute Chancen.</p>
-    
-    <div class="grid-3">
-      <div class="card">
-        <h4 style="color:#0B3B8C;">Pflegefachkraft</h4>
-        <p>Betreuung von Patienten. Großer Fachkräftemangel. Gehalt: ca. 1.200€ – 1.500€ / Monat.</p>
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Das duale System erklärt</h2>
+        <p>Deutschlands Ausbildungssystem ist weltweit einzigartig und bietet internationalen Bewerbern einen direkten Einstieg in den Arbeitsmarkt.</p>
       </div>
-      <div class="card">
-        <h4 style="color:#0B3B8C;">Elektriker / Mechatroniker</h4>
-        <p>Installation und Wartung technischer Systeme. Gehalt: ca. 1.000€ – 1.300€ / Monat.</p>
-      </div>
-      <div class="card">
-        <h4 style="color:#0B3B8C;">IT-Systemelektroniker</h4>
-        <p>Installation und Wartung von IT-Hardware. Gehalt: ca. 1.000€ – 1.400€ / Monat.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Theorie & Praxis</h3>
+          <p>Sie verbringen 3-4 Tage im Betrieb und 1-2 Tage in der Berufsschule. So wenden Sie das Gelernte sofort praktisch an.</p>
+        </div>
+        <div class="card">
+          <h3>Vergütung</h3>
+          <p>Im Gegensatz zum Studium werden Sie bezahlt. Die Ausbildungsvergütung steigt mit jedem Lehrjahr an.</p>
+          <span class="salary">800€ – 1.500€ / Monat</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- VORAUSSETZUNGEN -->
-<section class="section">
-  <div class="inner">
-    <p class="section-label">Checkliste</p>
-    <h2>Was Sie mitbringen müssen</h2>
-    <p class="lead">Für eine erfolgreiche Bewerbung sind bestimmte formale Kriterien entscheidend.</p>
-    
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;">
-      <div style="background:#F8F9FA;padding:32px;border-radius:12px;border:1.5px solid #E5E7EB;">
-        <h4 style="margin-bottom:12px;color:#0B3B8C;">Sprachniveau</h4>
-        <p style="font-size:14px;color:#6B7280;line-height:1.6;">Mindestens B1 Deutsch ist für die meisten Ausbildungen zwingend erforderlich, B2 wird oft bevorzugt, um der Berufsschule folgen zu können.</p>
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Gefragte Ausbildungsberufe</h2>
+        <p>In diesen Bereichen suchen deutsche Unternehmen besonders intensiv nach internationalen Talenten.</p>
       </div>
-      <div style="background:#F8F9FA;padding:32px;border-radius:12px;border:1.5px solid #E5E7EB;">
-        <h4 style="margin-bottom:12px;color:#0B3B8C;">Schulabschluss</h4>
-        <p style="font-size:14px;color:#6B7280;line-height:1.6;">Ein anerkannter Schulabschluss aus Ihrem Heimatland (entsprechend Hauptschul- oder Realschulabschluss) ist die Basis.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Pflegefachkraft</h3>
+          <p>Helfen Sie Menschen und sichern Sie sich einen krisenfesten Job mit exzellenten Aufstiegschancen.</p>
+          <span class="salary">1.200€ – 1.500€</span>
+        </div>
+        <div class="card">
+          <h3>Elektriker / Mechatroniker</h3>
+          <p>Werden Sie Experte für moderne Technik und Industrieanlagen in einem hochbezahlten Handwerk.</p>
+          <span class="salary">1.000€ – 1.300€</span>
+        </div>
+        <div class="card">
+          <h3>IT-Fachinformatiker</h3>
+          <p>Entwickeln Sie Software oder verwalten Sie Netzwerke in der führenden Wirtschaftsnation Europas.</p>
+          <span class="salary">1.000€ – 1.400€</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ -->
-
-<!-- RELATED PAGES -->
-<section class="section section--alt" style="padding:48px 24px" >
-  <div class="inner">
-    <p class="section-label">Weitere Informationen</p>
-    <div class="grid-3" style="margin-top:0">
-
-      <a href="/de/visum-deutschland" style="text-decoration:none">
-        <div class="card" style="padding:16px;text-align:center;transition:border-color 0.2s" onmouseover="this.style.borderColor='#0B3B8C'" onmouseout="this.style.borderColor='#E5E7EB'">
-          <h4 style="margin-bottom:4px;font-size:14px">Visum Guide</h4>
-          <p style="font-size:12px">Arbeit & Studium</p>
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ihr Weg zur Ausbildung</h2>
+        <p>Folgen Sie diesem strukturierten Prozess, um Ihren Ausbildungsplatz in Deutschland zu sichern.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-item">
+          <div class="process-number">1</div>
+          <div class="process-content">
+            <h4>Sprachniveau B1/B2</h4>
+            <p>Deutschkenntnisse sind die wichtigste Voraussetzung für die Berufsschule und den Arbeitsalltag.</p>
+          </div>
         </div>
-      </a>
-      <a href="/de/berufe-in-deutschland" style="text-decoration:none">
-        <div class="card" style="padding:16px;text-align:center;transition:border-color 0.2s" onmouseover="this.style.borderColor='#0B3B8C'" onmouseout="this.style.borderColor='#E5E7EB'">
-          <h4 style="margin-bottom:4px;font-size:14px">Berufe</h4>
-          <p style="font-size:12px">Gefragte Jobs</p>
+        <div class="process-item">
+          <div class="process-number">2</div>
+          <div class="process-content">
+            <h4>Schulabschluss-Anerkennung</h4>
+            <p>Ihr Schulabschluss aus dem Heimatland muss in Deutschland als gleichwertig anerkannt werden.</p>
+          </div>
         </div>
-      </a>
-      <a href="/de/chancenkarte" style="text-decoration:none">
-        <div class="card" style="padding:16px;text-align:center;transition:border-color 0.2s" onmouseover="this.style.borderColor='#0B3B8C'" onmouseout="this.style.borderColor='#E5E7EB'">
-          <h4 style="margin-bottom:4px;font-size:14px">Chancenkarte</h4>
-          <p style="font-size:12px">Punktesystem</p>
+        <div class="process-item">
+          <div class="process-number">3</div>
+          <div class="process-content">
+            <h4>Bewerbung & Vertrag</h4>
+            <p>Wir helfen Ihnen, einen passenden Ausbildungsbetrieb zu finden und den Vertrag abzuschließen.</p>
+          </div>
         </div>
-      </a>
+        <div class="process-item">
+          <div class="process-number">4</div>
+          <div class="process-content">
+            <h4>Visumbeantragung</h4>
+            <p>Mit dem Ausbildungsvertrag beantragen Sie Ihr Visum für den Aufenthalt in Deutschland.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section--alt">
-  <div class="inner">
-    <p class="section-label">Häufig gestellte Fragen</p>
-    <h2>Ausbildung — FAQ</h2>
-    <p class="lead">Wichtige Informationen für Ihren Start in die Ausbildung.</p>
-    
-    <ul class="faq-list">
-      <li class="faq-item">
-        <div class="faq-question">
-          <span>Wie bewerbe ich mich für eine Ausbildung?</span>
-          <span class="faq-toggle">▼</span>
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Häufige Fragen</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('active')">Wie lange dauert eine Ausbildung? <span>+</span></button>
+          <div class="faq-answer">In der Regel dauert eine duale Ausbildung zwischen 2,5 und 3,5 Jahren, abhängig vom gewählten Beruf.</div>
         </div>
-        <div class="faq-answer">
-          <p>Sie bewerben sich direkt bei den Betrieben. Wichtig sind ein deutsches Anschreiben, ein Lebenslauf und Ihre Zeugnisse in deutscher Übersetzung.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('active')">Kann ich nach der Ausbildung bleiben? <span>+</span></button>
+          <div class="faq-answer">Ja, Absolventen haben sehr gute Chancen auf eine Übernahme und können ihren Aufenthaltstitel zur Erwerbstätigkeit verlängern.</div>
         </div>
-      </li>
-      <li class="faq-item">
-        <div class="faq-question">
-          <span>Bekomme ich ein Visum für eine Ausbildung?</span>
-          <span class="faq-toggle">▼</span>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('active')">Gibt es eine Altersgrenze? <span>+</span></button>
+          <div class="faq-answer">Es gibt keine gesetzliche Altersgrenze, jedoch bevorzugen Betriebe meist Bewerber zwischen 18 und 30 Jahren.</div>
         </div>
-        <div class="faq-answer">
-          <p>Ja, es gibt ein spezielles Visum zur Ausbildung (§ 16a AufenthG). Voraussetzung ist ein Ausbildungsvertrag mit einem deutschen Betrieb.</p>
-        </div>
-      </li>
-      <li class="faq-item">
-        <div class="faq-question">
-          <span>Kann ich nach der Ausbildung in Deutschland bleiben?</span>
-          <span class="faq-toggle">▼</span>
-        </div>
-        <div class="faq-answer">
-          <p>Ja, nach erfolgreichem Abschluss haben Sie exzellente Chancen auf eine Übernahme und ein dauerhaftes Aufenthaltsrecht als Fachkraft.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- CTA -->
-<section style="background:#0B1F3A;padding:64px 24px;text-align:center;color:#FFFFFF;">
-  <div class="inner">
-    <h2 style="color:#FFFFFF;margin-bottom:16px;">Prüfen Sie Ihre Chancen</h2>
-    <p style="color:rgba(255,255,255,0.7);margin-bottom:32px;">Unsere Experten vor Ort bewerten Ihr Profil für eine Ausbildung in Deutschland.</p>
-    <a href="/de/assessment" style="display:inline-block;background:#FFFFFF;color:#0B1F3A;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">Kostenloses Assessment starten</a>
-  </div>
-</section>
-
-<!-- INTERNAL LINKS -->
-<section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
-  <div style="max-width:780px;margin:0 auto;">
-    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">Auch interessant</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-      <a href="/de/voraussetzungen" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Voraussetzungen</p>
-        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Was Sie brauchen</p>
-        <p style="font-size:12px;color:#6B7280;">Dokumente & Checkliste</p>
-      </a>
-      <a href="/de/chancenkarte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Chancenkarte</p>
-        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Punktesystem</p>
-        <p style="font-size:12px;color:#6B7280;">Ihre Einreise-Option</p>
-      </a>
-      <a href="/de/systemlogik" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">Systemlogik</p>
-        <p style="font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:4px;">Wie wir arbeiten</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.6);">Institutionelle Logik</p>
-      </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-block">
+        <h2>Bereit für Ihren Karrierestart?</h2>
+        <p style="margin-bottom: 2rem;">Prüfen Sie jetzt kostenlos Ihre Chancen für eine Ausbildung in Deutschland.</p>
+        <a href="/de/assessment.html" class="btn-white">Kostenloses Assessment starten</a>
+        <a href="https://wa.me/4915227031313" class="whatsapp-link">Oder kontaktieren Sie uns auf WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
-  <p>Berlin Gateway — Experten vor Ort in Deutschland</p>
-  <p style="margin-top:8px;">
-    <a href="/de/impressum">Impressum</a>
-    <a href="/de/datenschutz">Datenschutz</a>
-    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
-  </p>
-  <p style="margin-top:8px;">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">Berlin Gateway</span>
+        <p>Experten vor Ort in Deutschland. Wir begleiten Fachkräfte durch den gesamten Prozess der Anerkennung, Visabeantragung und Integration.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/de/chancenkarte.html">Chancenkarte</a></li>
+          <li><a href="/de/visum-deutschland.html">Visum</a></li>
+          <li><a href="/de/arbeit-in-deutschland.html">Arbeit</a></li>
+          <li><a href="/de/studieren-in-deutschland.html">Studium</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="/de/impressum.html">Impressum</a></li>
+          <li><a href="/de/datenschutz.html">Datenschutz</a></li>
+          <li><a href="/de/kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+      <p>Strukturiert. Selektiv. Systemisch.</p>
+    </div>
+  </div>
 </footer>
-
-<script>
-document.querySelectorAll('.faq-question').forEach(function(el) {
-  el.addEventListener('click', function() {
-    var answer = this.nextElementSibling;
-    var toggle = this.querySelector('.faq-toggle');
-    answer.classList.toggle('active');
-    toggle.classList.toggle('active');
-  });
-});
-</script>
 
 </body>
 </html>

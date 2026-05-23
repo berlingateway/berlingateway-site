@@ -52,4 +52,8 @@
 /en/chancenkarte.html /de/chancenkarte 301
 /en/monitor.html /de/monitor 301
 /en/systemlogik.html /de/systemlogik 301
+
+# New Unique Redirects
+/impressum/ /de/impressum 301
+
 /* /index.html 200

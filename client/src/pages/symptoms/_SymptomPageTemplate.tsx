@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
@@ -13,6 +14,7 @@ interface SymptomPageProps {
   triggers: string[];
   warning: string;
   filterText: string;
+  children?: React.ReactNode;
 }
 
 export function SymptomPage({
@@ -21,6 +23,7 @@ export function SymptomPage({
   triggers,
   warning,
   filterText,
+  children,
 }: SymptomPageProps) {
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
@@ -243,6 +246,9 @@ export function SymptomPage({
           </p>
         </div>
       </section>
+
+      {/* EXTRA SECTIONS (optional, injected per page) */}
+      {children}
 
       {/* FOOTER */}
       <footer className="bg-white border-t border-slate-100">

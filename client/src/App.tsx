@@ -87,6 +87,8 @@ import MedicalVisaResidencyGermany from "./pages/symptoms/MedicalVisaResidencyGe
 import ProstheticsAfterAmputationGermany from "./pages/symptoms/ProstheticsAfterAmputationGermany";
 import JointReplacementAfterTrauma from "./pages/symptoms/JointReplacementAfterTrauma";
 import ComplexTraumaGermany from "./pages/symptoms/ComplexTraumaGermany";
+import SurgerySecondOpinion from "./pages/symptoms/SurgerySecondOpinion";
+import ComplexCases from "./pages/symptoms/ComplexCases";
 
 // Geo-Intent Fertility Pages
 import FertilityLibya from "./pages/conditions/FertilityLibya";
@@ -215,6 +217,8 @@ function Router() {
       <Route path={"/lung-cancer-treatment-germany"} component={LungCancer} />
       <Route path={"/ar/lung-cancer-treatment-germany"} component={LungCancerArabic} />
       {/* Arabic Symptom Entry Pages */}
+      <Route path={"/ar/surgery-second-opinion"} component={SurgerySecondOpinion} />
+      <Route path={"/ar/complex-cases"} component={ComplexCases} />
       <Route path={"/ar/dizziness-long-term"} component={DizzinessLongTerm} />
       <Route path={"/ar/unexplained-dizziness"} component={UnexplainedDizziness} />
       <Route path={"/ar/vertigo-unknown-cause"} component={VertigoUnknownCause} />

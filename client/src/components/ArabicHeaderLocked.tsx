@@ -1,12 +1,12 @@
 /*
 LOCKED COMPONENT — DO NOT MODIFY
 Source: /ar/trigeminal-neuralgia-treatment-germany (MedicalConditionPage Arabic nav)
-Updated: Added Medical Conditions dropdown with 7 specialties
+Updated: Added Medical Conditions dropdown with 9 specialties + hamburger mobile menu
 */
 
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, ChevronDown, Menu, X } from "lucide-react";
 
 const MEDICAL_CONDITIONS = [
   { label: "الأعصاب والجهاز العصبي", href: "/ar/neurology-treatment-germany" },
@@ -20,10 +20,17 @@ const MEDICAL_CONDITIONS = [
   { label: "الحالات المعقدة", href: "/ar/complex-cases" },
 ];
 
+const MAIN_LINKS = [
+  { label: "الرئيسية", href: "/ar" },
+  { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
+  { label: "تواصل معنا", href: "/contact" },
+];
+
 export default function ArabicHeaderLocked() {
   const [location] = useLocation();
   const [langOpen, setLangOpen] = useState(false);
   const [condOpen, setCondOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const condRef = useRef<HTMLDivElement>(null);
 
@@ -41,8 +48,19 @@ export default function ArabicHeaderLocked() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location]);
+
   // Render ONLY on Arabic routes — conditional AFTER all hooks
   if (!location.startsWith("/ar")) return null;
+
+  const closeAll = () => {
+    setMobileOpen(false);
+    setCondOpen(false);
+    setLangOpen(false);
+  };
 
   return (
     <>
@@ -67,93 +85,163 @@ export default function ArabicHeaderLocked() {
 
       {/* Main Navigation */}
       <nav
-        className="sticky z-50 w-full py-3 px-8 flex justify-between items-center border-b border-slate-100 bg-white/95 backdrop-blur-sm"
+        className="sticky z-50 w-full bg-white/95 backdrop-blur-sm border-b border-slate-100"
         style={{ top: "var(--banner-height, 0px)" }}
       >
-        {/* Brand block */}
-        <div className="flex flex-col">
-          <Link
-            href="/ar"
-            className="text-xl font-serif font-bold tracking-tight text-slate-900"
-          >
-            ميديكال كير جيرماني
-          </Link>
-          <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">
-            مرجعية طبية استراتيجية للمرضى الدوليين
-          </span>
-        </div>
-
-        {/* Right side: Medical Conditions dropdown + Globe + CTA */}
-        <div className="flex items-center gap-4">
-
-          {/* Medical Conditions dropdown */}
-          <div className="relative hidden md:block" ref={condRef}>
-            <button
-              type="button"
-              onClick={() => setCondOpen((v) => !v)}
-              className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium"
-              aria-label="الحالات الطبية"
+        <div className="w-full py-3 px-8 flex justify-between items-center">
+          {/* Brand block */}
+          <div className="flex flex-col">
+            <Link
+              href="/ar"
+              className="text-xl font-serif font-bold tracking-tight text-slate-900"
             >
-              الحالات الطبية
-              <ChevronDown size={14} strokeWidth={2} className={condOpen ? "rotate-180 transition-transform" : "transition-transform"} />
-            </button>
-            {condOpen && (
-              <div
-                className="absolute left-0 mt-2 w-64 bg-white border border-slate-200 shadow-lg z-50"
-                dir="rtl"
+              ميديكال كير جيرماني
+            </Link>
+            <span className="text-[10px] text-slate-500 tracking-wide uppercase mt-0.5">
+              مرجعية طبية استراتيجية للمرضى الدوليين
+            </span>
+          </div>
+
+          {/* Right side: desktop nav + hamburger */}
+          <div className="flex items-center gap-4">
+
+            {/* Desktop: Medical Conditions dropdown */}
+            <div className="relative hidden md:block" ref={condRef}>
+              <button
+                type="button"
+                onClick={() => setCondOpen((v) => !v)}
+                className="flex items-center gap-1 text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium"
+                aria-label="الحالات الطبية"
               >
-                {MEDICAL_CONDITIONS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 border-b border-slate-100 last:border-0 text-right transition-colors"
-                    onClick={() => setCondOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+                الحالات الطبية
+                <ChevronDown size={14} strokeWidth={2} className={condOpen ? "rotate-180 transition-transform" : "transition-transform"} />
+              </button>
+              {condOpen && (
+                <div
+                  className="absolute left-0 mt-2 w-64 bg-white border border-slate-200 shadow-lg z-50"
+                  dir="rtl"
+                >
+                  {MEDICAL_CONDITIONS.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 border-b border-slate-100 last:border-0 text-right transition-colors"
+                      onClick={closeAll}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
-          {/* Globe language switch */}
-          <div className="relative" ref={langRef}>
+            {/* Desktop: Globe language switch */}
+            <div className="relative hidden md:block" ref={langRef}>
+              <button
+                type="button"
+                onClick={() => setLangOpen((v) => !v)}
+                className="text-slate-500 hover:text-slate-900 transition-colors p-1 rounded focus:outline-none"
+                aria-label="Language switch"
+              >
+                <Globe size={18} strokeWidth={1.5} />
+              </button>
+              {langOpen && (
+                <div className="absolute left-0 mt-2 w-32 bg-white border border-slate-200 shadow-md z-50">
+                  <Link
+                    href="/ar"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 text-right"
+                    onClick={closeAll}
+                  >
+                    العربية
+                  </Link>
+                  <Link
+                    href="/"
+                    className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 text-right"
+                    onClick={closeAll}
+                  >
+                    English
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Desktop: CTA button */}
+            <Link
+              href="/send-medical-reports"
+              className="hidden md:block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
+            >
+              إرسال التقارير الطبية
+            </Link>
+
+            {/* Mobile: Hamburger button */}
             <button
               type="button"
-              onClick={() => setLangOpen((v) => !v)}
-              className="text-slate-500 hover:text-slate-900 transition-colors p-1 rounded focus:outline-none"
-              aria-label="Language switch"
+              className="md:hidden p-2 text-slate-700 hover:text-slate-900 transition-colors"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? "إغلاق القائمة" : "فتح القائمة"}
             >
-              <Globe size={18} strokeWidth={1.5} />
+              {mobileOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
             </button>
-            {langOpen && (
-              <div className="absolute left-0 mt-2 w-32 bg-white border border-slate-200 shadow-md z-50">
-                <Link
-                  href="/ar"
-                  className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 text-right"
-                  onClick={() => setLangOpen(false)}
-                >
-                  العربية
-                </Link>
-                <Link
-                  href="/"
-                  className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 text-right"
-                  onClick={() => setLangOpen(false)}
-                >
-                  English
-                </Link>
-              </div>
-            )}
           </div>
-
-          {/* CTA button */}
-          <Link
-            href="/send-medical-reports"
-            className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
-          >
-            إرسال التقارير الطبية
-          </Link>
         </div>
+
+        {/* Mobile Menu Panel */}
+        {mobileOpen && (
+          <div
+            className="md:hidden bg-white border-t border-slate-100 shadow-lg"
+            dir="rtl"
+          >
+            {/* Main links */}
+            {MAIN_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-6 py-3.5 text-sm font-medium text-slate-800 hover:bg-slate-50 border-b border-slate-100 text-right transition-colors"
+                onClick={closeAll}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Divider + Medical Conditions section */}
+            <div className="px-6 py-2 bg-slate-50 border-b border-slate-100">
+              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-medium">
+                الحالات الطبية
+              </span>
+            </div>
+            {MEDICAL_CONDITIONS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-6 py-3 text-sm text-slate-700 hover:bg-slate-50 border-b border-slate-100 last:border-0 text-right transition-colors"
+                onClick={closeAll}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Language switch */}
+            <div className="px-6 py-2 bg-slate-50 border-b border-slate-100">
+              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-medium">
+                اللغة
+              </span>
+            </div>
+            <Link
+              href="/ar"
+              className="block px-6 py-3 text-sm text-slate-700 hover:bg-slate-50 border-b border-slate-100 text-right transition-colors"
+              onClick={closeAll}
+            >
+              العربية
+            </Link>
+            <Link
+              href="/"
+              className="block px-6 py-3 text-sm text-slate-700 hover:bg-slate-50 text-right transition-colors"
+              onClick={closeAll}
+            >
+              English
+            </Link>
+          </div>
+        )}
       </nav>
     </>
   );

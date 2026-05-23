@@ -46,9 +46,9 @@ const WHY_CARDS = [
 export default function SurgerySecondOpinion() {
   useEffect(() => {
     document.title =
-      "رأي طبي ثانٍ قبل العملية — مراجعة متخصصة في ألمانيا | Medical Care Germany";
+      "رأي ثانٍ قبل العملية في ألمانيا | ميديكال كير جيرماني";
     const descContent =
-      "قيل لك إنك تحتاج عملية؟ راجع ملفك مع أستاذ متخصص في برلين قبل أي قرار — رد خلال 24 ساعة";
+      "قبل أي قرار جراحي — راجع ملفك مع بروفيسور متخصص في برلين. كثير من الحالات وجدت بديلاً للجراحة.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

@@ -46,9 +46,9 @@ const APPROACH_CARDS = [
 export default function ComplexCases() {
   useEffect(() => {
     document.title =
-      "الحالات الطبية المعقدة — تقييم متخصص في ألمانيا | Medical Care Germany";
+      "حالات طبية معقدة | علاج في ألمانيا بعد رحلة بحث طويلة";
     const descContent =
-      "حالتك رُفضت أو لم تجد تشخيصاً واضحاً؟ نراجعها مع فريق متخصص في مستشفيات جامعية ألمانية — رد خلال 24 ساعة";
+      "إذا زرت أطباء كثيرين بدون نتيجة — نراجع ملفك كاملاً مع فريق متخصص في برلين. أكثر من 500 حالة منذ 2012.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

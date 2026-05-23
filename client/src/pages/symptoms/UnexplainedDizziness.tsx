@@ -51,9 +51,9 @@ const WHY_GERMANY_CARDS = [
 export default function UnexplainedDizziness() {
   useEffect(() => {
     document.title =
-      "دوخة مستمرة بدون تشخيص — مراجعة متخصصة في ألمانيا | Medical Care Germany";
+      "دوخة مستمرة بدون تشخيص | مراجعة متخصصة في ألمانيا";
     const descContent =
-      "إذا عانيت من دوخة مزمنة وقيل لك كل شيء طبيعي — نراجع حالتك مع متخصصين في برلين خلال 24 ساعة";
+      "إذا قيل لك كل شيء طبيعي لكن الدوخة مستمرة — نراجع حالتك مع متخصصين في برلين خلال 24 ساعة.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

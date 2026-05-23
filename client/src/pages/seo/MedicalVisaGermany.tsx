@@ -3,8 +3,8 @@ import { SeoGatewayPage } from "./_SeoGatewayTemplate";
 export default function MedicalVisaGermany() {
   return (
     <SeoGatewayPage
-      metaTitle="فيزا العلاج في ألمانيا | ميديكال كير جيرماني"
-      metaDescription="كيفية الحصول على فيزا العلاج في ألمانيا — الوثائق المطلوبة، والخطوات، والجهة المسؤولة عن التقديم."
+      metaTitle="فيزا علاجية ألمانيا للمرضى العرب | دليل كامل"
+      metaDescription="كيف تحصل على فيزا علاجية ألمانيا — الوثائق المطلوبة والخطوات والتنسيق المباشر مع المستشفى. نساعدك من البداية."
       canonicalPath="/ar/فيزا-العلاج-في-المانيا"
       heroTitle="فيزا العلاج في ألمانيا"
       heroSubtitle="تأشيرة العلاج تتطلب دعوة رسمية من المستشفى — وهذا يبدأ بتقييم الملف الطبي."

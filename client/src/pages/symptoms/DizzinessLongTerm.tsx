@@ -326,9 +326,9 @@ export default function DizzinessLongTerm() {
 
   useEffect(() => {
     document.title =
-      "دوخة مستمرة لأشهر — تقييم الحالات المعقدة في ألمانيا | Medical Care Germany";
+      "تقييم الدوخة المزمنة في ألمانيا | HNO وطب الأعصاب";
     const descContent =
-      "تقييم متخصص لحالات الدوخة المزمنة وغير المحسومة في ألمانيا — اضطرابات الأذن الداخلية، الجهاز الدهليزي، الدوخة العصبية، الدوخة العنقية، وما بعد الإصابات. يُنسَّق للمرضى من ليبيا والسودان ودول الخليج.";
+      "تنسيق تقييم حالات الدوخة غير المحسومة مع متخصصي HNO والأعصاب في المستشفيات الجامعية الألمانية.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

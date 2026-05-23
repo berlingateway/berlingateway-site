@@ -327,6 +327,19 @@ export default function ArabicHome() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.title = "علاج في ألمانيا للمرضى العرب | ميديكال كير جيرماني";
+    const descContent = "تنسيق طبي متخصص للحالات المعقدة مع مستشفيات وأساتذة في ألمانيا. مراجعة أولية خلال 24-48 ساعة. من ليبيا والجزائر والعراق والسعودية.";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", descContent);
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = descContent;
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <div
       className="min-h-screen bg-white text-slate-900 font-sans"

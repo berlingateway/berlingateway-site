@@ -394,6 +394,28 @@ export default function DizzinessLongTerm() {
         </div>
       </section>
 
+      {/* ── NEW SECTION A: EMOTIONAL RESONANCE (dark) ─────────────────── */}
+      <section style={{ padding: "72px 24px 64px", background: "#0B1C2C", textAlign: "center" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(22px, 3.5vw, 36px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.6, marginBottom: 28 }}>
+            قيل لك كل شيء طبيعي…
+            <br />
+            لكنك ما زلت لا تعيش بشكل طبيعي.
+          </h2>
+          <p style={{ fontSize: 15, color: "#94a3b8", lineHeight: 2, maxWidth: 600, margin: "0 auto" }}>
+            التحاليل سليمة. الأشعة سليمة.
+            <br />
+            والطبيب قال: "لا شيء خطيراً."
+            <br /><br />
+            لكن الدوخة ما زالت موجودة.
+            <br />
+            وعدم التوازن ما زال يسرق منك يومك.
+            <br /><br />
+            هذا بالضبط النوع من الحالات التي نتخصص فيه.
+          </p>
+        </div>
+      </section>
+
       {/* ── SECTION 1: CLINICAL INDICATORS ──────────────────────────────── */}
       <section style={{ padding: "72px 24px 64px", background: "#fff" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
@@ -415,6 +437,37 @@ export default function DizzinessLongTerm() {
             <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.8, margin: 0 }}>
               التأخير في تشخيص الدوخة المزمنة قد يُخفي سبباً عصبياً أو أذنياً يحتاج تدخلاً تشخيصياً دقيقاً. هذه الصفحة مخصصة للحالات غير المحسومة فقط.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── NEW SECTION B: WHY CASES GET LOST (light, 4 cards) ────────── */}
+      <section style={{ padding: "72px 24px 64px", background: "#f8fafc", textAlign: "center" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(20px, 3vw, 32px)", fontWeight: 500, color: "#0B1C2C", lineHeight: 1.5, marginBottom: 40 }}>
+            لماذا تضيع هذه الحالات؟
+          </h2>
+          <p style={{ fontSize: 15, color: "#475569", lineHeight: 1.9, maxWidth: 680, margin: "0 auto 48px" }}>
+            الدوخة المزمنة من أكثر الأعراض التي تُشخَّص بشكل خاطئ.
+            <br /><br />
+            السبب الحقيقي: كل تخصص يرى جزءاً من الصورة — لكن لا أحد يرى الصورة كاملة.
+            <br /><br />
+            طبيب الأذن يفحص الأذن. طبيب الأعصاب يفحص الأعصاب. طبيب العمود الفقري يفحص الفقرات.
+            <br />
+            لكن الدوخة المزمنة كثيراً ما تكون في التقاطع بين هذه التخصصات — لا في واحد منها.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16, textAlign: "right" }}>
+            {[
+              { title: "فحص منفرد", body: "كل طبيب يرى تخصصه فقط — التداخل بين التخصصات لا يُكشف." },
+              { title: "تقارير متفرقة", body: "النتائج لا تُقرأ معاً — كل تقرير يُفسَّر بمعزل عن الآخر." },
+              { title: "غياب البروتوكول", body: "لا يوجد مسار تشخيصي موحّد للدوخة المزمنة غير المحسومة." },
+              { title: "تأخير العلاج", body: "كل إحالة تأخذ أسابيع — والحالة تتفاقم بدون اتجاه واضح." },
+            ].map((card, i) => (
+              <div key={i} style={{ padding: "24px 20px", background: "#fff", border: "1px solid #e2e8f0", borderTop: "3px solid #0B1C2C" }}>
+                <h3 style={{ fontSize: 14, fontWeight: 600, color: "#0B1C2C", marginBottom: 10 }}>{card.title}</h3>
+                <p style={{ fontSize: 13, color: "#475569", lineHeight: 1.7, margin: 0 }}>{card.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -686,6 +739,46 @@ export default function DizzinessLongTerm() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── NEW SECTION C: PATIENT STORY + CTA (dark) ─────────────────── */}
+      <section style={{ padding: "72px 24px 64px", background: "#0B1C2C" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.18em", color: "#64748b", textTransform: "uppercase", marginBottom: 24 }}>
+            من ملفاتنا
+          </p>
+          <blockquote style={{ fontSize: 15, color: "#94a3b8", lineHeight: 2, maxWidth: 640, margin: "0 auto 12px", fontStyle: "normal", borderRight: "3px solid rgba(255,255,255,0.15)", paddingRight: 24, textAlign: "right" }}>
+            مريض من ليبيا، 47 عامًا — يعاني من دوخة مستمرة منذ أكثر من سنة.
+            الفحوصات في بلده كلها طبيعية. أُحيل لأكثر من طبيب — كل واحد قال "ليس من اختصاصي".
+            <br /><br />
+            وصل ملفه إلى برلين — راجع فريق متخصص كل التقارير معاً.
+            تبيّن أن المشكلة كانت تداخلاً بين العصب الدهليزي والعمود العنقي —
+            لا يظهر في الفحص المنفرد.
+            <br /><br />
+            بدأ بروتوكول علاجي مخصص.
+            بعد ستة أسابيع — عاد يمشي بثقة.
+            <br /><br />
+            الفرق لم يكن في الحظ. كان في النظرة الشاملة.
+          </blockquote>
+          <p style={{ fontSize: 12, color: "#475569", marginBottom: 48 }}>مريض من ليبيا، 47 عامًا</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
+            <Link
+              href="/ar/send-medical-reports"
+              style={{ padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}>
+              أرسل ملفك الطبي
+            </Link>
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ padding: "14px 36px", border: "1px solid rgba(255,255,255,0.25)", color: "#f8fafc", fontSize: 14, fontWeight: 300, textDecoration: "none", display: "inline-block" }}>
+              تحدث معنا عبر واتساب
+            </a>
+          </div>
+          <p style={{ fontSize: 12, color: "#475569", margin: 0 }}>
+            لا تشخيص عن بُعد. فقط تقييم حقيقي لما تحتاجه فعلاً.
+          </p>
         </div>
       </section>
 

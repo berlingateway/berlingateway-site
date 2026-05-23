@@ -16,6 +16,8 @@ const MEDICAL_CONDITIONS = [
   { label: "العظام والمفاصل", href: "/ar/orthopedics-germany" },
   { label: "إعادة التأهيل المتقدم", href: "/ar/advanced-rehabilitation-germany" },
   { label: "ألم العصب الخامس", href: "/ar/trigeminal-neuralgia-treatment-germany" },
+  { label: "رأي ثانٍ قبل العملية", href: "/ar/surgery-second-opinion" },
+  { label: "الحالات المعقدة", href: "/ar/complex-cases" },
 ];
 
 export default function ArabicHeaderLocked() {

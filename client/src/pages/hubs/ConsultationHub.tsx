@@ -83,6 +83,15 @@ export default function ConsultationHub() {
           content="Structured medical consultation services in Germany including second opinions, specialist referrals, advanced diagnostics, and coordination for international patients at German university hospitals."
         />
         <link rel="canonical" href="https://medicalcaregermany.com/consultation-services-germany" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQ_ITEMS.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+          }))
+        })}</script>
       </Helmet>
 
       <div className="w-full bg-slate-900 text-white py-3 px-6 text-center text-sm">

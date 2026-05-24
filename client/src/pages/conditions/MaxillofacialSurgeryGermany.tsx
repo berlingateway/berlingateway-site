@@ -221,7 +221,58 @@ export default function MaxillofacialSurgeryGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/maxillofacial-surgery-germany" />
       <HreflangTags currentPath="/ar/maxillofacial-surgery-germany" />
-      {/* ── SECTION 1: HERO ─────────────────────────────────────── */}
+      {/* ── AUTHORITY STATS BLOCK ──────────────────────────────── */}
+      <section
+        style={{
+          background: "#0B1C2C",
+          padding: "40px 24px",
+          textAlign: "center",
+          borderBottom: "1px solid #1e3a5f",
+        }}
+      >
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <p
+            style={{
+              ...AR,
+              fontSize: "clamp(18px, 3vw, 24px)",
+              fontWeight: 500,
+              color: "#f8fafc",
+              marginBottom: 24,
+              lineHeight: 1.6,
+            }}
+          >
+            جراحة الوجه والفكين في ألمانيا — تقييم قبل أي قرار
+          </p>
+          <p
+            style={{
+              ...AR,
+              fontSize: 14,
+              color: "#94a3b8",
+              marginBottom: 28,
+              letterSpacing: "0.05em",
+            }}
+          >
+            أكثر من 500 حالة منسّقة منذ 2012
+          </p>
+          <a
+            href="/send-medical-reports"
+            style={{
+              ...AR,
+              display: "inline-block",
+              padding: "12px 28px",
+              background: "#fff",
+              color: "#0B1C2C",
+              fontSize: 13,
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            إرسال التقارير الطبية
+          </a>
+        </div>
+      </section>
+
+      {/* ── SECTION 1: HERO ──────────────────────────────────────── */}
       <section
         style={{
           background: "#0B1C2C",

@@ -64,12 +64,46 @@ export default function LiverCancer() {
       }}
       structuredData={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": "Liver Cancer Treatment in Germany",
-        "description": "Hepatobiliary surgery and interventional oncology for liver cancer at German university centers, with multidisciplinary tumor board evaluation.",
-        "url": "https://medicalcaregermany.com/liver-cancer-treatment-germany",
-        "about": { "@type": "MedicalCondition", "name": "Liver Cancer" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "@graph": [
+          {
+            "@type": "MedicalWebPage",
+            "name": "Liver Cancer Treatment in Germany",
+            "description": "Hepatobiliary surgery and interventional oncology for liver cancer at German university centers, with multidisciplinary tumor board evaluation.",
+            "url": "https://medicalcaregermany.com/liver-cancer-treatment-germany",
+            "about": { "@type": "MedicalCondition", "name": "Liver Cancer" },
+            "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are the best hospitals in Germany for liver cancer?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Germany's leading liver cancer centers include Charité Berlin, University Hospital Frankfurt (known for its liver transplant program), University Hospital Munich (LMU), and Heidelberg University Hospital. These centers operate dedicated hepatobiliary units with multidisciplinary tumor boards that evaluate each case individually." }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does liver cancer treatment take in Germany?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Treatment duration depends on the stage and chosen modality. Surgical resection typically requires a hospital stay of 7–14 days followed by recovery. Locoregional therapies such as TACE or SIRT are performed on an outpatient or short-stay basis. Liver transplantation involves a longer process including waitlist evaluation." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can international patients access liver transplant in Germany?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. International patients can be evaluated for liver transplantation at German university transplant centers operating within the Eurotransplant framework. Eligibility is assessed based on tumor characteristics, liver function, and overall health status." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the cost of liver cancer surgery in Germany?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Costs vary significantly based on the procedure, hospital, and individual case complexity. Surgical resection, transplantation, and locoregional therapies each carry different cost structures. A detailed cost estimate is provided after the specialist evaluation and treatment plan are established." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get a second opinion for liver cancer in Germany?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Submit your medical file — including imaging (CT/MRI), pathology reports, and current treatment history — to Medical Care Germany. A Berlin-based coordinator will review the documentation and arrange a specialist second opinion at the appropriate German university center, typically within 24–48 hours of submission." }
+              }
+            ]
+          }
+        ]
       })}
     />
     </>

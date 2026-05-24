@@ -25,7 +25,8 @@ export default function UniversityHospitalTreatment() {
         "description": "Structured access to Germany's Universitätsklinika — the highest tier of academic medical care — for international patients with complex conditions.",
         "url": "https://medicalcaregermany.com/university-hospital-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "University Hospital Treatment" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />
     </>

@@ -157,6 +157,7 @@ export default function LungCancerArabic() {
           url: "https://medicalcaregermany.com/ar/lung-cancer-treatment-germany",
           about: { "@type": "MedicalCondition", name: "Lung Cancer" },
           publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com" },
+          image: "https://medicalcaregermany.com/og-image.jpg",
           inLanguage: "ar",
         })}
       />

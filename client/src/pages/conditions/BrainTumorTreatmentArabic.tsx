@@ -152,6 +152,7 @@ export default function BrainTumorTreatmentArabic() {
           url: "https://medicalcaregermany.com/ar/brain-tumor-treatment-germany",
           about: { "@type": "MedicalCondition", name: "Brain Tumor" },
           publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com" },
+          image: "https://medicalcaregermany.com/og-image.jpg",
           inLanguage: "ar",
         })}
       />

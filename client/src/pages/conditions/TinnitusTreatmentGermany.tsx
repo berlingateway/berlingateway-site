@@ -268,6 +268,7 @@ export default function TinnitusTreatmentGermany() {
       "inLanguage": "ar",
       "about": { "@type": "MedicalCondition", "name": "Tinnitus" },
       "audience": { "@type": "MedicalAudience", "audienceType": "Patient" },
+      "image": "https://medicalcaregermany.com/og-image.jpg",
     };
 
     const existing = document.querySelectorAll('script[data-mcg-ld]');

@@ -155,6 +155,7 @@ export default function TrigeminalNeuralgiaArabic() {
           url: "https://medicalcaregermany.com/ar/trigeminal-neuralgia-treatment-germany",
           about: { "@type": "MedicalCondition", name: "Trigeminal Neuralgia" },
           publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com" },
+          image: "https://medicalcaregermany.com/og-image.jpg",
           inLanguage: "ar",
         })}
       />

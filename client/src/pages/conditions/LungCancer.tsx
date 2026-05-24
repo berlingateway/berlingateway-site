@@ -25,7 +25,8 @@ export default function LungCancer() {
         "description": "Multidisciplinary oncological care for lung cancer at German university cancer centers, including molecular profiling, immunotherapy, and thoracic surgery.",
         "url": "https://medicalcaregermany.com/lung-cancer-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Lung Cancer" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />
     </>

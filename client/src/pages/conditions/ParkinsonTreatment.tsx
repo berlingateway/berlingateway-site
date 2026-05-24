@@ -66,7 +66,8 @@ export default function ParkinsonTreatment() {
         "description": "Specialist neurological care for Parkinson's disease in Germany, including deep brain stimulation and advanced pharmacological management at university hospitals.",
         "url": "https://medicalcaregermany.com/parkinson-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Parkinson's Disease" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
       arabicSummary="مرض باركنسون اضطراب عصبي تنكسي تدريجي يُصيب الخلايا العصبية المنتجة للدوبامين في الدماغ، مما يُسبب رعشةً وتيبساً وبطءاً في الحركة. في ألمانيا، تُعالج هذه الحالات في وحدات متخصصة باضطرابات الحركة تجمع بين أفضل الأدوية وإمكانية التحفيز العميق للدماغ (DBS) عند المرضى المؤهلين. يُقيَّم كل مريض بشكل فردي من قِبل فريق متعدد التخصصات لتحديد الخيار العلاجي الأنسب وفق مرحلة المرض وأعراضه."
     />

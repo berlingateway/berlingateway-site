@@ -108,6 +108,7 @@ const MEDICAL_WEB_PAGE_JSONLD = {
     "@type": "MedicalSpecialty",
     name: "Orthopedics",
   },
+  image: "https://medicalcaregermany.com/og-image.jpg",
 };
 
 const SYMPTOM_INDICATORS = [

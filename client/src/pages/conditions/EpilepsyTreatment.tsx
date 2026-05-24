@@ -64,7 +64,8 @@ export default function EpilepsyTreatment() {
         "description": "Comprehensive epilepsy evaluation including surgical options at German university epilepsy centres, with structured access for international patients.",
         "url": "https://medicalcaregermany.com/epilepsy-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Epilepsy" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
       arabicSummary="الصرع اضطراب عصبي يتميز بنوبات متكررة غير مستفزة. نحو ثلث المرضى لا يستجيبون للأدوية، وهؤلاء يُعانون من الصرع المقاوم للعلاج. في ألمانيا، تتوفر مراكز صرع معتمدة تُجري تقييماً جراحياً شاملاً يشمل تخطيط الدماغ المطوّل بالفيديو والرنين المغناطيسي عالي الدقة والتصوير الوظيفي. تشمل خيارات العلاج الجراحة الاستئصالية والتحفيز العصبي المتعدد الأشكال، مما يُتيح تحقيق السيطرة على النوبات لدى المرضى المؤهلين."
     />

@@ -25,7 +25,8 @@ export default function CongenitalHeart() {
         "description": "Specialist pediatric and adult congenital cardiac care at German university heart centers, with structured evaluation for complex congenital heart conditions.",
         "url": "https://medicalcaregermany.com/congenital-heart-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Congenital Heart Disease" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />
     </>

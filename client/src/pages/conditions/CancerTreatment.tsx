@@ -25,7 +25,8 @@ export default function CancerTreatment() {
         "description": "Structured access to oncological expertise at German university hospitals for complex cancer cases requiring specialist evaluation and advanced treatment planning.",
         "url": "https://medicalcaregermany.com/cancer-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Cancer" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
       arabicSummary="السرطان هو نمو غير طبيعي للخلايا يمكن أن يصيب أي جزء من الجسم، وتختلف طريقة علاجه بحسب نوع الورم ومرحلته. تتضمن خيارات العلاج الجراحة، والعلاج الكيميائي، والعلاج الإشعاعي، والعلاجات المستهدفة الحديثة. في ألمانيا، تُدرس حالات السرطان ضمن مجالس طبية متخصصة تجمع خبراء من تخصصات متعددة لوضع خطة علاجية متكاملة. الحالات المعقدة أو التي لم تستجب للعلاج السابق تستفيد بشكل خاص من إعادة التقييم في مراكز طبية جامعية ألمانية."
     />

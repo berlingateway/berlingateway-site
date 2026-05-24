@@ -68,7 +68,8 @@ const SPINE_WEBPAGE_JSONLD = {
   "url": "https://medicalcaregermany.com/ar/spine-surgery-germany",
   "inLanguage": "ar",
   "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient" },
-  "about": { "@type": "MedicalCondition", "name": "Spinal Disorders" }
+  "about": { "@type": "MedicalCondition", "name": "Spinal Disorders" },
+  "image": "https://medicalcaregermany.com/og-image.jpg"
 };
 
 const AR: React.CSSProperties = {

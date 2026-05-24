@@ -25,7 +25,8 @@ export default function SpinalStenosis() {
         "description": "Decompression surgery and minimally invasive options for spinal stenosis at German university spine centers, with structured specialist evaluation.",
         "url": "https://medicalcaregermany.com/spinal-stenosis-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Spinal Stenosis" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />
     </>

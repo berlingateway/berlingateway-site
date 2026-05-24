@@ -115,6 +115,7 @@ const MEDICAL_WEBPAGE_JSONLD = {
     { "@type": "Country", name: "Saudi Arabia" },
     { "@type": "Country", name: "United Arab Emirates" },
   ],
+  image: "https://medicalcaregermany.com/og-image.jpg",
 };
 
 // ── Data constants ──────────────────────────────────────────────────────────

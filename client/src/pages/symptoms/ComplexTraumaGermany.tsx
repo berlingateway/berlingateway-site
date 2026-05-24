@@ -218,6 +218,7 @@ const medicalJsonLd = {
   url: "https://medicalcaregermany.com/ar/complex-trauma-germany",
   inLanguage: "ar",
   audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+  image: "https://medicalcaregermany.com/og-image.jpg",
 };
 
 // ─── COMPONENT ───────────────────────────────────────────────────────────────

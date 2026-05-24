@@ -19,7 +19,8 @@ const MEDICAL_WEB_PAGE_JSONLD = {
   "description": "تنسيق مسارات إعادة التأهيل المتقدم في ألمانيا للحالات المعقدة — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي، الحبل الشوكي، والتقييم الطبي الثاني.",
   "inLanguage": "ar",
   "about": { "@type": "MedicalCondition", "name": "Advanced Rehabilitation" },
-  "audience": { "@type": "Patient" }
+  "audience": { "@type": "Patient" },
+  "image": "https://medicalcaregermany.com/og-image.jpg"
 };
 
 const FAQ_JSONLD = {

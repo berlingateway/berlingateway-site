@@ -92,6 +92,7 @@ export default function SecondOpinion() {
           "url": "https://medicalcaregermany.com/second-opinion-germany",
           "about": { "@type": "MedicalCondition", "name": "Second Medical Opinion" },
           "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg",
         },
         FAQ_SCHEMA,
       ])}

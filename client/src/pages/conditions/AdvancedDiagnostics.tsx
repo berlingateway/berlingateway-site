@@ -97,6 +97,7 @@ export default function AdvancedDiagnostics() {
               name: "Medical Care Germany",
               url: "https://medicalcaregermany.com",
             },
+            image: "https://medicalcaregermany.com/og-image.jpg",
           },
           FAQ_SCHEMA,
         ])}

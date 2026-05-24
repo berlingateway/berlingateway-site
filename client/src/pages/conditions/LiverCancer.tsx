@@ -71,7 +71,8 @@ export default function LiverCancer() {
             "description": "Hepatobiliary surgery and interventional oncology for liver cancer at German university centers, with multidisciplinary tumor board evaluation.",
             "url": "https://medicalcaregermany.com/liver-cancer-treatment-germany",
             "about": { "@type": "MedicalCondition", "name": "Liver Cancer" },
-            "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" }
+            "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "image": "https://medicalcaregermany.com/og-image.jpg"
           },
           {
             "@type": "FAQPage",

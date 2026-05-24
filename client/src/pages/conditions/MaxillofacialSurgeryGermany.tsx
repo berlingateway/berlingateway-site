@@ -5,10 +5,10 @@
  * Color system: Deep Navy #0B1C2C | White | Emerald accent #059669
  */
 
+import React, { useState } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
-
 
 const AR: React.CSSProperties = {
   fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif",
@@ -75,6 +75,146 @@ const COORDINATION_POINTS = [
   "إدارة المسار العلاجي من التقييم حتى المتابعة",
   "التنسيق مع فرق إعادة التأهيل بعد الجراحة",
 ];
+
+const FAQ_ITEMS = [
+  {
+    q: "ما هي أفضل مستشفيات جراحة الوجه والفكين في ألمانيا؟",
+    a: "تتصدر مستشفيات جامعية مثل Charité برلين، ومستشفى جامعة ميونخ (LMU)، ومستشفى هايدلبرغ الجامعي قائمة المراكز المتخصصة في جراحة الوجه والفكين. تتميز هذه المراكز بفرق متعددة التخصصات وتقنيات التخطيط الجراحي ثلاثي الأبعاد.",
+  },
+  {
+    q: "كم تكلف جراحة الوجه والفكين في ألمانيا؟",
+    a: "تتفاوت التكاليف بحسب نوع الجراحة وتعقيد الحالة. جراحات إعادة البناء بعد الحوادث أو الأورام تختلف عن جراحات تقويم الفكين. التقييم الأولي مجاني ويتضمن تحديد التكاليف التقريبية بناءً على التقارير الطبية.",
+  },
+  {
+    q: "هل يمكن علاج تشوهات الفكين الخلقية في ألمانيا؟",
+    a: "نعم. المراكز الجراحية الألمانية المتخصصة تعالج التشوهات الخلقية والمكتسبة في الفكين بتقنيات متقدمة تشمل التخطيط ثلاثي الأبعاد وجراحة تقويم الفكين (Orthognathic Surgery). كثير من الحالات التي لم تجد حلاً في بلدانها وجدت نتائج إيجابية في ألمانيا.",
+  },
+  {
+    q: "كيف أحصل على رأي ثانٍ لجراحة الوجه والفكين؟",
+    a: "أرسل تقاريرك الطبية وصور الأشعة المقطعية وأي وثائق سريرية عبر نموذج إرسال التقارير. يتم مراجعة الملف وتنسيق رأي ثانٍ مع متخصص في ألمانيا خلال 24-48 ساعة من الاستلام.",
+  },
+  {
+    q: "ما الوثائق المطلوبة لتنسيق جراحة الوجه والفكين في ألمانيا؟",
+    a: "المطلوب: التقارير الطبية والتشخيصية الحالية، صور الأشعة المقطعية للوجه والفكين، صور الرنين المغناطيسي إن وجدت، صور فوتوغرافية سريرية للحالة، وتقارير العمليات السابقة إن وجدت. يمكن إرسال الوثائق رقمياً.",
+  },
+];
+
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
+function FAQAccordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  return (
+    <section style={{ padding: "72px 24px", background: "#f8fafc" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
+      <div style={{ maxWidth: 760, margin: "0 auto" }}>
+        <p
+          style={{
+            ...AR,
+            fontSize: 10,
+            letterSpacing: "0.2em",
+            color: "#94a3b8",
+            textTransform: "uppercase",
+            marginBottom: 12,
+          }}
+        >
+          أسئلة شائعة
+        </p>
+        <h2
+          style={{
+            ...AR,
+            fontSize: "clamp(20px, 3vw, 26px)",
+            fontWeight: 500,
+            color: "#0B1C2C",
+            marginBottom: 36,
+            lineHeight: 1.5,
+          }}
+        >
+          أسئلة يبحث عنها المرضى
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+          {FAQ_ITEMS.map((item, i) => (
+            <div
+              key={i}
+              style={{
+                borderTop: "1px solid #e2e8f0",
+                ...(i === FAQ_ITEMS.length - 1 ? { borderBottom: "1px solid #e2e8f0" } : {}),
+              }}
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                style={{
+                  ...AR,
+                  width: "100%",
+                  background: "none",
+                  border: "none",
+                  padding: "18px 0",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  textAlign: "right",
+                  gap: 16,
+                }}
+              >
+                <span
+                  style={{
+                    ...AR,
+                    fontSize: 15,
+                    fontWeight: 500,
+                    color: "#0B1C2C",
+                    lineHeight: 1.5,
+                    flex: 1,
+                  }}
+                >
+                  {item.q}
+                </span>
+                <span
+                  style={{
+                    fontSize: 20,
+                    color: "#059669",
+                    fontWeight: 300,
+                    flexShrink: 0,
+                    lineHeight: 1,
+                  }}
+                >
+                  {openIndex === i ? "−" : "+"}
+                </span>
+              </button>
+              {openIndex === i && (
+                <div
+                  style={{
+                    ...AR,
+                    fontSize: 14,
+                    color: "#475569",
+                    lineHeight: 1.8,
+                    paddingBottom: 18,
+                    paddingRight: 0,
+                  }}
+                >
+                  {item.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function MaxillofacialSurgeryGermany() {
   return (
@@ -611,6 +751,9 @@ export default function MaxillofacialSurgeryGermany() {
           </div>
         </div>
       </section>
+
+      {/* ── FAQ SECTION ─────────────────────────────────────────── */}
+      <FAQAccordion />
 
       {/* ── RELATED EXPERTISE ───────────────────────────────────── */}
       <section

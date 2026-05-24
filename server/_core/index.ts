@@ -38,6 +38,68 @@ async function startServer() {
   app.set('trust proxy', 1);
 
   // ─────────────────────────────────────────────────────────────────────────
+  // ROBOTS.TXT — served directly before any redirect middleware
+  // Ensures Google always gets 200 with no redirect chain on /robots.txt
+  // ─────────────────────────────────────────────────────────────────────────
+  app.get('/robots.txt', (_req, res) => {
+    const content = [
+      '# Medical Care Germany - Robots.txt',
+      '# Premium Medical Coordination Authority',
+      '# https://medicalcaregermany.com',
+      'User-agent: *',
+      'Allow: /',
+      '',
+      '# Disallow admin and API endpoints',
+      'Disallow: /api/',
+      'Disallow: /admin/',
+      'Disallow: /_core/',
+      '',
+      '# Disallow search results and dynamic pages',
+      'Disallow: /search?',
+      'Disallow: /*?*utm_*',
+      '',
+      '# Allow crawling of static assets',
+      'Allow: /*.css$',
+      'Allow: /*.js$',
+      'Allow: /*.jpg$',
+      'Allow: /*.jpeg$',
+      'Allow: /*.png$',
+      'Allow: /*.svg$',
+      'Allow: /*.webp$',
+      '',
+      '# Sitemap location',
+      'Sitemap: https://medicalcaregermany.com/sitemap.xml',
+      '',
+      '# Crawl-delay for respectful crawling',
+      'Crawl-delay: 1',
+      '',
+      '# Specific rules for major search engines',
+      'User-agent: Googlebot',
+      'Allow: /',
+      'Crawl-delay: 0',
+      '',
+      'User-agent: Bingbot',
+      'Allow: /',
+      'Crawl-delay: 1',
+      '',
+      'User-agent: Slurp',
+      'Allow: /',
+      'Crawl-delay: 1',
+      '',
+      '# Block bad bots',
+      'User-agent: AhrefsBot',
+      'Disallow: /',
+      'User-agent: SemrushBot',
+      'Disallow: /',
+      'User-agent: DotBot',
+      'Disallow: /',
+      'User-agent: MJ12bot',
+      'Disallow: /',
+    ].join('\n');
+    res.status(200).set('Content-Type', 'text/plain; charset=utf-8').send(content);
+  });
+
+  // ─────────────────────────────────────────────────────────────────────────
   // CANONICAL HOST ENFORCEMENT
   // Primary canonical: https://medicalcaregermany.com  (non-www, HTTPS)
   // Rule 1: www → non-www  (301, direct, no chain)

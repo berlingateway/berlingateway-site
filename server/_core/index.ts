@@ -109,16 +109,20 @@ async function startServer() {
   app.use((req, res, next) => {
     if (process.env.NODE_ENV !== 'production') return next();
 
-    // Resolve actual host: prefer x-forwarded-host (set by Cloudflare/proxy)
-    // then fall back to the Host header.
+    // Resolve actual host: check BOTH x-forwarded-host AND Host header
+    // Some proxies send the original www host in x-forwarded-host
     const forwardedHost = (req.headers['x-forwarded-host'] as string || '').split(',')[0].trim();
-    const host = forwardedHost || req.get('host') || '';
+    const rawHost = req.get('host') || '';
+
+    // Check www in either header — whichever is set
+    const effectiveHost = forwardedHost || rawHost;
+    const isWww = effectiveHost.startsWith('www.') ||
+                  rawHost.startsWith('www.') ||
+                  forwardedHost.startsWith('www.');
 
     // Resolve actual protocol via x-forwarded-proto (set by Cloudflare)
     const forwardedProto = (req.headers['x-forwarded-proto'] as string || '').split(',')[0].trim();
     const protocol = forwardedProto || req.protocol;
-
-    const isWww = host === 'www.medicalcaregermany.com';
     const isHttp = protocol === 'http';
 
     // www → non-www (single 301, preserves full path + query)
@@ -234,6 +238,20 @@ async function startServer() {
     '/herniated-disc-treatment-germany':      '/ar/herniated-disc',
     '/spine-surgery-germany':                 '/ar/spine-surgery-germany',
   };
+
+  // 301 Redirects: Arabic slug aliases → canonical Arabic URLs
+  const ARABIC_REDIRECTS_301: Record<string, string> = {
+    '/ar/send-medical-reports': '/ar/ارسال-التقارير-الطبية',
+  };
+
+  app.use((req, res, next) => {
+    const path = req.path.replace(/\/+$/, '') || '/';
+    const arabicTarget = ARABIC_REDIRECTS_301[path];
+    if (arabicTarget) {
+      return res.redirect(301, arabicTarget);
+    }
+    next();
+  });
 
   // 410 Gone: permanently deleted English-only pages
   const GONE_410: string[] = [

@@ -25,7 +25,7 @@ export default function HipReplacement() {
         "description": "Total hip arthroplasty and revision surgery at German orthopedic university centers, with minimally invasive approaches and structured rehabilitation.",
         "url": "https://medicalcaregermany.com/hip-replacement-germany",
         "about": { "@type": "MedicalCondition", "name": "Hip Osteoarthritis" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com", "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" } },
         "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />

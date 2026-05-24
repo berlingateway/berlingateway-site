@@ -91,7 +91,7 @@ export default function SecondOpinion() {
           "description": "Independent specialist review of complex diagnoses and treatment plans by German university physicians, structured for international patients.",
           "url": "https://medicalcaregermany.com/second-opinion-germany",
           "about": { "@type": "MedicalCondition", "name": "Second Medical Opinion" },
-          "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+          "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com", "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" } },
         "image": "https://medicalcaregermany.com/og-image.jpg",
         },
         FAQ_SCHEMA,

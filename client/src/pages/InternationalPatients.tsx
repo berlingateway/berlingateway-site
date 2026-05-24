@@ -212,7 +212,8 @@ export default function InternationalPatients() {
             "publisher": {
               "@type": "Organization",
               "name": "Medical Care Germany",
-              "url": "https://medicalcaregermany.com"
+              "url": "https://medicalcaregermany.com",
+              "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" }
             },
             "image": "https://medicalcaregermany.com/og-image.jpg"
           })

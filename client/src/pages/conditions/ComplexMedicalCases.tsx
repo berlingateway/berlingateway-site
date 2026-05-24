@@ -25,7 +25,7 @@ export default function ComplexMedicalCases() {
         "description": "Structured coordination for diagnostically challenging or treatment-resistant cases at German university hospitals, for international patients.",
         "url": "https://medicalcaregermany.com/complex-medical-cases-germany",
         "about": { "@type": "MedicalCondition", "name": "Complex Medical Case" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com", "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" } },
         "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />

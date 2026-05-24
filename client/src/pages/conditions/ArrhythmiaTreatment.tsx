@@ -25,7 +25,7 @@ export default function ArrhythmiaTreatment() {
         "description": "Electrophysiology studies and catheter ablation for cardiac arrhythmia at German university heart centers, with structured specialist evaluation.",
         "url": "https://medicalcaregermany.com/arrhythmia-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Cardiac Arrhythmia" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com", "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" } },
         "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />

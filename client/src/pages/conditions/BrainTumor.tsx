@@ -73,7 +73,7 @@ export default function BrainTumor() {
         "description": "Structured access to neurosurgical and neuro-oncological expertise at German university hospitals for brain tumor diagnosis and treatment.",
         "url": "https://medicalcaregermany.com/brain-tumor-treatment-germany",
         "about": { "@type": "MedicalCondition", "name": "Brain Tumor" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com", "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" } },
         "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
       arabicSummaryTitle="متى تحتاج الحالة إلى مراجعة متخصصة؟"

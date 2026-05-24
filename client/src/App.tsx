@@ -88,6 +88,7 @@ import ProstheticsAfterAmputationGermany from "./pages/symptoms/ProstheticsAfter
 import JointReplacementAfterTrauma from "./pages/symptoms/JointReplacementAfterTrauma";
 import ComplexTraumaGermany from "./pages/symptoms/ComplexTraumaGermany";
 import SurgerySecondOpinion from "./pages/symptoms/SurgerySecondOpinion";
+import SecondOpinionGermany from "./pages/symptoms/SecondOpinionGermany";
 import ComplexCases from "./pages/symptoms/ComplexCases";
 
 // Geo-Intent Fertility Pages
@@ -218,6 +219,7 @@ function Router() {
       <Route path={"/ar/lung-cancer-treatment-germany"} component={LungCancerArabic} />
       {/* Arabic Symptom Entry Pages */}
       <Route path={"/ar/surgery-second-opinion"} component={SurgerySecondOpinion} />
+      <Route path={"/ar/second-opinion-germany"} component={SecondOpinionGermany} />
       <Route path={"/ar/complex-cases"} component={ComplexCases} />
       <Route path={"/ar/dizziness-long-term"} component={DizzinessLongTerm} />
       <Route path={"/ar/unexplained-dizziness"} component={UnexplainedDizziness} />

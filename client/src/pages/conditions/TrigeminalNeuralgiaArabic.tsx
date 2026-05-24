@@ -154,7 +154,7 @@ export default function TrigeminalNeuralgiaArabic() {
           description: "تقييم دقيق وعلاج متخصص لألم العصب ثلاثي التوائم في ألمانيا.",
           url: "https://medicalcaregermany.com/ar/trigeminal-neuralgia-treatment-germany",
           about: { "@type": "MedicalCondition", name: "Trigeminal Neuralgia" },
-          publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com" },
+          publisher: { "@type": "Organization", name: "Medical Care Germany", url: "https://medicalcaregermany.com", logo: { "@type": "ImageObject", url: "https://medicalcaregermany.com/og-image.jpg" } },
           image: "https://medicalcaregermany.com/og-image.jpg",
           inLanguage: "ar",
         })}

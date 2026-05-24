@@ -62,7 +62,7 @@ export default function BrainSurgery() {
         "description": "Access to specialist neurosurgical evaluation and treatment at German university hospitals for complex intracranial conditions.",
         "url": "https://medicalcaregermany.com/brain-surgery-germany",
         "about": { "@type": "MedicalProcedure", "name": "Brain Surgery" },
-        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com" },
+        "publisher": { "@type": "Organization", "name": "Medical Care Germany", "url": "https://medicalcaregermany.com", "logo": { "@type": "ImageObject", "url": "https://medicalcaregermany.com/og-image.jpg" } },
         "image": "https://medicalcaregermany.com/og-image.jpg"
       })}
     />

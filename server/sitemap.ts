@@ -177,6 +177,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/second-opinion-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 
   // ── Arabic SEO Gateway Pages ───────────────────────────────────────────
   {

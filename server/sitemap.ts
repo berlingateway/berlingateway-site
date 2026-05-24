@@ -66,6 +66,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/liver-cancer-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 
   // ── Arabic Cardiology ──────────────────────────────────────────────────────
   {

@@ -1,6 +1,6 @@
 /**
- * /ar/second-opinion-germany
- * MCG — رأي طبي ثانٍ من ألمانيا
+ * /ar/liver-cancer-treatment-germany
+ * MCG — سرطان الكبد في ألمانيا
  */
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
@@ -17,51 +17,51 @@ const WA_LINK =
   "https://wa.me/4915781497451?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C%20%D8%A3%D9%88%D8%AF%20%D8%A5%D8%B1%D8%B3%D8%A7%D9%84%20%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1%20%D8%AD%D8%A7%D9%84%D8%AA%D9%8A";
 
 const SITUATIONS = [
-  "قيل لك إن الحل الوحيد هو الجراحة",
-  "تشخيصات مختلفة من أطباء مختلفين",
-  "العلاج لم يعطِ نتيجة رغم الالتزام به",
-  "التقارير متضاربة ولا أحد يشرح السبب",
-  "الحالة نادرة أو معقدة وتحتاج خبرة أعمق",
-  "تريد التأكد قبل قرار لا رجعة فيه",
-  "أهلك يريدون رأياً موثوقاً قبل الموافقة",
-  "الطبيب المحلي يستعجل والوقت ضاغط",
+  "تشخيص سرطان الكبد مؤكد وتريد رأياً ثانياً",
+  "التقارير متضاربة في تحديد المرحلة",
+  "قيل لك إن الحالة غير قابلة للجراحة",
+  "العلاج الكيميائي لم يعطِ نتيجة",
+  "تريد تقييم إمكانية زراعة الكبد",
+  "الورم في موضع معقد يحتاج جراحة دقيقة",
+  "تريد بروتوكول علاجي من مركز أكاديمي",
+  "الحالة نادرة وتحتاج خبرة متخصصة",
 ];
 
 const WHY_CARDS = [
   {
-    title: "بروفيسور متخصص — رأي مستقل تماماً",
-    body: "كل حالة تُراجَع مع أستاذ جامعي في تخصصها الدقيق — بدون أي تأثير من الجهة المُحيلة",
+    title: "مراكز متخصصة في جراحة الكبد والمرارة",
+    body: "المستشفيات الجامعية الألمانية تضم أقساماً متخصصة حصراً في جراحة الكبد والمرارة والبنكرياس",
   },
   {
-    title: "تشخيص مبني على الأدلة لا على الاجتهاد",
-    body: "الطبيب الألماني يعتمد على البروتوكولات السريرية الدولية — لا على الاجتهاد الشخصي",
+    title: "تقنيات متقدمة — TACE وSIRT والجراحة الروبوتية",
+    body: "تتوفر في ألمانيا أحدث تقنيات العلاج التدخلي والجراحة الدقيقة لأورام الكبد",
   },
   {
-    title: "إذا كانت العملية ضرورية — سيقولون ذلك",
-    body: "الرأي الألماني محايد تماماً — إذا كانت الجراحة ضرورية ستعرف، وإذا كان هناك بديل ستعرفه أيضاً",
+    title: "فريق متكامل — جراحة وأورام وأشعة تداخلية",
+    body: "كل حالة تُناقَش في لجنة متعددة التخصصات — جراح الكبد وطبيب الأورام وأخصائي الأشعة التداخلية",
   },
 ];
 
 const FAQ_DATA = [
   {
-    q: "كيف أحصل على رأي طبي ثانٍ من ألمانيا؟",
-    a: "أرسل ملفك الطبي عبر الموقع أو واتساب — منسق متخصص يراجعه ويرد خلال 24 ساعة.",
+    q: "هل يمكن علاج سرطان الكبد في ألمانيا؟",
+    a: "نعم — ألمانيا من أفضل دول العالم في جراحة الكبد وعلاج الأورام بتقنيات متقدمة.",
   },
   {
-    q: "هل الرأي الثاني يعني أن طبيبي الأول مخطئ؟",
-    a: "لا — الرأي الثاني حق طبيعي لكل مريض قبل أي قرار مصيري.",
+    q: "ما تكلفة علاج سرطان الكبد في ألمانيا؟",
+    a: "تختلف حسب المرحلة والبروتوكول — المراجعة الأولية للملف مجانية وتحدد المسار المناسب.",
   },
   {
-    q: "ما الوثائق المطلوبة للرأي الثاني في ألمانيا؟",
-    a: "التقارير الطبية الحالية، الأشعة، ونتائج التحاليل — يمكن إرسالها لاحقاً بعد التقييم الأولي.",
+    q: "هل زراعة الكبد متاحة في ألمانيا للمرضى الدوليين؟",
+    a: "نعم — المستشفيات الجامعية الألمانية تستقبل مرضى دوليين لتقييم إمكانية الزراعة.",
   },
   {
-    q: "كم يستغرق الحصول على رأي ثانٍ في ألمانيا؟",
-    a: "المراجعة الأولية خلال 24-48 ساعة — تنسيق الموعد خلال 3-7 أيام.",
+    q: "كيف أرسل ملفي الطبي لتقييم حالة سرطان الكبد؟",
+    a: "أرسل التقارير والأشعة عبر الموقع أو واتساب — منسق يرد خلال 24 ساعة.",
   },
   {
-    q: "هل يمكن الحصول على رأي ثانٍ عن بُعد بدون سفر؟",
-    a: "نعم — المراجعة الأولية للملف تتم عن بُعد. السفر يُقرر بناءً على نتيجة التقييم.",
+    q: "ما الفرق بين TACE وSIRT في علاج سرطان الكبد؟",
+    a: "كلاهما علاج تدخلي موجّه للورم — الاختيار يعتمد على حجم الورم وموضعه ويحدده فريق متخصص.",
   },
 ];
 
@@ -78,13 +78,13 @@ const FAQ_SCHEMA = {
 const MEDICAL_WEBPAGE_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  name: "رأي طبي ثانٍ من ألمانيا | مراجعة متخصصة في برلين",
+  name: "سرطان الكبد في ألمانيا | تقييم متخصص وتنسيق العلاج",
   description:
-    "قبل أي قرار طبي مصيري — راجع ملفك مع بروفيسور متخصص في برلين. رد خلال 24 ساعة. نخدم المرضى من ليبيا والجزائر والعراق والسعودية.",
-  url: "https://medicalcaregermany.com/ar/second-opinion-germany",
+    "تنسيق تقييم وعلاج سرطان الكبد في المستشفيات الجامعية الألمانية. نخدم المرضى من ليبيا والجزائر والعراق والسعودية. رد خلال 24 ساعة.",
+  url: "https://medicalcaregermany.com/ar/liver-cancer-treatment-germany",
   inLanguage: "ar",
   audience: { "@type": "MedicalAudience", audienceType: "Patient" },
-  about: { "@type": "MedicalCondition", name: "Second Medical Opinion" },
+  about: { "@type": "MedicalCondition", name: "Liver Cancer" },
   publisher: {
     "@type": "Organization",
     name: "Medical Care Germany",
@@ -94,13 +94,13 @@ const MEDICAL_WEBPAGE_SCHEMA = {
   image: "https://medicalcaregermany.com/og-image.jpg",
 };
 
-export default function SecondOpinionGermany() {
+export default function LiverCancerArabic() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "رأي طبي ثانٍ من ألمانيا | مراجعة متخصصة في برلين";
+    document.title = "سرطان الكبد في ألمانيا | تقييم متخصص وتنسيق العلاج";
     const descContent =
-      "قبل أي قرار طبي مصيري — راجع ملفك مع بروفيسور متخصص في برلين. رد خلال 24 ساعة. نخدم المرضى من ليبيا والجزائر والعراق والسعودية.";
+      "تنسيق تقييم وعلاج سرطان الكبد في المستشفيات الجامعية الألمانية. نخدم المرضى من ليبيا والجزائر والعراق والسعودية. رد خلال 24 ساعة.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {
@@ -115,13 +115,13 @@ export default function SecondOpinionGermany() {
       c.rel = "canonical";
       document.head.appendChild(c);
     }
-    c.href = "https://medicalcaregermany.com/ar/second-opinion-germany";
+    c.href = "https://medicalcaregermany.com/ar/liver-cancer-treatment-germany";
   }, []);
 
   return (
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
-      <SmartNavLayer currentPath="/ar/second-opinion-germany" />
-      <HreflangTags currentPath="/ar/second-opinion-germany" />
+      <SmartNavLayer currentPath="/ar/liver-cancer-treatment-germany" />
+      <HreflangTags currentPath="/ar/liver-cancer-treatment-germany" />
 
       {/* JSON-LD */}
       <script
@@ -136,14 +136,12 @@ export default function SecondOpinionGermany() {
             MEDICAL CARE GERMANY — برلين
           </p>
           <h1 style={{ ...AR, fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.55, marginBottom: 24 }}>
-            رأي طبي ثانٍ من ألمانيا
-            <br />
-            قبل أي قرار — اعرف رأي بروفيسور متخصص في برلين.
+            سرطان الكبد — التقييم في ألمانيا قبل أي قرار
           </h1>
           <p style={{ ...AR, fontSize: 16, color: "#94a3b8", lineHeight: 1.9, maxWidth: 620, margin: "0 auto 36px" }}>
-            كثير من المرضى يصلون إلينا بتشخيص جاهز.
+            سرطان الكبد من أكثر الحالات التي تحتاج فريقاً متكاملاً — لا طبيباً واحداً.
             <br />
-            بعضهم يحتاج تأكيداً. وبعضهم يكتشف مساراً مختلفاً.
+            نسّق Medical Care Germany وصولك إلى أفضل مراكز أورام الكبد في ألمانيا.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
@@ -160,7 +158,7 @@ export default function SecondOpinionGermany() {
       <section style={{ padding: "72px 24px 64px", background: "#f8fafc" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{ ...AR, fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, color: "#0B1C2C", lineHeight: 1.5, marginBottom: 40, textAlign: "center" }}>
-            متى تحتاج رأياً طبياً ثانياً؟
+            متى تحتاج تقييماً متخصصاً في ألمانيا؟
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
             {SITUATIONS.map((text, i) => (
@@ -173,9 +171,6 @@ export default function SecondOpinionGermany() {
               </div>
             ))}
           </div>
-          <p style={{ ...AR, fontSize: 14, color: "#475569", lineHeight: 1.8, textAlign: "center", marginTop: 32 }}>
-            الرأي الثاني حق — وليس شكاً في طبيبك.
-          </p>
         </div>
       </section>
 
@@ -186,24 +181,24 @@ export default function SecondOpinionGermany() {
             من حالاتنا
           </p>
           <h2 style={{ ...AR, fontSize: "clamp(18px, 2.8vw, 28px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.6, marginBottom: 32 }}>
-            "قالوا تحتاج عملية — برلين قالت عكس ذلك"
+            "قالوا إن الحالة غير قابلة للجراحة — برلين رأت غير ذلك"
           </h2>
           <p style={{ ...AR, fontSize: 15, color: "#94a3b8", lineHeight: 2, maxWidth: 640, margin: "0 auto 32px" }}>
-            مريضة من شمال أفريقيا.
+            مريض من ليبيا — ورم في الكبد.
             <br />
-            قيل لأهلها لا خيار إلا استئصال إحدى الكليتين.
+            في بلده قالوا: الموضع معقد والجراحة مستحيلة.
             <br />
-            أرسلوا الملف إلينا.
+            أرسل ملفه إلينا.
             <br /><br />
-            في برلين — رأي مختلف تماماً.
+            في برلين — راجع فريق جراحة الكبد الحالة كاملة.
             <br />
-            الحالة لا تستدعي الاستئصال.
-            <br /><br />
-            اليوم هي بكلتا كليتيها وبصحة جيدة.
+            تبيّن أن الجراحة ممكنة بتقنية متقدمة.
+            <br />
+            تمت العملية بنجاح.
           </p>
           <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 24 }}>
             <p style={{ ...AR, fontSize: 16, color: "#f8fafc", fontWeight: 500, lineHeight: 1.7 }}>
-              قبل أي قرار جراحي — أرسل الملف أولاً.
+              الحالة المعقدة تحتاج المكان الصحيح — لا الاستسلام.
             </p>
           </div>
         </div>
@@ -213,7 +208,7 @@ export default function SecondOpinionGermany() {
       <section style={{ padding: "72px 24px 64px", background: "#fff" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 style={{ ...AR, fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 500, color: "#0B1C2C", lineHeight: 1.5, marginBottom: 48, textAlign: "center" }}>
-            لماذا الرأي الثاني في ألمانيا مختلف؟
+            لماذا ألمانيا لعلاج سرطان الكبد؟
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 20 }}>
             {WHY_CARDS.map((card, i) => (
@@ -282,23 +277,11 @@ export default function SecondOpinionGermany() {
         </div>
       </section>
 
-      {/* ══ INTERNAL LINK ══════════════════════════════════════════════════ */}
-      <div style={{ textAlign: "center", padding: "24px 24px 0", background: "#f8fafc" }}>
-        <Link
-          href="/ar/surgery-second-opinion"
-          style={{ ...AR, fontSize: 14, color: "#0B1C2C", textDecoration: "underline", textUnderlineOffset: 3 }}
-        >
-          رأي ثانٍ قبل العملية تحديداً
-        </Link>
-      </div>
-
       {/* ══ SECTION 6: FINAL CTA (dark) ══════════════════════════════════════ */}
       <section style={{ padding: "80px 24px 72px", background: "#0B1C2C", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <h2 style={{ ...AR, fontSize: "clamp(22px, 3.5vw, 36px)", fontWeight: 500, color: "#f8fafc", lineHeight: 1.65, marginBottom: 28 }}>
-            أرسل ملفك قبل أي قرار.
-            <br />
-            سيقرأه متخصص ويرد خلال 24 ساعة.
+            أرسل ملفك — سيقرأه متخصص خلال 24 ساعة.
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
             <Link

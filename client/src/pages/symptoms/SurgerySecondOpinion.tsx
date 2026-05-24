@@ -179,6 +179,16 @@ export default function SurgerySecondOpinion() {
         </div>
       </section>
 
+      {/* ══ INTERNAL LINK ══════════════════════════════════════════════════ */}
+      <div style={{ textAlign: "center", padding: "24px 24px 0", background: "#fff" }}>
+        <Link
+          href="/ar/second-opinion-germany"
+          style={{ ...AR, fontSize: 14, color: "#0B1C2C", textDecoration: "underline", textUnderlineOffset: 3 }}
+        >
+          اقرأ أيضاً: رأي طبي ثانٍ من ألمانيا
+        </Link>
+      </div>
+
       {/* ══ SECTION 5: FINAL CTA (dark) ══════════════════════════════════════ */}
       <section style={{ padding: "80px 24px 72px", background: "#0B1C2C", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>

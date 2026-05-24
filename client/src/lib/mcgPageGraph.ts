@@ -1454,6 +1454,192 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
       { href: "/ar/العلاج-في-المانيا-للعرب", label: "العلاج في ألمانيا" },
     ],
   },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // ARABIC SYMPTOM & CONSULTATION PAGES (recently added)
+  // ══════════════════════════════════════════════════════════════════════════
+  "/ar/dizziness-long-term": {
+    path: "/ar/dizziness-long-term",
+    label: "الدوخة المزمنة",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/" },
+    cluster: [
+      { href: "/ar/dizziness-long-term", label: "الدوخة المزمنة" },
+      { href: "/ar/unexplained-dizziness", label: "دوخة بدون تشخيص" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/unexplained-dizziness": {
+    path: "/ar/unexplained-dizziness",
+    label: "دوخة بدون تشخيص",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/" },
+    cluster: [
+      { href: "/ar/unexplained-dizziness", label: "دوخة بدون تشخيص" },
+      { href: "/ar/dizziness-long-term", label: "الدوخة المزمنة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/surgery-second-opinion": {
+    path: "/ar/surgery-second-opinion",
+    label: "رأي ثانٍ قبل العملية",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/second-opinion-germany" },
+    cluster: [
+      { href: "/ar/surgery-second-opinion", label: "رأي ثانٍ قبل العملية" },
+      { href: "/ar/second-opinion-germany", label: "رأي طبي ثانٍ" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/complex-cases", label: "الحالات المعقدة" },
+    ],
+  },
+  "/ar/complex-cases": {
+    path: "/ar/complex-cases",
+    label: "الحالات الطبية المعقدة",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/complex-medical-cases-germany" },
+    cluster: [
+      { href: "/ar/complex-cases", label: "الحالات المعقدة" },
+      { href: "/ar/surgery-second-opinion", label: "رأي ثانٍ قبل العملية" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/second-opinion-germany": {
+    path: "/ar/second-opinion-germany",
+    label: "رأي طبي ثانٍ من ألمانيا",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/second-opinion-germany" },
+    cluster: [
+      { href: "/ar/second-opinion-germany", label: "رأي طبي ثانٍ" },
+      { href: "/ar/surgery-second-opinion", label: "رأي ثانٍ قبل العملية" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/liver-cancer-treatment-germany": {
+    path: "/ar/liver-cancer-treatment-germany",
+    label: "سرطان الكبد في ألمانيا",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/liver-cancer-treatment-germany" },
+    cluster: [
+      { href: "/ar/liver-cancer-treatment-germany", label: "سرطان الكبد" },
+      { href: "/ar/lung-cancer-treatment-germany", label: "سرطان الرئة" },
+      { href: "/ar/brain-tumor-treatment-germany", label: "أورام المخ" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // STANDALONE PAGES (no HreflangTags component yet)
+  // ══════════════════════════════════════════════════════════════════════════
+  "/international-patients": {
+    path: "/international-patients",
+    label: "International Patients",
+    lang: "en",
+    hub: "/",
+    hubLabel: "Home",
+    equivalents: { en: "/international-patients" },
+    cluster: [
+      { href: "/international-patients", label: "International Patients" },
+      { href: "/consultation-services-germany", label: "Consultation Services" },
+    ],
+    related: [
+      { href: "/", label: "Home" },
+      { href: "/submit-case", label: "Submit Medical Reports" },
+    ],
+  },
+  "/ar/nerve-injury-after-trauma-germany": {
+    path: "/ar/nerve-injury-after-trauma-germany",
+    label: "إصابات الأعصاب بعد الحوادث",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/" },
+    cluster: [
+      { href: "/ar/nerve-injury-after-trauma-germany", label: "إصابات الأعصاب" },
+      { href: "/ar/complex-trauma-germany", label: "الصدمات المعقدة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/prosthetics-after-amputation-germany": {
+    path: "/ar/prosthetics-after-amputation-germany",
+    label: "الأطراف الصناعية بعد البتر",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/" },
+    cluster: [
+      { href: "/ar/prosthetics-after-amputation-germany", label: "الأطراف الصناعية" },
+      { href: "/ar/complex-trauma-germany", label: "الصدمات المعقدة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/joint-replacement-after-trauma": {
+    path: "/ar/joint-replacement-after-trauma",
+    label: "استبدال المفاصل بعد الإصابة",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/" },
+    cluster: [
+      { href: "/ar/joint-replacement-after-trauma", label: "استبدال المفاصل" },
+      { href: "/ar/complex-trauma-germany", label: "الصدمات المعقدة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+  "/ar/complex-trauma-germany": {
+    path: "/ar/complex-trauma-germany",
+    label: "الصدمات المعقدة",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/" },
+    cluster: [
+      { href: "/ar/complex-trauma-germany", label: "الصدمات المعقدة" },
+      { href: "/ar/nerve-injury-after-trauma-germany", label: "إصابات الأعصاب" },
+      { href: "/ar/joint-replacement-after-trauma", label: "استبدال المفاصل" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
 };
 
 /**

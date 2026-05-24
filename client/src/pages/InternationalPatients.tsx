@@ -1,10 +1,12 @@
 import { Link } from "wouter";
+import HreflangTags from "@/components/HreflangTags";
 import { Button } from "@/components/ui/button";
 import { Globe, FileText, Stethoscope, ArrowRight } from "lucide-react";
 
 export default function InternationalPatients() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans flex flex-col">
+      <HreflangTags currentPath="/international-patients" />
       {/* Helmet-equivalent meta via document.title */}
       {typeof document !== "undefined" && (() => {
         document.title = "Treatment in Germany for International Patients — Medical Care Germany";

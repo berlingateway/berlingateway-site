@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { FileText, Activity, Network, Calendar, Heart, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import HreflangTags from "@/components/HreflangTags";
 
 // Sovereign iframe form — completely independent of React/tRPC/backend
 function IframeForm() {
@@ -117,6 +118,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <HreflangTags currentPath="/" />
 
       {/* Arabic Language Suggestion Banner — shown to MENA visitors */}
       {showArabicBanner && (

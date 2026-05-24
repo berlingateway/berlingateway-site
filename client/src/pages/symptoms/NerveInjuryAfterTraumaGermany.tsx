@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import HreflangTags from "@/components/HreflangTags";
 import { useEffect } from "react";
 import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
@@ -55,6 +56,7 @@ export default function NerveInjuryAfterTraumaGermany() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
+      <HreflangTags currentPath="/ar/nerve-injury-after-trauma-germany" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(NERVE_FAQ_JSONLD) }} />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 

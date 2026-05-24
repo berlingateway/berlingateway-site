@@ -133,6 +133,9 @@ export interface MedicalConditionPageProps {
     stories: Array<{ text: string }>;
     footer?: string;
   };
+  /** hreflang pair: provide the counterpart language URL to add both hreflang tags.
+   * For Arabic pages: provide the EN URL (lang='en'). For EN pages: provide the AR URL (lang='ar'). */
+  hreflangPair?: { lang: 'en' | 'ar'; url: string };
   /** Custom CTA that overrides the built-in CTA box entirely */
   customCTA?: {
     title?: string;
@@ -189,6 +192,7 @@ export default function MedicalConditionPage({
   authoritySection,
   customCTA,
   patientTestimonials,
+  hreflangPair,
 }: MedicalConditionPageProps) {
   const [symptomsExpanded, setSymptomsExpanded] = useState(false);
   const [deepDiveExpanded, setDeepDiveExpanded] = useState(false);
@@ -237,9 +241,14 @@ export default function MedicalConditionPage({
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        {/* hreflang: self-referencing for Arabic canonical */}
-        {pageDir === 'rtl' && <link rel="alternate" hrefLang="ar" href={canonicalUrl} />}
-        {pageDir === 'rtl' && <meta property="og:locale" content="ar_AR" />}
+        {/* hreflang: self */}
+        <link rel="alternate" hrefLang={isArabic ? 'ar' : 'en'} href={canonicalUrl} />
+        {/* hreflang: counterpart language */}
+        {hreflangPair && <link rel="alternate" hrefLang={hreflangPair.lang} href={hreflangPair.url} />}
+        {/* hreflang: x-default → EN version */}
+        {!isArabic && <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />}
+        {isArabic && hreflangPair?.lang === 'en' && <link rel="alternate" hrefLang="x-default" href={hreflangPair.url} />}
+        {isArabic && <meta property="og:locale" content="ar_AR" />}
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />

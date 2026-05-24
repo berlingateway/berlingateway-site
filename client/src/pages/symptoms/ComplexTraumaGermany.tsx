@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import HreflangTags from "@/components/HreflangTags";
 import { Link } from "wouter";
 import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
@@ -253,6 +254,7 @@ export default function ComplexTraumaGermany() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
+      <HreflangTags currentPath="/ar/complex-trauma-germany" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

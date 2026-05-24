@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import HreflangTags from "@/components/HreflangTags";
 import { useEffect } from "react";
 import ArabicHeaderLocked from "@/components/ArabicHeaderLocked";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
@@ -48,6 +49,7 @@ export default function JointReplacementAfterTrauma() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl">
+      <HreflangTags currentPath="/ar/joint-replacement-after-trauma" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JOINT_FAQ_JSONLD) }} />
       <ArabicHeaderLocked />
 

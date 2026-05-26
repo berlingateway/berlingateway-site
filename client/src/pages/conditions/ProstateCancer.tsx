@@ -9,8 +9,8 @@ export default function ProstateCancer() {
       <SmartNavLayer currentPath="/prostate-cancer-treatment-germany" />
       <HreflangTags currentPath="/prostate-cancer-treatment-germany" />
       <MedicalConditionPage
-      metaTitle="Prostate Cancer Treatment in Germany"
-      metaDescription="Advanced urological oncology including robotic-assisted surgery and PSMA PET imaging for prostate cancer at German university hospitals."
+      metaTitle="Prostate Cancer Treatment in Germany | Expert Review Before Any Decision"
+      metaDescription="Complex prostate cancer cases reviewed by specialist professors at German university hospitals. Send your medical file — response within 24 hours."
       canonicalPath="/prostate-cancer-treatment-germany"
       headline="Prostate Cancer Treatment in Germany"
       subtitle="Advanced urological oncology including robotic surgery at German university hospitals."

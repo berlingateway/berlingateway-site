@@ -9,8 +9,8 @@ export default function ColonCancer() {
       <SmartNavLayer currentPath="/colon-cancer-treatment-germany" />
       <HreflangTags currentPath="/colon-cancer-treatment-germany" />
       <MedicalConditionPage
-      metaTitle="Colon Cancer Treatment in Germany"
-      metaDescription="Surgical and oncological management of colorectal cancer at German university medical centers, with multidisciplinary tumor board review for each case."
+      metaTitle="Colon Cancer Treatment in Germany | Expert Review Before Any Decision"
+      metaDescription="Colorectal cancer cases reviewed by specialist professors at certified German university centers. Send your medical file — response within 24 hours."
       canonicalPath="/colon-cancer-treatment-germany"
       headline="Colon Cancer Treatment in Germany"
       subtitle="Surgical and oncological management of colorectal cancer at German university medical centers."

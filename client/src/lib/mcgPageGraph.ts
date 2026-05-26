@@ -1556,6 +1556,24 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     ],
   },
 
+  "/ar/prostate-cancer-treatment-germany": {
+    path: "/ar/prostate-cancer-treatment-germany",
+    label: "سرطان البروستاتا في ألمانيا",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/prostate-cancer-treatment-germany" },
+    cluster: [
+      { href: "/ar/prostate-cancer-treatment-germany", label: "سرطان البروستاتا" },
+      { href: "/ar/liver-cancer-treatment-germany", label: "سرطان الكبد" },
+      { href: "/ar/lung-cancer-treatment-germany", label: "سرطان الرئة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+
   // ══════════════════════════════════════════════════════════════════════════
   // STANDALONE PAGES (no HreflangTags component yet)
   // ══════════════════════════════════════════════════════════════════════════

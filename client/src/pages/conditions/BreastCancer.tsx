@@ -9,8 +9,8 @@ export default function BreastCancer() {
       <SmartNavLayer currentPath="/breast-cancer-treatment-germany" />
       <HreflangTags currentPath="/breast-cancer-treatment-germany" />
       <MedicalConditionPage
-      metaTitle="Breast Cancer Treatment in Germany"
-      metaDescription="Certified breast cancer centers and multidisciplinary tumor boards at German university hospitals for comprehensive breast cancer care."
+      metaTitle="Breast Cancer Treatment in Germany | Expert Review Before Any Decision"
+      metaDescription="Breast cancer cases reviewed by specialist professors at certified German university breast centers. Send your medical file — response within 24 hours."
       canonicalPath="/breast-cancer-treatment-germany"
       headline="Breast Cancer Treatment in Germany"
       subtitle="Certified breast cancer centers and multidisciplinary tumor boards at German university hospitals."

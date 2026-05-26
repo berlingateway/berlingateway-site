@@ -76,6 +76,16 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/breast-cancer-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/colon-cancer-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 
   // ── Arabic Cardiology ──────────────────────────────────────────────────────
   {

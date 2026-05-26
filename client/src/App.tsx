@@ -46,6 +46,8 @@ import LiverCancerArabic from "./pages/conditions/LiverCancerArabic";
 import BreastCancer from "./pages/conditions/BreastCancer";
 import ProstateCancer from "./pages/conditions/ProstateCancer";
 import ProstateCancerArabic from "./pages/conditions/ProstateCancerArabic";
+import BreastCancerArabic from "./pages/conditions/BreastCancerArabic";
+import ColonCancerArabic from "./pages/conditions/ColonCancerArabic";
 import ColonCancer from "./pages/conditions/ColonCancer";
 import LiverCancer from "./pages/conditions/LiverCancer";
 import OrthopedicSurgery from "./pages/conditions/OrthopedicSurgery";
@@ -324,6 +326,8 @@ function Router() {
       <Route path={"/liver-cancer-treatment-germany"} component={LiverCancer} />
       <Route path={"/ar/liver-cancer-treatment-germany"} component={LiverCancerArabic} />
       <Route path={"/ar/prostate-cancer-treatment-germany"} component={ProstateCancerArabic} />
+      <Route path={"/ar/breast-cancer-treatment-germany"} component={BreastCancerArabic} />
+      <Route path={"/ar/colon-cancer-treatment-germany"} component={ColonCancerArabic} />
       <Route path={"/orthopedic-surgery-germany"} component={OrthopedicSurgery} />
       <Route path={"/knee-replacement-germany"} component={KneeReplacement} />
       <Route path={"/hip-replacement-germany"} component={HipReplacement} />

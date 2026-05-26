@@ -1574,6 +1574,44 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     ],
   },
 
+  "/ar/breast-cancer-treatment-germany": {
+    path: "/ar/breast-cancer-treatment-germany",
+    label: "سرطان الثدي في ألمانيا",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/breast-cancer-treatment-germany" },
+    cluster: [
+      { href: "/ar/breast-cancer-treatment-germany", label: "سرطان الثدي" },
+      { href: "/ar/prostate-cancer-treatment-germany", label: "سرطان البروستاتا" },
+      { href: "/ar/liver-cancer-treatment-germany", label: "سرطان الكبد" },
+      { href: "/ar/lung-cancer-treatment-germany", label: "سرطان الرئة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+
+  "/ar/colon-cancer-treatment-germany": {
+    path: "/ar/colon-cancer-treatment-germany",
+    label: "سرطان القولون في ألمانيا",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: { en: "/colon-cancer-treatment-germany" },
+    cluster: [
+      { href: "/ar/colon-cancer-treatment-germany", label: "سرطان القولون" },
+      { href: "/ar/prostate-cancer-treatment-germany", label: "سرطان البروستاتا" },
+      { href: "/ar/liver-cancer-treatment-germany", label: "سرطان الكبد" },
+      { href: "/ar/lung-cancer-treatment-germany", label: "سرطان الرئة" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+    ],
+  },
+
   // ══════════════════════════════════════════════════════════════════════════
   // STANDALONE PAGES (no HreflangTags component yet)
   // ══════════════════════════════════════════════════════════════════════════

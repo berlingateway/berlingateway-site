@@ -20,6 +20,11 @@
   RewriteEngine On
   RewriteBase /
 
+  # Combined WWW to non-WWW and HTTP to HTTPS redirect
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://berlingateway.de/$1 [L,R=301]
+
   # Block and remove all feed URLs with 410 Gone
   RewriteRule ^(.*/)?feed(/.*)?$ - [G,L]
   RewriteRule ^comments/feed(/.*)?$ - [G,L]
@@ -34,9 +39,7 @@
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^([^\.]+)$ $1.html [NC,L]
   
-  # Redirect to non-www
-  RewriteCond %{HTTP_HOST} ^www\. [NC]
-  RewriteRule ^(.*)$ https://berlingateway.de/$1 [R=301,L]
+
 </IfModule>
 
 # Security headers

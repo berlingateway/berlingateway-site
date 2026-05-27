@@ -1320,6 +1320,32 @@ export default function ArabicHome() {
         </a>
       </section>
 
+      {/* TESTIMONIAL — د. خالد */}
+      <section className="py-16 px-6 bg-slate-900" dir="rtl">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="text-4xl text-slate-500 mb-6" style={{ fontFamily: 'Georgia, serif' }}>&ldquo;</div>
+          <blockquote
+            className="text-xl md:text-2xl leading-relaxed text-white mb-8"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", fontWeight: 400 }}
+          >
+            الشكر كل الشكر لشركة برلين للرعاية الطبية
+            لما قدمته وتقدمه من خدمة فائقة في المجال الطبي
+            للمرضى العرب الذين يأتون إلى ألمانيا لتلقي العلاج.
+            يتميز الفريق بالصدق والأمانة ويبذلون قصارا جهدهم
+            باختيار أفضل الأطباء في ألمانيا،
+            ولديهم أيضا الخبرة في مجال الفيزا والإقامة في ألمانيا،
+            يسعون لراحة المريض منذ وصولهم للمطار وحتى وداعهم.
+          </blockquote>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-slate-300 text-base font-medium" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
+              د. خالد — مقيم في الإمارات العربية المتحدة
+            </p>
+            <p className="text-yellow-400 text-xl tracking-widest">★★★★★</p>
+            <p className="text-slate-500 text-xs tracking-wide uppercase">Google Reviews</p>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer id="contact" className="bg-slate-900 text-white text-center" style={{ scrollMarginTop: '90px' }}>
         {/* Treatment Guide Links — dark variant */}

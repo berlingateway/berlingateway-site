@@ -189,6 +189,30 @@ export default function SurgerySecondOpinion() {
         </Link>
       </div>
 
+
+      {/* TESTIMONIAL — د. خالد */}
+      <section style={{ padding: '72px 24px 64px', background: '#0B1C2C', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.08)' }} dir="rtl">
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div style={{ fontSize: 48, color: '#475569', marginBottom: 24, fontFamily: 'Georgia, serif' }}>&ldquo;</div>
+          <blockquote style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)', fontWeight: 400, color: '#f8fafc', lineHeight: 1.8, marginBottom: 32 }}>
+            الشكر كل الشكر لشركة برلين للرعاية الطبية
+            لما قدمته وتقدمه من خدمة فائقة في المجال الطبي
+            للمرضى العرب الذين يأتون إلى ألمانيا لتلقي العلاج.
+            يتميز الفريق بالصدق والأمانة ويبذلون قصارا جهدهم
+            باختيار أفضل الأطباء في ألمانيا،
+            ولديهم أيضا الخبرة في مجال الفيزا والإقامة في ألمانيا،
+            يسعون لراحة المريض منذ وصولهم للمطار وحتى وداعهم.
+          </blockquote>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+            <p style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", color: '#cbd5e1', fontSize: 15, fontWeight: 500 }}>
+              د. خالد — مقيم في الإمارات العربية المتحدة
+            </p>
+            <p style={{ color: '#facc15', fontSize: 20, letterSpacing: '0.15em' }}>★★★★★</p>
+            <p style={{ color: '#64748b', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Google Reviews</p>
+          </div>
+        </div>
+      </section>
+
       {/* ══ SECTION 5: FINAL CTA (dark) ══════════════════════════════════════ */}
       <section style={{ padding: "80px 24px 72px", background: "#0B1C2C", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>

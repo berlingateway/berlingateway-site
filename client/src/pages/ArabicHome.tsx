@@ -338,6 +338,44 @@ export default function ArabicHome() {
       n.content = descContent;
       document.head.appendChild(n);
     }
+
+    // Review Schema JSON-LD — د. خالد
+    const reviewSchema = {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "د. خالد",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AE"
+        }
+      },
+      "reviewBody": "يتميز الفريق بالصدق والأمانة ويبذلون قصارا جهدهم باختيار أفضل الأطباء في ألمانيا، ولديهم أيضا الخبرة في مجال الفيزا والإقامة في ألمانيا، يسعون لراحة المريض منذ وصولهم للمطار وحتى وداعهم.",
+      "itemReviewed": {
+        "@type": "MedicalBusiness",
+        "name": "Medical Care Germany",
+        "url": "https://medicalcaregermany.com"
+      }
+    };
+    const existingScript = document.querySelector('script[data-schema="review-khalid"]');
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.setAttribute("data-schema", "review-khalid");
+      script.textContent = JSON.stringify(reviewSchema);
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      const s = document.querySelector('script[data-schema="review-khalid"]');
+      if (s) s.remove();
+    };
   }, []);
 
   return (

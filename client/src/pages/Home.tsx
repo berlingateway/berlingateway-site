@@ -220,6 +220,7 @@ export default function Home() {
               </div>
             )}
           </div>
+          <Link href="/about" className="nav-link">About Us</Link>
           <a href="#submit-case" className={`nav-link ${activeSection === 'submit-case' ? 'active' : ''}`}>Submit Case</a>
           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
         </div>
@@ -263,6 +264,7 @@ export default function Home() {
         <a href="#operations" onClick={() => setMobileMenuOpen(false)}>How We Operate</a>
         <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>Submit Case</a>
         <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+        <Link href="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
         {/* Mobile Medical Conditions */}
         <button
           onClick={() => setMobileConditionsOpen(v => !v)}

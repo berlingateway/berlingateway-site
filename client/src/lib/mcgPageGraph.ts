@@ -1618,7 +1618,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "ar",
     hub: "/ar",
     hubLabel: "الرئيسية",
-    equivalents: {},
+    equivalents: { en: "/about" },
     cluster: [
       { href: "/ar/about", label: "من نحن" },
       { href: "/ar/complex-cases", label: "الحالات المعقدة" },
@@ -1630,9 +1630,27 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     ],
   },
 
-  // ══════════════════════════════════════════════════════════════════════════
+  // ════════════════════════════════════════════════════════════════════════════════
   // STANDALONE PAGES (no HreflangTags component yet)
-  // ══════════════════════════════════════════════════════════════════════════
+  // ════════════════════════════════════════════════════════════════════════════════
+  "/about": {
+    path: "/about",
+    label: "About Us — Medical Care Germany",
+    lang: "en",
+    hub: "/",
+    hubLabel: "Home",
+    equivalents: { ar: "/ar/about" },
+    cluster: [
+      { href: "/about", label: "About Us" },
+      { href: "/second-opinion-germany", label: "Second Opinion" },
+      { href: "/send-medical-reports", label: "Send Medical Reports" },
+    ],
+    related: [
+      { href: "/", label: "Home" },
+      { href: "/ar/about", label: "من نحن" },
+    ],
+  },
+
   "/international-patients": {
     path: "/international-patients",
     label: "International Patients",

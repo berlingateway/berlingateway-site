@@ -13,6 +13,7 @@ const GUIDE_LINKS = [
   { href: "/ar/مستشفيات-المانيا-للعرب", label: "مستشفيات ألمانيا للمرضى الدوليين" },
   { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج في ألمانيا" },
   { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير الطبية" },
+  { href: "/ar/about", label: "من نحن" },
 ];
 
 export function ArabicFooterGuide() {

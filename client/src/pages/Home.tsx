@@ -1102,6 +1102,11 @@ export default function Home() {
             <p className="text-sm text-slate-500">Medical Care Germany · Patient Coordination Office · Perleberger Str. 41 · 10559 Berlin · Germany</p>
           </div>
           <div className="w-20 h-[1px] bg-slate-700 mx-auto"></div>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs text-slate-500">
+            <Link href="/about" className="hover:text-slate-300 transition-colors">About Us</Link>
+            <Link href="/second-opinion-germany" className="hover:text-slate-300 transition-colors">Second Opinion</Link>
+            <Link href="/send-medical-reports" className="hover:text-slate-300 transition-colors">Send Medical Reports</Link>
+          </div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
         </div>
       </footer>

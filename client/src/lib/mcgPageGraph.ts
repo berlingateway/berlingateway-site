@@ -1612,6 +1612,24 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     ],
   },
 
+  "/ar/about": {
+    path: "/ar/about",
+    label: "من نحن — ميديكال كير جيرماني",
+    lang: "ar",
+    hub: "/ar",
+    hubLabel: "الرئيسية",
+    equivalents: {},
+    cluster: [
+      { href: "/ar/about", label: "من نحن" },
+      { href: "/ar/complex-cases", label: "الحالات المعقدة" },
+      { href: "/ar/surgery-second-opinion", label: "رأي ثانٍ قبل العملية" },
+    ],
+    related: [
+      { href: "/ar", label: "الرئيسية" },
+      { href: "/send-medical-reports", label: "إرسال التقارير" },
+    ],
+  },
+
   // ══════════════════════════════════════════════════════════════════════════
   // STANDALONE PAGES (no HreflangTags component yet)
   // ══════════════════════════════════════════════════════════════════════════

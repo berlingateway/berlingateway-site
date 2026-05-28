@@ -26,6 +26,7 @@ const MEDICAL_CONDITIONS = [
 
 const MAIN_LINKS = [
   { label: "الرئيسية", href: "/ar" },
+  { label: "من نحن", href: "/ar/about" },
   { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
   { label: "تواصل معنا", href: "/contact" },
 ];

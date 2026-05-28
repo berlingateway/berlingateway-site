@@ -87,6 +87,13 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.9,
   },
 
+  // -- Arabic About Page
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/about`,
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+
   // ── Arabic Cardiology ──────────────────────────────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/cardiology-treatment-germany`,

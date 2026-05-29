@@ -30,5 +30,5 @@
 /de/struktur-vor-bewerbung /de/voraussetzungen 301
 /impressum/ /de/impressum 301
 
-# Catch-all fallback
+# Fallback
 /* /index.html 200

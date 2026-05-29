@@ -178,6 +178,231 @@
       background: #f1f5f9;
       transform: scale(1.02);
     }
+  
+    /* FOOTER */
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:56px 24px 32px}
+    .footer__grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .footer__brand{font-size:16px;font-weight:700;color:#FFFFFF;margin-bottom:10px}
+    .footer__tagline{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6}
+    .footer h4{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px}
+    .footer a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;margin-bottom:8px}
+    .footer__bottom{max-width:1080px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);text-align:center;font-size:12px}
+
+    @media(max-width:768px){
+      .nav a:not(.nav-cta){display:none}
+      .paths-grid{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:1fr}
+      .footer__grid{grid-template-columns:1fr 1fr}
+      .cta-block{padding:36px 24px}
+      .hero{padding:72px 24px 64px}
+    }
+    @media(max-width:480px){
+      .footer__grid{grid-template-columns:1fr}
+      .trust-strip__inner{gap:20px}
+      .hero-btns{flex-direction:column;align-items:center}
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-band">
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/de/" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5">مقيمون في ألمانيا</span>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/ar/" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/aerzte">أطباء</a>
+      <a href="/ar/pflege">تمريض</a>
+      <a href="/ar/systemlogik">النظام</a>
+      <a href="/ar/voraussetzungen">المتطلبات</a>
+      <a href="/ar/assessment" class="nav-cta">ابدأ التقييم</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="inner" style="position:relative;z-index:1">
+    <p class="kicker">Berlin Gateway — من داخل النظام الألماني</p>
+    <h1>نحن لا نوصلك فقط.<br><em>نضمن نجاحك من داخل النظام.</em></h1>
+    <p>فريقنا مقيم في ألمانيا، يعمل داخل المستشفيات والمؤسسات. نحن لا نعطيك معلومات فقط، بل نرافقك خطوة بخطوة من داخل النظام.</p>
+    <div class="hero-btns">
+      <a href="/ar/assessment" class="btn-primary">ابدأ تقييمك المجاني ←</a>
+      <a href="/ar/chancenkarte" class="btn-outline">بطاقة الفرص</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip__inner">
+  <div class="trust-item"><span>✓</span> فريق مقيم في ألمانيا</div>
+    <div class="trust-item"><span>✓</span> خبراء داخل المستشفيات والمؤسسات</div>
+    <div class="trust-item"><span>✓</span> مرافقة حقيقية بعد الوصول</div>
+    <div class="trust-item"><span>✓</span> لا نستخدم الردود الآلية</div></div>
+
+<!-- 3 PATHS -->
+<section class="section">
+  <div class="inner--wide">
+    <p class="section-label">مساراتنا</p>
+    <h2 class="section h2">ثلاثة مسارات — نتيجة واحدة: النجاح في ألمانيا</h2>
+    <p class="lead" style="max-width:600px">سواء كنت تبحث عن عمل أو دراسة أو تدريب مهني — نحن نعرف المسار الصحيح لملفك تحديداً.</p>
+    <div class="paths-grid">
+      <a href="/ar/assessment" class="path-card">
+        <div class="path-card__icon">💼</div>
+        <h3>العمل في ألمانيا</h3>
+        <p>أطباء، مهندسون، ممرضون، مبرمجون — نعرف أي ولاية، أي مستشفى، أي شركة تناسب ملفك. ونتابعك بعد الوصول.</p>
+        <span class="path-link">ابدأ التقييم ←</span>
+      </a>
+      <a href="/ar/الدراسة-في-ألمانيا" class="path-card">
+        <div class="path-card__icon">🎓</div>
+        <h3>الدراسة في ألمانيا</h3>
+        <p>من يأتي معنا يستشيرنا ويكمل دراسته. نعرف الجامعات والمتطلبات والمسار الصحيح من البداية.</p>
+        <span class="path-link">اعرف المزيد ←</span>
+      </a>
+      <a href="/ar/التدريب-المهني-في-ألمانيا" class="path-card">
+        <div class="path-card__icon">🔧</div>
+        <h3>التدريب المهني</h3>
+        <p>نجد أفضل مركز تدريب مهني يناسب تخصصك — وبعدها نساعدك في إيجاد العمل مباشرة.</p>
+        <span class="path-link">اعرف المزيد ←</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AFTER ARRIVAL -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">ما بعد الوصول</p>
+    <h2>الفترة الحرجة — نحن معك في كل خطوة</h2>
+    <p class="lead">معظم الفشل يحدث بعد الوصول — ليس قبله. الأسبوع الأول والشهر الأول هما الأهم.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot">أ1</div>
+        <div class="timeline-content">
+          <h4>الأسبوع الأول — الأخطر</h4>
+          <p>بيئة عمل جديدة، لغة مختلفة، عقلية مختلفة. من لا يفهم طبيعة الألمان في العمل يرتكب أخطاء لا تُغتفر في الأسبوع الأول.</p>
+          <span class="timeline-tag">نحن معك منذ اليوم الأول</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">أ2</div>
+        <div class="timeline-content">
+          <h4>الشهر الأول — التوجيه الحقيقي</h4>
+          <p>السكن، التأمين، الحساب البنكي، وكيفية التعامل mit الزملاء. نحن نوجهك لتجاوز هذه المرحلة بسلام.</p>
+          <span class="timeline-tag">نوجهك في كل خطوة</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">أ3</div>
+        <div class="timeline-content">
+          <h4>الستة أشهر الأولى — الاندماج الحقيقي</h4>
+          <p>راتب أقل بـ 100€ مع اندماج حقيقي أفضل من راتب أعلى مع Kündigung. نحن نعرف أين تناسبك — ليس فقط أين تجد عملاً.</p>
+          <span class="timeline-tag">استقرار حقيقي — ليس مؤقتاً</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARNING -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">الحقيقة التي لا يقولها أحد</p>
+    <h2>كثيرون يتصلون بنا بعد فوات الأوان</h2>
+    <p class="lead">كثيراً ما يتواصل معنا من تلقى Kündigung. كثيراً ما يتصل بنا من هو على وشك العودة. كثيراً جداً ساعدناهم — وكثيراً جداً كان متأخراً جداً.</p>
+    <div class="warning-box">
+      <h3>تسفير الرجوع وخيبة الأهل — ليست معنا.</h3>
+      <p>من يبدأ معنا من البداية لا يصل إلى هذه النقطة. التوجيه الصحيح منذ اليوم الأول هو الفرق بين النجاح والعودة خالي الوفاض.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section--dark" style="padding:72px 24px;">
+  <div class="inner">
+    <p class="section-label section-label--light">لماذا Berlin Gateway</p>
+    <h2 style="color:#FFFFFF;margin-bottom:16px;">نحن لسنا موقع معلومات — نحن داخل الحدث.</h2>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.75;margin-bottom:32px;font-weight:300;">درسنا في ألمانيا، عملنا فيها، ونعيش فيها. نعرف كل ولاية، كل نظام، كل دائرة حكومية — من الداخل.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>🏥 داخل المستشفيات</h4>
+        <p>نعرف المستشفيات من الداخل — أي منها يناسب ملفك، وأي منها تتجنب.</p>
+      </div>
+      <div class="why-card">
+        <h4>🏛️ في دائرة الأجانب</h4>
+        <p>نعرف الإجراءات الرسمية، الوثائق المطلوبة، والطريق الأسرع لكل ولاية.</p>
+      </div>
+      <div class="why-card">
+        <h4>🗺️ نعرف كل الولايات</h4>
+        <p>لا تختار ولاية قبل مشورتنا. الاختيار الخاطئ يكلفك أشهراً وأحياناً سنوات.</p>
+      </div>
+      <div class="why-card">
+        <h4>🤝 نفهم عقلية الألمان</h4>
+        <p>الاندماج في بيئة العمل الألمانية علم قائم بذاته — نحن نعلّمك إياه قبل أن تصل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--alt">
+  <div class="inner">
+    <div class="cta-block">
+      <h2>ابدأ معنا قبل أن تبدأ رحلتك.</h2>
+      <p>تقييم حقيقي لملفك — من فريق يعيش في ألمانيا ويعرف النظام من الداخل. مجاني وبدون التزام.</p>
+      <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
+      <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px;">رد خلال 24–48 ساعة · بدون التزام</p>
+      <a href="https://wa.me/4915781497451" class="wa-link">أو تواصل مباشرة عبر واتساب ←</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <p class="footer__brand">Berlin Gateway</p>
+      <p class="footer__tagline">خبراء مقيمون في ألمانيا — من داخل المستشفيات والمؤسسات والدوائر الحكومية. نضعك على المسار الصحيح منذ اليوم الأول.</p>
+    </div>
+    <div>
+      <h4>المسارات</h4>
+      <a href="/ar/aerzte">الأطباء</a>
+      <a href="/ar/pflege">التمريض</a>
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/assessment">التقييم</a>
+    </div>
+    <div>
+      <h4>النظام</h4>
+      <a href="/ar/systemlogik">منطق النظام</a>
+      <a href="/ar/voraussetzungen">المتطلبات</a>
+      <a href="/ar/anerkennung">الاعتراف المهني</a>
+      <a href="/ar/monitor">مرصد السوق</a>
+    </div>
+    <div>
+      <h4>التواصل</h4>
+      <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+      <a href="https://wa.me/4915781497451">واتساب</a>
+      <a href="/de/">Deutsch</a>
+      <a href="/ar/impressum">بصمة الموقع</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    © 2026 Berlin Gateway. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+</body>
+</html>
   </style>
 
   <!-- Structured Data -->
@@ -342,26 +567,38 @@
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">Berlin Gateway</h4>
-                <p style="font-size: 14px; opacity: 0.7;">بوابتك الموثوقة للعمل والدراسة في ألمانيا. نحن نجمع بين التكنولوجيا والخبرة القانونية.</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 20px;">روابط سريعة</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="/ar/العمل-في-ألمانيا" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">العمل في ألمانيا</a></li>
-                    <li><a href="/ar/تأشيرة-ألمانيا" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">أنواع التأشيرات</a></li>
-                    <li><a href="/ar/assessment" style="color: white; opacity: 0.7; text-decoration: none; font-size: 14px;">تقييم النقاط</a></li>
-                </ul>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
-        </div>
+  <div class="footer__grid">
+    <div>
+      <p class="footer__brand">Berlin Gateway</p>
+      <p class="footer__tagline">خبراء مقيمون في ألمانيا — من داخل المستشفيات والمؤسسات والدوائر الحكومية. نضعك على المسار الصحيح منذ اليوم الأول.</p>
     </div>
+    <div>
+      <h4>المسارات</h4>
+      <a href="/ar/aerzte">الأطباء</a>
+      <a href="/ar/pflege">التمريض</a>
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/assessment">التقييم</a>
+    </div>
+    <div>
+      <h4>النظام</h4>
+      <a href="/ar/systemlogik">منطق النظام</a>
+      <a href="/ar/voraussetzungen">المتطلبات</a>
+      <a href="/ar/anerkennung">الاعتراف المهني</a>
+      <a href="/ar/monitor">مرصد السوق</a>
+    </div>
+    <div>
+      <h4>التواصل</h4>
+      <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+      <a href="https://wa.me/4915781497451">واتساب</a>
+      <a href="/de/">Deutsch</a>
+      <a href="/ar/impressum">بصمة الموقع</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    © 2026 Berlin Gateway. جميع الحقوق محفوظة.
+  </div>
 </footer>
+
 
 </body>
 </html>

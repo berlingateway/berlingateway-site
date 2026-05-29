@@ -230,12 +230,10 @@ async function startServer() {
   // ─────────────────────────────────────────────────────────────────────────
 
   // 301 Redirects: hybrid/English pages → canonical Arabic equivalents
-  // NOTE: English pages now serve their own content — no redirect to Arabic
-  const REDIRECTS_301: Record<string, string> = {
-    '/brain-tumor-treatment-germany':         '/ar/brain-tumor-treatment-germany',
-    '/trigeminal-neuralgia-treatment-germany':'/ar/trigeminal-neuralgia-treatment-germany',
-    '/spine-surgery-germany':                 '/ar/spine-surgery-germany',
-  };
+  // NOTE: All English pages now serve their own content — no redirect to Arabic
+  // BrainTumor, TrigeminalNeuralgia, SpineSurgery all have English components
+  const REDIRECTS_301: Record<string, string> = {};
+  void REDIRECTS_301; // suppress unused-variable warning
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs
   const ARABIC_REDIRECTS_301: Record<string, string> = {

@@ -1,44 +1,29 @@
-# Cloudflare Pages handles clean URLs automatically if .html files exist.
-# We only need redirects for legacy paths or cross-page mappings.
-
-# Primary Redirects (Clean URLs)
-/ar/apply /ar/assessment 301
-/de/apply /de/assessment 301
-
-# English Medical Pages (Ensure they display content without redirect)
-/lung-cancer-treatment-germany /en/lung-cancer-treatment-germany.html 200
-/herniated-disc-treatment-germany /en/herniated-disc-treatment-germany.html 200
-/neurology-treatment-germany /en/neurology-treatment-germany.html 200
-/en/send-medical-reports /en/send-medical-reports.html 200
-
-# Arabic Medical Reports Redirect
-/ar/send-medical-reports /ar/إرسال-التقارير-الطبية 301
-/ar/إرسال-التقارير-الطبية /ar/إرسال-التقارير-الطبية.html 200
-
-# Legacy & HTML extension redirects (301) to clean URLs
-/ar/assessment.html /ar/assessment 301
-/de/assessment.html /de/assessment 301
-/ar/chancenkarte.html /ar/chancenkarte 301
-/de/chancenkarte.html /de/chancenkarte 301
-/ar/systemlogik.html /ar/systemlogik 301
-/de/systemlogik.html /de/systemlogik 301
-/ar/monitor.html /ar/monitor 301
-/de/monitor.html /de/monitor 301
-/ar/voraussetzungen.html /ar/voraussetzungen 301
-/de/voraussetzungen.html /de/voraussetzungen 301
-/ar/anerkennung.html /ar/anerkennung 301
+/de/index.html /de/ 301
+/de/index /de/ 301
+/ar/index.html /ar/ 301
+/ar/index /ar/ 301
+/impressum/ /de/impressum 301
+/en/assessment /de/assessment 301
+/en/chancenkarte.html /de/chancenkarte 301
 /de/anerkennung.html /de/anerkennung 301
 
-# Special Mappings
-/ar/framework /ar/systemlogik 301
-/ar/struktur-vor-bewerbung /ar/voraussetzungen 301
-/ar/orientierung /ar/voraussetzungen 301
-/ar/وظائف-في-ألمانيا /ar/العمل-في-ألمانيا 301
-/de/chancenkarte-deutschland /de/chancenkarte 301
-/de/framework /de/systemlogik 301
-/de/orientierung /de/voraussetzungen 301
-/de/struktur-vor-bewerbung /de/voraussetzungen 301
-/impressum/ /de/impressum 301
-
-# Fallback
-/* /index.html 200
+# Global .html to clean URL cleanup
+/de/assessment.html /de/assessment 301
+/ar/assessment.html /ar/assessment 301
+/de/apply.html /de/apply 301
+/ar/apply.html /ar/apply 301
+/de/chancenkarte.html /de/chancenkarte 301
+/ar/chancenkarte.html /ar/chancenkarte 301
+/de/systemlogik.html /de/systemlogik 301
+/ar/systemlogik.html /ar/systemlogik 301
+/de/monitor.html /de/monitor 301
+/ar/monitor.html /ar/monitor 301
+/de/insights.html /de/insights 301
+/ar/insights.html /ar/insights 301
+/de/voraussetzungen.html /de/voraussetzungen 301
+/ar/voraussetzungen.html /ar/voraussetzungen 301
+/de/visa.html /de/visa 301
+/ar/visa.html /ar/visa 301
+/de/aerzte.html /de/aerzte 301
+/ar/aerzte.html /ar/aerzte 301
+/ar/إرسال-التقارير-الطبية.html /ar/إرسال-التقارير-الطبية 301

@@ -5,6 +5,16 @@
 /ar/apply /ar/assessment 301
 /de/apply /de/assessment 301
 
+# English Medical Pages (Ensure they display content without redirect)
+/lung-cancer-treatment-germany /en/lung-cancer-treatment-germany.html 200
+/herniated-disc-treatment-germany /en/herniated-disc-treatment-germany.html 200
+/neurology-treatment-germany /en/neurology-treatment-germany.html 200
+/en/send-medical-reports /en/send-medical-reports.html 200
+
+# Arabic Medical Reports Redirect
+/ar/send-medical-reports /ar/إرسال-التقارير-الطبية 301
+/ar/إرسال-التقارير-الطبية /ar/إرسال-التقارير-الطبية.html 200
+
 # Legacy & HTML extension redirects (301) to clean URLs
 /ar/assessment.html /ar/assessment 301
 /de/assessment.html /de/assessment 301

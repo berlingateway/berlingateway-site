@@ -118,89 +118,18 @@
 
         <div class="chancenkarte-form-wrapper">
             <h2>{{ form_title }}</h2>
-            <form action="https://formsubmit.co/info@berlingateway.de" method="POST" enctype="multipart/form-data">
-                
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Neue Anfrage - Berlin Gateway">
-                
-                <div class="form-group">
-                    <label for="target-position">{{ form_field_1_label }}</label>
-                    <input type="text" id="target-position" name="Zielberuf" placeholder="z.B. Softwareentwickler" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="qualification">{{ form_field_2_label }}</label>
-                    <input type="text" id="qualification" name="Abschluss" placeholder="z.B. Master Informatik" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="experience">{{ form_field_3_label }}</label>
-                    <select id="experience" name="Berufserfahrung" required>
-                        <option value="">-- Bitte wählen --</option>
-                        <option value="0-2">0–2 Jahre</option>
-                        <option value="2-5">2–5 Jahre</option>
-                        <option value="5+">5+ Jahre</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="language">{{ form_field_4_label }}</label>
-                    <select id="language" name="Sprachkenntnisse" required>
-                        <option value="">-- Bitte wählen --</option>
-                        <option value="a1-a2">A1–A2</option>
-                        <option value="b1">B1</option>
-                        <option value="b2">B2</option>
-                        <option value="c1+">C1+</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="country">{{ form_field_5_label }}</label>
-                    <select id="country" name="Wohnsitzland" required>
-                        <option value="">Bitte wählen</option>
-                        <option value="Deutschland">Deutschland</option>
-                        <option value="Ägypten">Ägypten</option>
-                        <option value="Libyen">Libyen</option>
-                        <option value="Tunesien">Tunesien</option>
-                        <option value="Algerien">Algerien</option>
-                        <option value="Marokko">Marokko</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Saudi-Arabien">Saudi-Arabien</option>
-                        <option value="Vereinigte Arabische Emirate">Vereinigte Arabische Emirate</option>
-                        <option value="Katar">Katar</option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Jordanien">Jordanien</option>
-                        <option value="Libanon">Libanon</option>
-                        <option value="Syrien">Syrien</option>
-                        <option value="Irak">Irak</option>
-                        <option value="Palästina">Palästina</option>
-                        <option value="Jemen">Jemen</option>
-                        <option value="Türkei">Türkei</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Indien">Indien</option>
-                        <option value="Bangladesch">Bangladesch</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Kamerun">Kamerun</option>
-                        <option value="Andere">Andere</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">{{ form_field_6_label }}</label>
-                    <input type="email" id="email" name="E-Mail" placeholder="ihre.email@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cv-upload">{{ form_field_7_label }}</label>
-                    <input type="file" id="cv-upload" name="CV Upload" accept=".pdf" required>
-                    <small>PDF only, max 5MB</small>
-                </div>
-
-                <button type="submit" class="form-submit">Bewertung jetzt senden</button>
-            </form>
+            <div class="form-container" style="padding:0;border:none;box-shadow:none;background:transparent;">
+                <iframe 
+                    src="https://tally.so/embed/eqYI0Q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                    loading="lazy" 
+                    width="100%" 
+                    height="800" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    style="border-radius:12px;">
+                </iframe>
+            </div>
         </div>
     </div>
 </main>

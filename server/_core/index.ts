@@ -230,12 +230,10 @@ async function startServer() {
   // ─────────────────────────────────────────────────────────────────────────
 
   // 301 Redirects: hybrid/English pages → canonical Arabic equivalents
+  // NOTE: English pages now serve their own content — no redirect to Arabic
   const REDIRECTS_301: Record<string, string> = {
-    '/neurology-treatment-germany':           '/ar/neurology-treatment-germany',
     '/brain-tumor-treatment-germany':         '/ar/brain-tumor-treatment-germany',
     '/trigeminal-neuralgia-treatment-germany':'/ar/trigeminal-neuralgia-treatment-germany',
-    '/lung-cancer-treatment-germany':         '/ar/lung-cancer-treatment-germany',
-    '/herniated-disc-treatment-germany':      '/ar/herniated-disc',
     '/spine-surgery-germany':                 '/ar/spine-surgery-germany',
   };
 

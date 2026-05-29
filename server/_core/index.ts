@@ -250,9 +250,8 @@ async function startServer() {
   });
 
   // 410 Gone: permanently deleted English-only pages
-  const GONE_410: string[] = [
-    '/brain-surgery-germany',
-  ];
+  // NOTE: /brain-surgery-germany has a React component — removed from 410
+  const GONE_410: string[] = [];
 
   app.use((req, res, next) => {
     const path = req.path.replace(/\/+$/, '') || '/';

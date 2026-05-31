@@ -178,7 +178,7 @@ function DiagnosticLayer() {
             <div className="text-center">
               <button
                 onClick={() => {
-                  const el = document.getElementById('intake-form');
+                  const el = document.getElementById('submit-file');
                   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
                 className="inline-block px-10 py-4 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-[#1E3A5A] transition-colors cursor-pointer"
@@ -195,33 +195,17 @@ function DiagnosticLayer() {
   );
 }
 
-// Sovereign iframe form — Arabic version
-function ArabicIframeForm() {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [iframeHeight, setIframeHeight] = useState(680);
-
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      if (event.data?.type === 'form-height' && typeof event.data.height === 'number') {
-        setIframeHeight(Math.max(600, event.data.height + 32));
-      }
-      if (event.data?.type === 'form-success') {
-        setIframeHeight(360);
-      }
-    };
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
-
+// Tally embedded form
+function TallyForm() {
   return (
     <iframe
-      ref={iframeRef}
-      src="/intake-form-ar.html"
-      title="تقديم الحالة الطبية"
+      src="https://tally.so/embed/68MrBP?alignLeft=1&hideTitle=1&transparentBackground=1"
       width="100%"
-      height={iframeHeight}
-      style={{ border: 'none', display: 'block', width: '100%' }}
-      scrolling="no"
+      style={{ minHeight: '1200px', border: 'none', display: 'block', width: '100%' }}
+      frameBorder={0}
+      marginHeight={0}
+      marginWidth={0}
+      title="Medical Care Germany — Submit Medical File"
       loading="lazy"
     />
   );
@@ -309,7 +293,7 @@ export default function ArabicHome() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'focus', 'why-germany', 'submit-case', 'contact'];
+      const sections = ['home', 'focus', 'why-germany', 'submit-file', 'contact'];
       const scrollPosition = window.scrollY + 150;
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
@@ -681,7 +665,7 @@ export default function ArabicHome() {
               </div>
             )}
           </div>
-          <a href="#submit-case" className={`nav-link ${activeSection === 'submit-case' ? 'active' : ''}`}>تقديم الحالة</a>
+          <a href="#submit-file" className={`nav-link ${activeSection === 'submit-file' ? 'active' : ''}`}>تقديم الحالة</a>
           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>تواصل معنا</a>
         </div>
 
@@ -723,7 +707,7 @@ export default function ArabicHome() {
           <a href="#focus" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">فلسفتنا الطبية</a>
           <a href="#why-germany" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">لماذا ألمانيا</a>
           <a href="/ar/videos" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">مكتبة الفيديو</a>
-          <a href="#submit-case" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">تقديم الحالة</a>
+          <a href="#submit-file" onClick={() => setMobileMenuOpen(false)} className="block py-3 border-b border-slate-100 w-full text-right text-sm">تقديم الحالة</a>
           {/* Mobile Medical Conditions (Arabic) */}
           <button
             onClick={() => setMobileConditionsOpen(v => !v)}
@@ -937,7 +921,7 @@ export default function ArabicHome() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-            <a href="#submit-case">
+            <a href="#submit-file">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
                 أرسل ملفك الطبي
               </Button>
@@ -1077,21 +1061,9 @@ export default function ArabicHome() {
 
 
       {/* SUBMIT CASE FORM */}
-      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
-        <span id="intake-form" style={{ display: 'block', marginTop: '-90px', paddingTop: '90px', pointerEvents: 'none' }} aria-hidden="true" />
+      <section id="submit-file" className="py-16 md:py-20 px-6 bg-white border-b border-slate-200" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center text-slate-900" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            أرسل ملفك الطبي — سيقرأه منسق متخصص
-          </h2>
-          <p className="text-center text-slate-500 text-sm mb-12 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            لا بوابات. لا انتظار مجهول. شخص حقيقي يراجع حالتك خلال 24 ساعة.
-          </p>
-          <div className="border border-slate-200 bg-white shadow-sm">
-            <ArabicIframeForm />
-          </div>
-          <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-            جميع الملفات تُعامَل بسرية تامة ولا تُشارك خارج فريق التنسيق.
-          </p>
+          <TallyForm />
         </div>
       </section>
 

@@ -5,33 +5,17 @@ import { FileText, Activity, Network, Calendar, Heart, ChevronDown } from "lucid
 import { useState, useEffect, useRef } from "react";
 import HreflangTags from "@/components/HreflangTags";
 
-// Sovereign iframe form — completely independent of React/tRPC/backend
-function IframeForm() {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [iframeHeight, setIframeHeight] = useState(720);
-
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      if (event.data?.type === 'form-height' && typeof event.data.height === 'number') {
-        setIframeHeight(Math.max(600, event.data.height + 32));
-      }
-      if (event.data?.type === 'form-success') {
-        setIframeHeight(360);
-      }
-    };
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
-
+// Tally embedded form
+function TallyForm() {
   return (
     <iframe
-      ref={iframeRef}
-      src="/intake-form.html"
-      title="Clinical Case Submission"
+      src="https://tally.so/embed/68MrBP?alignLeft=1&hideTitle=1&transparentBackground=1"
       width="100%"
-      height={iframeHeight}
-      style={{ border: 'none', display: 'block', width: '100%' }}
-      scrolling="no"
+      style={{ minHeight: '1200px', border: 'none', display: 'block', width: '100%' }}
+      frameBorder={0}
+      marginHeight={0}
+      marginWidth={0}
+      title="Medical Care Germany — Submit Medical File"
       loading="lazy"
     />
   );
@@ -96,7 +80,7 @@ export default function Home() {
   // Active section tracking based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'governance', 'operations', 'submit-case', 'contact'];
+      const sections = ['home', 'governance', 'operations', 'submit-file', 'contact'];
       const scrollPosition = window.scrollY + 150; // Offset for sticky header
 
       for (const sectionId of sections) {
@@ -221,7 +205,7 @@ export default function Home() {
             )}
           </div>
           <Link href="/about" className="nav-link">About Us</Link>
-          <a href="#submit-case" className={`nav-link ${activeSection === 'submit-case' ? 'active' : ''}`}>Submit Case</a>
+          <a href="#submit-file" className={`nav-link ${activeSection === 'submit-file' ? 'active' : ''}`}>Submit Case</a>
           <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
         </div>
         
@@ -262,7 +246,7 @@ export default function Home() {
         <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
         <a href="#governance" onClick={() => setMobileMenuOpen(false)}>Governance</a>
         <a href="#operations" onClick={() => setMobileMenuOpen(false)}>How We Operate</a>
-        <a href="#submit-case" onClick={() => setMobileMenuOpen(false)}>Submit Case</a>
+        <a href="#submit-file" onClick={() => setMobileMenuOpen(false)}>Submit Case</a>
         <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
         <Link href="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
         {/* Mobile Medical Conditions */}
@@ -330,7 +314,7 @@ export default function Home() {
           
           {/* Primary CTA Button */}
           <div className="mb-8">
-            <a href="#submit-case">
+            <a href="#submit-file">
               <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none px-12 py-7 text-lg font-medium shadow-lg">
                 Submit Medical File
               </Button>
@@ -381,7 +365,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-            <a href="#submit-case">
+            <a href="#submit-file">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium shadow-lg">
                 Send Your File for Review
               </Button>
@@ -1048,7 +1032,7 @@ export default function Home() {
           <p className="text-base text-slate-300 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
             Send your medical file and a specialist coordinator will contact you within 24 hours.
           </p>
-          <a href="#submit-case">
+          <a href="#submit-file">
             <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-10 py-6 text-base font-medium">
               Send Your File Now — Review within 24 hours
             </Button>
@@ -1057,21 +1041,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 6: CONTACT FORM */}
-      <section id="submit-case" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
+        <section id="submit-file" className="py-16 md:py-20 px-6 bg-white" style={{ scrollMarginTop: '90px' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-center text-slate-900">Case Submission for Strategic Review</h2>
-          <p className="text-center text-slate-500 text-sm mb-12 leading-relaxed">
-            Case reviews are conducted in alignment with German clinical governance practices.
-          </p>
-
-          {/* SOVEREIGN IFRAME FORM — No React, No tRPC, No backend dependency */}
-          <div className="border border-slate-200 bg-white shadow-sm">
-            <IframeForm />
-
-          </div>
-          <p className="text-center text-xs text-slate-400 mt-4 leading-relaxed">
-            All submissions are handled under strict clinical confidentiality protocols. Direct inquiries: <a href="mailto:info@medicalcaregermany.com" className="text-slate-600 hover:underline">info@medicalcaregermany.com</a>
-          </p>
+          <TallyForm />
         </div>
       </section>
 

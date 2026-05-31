@@ -803,6 +803,16 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     cluster: neurologyClusterAR,
     related: neurologyRelatedAR,
   },
+  "/ar/neck-pain-dizziness-germany": {
+    path: "/ar/neck-pain-dizziness-germany",
+    label: "ألم الرقبة مع دوخة",
+    lang: "ar",
+    hub: "/ar/neurology-treatment-germany",
+    hubLabel: "الأعصاب والجهاز العصبي",
+    equivalents: {},
+    cluster: neurologyClusterAR,
+    related: neurologyRelatedAR,
+  },
 
   // ══════════════════════════════════════════════════════════════════════════
   // EN NEUROLOGY

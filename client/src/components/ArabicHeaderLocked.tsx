@@ -11,6 +11,7 @@ import { Globe, ChevronDown, Menu, X } from "lucide-react";
 const MEDICAL_CONDITIONS = [
   { label: "الأعصاب والجهاز العصبي", href: "/ar/neurology-treatment-germany" },
   { label: "تنميل اليدين والقدمين", href: "/ar/numbness-hands-feet-germany" },
+  { label: "ألم الرقبة مع دوخة", href: "/ar/neck-pain-dizziness-germany" },
   { label: "العمود الفقري والانزلاق الغضروفي", href: "/ar/herniated-disc" },
   { label: "أورام المخ", href: "/ar/brain-tumor-treatment-germany" },
   { label: "القلب والأوعية الدموية", href: "/ar/cardiology-treatment-germany" },

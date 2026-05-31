@@ -274,6 +274,8 @@ export default function NeurologyHubArabic() {
               { href: "/ar/nerve-pain-face", label: "ألم عصبي في الوجه" },
               { href: "/ar/back-pain-with-numbness", label: "آلام الظهر مع تنميل" },
               { href: "/ar/chronic-neck-pain", label: "ألم الرقبة المزمن" },
+              { href: "/ar/neck-pain-dizziness-germany", label: "ألم الرقبة مع دوخة" },
+              { href: "/ar/numbness-hands-feet-germany", label: "تنميل اليدين والقدمين" },
               { href: "/ar/head-pressure-unknown", label: "ضغط في الرأس" },
               { href: "/ar/chronic-headache-unknown", label: "صداع مزمن" },
               { href: "/ar/weakness-in-limbs", label: "ضعف في الأطراف" },

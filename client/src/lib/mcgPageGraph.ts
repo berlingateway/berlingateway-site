@@ -793,6 +793,17 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     related: neurologyRelatedAR,
   },
 
+  "/ar/numbness-hands-feet-germany": {
+    path: "/ar/numbness-hands-feet-germany",
+    label: "تنميل اليدين والقدمين",
+    lang: "ar",
+    hub: "/ar/neurology-treatment-germany",
+    hubLabel: "الأعصاب والجهاز العصبي",
+    equivalents: {},
+    cluster: neurologyClusterAR,
+    related: neurologyRelatedAR,
+  },
+
   // ══════════════════════════════════════════════════════════════════════════
   // EN NEUROLOGY
   // ══════════════════════════════════════════════════════════════════════════

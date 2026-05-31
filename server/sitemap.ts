@@ -177,6 +177,11 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.75,
   },
   {
+    loc: `${CANONICAL_DOMAIN}/ar/numbness-hands-feet-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
     loc: `${CANONICAL_DOMAIN}/ar/pediatric-neurology-germany`,
     changefreq: 'monthly',
     priority: 0.75,

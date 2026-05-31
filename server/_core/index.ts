@@ -150,11 +150,12 @@ async function startServer() {
     res.setHeader(
       'Content-Security-Policy',
       "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://tally.so https://*.tally.so; " +
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
       "font-src 'self' https://fonts.gstatic.com; " +
       "img-src 'self' data: https:; " +
       "connect-src 'self' https:; " +
+      "frame-src 'self' https://tally.so https://*.tally.so; " +
       "frame-ancestors 'self';"
     );
 

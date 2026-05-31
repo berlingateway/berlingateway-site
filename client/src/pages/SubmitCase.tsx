@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "wouter";
 import { Link } from "wouter";
 
 // Sovereign iframe form component — completely independent of React/tRPC/backend
@@ -30,8 +32,18 @@ function IframeForm() {
 }
 
 export default function SubmitCase() {
+  const [, navigate] = useLocation();
+  useEffect(() => {
+    // Redirect to canonical send-medical-reports page
+    navigate("/send-medical-reports", { replace: true });
+  }, [navigate]);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://medicalcaregermany.com/send-medical-reports" />
+      </Helmet>
 
       {/* Navigation */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-100">

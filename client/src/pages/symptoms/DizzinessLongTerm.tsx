@@ -378,7 +378,7 @@ export default function DizzinessLongTerm() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
-              href="/ar/send-medical-reports"
+              href="/ar/ارسال-التقارير-الطبية"
               style={{ padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
             >
               إرسال التقارير الطبية
@@ -727,7 +727,7 @@ export default function DizzinessLongTerm() {
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
               <Link
-                href="/ar/send-medical-reports"
+                href="/ar/ارسال-التقارير-الطبية"
                 style={{ padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
               >
                 إرسال التقارير الطبية للتقييم
@@ -765,7 +765,7 @@ export default function DizzinessLongTerm() {
           <p style={{ fontSize: 12, color: "#475569", marginBottom: 48 }}>مريض من ليبيا، 47 عامًا</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
             <Link
-              href="/ar/send-medical-reports"
+              href="/ar/ارسال-التقارير-الطبية"
               style={{ padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}>
               أرسل ملفك الطبي
             </Link>

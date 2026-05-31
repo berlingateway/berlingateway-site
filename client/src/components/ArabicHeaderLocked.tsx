@@ -29,7 +29,7 @@ const MEDICAL_CONDITIONS = [
 const MAIN_LINKS = [
   { label: "الرئيسية", href: "/ar" },
   { label: "من نحن", href: "/ar/about" },
-  { label: "إرسال التقارير الطبية", href: "/send-medical-reports" },
+  { label: "إرسال التقارير الطبية", href: "/ar/ارسال-التقارير-الطبية" },
   { label: "تواصل معنا", href: "/contact" },
 ];
 
@@ -174,7 +174,7 @@ export default function ArabicHeaderLocked() {
 
             {/* Desktop: CTA button */}
             <Link
-              href="/send-medical-reports"
+              href="/ar/ارسال-التقارير-الطبية"
               className="hidden md:block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
             >
               إرسال التقارير الطبية

@@ -98,7 +98,7 @@ export default function UnexplainedDizziness() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
-              href="/ar/send-medical-reports"
+              href="/ar/ارسال-التقارير-الطبية"
               style={{ padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
             >
               أرسل ملفك — رد خلال 24 ساعة
@@ -202,7 +202,7 @@ export default function UnexplainedDizziness() {
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
             <Link
-              href="/ar/send-medical-reports"
+              href="/ar/ارسال-التقارير-الطبية"
               style={{ padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
             >
               أرسل ملفك الطبي

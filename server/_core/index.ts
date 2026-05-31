@@ -233,8 +233,10 @@ async function startServer() {
   // 301 Redirects: hybrid/English pages → canonical Arabic equivalents
   // NOTE: All English pages now serve their own content — no redirect to Arabic
   // BrainTumor, TrigeminalNeuralgia, SpineSurgery all have English components
-  const REDIRECTS_301: Record<string, string> = {};
-  void REDIRECTS_301; // suppress unused-variable warning
+  // 301 Redirects: English legacy pages → canonical pages
+  const REDIRECTS_301: Record<string, string> = {
+    '/submit-case': '/send-medical-reports',
+  };
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs
   const ARABIC_REDIRECTS_301: Record<string, string> = {

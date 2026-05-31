@@ -303,9 +303,9 @@ export default function SmartNavLayer({ currentPath }: SmartNavLayerProps) {
               </a>
             ))}
             {/* Always include submit CTA */}
-            {!related.some((r) => r.href.includes("submit")) && (
+            {!related.some((r) => r.href.includes("submit") || r.href.includes("ارسال")) && (
               <a
-                href={lang === "ar" ? "/ar/submit-case" : "/submit-case"}
+                href={lang === "ar" ? "/ar/ارسال-التقارير-الطبية" : "/send-medical-reports"}
                 style={{ ...s.relatedLink(), color: NAVY, fontWeight: 600 }}
               >
                 {SUBMIT_LABELS[lang]}

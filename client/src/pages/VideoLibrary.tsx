@@ -284,7 +284,7 @@ export default function VideoLibrary() {
           <CTABanner
             text="هل تحتاج إلى تقييم تخصصي لحالة أورام الصدر؟"
             label="أرسل ملفك للأورام"
-            href="/ar/send-medical-reports"
+            href="/ar/ارسال-التقارير-الطبية"
           />
         </section>
 

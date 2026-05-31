@@ -1174,3 +1174,14 @@
 - [x] Register route in App.tsx
 - [x] Add "سرطان الرئة" to AR_NAV_CONDITIONS in ArabicHome.tsx
 - [x] TypeScript: 0 errors verified
+
+## GSC Indexing Issues Fix
+- [x] ISSUE 1 — Fix redirect chain: /ar/send-medical-reports → /ar/ارسال-التقارير-الطبية in 11 files
+- [x] ISSUE 1 — Update ArabicHeaderLocked.tsx CTA and nav links to use /ar/ارسال-التقارير-الطبية
+- [x] ISSUE 1 — Update ArabicHome.tsx all links to use /ar/ارسال-التقارير-الطبية
+- [x] ISSUE 1 — Update ArabicSubmitCase.tsx links to use /ar/ارسال-التقارير-الطبية
+- [x] ISSUE 1 — Update SmartNavLayer.tsx submit CTA to use canonical URLs
+- [x] ISSUE 2 — Add server-side 301 redirect: /submit-case → /send-medical-reports
+- [x] ISSUE 2 — Add noindex + canonical to SubmitCase.tsx (client-side redirect)
+- [x] ISSUE 3 — Remove duplicate entries from client/public/sitemap.xml (2 duplicates)
+- [x] ISSUE 3 — Remove /submit-case from sitemap.xml (now a redirect)

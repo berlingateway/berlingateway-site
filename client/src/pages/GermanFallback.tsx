@@ -50,7 +50,7 @@ export default function GermanFallback() {
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="/send-medical-reports"
+              href="#submit-file"
               style={{ display: "inline-block", padding: "12px 28px", background: "#fff", color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}
             >
               Unterlagen einreichen
@@ -119,11 +119,32 @@ export default function GermanFallback() {
             Senden Sie uns die medizinischen Unterlagen. Ein Koordinator meldet sich innerhalb von 24 Stunden.
           </p>
           <a
-            href="/send-medical-reports"
+            href="#submit-file"
             style={{ display: "inline-block", padding: "13px 32px", background: "#fff", color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}
           >
             Jetzt Unterlagen einreichen
           </a>
+        </div>
+      </section>
+
+      {/* ── TALLY FORM ── */}
+      <section id="submit-file" style={{ padding: "64px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <p style={{ fontSize: 10, letterSpacing: "0.2em", color: SLATE_BODY, textTransform: "uppercase", marginBottom: 12 }}>
+            Unterlagen einreichen
+          </p>
+          <h2 style={{ fontSize: "clamp(18px, 2.5vw, 24px)", fontWeight: 500, color: NAVY, marginBottom: 32, lineHeight: 1.5 }}>
+            Medizinische Unterlagen senden
+          </h2>
+          <iframe
+            src="https://tally.so/embed/68MrBP?alignLeft=1&hideTitle=1&transparentBackground=1"
+            width="100%"
+            style={{ minHeight: "1200px", border: "none" }}
+            frameBorder={0}
+            marginHeight={0}
+            marginWidth={0}
+            title="Medical Care Germany — Unterlagen einreichen"
+          />
         </div>
       </section>
 

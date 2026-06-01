@@ -27,3 +27,8 @@
 /de/aerzte.html /de/aerzte 301
 /ar/aerzte.html /ar/aerzte 301
 /ar/إرسال-التقارير-الطبية.html /ar/إرسال-التقارير-الطبية 301
+
+# Surgical Redirects - High Priority
+/de/framework /de/systemlogik 301
+/ar/framework /ar/systemlogik 301
+/de/insights/arbeit-in-deutschland /de/assessment 301

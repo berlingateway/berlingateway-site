@@ -9,7 +9,10 @@ export default function GovernmentalBodies() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
       <Helmet>
-        <meta name="robots" content="noindex, nofollow" />
+        <title>Embassies & Government Bodies | Medical Care Germany</title>
+        <meta name="description" content="Structured medical coordination for embassies, government institutions, and state-sponsored patient programs at German university hospitals." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://medicalcaregermany.com/governmental-bodies" />
       </Helmet>
       
       <ContactBar />

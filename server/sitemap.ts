@@ -101,6 +101,13 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.85,
   },
 
+  // -- Governmental Bodies & Embassies
+  {
+    loc: `${CANONICAL_DOMAIN}/governmental-bodies`,
+    changefreq: 'monthly',
+    priority: 0.80,
+  },
+
   // ── Arabic Cardiology ──────────────────────────────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/cardiology-treatment-germany`,

@@ -108,6 +108,20 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.80,
   },
 
+  // -- Herniated Disc Treatment (English)
+  {
+    loc: `${CANONICAL_DOMAIN}/herniated-disc-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.80,
+  },
+
+  // -- University Hospital Treatment (English)
+  {
+    loc: `${CANONICAL_DOMAIN}/university-hospital-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.80,
+  },
+
   // ── Arabic Cardiology ──────────────────────────────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/cardiology-treatment-germany`,

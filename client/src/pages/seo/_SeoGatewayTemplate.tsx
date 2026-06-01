@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const intakeHref = "/send-medical-reports";
+const intakeHref = "/ar/ارسال-التقارير-الطبية";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي");
@@ -262,6 +262,22 @@ export function SeoGatewayPage({
           <p className="mt-6 text-xs text-slate-500 leading-relaxed" style={FONT}>
             لا تحتاج ملفاً كاملاً — أرسل ما هو متوفر الآن
           </p>
+        </div>
+      </section>
+
+      {/* TALLY FORM */}
+      <section id="submit-file" className="py-16 px-6 bg-white border-t border-slate-100" dir="rtl" style={{ scrollMarginTop: '90px' }}>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-medium text-slate-900 mb-8 text-center" style={FONT}>أرسل ملفك الطبي الآن</h2>
+          <iframe
+            src="https://tally.so/embed/68MrBP?alignLeft=1&hideTitle=1&transparentBackground=1"
+            width="100%"
+            style={{ minHeight: '1200px', border: 'none' }}
+            frameBorder={0}
+            marginHeight={0}
+            marginWidth={0}
+            title="Medical Care Germany — إرسال التقارير الطبية"
+          />
         </div>
       </section>
 

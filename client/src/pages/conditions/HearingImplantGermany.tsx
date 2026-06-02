@@ -36,11 +36,13 @@ const PATHWAY = [
 ];
 
 const RELATED = [
-  { href: "/ar/ent-germany",              label: "الأنف والأذن والحنجرة — المحور" },
-  { href: "/ar/tinnitus-treatment-germany", label: "علاج الطنين وطنين الأذن" },
-  { href: "/ar/dizziness-long-term",       label: "الدوخة المزمنة واضطرابات التوازن" },
-  { href: "/ar/ent-surgery-germany",       label: "جراحة الأنف والأذن والحنجرة" },
-  { href: "/ar/submit-case",               label: "تقديم الحالة الطبية" },
+  { href: "/ar/ent-germany",                    label: "الأنف والأذن والحنجرة — المحور" },
+  { href: "/ar/tinnitus-treatment-germany",     label: "علاج الطنين وطنين الأذن" },
+  { href: "/ar/dizziness-long-term",            label: "الدوخة المزمنة واضطرابات التوازن" },
+  { href: "/ar/pediatric-ent-germany",          label: "طب الأنف والأذن والحنجرة للأطفال" },
+  { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم في ألمانيا" },
+  { href: "/ar/ent-surgery-germany",            label: "جراحة الأنف والأذن والحنجرة" },
+  { href: "/ar/submit-case",                    label: "تقديم الحالة الطبية" },
 ];
 
 export default function HearingImplantGermany() {

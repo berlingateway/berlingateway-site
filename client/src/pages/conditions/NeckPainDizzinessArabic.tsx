@@ -107,9 +107,67 @@ export default function NeckPainDizzinessArabic() {
       document.head.appendChild(script);
     }
 
+    // FAQPage JSON-LD
+    const faqSchemaId = "neck-pain-dizziness-faq-jsonld";
+    let existingFaqScript = document.getElementById(faqSchemaId);
+    if (!existingFaqScript) {
+      const faqScript = document.createElement("script");
+      faqScript.id = faqSchemaId;
+      faqScript.type = "application/ld+json";
+      faqScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "كيف أعرف أن الدوخة بسبب الرقبة؟",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "الدوخة الناتجة عن الرقبة تتميز بارتباطها بتحريك الرأس أو تثبيته فترة طويلة، وتزداد عند النظر لأعلى أو الالتفات. إذا صاحبت الدوخة ألم في الرقبة أو تنميل في الذراع، فهذا مؤشر قوي على منشأ عنقي.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "هل ألم الرقبة يسبب الدوخة؟",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "نعم. الدوخة العنقية من الأسباب الشائعة التي تُغفَل كثيراً. المستقبلات الحسية في مفاصل الرقبة تؤثر مباشرة على نظام التوازن.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "هل شرايين الرقبة تسبب دوخة؟",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "ضغط على الشريان الفقري الذي يمر عبر فقرات الرقبة قد يسبب دوخة عند دوران الرأس. هذه الحالة تحتاج تقييماً وعائياً متخصصاً.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "هل ألم الرقبة يسبب صداعاً ودوخة معاً؟",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "نعم. الثلاثة مترابطون في كثير من الحالات العنقية. الصداع القادم من الرقبة يُسمى صداعاً عنقياً (Cervicogenic Headache) وغالباً يصاحبه دوخة وتوتر.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "هل ألم الفقرات يسبب دوخة؟",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "ضغط على الجذور العصبية في الفقرات العنقية قد يسبب دوخة، خصوصاً في مستوى C1-C2. التقييم بالرنين المغناطيسي مع بروتوكول عنقي يحدد السبب.",
+            },
+          },
+        ],
+      });
+      document.head.appendChild(faqScript);
+    }
+
     return () => {
       const s = document.getElementById(schemaId);
       if (s) s.remove();
+      const fs = document.getElementById(faqSchemaId);
+      if (fs) fs.remove();
     };
   }, []);
 
@@ -435,6 +493,43 @@ export default function NeckPainDizzinessArabic() {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <section className="py-16 px-6 bg-white border-t border-slate-100" dir="rtl">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-8 text-center" style={FONT}>
+            أسئلة شائعة حول ألم الرقبة والدوخة
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "كيف أعرف أن الدوخة بسبب الرقبة؟",
+                a: "الدوخة الناتجة عن الرقبة تتميز بارتباطها بتحريك الرأس أو تثبيته فترة طويلة، وتزداد عند النظر لأعلى أو الالتفات. إذا صاحبت الدوخة ألم في الرقبة أو تنميل في الذراع، فهذا مؤشر قوي على منشأ عنقي.",
+              },
+              {
+                q: "هل ألم الرقبة يسبب الدوخة؟",
+                a: "نعم. الدوخة العنقية من الأسباب الشائعة التي تُغفَل كثيراً. المستقبلات الحسية في مفاصل الرقبة تؤثر مباشرة على نظام التوازن.",
+              },
+              {
+                q: "هل شرايين الرقبة تسبب دوخة؟",
+                a: "ضغط على الشريان الفقري الذي يمر عبر فقرات الرقبة قد يسبب دوخة عند دوران الرأس. هذه الحالة تحتاج تقييماً وعائياً متخصصاً.",
+              },
+              {
+                q: "هل ألم الرقبة يسبب صداعاً ودوخة معاً؟",
+                a: "نعم. الثلاثة مترابطون في كثير من الحالات العنقية. الصداع القادم من الرقبة يُسمى صداعاً عنقياً (Cervicogenic Headache) وغالباً يصاحبه دوخة وتوتر.",
+              },
+              {
+                q: "هل ألم الفقرات يسبب دوخة؟",
+                a: "ضغط على الجذور العصبية في الفقرات العنقية قد يسبب دوخة، خصوصاً في مستوى C1-C2. التقييم بالرنين المغناطيسي مع بروتوكول عنقي يحدد السبب.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="border-b border-slate-100 pb-5">
+                <p className="text-sm font-medium text-[#0B1C2C] mb-2" style={FONT}>{item.q}</p>
+                <p className="text-sm text-slate-600 leading-relaxed" style={FONT}>{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <ArabicFooterGuide />
     </div>
   );

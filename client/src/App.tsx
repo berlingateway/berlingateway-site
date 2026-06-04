@@ -183,9 +183,41 @@ import OncologyHub from "./pages/hubs/OncologyHub";
 import OrthopedicsHub from "./pages/hubs/OrthopedicsHub";
 import CardiologyHub from "./pages/hubs/CardiologyHub";
 import ConsultationHub from "./pages/hubs/ConsultationHub";
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 
+/**
+ * Global canonical fallback.
+ * Sets canonical to the current URL on every route change,
+ * but only if no page-level canonical has been set yet (or it still
+ * points to the homepage from the old static tag in index.html).
+ * Pages that use HreflangTags or set their own canonical will
+ * override this because they run their own useEffect.
+ */
+function useCanonicalFallback() {
+  const [location] = useLocation();
+  useEffect(() => {
+    const BASE = "https://medicalcaregermany.com";
+    const timer = setTimeout(() => {
+      let el = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement("link") as HTMLLinkElement;
+        (el as HTMLLinkElement).rel = "canonical";
+        document.head.appendChild(el);
+      }
+      const currentHref = (el as HTMLLinkElement).href;
+      const homepageHref = `${BASE}/`;
+      // Update if: no href, or still pointing to homepage while we're not on homepage
+      if (!currentHref || (currentHref === homepageHref && location !== "/")) {
+        (el as HTMLLinkElement).href = `${BASE}${location}`;
+      }
+    }, 30);
+    return () => clearTimeout(timer);
+  }, [location]);
+}
 
 function Router() {
+  useCanonicalFallback();
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>

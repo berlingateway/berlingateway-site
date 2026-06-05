@@ -11,46 +11,51 @@
   <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/insights/ausbildung-in-deutschland" />
   <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/insights/ausbildung-in-deutschland" />
   <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom styles for new header/footer compatibility */
+    .top-band{background:#0B1F3A;color:#fff;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600!important}
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    @media(max-width:640px){
+      .nav a:not(.nav-cta){display:none}
+    }
+  </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND -->
 <div class="top-band">
   <div class="top-band__inner">
-    <div class="top-band__left">
-      <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-    </div>
-    <div class="top-band__right">
-      <a href="/de/insights/ausbildung-in-deutschland" class="lang-switch">Deutsch</a>
-      <span style="font-size:12px; opacity:0.7;">تقييم مهني معتمد</span>
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/de/insights/ausbildung-in-deutschland" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5">خبراء مقيمون في برلين</span>
     </div>
   </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER -->
 <header class="header">
   <div class="header__inner">
-    <a href="/ar/" class="brand">
-      <div class="brand-icon"></div>
-      Berlin Gateway
-    </a>
+    <a href="/ar/" class="brand">Berlin <span>Gateway</span></a>
     <nav class="nav">
-      <a href="/ar/chancenkarte/" class="nav-link">بطاقة الفرص</a>
-      <a href="/ar/assessment/" class="nav-link">احسب نقاطك</a>
-      <a href="/ar/systemlogik/" class="nav-link">منطق النظام</a>
-      <a href="/ar/monitor/" class="nav-link">مراقب سوق العمل</a>
-      <a href="/ar/insights/" class="nav-link">مقالات</a>
+      <a href="/ar/chancenkarte/">بطاقة الفرص</a>
+      <a href="/ar/assessment/">احسب نقاطك</a>
+      <a href="/ar/systemlogik/">منطق النظام</a>
+      <a href="/ar/monitor/">مراقب السوق</a>
+      <a href="/ar/assessment/" class="nav-cta">ابدأ التقييم</a>
     </nav>
   </div>
 </header>
-
-<!-- BAND 3: SUBNAV -->
-<nav class="subnav">
-  <div class="subnav__inner">
-    <a href="/ar/assessment/">تقييم مهني معتمد</a>
-    <a href="https://wa.me/4915781497451" target="_blank">واتساب</a>
-  </div>
-</nav>
 
 <main class="container" style="padding: 80px 20px;">
   <article style="max-width: 900px; margin: 0 auto;">
@@ -81,7 +86,7 @@
     <p style="font-size:16px; color:#334155; line-height:1.8; margin-bottom:16px;">
       في ألمانيا يُسمى التكوين المهني <strong>Ausbildung</strong> — 
       وهو نظام تدريب مهني معترف به دولياً يجمع بين العمل الميداني 
-      والدراسة النظرية في نفس الوقت.
+      والدراسة النظرية in نفس الوقت.
     </p>
     <p style="font-size:16px; color:#334155; line-height:1.8; margin-bottom:16px;">
       خلال فترة التدريب (2 إلى 3 سنوات) تحصل على:
@@ -268,7 +273,7 @@
           <strong style="font-size:16px;">ابحث عن مكان تدريب</strong>
           <p style="font-size:14px; color:#666; margin-top:6px;">
             ابحث على منصات مثل Ausbildung.de وMake-it-in-Germany.com — 
-            أو تواصل معنا مباشرة للمساعدة في الإيجاد.
+            أو تواصل معنا مباشرة للمساعدة in الإيجاد.
           </p>
         </div>
       </div>
@@ -280,8 +285,8 @@
         <div>
           <strong style="font-size:16px;">قدّم طلب التأشيرة</strong>
           <p style="font-size:14px; color:#666; margin-top:6px;">
-            بعد قبولك في مكان التدريب، تقدم بطلب تأشيرة التكوين المهني 
-            من السفارة الألمانية في بلدك. المعالجة تستغرق 4 إلى 8 أسابيع.
+            بعد قبولك in مكان التدريب، تقدم بطلب تأشيرة التكوين المهني 
+            من السفارة الألمانية in بلدك. المعالجة تستغرق 4 إلى 8 أسابيع.
           </p>
         </div>
       </div>
@@ -290,7 +295,7 @@
         border-radius:50%; display:flex; align-items:center; justify-content:center; 
         font-weight:700; flex-shrink:0;">5</div>
         <div>
-          <strong style="font-size:16px;">ابدأ حياتك في ألمانيا</strong>
+          <strong style="font-size:16px;">ابدأ حياتك in ألمانيا</strong>
           <p style="font-size:14px; color:#666; margin-top:6px;">
             وابدأ التكوين المهني براتب شهري منذ اليوم الأول.
           </p>
@@ -336,7 +341,7 @@
       </div>
       <div style="border-bottom:1px solid #E5E7EB; padding:20px 0;">
         <strong style="font-size:15px;">
-          ماذا بعد التكوين المهني — هل أبقى في ألمانيا؟
+          ماذا بعد التكوين المهني — هل أبقى in ألمانيا؟
         </strong>
         <p style="font-size:14px; color:#666; margin-top:8px; line-height:1.7;">
           نعم — بعد الحصول على الشهادة وعقد عمل، 
@@ -369,7 +374,7 @@
         <li>✓ تحديد المسار الأنسب — تكوين مهني أم بطاقة الفرص</li>
         <li>✓ تحسين السيرة الذاتية لسوق العمل الألماني</li>
         <li>✓ تقييم مجاني خلال 5 دقائق</li>
-        <li>✓ فريق موجود فعلياً في برلين</li>
+        <li>✓ فريق موجود فعلياً in برلين</li>
       </ul>
     </div>
 
@@ -398,38 +403,14 @@
   </article>
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); 
-    gap:40px; margin-bottom:40px;">
-      <div>
-        <h4>Berlin Gateway</h4>
-        <p>تقييم مهني احترافي للنظام الألماني.</p>
-      </div>
-      <div>
-        <h4>التنقل</h4>
-        <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-        <a href="/ar/assessment/">احسب نقاطك</a>
-        <a href="/ar/systemlogik/">منطق النظام</a>
-        <a href="/ar/insights/">مقالات</a>
-      </div>
-      <div>
-        <h4>قانوني</h4>
-        <a href="/de/impressum/">Impressum</a>
-        <a href="/de/datenschutz/">Datenschutz</a>
-      </div>
-      <div>
-        <h4>تواصل</h4>
-        <p>info@berlingateway.de</p>
-        <p>+49 30 25730875</p>
-      </div>
-    </div>
-    <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); 
-    font-size:12px; opacity:0.5; text-align:center;">
-      © 2026 Berlin Gateway. جميع الحقوق محفوظة.
-    </div>
+  <p><b>Berlin Gateway</b> — خبراء مقيمون in ألمانيا</p>
+  <div style="margin:20px 0">
+    <a href="/de/impressum/">Impressum</a>
+    <a href="/de/datenschutz/">Datenschutz</a>
+    <a href="mailto:info@berlingateway.de">تواصل</a>
   </div>
+  <p style="opacity:0.5">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
 
 </body>

@@ -216,8 +216,70 @@ function useCanonicalFallback() {
   }, [location]);
 }
 
+/**
+ * Global meta tags fallback.
+ * On every route change, reads the current <title> (set by page-level effects)
+ * and syncs it to meta name="title", og:title, twitter:title.
+ * Also syncs meta name="description", og:description, twitter:description
+ * if the page has set a page-specific description.
+ * Runs after a short delay so page-level useEffects fire first.
+ */
+function useMetaFallback() {
+  const [location] = useLocation();
+  useEffect(() => {
+    const HOMEPAGE_TITLE = "Medical Care Germany | Strategic Medical Authority for Complex Cases";
+    const HOMEPAGE_DESC = "Cross-border medical authority structuring priority access to Germany's leading specialists and university hospitals for international patients.";
+    const HOMEPAGE_URL = "https://medicalcaregermany.com/";
+    const BASE = "https://medicalcaregermany.com";
+
+    const timer = setTimeout(() => {
+      const currentTitle = document.title;
+      const isHomepage = location === "/";
+
+      // --- Title sync ---
+      const setMeta = (selector: string, attr: string, value: string) => {
+        const el = document.querySelector(selector) as HTMLMetaElement | null;
+        if (el) el.setAttribute(attr, value);
+      };
+
+      if (!isHomepage && currentTitle && currentTitle !== HOMEPAGE_TITLE) {
+        // Page has its own title — sync all title meta tags
+        setMeta('meta[name="title"]', "content", currentTitle);
+        setMeta('meta[property="og:title"]', "content", currentTitle);
+        setMeta('meta[name="twitter:title"]', "content", currentTitle);
+
+        // Sync og:url and twitter:url to current page
+        const pageUrl = `${BASE}${location}`;
+        setMeta('meta[property="og:url"]', "content", pageUrl);
+        setMeta('meta[name="twitter:url"]', "content", pageUrl);
+
+        // Sync description: if still showing homepage desc, sync og/twitter to match
+        const descEl = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+        const currentDesc = descEl?.getAttribute("content") ?? "";
+        if (currentDesc && currentDesc !== HOMEPAGE_DESC) {
+          // Page has its own description — sync og:description and twitter:description
+          setMeta('meta[property="og:description"]', "content", currentDesc);
+          setMeta('meta[name="twitter:description"]', "content", currentDesc);
+        }
+      } else if (isHomepage) {
+        // Restore homepage values
+        setMeta('meta[name="title"]', "content", HOMEPAGE_TITLE);
+        setMeta('meta[property="og:title"]', "content", HOMEPAGE_TITLE);
+        setMeta('meta[name="twitter:title"]', "content", HOMEPAGE_TITLE);
+        setMeta('meta[property="og:url"]', "content", HOMEPAGE_URL);
+        setMeta('meta[name="twitter:url"]', "content", HOMEPAGE_URL);
+        setMeta('meta[name="description"]', "content", HOMEPAGE_DESC);
+        setMeta('meta[property="og:description"]', "content", HOMEPAGE_DESC);
+        setMeta('meta[name="twitter:description"]', "content", HOMEPAGE_DESC);
+      }
+    }, 60); // slightly after canonical (30ms) so title is already set
+    return () => clearTimeout(timer);
+  }, [location]);
+}
+
 function Router() {
   useCanonicalFallback();
+  useMetaFallback();
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>

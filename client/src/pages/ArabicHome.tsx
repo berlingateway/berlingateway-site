@@ -1369,6 +1369,7 @@ export default function ArabicHome() {
               { href: "/ar/مستشفيات-المانيا-للعرب", label: "مستشفيات ألمانيا" },
               { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج" },
               { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+              { href: "/consultation-services-germany", label: "خدمات الاستشارة" },
             ].map((l) => (
               <a key={l.href} href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>{l.label}</a>
             ))}

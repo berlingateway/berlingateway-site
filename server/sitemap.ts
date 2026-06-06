@@ -108,6 +108,13 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.80,
   },
 
+  // -- Consultation Services Germany
+  {
+    loc: `${CANONICAL_DOMAIN}/consultation-services-germany`,
+    changefreq: 'monthly',
+    priority: 0.80,
+  },
+
   // -- Herniated Disc Treatment (English)
   {
     loc: `${CANONICAL_DOMAIN}/herniated-disc-treatment-germany`,

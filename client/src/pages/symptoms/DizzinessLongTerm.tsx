@@ -316,6 +316,7 @@ const INTERNAL_LINKS = [
   { href: "/ar/hearing-implant-germany", label: "زراعة القوقعة وضعف السمع" },
   { href: "/ar/head-neck-tumor-germany", label: "أورام الرأس والعنق" },
   { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
+  { href: "/ar/neck-pain-dizziness-germany", label: "ألم الرقبة مع دوخة" },
   { href: "/ar/neurology-treatment-germany", label: "علاج الأعصاب في ألمانيا" },
   { href: "/ar/complex-trauma-germany", label: "الصدمات المعقدة والإصابات" },
   { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم" },

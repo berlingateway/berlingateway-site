@@ -390,6 +390,10 @@ export default function NumbnessTreatmentArabic() {
                 href: "/ar/dizziness-long-term",
                 label: "الدوخة المزمنة — متى تحتاج تقييماً عصبياً؟",
               },
+              {
+                href: "/ar/neck-pain-dizziness-germany",
+                label: "ألم الرقبة مع دوخة — التقييم العنقي في ألمانيا",
+              },
             ].map((link, i) => (
               <Link
                 key={i}

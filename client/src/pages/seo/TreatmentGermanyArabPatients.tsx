@@ -62,6 +62,7 @@ export default function TreatmentGermanyArabPatients() {
         { href: "/ar/herniated-disc", label: "علاج الانزلاق الغضروفي في ألمانيا" },
         { href: "/ar/dizziness-long-term", label: "دوخة مستمرة بدون تفسير" },
         { href: "/ar/complex-trauma-evaluation", label: "تقييم الحالات المعقدة والإصابات" },
+        { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج في ألمانيا — ما تحتاج معرفته" },
       ]}
       faqSchema={[
         {

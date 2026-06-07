@@ -1077,6 +1077,8 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs text-slate-500">
             <Link href="/about" className="hover:text-slate-300 transition-colors">About Us</Link>
             <Link href="/consultation-services-germany" className="hover:text-slate-300 transition-colors">Consultation Services</Link>
+            <Link href="/medical-visa-germany" className="hover:text-slate-300 transition-colors">Medical Visa Germany</Link>
+            <Link href="/treatment-in-germany-arab-patients" className="hover:text-slate-300 transition-colors">Treatment in Germany</Link>
             <Link href="/second-opinion-germany" className="hover:text-slate-300 transition-colors">Second Opinion</Link>
             <Link href="/send-medical-reports" className="hover:text-slate-300 transition-colors">Send Medical Reports</Link>
           </div>

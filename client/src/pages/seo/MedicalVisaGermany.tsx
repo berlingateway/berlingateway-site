@@ -364,6 +364,7 @@ export default function MedicalVisaGermany() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { href: "/ar/العلاج-في-المانيا-للعرب", label: "العلاج في ألمانيا للعرب" },
+              { href: "/treatment-in-germany-arab-patients", label: "دليل العلاج في ألمانيا للمرضى العرب" },
               { href: "/ar/تكلفة-العلاج-في-المانيا", label: "تكلفة العلاج في ألمانيا" },
               { href: "/ar/neurology-treatment-germany", label: "علاج أمراض الأعصاب" },
               { href: "/ar/cardiology-treatment-germany", label: "علاج أمراض القلب" },

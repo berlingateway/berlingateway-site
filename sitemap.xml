@@ -7,10 +7,10 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://berlingateway.de/de/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/assessment</loc>
@@ -74,8 +74,32 @@
   </url>
   <url>
     <loc>https://berlingateway.de/ar/insights</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/التكوين-المهني-المانيا</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/en/chancenkarte-from-gulf</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/en/visa-germany</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/en/cost-of-living-germany</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

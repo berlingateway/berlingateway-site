@@ -108,6 +108,20 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.80,
   },
 
+  // -- Physician Referral
+  {
+    loc: `${CANONICAL_DOMAIN}/physician-referral`,
+    changefreq: 'monthly',
+    priority: 0.70,
+  },
+
+  // -- Travel for Treatment Germany
+  {
+    loc: `${CANONICAL_DOMAIN}/travel-for-treatment-germany`,
+    changefreq: 'monthly',
+    priority: 0.70,
+  },
+
   // -- Consultation Services Germany
   {
     loc: `${CANONICAL_DOMAIN}/consultation-services-germany`,

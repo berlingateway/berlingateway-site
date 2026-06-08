@@ -5,7 +5,7 @@ import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const CANONICAL = "https://www.medicalcaregermany.com/ar/neck-pain-dizziness-germany";
+const CANONICAL = "https://medicalcaregermany.com/ar/neck-pain-dizziness-germany";
 const intakeHref = "/send-medical-reports";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +

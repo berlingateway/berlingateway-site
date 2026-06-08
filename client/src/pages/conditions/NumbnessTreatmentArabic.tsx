@@ -95,7 +95,7 @@ export default function NumbnessTreatmentArabic() {
           provider: {
             "@type": "MedicalBusiness",
             name: "Medical Care Germany",
-            url: "https://www.medicalcaregermany.com",
+            url: "https://medicalcaregermany.com",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Berlin",

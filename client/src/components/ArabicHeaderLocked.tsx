@@ -26,6 +26,15 @@ const MEDICAL_CONDITIONS = [
   { label: "الحالات المعقدة", href: "/ar/complex-cases" },
 ];
 
+const INTERNATIONAL_PATIENTS = [
+  { label: "العلاج في ألمانيا للليبيين", href: "/ar/treatment-germany-libya" },
+  { label: "تأشيرة العلاج الطبي للليبيين", href: "/ar/medical-visa-germany-libya" },
+  { label: "علاج السرطان للمرضى الليبيين", href: "/ar/oncology-germany-libya" },
+  { label: "إعادة التأهيل للمرضى الليبيين", href: "/ar/rehabilitation-germany-libya" },
+  { label: "العلاج في ألمانيا للعراقيين", href: "/ar/treatment-germany-iraq" },
+  { label: "العلاج في ألمانيا لليمنيين", href: "/ar/treatment-germany-yemen" },
+];
+
 const MAIN_LINKS = [
   { label: "الرئيسية", href: "/ar" },
   { label: "من نحن", href: "/ar/about" },
@@ -138,6 +147,21 @@ export default function ArabicHeaderLocked() {
                       {item.label}
                     </Link>
                   ))}
+                  <div className="px-4 py-2 bg-slate-50 border-b border-slate-100">
+                    <span className="text-[10px] text-slate-400 uppercase tracking-widest font-medium">
+                      المرضى الدوليون
+                    </span>
+                  </div>
+                  {INTERNATIONAL_PATIENTS.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 border-b border-slate-100 last:border-0 text-right transition-colors"
+                      onClick={closeAll}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
@@ -217,6 +241,23 @@ export default function ArabicHeaderLocked() {
               </span>
             </div>
             {MEDICAL_CONDITIONS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-6 py-3 text-sm text-slate-700 hover:bg-slate-50 border-b border-slate-100 last:border-0 text-right transition-colors"
+                onClick={closeAll}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {/* Divider + International Patients section */}
+            <div className="px-6 py-2 bg-slate-50 border-b border-slate-100">
+              <span className="text-[10px] text-slate-400 uppercase tracking-widest font-medium">
+                المرضى الدوليون
+              </span>
+            </div>
+            {INTERNATIONAL_PATIENTS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

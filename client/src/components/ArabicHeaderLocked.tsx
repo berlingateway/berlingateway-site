@@ -27,12 +27,12 @@ const MEDICAL_CONDITIONS = [
 ];
 
 const INTERNATIONAL_PATIENTS = [
-  { label: "العلاج في ألمانيا للليبيين", href: "/ar/treatment-germany-libya" },
-  { label: "تأشيرة العلاج الطبي للليبيين", href: "/ar/medical-visa-germany-libya" },
-  { label: "علاج السرطان للمرضى الليبيين", href: "/ar/oncology-germany-libya" },
-  { label: "إعادة التأهيل للمرضى الليبيين", href: "/ar/rehabilitation-germany-libya" },
-  { label: "العلاج في ألمانيا للعراقيين", href: "/ar/treatment-germany-iraq" },
-  { label: "العلاج في ألمانيا لليمنيين", href: "/ar/treatment-germany-yemen" },
+  { label: "العلاج في ألمانيا للليبيين", href: "/ar/treatment-germany-libya/" },
+  { label: "تأشيرة العلاج الطبي للليبيين", href: "/ar/medical-visa-germany-libya/" },
+  { label: "علاج السرطان للمرضى الليبيين", href: "/ar/oncology-germany-libya/" },
+  { label: "إعادة التأهيل للمرضى الليبيين", href: "/ar/rehabilitation-germany-libya/" },
+  { label: "العلاج في ألمانيا للعراقيين", href: "/ar/treatment-germany-iraq/" },
+  { label: "العلاج في ألمانيا لليمنيين", href: "/ar/treatment-germany-yemen/" },
 ];
 
 const MAIN_LINKS = [

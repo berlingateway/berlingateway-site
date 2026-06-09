@@ -153,14 +153,14 @@ export default function ArabicHeaderLocked() {
                     </span>
                   </div>
                   {INTERNATIONAL_PATIENTS.map((item) => (
-                    <Link
+                    <a
                       key={item.href}
                       href={item.href}
                       className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 border-b border-slate-100 last:border-0 text-right transition-colors"
                       onClick={closeAll}
                     >
                       {item.label}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               )}
@@ -258,14 +258,14 @@ export default function ArabicHeaderLocked() {
               </span>
             </div>
             {INTERNATIONAL_PATIENTS.map((item) => (
-              <Link
+              <a
                 key={item.href}
                 href={item.href}
                 className="block px-6 py-3 text-sm text-slate-700 hover:bg-slate-50 border-b border-slate-100 last:border-0 text-right transition-colors"
                 onClick={closeAll}
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
 
             {/* Language switch */}

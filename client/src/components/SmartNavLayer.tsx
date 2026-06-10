@@ -215,7 +215,7 @@ export default function SmartNavLayer({ currentPath }: SmartNavLayerProps) {
             <div style={s.langSwitch()}>
               <a href="/" style={s.langBtn(false)}>English</a>
               <span style={s.langSep()}>|</span>
-              <a href="/ar" style={s.langBtn(false)}>العربية</a>
+              <a href="/ar/" style={s.langBtn(false)}>العربية</a>
               <span style={s.langSep()}>|</span>
               <a href="/de" style={s.langBtn(false)}>Deutsch</a>
             </div>

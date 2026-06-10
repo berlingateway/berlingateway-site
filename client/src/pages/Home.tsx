@@ -115,12 +115,12 @@ export default function Home() {
             هل تفضل عرض هذه الصفحة باللغة العربية؟
           </span>
           <div className="flex items-center gap-3 flex-shrink-0">
-            <Link
-              href="/ar"
+            <a
+              href="/ar/"
               className="bg-white text-slate-900 hover:bg-slate-100 px-3 py-1 text-xs font-medium rounded-none transition-colors"
             >
               فتح النسخة العربية
-            </Link>
+            </a>
             <button
               onClick={dismissArabicBanner}
               aria-label="Dismiss"
@@ -219,7 +219,7 @@ export default function Home() {
           </Link>
           <span className="text-xs text-slate-900 font-medium">EN</span>
           <span className="text-slate-300 text-xs">|</span>
-          <a href="/ar" className="text-xs text-slate-400 hover:text-slate-700 transition-colors">AR</a>
+          <a href="/ar/" className="text-xs text-slate-400 hover:text-slate-700 transition-colors">AR</a>
         </div>
         <button 
           className="mobile-menu-button"

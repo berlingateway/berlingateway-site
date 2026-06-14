@@ -68,7 +68,7 @@ export default function EntSurgeryGermany() {
             تنسيق الحالات الجراحية المعقدة في الأنف والأذن والحنجرة — من جراحة الجيوب الأنفية إلى جراحات الحنجرة والرقبة، بالتنسيق مع الجراحين المختصين في المستشفيات الجامعية الألمانية.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none", border: "1px solid #fff" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none", border: "1px solid #fff" }}>
               إرسال التقارير الطبية للتقييم
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
@@ -129,7 +129,7 @@ export default function EntSurgeryGermany() {
           <p style={{ ...AR, fontSize: 14, color: "#94a3b8", lineHeight: 1.85, marginBottom: 32 }}>
             يُراجَع كل ملف طبي بشكل منفصل. التقييم الأولي يحدد إمكانية التنسيق الجراحي ومدى ملاءمة الحالة للتدخل في ألمانيا.
           </p>
-          <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
             إرسال التقارير الطبية للتقييم
           </a>
         </div>

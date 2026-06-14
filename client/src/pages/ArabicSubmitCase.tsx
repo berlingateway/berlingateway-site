@@ -45,7 +45,7 @@ export default function ArabicSubmitCase() {
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "#fff", color: NAVY, fontSize: 14, fontWeight: 500, textDecoration: "none" }}
             >
               إرسال التقارير الطبية
@@ -77,7 +77,7 @@ export default function ArabicSubmitCase() {
             بناءً على طبيعة الحالة والتخصص المطلوب.
           </p>
           <a
-            href="/ar/ارسال-التقارير-الطبية"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}
           >
             إرسال التقارير الطبية
@@ -145,7 +145,7 @@ export default function ArabicSubmitCase() {
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "#fff", color: NAVY, fontSize: 14, fontWeight: 500, textDecoration: "none" }}
             >
               إرسال التقارير الطبية

@@ -130,7 +130,7 @@ export default function HerniaTreatmentGermany() {
             }}
           >
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 ...AR,
                 display: "inline-block",
@@ -734,7 +734,7 @@ export default function HerniaTreatmentGermany() {
             }}
           >
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 ...AR,
                 display: "inline-block",

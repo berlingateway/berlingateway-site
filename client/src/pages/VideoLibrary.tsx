@@ -142,7 +142,7 @@ function ArabicPageHeader() {
         {/* CTA + lang */}
         <div className="flex items-center gap-3">
           <a
-            href="/send-medical-reports"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             className="hidden md:inline-block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
             style={arFont}
           >
@@ -172,7 +172,7 @@ function ArabicPageHeader() {
           <Link href="/ar/videos" onClick={() => setMobileOpen(false)}><span className="cursor-pointer text-slate-900 font-medium">مكتبة الفيديو</span></Link>
           <Link href="/ar#submit-case" onClick={() => setMobileOpen(false)}><span className="cursor-pointer hover:text-slate-900">تقديم الحالة</span></Link>
           <Link href="/ar#contact" onClick={() => setMobileOpen(false)}><span className="cursor-pointer hover:text-slate-900">تواصل</span></Link>
-          <a href="/send-medical-reports" className="bg-slate-900 text-white text-sm px-6 py-3 rounded" style={arFont}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" className="bg-slate-900 text-white text-sm px-6 py-3 rounded" style={arFont}>
             إرسال التقارير الطبية
           </a>
         </div>
@@ -284,7 +284,8 @@ export default function VideoLibrary() {
           <CTABanner
             text="هل تحتاج إلى تقييم تخصصي لحالة أورام الصدر؟"
             label="أرسل ملفك للأورام"
-            href="/ar/ارسال-التقارير-الطبية"
+            href="https://tally.so/r/68MrBP"
+            external={true}
           />
         </section>
 

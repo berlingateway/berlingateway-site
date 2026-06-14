@@ -112,7 +112,7 @@ export default function ConsultationHub() {
             العربية
           </Link>
           <Link
-            href="/send-medical-reports"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors"
           >
             Send Medical Reports
@@ -152,7 +152,7 @@ export default function ConsultationHub() {
             </div>
           </div>
           <Link
-            href="/send-medical-reports"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             className="inline-block bg-white text-slate-900 text-sm font-medium px-6 py-3 hover:bg-slate-100 transition-colors tracking-wide"
           >
             Start Your Consultation
@@ -208,7 +208,7 @@ export default function ConsultationHub() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="inline-block bg-white text-slate-900 text-sm font-medium px-6 py-3 hover:bg-slate-100 transition-colors tracking-wide"
             >
               Send Medical File

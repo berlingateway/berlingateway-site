@@ -225,7 +225,7 @@ export default function AdvancedRehabilitationGermany() {
             إصابات الحرب والحوادث · الأطراف الصناعية · التأهيل العصبي · الحبل الشوكي · الألم المزمن · فشل الجراحة
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>
               أرسل ملفك الآن للمراجعة
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "13px 32px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
@@ -504,7 +504,7 @@ export default function AdvancedRehabilitationGermany() {
             لا يُتخذ قرار السفر إلا بعد التقييم الأولي وتحديد البرنامج المناسب.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
               أرسل ملفك الآن للمراجعة
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "transparent", color: "#94a3b8", fontSize: 14, textDecoration: "none", border: "1px solid #334155" }}>

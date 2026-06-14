@@ -64,7 +64,7 @@ export default function AdvancedRehabilitationEN() {
           <a href="/" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Home</a>
           <a href="/ar/advanced-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
           <a href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>Deutsch</a>
-          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
         </div>
       </nav>
 
@@ -81,7 +81,7 @@ export default function AdvancedRehabilitationEN() {
             Structured coordination of complex rehabilitation pathways within Germany — for cases requiring specialist evaluation, rehabilitation continuity, or multidisciplinary follow-up.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none", border: `1px solid ${WHITE}` }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none", border: `1px solid ${WHITE}` }}>
               Submit Medical Reports for Evaluation
             </a>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
@@ -103,7 +103,7 @@ export default function AdvancedRehabilitationEN() {
           <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>
             Our coordination team structures medical and rehabilitation pathways for cases arriving from abroad or already within Germany requiring specialist evaluation, treatment continuity, or multidisciplinary follow-up.
           </p>
-          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
             Submit Medical Reports for Initial Evaluation
           </a>
         </div>
@@ -159,7 +159,7 @@ export default function AdvancedRehabilitationEN() {
           <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>
             Some cases may involve additional phases of evaluation and rehabilitation follow-up according to the clinical needs of the case and the evolution of the treatment plan.
           </p>
-          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
             Request Medical Report Review
           </a>
         </div>
@@ -176,7 +176,7 @@ export default function AdvancedRehabilitationEN() {
         <p style={{ fontSize: 15, color: BODY, lineHeight: 1.9, marginBottom: 32 }}>
           Our team coordinates cases requiring medical evaluation, advanced rehabilitation, or treatment follow-up within Germany — for patients arriving from abroad or already within Germany requiring treatment continuity or specialist re-evaluation.
         </p>
-        <a href="/send-medical-reports" style={{ display: "inline-block", padding: "14px 36px", background: NAVY, color: WHITE, fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
+        <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "14px 36px", background: NAVY, color: WHITE, fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
           Submit Medical File for Evaluation
         </a>
       </section>
@@ -223,7 +223,7 @@ export default function AdvancedRehabilitationEN() {
             <div>
               <p style={{ fontSize: 11, letterSpacing: "0.15em", color: MUTED, textTransform: "uppercase", marginBottom: 12 }}>Contact</p>
               <a href="mailto:info@medicalcaregermany.com" style={{ display: "block", fontSize: 12, color: "#64748b", textDecoration: "none", marginBottom: 6 }}>info@medicalcaregermany.com</a>
-              <a href="/send-medical-reports" style={{ display: "block", fontSize: 12, color: "#64748b", textDecoration: "none", marginBottom: 6 }}>Submit Medical Reports</a>
+              <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: 12, color: "#64748b", textDecoration: "none", marginBottom: 6 }}>Submit Medical Reports</a>
               <p style={{ fontSize: 12, color: "#64748b", marginTop: 12 }}>Berlin, Germany</p>
             </div>
           </div>

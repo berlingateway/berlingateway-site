@@ -208,7 +208,7 @@ export default function MedicalConditionPage({
   const navLangLink = navLabels?.langLink ?? (isArabic ? "الإنجليزية" : "العربية");
   const navLangHref = navLabels?.langHref ?? (isArabic ? "/" : "/ar");
   const navCtaButton = navLabels?.ctaButton ?? (isArabic ? null : "Send Medical Reports");
-  const navCtaHref = navLabels?.ctaHref ?? "/send-medical-reports";
+  const navCtaHref = navLabels?.ctaHref ?? "https://tally.so/r/68MrBP";
 
   // ── Hero eyebrow ─────────────────────────────────────────────────────────
   const eyebrow = heroEyebrow !== undefined ? heroEyebrow : (isArabic ? null : "Medical Care Germany · Berlin");
@@ -218,7 +218,7 @@ export default function MedicalConditionPage({
   const resolvedCtaH2 = ctaTitle ?? (isArabic ? null : "Submit Your Medical Reports for Review");
   const resolvedCtaText = ctaText ?? (isArabic ? null : "Medical documentation may be submitted for preliminary review by a clinical coordinator in Berlin. Complex cases are directed to the appropriate specialist or university hospital within the German healthcare system.");
   const resolvedCtaButton = ctaButton ?? (isArabic ? null : "Send Medical Reports");
-  const resolvedCtaHref = ctaHref ?? (isArabic ? "/ar#intake-form" : "/send-medical-reports");
+  const resolvedCtaHref = ctaHref ?? "https://tally.so/r/68MrBP";
 
   // ── Footer strings ───────────────────────────────────────────────────────
   const footerLine1 = footerLabels?.line1 ?? footerLabels?.trustLine ?? (isArabic ? "تنسيق طبي متخصص للحالات المعقدة بين المرضى الدوليين والمستشفيات الألمانية." : "Operating within established clinical coordination frameworks.");

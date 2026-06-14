@@ -69,7 +69,7 @@ export default function PediatricOrthopedicsGermany() {
             تقييم متخصص لحالات العظام والمفاصل عند الأطفال — من التشوهات الخلقية إلى الكسور المعقدة والجراحة التصحيحية.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none", border: "1px solid #fff" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none", border: "1px solid #fff" }}>
               إرسال التقارير الطبية للتقييم
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
@@ -91,7 +91,7 @@ export default function PediatricOrthopedicsGermany() {
           <p style={{ ...AR, fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>
             يعمل فريقنا على تنسيق التقييم مع أطباء عظام الأطفال المتخصصين في ألمانيا، مع مراجعة كاملة للتاريخ الطبي والأشعة.
           </p>
-          <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
             إرسال التقارير الطبية للتقييم
           </a>
         </div>
@@ -156,7 +156,7 @@ export default function PediatricOrthopedicsGermany() {
               </li>
             ))}
           </ul>
-          <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
             إرسال التقارير الطبية للتقييم
           </a>
         </div>

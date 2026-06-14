@@ -36,7 +36,7 @@ export default function CardiologyTreatmentArabic() {
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
@@ -202,7 +202,7 @@ export default function CardiologyTreatmentArabic() {
             ].map((card, i) => (
               <Link
                 key={i}
-                href="/send-medical-reports"
+                href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
                 className="block p-6 border border-slate-200 bg-white hover:border-[#0B1C2C] hover:bg-slate-50 transition-all duration-200"
               >
                 <h3 className="text-base font-medium text-slate-900 mb-2" style={FONT}>
@@ -334,7 +334,7 @@ export default function CardiologyTreatmentArabic() {
           </h2>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <Link
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="inline-block px-10 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >

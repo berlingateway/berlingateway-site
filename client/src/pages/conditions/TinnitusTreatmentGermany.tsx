@@ -305,7 +305,7 @@ export default function TinnitusTreatmentGermany() {
             تنسيق تشخيصي وعلاجي متخصص للطنين المزمن والنابض — يجمع طب الأنف والأذن والحنجرة، السمعيات، طب الأعصاب، والتصوير التشخيصي في مسار واحد منظم.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/ar/submit-case">
+            <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
               <a style={{ ...AR, display: "inline-block", padding: "13px 30px", background: "#fff", color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
                 إرسال الملف الطبي للتقييم
               </a>
@@ -604,7 +604,7 @@ export default function TinnitusTreatmentGermany() {
             Medical Care Germany تنسق مسارات التقييم التشخيصي للطنين المزمن والنابض — تشمل HNO، سمعيات، أعصاب، وتصوير MRI — للمرضى الدوليين القادمين من ليبيا، السودان، والإمارات والسعودية وقطر والكويت.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/ar/submit-case">
+            <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
               <a style={{ ...AR, display: "inline-block", background: "#fff", color: NAVY, padding: "14px 32px", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
                 إرسال الملف الطبي
               </a>

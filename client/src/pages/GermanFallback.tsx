@@ -56,7 +56,7 @@ export default function GermanFallback() {
               Unterlagen einreichen
             </a>
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: SLATE_TEXT, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}
             >
               Kontakt aufnehmen
@@ -159,7 +159,7 @@ export default function GermanFallback() {
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <a href="/" style={{ fontSize: 12, color: SLATE_BODY, textDecoration: "none" }}>English</a>
           <a href="/ar" style={{ fontSize: 12, color: SLATE_BODY, textDecoration: "none" }}>العربية</a>
-          <a href="/send-medical-reports" style={{ fontSize: 12, color: SLATE_BODY, textDecoration: "none" }}>Submit Case</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: SLATE_BODY, textDecoration: "none" }}>Submit Case</a>
         </div>
       </footer>
     </div>

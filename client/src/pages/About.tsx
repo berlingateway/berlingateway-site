@@ -490,7 +490,7 @@ export default function About() {
             }}
           >
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-block",
                 background: "#f8fafc",

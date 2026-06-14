@@ -170,7 +170,7 @@ export default function SpineSurgeryGermany() {
             نراجع ملفك وصور الرنين مع متخصصين في المستشفيات الجامعية الألمانية.
           </p>
           <div style={{ marginTop: 36, display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/ar/submit-case" style={{ background: "#fff", color: "#0B1C2C", padding: "14px 32px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ background: "#fff", color: "#0B1C2C", padding: "14px 32px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
               أرسل ملفك الآن للمراجعة
             </a>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff", padding: "14px 32px", fontWeight: 500, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
@@ -321,7 +321,7 @@ export default function SpineSurgeryGermany() {
             أرسل ملفك وصور الرنين وسيتواصل معك منسق متخصص خلال 24 ساعة.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/ar/submit-case" style={{ background: "#fff", color: "#0B1C2C", padding: "16px 36px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ background: "#fff", color: "#0B1C2C", padding: "16px 36px", fontWeight: 700, fontSize: 15, display: "inline-block", textDecoration: "none" }}>
               أرسل ملفك الآن — مراجعة خلال 24 ساعة
             </a>
           </div>

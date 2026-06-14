@@ -63,7 +63,7 @@ export default function OrthopaedeDE() {
               Strukturierte Koordination für komplexe orthopädische Fälle — von Traumafolgen und Revisionsoperationen bis zu Prothetik und pädiatrischen Knochenerkrankungen.
             </p>
             <a
-              href="/submit-case"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-block",
                 background: GOLD,
@@ -163,7 +163,7 @@ export default function OrthopaedeDE() {
               Alle Einreichungen werden mit klinischer Diskretion geprüft. Die Erstbewertung basiert auf der Dokumentationsqualität und der Fallkomplexität.
             </p>
             <a
-              href="/submit-case"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-block",
                 background: NAVY,

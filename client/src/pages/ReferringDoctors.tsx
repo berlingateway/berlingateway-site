@@ -135,7 +135,7 @@ export default function ReferringDoctors() {
             Medical Care Germany
           </span>
         </Link>
-        <Link href="/send-medical-reports">
+        <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
           <Button variant="outline" className="rounded-none border-slate-300 text-slate-700 hover:bg-slate-50 text-sm">
             Patient Submissions
           </Button>

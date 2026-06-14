@@ -24,7 +24,7 @@ export default function InternationalPatients() {
             Medical Care Germany
           </span>
         </Link>
-        <Link href="/send-medical-reports">
+        <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
           <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none text-sm px-5 py-2">
             Send Medical Reports
           </Button>
@@ -43,7 +43,7 @@ export default function InternationalPatients() {
             Medical coordination in Berlin can help identify the appropriate specialist and hospital.
           </p>
           <div className="pt-4">
-            <Link href="/send-medical-reports">
+            <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
               <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none px-8 py-5 text-base font-light tracking-wide inline-flex items-center gap-2">
                 Send Medical Reports
                 <ArrowRight size={16} />
@@ -176,7 +176,7 @@ export default function InternationalPatients() {
             Medical reports may be submitted through the secure submission interface.
             Cases are reviewed within 24–48 hours by a medical coordinator in Berlin.
           </p>
-          <Link href="/send-medical-reports">
+          <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
             <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-none px-10 py-5 text-base font-light tracking-wide inline-flex items-center gap-2 mt-2">
               Send Medical Reports
               <ArrowRight size={16} />

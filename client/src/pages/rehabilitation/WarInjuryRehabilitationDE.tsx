@@ -36,7 +36,7 @@ export default function WarInjuryRehabilitationDE() {
           <a href="/de/rehabilitation-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
           <a href="/ar/war-injury-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
           <a href="/en/war-injury-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>English</a>
-          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Medizinische Unterlagen senden</a>
         </div>
       </nav>
 
@@ -46,7 +46,7 @@ export default function WarInjuryRehabilitationDE() {
           <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Rehabilitation von Kriegsverletzungen in Deutschland</h1>
           <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Strukturierte Koordination von Rehabilitationspfaden für komplexe Kriegsverletzungen und Kampftrauma.</p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Medizinische Unterlagen senden</a>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Medizinische Unterlagen senden</a>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Erstbewertung anfordern</a>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function WarInjuryRehabilitationDE() {
           <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Komplexe Kriegsverletzungen erfordern strukturierte Rehabilitationskoordination</h2>
           <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>Kriegsverletzungen weisen ein besonderes klinisches Profil auf: Polytrauma, Explosionsverletzungen, Amputationen, Rückenmarksverletzungen und Schädel-Hirn-Traumata treten häufig kombiniert auf und erfordern eine koordinierte multidisziplinäre Rehabilitation.</p>
           <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany koordiniert die Dokumentationsvorbereitung, Zentrumsidentifikation und den Aufnahmeprozess für Kriegsverletzungs-Rehabilitationsfälle.</p>
-          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Erstbewertung einreichen</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Erstbewertung einreichen</a>
         </div>
       </section>
 
@@ -129,7 +129,7 @@ export default function WarInjuryRehabilitationDE() {
               <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
               <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Überweisungsschreiben</p>
             </div>
-          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Bewertung einreichen</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Unterlagen für Bewertung einreichen</a>
         </div>
       </section>
 

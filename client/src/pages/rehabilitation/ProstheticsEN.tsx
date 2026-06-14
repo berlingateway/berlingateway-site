@@ -37,7 +37,7 @@ export default function ProstheticsEN() {
           <a href="/en/advanced-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
           <a href="/ar/prosthetics-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
           <a href="/de/prothetik-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>Deutsch</a>
-          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
         </div>
       </nav>
 
@@ -47,7 +47,7 @@ export default function ProstheticsEN() {
           <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Prosthetics in Germany</h1>
           <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Structured coordination of prosthetic fitting, functional rehabilitation, and mobility restoration at German specialist centres.</p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Request Initial Assessment</a>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ProstheticsEN() {
           <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Prosthetic rehabilitation requires clinical precision and functional training</h2>
           <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>Successful prosthetic rehabilitation extends beyond fitting to encompass functional training, gait rehabilitation, occupational therapy, and psychological adjustment. German prosthetic rehabilitation centres provide integrated programmes combining prosthetic technology with structured functional rehabilitation.</p>
           <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany coordinates access to specialist prosthetic rehabilitation programmes for international patients and government-sponsored cases requiring structured pathway management.</p>
-          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Initial Evaluation</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Initial Evaluation</a>
         </div>
       </section>
 
@@ -130,7 +130,7 @@ export default function ProstheticsEN() {
               <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
               <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Referring physician or rehabilitation team summary</p>
             </div>
-          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
         </div>
       </section>
 

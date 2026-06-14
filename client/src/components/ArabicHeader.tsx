@@ -42,7 +42,7 @@ export default function ArabicHeader() {
         {/* Actions */}
         <div className="flex items-center gap-3">
           <a
-            href="/send-medical-reports"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             className="hidden sm:inline-block px-3 py-1.5 bg-white text-[#0B1C2C] text-xs font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >

@@ -379,7 +379,7 @@ export default function DizzinessLongTerm() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
             >
               إرسال التقارير الطبية
@@ -728,13 +728,13 @@ export default function DizzinessLongTerm() {
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
               <Link
-                href="/ar/ارسال-التقارير-الطبية"
+                href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
                 style={{ padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
               >
                 إرسال التقارير الطبية للتقييم
               </Link>
               <Link
-                href="/ar/submit-case"
+                href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
                 style={{ padding: "14px 36px", border: "1px solid rgba(255,255,255,0.2)", color: "#94a3b8", fontSize: 13, textDecoration: "none", display: "inline-block" }}
               >
                 تقديم الحالة الطبية
@@ -766,7 +766,7 @@ export default function DizzinessLongTerm() {
           <p style={{ fontSize: 12, color: "#475569", marginBottom: 48 }}>مريض من ليبيا، 47 عامًا</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}>
               أرسل ملفك الطبي
             </Link>

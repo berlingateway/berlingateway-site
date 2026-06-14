@@ -212,7 +212,7 @@ export default function Home() {
         {/* Send Medical Reports CTA + Language Switch */}
         <div className="flex items-center gap-4">
           <Link
-            href="/send-medical-reports"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             className="hidden md:inline-block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
           >
             Send Medical Reports
@@ -291,7 +291,7 @@ export default function Home() {
           </div>
         )}
         <Link
-          href="/send-medical-reports"
+          href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
           onClick={() => setMobileMenuOpen(false)}
           className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors"
         >
@@ -901,7 +901,7 @@ export default function Home() {
           {/* CTA button */}
           <div className="mt-10 text-center">
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="inline-block px-8 py-3.5 bg-slate-900 text-white text-sm tracking-wide hover:bg-slate-700 transition-colors"
             >
               Submit Your Medical File for Clinical Review
@@ -1080,7 +1080,7 @@ export default function Home() {
             <Link href="/medical-visa-germany" className="hover:text-slate-300 transition-colors">Medical Visa Germany</Link>
             <Link href="/treatment-in-germany-arab-patients" className="hover:text-slate-300 transition-colors">Treatment in Germany</Link>
             <Link href="/second-opinion-germany" className="hover:text-slate-300 transition-colors">Second Opinion</Link>
-            <Link href="/send-medical-reports" className="hover:text-slate-300 transition-colors">Send Medical Reports</Link>
+            <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">Send Medical Reports</Link>
           </div>
           <p className="text-sm text-slate-400">Medical Care Germany © 2026</p>
         </div>

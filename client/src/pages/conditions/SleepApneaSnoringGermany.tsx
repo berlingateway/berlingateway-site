@@ -64,7 +64,7 @@ export default function SleepApneaSnoringGermany() {
             تقييم وتنسيق الحالات الشديدة من انقطاع النفس أثناء النوم والشخير المزمن في ألمانيا — من دراسة النوم إلى التدخل الجراحي أو العلاج التحفظي المتخصص.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "#fff", color: "#0B1C2C", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
               إرسال التقارير الطبية للتقييم
             </a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "12px 28px", background: "transparent", color: "#94a3b8", fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>
@@ -122,7 +122,7 @@ export default function SleepApneaSnoringGermany() {
           <p style={{ ...AR, fontSize: 14, color: "#94a3b8", lineHeight: 1.85, marginBottom: 32 }}>
             أرسل نتائج دراسة النوم والتقارير الطبية الحالية للتقييم الأولي وتحديد إمكانية التنسيق في ألمانيا.
           </p>
-          <a href="/send-medical-reports" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ ...AR, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}>
             إرسال التقارير الطبية للتقييم
           </a>
         </div>

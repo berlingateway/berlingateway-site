@@ -147,7 +147,7 @@ export default function ColonCancerArabic() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
             >
               أرسل ملفك — رد خلال 24 ساعة
@@ -287,7 +287,7 @@ export default function ColonCancerArabic() {
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{ padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none", display: "inline-block" }}
             >
               أرسل ملفك الطبي

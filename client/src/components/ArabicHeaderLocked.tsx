@@ -198,7 +198,7 @@ export default function ArabicHeaderLocked() {
 
             {/* Desktop: CTA button */}
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="hidden md:block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
             >
               إرسال التقارير الطبية

@@ -253,7 +253,7 @@ export default function MedicalVisaGermany() {
           {/* Internal Link 2 — after خطوات البدء */}
           <p className="text-sm text-slate-700 leading-relaxed mt-8 pt-6 border-t border-slate-100" style={FONT}>
             بعد تأكيد خطة العلاج، يمكنك{" "}
-            <Link href="/ar/ارسال-التقارير-الطبية" className="text-[#0B1C2C] underline underline-offset-2 hover:opacity-70" style={FONT}>
+            <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" className="text-[#0B1C2C] underline underline-offset-2 hover:opacity-70" style={FONT}>
               إرسال ملفك الطبي
             </Link>{" "}
             للمراجعة وتحديد الخطوة التالية.

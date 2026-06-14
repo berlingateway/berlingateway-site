@@ -63,7 +63,7 @@ export default function OrthopedicsEN() {
               Structured coordination for complex orthopedic cases — from trauma sequelae and revision surgery to prosthetics and pediatric bone conditions.
             </p>
             <a
-              href="/submit-case"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-block",
                 background: GOLD,
@@ -163,7 +163,7 @@ export default function OrthopedicsEN() {
               All submissions are reviewed with clinical discretion. Initial assessment is based on documentation quality and case complexity.
             </p>
             <a
-              href="/submit-case"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-block",
                 background: NAVY,

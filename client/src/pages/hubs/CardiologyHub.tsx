@@ -26,7 +26,7 @@ export default function CardiologyHub() {
         <div className="flex items-center gap-4">
           <Link href="/" className="text-sm text-slate-500 hover:text-slate-900 transition-colors">Home</Link>
           <Link href="/ar" className="text-sm text-slate-500 hover:text-slate-900 transition-colors">العربية</Link>
-          <Link href="/send-medical-reports" className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors">Send Medical Reports</Link>
+          <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" className="bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors">Send Medical Reports</Link>
         </div>
       </nav>
 
@@ -59,7 +59,7 @@ export default function CardiologyHub() {
 
         <div className="border-t border-slate-100 pt-10 text-center">
           <p className="text-slate-500 text-sm mb-6">Medical reports may be submitted for specialist review. A Berlin-based coordinator will assess the case and identify the appropriate cardiac specialist.</p>
-          <Link href="/send-medical-reports" className="inline-block bg-slate-900 text-white text-sm font-medium px-8 py-4 hover:bg-slate-700 transition-colors tracking-wide">Send Medical Reports</Link>
+          <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" className="inline-block bg-slate-900 text-white text-sm font-medium px-8 py-4 hover:bg-slate-700 transition-colors tracking-wide">Send Medical Reports</Link>
         </div>
       </section>
 

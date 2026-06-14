@@ -355,7 +355,7 @@ export default function OrthopedicsGermany() {
             للمرضى الدوليين القادمين من ليبيا، السودان، العراق، ودول الخليج — تنسيق طبي متخصص من برلين.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={S.ctaWhite}>إرسال التقارير الطبية للتقييم</a>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={S.ctaWhite}>إرسال التقارير الطبية للتقييم</a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={S.ctaGhost}>طلب تقييم أولي</a>
           </div>
         </div>
@@ -548,7 +548,7 @@ export default function OrthopedicsGermany() {
             السرية التامة في التعامل مع الملفات الطبية مبدأ أساسي في عملنا.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={S.ctaWhite}>إرسال التقارير الطبية</a>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={S.ctaWhite}>إرسال التقارير الطبية</a>
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={S.ctaGhost}>تواصل عبر واتسآب</a>
           </div>
         </div>

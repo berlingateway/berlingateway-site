@@ -37,7 +37,7 @@ export default function LongTermRehabilitationEN() {
           <a href="/en/advanced-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>← Rehabilitation Hub</a>
           <a href="/ar/long-term-rehabilitation-germany" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>العربية</a>
           <a href="/de/langzeit-rehabilitation-deutschland" style={{ fontSize: 13, color: BODY, textDecoration: "none" }}>Deutsch</a>
-          <a href="/send-medical-reports" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, fontWeight: 500, color: "#fff", background: NAVY, padding: "8px 18px", textDecoration: "none" }}>Send Medical Reports</a>
         </div>
       </nav>
 
@@ -47,7 +47,7 @@ export default function LongTermRehabilitationEN() {
           <h1 style={{ fontSize: "clamp(26px, 4vw, 42px)", fontWeight: 500, color: WHITE, lineHeight: 1.4, marginBottom: 20 }}>Long-Term Rehabilitation in Germany</h1>
           <p style={{ fontSize: 16, color: MUTED, lineHeight: 1.85, maxWidth: 640, margin: "0 auto 36px" }}>Structured coordination of sustained rehabilitation pathways for complex cases requiring long-term multidisciplinary care.</p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
             <a href="https://wa.me/4915781497451" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: "transparent", color: MUTED, fontSize: 13, textDecoration: "none", border: "1px solid #334155" }}>Request Initial Assessment</a>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function LongTermRehabilitationEN() {
           <h2 style={{ fontSize: "clamp(18px, 2.5vw, 26px)", fontWeight: 500, color: WHITE, marginBottom: 20, lineHeight: 1.55 }}>Some rehabilitation cases require sustained long-term coordination</h2>
           <p style={{ fontSize: 15, color: MUTED, lineHeight: 1.9, marginBottom: 20 }}>Complex neurological, spinal, and trauma cases may require sustained rehabilitation over months or years, with multiple programme phases, specialist reviews, and adaptive treatment planning. Germany's rehabilitation system provides structured frameworks for long-term rehabilitation management within specialist centres.</p>
           <p style={{ fontSize: 15, color: "#64748b", lineHeight: 1.9, marginBottom: 32 }}>Medical Care Germany coordinates long-term rehabilitation pathways for cases requiring sustained management, including programme transitions, specialist reviews, and ongoing clinical liaison between the patient, rehabilitation team, and referring physician.</p>
-          <a href="/send-medical-reports" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Initial Evaluation</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Initial Evaluation</a>
         </div>
       </section>
 
@@ -130,7 +130,7 @@ export default function LongTermRehabilitationEN() {
               <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#059669", marginTop: 6, flexShrink: 0 }} />
               <p style={{ fontSize: 14, color: MUTED, lineHeight: 1.7, margin: 0 }}>Referring physician or rehabilitation team summary</p>
             </div>
-          <a href="/send-medical-reports" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
+          <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 24, padding: "12px 28px", background: WHITE, color: NAVY, fontSize: 13, fontWeight: 500, textDecoration: "none" }}>Submit Medical Reports for Evaluation</a>
         </div>
       </section>
 

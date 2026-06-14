@@ -78,7 +78,7 @@ export default function HerniatedDiscEN() {
           <p className="text-base text-slate-700">
             Submit your medical reports for clinical evaluation.
           </p>
-          <Link href="/send-medical-reports">
+          <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
             <button className="w-full bg-[#0B1F3A] text-white text-base font-medium py-3 px-6 rounded-lg hover:bg-[#0d2548] transition-colors">
               Submit Medical File
             </button>

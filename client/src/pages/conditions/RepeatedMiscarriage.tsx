@@ -163,7 +163,7 @@ export default function RepeatedMiscarriage() {
               إرسال التقارير الطبية للتقييم الأولي
             </a>
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="inline-block px-6 py-3 border border-slate-300 text-slate-700 text-sm hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
               style={FONT}
             >
@@ -255,7 +255,7 @@ export default function RepeatedMiscarriage() {
               إرسال التقارير الطبية للتقييم الأولي
             </a>
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 border border-white text-white text-sm font-light hover:bg-white hover:text-[#0B1C2C] transition-colors"
               style={FONT}
             >

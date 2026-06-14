@@ -651,7 +651,7 @@ export default function ArabicHome() {
                 </div>
                 {/* Footer strip — institutional */}
                 <div style={{ borderTop: '1px solid #e5e7eb', padding: '8px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#f7f8fa' }}>
-                  <Link href="/ar/ارسال-التقارير-الطبية" onClick={() => setConditionsOpen(false)}
+                  <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" onClick={() => setConditionsOpen(false)}
                     style={{ ...AR_FONT, fontSize: '10px', color: '#6b7280', letterSpacing: '0.02em' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0B1C2C'; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b7280'; }}
@@ -672,7 +672,7 @@ export default function ArabicHome() {
         {/* Send Medical Reports CTA + Language Switch */}
         <div className="flex items-center gap-3">
           <a
-            href="/ar/ارسال-التقارير-الطبية"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             className="hidden md:inline-block bg-slate-900 text-white text-xs font-medium px-4 py-2 hover:bg-slate-700 transition-colors tracking-wide"
             style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
           >
@@ -884,12 +884,12 @@ export default function ArabicHome() {
                 </div>
               )}
               {/* Direct links */}
-              <Link href="/ar/ارسال-التقارير-الطبية" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-500 py-2.5 border-b border-slate-100 px-2 hover:text-slate-900">إرسال التقارير الطبية</Link>
+              <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-500 py-2.5 border-b border-slate-100 px-2 hover:text-slate-900">إرسال التقارير الطبية</Link>
               <Link href="/ar/medical-visa-residency-germany" onClick={() => setMobileMenuOpen(false)} className="text-xs text-slate-500 py-2.5 px-2 hover:text-slate-900">فيزا العلاج والإقامة الطبية</Link>
             </div>
           )}
           <a
-            href="/ar/ارسال-التقارير-الطبية"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="bg-slate-900 text-white text-sm font-medium px-4 py-3 text-center hover:bg-slate-700 transition-colors w-full mt-4 mb-24"
             style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
@@ -995,7 +995,7 @@ export default function ArabicHome() {
               علاج الأورام
             </Link>
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="block w-full py-5 px-4 text-sm font-medium text-center border border-[#0B1C2C] bg-[#0B1C2C] text-white hover:bg-[#1E3A5A] transition-all duration-200"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >
@@ -1030,7 +1030,7 @@ export default function ArabicHome() {
               جراحة المخ والأعصاب والعمود الفقري
             </Link>
             <Link
-              href="/ar/ارسال-التقارير-الطبية"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
             >

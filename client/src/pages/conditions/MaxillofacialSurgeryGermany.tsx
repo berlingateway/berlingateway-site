@@ -255,7 +255,7 @@ export default function MaxillofacialSurgeryGermany() {
             أكثر من 500 حالة منسّقة منذ 2012
           </p>
           <a
-            href="/send-medical-reports"
+            href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
             style={{
               ...AR,
               display: "inline-block",
@@ -328,7 +328,7 @@ export default function MaxillofacialSurgeryGermany() {
             }}
           >
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 ...AR,
                 display: "inline-block",
@@ -910,7 +910,7 @@ export default function MaxillofacialSurgeryGermany() {
             }}
           >
             <a
-              href="/send-medical-reports"
+              href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"
               style={{
                 ...AR,
                 display: "inline-block",

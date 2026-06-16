@@ -40,7 +40,7 @@
     <loc>https://berlingateway.de/ar/chancenkarte</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/chancenkarte</loc>
@@ -136,7 +136,7 @@
     <loc>https://berlingateway.de/ar/aerzte</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/de/aerzte</loc>
@@ -163,34 +163,10 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/framework</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/orientierung</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://berlingateway.de/ar/pflege</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/struktur-vor-bewerbung</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/thankyou</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/top-10-mistakes</loc>
@@ -367,18 +343,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/bg-master-template-v1</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/framework</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://berlingateway.de/de/ingenieure</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -386,12 +350,6 @@
   </url>
   <url>
     <loc>https://berlingateway.de/de/lebenshaltungskosten-deutschland</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/orientierung</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -421,19 +379,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/struktur-vor-bewerbung</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://berlingateway.de/de/studieren-in-deutschland</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/thankyou</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -493,51 +439,33 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/insights/kandidaten-fehler</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://berlingateway.de/ar/insights/راتب-ممرض-ألمانيا</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/insights/system-erklaerung</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://berlingateway.de/en/jobs-in-germany</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/landing/arbeiten-deutschland-ohne-deutsch</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://berlingateway.de/en/study-in-germany</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/landing/chancenkarte-punkte-rechner</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://berlingateway.de/en/chancenkarte</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/landing/chancenkarte-voraussetzungen</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/landing/fachkrafte-deutschland-2026</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/landing/gehalt-deutschland-berufe</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/tools/evaluation</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://berlingateway.de/ar/ingenieure</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

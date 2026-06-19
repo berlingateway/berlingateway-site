@@ -110,7 +110,7 @@ export default function MedicalVisaGermany() {
       <title>فيزا علاجية ألمانيا | تأشيرة العلاج والإقامة الطبية</title>
       <meta
         name="description"
-        content="دليل الفيزا العلاجية في ألمانيا: الدعوة الطبية، فيزا المرافق، تمديد الإقامة أثناء العلاج، والتنسيق الطبي للحالات المعقدة في برلين."
+        content="كيف تحصل على فيزا علاجية لألمانيا؟ نساعدك في استكمال ملف التأشيرة وتنسيق المواعيد مع المستشفيات الجامعية."
       />
       <link rel="canonical" href={CANONICAL} />
       <meta name="robots" content="index, follow" />
@@ -126,7 +126,7 @@ export default function MedicalVisaGermany() {
             Medical Care Germany
           </p>
           <h1 className="text-3xl md:text-5xl font-light leading-tight mb-6" style={FONT}>
-            فيزا العلاج في ألمانيا
+            فيزا علاجية ألمانيا — من الطلب حتى الوصول
           </h1>
           <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10" style={FONT}>
             تأشيرة العلاج تتطلب دعوة رسمية من المستشفى — وهذا يبدأ بتقييم الملف الطبي.

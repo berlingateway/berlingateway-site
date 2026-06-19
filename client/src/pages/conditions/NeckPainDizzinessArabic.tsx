@@ -13,7 +13,7 @@ const whatsappHref =
 
 export default function NeckPainDizzinessArabic() {
   useEffect(() => {
-    document.title = "ألم الرقبة مع دوخة | تقييم عصبي ووعائي في ألمانيا";
+    document.title = "كيف اعرف أن الدوخة بسبب الرقبة؟ | تقييم عصبي وعلاج في ألمانيا";
 
     // Meta description
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -23,7 +23,7 @@ export default function NeckPainDizzinessArabic() {
       document.head.appendChild(metaDesc);
     }
     (metaDesc as HTMLMetaElement).content =
-      "ألم الرقبة المصحوب بدوخة قد يكون عصبياً أو وعائياً أو عضلياً. تعرّف على الفرق، ومتى يصبح خطيراً، وكيف يتم التقييم الدقيق في ألمانيا.";
+      "أعراض الدوخة من الرقبة تشمل عدم الاتزان والدوار عند تحريك الرأس. تعرف على التشخيص والعلاج في مستشفيات ألمانيا الجامعية.";
 
     // Canonical
     let canonicalEl = document.querySelector('link[rel="canonical"]');
@@ -184,8 +184,8 @@ export default function NeckPainDizzinessArabic() {
             تقييم عصبي ووعائي متخصص · برلين · ألمانيا
           </p>
           <h1 className="text-3xl md:text-5xl font-light leading-tight mb-6" style={FONT}>
-            ألم الرقبة مع دوخة —{" "}
-            <span className="font-medium">عصبي أم وعائي؟</span>
+            هل الدوخة بسبب الرقبة؟{" "}
+            <span className="font-medium">أعراض وعلاج في ألمانيا</span>
           </h1>
           <p className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed" style={FONT}>
             ألم تعرفه جيداً — لكن لم يُفسَّر بشكل صحيح.

@@ -80,8 +80,18 @@
     .closing-btn{display:inline-block;background:#0B1F3A;color:#fff;font-size:15px;font-weight:600;padding:15px 32px;border-radius:7px;text-decoration:none}
     .closing-note{font-size:13px;color:#9CA3AF;margin-top:14px}
 
-    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
-    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 10px}
+    .footer-nav{background:#0D1117;padding:48px 24px 28px}
+    .footer-nav__inner{max-width:1080px;margin:0 auto}
+    .footer-nav__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .footer-nav__col h6{color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+    .footer-nav__col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13.5px;margin-bottom:10px}
+    .footer-nav__col a:hover{color:#93C5FD}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{color:rgba(255,255,255,0.4);font-size:12.5px}
+    .footer-bottom .legal a{color:rgba(255,255,255,0.4);text-decoration:none;margin-right:16px;font-size:12.5px}
+    @media(max-width:640px){
+      .footer-nav__grid{grid-template-columns:repeat(2,1fr);gap:24px}
+    }
 
     /* Internal link grid — keeps the reader inside the site */
     .link-grid-section{padding-top:8px}
@@ -151,7 +161,7 @@
       أنت غالباً تعرف <strong>TVöD</strong>، وتعرف أن الفرق بين الولايات
       حقيقي، وتعرف أن الاعتراف بالشهادة (<strong>Anerkennung</strong>) نقطة
       مفصلية. هذه الصفحة ليست شرحاً لما تعرفه. هي ما تعلمناه من الفجوة بين
-      هذه المعرفة العامة وتطبيقها على ملف شخصي واحد — ملفك.
+      هذه المعرفة العامة وتطبيقها auf ملف شخصي واحد — ملفك.
     </p>
   </div>
 </section>
@@ -295,14 +305,45 @@
   </div>
 </section>
 
-<footer class="footer">
-  <p>Berlin Gateway — من داخل النظام الألماني</p>
-  <p style="margin-top:8px;">
-    <a href="/ar/impressum">بصمة الموقع</a>
-    <a href="/ar/datenschutz">خصوصية البيانات</a>
-    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
-  </p>
-  <p style="margin-top:8px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
+<footer class="footer-nav">
+  <div class="footer-nav__inner">
+    <div class="footer-nav__grid">
+      <div class="footer-nav__col">
+        <h6>الرئيسية</h6>
+        <a href="/ar">الصفحة الرئيسية</a>
+        <a href="/ar/insights">المقالات والتحليلات</a>
+        <a href="/ar/assessment">ابدأ التقييم</a>
+        <a href="/ar/systemlogik">منطق النظام</a>
+      </div>
+      <div class="footer-nav__col">
+        <h6>التأشيرة والإقامة</h6>
+        <a href="/ar/chancenkarte">بطاقة الفرص</a>
+        <a href="/ar/تأشيرة-ألمانيا">أنواع التأشيرات</a>
+        <a href="/ar/voraussetzungen">المتطلبات والوثائق</a>
+        <a href="/ar/monitor">مراقب السوق</a>
+      </div>
+      <div class="footer-nav__col">
+        <h6>العمل في ألمانيا</h6>
+        <a href="/ar/pflege">التمريض</a>
+        <a href="/ar/aerzte">الأطباء</a>
+        <a href="/ar/ingenieure">المهندسون</a>
+        <a href="/ar/insights/التكوين-المهني-المانيا">التكوين المهني</a>
+      </div>
+      <div class="footer-nav__col">
+        <h6>الراتب والمعيشة</h6>
+        <a href="/ar/insights/راتب-ممرض-ألمانيا">راتب الممرض</a>
+        <a href="/ar/insights/gehaelter-deutschland">دليل الرواتب الشامل</a>
+        <a href="/ar/insights/gefragte-berufe">المهن الأكثر طلباً</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><b style="color:rgba(255,255,255,0.6)">Berlin Gateway</b> — فريق مقيم في ألمانيا منذ 2012</p>
+      <div class="legal">
+        <a href="/ar/impressum">الإشعار القانوني</a>
+        <a href="/ar/datenschutz">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </body>

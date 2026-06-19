@@ -88,6 +88,9 @@ export interface GeoPageProps {
   /** Final CTA */
   ctaTitle?: string;
   ctaNote?: string;
+
+  /** Current page path — used to exclude this country from the geo-links section */
+  currentCountryPath?: string;
 }
 
 export function GeoPage({
@@ -110,7 +113,21 @@ export function GeoPage({
   internalLinks,
   ctaTitle = "أرسل ملفك الطبي الآن",
   ctaNote = "سنرد خلال 24 ساعة.",
+  currentCountryPath,
 }: GeoPageProps) {
+
+  const ALL_GEO_COUNTRIES: GeoInternalLink[] = [
+    { href: "/ar/treatment-germany-saudi", label: "العلاج في ألمانيا للمقيمين في السعودية" },
+    { href: "/ar/treatment-germany-uae", label: "العلاج في ألمانيا للمقيمين في الإمارات" },
+    { href: "/ar/treatment-germany-yemen/", label: "العلاج في ألمانيا للمرضى اليمنيين" },
+    { href: "/ar/treatment-germany-libya/", label: "العلاج في ألمانيا للمرضى الليبيين" },
+    { href: "/ar/treatment-germany-iraq/", label: "العلاج في ألمانيا للمرضى العراقيين" },
+  ];
+
+  const otherCountries = currentCountryPath
+    ? ALL_GEO_COUNTRIES.filter((c) => !c.href.startsWith(currentCountryPath.replace(/\/$/, "")))
+    : ALL_GEO_COUNTRIES;
+
   React.useEffect(() => {
     document.title = metaTitle;
 
@@ -338,6 +355,32 @@ export function GeoPage({
         </div>
       </section>
 
+      {/* 5b. REHABILITATION CARD */}
+      <section style={{ padding: "40px 24px", background: C.bgSection, borderBottom: `1px solid ${C.border}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div
+            className="geo-card"
+            style={{ background: C.bg, border: `1px solid ${C.border}`, padding: "24px 28px", display: "flex", gap: 20, alignItems: "flex-start", transition: "border-color 0.2s" }}
+          >
+            <span style={{ fontSize: 28, lineHeight: 1, flexShrink: 0 }}>♿</span>
+            <div>
+              <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 8, ...FONT }}>
+                إعادة التأهيل
+              </p>
+              <p style={{ fontSize: 13, color: C.textMid, lineHeight: 1.7, marginBottom: 12, ...FONT }}>
+                تأهيل ما بعد العمليات، إصابات الحوادث، التأهيل العصبي والحركي — في مراكز متخصصة ببرلين.
+              </p>
+              <a
+                href="/ar/advanced-rehabilitation-germany"
+                style={{ fontSize: 12, color: C.gold, textDecoration: "underline", textUnderlineOffset: 3, ...FONT }}
+              >
+                تعرف على برامج إعادة التأهيل ←
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. INTERNAL LINKS */}
       <section style={{ padding: "40px 24px", background: C.bg, borderBottom: `1px solid ${C.border}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -358,6 +401,29 @@ export function GeoPage({
           </div>
         </div>
       </section>
+
+      {/* 6b. OTHER COUNTRIES */}
+      {otherCountries.length > 0 && (
+        <section style={{ padding: "40px 24px", background: C.bgSoft, borderBottom: `1px solid ${C.border}` }}>
+          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+            <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 16, ...FONT }}>
+              العلاج في ألمانيا من دول أخرى
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+              {otherCountries.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href}
+                  className="geo-link"
+                  style={{ padding: "8px 16px", border: `1px solid ${C.border}`, fontSize: 12, color: C.textMid, textDecoration: "none", transition: "border-color 0.2s, color 0.2s", ...FONT }}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 7. FINAL CTA */}
       <section style={{ padding: "72px 24px", background: C.navy, textAlign: "center" }}>

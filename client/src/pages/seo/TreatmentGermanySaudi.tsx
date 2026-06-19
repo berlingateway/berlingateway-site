@@ -100,6 +100,7 @@ export default function TreatmentGermanySaudi() {
         ]}
         ctaTitle="أرسل ملفك الطبي الآن"
         ctaNote="سنرد خلال 24 ساعة."
+        currentCountryPath="/ar/treatment-germany-saudi"
       />
     </>
   );

@@ -1,13 +1,30 @@
 /**
  * _GeoPageTemplate.tsx
  * Template موحد لصفحات geo-intent (السعودية، الإمارات، الكويت، إلخ)
- * يستخدم نفس بنية _SymptomPageTemplate مع إضافات: Breadcrumb، مدن، خطوات مرقمة، FAQ
+ * الألوان تطابق صفحة ليبيا الثابتة
  */
 import React from "react";
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
+
+// ألوان موحدة مطابقة لصفحة ليبيا الثابتة
+const C = {
+  navy:       "#0f1f35",
+  navyMid:    "#162840",
+  gold:       "#b8902a",
+  goldDark:   "#8a6a1a",
+  bg:         "#ffffff",
+  bgSoft:     "#f8f7f4",
+  bgSection:  "#f3f1ec",
+  text:       "#1a1a2e",
+  textMid:    "#3a3a4a",
+  textMuted:  "#6b7280",
+  border:     "#e5e0d5",
+  green:      "#25D366",
+};
+
 const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
@@ -46,12 +63,12 @@ export interface GeoPageProps {
   /** Hero */
   heroTitle: string;
   heroSubtitle: string;
-  heroTag?: string; // e.g. "Medical Care Germany · منذ 2012"
+  heroTag?: string;
 
   /** Why us — 3 cards */
   whyCards: Array<{ title: string; body: string }>;
 
-  /** Steps — "من حيث أنت إلى برلين" */
+  /** Steps */
   stepsTitle?: string;
   steps: GeoStep[];
 
@@ -131,37 +148,49 @@ export function GeoPage({
   }, [metaTitle, metaDescription, canonicalUrl]);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
+    <div style={{ minHeight: "100vh", background: C.bg, color: C.text, direction: "rtl" }} lang="ar">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');
+        .geo-hero-glow {
+          background: radial-gradient(ellipse at 60% 40%, rgba(184,144,42,0.12) 0%, transparent 65%);
+        }
+        .geo-btn-primary:hover { background: #e8e0d0; }
+        .geo-btn-outline:hover { background: rgba(255,255,255,0.08); }
+        .geo-card:hover { border-color: ${C.gold}; }
+        .geo-link:hover { border-color: ${C.gold}; color: ${C.gold}; }
+        .geo-city:hover { border-color: ${C.gold}; }
+        .geo-step-num { background: ${C.gold}; }
+      `}</style>
 
       {/* 1. HERO */}
-      <section className="py-16 px-6 bg-[#0B1C2C] text-white">
-        <div className="max-w-4xl mx-auto">
+      <section style={{ background: C.navyMid, padding: "60px 24px 56px", position: "relative", overflow: "hidden" }}>
+        <div className="geo-hero-glow" style={{ position: "absolute", inset: 0, pointerEvents: "none" }} />
+        <div style={{ maxWidth: 900, margin: "0 auto", position: "relative" }}>
           {/* Breadcrumb */}
           {breadcrumb && breadcrumb.length > 0 && (
-            <nav className="mb-6 flex flex-wrap gap-1 items-center text-xs text-slate-400" style={FONT}>
+            <nav style={{ marginBottom: 20, display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" }}>
               {breadcrumb.map((crumb, i) => (
                 <React.Fragment key={i}>
-                  {i > 0 && <span className="mx-1 text-slate-600">›</span>}
+                  {i > 0 && <span style={{ color: "#4a6080", margin: "0 4px", fontSize: 12 }}>›</span>}
                   {crumb.href ? (
-                    <Link href={crumb.href} className="hover:text-white transition-colors">
+                    <Link href={crumb.href} style={{ color: "#8aaccc", fontSize: 12, textDecoration: "none", ...FONT }}>
                       {crumb.label}
                     </Link>
                   ) : (
-                    <span className="text-slate-300">{crumb.label}</span>
+                    <span style={{ color: "#b0c4d8", fontSize: 12, ...FONT }}>{crumb.label}</span>
                   )}
                 </React.Fragment>
               ))}
             </nav>
           )}
 
-          <p className="text-xs uppercase tracking-widest text-slate-400 mb-4" style={FONT}>
+          <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 16, ...FONT }}>
             {heroTag}
           </p>
-          <h1 className="text-3xl md:text-5xl font-light leading-tight mb-6" style={FONT}>
+          <h1 style={{ fontSize: "clamp(1.6rem, 4vw, 2.8rem)", fontWeight: 300, lineHeight: 1.35, color: "#ffffff", marginBottom: 20, ...FONT }}>
             {heroTitle}
           </h1>
-          <p className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl leading-relaxed" style={FONT}>
+          <p style={{ fontSize: "clamp(0.9rem, 2vw, 1.05rem)", color: "#a8bfd4", lineHeight: 1.7, maxWidth: 680, marginBottom: 36, ...FONT }}>
             {heroSubtitle}
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -169,8 +198,8 @@ export function GeoPage({
               href={intakeHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
-              style={FONT}
+              className="geo-btn-primary"
+              style={{ display: "inline-block", padding: "14px 32px", background: "#ffffff", color: C.navy, fontSize: 13, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", ...FONT }}
             >
               أرسل ملفك الطبي الآن
             </a>
@@ -178,8 +207,8 @@ export function GeoPage({
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 text-sm font-medium transition-colors"
-              style={{ ...FONT, border: "1px solid rgba(255,255,255,0.35)", color: "#fff" }}
+              className="geo-btn-outline"
+              style={{ display: "inline-block", padding: "14px 28px", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", fontSize: 13, textDecoration: "none", transition: "background 0.2s", ...FONT }}
             >
               واتساب
             </a>
@@ -188,18 +217,22 @@ export function GeoPage({
       </section>
 
       {/* 2. WHY US — 3 cards */}
-      <section className="py-16 px-6 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-8" style={FONT}>
-            لماذا نحن؟
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+      <section style={{ padding: "56px 24px", background: C.bg, borderBottom: `1px solid ${C.border}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 8, ...FONT }}>
+            لماذا نحن
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, marginTop: 24 }}>
             {whyCards.map((card, i) => (
-              <div key={i} className="bg-slate-50 border border-slate-100 p-6">
-                <h3 className="text-sm font-medium text-slate-900 mb-3" style={FONT}>
+              <div
+                key={i}
+                className="geo-card"
+                style={{ background: C.bgSoft, border: `1px solid ${C.border}`, padding: "24px 20px", transition: "border-color 0.2s" }}
+              >
+                <h3 style={{ fontSize: 13, fontWeight: 500, color: C.text, marginBottom: 10, ...FONT }}>
                   {card.title}
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed" style={FONT}>
+                <p style={{ fontSize: 12, color: C.textMuted, lineHeight: 1.7, ...FONT }}>
                   {card.body}
                 </p>
               </div>
@@ -208,26 +241,26 @@ export function GeoPage({
         </div>
       </section>
 
-      {/* 3. STEPS — "من حيث أنت إلى برلين" */}
-      <section className="py-16 px-6 bg-slate-900 text-white border-b border-slate-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-medium mb-10" style={FONT}>
+      {/* 3. STEPS */}
+      <section style={{ padding: "56px 24px", background: C.navy, borderBottom: `1px solid #1e3050` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 8, ...FONT }}>
             {stepsTitle}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24, marginTop: 28 }}>
             {steps.map((step, i) => (
-              <div key={i} className="flex gap-4">
+              <div key={i} style={{ display: "flex", gap: 16 }}>
                 <span
-                  className="flex-shrink-0 w-10 h-10 rounded-full border border-slate-600 flex items-center justify-center text-sm font-medium text-slate-300"
-                  style={FONT}
+                  className="geo-step-num"
+                  style={{ flexShrink: 0, width: 36, height: 36, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 500, color: "#ffffff", ...FONT }}
                 >
                   {step.number}
                 </span>
                 <div>
-                  <h3 className="text-sm font-medium text-white mb-2" style={FONT}>
+                  <h3 style={{ fontSize: 13, fontWeight: 500, color: "#ffffff", marginBottom: 8, ...FONT }}>
                     {step.title}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed" style={FONT}>
+                  <p style={{ fontSize: 12, color: "#8aaccc", lineHeight: 1.7, ...FONT }}>
                     {step.body}
                   </p>
                 </div>
@@ -238,17 +271,17 @@ export function GeoPage({
       </section>
 
       {/* 4. CITIES */}
-      <section className="py-16 px-6 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-6" style={FONT}>
+      <section style={{ padding: "56px 24px", background: C.bgSection, borderBottom: `1px solid ${C.border}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 8, ...FONT }}>
             {citiesTitle}
-          </h2>
-          <div className="flex flex-wrap gap-3 mb-4">
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
             {cities.map((city, i) => (
               <span
                 key={i}
-                className="px-4 py-2 bg-slate-50 border border-slate-200 text-sm text-slate-700 flex items-center gap-2"
-                style={FONT}
+                className="geo-city"
+                style={{ padding: "8px 16px", background: C.bg, border: `1px solid ${C.border}`, fontSize: 13, color: C.textMid, display: "flex", alignItems: "center", gap: 6, transition: "border-color 0.2s", ...FONT }}
               >
                 {city.flag && <span>{city.flag}</span>}
                 {city.name}
@@ -256,7 +289,7 @@ export function GeoPage({
             ))}
           </div>
           {citiesNote && (
-            <p className="text-slate-500 text-sm mt-4" style={FONT}>
+            <p style={{ fontSize: 12, color: C.textMuted, marginTop: 16, ...FONT }}>
               {citiesNote}
             </p>
           )}
@@ -264,18 +297,18 @@ export function GeoPage({
       </section>
 
       {/* 5. FAQ */}
-      <section className="py-16 px-6 bg-slate-50 border-b border-slate-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-medium text-slate-900 mb-8" style={FONT}>
+      <section style={{ padding: "56px 24px", background: C.bgSoft, borderBottom: `1px solid ${C.border}` }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 8, ...FONT }}>
             {faqTitle}
-          </h2>
-          <div className="space-y-6">
+          </p>
+          <div style={{ marginTop: 24 }}>
             {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-slate-200 pb-6">
-                <h3 className="text-sm font-medium text-slate-900 mb-3" style={FONT}>
+              <div key={i} style={{ borderBottom: `1px solid ${C.border}`, paddingBottom: 24, marginBottom: 24 }}>
+                <h3 style={{ fontSize: 13, fontWeight: 500, color: C.text, marginBottom: 10, ...FONT }}>
                   {faq.q}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed" style={FONT}>
+                <p style={{ fontSize: 13, color: C.textMuted, lineHeight: 1.75, ...FONT }}>
                   {faq.a}
                 </p>
               </div>
@@ -285,18 +318,18 @@ export function GeoPage({
       </section>
 
       {/* 6. INTERNAL LINKS */}
-      <section className="py-12 px-6 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-sm font-medium text-slate-700 mb-4" style={FONT}>
+      <section style={{ padding: "40px 24px", background: C.bg, borderBottom: `1px solid ${C.border}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, marginBottom: 16, ...FONT }}>
             {internalLinksTitle}
-          </h3>
-          <div className="flex flex-wrap gap-3">
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             {internalLinks.map((link, i) => (
               <Link
                 key={i}
                 href={link.href}
-                className="px-4 py-2 border border-slate-200 text-xs text-slate-600 hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
-                style={FONT}
+                className="geo-link"
+                style={{ padding: "8px 16px", border: `1px solid ${C.border}`, fontSize: 12, color: C.textMid, textDecoration: "none", transition: "border-color 0.2s, color 0.2s", ...FONT }}
               >
                 {link.label}
               </Link>
@@ -306,21 +339,21 @@ export function GeoPage({
       </section>
 
       {/* 7. FINAL CTA */}
-      <section className="py-20 px-6 bg-[#0B1C2C] text-white">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-light mb-4" style={FONT}>
+      <section style={{ padding: "72px 24px", background: C.navy, textAlign: "center" }}>
+        <div style={{ maxWidth: 560, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(1.3rem, 3vw, 1.8rem)", fontWeight: 300, color: "#ffffff", marginBottom: 12, ...FONT }}>
             {ctaTitle}
           </h2>
-          <p className="text-slate-300 text-sm mb-8 leading-relaxed" style={FONT}>
+          <p style={{ fontSize: 13, color: "#8aaccc", marginBottom: 32, lineHeight: 1.7, ...FONT }}>
             {ctaNote}
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
             <a
               href={intakeHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
-              style={FONT}
+              className="geo-btn-primary"
+              style={{ display: "inline-block", padding: "16px 40px", background: "#ffffff", color: C.navy, fontSize: 13, fontWeight: 500, textDecoration: "none", transition: "background 0.2s", ...FONT }}
             >
               إرسال الملف الطبي
             </a>
@@ -328,23 +361,23 @@ export function GeoPage({
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border border-white text-white text-sm font-light hover:bg-white hover:text-[#0B1C2C] transition-colors"
-              style={FONT}
+              className="geo-btn-outline"
+              style={{ display: "inline-block", padding: "14px 32px", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", fontSize: 13, textDecoration: "none", transition: "background 0.2s", ...FONT }}
             >
               تحدث مع منسق عبر واتساب
             </a>
           </div>
-          <p className="mt-6 text-xs text-slate-500 leading-relaxed" style={FONT}>
+          <p style={{ marginTop: 24, fontSize: 11, color: "#4a6080", ...FONT }}>
             لا تحتاج ملفاً كاملاً — أرسل ما هو متوفر الآن
           </p>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-white border-t border-slate-100">
+      <footer style={{ background: C.bg, borderTop: `1px solid ${C.border}` }}>
         <ArabicFooterGuide />
-        <div className="py-8 px-6 text-center">
-          <p className="text-xs text-slate-400" style={FONT}>
+        <div style={{ padding: "24px", textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: C.textMuted, ...FONT }}>
             Medical Care Germany
           </p>
         </div>

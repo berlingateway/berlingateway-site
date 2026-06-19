@@ -239,9 +239,9 @@ async function startServer() {
   };
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs
-  const ARABIC_REDIRECTS_301: Record<string, string> = {
-    '/ar/send-medical-reports': '/ar/ارسال-التقارير-الطبية',
-  };
+  // NOTE: /ar/send-medical-reports is now the canonical URL (ASCII slug)
+  // The Arabic URL /ar/ارسال-التقارير-الطبية is kept as an alias route in App.tsx
+  const ARABIC_REDIRECTS_301: Record<string, string> = {};
 
   app.use((req, res, next) => {
     const path = req.path.replace(/\/+$/, '') || '/';

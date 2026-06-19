@@ -5,6 +5,45 @@ import HreflangTags from "@/components/HreflangTags";
 
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
+
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "متى تصبح حالتك بحاجة لتقييم عاجل في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "إذا كانت الأعراض العصبية تتطور بسرعة، أو إذا أوصى طبيبك بجراحة دون تقييم شامل، أو إذا لم تستجب الحالة للعلاج الدوائي خلال 3 أشهر — فهذه مؤشرات تستوجب تقييماً عاجلاً في مستشفى جامعي ألماني."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "لماذا التأخير في حالات الأعصاب خطير؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "الجهاز العصبي يفقد قدرته على التعافي كلما تأخر التشخيص الدقيق. كثير من الحالات التي وصلتنا بقرار جراحي تغيّر مسارها بعد التقييم — لكن النافذة الزمنية للتدخل الصحيح محدودة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "كيف يعمل النظام الطبي الألماني في حالات الأعصاب؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "في ألمانيا، يتم تقييم الحالات العصبية المعقدة من قِبَل فريق متعدد التخصصات في المستشفيات الجامعية. يشمل التقييم مراجعة كاملة للملف الطبي، إجراء الفحوصات اللازمة، وتحديد المسار العلاجي الأمثل — سواء كان جراحياً أو دوائياً أو متابعة دقيقة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن الحصول على رأي طبي ثانٍ عن بُعد قبل السفر إلى ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. يمكن إرسال الملف الطبي كاملاً (تقارير، صور MRI، نتائج مخبرية) وسيتم تقييمه من برلين خلال 24–48 ساعة لتحديد ما إذا كانت الحالة تستوجب السفر للعلاج في ألمانيا."
+      }
+    }
+  ]
+};
 const intakeHref = "/send-medical-reports";
 const whatsappHref = "https://wa.me/4915781497451?text=" + encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة عصبية");
 
@@ -15,6 +54,7 @@ export default function NeurologyHubArabic() {
       dir="rtl"
       lang="ar"
     >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }} />
       <SmartNavLayer currentPath="/ar/neurology-treatment-germany" />
       <HreflangTags currentPath="/ar/neurology-treatment-germany" />
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>

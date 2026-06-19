@@ -62,6 +62,12 @@ export default function ProstateCancer() {
         title: "Frequently Asked Questions — Prostate Cancer Treatment in Germany",
         items: FAQ_ITEMS,
       }}
+      relatedLinks={[
+        { href: "/oncology-germany", label: "Oncology in Germany" },
+        { href: "/cancer-treatment-germany", label: "Cancer Treatment Germany" },
+        { href: "/university-hospital-treatment-germany", label: "University Hospital Treatment" },
+        { href: "/second-opinion-germany", label: "Second Medical Opinion" },
+      ]}
       customCTA={{
         title: "Next Step",
         heading: "Send your medical file — a coordinator will review your case within 24 hours",

@@ -5,7 +5,7 @@ export default function SendMedicalReportsArabic() {
     <SeoGatewayPage
       metaTitle="إرسال التقارير الطبية | ميديكال كير جيرماني"
       metaDescription="كيفية إرسال التقارير الطبية للتقييم في ألمانيا — الوثائق المطلوبة، وما يحدث بعد الإرسال، ومدة المراجعة."
-      canonicalPath="/ar/ارسال-التقارير-الطبية"
+      canonicalPath="/ar/send-medical-reports"
       heroTitle="كيفية إرسال التقارير الطبية للتقييم"
       heroSubtitle="أرسل ما هو متوفر الآن — لا يُشترط ملف كامل للبدء."
       qaItems={[

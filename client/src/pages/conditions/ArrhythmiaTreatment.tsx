@@ -18,6 +18,12 @@ export default function ArrhythmiaTreatment() {
       aboutCondition="Arrhythmias range from common conditions such as atrial fibrillation and supraventricular tachycardias to complex ventricular arrhythmias and inherited channelopathies. Accurate diagnosis requires ECG, Holter monitoring, and in selected cases electrophysiology study. Treatment options include antiarrhythmic medications, catheter ablation, implantable devices (pacemakers, ICD, CRT), and in rare cases surgical arrhythmia procedures."
       whyGermany="German electrophysiology centers perform high volumes of catheter ablation procedures including pulmonary vein isolation for atrial fibrillation and complex ventricular tachycardia ablation using three-dimensional electroanatomical mapping systems. Implantable device management including subcutaneous ICD, leadless pacemakers, and cardiac resynchronization therapy is performed by experienced electrophysiology teams with access to the latest device technology."
       specialistEvaluation="Specialist evaluation involves a review of ECG recordings, Holter data, echocardiography, and prior treatment history. German electrophysiologists assess the arrhythmia mechanism, determine whether catheter ablation is appropriate and technically feasible, and evaluate the indication for implantable device therapy based on the individual's arrhythmia burden and cardiac function."
+      relatedLinks={[
+        { href: "/cardiology-germany", label: "Cardiology in Germany" },
+        { href: "/heart-surgery-germany", label: "Heart Surgery in Germany" },
+        { href: "/university-hospital-treatment-germany", label: "University Hospital Treatment" },
+        { href: "/second-opinion-germany", label: "Second Medical Opinion" },
+      ]}
       structuredData={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "MedicalWebPage",

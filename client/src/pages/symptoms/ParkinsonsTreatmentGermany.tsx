@@ -1,5 +1,36 @@
 import { SymptomPage } from "./_SymptomPageTemplate";
 
+const PARKINSONS_FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ما هي الحالات التي تستوجب تقييماً متخصصاً لمرضى باركنسون في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "الحالات التي لم تستجب للعلاج الدوائي، أو التي يُنظر فيها في تحفيز الدماغ العميق (DBS)، أو التي تتطور بسرعة رغم العلاج — هذه تستوجب تقييماً متخصصاً في مستشفى جامعي ألماني."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ما هو تحفيز الدماغ العميق (DBS) ومتى يكون خياراً مناسباً؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DBS هو تدخل جراحي يستخدم التحفيز الكهربائي لمناطق محددة في الدماغ. يكون مناسباً للحالات المتقدمة غير المستجيبة للدواء بشرط تقييم دقيق من فريق متخصص قبل اتخاذ القرار."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يمكن تقييم حالة باركنسون عن بُعد قبل السفر إلى ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم. يمكن إرسال التقارير الطبية وصور الرنين وسيتم تقييمها من برلين خلال 24–48 ساعة لتحديد ما إذا كانت الحالة مرشحة لتدخل DBS أو تحتاج مساراً علاجياً مختلفاً."
+      }
+    }
+  ]
+};
+
 export default function ParkinsonsTreatmentGermany() {
   return (
     <SymptomPage
@@ -14,6 +45,8 @@ export default function ParkinsonsTreatmentGermany() {
       ]}
       warning="التأخير في تقييم مرض باركنسون المتقدم قد يُضيّع نافذة التدخل الجراحي الأمثل."
       filterText="هذه الصفحة مخصصة للحالات غير المستجيبة للعلاج الدوائي أو المرشحة لتقييم DBS فقط."
-    />
+    >
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(PARKINSONS_FAQ_JSONLD) }} />
+    </SymptomPage>
   );
 }

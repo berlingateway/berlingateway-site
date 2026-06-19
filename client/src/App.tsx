@@ -419,6 +419,7 @@ function Router() {
       <Route path={"/hospitals-germany-international-patients"} component={HospitalsGermanyInternational} />
       <Route path={"/ar/السفر-للعلاج-في-المانيا"} component={TravelForTreatmentGermany} />
       <Route path={"/travel-for-treatment-germany"} component={TravelForTreatmentGermany} />
+      <Route path={"/ar/send-medical-reports"} component={SendMedicalReportsArabic} />
       <Route path={"/ar/ارسال-التقارير-الطبية"} component={SendMedicalReportsArabic} />
       <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
       <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />

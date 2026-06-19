@@ -27,6 +27,8 @@ const MEDICAL_CONDITIONS = [
 ];
 
 const INTERNATIONAL_PATIENTS = [
+  { label: "العلاج في ألمانيا للمقيمين في السعودية", href: "/ar/treatment-germany-saudi" },
+  { label: "العلاج في ألمانيا للمقيمين في الإمارات", href: "/ar/treatment-germany-uae" },
   { label: "العلاج في ألمانيا للليبيين", href: "/ar/treatment-germany-libya/" },
   { label: "تأشيرة العلاج الطبي للليبيين", href: "/ar/medical-visa-germany-libya/" },
   { label: "علاج السرطان للمرضى الليبيين", href: "/ar/oncology-germany-libya/" },

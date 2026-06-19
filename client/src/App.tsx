@@ -167,6 +167,7 @@ import OrthopaedeDE from "./pages/rehabilitation/OrthopaedeDE";
 // SEO Gateway Pages
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
 import TreatmentGermanySaudi from "./pages/seo/TreatmentGermanySaudi";
+import TreatmentGermanyUAE from "./pages/seo/TreatmentGermanyUAE";
 import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
 import MedicalVisaGermany from "./pages/seo/MedicalVisaGermany";
 import HospitalsGermanyInternational from "./pages/seo/HospitalsGermanyInternational";
@@ -412,6 +413,7 @@ function Router() {
       {/* SEO Gateway Routes */}
       <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
       <Route path={"/ar/treatment-germany-saudi"} component={TreatmentGermanySaudi} />
+      <Route path={"/ar/treatment-germany-uae"} component={TreatmentGermanyUAE} />
       <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />
       <Route path={"/ar/تكلفة-العلاج-في-المانيا"} component={TreatmentCostGermany} />
       <Route path={"/treatment-cost-germany"} component={TreatmentCostGermany} />

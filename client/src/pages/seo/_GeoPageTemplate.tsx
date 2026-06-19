@@ -241,6 +241,27 @@ export function GeoPage({
         </div>
       </section>
 
+      {/* 2b. FAILED SURGERY CARD */}
+      <section style={{ padding: "32px 24px", background: C.navy, borderBottom: `1px solid #1e3050` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: "28px 32px", border: `1px solid rgba(184,144,42,0.35)`, background: "rgba(184,144,42,0.06)" }}>
+            <p style={{ fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: C.gold, ...FONT }}>
+              العملية لم تنجح؟
+            </p>
+            <p style={{ fontSize: 14, fontWeight: 400, color: "#ffffff", lineHeight: 1.65, ...FONT }}>
+              كثير من مرضانا وصلونا بعد تجربة علاجية صعبة في بلدهم أو خارجه.
+              الرأي الطبي الثاني في ألمانيا ليس خياراً — أحياناً هو الفرق.
+            </p>
+            <a
+              href="/ar/second-opinion-germany"
+              style={{ display: "inline-block", fontSize: 12, color: C.gold, textDecoration: "underline", textUnderlineOffset: 3, ...FONT }}
+            >
+              تعرف على الرأي الطبي الثاني في ألمانيا ←
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 3. STEPS */}
       <section style={{ padding: "56px 24px", background: C.navy, borderBottom: `1px solid #1e3050` }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>

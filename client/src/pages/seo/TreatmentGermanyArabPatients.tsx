@@ -63,6 +63,7 @@ export default function TreatmentGermanyArabPatients() {
         { href: "/ar/dizziness-long-term", label: "دوخة مستمرة بدون تفسير" },
         { href: "/ar/complex-trauma-evaluation", label: "تقييم الحالات المعقدة والإصابات" },
         { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج في ألمانيا — ما تحتاج معرفته" },
+        { href: "/ar/treatment-germany-saudi", label: "العلاج في ألمانيا من السعودية" },
       ]}
       faqSchema={[
         {

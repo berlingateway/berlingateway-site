@@ -183,7 +183,6 @@ import SpineHub from "./pages/hubs/SpineHub";
 import OncologyHub from "./pages/hubs/OncologyHub";
 import OrthopedicsHub from "./pages/hubs/OrthopedicsHub";
 import CardiologyHub from "./pages/hubs/CardiologyHub";
-import ConsultationHub from "./pages/hubs/ConsultationHub";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
@@ -458,7 +457,6 @@ function Router() {
       <Route path={"/oncology-germany"} component={OncologyHub} />
       <Route path={"/orthopedics-germany"} component={OrthopedicsHub} />
       <Route path={"/cardiology-germany"} component={CardiologyHub} />
-      <Route path={"/consultation-services-germany"} component={ConsultationHub} />
 
       {/* Language fallback + 404 prevention routes */}
       <Route path={"/de"} component={GermanFallback} />

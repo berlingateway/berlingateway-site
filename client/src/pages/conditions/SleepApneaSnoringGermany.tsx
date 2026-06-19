@@ -38,7 +38,7 @@ const RELATED = [
   { href: "/ar/ent-germany",         label: "الأنف والأذن والحنجرة — المحور" },
   { href: "/ar/ent-surgery-germany", label: "جراحة الأنف والأذن والحنجرة" },
   { href: "/ar/pediatric-ent-germany", label: "طب الأنف والأذن والحنجرة للأطفال" },
-  { href: "/ar/submit-case",         label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP",         label: "تقديم الحالة الطبية" },
 ];
 
 export default function SleepApneaSnoringGermany() {

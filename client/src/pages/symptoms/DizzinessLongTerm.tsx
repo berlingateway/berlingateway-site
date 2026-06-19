@@ -306,7 +306,7 @@ const CONDITIONS_MATRIX = [
   {
     title: "حالات غير مشخصة",
     body: "دوخة مستمرة مع فحوصات طبيعية — تحتاج تقييماً متخصصاً متعدد التخصصات.",
-    href: "/ar/submit-case",
+    href: "https://tally.so/r/68MrBP",
   },
 ];
 

@@ -21,7 +21,7 @@ export default function HerniatedDisc() {
         langLink: "الإنجليزية",
         langHref: "/spine-surgery-germany",
         ctaButton: "إرسال التقارير الطبية",
-        ctaHref: "/send-medical-reports",
+        ctaHref: "https://tally.so/r/68MrBP",
         topBarEmail: "info@medicalcaregermany.com",
       }}
       footerLabels={{
@@ -92,7 +92,7 @@ export default function HerniatedDisc() {
 
       midPageCta={{
         label: "احصل على تقييم طبي أولي لحالتك",
-        href: "/send-medical-reports",
+        href: "https://tally.so/r/68MrBP",
       }}
 
       patientPathway={[
@@ -127,7 +127,7 @@ export default function HerniatedDisc() {
 
       ctaText="اتخاذ القرار الصحيح في الوقت المناسب يمنع تدهور الحالة الصحية للأعصاب."
       ctaButton="أرسل ملفك الطبي لتقييم الحالة الآن"
-      ctaHref="/send-medical-reports"
+      ctaHref="https://tally.so/r/68MrBP"
       gdprNote="يتم التعامل مع كافة الوثائق وفقاً لمعايير حماية البيانات الألمانية الصارمة (GDPR)."
 
       sectionLabels={{

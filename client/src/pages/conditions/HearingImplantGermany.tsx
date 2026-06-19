@@ -42,7 +42,7 @@ const RELATED = [
   { href: "/ar/pediatric-ent-germany",          label: "طب الأنف والأذن والحنجرة للأطفال" },
   { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم في ألمانيا" },
   { href: "/ar/ent-surgery-germany",            label: "جراحة الأنف والأذن والحنجرة" },
-  { href: "/ar/submit-case",                    label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP",                    label: "تقديم الحالة الطبية" },
 ];
 
 export default function HearingImplantGermany() {

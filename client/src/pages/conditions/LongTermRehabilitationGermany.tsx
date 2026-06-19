@@ -172,7 +172,7 @@ export default function LongTermRehabilitationGermany() {
               { href: "/ar/war-injury-rehabilitation-germany", label: "إعادة تأهيل إصابات الحرب" },
               { href: "/ar/neurological-rehabilitation-germany", label: "التأهيل العصبي" },
               { href: "/ar/spinal-rehabilitation-germany", label: "إعادة تأهيل العمود الفقري" },
-              { href: "/ar/submit-case", label: "تقديم الحالة" },
+              { href: "https://tally.so/r/68MrBP", label: "تقديم الحالة" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ ...AR, fontSize: 13, color: "#0B1C2C", textDecoration: "none", padding: "8px 16px", border: "1px solid #cbd5e1", background: "#f8fafc", display: "inline-block" }}>
                 {link.label}

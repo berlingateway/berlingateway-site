@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const intakeHref = "/ar/ارسال-التقارير-الطبية";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي");
@@ -92,13 +92,14 @@ export function SeoGatewayPage({
           <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10" style={FONT}>
             {heroSubtitle}
           </p>
-          <Link
-            href={intakeHref}
+          <a
+
+            href={intakeHref} target="_blank" rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
             أرسل ملفك الطبي للتقييم
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -242,13 +243,14 @@ export function SeoGatewayPage({
             يتم مراجعة الملفات خلال 24–48 ساعة من قِبل منسق طبي في برلين.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               إرسال التقارير الطبية
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"

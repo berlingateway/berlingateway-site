@@ -135,7 +135,7 @@ function ArabicPageHeader() {
         <div className="hidden md:flex gap-7 text-sm text-slate-500 items-center" style={arFont}>
           <Link href="/ar"><span className="hover:text-slate-900 cursor-pointer transition-colors">الرئيسية</span></Link>
           <Link href="/ar/videos"><span className="text-slate-900 font-medium cursor-pointer">مكتبة الفيديو</span></Link>
-          <Link href="/ar#submit-case"><span className="hover:text-slate-900 cursor-pointer transition-colors">تقديم الحالة</span></Link>
+          <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer"><span className="hover:text-slate-900 cursor-pointer transition-colors">تقديم الحالة</span></Link>
           <Link href="/ar#contact"><span className="hover:text-slate-900 cursor-pointer transition-colors">تواصل</span></Link>
         </div>
 
@@ -170,7 +170,7 @@ function ArabicPageHeader() {
           <button onClick={() => setMobileOpen(false)} className="self-start text-slate-400 hover:text-slate-700 text-2xl">✕</button>
           <Link href="/ar" onClick={() => setMobileOpen(false)}><span className="cursor-pointer hover:text-slate-900">الرئيسية</span></Link>
           <Link href="/ar/videos" onClick={() => setMobileOpen(false)}><span className="cursor-pointer text-slate-900 font-medium">مكتبة الفيديو</span></Link>
-          <Link href="/ar#submit-case" onClick={() => setMobileOpen(false)}><span className="cursor-pointer hover:text-slate-900">تقديم الحالة</span></Link>
+          <Link href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}><span className="cursor-pointer hover:text-slate-900">تقديم الحالة</span></Link>
           <Link href="/ar#contact" onClick={() => setMobileOpen(false)}><span className="cursor-pointer hover:text-slate-900">تواصل</span></Link>
           <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer" className="bg-slate-900 text-white text-sm px-6 py-3 rounded" style={arFont}>
             إرسال التقارير الطبية

@@ -69,7 +69,7 @@ const RELATED = [
   { href: "/ar/ent-surgery-germany",      label: "جراحة الأنف والأذن والحنجرة" },
   { href: "/ar/voice-prosthesis-germany", label: "بدائل الصوت وصمامات الكلام" },
   { href: "/ar/lung-cancer-treatment-germany", label: "سرطان الرئة" },
-  { href: "/ar/submit-case",              label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP",              label: "تقديم الحالة الطبية" },
 ];
 
 export default function HeadNeckTumorGermany() {

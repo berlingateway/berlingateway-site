@@ -39,7 +39,7 @@ const RELATED = [
   { href: "/ar/hearing-implant-germany", label: "زراعة القوقعة وضعف السمع" },
   { href: "/ar/pediatric-medicine-germany", label: "طب الأطفال العام" },
   { href: "/ar/sleep-apnea-snoring-germany", label: "الشخير وانقطاع النفس أثناء النوم" },
-  { href: "/ar/submit-case",             label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP",             label: "تقديم الحالة الطبية" },
 ];
 
 export default function PediatricEntGermany() {

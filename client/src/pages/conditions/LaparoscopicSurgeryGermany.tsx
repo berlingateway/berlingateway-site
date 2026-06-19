@@ -610,7 +610,7 @@ export default function LaparoscopicSurgeryGermany() {
               { href: "/ar/hernia-treatment-germany", label: "علاج الفتق في ألمانيا" },
               { href: "/ar/reconstructive-surgery-germany", label: "الجراحة الترميمية" },
               { href: "/ar/complex-trauma-germany", label: "الإصابات المعقدة" },
-              { href: "/send-medical-reports", label: "إرسال التقارير الطبية" },
+              { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير الطبية" },
             ].map((link) => (
               <a
                 key={link.href}

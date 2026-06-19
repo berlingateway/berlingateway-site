@@ -80,7 +80,7 @@ export default function AdvancedDiagnostics() {
             "Send your medical file \u2014 a coordinator will review your case within 24 hours",
           body: "Submit your prior imaging, laboratory results, and clinical history. A Berlin-based coordinator will identify the appropriate diagnostic pathway at the relevant German university center.",
           buttonLabel: "Send Medical File",
-          buttonHref: "/send-medical-reports",
+          buttonHref: "https://tally.so/r/68MrBP",
           note: "All submissions are handled with strict confidentiality.",
         }}
         structuredData={JSON.stringify([

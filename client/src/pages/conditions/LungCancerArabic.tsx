@@ -7,7 +7,7 @@ const WA_NUMBER = "4915781497451";
 
 export default function LungCancerArabic() {
   const waHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة سرطان الرئة")}`;
-  const intakeHref = "/send-medical-reports";
+  const intakeHref = "https://tally.so/r/68MrBP";
 
   return (
     <>

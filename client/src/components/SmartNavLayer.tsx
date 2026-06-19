@@ -303,9 +303,11 @@ export default function SmartNavLayer({ currentPath }: SmartNavLayerProps) {
               </a>
             ))}
             {/* Always include submit CTA */}
-            {!related.some((r) => r.href.includes("submit") || r.href.includes("ارسال")) && (
+            {!related.some((r) => r.href.includes("tally.so")) && (
               <a
-                href={lang === "ar" ? "/ar/ارسال-التقارير-الطبية" : "/send-medical-reports"}
+                href="https://tally.so/r/68MrBP"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ ...s.relatedLink(), color: NAVY, fontWeight: 600 }}
               >
                 {SUBMIT_LABELS[lang]}

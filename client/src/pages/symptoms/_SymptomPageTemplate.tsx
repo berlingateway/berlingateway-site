@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const intakeHref = "/send-medical-reports";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي");
@@ -56,13 +56,14 @@ export function SymptomPage({
           <p className="text-sm text-slate-400 mb-10" style={FONT}>
             نحدد لك السبب الحقيقي والمسار الطبي بناءً على ملفك.
           </p>
-          <Link
-            href={intakeHref}
+          <a
+
+            href={intakeHref} target="_blank" rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
             أرسل تقاريرك الآن للحصول على قرار طبي واضح
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -221,13 +222,14 @@ export function SymptomPage({
             أرسل تقاريرك الآن وسيتم تقييمها خلال 24–48 ساعة.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               إرسال التقارير للمراجعة
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"

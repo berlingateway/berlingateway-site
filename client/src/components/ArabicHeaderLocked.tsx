@@ -38,7 +38,7 @@ const INTERNATIONAL_PATIENTS = [
 const MAIN_LINKS = [
   { label: "الرئيسية", href: "/ar" },
   { label: "من نحن", href: "/ar/about" },
-  { label: "إرسال التقارير الطبية", href: "/ar/ارسال-التقارير-الطبية" },
+  { label: "إرسال التقارير الطبية", href: "https://tally.so/r/68MrBP" },
   { label: "تواصل معنا", href: "/contact" },
 ];
 

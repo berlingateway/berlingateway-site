@@ -32,7 +32,7 @@ const JOINT_FAQ_JSONLD = {
 };
 
 const FONT = { fontFamily: "'Cairo', 'Noto Sans Arabic', sans-serif" };
-const intakeHref = "/ar/ارسال-التقارير-الطبية";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref = "https://wa.me/4915781497451";
 
 export default function JointReplacementAfterTrauma() {
@@ -69,13 +69,14 @@ export default function JointReplacementAfterTrauma() {
             ليس كل إصابة تعني بتر. في بعض الحالات، يمكن إنقاذ الطرف عبر تدخل جراحي متقدم أو استبدال المفصل.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-[#0B1C2C] text-white text-sm font-medium hover:bg-slate-800 transition-colors"
               style={FONT}
             >
               أرسل تقاريرك الآن
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"
@@ -202,13 +203,14 @@ export default function JointReplacementAfterTrauma() {
             أرسل التقارير الآن — واحصل على تقييم خلال 24–48 ساعة.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               إرسال التقارير الطبية
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"
@@ -325,13 +327,14 @@ export default function JointReplacementAfterTrauma() {
             لتحديد إمكانية إنقاذ الطرف والمسار الطبي المناسب.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               إرسال التقارير الطبية
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"

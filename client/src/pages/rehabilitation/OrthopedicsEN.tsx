@@ -40,7 +40,7 @@ const RELATED = [
   { href: "/en/prosthetics-germany", label: "Prosthetics & Orthotics" },
   { href: "/en/spinal-rehabilitation-germany", label: "Spinal Rehabilitation" },
   { href: "/en/advanced-rehabilitation-germany", label: "Advanced Rehabilitation" },
-  { href: "/submit-case", label: "Submit Medical Reports" },
+  { href: "https://tally.so/r/68MrBP", label: "Submit Medical Reports" },
 ];
 
 export default function OrthopedicsEN() {

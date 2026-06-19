@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const intakeHref = "/send-medical-reports";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي");
@@ -35,13 +35,14 @@ export default function MedicalVisaResidencyGermany() {
           <p className="text-sm text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed" style={FONT}>
             في الحالات الطبية المعقدة، القرار يبدأ من التشخيص الصحيح واستمرارية العلاج داخل ألمانيا.
           </p>
-          <Link
-            href={intakeHref}
+          <a
+
+            href={intakeHref} target="_blank" rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
             إرسال الملف الطبي للتقييم
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -170,13 +171,14 @@ export default function MedicalVisaResidencyGermany() {
             يتم تقييم الملف خلال 24–48 ساعة لتحديد المسار الطبي المناسب، وإمكانية إصدار دعوة طبية رسمية عند توفر الشروط الطبية.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               إرسال التقارير الطبية
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"

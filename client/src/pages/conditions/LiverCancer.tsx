@@ -59,7 +59,7 @@ export default function LiverCancer() {
         heading: "Send your medical file — a coordinator will review your case within 24 hours",
         body: "Submit your imaging, pathology reports, and treatment history. A Berlin-based clinical coordinator will assess your case and identify the appropriate specialist or university hospital pathway.",
         buttonLabel: "Send Medical File",
-        buttonHref: "/send-medical-reports",
+        buttonHref: "https://tally.so/r/68MrBP",
         note: "All submissions are handled with strict confidentiality.",
       }}
       structuredData={JSON.stringify({

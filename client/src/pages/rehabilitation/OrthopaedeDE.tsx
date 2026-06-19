@@ -40,7 +40,7 @@ const RELATED = [
   { href: "/de/prothetik-deutschland", label: "Prothetik" },
   { href: "/de/spinale-rehabilitation-deutschland", label: "Spinale Rehabilitation" },
   { href: "/de/rehabilitation-deutschland", label: "Rehabilitation" },
-  { href: "/submit-case", label: "Berichte einreichen" },
+  { href: "https://tally.so/r/68MrBP", label: "Berichte einreichen" },
 ];
 
 export default function OrthopaedeDE() {

@@ -6,7 +6,7 @@ import HreflangTags from "@/components/HreflangTags";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const WA_HREF = "https://wa.me/4915781497451?text=" + encodeURIComponent("مرحباً، أود إرسال تقاريري الطبية لتقييم حالة الخصوبة");
-const intakeHref = "/send-medical-reports";
+const intakeHref = "https://tally.so/r/68MrBP";
 
 export default function IvfGermany() {
   return (
@@ -30,9 +30,10 @@ export default function IvfGermany() {
           <p className="text-sm text-slate-400 mb-10" style={FONT}>
             أطفال الأنابيب (IVF) هو البروتوكول العلاجي الأكثر استخداماً لحالات تأخر الإنجاب المعقدة.
           </p>
-          <Link href={intakeHref} className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors" style={FONT}>
+          <a
+ href={intakeHref} target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors" style={FONT}>
             أرسل تقاريرك الآن للحصول على قرار طبي واضح
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -182,9 +183,10 @@ export default function IvfGermany() {
             أرسل تقاريرك الطبية لتحديد ما إذا كان IVF هو البروتوكول المناسب لحالتك.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href={intakeHref} className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors" style={FONT}>
+            <a
+ href={intakeHref} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors" style={FONT}>
               إرسال التقارير للمراجعة
-            </Link>
+            </a>
             <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-white text-white text-sm font-light hover:bg-white hover:text-[#0B1C2C] transition-colors" style={FONT}>
               تواصل عبر واتساب
             </a>

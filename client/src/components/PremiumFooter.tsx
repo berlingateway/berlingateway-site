@@ -31,7 +31,7 @@ export default function PremiumFooter() {
             <p className="text-slate-300 leading-relaxed mb-6">
               Submit your case for a structured clinical review by our German medical coordination team.
             </p>
-            <a href="#submit-case">
+            <a href="https://tally.so/r/68MrBP" target="_blank" rel="noopener noreferrer">
               <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-none px-8 py-3">
                 Submit Case for Clinical Review
               </Button>
@@ -50,7 +50,7 @@ export default function PremiumFooter() {
                 { href: "/medical-visa-germany", label: "Medical Visa Germany" },
                 { href: "/hospitals-germany-international-patients", label: "Hospitals for International Patients" },
                 { href: "/travel-for-treatment-germany", label: "Travel for Medical Treatment" },
-                { href: "/send-medical-reports", label: "Send Medical Reports" },
+                { href: "https://tally.so/r/68MrBP", label: "Send Medical Reports" },
               ].map((l, i) => (
                 <li key={i}>
                   <a href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors">{l.label}</a>
@@ -67,7 +67,7 @@ export default function PremiumFooter() {
                 { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج" },
                 { href: "/ar/مستشفيات-المانيا-للعرب", label: "المستشفيات" },
                 { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج" },
-                { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير الطبية" },
+                { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير الطبية" },
               ].map((l, i) => (
                 <li key={i}>
                   <a href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>{l.label}</a>

@@ -833,7 +833,7 @@ export default function MaxillofacialSurgeryGermany() {
               { href: "/ar/corrective-plastic-surgery-germany", label: "التجميل التصحيحي" },
               { href: "/ar/complex-trauma-germany", label: "الإصابات المعقدة" },
               { href: "/ar/neurology-germany", label: "طب الأعصاب" },
-              { href: "/send-medical-reports", label: "إرسال التقارير الطبية" },
+              { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير الطبية" },
             ].map((link) => (
               <a
                 key={link.href}

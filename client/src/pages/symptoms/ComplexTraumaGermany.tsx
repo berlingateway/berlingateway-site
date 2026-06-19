@@ -5,7 +5,7 @@ import { CrossClusterSection } from "@/components/CrossClusterSection";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const intakeHref = "/send-medical-reports";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي بخصوص حالة إصابة معقدة");
@@ -289,13 +289,13 @@ export default function ComplexTraumaGermany() {
           <p className="text-sm text-slate-400 mb-10" style={FONT}>
             ليبيا · السودان · العراق · دول الخليج — كل حالة تحتاج مسار تقييم مختلف
           </p>
-          <Link
-            href={intakeHref}
+          <a
+            href={intakeHref} target="_blank" rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
             style={FONT}
           >
             أرسل تقاريرك للتقييم
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -660,7 +660,7 @@ export default function ComplexTraumaGermany() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href={intakeHref}
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >

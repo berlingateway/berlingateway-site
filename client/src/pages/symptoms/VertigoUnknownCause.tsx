@@ -1,7 +1,7 @@
 import { SymptomPage } from "./_SymptomPageTemplate";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
-const intakeHref = "/send-medical-reports";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي");
@@ -37,7 +37,7 @@ export default function VertigoUnknownCause() {
             هذا النوع من الحالات هو ما نتخصص فيه.
           </p>
           <a
-            href={intakeHref}
+            href={intakeHref} target="_blank" rel="noopener noreferrer"
             style={{ ...FONT, display: "inline-block", padding: "14px 36px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
           >
             أرسل ملفك — رد خلال 24 ساعة
@@ -79,7 +79,7 @@ export default function VertigoUnknownCause() {
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center", marginBottom: 20 }}>
             <a
-              href={intakeHref}
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               style={{ ...FONT, display: "inline-block", padding: "14px 32px", background: "#fff", color: "#0B1C2C", fontSize: 14, fontWeight: 500, textDecoration: "none" }}
             >
               أرسل ملفك الطبي

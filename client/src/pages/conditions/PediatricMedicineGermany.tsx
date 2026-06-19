@@ -37,7 +37,7 @@ const RELATED = [
   { href: "/ar/pediatric-neurology-germany", label: "أعصاب الأطفال" },
   { href: "/ar/neurology-treatment-germany", label: "الأعصاب والجهاز العصبي" },
   { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم" },
-  { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP", label: "تقديم الحالة الطبية" },
 ];
 
 const DOCS = [

@@ -37,7 +37,7 @@ const RELATED = [
   { href: "/ar/pediatric-medicine-germany", label: "طب الأطفال في ألمانيا" },
   { href: "/ar/pediatric-neurology-germany", label: "أعصاب الأطفال" },
   { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
-  { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP", label: "تقديم الحالة الطبية" },
 ];
 
 const DOCS = [

@@ -37,7 +37,7 @@ const RELATED = [
   { href: "/ar/orthopedics-germany", label: "العظام والمفاصل" },
   { href: "/ar/pediatric-surgery-germany", label: "جراحة الأطفال" },
   { href: "/ar/advanced-rehabilitation-germany", label: "إعادة التأهيل المتقدم" },
-  { href: "/ar/submit-case", label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP", label: "تقديم الحالة الطبية" },
 ];
 
 const DOCS = [

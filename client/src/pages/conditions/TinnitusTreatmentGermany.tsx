@@ -223,7 +223,7 @@ const INTERNAL_LINKS = [
   { href: "/ar/head-neck-tumor-germany", label: "أورام الرأس والعنق" },
   { href: "/ar/spine-surgery-germany", label: "جراحة العمود الفقري" },
   { href: "/ar/ent-surgery-germany", label: "جراحة الأنف والأذن والحنجرة" },
-  { href: "/ar/submit-case", label: "إرسال الملف الطبي" },
+  { href: "https://tally.so/r/68MrBP", label: "إرسال الملف الطبي" },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

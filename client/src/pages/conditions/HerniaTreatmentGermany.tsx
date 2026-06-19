@@ -656,7 +656,7 @@ export default function HerniaTreatmentGermany() {
               { href: "#", label: "خدمات التنسيق الطبي" },
               { href: "#", label: "مراجعة الحالات الجراحية المعقدة" },
               { href: "/ar/complex-trauma-germany", label: "الإصابات المعقدة" },
-              { href: "/send-medical-reports", label: "إرسال التقارير الطبية" },
+              { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير الطبية" },
             ].map((link) => (
               <a
                 key={link.href}

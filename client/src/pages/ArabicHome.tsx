@@ -239,7 +239,7 @@ const AR_NAV_CONDITIONS = {
     { label: "علاج الخصوبة للمصريين في ألمانيا",          href: "/ar/fertility-treatment-egypt-germany" },
   ],
   services: [
-    { label: "إرسال التقارير الطبية", href: "/ar/ارسال-التقارير-الطبية" },
+    { label: "إرسال التقارير الطبية", href: "https://tally.so/r/68MrBP" },
     { label: "فيزا العلاج في ألمانيا والإقامة الطبية", href: "/ar/medical-visa-residency-germany" },
     { label: "مكتبة الفيديو",         href: "/ar/videos" },
   ],
@@ -1368,7 +1368,7 @@ export default function ArabicHome() {
               { href: "/ar/فيزا-العلاج-في-المانيا", label: "فيزا العلاج" },
               { href: "/ar/مستشفيات-المانيا-للعرب", label: "مستشفيات ألمانيا" },
               { href: "/ar/السفر-للعلاج-في-المانيا", label: "السفر للعلاج" },
-              { href: "/ar/ارسال-التقارير-الطبية", label: "إرسال التقارير" },
+              { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير" },
               { href: "/consultation-services-germany", label: "خدمات الاستشارة" },
             ].map((l) => (
               <a key={l.href} href={l.href} className="text-xs text-slate-400 hover:text-slate-200 transition-colors" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>{l.label}</a>

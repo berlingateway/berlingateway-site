@@ -82,7 +82,7 @@ const RELATED = [
   { href: "/ar/neurology-treatment-germany",        label: "الأعصاب والجهاز العصبي" },
   { href: "/ar/war-injury-rehabilitation-germany",  label: "تأهيل إصابات الحرب" },
   { href: "/ar/complex-trauma-germany",             label: "تقييم الصدمات المعقدة" },
-  { href: "/ar/submit-case",                        label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP",                        label: "تقديم الحالة الطبية" },
 ];
 
 export default function EntGermany() {

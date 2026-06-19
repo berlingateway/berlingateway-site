@@ -639,7 +639,7 @@ export default function CorrectivePlasticSurgeryGermany() {
               { href: "/ar/maxillofacial-surgery-germany", label: "جراحة الوجه والفكين" },
               { href: "/ar/complex-trauma-germany", label: "الإصابات المعقدة" },
               { href: "/ar/joint-replacement-after-trauma", label: "استبدال المفاصل بعد الإصابات" },
-              { href: "/send-medical-reports", label: "إرسال التقارير الطبية" },
+              { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير الطبية" },
             ].map((link) => (
               <a
                 key={link.href}

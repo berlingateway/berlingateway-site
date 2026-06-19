@@ -41,7 +41,7 @@ const RELATED = [
   { href: "/ar/head-neck-tumor-germany",   label: "أورام الرأس والعنق" },
   { href: "/ar/hearing-implant-germany",   label: "زراعة القوقعة وضعف السمع" },
   { href: "/ar/voice-prosthesis-germany",  label: "بدائل الصوت وصمامات الكلام" },
-  { href: "/ar/submit-case",               label: "تقديم الحالة الطبية" },
+  { href: "https://tally.so/r/68MrBP",               label: "تقديم الحالة الطبية" },
 ];
 
 export default function EntSurgeryGermany() {

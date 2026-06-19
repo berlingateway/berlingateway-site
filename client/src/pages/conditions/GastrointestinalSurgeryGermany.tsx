@@ -640,7 +640,7 @@ export default function GastrointestinalSurgeryGermany() {
               { href: "/ar/laparoscopic-surgery-germany", label: "الجراحة التنظيرية المتقدمة" },
               { href: "/ar/complex-trauma-germany", label: "الإصابات المعقدة" },
               { href: "/ar/neurology-germany", label: "طب الأعصاب" },
-              { href: "/send-medical-reports", label: "إرسال التقارير الطبية" },
+              { href: "https://tally.so/r/68MrBP", label: "إرسال التقارير الطبية" },
             ].map((link) => (
               <a
                 key={link.href}

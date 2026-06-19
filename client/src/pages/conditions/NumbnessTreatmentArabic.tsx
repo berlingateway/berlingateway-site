@@ -6,7 +6,7 @@ import HreflangTags from "@/components/HreflangTags";
 
 const FONT = { fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" };
 const CANONICAL = "https://medicalcaregermany.com/ar/numbness-hands-feet-germany";
-const intakeHref = "/send-medical-reports";
+const intakeHref = "https://tally.so/r/68MrBP";
 const whatsappHref =
   "https://wa.me/4915781497451?text=" +
   encodeURIComponent("أريد التحدث مع منسق طبي بخصوص تنميل في اليدين أو القدمين");
@@ -133,13 +133,14 @@ export default function NumbnessTreatmentArabic() {
             تنميل تجاهلته سنوات — لكنه لم يختفِ.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               ابدأ بمراجعة ملفك الطبي
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"
@@ -425,13 +426,14 @@ export default function NumbnessTreatmentArabic() {
             نحدد معك: هل حالتك تستدعي تقييماً في ألمانيا — أم لا.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href={intakeHref}
+            <a
+
+              href={intakeHref} target="_blank" rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-[#0B1C2C] text-sm font-medium hover:bg-slate-100 transition-colors"
               style={FONT}
             >
               ابدأ بمراجعة ملفك الطبي
-            </Link>
+            </a>
             <a
               href={whatsappHref}
               target="_blank"

@@ -650,6 +650,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://medicalcaregermany.com/ar/libya-german-hospital</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://medicalcaregermany.com/ar/medical-visa-germany-libya/</loc>
     <changefreq>monthly</changefreq>

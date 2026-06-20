@@ -492,4 +492,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://berlingateway.de/de/unternehmen/pflege/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

@@ -102,36 +102,25 @@ async function startServer() {
   // ─────────────────────────────────────────────────────────────────────────
   // CANONICAL HOST ENFORCEMENT
   // Primary canonical: https://medicalcaregermany.com  (non-www, HTTPS)
-  // Rule 1: www → non-www  (301, direct, no chain)
+  // Rule 1: www → non-www  (301, fires first, before any other logic)
   // Rule 2: HTTP → HTTPS   (301, direct, no chain)
-  // Both rules fire independently so there is never a double-hop.
   // ─────────────────────────────────────────────────────────────────────────
   app.use((req, res, next) => {
     if (process.env.NODE_ENV !== 'production') return next();
 
-    // Resolve actual host: check BOTH x-forwarded-host AND Host header
-    // Some proxies send the original www host in x-forwarded-host
-    const forwardedHost = (req.headers['x-forwarded-host'] as string || '').split(',')[0].trim();
-    const rawHost = req.get('host') || '';
+    // www → non-www: check x-forwarded-host first (set by Manus proxy),
+    // then fall back to Host header. Split on comma to handle multi-value.
+    const host = ((req.headers['x-forwarded-host'] as string) || (req.headers['host'] as string) || '')
+      .split(',')[0].trim();
 
-    // Check www in either header — whichever is set
-    const effectiveHost = forwardedHost || rawHost;
-    const isWww = effectiveHost.startsWith('www.') ||
-                  rawHost.startsWith('www.') ||
-                  forwardedHost.startsWith('www.');
-
-    // Resolve actual protocol via x-forwarded-proto (set by Cloudflare)
-    const forwardedProto = (req.headers['x-forwarded-proto'] as string || '').split(',')[0].trim();
-    const protocol = forwardedProto || req.protocol;
-    const isHttp = protocol === 'http';
-
-    // www → non-www (single 301, preserves full path + query)
-    if (isWww) {
+    if (host.startsWith('www.')) {
       return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
     }
 
     // HTTP → HTTPS (single 301, preserves full path + query)
-    if (isHttp) {
+    const forwardedProto = ((req.headers['x-forwarded-proto'] as string) || '').split(',')[0].trim();
+    const protocol = forwardedProto || req.protocol;
+    if (protocol === 'http') {
       return res.redirect(301, `https://medicalcaregermany.com${req.url}`);
     }
 

@@ -44,7 +44,6 @@ import PediatricNeurology from "./pages/conditions/PediatricNeurology";
 import LungCancer from "./pages/conditions/LungCancer";
 import LungCancerArabic from "./pages/conditions/LungCancerArabic";
 import BreastCancer from "./pages/conditions/BreastCancer";
-import ProstateCancer from "./pages/conditions/ProstateCancer";
 import ProstateCancerArabic from "./pages/conditions/ProstateCancerArabic";
 import BreastCancerArabic from "./pages/conditions/BreastCancerArabic";
 import ColonCancerArabic from "./pages/conditions/ColonCancerArabic";
@@ -422,7 +421,6 @@ function Router() {
       <Route path={"/ar/send-medical-reports"} component={SendMedicalReportsArabic} />
       <Route path={"/ar/ارسال-التقارير-الطبية"} component={SendMedicalReportsArabic} />
       <Route path={"/breast-cancer-treatment-germany"} component={BreastCancer} />
-      <Route path={"/prostate-cancer-treatment-germany"} component={ProstateCancer} />
       <Route path={"/colon-cancer-treatment-germany"} component={ColonCancer} />
       <Route path={"/liver-cancer-treatment-germany"} component={LiverCancer} />
       <Route path={"/ar/prostate-cancer-treatment-germany"} component={ProstateCancerArabic} />

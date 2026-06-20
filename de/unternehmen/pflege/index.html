@@ -190,14 +190,10 @@
       font-weight: 700;
     }
 
-    .timeline-img {
-      width: 200px;
-      flex-shrink: 0;
-    }
-
-    .timeline-img img {
-      width: 100%;
-      border-radius: 8px;
+    .timeline-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     /* FOOTER */
@@ -221,9 +217,6 @@
       .timeline-item {
         flex-direction: column;
       }
-      .timeline-img {
-        width: 100%;
-      }
     }
   </style>
 </head>
@@ -241,7 +234,7 @@
         </div>
       </div>
       <div class="hero__img">
-        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1200" alt="Diverse Pflegekraft mit Senior">
+        <img src="/assets/images/hero-pflege.png" alt="Diverse Pflegekraft mit Senior">
       </div>
     </div>
   </section>
@@ -334,66 +327,48 @@
         <div class="timeline-item">
           <div class="timeline-num">1</div>
           <div class="timeline-content">
-            <div class="timeline-img"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80" alt="Bedarfsanalyse"></div>
-            <div class="timeline-text">
-              <h4>Bedarfsanalyse</h4>
-              <p>Wir definieren gemeinsam Ihre Anforderungen und die Anzahl der benötigten Kräfte.</p>
-            </div>
+            <h4>Bedarfsanalyse</h4>
+            <p>Wir definieren gemeinsam Ihre Anforderungen und die Anzahl der benötigten Kräfte.</p>
           </div>
         </div>
         
         <div class="timeline-item">
           <div class="timeline-num">2</div>
           <div class="timeline-content">
-            <div class="timeline-img"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=200&q=80" alt="Matching"></div>
-            <div class="timeline-text">
-              <h4>Matching & Interviews</h4>
-              <p>Wir präsentieren Ihnen vorselektierte Kandidaten für persönliche Online-Interviews.</p>
-            </div>
+            <h4>Matching & Interviews</h4>
+            <p>Wir präsentieren Ihnen vorselektierte Kandidaten für persönliche Online-Interviews.</p>
           </div>
         </div>
         
         <div class="timeline-item">
           <div class="timeline-num">3</div>
           <div class="timeline-content">
-            <div class="timeline-img"><img src="https://images.unsplash.com/photo-1454165833767-6216d494a023?auto=format&fit=crop&w=200&q=80" alt="Sprachausbildung"></div>
-            <div class="timeline-text">
-              <h4>Sprachausbildung</h4>
-              <p>Kandidaten absolvieren Intensivkurse im Heimatland bis zum erforderlichen Sprachniveau.</p>
-            </div>
+            <h4>Sprachausbildung</h4>
+            <p>Kandidaten absolvieren Intensivkurse im Heimatland bis zum erforderlichen Sprachniveau.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-num">4</div>
           <div class="timeline-content">
-            <div class="timeline-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=200&q=80" alt="Anerkennung"></div>
-            <div class="timeline-text">
-              <h4>Anerkennung & Visum</h4>
-              <p>Wir steuern den gesamten Prozess der Urkundenprüfung und Visumserteilung.</p>
-            </div>
+            <h4>Anerkennung & Visum</h4>
+            <p>Wir steuern den gesamten Prozess der Urkundenprüfung und Visumserteilung.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-num">5</div>
           <div class="timeline-content">
-            <div class="timeline-img"><img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=200&q=80" alt="Einreise"></div>
-            <div class="timeline-text">
-              <h4>Einreise & Onboarding</h4>
-              <p>Wir begleiten die Fachkraft bei der Ankunft und den ersten Schritten in Deutschland.</p>
-            </div>
+            <h4>Einreise & Onboarding</h4>
+            <p>Wir begleiten die Fachkraft bei der Ankunft und den ersten Schritten in Deutschland.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-num">6</div>
           <div class="timeline-content">
-            <div class="timeline-img"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=200&q=80" alt="Integration"></div>
-            <div class="timeline-text">
-              <h4>Langfristige Integration</h4>
-              <p>Kontinuierliche Betreuung für eine nachhaltige Bindung an Ihr Unternehmen.</p>
-            </div>
+            <h4>Langfristige Integration</h4>
+            <p>Kontinuierliche Betreuung für eine nachhaltige Bindung an Ihr Unternehmen.</p>
           </div>
         </div>
       </div>

@@ -111,6 +111,8 @@ export interface MedicalConditionPageProps {
     tag?: string;
     description?: string;
   }>;
+  /** Additional raw HTML sections inserted before faqSection */
+  additionalSections?: string;
   /** FAQ accordion shown after patientVideos and before relatedLinks */
   faqSection?: {
     title?: string;
@@ -188,6 +190,7 @@ export default function MedicalConditionPage({
   patientVideos,
   hideGlobalHeader,
   faqSection,
+  additionalSections,
   documentsSection,
   authoritySection,
   customCTA,
@@ -644,6 +647,10 @@ export default function MedicalConditionPage({
           </>
         )}
 
+        {/* Additional Sections — before FAQ */}
+        {additionalSections && (
+          <div dangerouslySetInnerHTML={{ __html: additionalSections }} />
+        )}
         {/* FAQ Section */}
         {faqSection && faqSection.items.length > 0 && (
           <>

@@ -16,6 +16,7 @@ const MEDICAL_CONDITIONS = [
   { label: "أورام المخ", href: "/ar/brain-tumor-treatment-germany" },
   { label: "القلب والأوعية الدموية", href: "/ar/cardiology-treatment-germany" },
   { label: "العظام والمفاصل", href: "/ar/orthopedics-germany" },
+  { label: "استبدال مفصل الركبة", href: "/ar/knee-replacement-germany" },
   { label: "إعادة التأهيل المتقدم", href: "/ar/advanced-rehabilitation-germany" },
   { label: "ألم العصب الخامس", href: "/ar/trigeminal-neuralgia-treatment-germany" },
   { label: "سرطان البروستاتا", href: "/ar/prostate-cancer-treatment-germany" },

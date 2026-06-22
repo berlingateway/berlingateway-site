@@ -767,6 +767,18 @@ export default function MedicalConditionPage({
               >
                 {customCTA.buttonLabel}
               </a>
+              {/* Tally iframe — embedded directly before note */}
+              <div style={{ background: '#f5f0e8', padding: '32px', borderRadius: '12px', margin: '24px 0' }}>
+                <iframe
+                  src="https://tally.so/embed/68MrBP?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy"
+                  width="100%"
+                  height={500}
+                  frameBorder={0}
+                  style={{ background: '#ffffff', borderRadius: '8px' }}
+                  title="ابدأ التقييم الطبي الآن"
+                />
+              </div>
               {customCTA.note && (
                 <p className="text-xs text-slate-400 mt-4">{customCTA.note}</p>
               )}
@@ -800,6 +812,18 @@ export default function MedicalConditionPage({
                   {resolvedCtaButton}
                 </Link>
               )}
+              {/* Tally iframe — embedded directly before GDPR note */}
+              <div style={{ background: '#f5f0e8', padding: '32px', borderRadius: '12px', margin: '24px 0' }}>
+                <iframe
+                  src="https://tally.so/embed/68MrBP?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy"
+                  width="100%"
+                  height={500}
+                  frameBorder={0}
+                  style={{ background: '#ffffff', borderRadius: '8px' }}
+                  title="ابدأ التقييم الطبي الآن"
+                />
+              </div>
               {/* GDPR note — explicit prop takes priority over sectionLabels footerNote */}
               {(gdprNote || footerNote) && (
                 <p className="text-xs text-slate-400 mt-4">{gdprNote ?? footerNote}</p>

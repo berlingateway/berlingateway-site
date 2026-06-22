@@ -82,7 +82,7 @@ const ALL_CLUSTERS: ClusterDef[] = [
     links: [
       { label: "الإصابات المعقدة في ألمانيا", href: "/ar/complex-trauma-germany" },
       { label: "إعادة التأهيل المتقدمة في ألمانيا", href: "/ar/advanced-rehabilitation-germany" },
-      { label: "الرأي الثاني في التصوير الطبي", href: "/ar/mri-second-opinion-germany" },
+      { label: "الرأي الثاني في التصوير الطبي", href: "https://tally.so/r/68MrBP" },
     ],
   },
   {

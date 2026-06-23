@@ -18,6 +18,7 @@ const MEDICAL_CONDITIONS = [
   { label: "العظام والمفاصل", href: "/ar/orthopedics-germany" },
   { label: "استبدال مفصل الركبة", href: "/ar/knee-replacement-germany" },
   { label: "استبدال مفصل الورك", href: "/ar/hip-replacement-germany" },
+  { label: "جراحة الكتف", href: "/ar/shoulder-surgery-germany" },
   { label: "إعادة التأهيل المتقدم", href: "/ar/advanced-rehabilitation-germany" },
   { label: "ألم العصب الخامس", href: "/ar/trigeminal-neuralgia-treatment-germany" },
   { label: "سرطان البروستاتا", href: "/ar/prostate-cancer-treatment-germany" },

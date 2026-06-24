@@ -250,16 +250,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://medicalcaregermany.com/send-medical-reports</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://medicalcaregermany.com/ar/send-medical-reports</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
 
   <url>
     <loc>https://medicalcaregermany.com/ar/treatment-costs-germany</loc>
@@ -278,11 +269,6 @@
   </url>
   <url>
     <loc>https://medicalcaregermany.com/ar/parkinsons-treatment-germany</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://medicalcaregermany.com/ar/neck-pain-dizziness</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -358,11 +344,6 @@
   </url>
   <url>
     <loc>https://medicalcaregermany.com/ar/colon-cancer-treatment-germany</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://medicalcaregermany.com/ar/second-opinion-germany</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

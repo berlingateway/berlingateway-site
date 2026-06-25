@@ -1044,6 +1044,13 @@ export default function ArabicHome() {
               أمراض وجراحة القلب المتقدمة
             </Link>
             <Link
+              href="/ar/checkup-germany"
+              className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              فحص شامل في ألمانيا ←
+            </Link>
+            <Link
               href="/ar/advanced-rehabilitation-germany"
               className="block py-5 px-4 text-sm font-medium text-center border border-slate-200 bg-white text-slate-700 hover:border-[#1E4A7A] hover:bg-blue-50 hover:text-[#1E4A7A] transition-all duration-200 col-span-2"
               style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}

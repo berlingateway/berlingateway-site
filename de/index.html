@@ -104,14 +104,215 @@
   </style>
 
   <!-- Structured Data -->
+  <!-- 1. Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "ProfessionalService",
+    "@id": "https://berlingateway.de/#organization",
     "name": "Berlin Gateway",
+    "alternateName": "BG Berlin Gateway",
     "url": "https://berlingateway.de/de/",
-    "logo": "https://berlingateway.de/assets/img/logo.png",
-    "description": "Zentrale Gateway für Fachkräfte in Deutschland. Experten für Anerkennung, Chancenkarte und Arbeitsmarktintegration."
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://berlingateway.de/assets/images/logo.png",
+      "width": 200,
+      "height": 60
+    },
+    "image": "https://berlingateway.de/assets/images/logo.png",
+    "description": "Berlin Gateway ist eine Einwanderungs- und Rekrutierungsberatung in Berlin, die arabischsprachige Fachkräfte bei der Einwanderung nach Deutschland unterstützt – von der Anerkennung ausländischer Abschlüsse bis zur Arbeitsvisum-Beantragung.",
+    "telephone": "+4915781497451",
+    "email": "info@berlingateway.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Berlin",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Deutschland"
+      },
+      {
+        "@type": "Country",
+        "name": "Libyen"
+      },
+      {
+        "@type": "Country",
+        "name": "Algerien"
+      },
+      {
+        "@type": "Country",
+        "name": "Marokko"
+      },
+      {
+        "@type": "Country",
+        "name": "Tunesien"
+      },
+      {
+        "@type": "Country",
+        "name": "Irak"
+      },
+      {
+        "@type": "Country",
+        "name": "Ägypten"
+      },
+      {
+        "@type": "Country",
+        "name": "Saudi-Arabien"
+      }
+    ],
+    "serviceType": [
+      "Einwanderungsberatung",
+      "Anerkennungsberatung",
+      "Fachkräftevermittlung",
+      "Visa-Beratung",
+      "Chancenkarte-Beratung"
+    ],
+    "knowsLanguage": ["de", "ar"],
+    "sameAs": [
+      "https://www.facebook.com/berlingateway"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Hamza Al-Ais"
+    },
+    "priceRange": "€€",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+  <!-- 2. WebSite Schema mit SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://berlingateway.de/#website",
+    "name": "Berlin Gateway",
+    "url": "https://berlingateway.de/",
+    "inLanguage": ["de", "ar"],
+    "description": "Einwanderungsberatung und Fachkräftevermittlung für arabischsprachige Fachkräfte in Deutschland",
+    "publisher": {
+      "@id": "https://berlingateway.de/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://berlingateway.de/de/suche?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- 3. WebPage Schema für /de/ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://berlingateway.de/de/#webpage",
+    "url": "https://berlingateway.de/de/",
+    "name": "Berlin Gateway – Einwanderung & Jobvermittlung für arabische Fachkräfte",
+    "description": "Ihr vertrauenswürdiger Partner für die Einwanderung nach Deutschland. Wir begleiten arabischsprachige Fachkräfte von der Anerkennung bis zum Arbeitsbeginn in Berlin und ganz Deutschland.",
+    "isPartOf": {
+      "@id": "https://berlingateway.de/#website"
+    },
+    "about": {
+      "@id": "https://berlingateway.de/#organization"
+    },
+    "inLanguage": "de",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://berlingateway.de/de/"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- 4. Service Schema – Hauptdienstleistungen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Einwanderungs- und Rekrutierungsberatung für arabische Fachkräfte",
+    "description": "Berlin Gateway unterstützt arabischsprachige Fachkräfte aus Nordafrika und dem Nahen Osten bei der qualifizierten Einwanderung nach Deutschland: Anerkennung ausländischer Abschlüsse, Arbeitsvisum, Chancenkarte, Jobvermittlung.",
+    "provider": {
+      "@id": "https://berlingateway.de/#organization"
+    },
+    "serviceType": "Einwanderungsberatung",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Deutschland"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://berlingateway.de/de/",
+      "servicePhone": "+4915781497451",
+      "availableLanguage": ["Deutsch", "Arabisch"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Unsere Leistungen",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Anerkennung ausländischer Abschlüsse",
+            "url": "https://berlingateway.de/de/anerkennung"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Chancenkarte Beratung",
+            "url": "https://berlingateway.de/ar/chancenkarte"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Voraussetzungen für die Einwanderung",
+            "url": "https://berlingateway.de/de/voraussetzungen"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Orientierung in Deutschland",
+            "url": "https://berlingateway.de/de/orientierung"
+          }
+        }
+      ]
+    }
   }
   </script>
 </head>

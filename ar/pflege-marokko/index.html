@@ -121,6 +121,18 @@
       .nav a:not(.nav-cta) { display: none; }
       .hero__cta-group { flex-direction: column; align-items: center; }
     }
+
+    /* CITIES SECTION */
+    .cities-section { padding: 64px 24px; background: #fff; }
+    .cities-section h2 { font-size: clamp(20px,3.5vw,28px); font-weight: 700; margin-bottom: 8px; }
+    .cities-section .fr { font-size: 14px; color: #9CA3AF; font-family: "Inter",sans-serif; font-style: italic; margin-bottom: 32px; display: block; }
+    .cities-group { margin-bottom: 28px; }
+    .cities-group__label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0B3B8C; margin-bottom: 12px; font-family: "Inter",sans-serif; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #F1F5F9; color: #374151; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #E2E8F0; }
+    .tag.hospital { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
+    .tag.institute { background: #F0FDF4; border-color: #BBF7D0; color: #166534; }
+
   </style>
 </head>
 <body>
@@ -240,6 +252,46 @@
   </div>
 </section>
 
+<!-- CITIES SECTION -->
+<section class="cities-section">
+  <div class="inner">
+    <h2>أين يعمل ممرضو المغرب في ألمانيا؟</h2>
+    <span class="fr">Où travaillent les infirmiers marocains en Allemagne ?</span>
+    
+    <div class="cities-group">
+      <div class="cities-group__label">المدن الكبرى · Grandes Villes</div>
+      <div class="tags">
+        <span class="tag">برلين · Berlin</span>
+        <span class="tag">ميونخ · Munich</span>
+        <span class="tag">هامبورغ · Hambourg</span>
+        <span class="tag">فرانكفورت · Francfort</span>
+        <span class="tag">كولونيا · Cologne</span>
+        <span class="tag">شتوتغارت · Stuttgart</span>
+      </div>
+    </div>
+
+    <div class="cities-group">
+      <div class="cities-group__label">مستشفيات شريكة · Hôpitaux Partenaires</div>
+      <div class="tags">
+        <span class="tag hospital">Charité Berlin</span>
+        <span class="tag hospital">Vivantes</span>
+        <span class="tag hospital">Helios Kliniken</span>
+        <span class="tag hospital">Asklepios</span>
+        <span class="tag hospital">Uniklinik München</span>
+      </div>
+    </div>
+
+    <div class="cities-group">
+      <div class="cities-group__label">معاهد اللغة · Instituts de Langue</div>
+      <div class="tags">
+        <span class="tag institute">Institut Français Maroc</span>
+        <span class="tag institute">Goethe-Institut Marokko</span>
+        <span class="tag institute">مراكز اللغة الألمانية المعتمدة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- STEPS -->
 <section class="section">
   <div class="inner">
@@ -288,8 +340,8 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>نعم، ألمانيا تعترف بالتكوين المهني في التمريض (3 سنوات) من المغرب. المهم هو محتوى التكوين وساعات التدريب العملي، وهو ما نقوم بتقييمه لك.</p>
-          <span class="fr-a">Oui, la formation professionnelle marocaine est reconnue si sie dure au moins 3 ans.</span>
+          <p>نعم، ألمانيا تعترف بالتكوين المهني في التمريض من المغرب. المهم هو محتوى التكوين وساعات التدريب العملي، وهو ما نقوم بتقييمه لك.</p>
+          <span class="fr-a">Oui, la formation professionnelle marocaine est reconnue sous certaines conditions.</span>
         </div>
       </div>
       <div class="faq-item">
@@ -299,7 +351,7 @@
         </button>
         <div class="faq-answer">
           <p>يمكننا البدء في تقييم ملفك وأنت في مستوى A2، لكن للسفر والعمل ستحتاج إلى شهادة B2 (أو B1 لبعض عقود التدريب).</p>
-          <span class="fr-a">Un niveau B2 est généralement requis für exercer en tant qu'infirmier certifié.</span>
+          <span class="fr-a">Un niveau B2 est généralement requis for exercer en tant qu'infirmier certifié.</span>
         </div>
       </div>
       <div class="faq-item">

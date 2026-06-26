@@ -121,6 +121,18 @@
       .nav a:not(.nav-cta) { display: none; }
       .hero__cta-group { flex-direction: column; align-items: center; }
     }
+
+    /* CITIES SECTION */
+    .cities-section { padding: 64px 24px; background: #fff; }
+    .cities-section h2 { font-size: clamp(20px,3.5vw,28px); font-weight: 700; margin-bottom: 8px; }
+    .cities-section .fr { font-size: 14px; color: #9CA3AF; font-family: "Inter",sans-serif; font-style: italic; margin-bottom: 32px; display: block; }
+    .cities-group { margin-bottom: 28px; }
+    .cities-group__label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0B3B8C; margin-bottom: 12px; font-family: "Inter",sans-serif; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #F1F5F9; color: #374151; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #E2E8F0; }
+    .tag.hospital { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
+    .tag.institute { background: #F0FDF4; border-color: #BBF7D0; color: #166534; }
+
   </style>
 </head>
 <body>
@@ -235,6 +247,46 @@
           <li><span class="check">✓</span> العمل كممرض معتمد فور الاعتراف</li>
           <li><span class="check">✓</span> دعم كامل من برلين غيتواي للملف</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITIES SECTION -->
+<section class="cities-section">
+  <div class="inner">
+    <h2>أين يعمل ممرضو تونس في ألمانيا؟</h2>
+    <span class="fr">Où travaillent les infirmiers tunisiens en Allemagne ?</span>
+    
+    <div class="cities-group">
+      <div class="cities-group__label">المدن الكبرى · Grandes Villes</div>
+      <div class="tags">
+        <span class="tag">برلين · Berlin</span>
+        <span class="tag">ميونخ · Munich</span>
+        <span class="tag">هامبورغ · Hambourg</span>
+        <span class="tag">فرانكفورت · Francfort</span>
+        <span class="tag">كولونيا · Cologne</span>
+        <span class="tag">شتوتغارت · Stuttgart</span>
+      </div>
+    </div>
+
+    <div class="cities-group">
+      <div class="cities-group__label">مستشفيات شريكة · Hôpitaux Partenaires</div>
+      <div class="tags">
+        <span class="tag hospital">Charité Berlin</span>
+        <span class="tag hospital">Vivantes</span>
+        <span class="tag hospital">Helios Kliniken</span>
+        <span class="tag hospital">Asklepios</span>
+        <span class="tag hospital">Uniklinik München</span>
+      </div>
+    </div>
+
+    <div class="cities-group">
+      <div class="cities-group__label">معاهد اللغة · Instituts de Langue</div>
+      <div class="tags">
+        <span class="tag institute">Goethe-Institut Tunis</span>
+        <span class="tag institute">ÖSD Tunis</span>
+        <span class="tag institute">مركز اللغة الألماني · DLC</span>
       </div>
     </div>
   </div>

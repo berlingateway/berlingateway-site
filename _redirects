@@ -1,34 +1,50 @@
-/de/index.html /de/ 301
-/de/index /de/ 301
-/ar/index.html /ar/ 301
-/ar/index /ar/ 301
-/impressum/ /de/impressum 301
-/en/assessment /de/assessment 301
-/en/chancenkarte.html /de/chancenkarte 301
-/de/anerkennung.html /de/anerkennung 301
+# Index pages
+/de/index.html          /de/             301
+/de/index               /de/             301
+/ar/index.html          /ar/             301
+/ar/index               /ar/             301
+/ar/index.html          /ar/             301
 
-# Global .html to clean URL cleanup
-/de/assessment.html /de/assessment 301
-/ar/assessment.html /ar/assessment 301
-/de/apply.html /de/apply 301
-/ar/apply.html /ar/apply 301
-/de/chancenkarte.html /de/chancenkarte 301
-/ar/chancenkarte.html /ar/chancenkarte 301
-/de/systemlogik.html /de/systemlogik 301
-/ar/systemlogik.html /ar/systemlogik 301
-/de/monitor.html /de/monitor 301
-/ar/monitor.html /ar/monitor 301
-/de/insights.html /de/insights 301
-/ar/insights.html /ar/insights 301
-/de/voraussetzungen.html /de/voraussetzungen 301
-/ar/voraussetzungen.html /ar/voraussetzungen 301
-/de/visa.html /de/visa 301
-/ar/visa.html /ar/visa 301
-/de/aerzte.html /de/aerzte 301
-/ar/aerzte.html /ar/aerzte 301
-/ar/إرسال-التقارير-الطبية.html /ar/إرسال-التقارير-الطبية 301
+# Impressum & misc
+/impressum/             /de/impressum/   301
+/comments/feed/         /               301
+/feed/                  /               301
 
-# Surgical Redirects - High Priority
-/de/framework /de/systemlogik 301
-/ar/framework /ar/systemlogik 301
-/de/insights/arbeit-in-deutschland /de/assessment 301
+# EN redirects
+/en/assessment          /de/assessment/  301
+/en/chancenkarte.html   /de/chancenkarte/ 301
+/en/monitor.html        /en/monitor/     301
+/en/systemlogic.html    /en/systemlogik/ 301
+
+# DE .html → clean URL with slash
+/de/anerkennung.html    /de/anerkennung/    301
+/de/assessment.html     /de/assessment/     301
+/de/apply.html          /de/apply/          301
+/de/chancenkarte.html   /de/chancenkarte/   301
+/de/systemlogik.html    /de/systemlogik/    301
+/de/monitor.html        /de/monitor/        301
+/de/insights.html       /de/insights/       301
+/de/voraussetzungen.html /de/voraussetzungen/ 301
+/de/visa.html           /de/visa/           301
+/de/aerzte.html         /de/aerzte/         301
+/de/orientierung.html   /de/orientierung/   301
+/de/framework.html      /de/framework/      301
+
+# AR .html → clean URL with slash
+/ar/assessment.html     /ar/assessment/     301
+/ar/apply.html          /ar/apply/          301
+/ar/chancenkarte.html   /ar/chancenkarte/   301
+/ar/systemlogik.html    /ar/systemlogik/    301
+/ar/monitor.html        /ar/monitor/        301
+/ar/insights.html       /ar/insights/       301
+/ar/voraussetzungen.html /ar/voraussetzungen/ 301
+/ar/visa.html           /ar/visa/           301
+/ar/aerzte.html         /ar/aerzte/         301
+/ar/framework.html      /ar/systemlogik/    301
+/ar/eligibility.html    /ar/chancenkarte/   301
+/ar/إرسال-التقارير-الطبية.html /ar/إرسال-التقارير-الطبية/ 301
+
+# Framework → Systemlogik (surgical)
+/de/framework           /de/systemlogik/    301
+/ar/framework           /ar/systemlogik/    301
+/de/insights/arbeit-in-deutschland /de/assessment/ 301

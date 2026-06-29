@@ -127,24 +127,6 @@ async function startServer() {
     next();
   });
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // TRAILING SLASH REMOVAL — 301 redirect for all non-root paths
-  // e.g. /prostate-cancer-treatment-germany/ → /prostate-cancer-treatment-germany
-  // e.g. /ar/treatment-germany-saudi/ → /ar/treatment-germany-saudi
-  // Exceptions: root paths exactly equal to '/' are left as-is
-  // ─────────────────────────────────────────────────────────────────────────
-  app.use((req, res, next) => {
-    const pathname = req.path;
-    // Only strip trailing slash if path is longer than '/' and ends with '/'
-    if (pathname.length > 1 && pathname.endsWith('/')) {
-      // Preserve query string if present
-      const qs = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
-      const cleanPath = pathname.slice(0, -1) + qs;
-      return res.redirect(301, cleanPath);
-    }
-    next();
-  });
-
   // Security Headers Middleware (Production-Grade)
   app.use((req, res, next) => {
     // HSTS - Force HTTPS for 1 year, include subdomains, allow preload

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link rel="canonical" href="https://berlingateway.de/ar/insights/gefragte-berufe">
+  <meta charset="utf-8" />
+  <title>المهن المطلوبة في ألمانيا 2026 | قائمة الوظائف الأكثر طلباً</title>
+  <meta name="description" content="تعرف على أكثر المهن طلباً في ألمانيا لعام 2026. فرص عمل في تكنولوجيا المعلومات، الهندسة، الرعاية الصحية، والحرف اليدوية للكفاءات الدولية." />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/insights/gefragte-berufe">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/insights/gefragte-berufe">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/insights/gefragte-berufe">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/app.css" />
+
+  <style>
+    :root {
+      --primary-blue: #0B3B8C;
+      --accent-blue: #3b82f6;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+    }
+
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .hero-compact {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 100px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-compact .badge {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .hero-compact h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .hero-compact p {
+      font-size: clamp(18px, 2vw, 20px);
+      max-width: 800px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .job-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-card .icon { font-size: 32px; margin-bottom: 16px; }
+    .job-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--primary-blue); }
+    .job-card p { font-size: 15px; color: var(--text-muted); margin-bottom: 16px; }
+    .job-card .salary-tag {
+      display: inline-block;
+      background: var(--bg-light);
+      color: var(--primary-blue);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .info-box {
+      background: var(--bg-light);
+      border-radius: 24px;
+      padding: 40px;
+      margin: 60px 0;
+      border-right: 6px solid var(--accent-blue);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: white;
+      color: var(--primary-blue);
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #f1f5f9;
+      transform: scale(1.02);
+    }
+
+    /* === جدول المهن === */
+    .professions-table-wrap {
+      overflow-x: auto;
+      margin: 40px 0;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .professions-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .professions-table thead tr {
+      background: #0B1F3A;
+      color: white;
+    }
+
+    .professions-table th {
+      padding: 16px 20px;
+      text-align: right;
+      font-weight: 600;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .professions-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+
+    .professions-table tr:last-child td { border-bottom: none; }
+    .professions-table tr:nth-child(even) { background: #f8fafc; }
+
+    .demand-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .demand-high { background: #dcfce7; color: #15803d; }
+    .demand-very-high { background: #fef3c7; color: #b45309; }
+    .demand-critical { background: #fee2e2; color: #b91c1c; }
+
+    .anerkennung-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .aner-required { background: #ede9fe; color: #6d28d9; }
+    .aner-partial { background: #e0f2fe; color: #0369a1; }
+    .aner-none { background: #f0fdf4; color: #15803d; }
+
+    .profession-name { font-weight: 600; color: #0B1F3A; }
+    .salary-cell { font-weight: 700; color: #0B3B8C; white-space: nowrap; }
+
+    /* === FAQ === */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      font-size: 15px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      background: white;
+    }
+
+    .faq-answer.open { display: block; }
+    .faq-toggle { transition: transform 0.2s; font-size: 12px; }
+    .faq-toggle.open { transform: rotate(180deg); }
+
+    /* === روابط داخلية === */
+    .internal-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .internal-link-card {
+      display: block;
+      background: white;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+
+    .internal-link-card:hover { border-color: var(--primary-blue); }
+    .internal-link-card .link-label { font-size: 11px; color: var(--primary-blue); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .internal-link-card .link-title { font-size: 14px; color: #0B1F3A; font-weight: 600; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "المهن المطلوبة في ألمانيا 2026: دليل الكفاءات الدولية",
+    "description": "قائمة شاملة بأكثر المهن طلباً في ألمانيا لعام 2026، تشمل تكنولوجيا المعلومات، الهندسة، والتمريض.",
+    "author": { "@type": "Organization", "name": "Berlin Gateway" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Berlin Gateway",
+      "logo": { "@type": "ImageObject", "url": "https://berlingateway.de/assets/img/logo.png" }
+    },
+    "datePublished": "2026-05-19",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://berlingateway.de/ar/insights/gefragte-berufe" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي أكثر المهن طلباً في ألمانيا 2026؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "أكثر المهن طلباً هي: الممرضون، أطباء الأسنان، مهندسو البرمجيات، فنيو الكهرباء، ومهندسو الميكانيكا. ألمانيا تعاني من نقص يتجاوز 400,000 وظيفة سنوياً في هذه القطاعات."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل أحتاج إلى الاعتراف المهني للعمل في ألمانيا؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "يعتمد ذلك على المهنة. المهن المنظمة مثل الطب والتمريض والصيدلة تتطلب اعترافاً رسمياً إلزامياً. المهن غير المنظمة مثل تطوير البرمجيات والمحاسبة لا تتطلب اعترافاً رسمياً."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم الراتب المتوقع للكفاءات الأجنبية في ألمانيا؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "يتراوح الراتب بين 38,000 و 90,000 يورو سنوياً حسب المهنة والخبرة. الأطباء والمهندسون يحصلون على أعلى الرواتب، بينما مهن الرعاية الصحية تبدأ من 38,000 يورو."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكن العمل في ألمانيا بدون اللغة الألمانية؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "في بعض مجالات تكنولوجيا المعلومات نعم، لكن معظم المهن تتطلب مستوى B1 على الأقل. الأطباء والممرضون يحتاجون مستوى B2 oder C1. تعلم الألمانية يضاعف فرصك الوظيفية بشكل كبير."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي بطاقة الفرص وكيف تساعدني في الحصول على عمل؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "بطاقة الفرص (Chancenkarte) تتيح لك الدخول إلى ألمانيا للبحث عن عمل لمدة سنة دون الحاجة لعقد عمل مسبق. تعتمد على نظام نقاط يأخذ بعين الاعتبار المؤهل والخبرة والعمر واللغة."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- TOP BAND -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+        </div>
+        <div class="top-band__right">
+            <a href="/de/insights/gefragte-berufe" class="lang-switch">Deutsch</a>
+            <span class="status-badge">تحديثات 2026</span>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/ar/" class="brand">Berlin Gateway</a>
+        <nav class="nav">
+            <a href="/ar/success-stories">قصص حقيقية</a>
+            <a href="/ar/العمل-في-ألمانيا" class="nav-link">العمل</a>
+            <a href="/ar/تأشيرة-ألمانيا" class="nav-link">التأشيرة</a>
+            <a href="/ar/assessment" class="nav-link">التقييم</a>
+            <a href="/ar/monitor" class="nav-link">المرصد</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero-compact">
+    <div class="container">
+      <span class="badge">سوق العمل الألماني – تحليل 2026</span>
+      <h1>المهن المطلوبة في ألمانيا:<br>أين توجد أفضل فرصك؟</h1>
+      <p>تواجه ألمانيا نقصاً في العمالة الماهرة يتجاوز 400,000 وظيفة سنوياً. اكتشف القطاعات التي تبحث عن خبراتك الآن.</p>
+      <a href="/ar/assessment" class="btn-primary">تحقق من فرصك المهنية ←</a>
+    </div>
+  </section>
+
+  <div class="container" style="padding: 60px 20px;">
+
+    <!-- القطاعات الأربعة -->
+    <h2 style="font-size:32px;font-weight:800;color:#000;margin-bottom:40px;text-align:center;">أهم 5 قطاعات تبحث عن كفاءات</h2>
+
+    <div class="content-grid">
+      <div class="job-card">
+        <div class="icon">💻</div>
+        <h3>تكنولوجيا المعلومات (IT)</h3>
+        <p>مطلوب مطورو برمجيات، خبراء أمن سيبراني، ومهندسو سحابة. الشركات الألمانية تتبنى التحول الرقمي بسرعة فائقة.</p>
+        <span class="salary-tag">متوسط الدخل: €55k - €85k</span>
+      </div>
+      <div class="job-card">
+        <div class="icon">⚙️</div>
+        <h3>الهندسة والتقنية</h3>
+        <p>المهندسون الميكانيكيون والكهربائيون، خاصة في مجالات الطاقة المتجددة وصناعة السيارات الكهربائية.</p>
+        <span class="salary-tag">متوسط الدخل: €58k - €82k</span>
+      </div>
+      <div class="job-card">
+        <div class="icon">🏥</div>
+        <h3>الرعاية الصحية</h3>
+        <p>نقص حاد في الممرضين، الأطباء، والمتخصصين في رعاية المسنين. إجراءات الاعتراف المهني أصبحت أسرع.</p>
+        <span class="salary-tag">متوسط الدخل: €38k - €55k</span>
+      </div>
+      <div class="job-card">
+        <div class="icon">🏗️</div>
+        <h3>الحرف الماهرة</h3>
+        <p>الكهربائيون، الفنيون، وخبراء التدفئة والتبريد. الحرف اليدوية في ألمانيا مهن محترمة وذات دخل ممتاز.</p>
+        <span class="salary-tag">متوسط الدخل: €40k - €60k</span>
+      </div>
+    </div>
+
+    <!-- === جدول المهن الشامل === -->
+    <h2 style="font-size:28px;font-weight:800;margin:60px 0 24px;text-align:center;">جدول المهن المطلوبة — الأرقام الحقيقية 2026</h2>
+    <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;font-size:15px;">20 مهنة مع الرواتب المتوقعة وحالة الطلب.</p>
+
+    <div class="professions-table-wrap">
+      <table class="professions-table">
+        <thead>
+          <tr>
+            <th>المهنة / التخصص</th>
+            <th>الراتب المتوقع (سنوي)</th>
+            <th>حالة الطلب</th>
+            <th>الاعتراف المهني</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="profession-name">أطباء الأسنان (Zahnärzte)</td>
+            <td class="salary-cell">€75,000 - €120,000</td>
+            <td><span class="demand-badge demand-critical">حرج جداً</span></td>
+            <td><span class="anerkennung-badge aner-required">إلزامي (Approbation)</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">مهندسو البرمجيات (Software Engineers)</td>
+            <td class="salary-cell">€60,000 - €95,000</td>
+            <td><span class="demand-badge demand-very-high">مرتفع جداً</span></td>
+            <td><span class="anerkennung-badge aner-none">غير مطلوب غالباً</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">الممرضون المتخصصون (Fachpfleger)</td>
+            <td class="salary-cell">€42,000 - €58,000</td>
+            <td><span class="demand-badge demand-critical">حرج جداً</span></td>
+            <td><span class="anerkennung-badge aner-required">إلزامي (Urkunde)</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">مهندسو الميكانيكا (Maschinenbau)</td>
+            <td class="salary-cell">€58,000 - €85,000</td>
+            <td><span class="demand-badge demand-high">مرتفع</span></td>
+            <td><span class="anerkennung-badge aner-partial">موصى به</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">المحاسبون والماليون (Accounting)</td>
+            <td class="salary-cell">€45,000 - €70,000</td>
+            <td><span class="demand-badge demand-high">مرتفع</span></td>
+            <td><span class="anerkennung-badge aner-none">غير مطلوب</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">فنيو الكهرباء (Elektroniker)</td>
+            <td class="salary-cell">€40,000 - €55,000</td>
+            <td><span class="demand-badge demand-very-high">مرتفع جداً</span></td>
+            <td><span class="anerkennung-badge aner-required">إلزامي للعمل المستقل</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">الصيادلة (Apotheker)</td>
+            <td class="salary-cell">€55,000 - €75,000</td>
+            <td><span class="demand-badge demand-very-high">مرتفع جداً</span></td>
+            <td><span class="anerkennung-badge aner-required">إلزامي</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">محللو البيانات (Data Analysts)</td>
+            <td class="salary-cell">€55,000 - €80,000</td>
+            <td><span class="demand-badge demand-high">مرتفع</span></td>
+            <td><span class="anerkennung-badge aner-none">غير مطلوب</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">المعلمون (Lehrer - MINT)</td>
+            <td class="salary-cell">€50,000 - €70,000</td>
+            <td><span class="demand-badge demand-critical">حرج جداً</span></td>
+            <td><span class="anerkennung-badge aner-required">إلزامي</span></td>
+          </tr>
+          <tr>
+            <td class="profession-name">سائقو الشاحنات (LKW-Fahrer)</td>
+            <td class="salary-cell">€32,000 - €45,000</td>
+            <td><span class="demand-badge demand-very-high">مرتفع جداً</span></td>
+            <td><span class="anerkennung-badge aner-partial">تبديل الرخصة</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- INFO BOX -->
+    <div class="info-box">
+      <h3 style="margin-bottom:16px;">هل مهنتك مطلوبة ولكنك تفتقد لعقد عمل؟</h3>
+      <p style="margin-bottom:24px;">قانون الهجرة الجديد (2026) يوفر حلولاً مبتكرة مثل <strong>بطاقة الفرصة (Chancenkarte)</strong> التي تتيح لك البحث عن عمل داخل ألمانيا لمدة عام كامل بناءً على نظام النقاط.</p>
+      <a href="/ar/chancenkarte" class="btn-primary" style="background:var(--primary-blue);color:white;">اكتشف بطاقة الفرصة ←</a>
+    </div>
+
+    <!-- FAQ -->
+    <h2 style="font-size:28px;font-weight:800;margin:60px 0 32px;text-align:center;">أسئلة شائعة حول المهن في ألمانيا</h2>
+    <div class="faq-list" style="max-width:800px;margin:0 auto;">
+      <div class="faq-item">
+        <div class="faq-question">ما هي المهن التي لا تتطلب لغة ألمانية قوية؟ <span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">بشكل أساسي وظائف البرمجة وتكنولوجيا المعلومات في الشركات الدولية الناشئة في مدن مثل برلين وميونيخ. ومع ذلك، يظل تعلم اللغة الألمانية مفتاحاً أساسياً للاندماج والترقية المهنية.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">كيف أبدأ إجراءات الاعتراف بشهادتي؟ <span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">الخطوة الأولى هي تحديد الجهة المسؤولة عن مهنتك في الولاية التي ترغب بالعمل فيها. يمكنك استخدام أداة "Anerkennung in Deutschland" أو التواصل معنا لنقوم بإدارة الملف نيابة عنك.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">هل الخبرة العملية تعوض عن الشهادة الجامعية؟ <span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">نعم، خاصة في قطاع تكنولوجيا المعلومات. القانون الجديد يسمح للمتخصصين ذوي الخبرة الطويلة (3 سنوات فأكثر) بالهجرة حتى بدون شهادة جامعية معترف بها، بشرط وجود عقد عمل براتب محدد.</div>
+      </div>
+    </div>
+
+    <!-- روابط داخلية -->
+    <div style="margin-top:80px; padding-top:40px; border-top:1px solid #e2e8f0;">
+      <h3 style="font-size:18px; font-weight:700; margin-bottom:20px;">روابط ذات صلة</h3>
+      <div class="internal-links-grid">
+        <a href="/ar/insights/راتب-مبرمج-ألمانيا" class="internal-link-card">
+          <div class="link-label">رواتب</div>
+          <div class="link-title">دليل رواتب المبرمجين ←</div>
+        </a>
+        <a href="/ar/insights/راتب-صيدلاني-ألمانيا" class="internal-link-card">
+          <div class="link-label">رواتب</div>
+          <div class="link-title">دليل رواتب الصيادلة ←</div>
+        </a>
+        <a href="/ar/insights/راتب-محاسب-ألمانيا" class="internal-link-card">
+          <div class="link-label">رواتب</div>
+          <div class="link-title">دليل رواتب المحاسبين ←</div>
+        </a>
+        <a href="/ar/anerkennung" class="internal-link-card">
+          <div class="link-label">الإجراءات</div>
+          <div class="link-title">الاعتراف بالشهادات ←</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer" style="background:#0f172a; color:white; padding:60px 20px; text-align:center; margin-top:80px;">
+  <div class="container">
+    <p style="font-weight:700; font-size:20px; margin-bottom:12px;">Berlin Gateway</p>
+    <p style="opacity:0.7; font-size:14px; margin-bottom:32px;">شريكك الموثوق للعمل والهجرة إلى ألمانيا.</p>
+    <div style="margin-bottom:32px;">
+      <a href="/ar/" style="color:white; margin:0 12px; text-decoration:none; font-size:14px;">الرئيسية</a>
+      <a href="/ar/insights" style="color:white; margin:0 12px; text-decoration:none; font-size:14px;">Germany Insider</a>
+      <a href="/de/impressum" style="color:white; margin:0 12px; text-decoration:none; font-size:14px;">Impressum</a>
+    </div>
+    <p style="opacity:0.4; font-size:12px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const toggle = q.querySelector('.faq-toggle');
+      answer.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

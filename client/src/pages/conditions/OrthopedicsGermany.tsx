@@ -312,9 +312,9 @@ export default function OrthopedicsGermany() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "علاج العظام والمفاصل في ألمانيا — تنسيق الحالات الجراحية المعقدة | Medical Care Germany";
+    document.title = "طب العظام والمفاصل في ألمانيا | Medical Care Germany";
     const descContent =
-      "تنسيق متخصص لحالات العظام والمفاصل في ألمانيا: كسور معقدة، زراعة مفاصل، تآكل المفاصل، إصابات الحوادث والحروب، وإعادة التأهيل. للمرضى من ليبيا والسودان والعراق ودول الخليج.";
+      "تنسيق طبي متكامل في تخصص العظام والمفاصل في ألمانيا — جراحة، تأهيل، ورأي طبي ثانٍ من أفضل المستشفيات الجامعية.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

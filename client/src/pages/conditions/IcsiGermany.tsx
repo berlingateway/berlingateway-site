@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
@@ -9,6 +10,18 @@ const WA_HREF = "https://wa.me/4915781497451?text=" + encodeURIComponent("مرح
 const intakeHref = "https://tally.so/r/68MrBP";
 
 export default function IcsiGermany() {
+  useEffect(() => {
+    document.title = "ICSI في ألمانيا | حقن الحيوان المنوي في برلين";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "تقنية ICSI لعلاج العقم عند الرجل في ألمانيا — نوصلك بأفضل أطباء الخصوبة في المستشفيات الجامعية الألمانية.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "تقنية ICSI لعلاج العقم عند الرجل في ألمانيا — نوصلك بأفضل أطباء الخصوبة في المستشفيات الجامعية الألمانية.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
       <SmartNavLayer currentPath="/ar/icsi-germany" />

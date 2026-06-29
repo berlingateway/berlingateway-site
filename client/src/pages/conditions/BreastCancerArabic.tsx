@@ -98,9 +98,9 @@ export default function BreastCancerArabic() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "سرطان الثدي في ألمانيا | تقييم متخصص وخيارات العلاج";
+    document.title = "علاج سرطان الثدي في ألمانيا | مراكز متخصصة في برلين";
     const descContent =
-      "تقييم حالات سرطان الثدي مع أساتذة متخصصين في المستشفيات الجامعية الألمانية. نخدم المريضات من ليبيا والجزائر والسعودية والعراق. رد خلال 24 ساعة.";
+      "علاج سرطان الثدي في ألمانيا بأعلى معدلات الشفاء — فريق متكامل من الجراحة والأورام والأشعة. نرتب تقييمك الطبي.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

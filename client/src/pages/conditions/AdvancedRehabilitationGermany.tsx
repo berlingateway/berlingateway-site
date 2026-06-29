@@ -182,9 +182,9 @@ export default function AdvancedRehabilitationGermany() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "إعادة التأهيل المتقدم في ألمانيا — المحور المركزي للتعافي | Medical Care Germany";
+    document.title = "إعادة التأهيل المتقدمة في ألمانيا | برلين وأفضل المراكز";
     const descContent =
-      "تنسيق مسارات إعادة التأهيل المتقدم في ألمانيا للحالات المعقدة — إصابات الحرب، الأطراف الصناعية، التأهيل العصبي، الحبل الشوكي، والتقييم الطبي الثاني. للمرضى من ليبيا والسودان والعراق ودول الخليج.";
+      "مراكز إعادة التأهيل في ألمانيا توفر أعلى مستويات العلاج الطبيعي والتأهيل العصبي والحركي — نرتب إقامتك التأهيلية.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

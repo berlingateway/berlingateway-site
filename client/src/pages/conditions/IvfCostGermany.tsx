@@ -1,9 +1,22 @@
+import { useEffect } from "react";
 import { SymptomPage } from "../symptoms/_SymptomPageTemplate";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
 
 
 export default function IvfCostGermany() {
+  useEffect(() => {
+    document.title = "تكلفة أطفال الأنابيب في ألمانيا | أرقام حقيقية 2025";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "تكلفة IVF في ألمانيا تتراوح بين 3000 و6000 يورو للدورة الواحدة — نوفر لك تقديراً دقيقاً لتكاليف علاج العقم في برلين.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "تكلفة IVF في ألمانيا تتراوح بين 3000 و6000 يورو للدورة الواحدة — نوفر لك تقديراً دقيقاً لتكاليف علاج العقم في برلين.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <>
       <SmartNavLayer currentPath="/ar/ivf-germany" />

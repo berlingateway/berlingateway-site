@@ -98,9 +98,9 @@ export default function ColonCancerArabic() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "سرطان القولون في ألمانيا | جراحة متخصصة وتقييم شامل";
+    document.title = "علاج سرطان القولون في ألمانيا | برلين وأفضل المستشفيات";
     const descContent =
-      "تقييم وعلاج سرطان القولون في المستشفيات الجامعية الألمانية. جراحة روبوتية دافنشي وبروتوكولات علاجية متقدمة. نخدم المرضى من ليبيا والعراق والسعودية. رد خلال 24 ساعة.";
+      "سرطان القولون يحتاج فريقاً متكاملاً — نوفر لك الوصول لأفضل أطباء الأورام وجراحي الجهاز الهضمي في ألمانيا.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

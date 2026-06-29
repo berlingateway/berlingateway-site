@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { SymptomPage } from "./_SymptomPageTemplate";
 
 const PARKINSONS_FAQ_JSONLD = {
@@ -32,6 +33,18 @@ const PARKINSONS_FAQ_JSONLD = {
 };
 
 export default function ParkinsonsTreatmentGermany() {
+  useEffect(() => {
+    document.title = "علاج الباركنسون في ألمانيا | أحدث البروتوكولات في برلين";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "علاج مرض باركنسون في ألمانيا — تقييم متخصص، تعديل العلاج الدوائي، وتقييم التدخلات الجراحية كـ DBS في أفضل المراكز.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "علاج مرض باركنسون في ألمانيا — تقييم متخصص، تعديل العلاج الدوائي، وتقييم التدخلات الجراحية كـ DBS في أفضل المراكز.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <SymptomPage
       heroTitle="رعاش مستمر وتصلب في الحركة بدون تحسن واضح؟"

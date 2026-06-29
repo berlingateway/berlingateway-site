@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
@@ -11,6 +12,18 @@ const WA =
   );
 
 export default function MaleInfertility() {
+  useEffect(() => {
+    document.title = "علاج العقم عند الرجل في ألمانيا | تقييم دقيق في برلين";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "تشخيص وعلاج العقم عند الرجل في ألمانيا — تحليل شامل للحيوانات المنوية وخيارات العلاج الجراحي والهرموني.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "تشخيص وعلاج العقم عند الرجل في ألمانيا — تحليل شامل للحيوانات المنوية وخيارات العلاج الجراحي والهرموني.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
       <SmartNavLayer currentPath="/ar/male-infertility-germany" />

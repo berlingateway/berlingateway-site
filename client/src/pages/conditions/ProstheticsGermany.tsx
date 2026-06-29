@@ -43,10 +43,10 @@ export default function ProstheticsGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/prosthetics-germany" />
       <HreflangTags currentPath="/ar/prosthetics-germany" />
-      <title>الأطراف الصناعية في ألمانيا | تنسيق التأهيل الحركي المتقدم</title>
+      <title>الأطراف الاصطناعية في ألمانيا | أحدث التقنيات في برلين</title>
       <meta
         name="description"
-        content="تنسيق متخصص لتركيب الأطراف الصناعية المتقدمة في ألمانيا — الأطراف الروبوتية، إعادة التأهيل الحركي، وإدارة الألم بعد البتر."
+        content="الأطراف الاصطناعية والمساعدات التعويضية في ألمانيا بأحدث التقنيات — نرتب تقييمك وتركيب الطرف المناسب لحالتك."
       />
 
       {/* HERO */}

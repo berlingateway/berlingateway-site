@@ -232,12 +232,12 @@ export default function TinnitusTreatmentGermany() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "علاج الطنين وطنين الأذن في ألمانيا | Medical Care Germany";
+    document.title = "علاج طنين الأذن في ألمانيا | تشخيص دقيق في برلين";
 
     const desc = document.querySelector('meta[name="description"]');
     if (desc) {
       desc.setAttribute("content",
-        "تقييم وعلاج الطنين المزمن والطنين النابض في ألمانيا — تنسيق متخصص للمرضى الدوليين من ليبيا والسودان ودول الخليج. تشخيص HNO + سمعيات + أعصاب + MRI."
+        "طنين الأذن المزمن يحتاج تشخيصاً دقيقاً — نوصلك بأفضل متخصصي الأذن في ألمانيا لاكتشاف السبب ووضع خطة العلاج."
       );
     }
 

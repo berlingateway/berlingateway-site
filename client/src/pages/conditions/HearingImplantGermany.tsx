@@ -50,10 +50,10 @@ export default function HearingImplantGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/hearing-implant-germany" />
       <HreflangTags currentPath="/ar/hearing-implant-germany" />
-      <title>زراعة القوقعة وضعف السمع في ألمانيا | تقييم وتنسيق</title>
+      <title>زراعة الأذن في ألمانيا | القوقعة وزراعة السمع في برلين</title>
       <meta
         name="description"
-        content="تقييم وتنسيق حالات ضعف السمع وزراعة القوقعة الإلكترونية في ألمانيا — فقدان السمع الشديد، الصدمات، الخلقي، وإعادة التأهيل السمعي."
+        content="زراعة القوقعة والأجهزة السمعية المزروعة في ألمانيا — مراكز متخصصة بأعلى معدلات النجاح. نرتب تقييمك السمعي."
       />
 
       <section style={{ background: "#0B1C2C", padding: "72px 24px 64px", textAlign: "center" }}>

@@ -13,8 +13,8 @@ export default function HerniatedDisc() {
       <MedicalConditionPage
       pageDir="rtl"
       hideGlobalHeader={true}
-      metaTitle="علاج الانزلاق الغضروفي في ألمانيا | ميديكال كير جيرماني"
-      metaDescription="تقييم متخصص للانزلاق الغضروفي في ألمانيا — بين العلاج التحفظي والجراحة الميكروسكوبية. نحدد المسار الأكثر أماناً لاستعادة حركتك بدون ألم."
+      metaTitle="علاج الانزلاق الغضروفي في ألمانيا | تشخيص دقيق في برلين"
+      metaDescription="إذا كنت تعاني من ألم الانزلاق الغضروفي ولم تجد حلاً، نوفر لك رأياً طبياً ثانياً من متخصصي العمود الفقري في ألمانيا."
       canonicalPath="/ar/herniated-disc"
       navBrandName="ميديكال كير جيرماني"
       navLabels={{

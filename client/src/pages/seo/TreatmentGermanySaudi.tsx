@@ -10,8 +10,8 @@ export default function TreatmentGermanySaudi() {
       <SmartNavLayer currentPath="/ar/treatment-germany-saudi" />
       <HreflangTags currentPath="/ar/treatment-germany-saudi" />
       <GeoPage
-        metaTitle="العلاج في ألمانيا للمقيمين في السعودية | Medical Care Germany"
-        metaDescription="علاج المخ والأعصاب والأورام في ألمانيا للمقيمين في الرياض وجدة والدمام والمدينة المنورة. بروفيسورات ألمان وأكبر المستشفيات الجامعية منذ 2012."
+        metaTitle="العلاج في ألمانيا للمرضى السعوديين | Medical Care Germany"
+        metaDescription="تنسيق طبي متخصص للمرضى السعوديين في ألمانيا — مواعيد سريعة في المستشفيات الجامعية وخدمة عربية متكاملة من برلين."
         canonicalUrl={CANONICAL}
         breadcrumb={[
           { label: "الرئيسية", href: "/ar" },

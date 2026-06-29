@@ -53,8 +53,8 @@ export default function PediatricSurgeryGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/pediatric-surgery-germany" />
       <HreflangTags currentPath="/ar/pediatric-surgery-germany" />
-      <title>جراحة الأطفال في ألمانيا | تقييم الحالات الجراحية المعقدة</title>
-      <meta name="description" content="تنسيق متخصص لجراحة الأطفال في ألمانيا — الحالات الجراحية المعقدة، التشوهات الخلقية، الجراحة التصحيحية، والتقييم قبل الجراحة." />
+      <title>جراحة الأطفال في ألمانيا | مراكز متخصصة في برلين</title>
+      <meta name="description" content="جراحة الأطفال في ألمانيا بأعلى درجات الدقة والأمان — نرتب مواعيد الأطفال في أفضل أقسام جراحة الأطفال الجامعية." />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section style={{ background: "#0B1C2C", padding: "80px 24px 72px", textAlign: "center" }}>

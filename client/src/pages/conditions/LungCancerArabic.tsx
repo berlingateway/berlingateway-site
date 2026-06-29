@@ -15,8 +15,8 @@ export default function LungCancerArabic() {
       <HreflangTags currentPath="/ar/lung-cancer-treatment-germany" />
       <MedicalConditionPage
         pageDir="rtl"
-        metaTitle="علاج سرطان الرئة في ألمانيا | ميديكال كير جيرماني"
-        metaDescription="تقييم طبي متخصص لحالات سرطان الرئة ضمن شبكة المستشفيات الجامعية في ألمانيا. تشخيص دقيق بتقنيات PET-CT والفحوصات الجينية، ومسار علاجي منظم."
+        metaTitle="علاج سرطان الرئة في ألمانيا | تقييم أورامي متخصص"
+        metaDescription="علاج سرطان الرئة في ألمانيا بأحدث الأساليب — جراحة، إشعاع، وعلاج مناعي. نوصلك لأفضل المراكز الأورامية الجامعية."
         canonicalPath="/ar/lung-cancer-treatment-germany"
 
         navBrandName="ميديكال كير جيرماني"

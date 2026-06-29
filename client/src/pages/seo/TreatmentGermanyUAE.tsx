@@ -10,8 +10,8 @@ export default function TreatmentGermanyUAE() {
       <SmartNavLayer currentPath="/ar/treatment-germany-uae" />
       <HreflangTags currentPath="/ar/treatment-germany-uae" />
       <GeoPage
-        metaTitle="العلاج في ألمانيا من الإمارات | Medical Care Germany"
-        metaDescription="علاج الأورام والأعصاب والعمود الفقري في ألمانيا للمقيمين في دبي وأبوظبي والشارقة. بروفيسورات ألمان وأكبر المستشفيات الجامعية. نعمل مع المواطنين والوافدين العرب."
+        metaTitle="العلاج في ألمانيا للمرضى الإماراتيين | Medical Care Germany"
+        metaDescription="نساعد المرضى من الإمارات في الحصول على رأي طبي ثانٍ أو علاج متخصص في ألمانيا — تنسيق كامل باللغة العربية."
         canonicalUrl={CANONICAL}
         breadcrumb={[
           { label: "الرئيسية", href: "/ar" },

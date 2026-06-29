@@ -10,9 +10,9 @@ const AR: React.CSSProperties = {
 
 export default function AboutArabic() {
   useEffect(() => {
-    document.title = "من نحن | ميديكال كير جيرماني — برلين";
+    document.title = "من نحن | Medical Care Germany — برلين منذ 2012";
     const descContent =
-      "فريق طبي عربي-ألماني يعمل من برلين منذ 2012. نتحدث لغتك ونفهم المنظومة الطبية الألمانية من الداخل. أكثر من 500 حالة معقدة منسّقة.";
+      "Medical Care Germany تأسست في برلين عام 2012 — خبرة أكثر من 10 سنوات في تنسيق العلاج الطبي للمرضى العرب في ألمانيا.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

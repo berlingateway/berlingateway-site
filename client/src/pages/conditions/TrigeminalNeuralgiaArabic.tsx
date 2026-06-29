@@ -16,8 +16,8 @@ export default function TrigeminalNeuralgiaArabic() {
       <MedicalConditionPage
         pageDir="rtl"
         hideGlobalHeader={true}
-        metaTitle="علاج العصب الخامس في ألمانيا | ميديكال كير جيرماني"
-        metaDescription="تقييم دقيق وعلاج متخصص لألم العصب ثلاثي التوائم في ألمانيا. بروتوكولات MRI متقدمة (3D-CISS) وعملية إزالة الضغط الوعائي (MVD) في المستشفيات الجامعية الألمانية."
+        metaTitle="علاج ألم العصب الخامس في ألمانيا | تخصص دقيق في برلين"
+        metaDescription="ألم العصب الثلاثي التوائم يحتاج متخصصاً — نوفر لك تقييماً دقيقاً من جراحي الأعصاب الألمان لاختيار أفضل خيار علاجي."
         canonicalPath="/ar/trigeminal-neuralgia-treatment-germany"
 
         navBrandName="ميديكال كير جيرماني"

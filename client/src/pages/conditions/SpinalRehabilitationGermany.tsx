@@ -43,10 +43,10 @@ export default function SpinalRehabilitationGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/spinal-rehabilitation-germany" />
       <HreflangTags currentPath="/ar/spinal-rehabilitation-germany" />
-      <title>إعادة تأهيل العمود الفقري في ألمانيا | تنسيق التأهيل العصبي الشوكي</title>
+      <title>تأهيل العمود الفقري في ألمانيا | برامج متخصصة في برلين</title>
       <meta
         name="description"
-        content="تنسيق متخصص لإعادة تأهيل إصابات الحبل الشوكي والعمود الفقري في ألمانيا — الشلل، تضيق القناة الشوكية، والألم المزمن."
+        content="برامج تأهيل العمود الفقري في ألمانيا بعد الجراحة أو الإصابة — نوصلك بأفضل مراكز التأهيل الفقري في المستشفيات الجامعية."
       />
 
       {/* HERO */}

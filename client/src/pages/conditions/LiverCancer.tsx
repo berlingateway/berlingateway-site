@@ -9,8 +9,8 @@ export default function LiverCancer() {
       <SmartNavLayer currentPath="/liver-cancer-treatment-germany" />
       <HreflangTags currentPath="/liver-cancer-treatment-germany" />
       <MedicalConditionPage
-      metaTitle="Liver Cancer Treatment in Germany"
-      metaDescription="Hepatobiliary surgery and interventional oncology for liver cancer at German university centers, with multidisciplinary tumor board evaluation."
+      metaTitle="علاج سرطان الكبد في ألمانيا | تقييم متخصص في برلين"
+      metaDescription="علاج سرطان الكبد في ألمانيا بأحدث البروتوكولات العلاجية — جراحة، أشعة تداخلية، وعلاج موجه. نرتب تقييمك الأورامي."
       canonicalPath="/liver-cancer-treatment-germany"
       headline="Liver Cancer Treatment in Germany"
       subtitle="Hepatobiliary surgery and interventional oncology for liver cancer at German university centers."

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
@@ -11,6 +12,18 @@ const WA =
   );
 
 export default function FailedIvfCauses() {
+  useEffect(() => {
+    document.title = "أسباب فشل IVF المتكرر | تقييم متخصص في ألمانيا";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "إذا فشل IVF أكثر من مرة، هناك أسباب يمكن تشخيصها — نوفر لك تقييماً شاملاً من متخصصي الخصوبة في ألمانيا.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "إذا فشل IVF أكثر من مرة، هناك أسباب يمكن تشخيصها — نوفر لك تقييماً شاملاً من متخصصي الخصوبة في ألمانيا.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
       <SmartNavLayer currentPath="/ar/failed-ivf-causes-germany" />

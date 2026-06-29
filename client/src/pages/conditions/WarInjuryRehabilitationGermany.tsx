@@ -43,10 +43,10 @@ export default function WarInjuryRehabilitationGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/war-injury-rehabilitation-germany" />
       <HreflangTags currentPath="/ar/war-injury-rehabilitation-germany" />
-      <title>إعادة تأهيل إصابات الحرب في ألمانيا | تنسيق طبي متخصص</title>
+      <title>تأهيل إصابات الحرب في ألمانيا | خبرة في الحالات المعقدة</title>
       <meta
         name="description"
-        content="تنسيق متخصص لإعادة تأهيل إصابات الحرب في ألمانيا — البتر، إصابات الحبل الشوكي، الأعصاب، والصدمات المعقدة. تقييم أولي وخطة تأهيل متعددة التخصصات."
+        content="تأهيل إصابات الحرب والصدمات المعقدة في ألمانيا — بروتوكولات متخصصة للمصابين بجروح وإعاقات حركية وعصبية."
       />
 
       {/* HERO */}

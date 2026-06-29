@@ -107,10 +107,10 @@ export default function MedicalVisaGermany() {
       <HreflangTags currentPath="/ar/فيزا-العلاج-في-المانيا" />
 
       {/* SEO */}
-      <title>فيزا علاجية ألمانيا | تأشيرة العلاج والإقامة الطبية</title>
+      <title>فيزا العلاج في ألمانيا | كيف نساعدك في الحصول عليها</title>
       <meta
         name="description"
-        content="كيف تحصل على فيزا علاجية لألمانيا؟ نساعدك في استكمال ملف التأشيرة وتنسيق المواعيد مع المستشفيات الجامعية."
+        content="نساعدك في استخراج تأشيرة العلاج الطبي في ألمانيا خطوة بخطوة — من تجهيز الملف الطبي حتى الموعد في المستشفى. تواصل معنا اليوم."
       />
       <link rel="canonical" href={CANONICAL} />
       <meta name="robots" content="index, follow" />

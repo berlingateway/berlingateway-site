@@ -9,8 +9,8 @@ export default function KneeReplacement() {
       <SmartNavLayer currentPath="/knee-replacement-germany" />
       <HreflangTags currentPath="/knee-replacement-germany" />
       <MedicalConditionPage
-      metaTitle="Knee Replacement Surgery in Germany"
-      metaDescription="Total and partial knee arthroplasty at certified German orthopedic centers, with computer-assisted planning and structured rehabilitation pathways."
+      metaTitle="استبدال مفصل الركبة في ألمانيا | تقييم وجراحة في برلين"
+      metaDescription="هل تحتاج استبدال مفصل الركبة؟ نوفر لك تقييماً دقيقاً من متخصصي العظام في ألمانيا وننسق الجراحة في أفضل المستشفيات."
       canonicalPath="/knee-replacement-germany"
       headline="Knee Replacement Surgery in Germany"
       subtitle="Total and partial knee arthroplasty at certified German orthopedic centers."

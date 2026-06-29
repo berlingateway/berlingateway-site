@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
 import HreflangTags from "@/components/HreflangTags";
@@ -11,6 +12,18 @@ const WA =
   );
 
 export default function RepeatedMiscarriage() {
+  useEffect(() => {
+    document.title = "أسباب الإجهاض المتكرر | تشخيص دقيق في ألمانيا";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "الإجهاض المتكرر له أسباب قابلة للعلاج — نوفر لك تقييماً شاملاً من أطباء الخصوبة والمناعة في المستشفيات الجامعية الألمانية.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "الإجهاض المتكرر له أسباب قابلة للعلاج — نوفر لك تقييماً شاملاً من أطباء الخصوبة والمناعة في المستشفيات الجامعية الألمانية.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
       <SmartNavLayer currentPath="/ar/repeated-miscarriage-causes-germany" />

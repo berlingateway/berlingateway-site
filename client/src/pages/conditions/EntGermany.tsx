@@ -87,8 +87,8 @@ const RELATED = [
 
 export default function EntGermany() {
   useEffect(() => {
-    document.title = "علاج الأنف والأذن والحنجرة في ألمانيا — تنسيق الحالات المعقدة | Medical Care Germany";
-    const descContent = "تنسيق متخصص لحالات الأنف والأذن والحنجرة في ألمانيا. للحالات الدولية القادمة من ليبيا والسودان ودول الخليج — تنسيق طبي متخصص من برلين.";
+    document.title = "طب الأنف والأذن والحنجرة في ألمانيا | برلين";
+    const descContent = "تخصص الأنف والأذن والحنجرة في ألمانيا — تشخيص دقيق وعلاج متخصص لأمراض الحنجرة والأذن والجيوب الأنفية.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }

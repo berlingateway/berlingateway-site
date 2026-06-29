@@ -53,8 +53,8 @@ export default function PediatricOrthopedicsGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/pediatric-orthopedics-germany" />
       <HreflangTags currentPath="/ar/pediatric-orthopedics-germany" />
-      <title>عظام الأطفال في ألمانيا | تقييم الحالات الجراحية والتصحيحية</title>
-      <meta name="description" content="تنسيق متخصص لحالات عظام الأطفال في ألمانيا — التشوهات، الكسور المعقدة، الجراحة التصحيحية، وإعادة التأهيل." />
+      <title>عظام الأطفال في ألمانيا | تقييم ومتابعة في برلين</title>
+      <meta name="description" content="تشوهات العظام والمفاصل عند الأطفال في ألمانيا — تشخيص مبكر وعلاج متخصص في أفضل مراكز عظام الأطفال الجامعية." />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section style={{ background: "#0B1C2C", padding: "80px 24px 72px", textAlign: "center" }}>

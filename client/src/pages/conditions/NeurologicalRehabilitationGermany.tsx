@@ -43,10 +43,10 @@ export default function NeurologicalRehabilitationGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/neurological-rehabilitation-germany" />
       <HreflangTags currentPath="/ar/neurological-rehabilitation-germany" />
-      <title>إعادة التأهيل العصبي في ألمانيا | تنسيق التأهيل العصبي المتقدم</title>
+      <title>التأهيل العصبي في ألمانيا | مراكز متخصصة في برلين</title>
       <meta
         name="description"
-        content="تنسيق متخصص لإعادة التأهيل العصبي في ألمانيا — السكتة الدماغية، إصابات الدماغ، باركنسون، التصلب المتعدد، واضطرابات الحركة."
+        content="التأهيل العصبي بعد السكتة أو إصابات الدماغ والحبل الشوكي — نوفر لك أفضل مراكز التأهيل العصبي في ألمانيا."
       />
 
       {/* HERO */}

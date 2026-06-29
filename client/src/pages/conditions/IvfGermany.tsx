@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArabicFooterGuide } from "@/components/ArabicFooterGuide";
 import SmartNavLayer from "@/components/SmartNavLayer";
@@ -9,6 +10,18 @@ const WA_HREF = "https://wa.me/4915781497451?text=" + encodeURIComponent("مرح
 const intakeHref = "https://tally.so/r/68MrBP";
 
 export default function IvfGermany() {
+  useEffect(() => {
+    document.title = "أطفال الأنابيب في ألمانيا | IVF في مراكز برلين المتخصصة";
+    let m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute("content", "أطفال الأنابيب IVF في ألمانيا بأعلى معدلات النجاح في أوروبا — نوفر لك الوصول لأفضل مراكز الخصوبة مع دعم عربي كامل.");
+    else {
+      const n = document.createElement("meta");
+      n.name = "description";
+      n.content = "أطفال الأنابيب IVF في ألمانيا بأعلى معدلات النجاح في أوروبا — نوفر لك الوصول لأفضل مراكز الخصوبة مع دعم عربي كامل.";
+      document.head.appendChild(n);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900" dir="rtl" lang="ar">
       <SmartNavLayer currentPath="/ar/ivf-germany" />

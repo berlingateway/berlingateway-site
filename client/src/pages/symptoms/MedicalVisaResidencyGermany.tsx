@@ -13,10 +13,10 @@ export default function MedicalVisaResidencyGermany() {
       <style>{`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cairo:wght@300;400;500;600&display=swap');`}</style>
 
       {/* SEO */}
-      <title>Medical Visa Germany & Medical Residency | Treatment Access Germany</title>
+      <title>فيزا الإقامة الطبية في ألمانيا | تمديد وإجراءات كاملة</title>
       <meta
         name="description"
-        content="تأشيرة العلاج في ألمانيا (فيزا) والإقامة الطبية للحالات المعقدة. تقييم الملف خلال 24–48 ساعة مع دعوة طبية مبنية على تشخيص ومسار علاجي واضح."
+        content="فيزا العلاج الطبي في ألمانيا وإجراءات التمديد — نساعدك في كل خطوات استخراج وتجديد تأشيرة العلاج والإقامة الطبية."
       />
       <link rel="canonical" href="https://medicalcaregermany.com/ar/medical-visa-residency-germany" />
 

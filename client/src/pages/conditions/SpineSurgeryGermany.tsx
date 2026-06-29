@@ -137,9 +137,9 @@ export default function SpineSurgeryGermany() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "جراحة العمود الفقري وعلاج الألم المزمن في ألمانيا | Medical Care Germany";
+    document.title = "جراحة العمود الفقري في ألمانيا | دقة عالية في برلين";
     let m = document.querySelector('meta[name="description"]');
-    const descContent = "تنسيق متخصص لحالات العمود الفقري المعقدة في ألمانيا: الجراحة الفاشلة، الألم المزمن، الدوخة العنقية، اضطرابات المشي، وتقييم MRI. للمرضى من ليبيا والسودان ودول الخليج.";
+    const descContent = "عمليات العمود الفقري في ألمانيا بأحدث التقنيات الجراحية — انزلاق غضروفي، تضيق القناة، وتشوهات العمود. نرتب تقييمك الآن.";
     if (m) m.setAttribute("content", descContent);
     else { const n = document.createElement("meta"); n.name = "description"; n.content = descContent; document.head.appendChild(n); }
     let c = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;

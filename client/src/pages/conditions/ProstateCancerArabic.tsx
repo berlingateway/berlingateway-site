@@ -98,9 +98,9 @@ export default function ProstateCancerArabic() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "سرطان البروستاتا في ألمانيا | تقييم متخصص وخيارات العلاج";
+    document.title = "علاج سرطان البروستاتا في ألمانيا | تقييم دقيق في برلين";
     const descContent =
-      "تقييم حالات سرطان البروستاتا مع أساتذة متخصصين في المستشفيات الجامعية الألمانية. نخدم المرضى من ليبيا والسعودية والعراق والجزائر. رد خلال 24 ساعة.";
+      "سرطان البروستاتا في ألمانيا — جراحة روبوتية، أشعة ببرائية، ومراقبة فعّالة. نوصلك للمختص المناسب لحالتك.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

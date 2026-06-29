@@ -98,9 +98,9 @@ export default function SecondOpinionGermany() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "رأي طبي ثانٍ من ألمانيا | مراجعة متخصصة في برلين";
+    document.title = "رأي طبي ثانٍ في ألمانيا | تقييم مستقل من برلين";
     const descContent =
-      "قبل أي قرار طبي مصيري — راجع ملفك مع بروفيسور متخصص في برلين. رد خلال 24 ساعة. نخدم المرضى من ليبيا والجزائر والعراق والسعودية.";
+      "قبل أي قرار طبي كبير، احصل على رأي طبي ثانٍ من متخصصي ألمانيا — نرتب التقييم الطبي المستقل في أفضل المستشفيات.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

@@ -16,8 +16,8 @@ export default function BrainTumorTreatmentArabic() {
       <MedicalConditionPage
         pageDir="rtl"
         hideGlobalHeader={true}
-        metaTitle="علاج أورام المخ في ألمانيا | ميديكال كير جيرماني"
-        metaDescription="تقييم طبي ألماني متخصص لحالات أورام المخ خلال 24–48 ساعة. تحديد المسار الصحيح قبل اتخاذ أي قرار علاجي."
+        metaTitle="علاج أورام المخ في ألمانيا | جراحة دقيقة في برلين"
+        metaDescription="أورام المخ تحتاج أفضل الجراحين — نوصلك بأقسام جراحة الأعصاب في المستشفيات الجامعية الألمانية لتقييم حالتك بدقة."
         canonicalPath="/ar/brain-tumor-treatment-germany"
 
         navBrandName="ميديكال كير جيرماني"

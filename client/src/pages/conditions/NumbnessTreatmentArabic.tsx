@@ -13,7 +13,7 @@ const whatsappHref =
 
 export default function NumbnessTreatmentArabic() {
   useEffect(() => {
-    document.title = "تنميل اليدين والقدمين | تقييم عصبي في ألمانيا";
+    document.title = "تنميل اليدين والقدمين في ألمانيا | تشخيص دقيق في برلين";
 
     // Meta description
     let metaDesc = document.querySelector('meta[name="description"]');

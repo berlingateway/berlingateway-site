@@ -9,8 +9,8 @@ export default function HipReplacement() {
       <SmartNavLayer currentPath="/hip-replacement-germany" />
       <HreflangTags currentPath="/hip-replacement-germany" />
       <MedicalConditionPage
-      metaTitle="Hip Replacement Surgery in Germany"
-      metaDescription="Total hip arthroplasty and revision surgery at German orthopedic university centers, with minimally invasive approaches and structured rehabilitation."
+      metaTitle="استبدال مفصل الورك في ألمانيا | جراحة متخصصة في برلين"
+      metaDescription="جراحة استبدال مفصل الورك في ألمانيا بأعلى معايير الدقة الجراحية. نرتب موعدك مع أفضل جراحي العظام في المستشفيات الجامعية."
       canonicalPath="/hip-replacement-germany"
       headline="Hip Replacement Surgery in Germany"
       subtitle="Total hip arthroplasty and revision surgery at German orthopedic university centers."

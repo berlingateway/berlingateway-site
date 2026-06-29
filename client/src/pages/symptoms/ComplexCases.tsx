@@ -45,10 +45,9 @@ const APPROACH_CARDS = [
 
 export default function ComplexCases() {
   useEffect(() => {
-    document.title =
-      "حالات طبية معقدة | علاج في ألمانيا بعد رحلة بحث طويلة";
+    document.title = "الحالات الطبية المعقدة في ألمانيا | خبرة أكثر من 10 سنوات";
     const descContent =
-      "إذا زرت أطباء كثيرين بدون نتيجة — نراجع ملفك كاملاً مع فريق متخصص في برلين. أكثر من 500 حالة منذ 2012.";
+      "الحالات الطبية المعقدة التي لم تجد حلاً في بلدك — نتخصص في إيجاد المختص الصحيح في ألمانيا لأصعب الحالات.";
     let m = document.querySelector('meta[name="description"]');
     if (m) m.setAttribute("content", descContent);
     else {

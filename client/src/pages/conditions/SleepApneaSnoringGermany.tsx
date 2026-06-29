@@ -46,10 +46,10 @@ export default function SleepApneaSnoringGermany() {
     <div dir="rtl" style={{ ...AR, background: "#fff", color: "#1a1a2e" }}>
       <SmartNavLayer currentPath="/ar/sleep-apnea-snoring-germany" />
       <HreflangTags currentPath="/ar/sleep-apnea-snoring-germany" />
-      <title>الشخير وانقطاع النفس أثناء النوم في ألمانيا | تقييم وعلاج</title>
+      <title>علاج انقطاع النفس أثناء النوم في ألمانيا | برلين</title>
       <meta
         name="description"
-        content="تقييم وتنسيق علاج انقطاع النفس أثناء النوم والشخير المزمن في ألمانيا — الحالات الشديدة، المقاومة لـ CPAP، والتي تحتاج إلى تقييم جراحي."
+        content="انقطاع النفس أثناء النوم والشخير المزمن — تشخيص بدراسة النوم وعلاج جراحي أو بالأجهزة في أفضل مراكز ألمانيا."
       />
 
       <section style={{ background: "#0B1C2C", padding: "72px 24px 64px", textAlign: "center" }}>

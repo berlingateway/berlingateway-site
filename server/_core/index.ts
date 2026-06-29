@@ -225,6 +225,8 @@ async function startServer() {
   // 301 Redirects: English legacy pages → canonical pages
   const REDIRECTS_301: Record<string, string> = {
     '/submit-case': '/send-medical-reports',
+    // Trailing slash canonical fix (targeted — not a global middleware)
+    '/prostate-cancer-treatment-germany/': '/prostate-cancer-treatment-germany',
   };
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs
@@ -249,7 +251,8 @@ async function startServer() {
   const GONE_410: string[] = [];
 
   app.use((req, res, next) => {
-    const path = req.path.replace(/\/+$/, '') || '/';
+    const rawPath = req.path;
+    const path = rawPath.replace(/\/+$/, '') || '/';
 
     // 410 Gone — permanently removed pages
     if (GONE_410.includes(path)) {
@@ -261,8 +264,8 @@ async function startServer() {
       return;
     }
 
-    // 301 Redirect — hybrid/English pages → Arabic canonical
-    const target = REDIRECTS_301[path];
+    // 301 Redirect — check raw path first (for trailing-slash targets), then normalized path
+    const target = REDIRECTS_301[rawPath] ?? REDIRECTS_301[path];
     if (target) {
       return res.redirect(301, target);
     }

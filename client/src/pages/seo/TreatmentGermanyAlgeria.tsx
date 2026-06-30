@@ -23,16 +23,16 @@ export default function TreatmentGermanyAlgeria() {
         heroTag="Medical Care Germany · منذ 2012"
         whyCards={[
           {
-            title: "مستشفيات جامعية من الدرجة الأولى",
-            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مستشفيات جامعية برلينية تستقبل الحالات الأكثر تعقيداً.",
+            title: "تقنيات جراحية لا تتوفر في كل مكان",
+            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مستشفيات جامعية برلينية تعتمد تقنيات جراحية وبروتوكولات علاجية لا تجدها في كل مكان.",
           },
           {
             title: "مسار مكمل لا بديل",
             body: "نوفر خياراً إضافياً للحالات التي استنفدت الخيارات المتاحة في مستشفى مصطفى باشا أو مستشفى بن باديس الجامعي في قسنطينة أو CHU وهران — نكمل المسار معك في ألمانيا.",
           },
           {
-            title: "منذ 2012 — ليس بالإعلانات",
-            body: "كثير ممن وصلونا جاؤوا بتوصية من طبيب أو من مريض عرف الفرق بنفسه. هذه الثقة بنيناها بالنتائج.",
+            title: "تواصل جزائري منذ 2012",
+            body: "منذ 2012 ومعظم من يصلنا من الجزائر يأتي بتوصية من طبيب جزائري أو من مريض عاد وأخبر عائلته. لم نبنِ هذه الثقة بالإعلانات.",
           },
         ]}
         stepsTitle="من حيث أنت إلى برلين"

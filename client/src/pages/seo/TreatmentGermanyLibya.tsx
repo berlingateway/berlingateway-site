@@ -23,16 +23,16 @@ export default function TreatmentGermanyLibya() {
         heroTag="Medical Care Germany · منذ 2012"
         whyCards={[
           {
-            title: "مستشفيات جامعية من الدرجة الأولى",
-            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مستشفيات جامعية برلينية تستقبل الحالات الأكثر تعقيداً.",
+            title: "مستشفيات برلينية تستقبل الحالات الأصعب",
+            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مستشفيات جامعية برلينية تتخصص في الحالات التي تحتاج دقة تشخيصية استثنائية.",
           },
           {
             title: "خبرة في الإجراءات الليبية الرسمية",
             body: "نفهم متطلبات جهاز دعم وتطوير الخدمات العلاجية والملحقية الصحية الليبية. نساعدك في استيفاء شروط التكفل المالي للمرضى المحالين على نفقة الدولة.",
           },
           {
-            title: "منذ 2012 — ليس بالإعلانات",
-            body: "كثير ممن وصلونا جاؤوا بتوصية من طبيب أو من مريض عرف الفرق بنفسه. هذه الثقة بنيناها بالنتائج.",
+            title: "خبرة ليبية متراكمة منذ 2012",
+            body: "أغلب من يصلنا من ليبيا يأتي بتوصية من طبيب ليبي أو من مريض عاد وأخبر عائلته. لم نبنِ هذه الثقة بالإعلانات.",
           },
         ]}
         stepsTitle="من حيث أنت إلى برلين"

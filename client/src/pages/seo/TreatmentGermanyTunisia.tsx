@@ -23,16 +23,16 @@ export default function TreatmentGermanyTunisia() {
         heroTag="Medical Care Germany · منذ 2012"
         whyCards={[
           {
-            title: "مستشفيات جامعية من الدرجة الأولى",
-            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — من يصل إليها يفهم الفرق فور دخوله.",
+            title: "بروتوكولات لا تتوفر في كل مكان",
+            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مستشفيات جامعية تعتمد بروتوكولات علاجية متخصصة لا تجدها في كل مكان.",
           },
           {
             title: "مسار مكمل لا بديل",
             body: "نتعاون مع المسار العلاجي الذي بدأته في تونس — سواء في مستشفى سهلول أو مستشفى الهادي شاكر أو أي من المصحات الخاصة. نكمل من حيث توقف.",
           },
           {
-            title: "منذ 2012 — ليس بالإعلانات",
-            body: "كثير ممن وصلونا جاؤوا بتوصية من طبيب أو من مريض عرف الفرق بنفسه. هذه الثقة بنيناها بالنتائج.",
+            title: "مرجعية تونسية منذ 2012",
+            body: "كثير من مرضانا التونسيين وصلونا بتوصية من طبيب تونسي أو من مريض عاد وأخبر بتجربته. لم نبنِ هذه الثقة بالإعلانات.",
           },
         ]}
         stepsTitle="من حيث أنت إلى برلين"

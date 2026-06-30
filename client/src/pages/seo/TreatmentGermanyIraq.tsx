@@ -23,16 +23,16 @@ export default function TreatmentGermanyIraq() {
         heroTag="Medical Care Germany · منذ 2012"
         whyCards={[
           {
-            title: "مستشفيات جامعية من الدرجة الأولى",
-            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مستشفيات جامعية برلينية تستقبل الحالات الأكثر تعقيداً.",
+            title: "مستشفيات جامعية ألمانية للحالات المعقدة",
+            body: "Charité Berlin، Vivantes، Unfallkrankenhaus Berlin، Bundeswehr Krankenhaus، Johannes Stift Diakonie، Helios Kliniken — مراكز جامعية ألمانية تتخصص في جراحة الأعصاب والأورام والحالات التي تحتاج مستوى أعلى.",
           },
           {
             title: "خبرة في الحالات المعقدة",
             body: "نتخصص في الحالات التي تحتاج تقييماً دقيقاً — من أورام المخ وجراحة الأعصاب إلى أورام البروستاتا والثدي والعمود الفقري.",
           },
           {
-            title: "منذ 2012 — ليس بالإعلانات",
-            body: "كثير ممن وصلونا جاؤوا بتوصية من طبيب أو من مريض عرف الفرق بنفسه. هذه الثقة بنيناها بالنتائج.",
+            title: "سنوات من الخبرة مع المريض العراقي",
+            body: "منذ 2012 ومعظم من يصلنا من العراق يأتي بتوصية من طبيب عراقي أو من مريض جرّب وأخبر عائلته — لا بإعلانات.",
           },
         ]}
         stepsTitle="من حيث أنت إلى برلين"

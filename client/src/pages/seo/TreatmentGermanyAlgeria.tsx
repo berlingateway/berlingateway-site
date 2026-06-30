@@ -11,7 +11,7 @@ export default function TreatmentGermanyAlgeria() {
       <HreflangTags currentPath="/ar/treatment-germany-algeria" />
       <GeoPage
         metaTitle="العلاج في ألمانيا للمرضى الجزائريين | Medical Care Germany"
-        metaDescription="تنسيق طبي متخصص للمرضى الجزائريين في ألمانيا — مواعيد سريعة في المستشفيات الجامعية وخدمة عربية متكاملة من برلين. نوفر مساراً إضافياً للحالات المعقدة في جراحة الأعصاب والأورام."
+        metaDescription="نساعد المرضى الجزائريين في الوصول للمستشفيات الجامعية الألمانية — من مستشفى مصطفى باشا وCHU وهران إلى Charité برلين. تواصل معنا اليوم."
         canonicalUrl={CANONICAL}
         breadcrumb={[
           { label: "الرئيسية", href: "/ar" },

@@ -165,6 +165,11 @@ import OrthopaedeDE from "./pages/rehabilitation/OrthopaedeDE";
 import TreatmentGermanyArabPatients from "./pages/seo/TreatmentGermanyArabPatients";
 import TreatmentGermanySaudi from "./pages/seo/TreatmentGermanySaudi";
 import TreatmentGermanyUAE from "./pages/seo/TreatmentGermanyUAE";
+import TreatmentGermanyLibya from "./pages/seo/TreatmentGermanyLibya";
+import TreatmentGermanyTunisia from "./pages/seo/TreatmentGermanyTunisia";
+import TreatmentGermanyYemen from "./pages/seo/TreatmentGermanyYemen";
+import TreatmentGermanyIraq from "./pages/seo/TreatmentGermanyIraq";
+import TreatmentGermanyAlgeria from "./pages/seo/TreatmentGermanyAlgeria";
 import TreatmentCostGermany from "./pages/seo/TreatmentCostGermany";
 import MedicalVisaGermany from "./pages/seo/MedicalVisaGermany";
 import HospitalsGermanyInternational from "./pages/seo/HospitalsGermanyInternational";
@@ -409,6 +414,11 @@ function Router() {
       <Route path={"/ar/العلاج-في-المانيا-للعرب"} component={TreatmentGermanyArabPatients} />
       <Route path={"/ar/treatment-germany-saudi"} component={TreatmentGermanySaudi} />
       <Route path={"/ar/treatment-germany-uae"} component={TreatmentGermanyUAE} />
+      <Route path={"/ar/treatment-germany-libya"} component={TreatmentGermanyLibya} />
+      <Route path={"/ar/treatment-germany-tunisia"} component={TreatmentGermanyTunisia} />
+      <Route path={"/ar/treatment-germany-yemen"} component={TreatmentGermanyYemen} />
+      <Route path={"/ar/treatment-germany-iraq"} component={TreatmentGermanyIraq} />
+      <Route path={"/ar/treatment-germany-algeria"} component={TreatmentGermanyAlgeria} />
       <Route path={"/treatment-in-germany-arab-patients"} component={TreatmentGermanyArabPatients} />
       <Route path={"/ar/تكلفة-العلاج-في-المانيا"} component={TreatmentCostGermany} />
       <Route path={"/treatment-cost-germany"} component={TreatmentCostGermany} />

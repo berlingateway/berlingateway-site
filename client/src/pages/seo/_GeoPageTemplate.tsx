@@ -119,9 +119,10 @@ export function GeoPage({
   const ALL_GEO_COUNTRIES: GeoInternalLink[] = [
     { href: "/ar/treatment-germany-saudi", label: "العلاج في ألمانيا للمقيمين في السعودية" },
     { href: "/ar/treatment-germany-uae", label: "العلاج في ألمانيا للمقيمين في الإمارات" },
-    { href: "/ar/treatment-germany-yemen/", label: "العلاج في ألمانيا للمرضى اليمنيين" },
-    { href: "/ar/treatment-germany-libya/", label: "العلاج في ألمانيا للمرضى الليبيين" },
-    { href: "/ar/treatment-germany-iraq/", label: "العلاج في ألمانيا للمرضى العراقيين" },
+    { href: "/ar/treatment-germany-yemen", label: "العلاج في ألمانيا للمرضى اليمنيين" },
+    { href: "/ar/treatment-germany-libya", label: "العلاج في ألمانيا للمرضى الليبيين" },
+    { href: "/ar/treatment-germany-iraq", label: "العلاج في ألمانيا للمرضى العراقيين" },
+    { href: "/ar/treatment-germany-algeria", label: "العلاج في ألمانيا للمرضى الجزائريين" },
   ];
 
   const otherCountries = currentCountryPath

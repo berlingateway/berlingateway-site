@@ -478,6 +478,86 @@ const META_MAP: Record<string, MetaEntry> = {
 
 const SITE_URL = "https://medicalcaregermany.com";
 
+// FAQ Schema (JSON-LD) per page
+const FAQ_SCHEMA_MAP: Record<string, object> = {
+  "/ar/neurology-treatment-germany": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "هل يمكن علاج أمراض الأعصاب المزمنة في ألمانيا؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم — ألمانيا من أكثر دول العالم تقدماً في تشخيص وعلاج أمراض الأعصاب المزمنة كالتصلب اللويحي والباركنسون وأورام المخ. Charité برلين تمتلك قسم أعصاب من أقوى أقسام أوروبا."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "لماذا يطلب الطبيب الألماني MRI جديداً رغم وجود صور سابقة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "لأن أجهزة MRI في ألمانيا غالباً أعلى دقة (3 Tesla وأكثر)، وأحياناً البروتوكول المستخدم في الصور السابقة لا يُظهر التفاصيل التي يحتاجها الطبيب الألماني لقراره العلاجي."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما الفرق بين تشخيص Charité وتشخيص المستشفيات في بلدي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Charité تعمل بنظام Tumor Board — لجنة متعددة التخصصات لكل حالة معقدة. هذا يعني أن أكثر من متخصص يراجع حالتك قبل اتخاذ أي قرار علاجي."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم يستغرق الحصول على موعد في قسم الأعصاب في برلين؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "عبر التنسيق المباشر الذي نوفره، عادةً بين أسبوع وثلاثة أسابيع حسب درجة الاستعجال وطبيعة الحالة."
+        }
+      }
+    ]
+  },
+  "/ar/brain-tumor-treatment-germany": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "هل كل أورام المخ تحتاج جراحة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "لا — القرار يعتمد على نوع الورم وموقعه وحجمه وسرعة نموه. في ألمانيا يُعرض كل ملف على لجنة Tumor Board تضم جراح أعصاب وأخصائي أورام وأخصائي أشعة قبل أي قرار."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما أحدث تقنيات جراحة أورام المخ في ألمانيا؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Charité برلين تستخدم جراحة المخ باليقظة (Awake Craniotomy)، والملاحة الجراحية بالمجسات المضيئة (5-ALA)، والجراحة بالمنظار للأورام العميقة — تقنيات تحافظ على وظائف المخ أثناء إزالة الورم."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ماذا يحدث بعد إرسال ملفي الطبي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نراجع الملف خلال 24-48 ساعة، نحدد المستشفى والطبيب المناسب، نرسل الملف للمراجعة الأولية، ثم نرتب موعد الكشف الأول ونساعدك في إجراءات الفيزا والسفر."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكن إجراء الجراحة للمريض الأجنبي في ألمانيا مباشرة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم — المستشفيات الجامعية الألمانية تستقبل المرضى الدوليين بشكل منتظم. نحن نتولى التنسيق الكامل من الموعد الأول حتى مغادرة المريض."
+        }
+      }
+    ]
+  },
+};
+
 const DEFAULT_TITLE = "Medical Care Germany | Strategic Medical Authority for Complex Cases";
 const DEFAULT_DESC = "Cross-border medical authority structuring priority access to Germany\'s leading specialists. Trusted by patients from across the Arab world for complex neurological, oncological, and surgical cases.";
 
@@ -529,6 +609,13 @@ export function injectMeta(html: string, reqPath: string): string {
     /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/,
     `<meta name="twitter:description" content="${description}" />`
   );
+
+  // Inject FAQ Schema (JSON-LD) if available
+  const faqSchema = FAQ_SCHEMA_MAP[normalizedPath];
+  if (faqSchema) {
+    const schemaTag = `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`;
+    html = html.replace('</head>', `${schemaTag}\n</head>`);
+  }
 
   return html;
 }

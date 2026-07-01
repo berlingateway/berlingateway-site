@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
+import { injectMeta } from "./meta-map";
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -38,7 +39,12 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx"`,
         `src="/src/main.tsx?v=${nanoid()}"`
       );
-      const page = await vite.transformIndexHtml(url, template);
+      let page = await vite.transformIndexHtml(url, template);
+
+      // Inject page-specific meta tags based on URL path (server-side, visible to crawlers)
+      const urlPath = url.split("?")[0];
+      page = injectMeta(page, urlPath);
+
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
@@ -60,8 +66,18 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  // fall through to index.html with meta injection
+  app.use("*", (req, res) => {
+    const indexPath = path.resolve(distPath, "index.html");
+    fs.readFile(indexPath, "utf-8", (err, html) => {
+      if (err) {
+        res.status(500).send("Internal Server Error");
+        return;
+      }
+      // Inject page-specific meta tags based on URL path (server-side, visible to crawlers)
+      const urlPath = (req.originalUrl || req.path).split("?")[0];
+      const injected = injectMeta(html, urlPath);
+      res.status(200).set({ "Content-Type": "text/html" }).send(injected);
+    });
   });
 }

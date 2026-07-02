@@ -343,65 +343,6 @@ export default function AboutArabic() {
           line-height: 1.75;
         }
 
-        /* Review */
-        .ab-review-wrap { max-width: 760px; margin-top: 2.5rem; }
-        .ab-review-card {
-          background: var(--white);
-          border: 1px solid var(--border);
-          border-right: 4px solid var(--gold);
-          border-radius: var(--radius);
-          padding: 2rem 2.25rem;
-          box-shadow: var(--shadow-sm);
-        }
-        .ab-reviewer-row {
-          display: flex; align-items: center; gap: 1rem;
-          margin-bottom: 1.25rem;
-        }
-        .ab-reviewer-avatar {
-          width: 44px; height: 44px; border-radius: 50%;
-          background: var(--navy);
-          display: flex; align-items: center; justify-content: center;
-          font-size: 1rem; font-weight: 700; color: var(--gold);
-          flex-shrink: 0;
-        }
-        .ab-reviewer-name { font-size: .95rem; font-weight: 700; color: var(--navy); }
-        .ab-reviewer-meta { font-size: .75rem; color: var(--text-light); margin-top: .1rem; }
-        .ab-review-text {
-          font-size: .97rem; color: var(--text-mid);
-          line-height: 1.85;
-          margin-bottom: 1.5rem;
-          font-style: italic;
-        }
-        .ab-review-attribution {
-          font-size: .78rem; font-weight: 700;
-          color: var(--text-light);
-          letter-spacing: .04em;
-        }
-        .ab-review-reply {
-          margin-top: 1.5rem;
-          background: #F0FAF7;
-          border: 1px solid #B7E4D5;
-          border-radius: 4px;
-          padding: 1.1rem 1.4rem;
-        }
-        .ab-reply-brand {
-          font-size: .8rem; font-weight: 700;
-          color: #1A6B50;
-          margin-bottom: .5rem;
-        }
-        .ab-reply-text { font-size: .86rem; color: #2D5A47; line-height: 1.75; }
-        .ab-review-cta-note {
-          margin-top: 1.25rem;
-          font-size: .83rem; color: var(--text-light);
-        }
-        .ab-review-cta-note a {
-          color: var(--gold);
-          font-weight: 600;
-          border-bottom: 1px solid var(--gold-border);
-          transition: color .15s;
-        }
-        .ab-review-cta-note a:hover { color: var(--navy); }
-
         /* Team */
         .ab-team-list {
           display: grid;
@@ -793,51 +734,6 @@ export default function AboutArabic() {
           </div>
         </section>
 
-        {/* ═══ 5 · ثقة المرضى ════════════════════════════════════ */}
-        <section className="ab-section" aria-labelledby="ab-trust-heading">
-          <div className="ab-section-wrap ab-reveal">
-            <p className="ab-section-label">ثقة المرضى</p>
-            <h2 className="ab-section-title" id="ab-trust-heading">
-              لماذا يثق بنا المرضى؟
-            </h2>
-            <p className="ab-section-body">
-              معظم عملائنا يأتون بتوصية شخصية من طبيب أو من عائلة سبق وعملنا معها.
-              هذا هو مقياسنا الحقيقي — لا الإعلانات.
-            </p>
-            <div className="ab-review-wrap" itemScope itemType="https://schema.org/Review">
-              <div className="ab-review-card">
-                <div className="ab-reviewer-row">
-                  <div className="ab-reviewer-avatar" aria-hidden="true">و</div>
-                  <div>
-                    <p className="ab-reviewer-name" itemProp="author">د. وفيق حمزة</p>
-                    <p className="ab-reviewer-meta">ليبيا · Local Guide على Google</p>
-                  </div>
-                </div>
-                <p className="ab-review-text" itemProp="reviewBody">
-                  "عند تجربة ملف الفيزا العلاجية بالوالدة — انصح بيهم. معاملة جد ممتازة في المواعيد سواء عند العيادة والمستشفى وبوليس الأجانب، وأيضاً في تسوية الأمور فيما يخص السكن وورقة الإقامة والبنوك."
-                </p>
-                <p className="ab-review-attribution">تقييم على Google Business Profile</p>
-                <div className="ab-review-reply" aria-label="رد Medical Care Germany">
-                  <p className="ab-reply-brand">Medical Care Germany — رد الإدارة</p>
-                  <p className="ab-reply-text">
-                    نشكرك د. حمزة على كلماتك وثقتك الكبيرة. يسعدنا أن تجربتك كانت إيجابية، ونقدّر إشادتك بدقة المواعيد وجودة المتابعة. نتمنى لكم دوام الصحة والعافية.
-                  </p>
-                </div>
-              </div>
-              <p className="ab-review-cta-note">
-                هل سبق وعملنا معك?{" "}
-                <a
-                  href="https://share.google/a0BstjyJQugEy0OXm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  اترك تقييمك على Google
-                </a>{" "}
-                — يساعد عائلات أخرى على اتخاذ قرارهم بثقة.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* ═══ 6 · من يقف خلف MCG ════════════════════════════════ */}
         <section className="ab-section ab-alt" aria-labelledby="ab-team-heading">

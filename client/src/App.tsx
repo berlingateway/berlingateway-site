@@ -178,6 +178,7 @@ import SendMedicalReportsArabic from "./pages/seo/SendMedicalReportsArabic";
 
 // Language Fallback + 404 Prevention Pages
 import GermanFallback from "./pages/GermanFallback";
+import AboutGerman from "./pages/AboutGerman";
 import ArabicSubmitCase from "./pages/ArabicSubmitCase";
 
 // Category Hub Pages
@@ -465,6 +466,7 @@ function Router() {
       <Route path={"/cardiology-germany"} component={CardiologyHub} />
 
       {/* Language fallback + 404 prevention routes */}
+      <Route path={"/de/ueber-uns"} component={AboutGerman} />
       <Route path={"/de"} component={GermanFallback} />
       <Route path={"/ar/submit-case"} component={ArabicSubmitCase} />
       <Route path={"/404"} component={NotFound} />

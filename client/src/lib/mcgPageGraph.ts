@@ -1639,7 +1639,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "ar",
     hub: "/ar",
     hubLabel: "الرئيسية",
-    equivalents: { en: "/about" },
+    equivalents: { en: "/about", de: "/de/ueber-uns" },
     cluster: [
       { href: "/ar/about", label: "من نحن" },
       { href: "/ar/complex-cases", label: "الحالات المعقدة" },
@@ -1660,7 +1660,7 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     lang: "en",
     hub: "/",
     hubLabel: "Home",
-    equivalents: { ar: "/ar/about" },
+    equivalents: { ar: "/ar/about", de: "/de/ueber-uns" },
     cluster: [
       { href: "/about", label: "About Us" },
       { href: "/second-opinion-germany", label: "Second Opinion" },
@@ -1668,6 +1668,23 @@ export const PAGE_GRAPH: Record<string, PageNode> = {
     ],
     related: [
       { href: "/", label: "Home" },
+      { href: "/ar/about", label: "من نحن" },
+    ],
+  },
+
+  "/de/ueber-uns": {
+    path: "/de/ueber-uns",
+    label: "Über uns — Medical Care Germany",
+    lang: "de",
+    hub: "/de",
+    hubLabel: "Startseite",
+    equivalents: { en: "/about", ar: "/ar/about" },
+    cluster: [
+      { href: "/de/ueber-uns", label: "Über uns" },
+      { href: "/de", label: "Startseite" },
+    ],
+    related: [
+      { href: "/about", label: "About Us" },
       { href: "/ar/about", label: "من نحن" },
     ],
   },

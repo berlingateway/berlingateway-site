@@ -101,6 +101,13 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.85,
   },
 
+  // -- German About Page
+  {
+    loc: `${CANONICAL_DOMAIN}/de/ueber-uns`,
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+
   // -- Governmental Bodies & Embassies
   {
     loc: `${CANONICAL_DOMAIN}/governmental-bodies`,

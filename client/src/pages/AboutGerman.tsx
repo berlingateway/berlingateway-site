@@ -92,7 +92,6 @@ export default function AboutGerman() {
       address: { "@type": "PostalAddress", streetAddress: "Perleberger Str. 41", addressLocality: "Berlin", postalCode: "10559", addressCountry: "DE" },
       telephone: "+493025730875",
       email: "info@medicalcaregermany.com",
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4", reviewCount: "1", bestRating: "5", worstRating: "1" },
     });
 
     injectSchema("schema-de-faq", {

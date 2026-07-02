@@ -79,6 +79,11 @@ export default function AboutArabic() {
       },
       review: {
         "@type": "Review",
+        itemReviewed: {
+          "@type": "MedicalBusiness",
+          name: "Medical Care Germany",
+          url: "https://medicalcaregermany.com/",
+        },
         author: { "@type": "Person", name: "د. وفيق حمزة" },
         reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
         reviewBody:

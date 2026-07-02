@@ -323,43 +323,7 @@ export default function ArabicHome() {
       document.head.appendChild(n);
     }
 
-    // Review Schema JSON-LD — د. خالد
-    const reviewSchema = {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "د. خالد",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AE"
-        }
-      },
-      "reviewBody": "يتميز الفريق بالصدق والأمانة ويبذلون قصارا جهدهم باختيار أفضل الأطباء في ألمانيا، ولديهم أيضا الخبرة في مجال الفيزا والإقامة في ألمانيا، يسعون لراحة المريض منذ وصولهم للمطار وحتى وداعهم.",
-      "itemReviewed": {
-        "@type": "MedicalBusiness",
-        "name": "Medical Care Germany",
-        "url": "https://medicalcaregermany.com"
-      }
-    };
-    const existingScript = document.querySelector('script[data-schema="review-khalid"]');
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.setAttribute("data-schema", "review-khalid");
-      script.textContent = JSON.stringify(reviewSchema);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      const s = document.querySelector('script[data-schema="review-khalid"]');
-      if (s) s.remove();
-    };
+    return () => {};
   }, []);
 
   return (
@@ -1337,28 +1301,95 @@ export default function ArabicHome() {
         </a>
       </section>
 
-      {/* TESTIMONIAL — د. خالد */}
-      <section className="py-16 px-6 bg-slate-900" dir="rtl">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="text-4xl text-slate-500 mb-6" style={{ fontFamily: 'Georgia, serif' }}>&ldquo;</div>
-          <blockquote
-            className="text-xl md:text-2xl leading-relaxed text-white mb-8"
-            style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", fontWeight: 400 }}
-          >
-            الشكر كل الشكر لشركة برلين للرعاية الطبية
-            لما قدمته وتقدمه من خدمة فائقة في المجال الطبي
-            للمرضى العرب الذين يأتون إلى ألمانيا لتلقي العلاج.
-            يتميز الفريق بالصدق والأمانة ويبذلون قصارا جهدهم
-            باختيار أفضل الأطباء في ألمانيا،
-            ولديهم أيضا الخبرة في مجال الفيزا والإقامة في ألمانيا،
-            يسعون لراحة المريض منذ وصولهم للمطار وحتى وداعهم.
-          </blockquote>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-slate-300 text-base font-medium" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>
-              د. خالد — مقيم في الإمارات العربية المتحدة
+      {/* TESTIMONIALS */}
+      <section className="py-16 md:py-20 px-6 bg-[#F8F9FB] border-b border-slate-200" dir="rtl">
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p
+              className="text-xs uppercase tracking-widest text-slate-400 mb-3"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif", letterSpacing: 0 }}
+            >
+              ماذا يقول مرضانا
             </p>
-            <p className="text-yellow-400 text-xl tracking-widest">★★★★★</p>
-            <p className="text-slate-500 text-xs tracking-wide uppercase">Google Reviews</p>
+            <h2
+              className="text-2xl md:text-3xl font-medium text-slate-900 mb-4"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              ثقة مبنية على تجربة حقيقية
+            </h2>
+            <p
+              className="text-sm text-slate-500 max-w-xl mx-auto leading-relaxed"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              تجارب حقيقية من مرضى تلقوا الدعم والتنسيق الطبي عبر Medical Care Germany.
+            </p>
+          </div>
+
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {/* Card 1 */}
+            <div className="bg-white border border-slate-200 border-r-4 border-r-[#C9A646] rounded-sm p-6 shadow-sm">
+              <p
+                className="text-sm text-slate-600 leading-relaxed mb-6 italic"
+                style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+              >
+                &ldquo;الشكر كل الشكر لشركة Medical Care Germany لما قدمته وتقدمه من خدمة فائقة في المجال الطبي للمرضى العرب. يتميز الفريق بالصدق والأمانة ويبذلون قصارى جهدهم باختيار أفضل الأطباء في ألمانيا، ولديهم أيضاً الخبرة في مجال الفيزا والإقامة، ويسعون لراحة المريض منذ وصوله للمطار وحتى وداعه.&rdquo;
+              </p>
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
+                <div
+                  className="w-9 h-9 rounded-full bg-[#0B1C2C] flex items-center justify-center text-[#C9A646] text-sm font-bold flex-shrink-0"
+                  aria-hidden="true"
+                >
+                  خ
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-800" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>د. خالد</p>
+                  <p className="text-xs text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>الإمارات العربية المتحدة · Google Review</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-slate-200 border-r-4 border-r-[#C9A646] rounded-sm p-6 shadow-sm">
+              <p
+                className="text-sm text-slate-600 leading-relaxed mb-6 italic"
+                style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+              >
+                &ldquo;عند تجربة ملف الفيزا العلاجية بالوالدة أنصح بهم. معاملة ممتازة في المواعيد سواء عند العيادة أو المستشفى أو دائرة الأجانب، وكذلك في تنظيم السكن والإقامة والبنوك. شكراً لفريق Medical Care Germany على المتابعة.&rdquo;
+              </p>
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
+                <div
+                  className="w-9 h-9 rounded-full bg-[#0B1C2C] flex items-center justify-center text-[#C9A646] text-sm font-bold flex-shrink-0"
+                  aria-hidden="true"
+                >
+                  و
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-800" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>د. وفيق حمزة</p>
+                  <p className="text-xs text-slate-400" style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}>ليبيا · Google Review</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <p
+              className="text-sm text-slate-500 mb-4"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              هل سبق أن تعاملت معنا؟ شارك تجربتك على Google.
+            </p>
+            <a
+              href="https://share.google/a0BstjyJQugEy0OXm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-slate-300 text-slate-700 text-sm hover:border-[#0B1C2C] hover:text-[#0B1C2C] transition-colors"
+              style={{ fontFamily: "'IBM Plex Sans Arabic', Cairo, sans-serif" }}
+            >
+              اترك تقييمك على Google
+            </a>
           </div>
         </div>
       </section>

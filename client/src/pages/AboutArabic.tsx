@@ -70,25 +70,6 @@ export default function AboutArabic() {
       },
       telephone: "+493025730875",
       email: "info@medicalcaregermany.com",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4",
-        reviewCount: "1",
-        bestRating: "5",
-        worstRating: "1",
-      },
-      review: {
-        "@type": "Review",
-        itemReviewed: {
-          "@type": "MedicalBusiness",
-          name: "Medical Care Germany",
-          url: "https://medicalcaregermany.com/",
-        },
-        author: { "@type": "Person", name: "د. وفيق حمزة" },
-        reviewRating: { "@type": "Rating", ratingValue: "4", bestRating: "5" },
-        reviewBody:
-          "عند تجربة ملف الفيزا العلاجية بالوالدة — انصح بيهم. معاملة جد ممتازة في المواعيد سواء عند العيادة والمستشفى وبوليس الأجانب، وأيضاً في تسوية الأمور فيما يخص السكن وورقة الإقامة والبنوك.",
-      },
     };
 
     const faqSchema = {

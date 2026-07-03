@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 import xml.etree.ElementTree as ET
@@ -41,6 +42,43 @@ def get_html_files(directory):
                 files.append(path)
     return files
 
+def validate_sitemap(sitemap_path):
+    """Validate the generated sitemap for duplicates, missing lastmod, and empty loc."""
+    print(f"Validating {sitemap_path}...")
+    try:
+        tree = ET.parse(sitemap_path)
+        root = tree.getroot()
+        ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        
+        urls = []
+        for url_node in root.findall('ns:url', ns):
+            loc = url_node.find('ns:loc', ns)
+            lastmod = url_node.find('ns:lastmod', ns)
+            
+            # Check for empty loc
+            if loc is None or not loc.text or not loc.text.strip():
+                print("ERROR: Empty <loc> field found.")
+                return False
+            
+            loc_text = loc.text.strip()
+            
+            # Check for duplicates
+            if loc_text in urls:
+                print(f"ERROR: Duplicate URL found: {loc_text}")
+                return False
+            urls.append(loc_text)
+            
+            # Check for missing lastmod
+            if lastmod is None or not lastmod.text or not lastmod.text.strip():
+                print(f"ERROR: Missing <lastmod> for URL: {loc_text}")
+                return False
+                
+        print(f"Validation successful: {len(urls)} unique URLs verified.")
+        return True
+    except Exception as e:
+        print(f"ERROR: Sitemap validation failed with exception: {e}")
+        return False
+
 def generate_sitemap():
     root = ET.Element('urlset', xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     
@@ -74,7 +112,6 @@ def generate_sitemap():
             loc_node.text = f"{DOMAIN}{url_path}"
             
             mod_node = ET.SubElement(url_node, 'lastmod')
-            # Use file modification time or current date
             mtime = datetime.fromtimestamp(file_path.stat().st_mtime).strftime('%Y-%m-%d')
             mod_node.text = mtime
             
@@ -105,6 +142,13 @@ def generate_sitemap():
     tree = ET.ElementTree(root)
     tree.write(SITEMAP_PATH, encoding='utf-8', xml_declaration=True)
     print(f"Successfully generated {SITEMAP_PATH} with {len(all_urls)} URLs.")
+    
+    # Run validation
+    if not validate_sitemap(SITEMAP_PATH):
+        print("Sitemap validation FAILED. Aborting.")
+        sys.exit(1)
+    
+    print("Sitemap generated and validated successfully.")
 
 if __name__ == "__main__":
     generate_sitemap()

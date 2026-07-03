@@ -324,6 +324,16 @@ def build_site():
             render_page('ar', data, OUTPUT_AR_PATH)
         
         print("\n✓ Site build complete! All pages validated and rendered.")
+        
+        # Integrate sitemap generation
+        print("\nGenerating and validating sitemap...")
+        import subprocess
+        result = subprocess.run(['python3', 'generate_sitemap_auto.py'], capture_output=True, text=True)
+        print(result.stdout)
+        if result.returncode != 0:
+            print(result.stderr, file=sys.stderr)
+            raise RuntimeError("Sitemap generation or validation failed.")
+            
         return True
     except Exception as e:
         print(f"\n✗ BUILD FAILED: {e}", file=sys.stderr)

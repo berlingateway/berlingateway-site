@@ -227,6 +227,8 @@ async function startServer() {
     '/submit-case': '/send-medical-reports',
     // Trailing slash canonical fix (targeted — not a global middleware)
     '/prostate-cancer-treatment-germany/': '/prostate-cancer-treatment-germany',
+    // English slug without /ar/ prefix — redirect to canonical Arabic URL
+    '/neck-pain-dizziness-germany': '/ar/neck-pain-dizziness-germany',
   };
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs

@@ -102,6 +102,10 @@ def generate_sitemap():
             elif url_path.endswith('.html'):
                 url_path = url_path[:-5]
             
+            # Remove trailing slash unless it's the root of a language
+            if url_path.endswith('/') and url_path not in ['/ar/', '/de/']:
+                url_path = url_path.rstrip('/')
+            
             # Skip duplicates and specific exclusions
             if url_path in all_urls:
                 continue

@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/ar/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -50,13 +50,13 @@
   </url>
   <url>
     <loc>https://berlingateway.de/ar/insights</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/monitor</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/ar/systemlogik</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -158,7 +158,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/ar/chancenkarte</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -169,10 +169,16 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/aerzte-zahnaerzte/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://berlingateway.de/ar/pflege-algerien</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/aerzte-zahnaerzte</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://berlingateway.de/ar/insights/arbeit-in-deutschland</loc>
@@ -236,7 +242,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/ar/insights/راتب-طبيب-ألمانيا</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -259,38 +265,32 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/insights/gefragte-berufe/</loc>
+    <loc>https://berlingateway.de/ar/insights/gefragte-berufe</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/insights/راتب-ممرض-ألمانيا/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <loc>https://berlingateway.de/ar/insights/تجنس-ألمانيا</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/ar/insights/راتب-صيدلاني-ألمانيا</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/insights/تجنس-ألمانيا/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://berlingateway.de/ar/insights/راتب-مبرمج-ألمانيا</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/insights/راتب-صيدلاني-ألمانيا/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/insights/راتب-مبرمج-ألمانيا/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/insights/راتب-محاسب-ألمانيا/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <loc>https://berlingateway.de/ar/insights/راتب-محاسب-ألمانيا</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -319,55 +319,31 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/anerkennung/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://berlingateway.de/ar/tools/evaluation</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/success-stories/</loc>
+    <loc>https://berlingateway.de/ar/success-stories</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/pflege-aegypten/</loc>
+    <loc>https://berlingateway.de/ar/pflege-aegypten</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/pflege-algerien/</loc>
+    <loc>https://berlingateway.de/ar/pflege-marokko</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/pflege-marokko/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/pflege-tunesien/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/pflege/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/ar/visa/</loc>
+    <loc>https://berlingateway.de/ar/pflege-tunesien</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -428,7 +404,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/de/chancenkarte</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -440,7 +416,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/de/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -452,7 +428,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/de/insights</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -464,7 +440,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/de/monitor</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -512,7 +488,7 @@
   </url>
   <url>
     <loc>https://berlingateway.de/de/systemlogik</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -631,32 +607,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/unternehmen/pflege/</loc>
+    <loc>https://berlingateway.de/de/unternehmen/pflege</loc>
     <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/anerkennung/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/orientierung/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/systemlogik/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/de/voraussetzungen/</loc>
-    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -727,43 +679,37 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/berlin-visa-requirements/</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://berlingateway.de/en/success-stories/</loc>
+    <loc>https://berlingateway.de/en/success-stories</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/nurses-gulf/</loc>
+    <loc>https://berlingateway.de/en/nurses-gulf</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/nursing/</loc>
+    <loc>https://berlingateway.de/en/nursing</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/pflege-aegypten/</loc>
+    <loc>https://berlingateway.de/en/pflege-aegypten</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/fr/success-stories/</loc>
+    <loc>https://berlingateway.de/fr/success-stories</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/fr/afrique-de-louest/</loc>
+    <loc>https://berlingateway.de/fr/afrique-de-louest</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

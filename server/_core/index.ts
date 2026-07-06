@@ -229,6 +229,12 @@ async function startServer() {
     '/prostate-cancer-treatment-germany/': '/prostate-cancer-treatment-germany',
     // English slug without /ar/ prefix — redirect to canonical Arabic URL
     '/neck-pain-dizziness-germany': '/ar/neck-pain-dizziness-germany',
+    // Empty shell pages — 301 redirect to homepage
+    '/institutional-framework': '/',
+    '/governmental-bodies': '/',
+    '/case-architectures': '/',
+    '/advisory-access': '/',
+    '/professional-interfaces': '/',
   };
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs

@@ -373,6 +373,33 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+
+  // ── Arabic Hip Replacement Cluster ──────────────────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hip-arthroplasty-germany/`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hip-anterior-approach-germany/`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hip-replacement-cost-germany/`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hip-rehabilitation-germany/`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hip-medical-travel-germany/`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 ];
 
 function generateSitemapXML(urls: SitemapUrl[]): string {

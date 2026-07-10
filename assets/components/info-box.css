@@ -1,0 +1,42 @@
+/* 
+   File: info-box.css
+   Version: 1.0.0
+   Description: Styles for executive summary, alerts, and information boxes.
+   Namespace: bg-
+*/
+
+.bg-info-box {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-right: 5px solid #0056b3; /* Primary Brand Color */
+    background-color: #f0f7ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.bg-info-box--summary {
+    border-right-color: #28a745; /* Green for summary */
+    background-color: #f4fff6;
+}
+
+.bg-info-box--alert {
+    border-right-color: #dc3545; /* Red for alerts */
+    background-color: #fff5f5;
+}
+
+.bg-info-box--note {
+    border-right-color: #ffc107; /* Yellow for notes */
+    background-color: #fffdf0;
+}
+
+.bg-info-box__title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.bg-info-box__content p:last-child {
+    margin-bottom: 0;
+}

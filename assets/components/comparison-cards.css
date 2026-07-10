@@ -1,0 +1,82 @@
+/* 
+   File: comparison-cards.css
+   Version: 1.0.0
+   Description: Handles comparison tables on desktop and transforms them into stacked cards on mobile.
+   Namespace: bg-
+*/
+
+.bg-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.bg-comparison-table th,
+.bg-comparison-table td {
+    padding: 1rem;
+    border: 1px solid #eee;
+    text-align: right;
+}
+
+.bg-comparison-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.bg-comparison-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Mobile Responsive: Transform Table to Cards */
+@media screen and (max-width: 768px) {
+    .bg-comparison-table, 
+    .bg-comparison-table thead, 
+    .bg-comparison-table tbody, 
+    .bg-comparison-table th, 
+    .bg-comparison-table td, 
+    .bg-comparison-table tr {
+        display: block;
+    }
+
+    .bg-comparison-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .bg-comparison-table tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .bg-comparison-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-right: 50%;
+        text-align: left;
+    }
+
+    .bg-comparison-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .bg-comparison-table td:before {
+        position: absolute;
+        right: 1rem;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #666;
+        content: attr(data-label);
+        text-align: right;
+    }
+}

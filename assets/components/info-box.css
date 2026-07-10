@@ -1,42 +1,38 @@
-/* 
-   File: info-box.css
-   Version: 1.0.0
-   Description: Styles for executive summary, alerts, and information boxes.
-   Namespace: bg-
+/* info-box.css — v1.0.0
+   Component: bg-info-box
 */
 
 .bg-info-box {
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-    border-right: 5px solid #0056b3; /* Primary Brand Color */
-    background-color: #f0f7ff;
-    color: #333;
-    line-height: 1.6;
-}
-
-.bg-info-box--summary {
-    border-right-color: #28a745; /* Green for summary */
-    background-color: #f4fff6;
-}
-
-.bg-info-box--alert {
-    border-right-color: #dc3545; /* Red for alerts */
-    background-color: #fff5f5;
-}
-
-.bg-info-box--note {
-    border-right-color: #ffc107; /* Yellow for notes */
-    background-color: #fffdf0;
+  border-right: 4px solid #C9A84C;
+  background: #FAF7EE;
+  padding: 16px 18px;
+  border-radius: 6px;
+  margin: 20px 0;
+  line-height: 1.8;
 }
 
 .bg-info-box__title {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-    font-size: 1.1rem;
+  font-weight: 700;
+  color: #0D1B2A;
+  display: block;
+  margin-bottom: 6px;
 }
 
-.bg-info-box__content p:last-child {
-    margin-bottom: 0;
+.bg-info-box--warning {
+  border-right-color: #B8860B;
+  background: #FFF8E8;
+}
+
+.bg-info-box--summary {
+  border-right-color: #0D1B2A;
+  background: #F2F4F7;
+}
+
+.bg-info-box ul {
+  margin: 8px 0 0;
+  padding-right: 20px;
+}
+
+.bg-info-box li {
+  margin-bottom: 4px;
 }

@@ -1,59 +1,61 @@
-/* 
-   File: anchor-nav.css
-   Version: 1.0.0
-   Description: Styles for sticky internal navigation.
-   Namespace: bg-
+/* anchor-nav.css — v1.0.0
+   Component: bg-anchor-nav
 */
 
 .bg-anchor-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E2E2;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.bg-anchor-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .bg-anchor-nav__list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px;
 }
 
 .bg-anchor-nav__item {
-    margin: 0;
+  flex-shrink: 0;
 }
 
 .bg-anchor-nav__link {
-    display: block;
-    padding: 1rem 1.5rem;
-    color: #555;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border-bottom: 3px solid transparent;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: #0D1B2A;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .bg-anchor-nav__link:hover,
+.bg-anchor-nav__link:focus-visible {
+  background: #F2F4F7;
+  outline: 2px solid transparent;
+}
+
+.bg-anchor-nav__link:focus-visible {
+  outline: 2px solid #C9A84C;
+  outline-offset: 2px;
+}
+
 .bg-anchor-nav__link--active {
-    color: #0056b3;
-    border-bottom-color: #0056b3;
+  background: #0D1B2A;
+  color: #FFFFFF;
 }
 
-/* RTL Support */
-[dir="rtl"] .bg-anchor-nav__link {
-    text-align: right;
-}
-
-@media screen and (max-width: 768px) {
-    .bg-anchor-nav__link {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
+[data-bg-anchor-target] {
+  scroll-margin-top: 64px;
 }

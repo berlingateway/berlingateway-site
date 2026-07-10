@@ -1,53 +1,76 @@
-/* 
-   File: anchor-nav.js
-   Version: 1.0.0
-   Description: Logic for sticky navigation and active state on scroll.
-   Namespace: bg-
-*/
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('.bg-anchor-nav');
-    if (!nav) return;
+  function initAnchorNav(navEl) {
+    var links = Array.prototype.slice.call(
+      navEl.querySelectorAll('.bg-anchor-nav__link')
+    );
+    if (!links.length) return;
 
-    const links = nav.querySelectorAll('.bg-anchor-nav__link');
-    const sections = Array.from(links).map(link => {
-        const id = link.getAttribute('href').substring(1);
-        return document.getElementById(id);
-    }).filter(section => section !== null);
+    var targets = links
+      .map(function (link) {
+        var id = link.getAttribute('href');
+        if (!id || id.charAt(0) !== '#') return null;
+        var el = document.getElementById(id.slice(1));
+        return el ? { link: link, el: el } : null;
+      })
+      .filter(Boolean);
 
-    // Active link on scroll
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollPosition = window.scrollY + 100; // Offset for sticky nav
+    if (!targets.length) return;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        links.forEach(link => {
-            link.classList.remove('bg-anchor-nav__link--active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('bg-anchor-nav__link--active');
-            }
-        });
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var id = link.getAttribute('href');
+        if (!id || id.charAt(0) !== '#') return;
+        var el = document.getElementById(id.slice(1));
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (history.pushState) {
+          history.pushState(null, '', id);
+        }
+      });
     });
 
-    // Smooth scroll
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80, // Offset for sticky nav
-                    behavior: 'smooth'
-                });
-            }
-        });
+    var ticking = false;
+
+    function setActive() {
+      var scrollPos = window.scrollY || window.pageYOffset;
+      var current = targets[0];
+
+      targets.forEach(function (t) {
+        if (t.el.offsetTop - 80 <= scrollPos) {
+          current = t;
+        }
+      });
+
+      targets.forEach(function (t) {
+        t.link.classList.toggle(
+          'bg-anchor-nav__link--active',
+          t === current
+        );
+        if (t === current) {
+          t.link.setAttribute('aria-current', 'true');
+        } else {
+          t.link.removeAttribute('aria-current');
+        }
+      });
+
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(setActive);
+        ticking = true;
+      }
     });
-});
+
+    setActive();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var navs = document.querySelectorAll('.bg-anchor-nav');
+    navs.forEach(initAnchorNav);
+  });
+})();

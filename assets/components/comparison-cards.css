@@ -1,82 +1,105 @@
-/* 
-   File: comparison-cards.css
-   Version: 1.0.0
-   Description: Handles comparison tables on desktop and transforms them into stacked cards on mobile.
-   Namespace: bg-
+/* comparison-cards.css — v1.0.0
+   Component: bg-comparison-table
+   Desktop: table. Mobile (<768px): stacked cards. No horizontal scroll.
 */
 
 .bg-comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    font-size: 0.95rem;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
 }
 
 .bg-comparison-table th,
 .bg-comparison-table td {
-    padding: 1rem;
-    border: 1px solid #eee;
+  padding: 12px 14px;
+  text-align: right;
+  border-bottom: 1px solid #E2E2E2;
+  vertical-align: top;
+}
+
+.bg-comparison-table thead th {
+  background: #0D1B2A;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.bg-comparison-table tbody tr:nth-child(even) {
+  background: #F7F7F7;
+}
+
+.bg-comparison-table__badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background: #C9A84C;
+  color: #0D1B2A;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .bg-comparison-table {
+    border: 0;
+  }
+
+  .bg-comparison-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .bg-comparison-table tbody tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid #E2E2E2;
+    border-radius: 8px;
+    padding: 8px 0;
+    background: #FFFFFF;
+  }
+
+  .bg-comparison-table tbody tr:nth-child(even) {
+    background: #FFFFFF;
+  }
+
+  .bg-comparison-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 1px solid #F0F0F0;
     text-align: right;
+  }
+
+  .bg-comparison-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .bg-comparison-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #0D1B2A;
+    flex-shrink: 0;
+    min-width: 40%;
+  }
 }
 
-.bg-comparison-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    color: #333;
+.bg-cta-link {
+  color: #0D1B2A;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
-.bg-comparison-table tr:nth-child(even) {
-    background-color: #fafafa;
+.bg-cta-link:hover,
+.bg-cta-link:focus-visible {
+  color: #C9A84C;
 }
 
-/* Mobile Responsive: Transform Table to Cards */
-@media screen and (max-width: 768px) {
-    .bg-comparison-table, 
-    .bg-comparison-table thead, 
-    .bg-comparison-table tbody, 
-    .bg-comparison-table th, 
-    .bg-comparison-table td, 
-    .bg-comparison-table tr {
-        display: block;
-    }
-
-    .bg-comparison-table thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    .bg-comparison-table tr {
-        margin-bottom: 1.5rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .bg-comparison-table td {
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-right: 50%;
-        text-align: left;
-    }
-
-    .bg-comparison-table td:last-child {
-        border-bottom: 0;
-    }
-
-    .bg-comparison-table td:before {
-        position: absolute;
-        right: 1rem;
-        width: 45%;
-        white-space: nowrap;
-        font-weight: bold;
-        color: #666;
-        content: attr(data-label);
-        text-align: right;
-    }
+.bg-cta-link--disabled {
+  color: #9A9A9A;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
 }

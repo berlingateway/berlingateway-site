@@ -1,503 +1,264 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل المنح الدراسية في ألمانيا للطلاب الدوليين | Berlin Gateway</title>
-    <meta name="description" content="دليل شامل لأهم المنح الدراسية في ألمانيا (DAAD، Deutschlandstipendium، Expatrio ومنح المؤسسات)، مع شروط الأهلية وكيفية التقديم، محدّث باستمرار.">
-    <link rel="canonical" href="https://www.berlingateway.de/ar/study-in-germany/scholarships/">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="دليل المنح الدراسية في ألمانيا للطلاب الدوليين">
-    <meta property="og:description" content="تعرّف على أهم برامج المنح والتمويل المتاحة للطلاب العرب في ألمانيا، وكيف تختار البرنامج المناسب لمؤهلاتك.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.berlingateway.de/ar/study-in-germany/scholarships/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل المنح الدراسية في ألمانيا للطلاب الدوليين | Berlin Gateway</title>
+<meta name="description" content="دليل شامل لأهم المنح الدراسية في ألمانيا (DAAD، Deutschlandstipendium، Expatrio ومنح المؤسسات)، مع شروط الأهلية وكيفية التقديم، محدّث باستمرار.">
+<link rel="canonical" href="https://www.berlingateway.de/ar/study-in-germany/scholarships/">
+<meta property="og:title" content="دليل المنح الدراسية في ألمانيا للطلاب الدوليين">
+<meta property="og:description" content="تعرّف على أهم برامج المنح والتمويل المتاحة للطلاب العرب في ألمانيا، وكيف تختار البرنامج المناسب لمؤهلاتك.">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/components/comparison-cards.css?v=1.0.0">
-    <link rel="stylesheet" href="/assets/components/info-box.css?v=1.0.0">
-    <link rel="stylesheet" href="/assets/components/anchor-nav.css?v=1.0.0">
-    <link rel="stylesheet" href="/assets/components/site-footer.css?v=1.0.0">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Page Specific Adjustments */
-        .bg-card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .bg-card {
-            padding: 1.5rem;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .bg-card__icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .bg-card__title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            display: block;
-            font-size: 1.1rem;
-        }
-        .bg-decision-tree {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            border: 1px solid #eee;
-        }
-        .bg-decision-tree__step {
-            text-align: center;
-        }
-        .bg-decision-tree__question {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-        .bg-decision-tree__options {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .bg-decision-tree__button {
-            padding: 0.8rem 1.5rem;
-            background: #0056b3;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .bg-decision-tree__button:hover {
-            background: #004494;
-        }
-        .bg-faq {
-            margin: 2rem 0;
-        }
-        .bg-faq__item {
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1rem;
-        }
-        .bg-faq__question {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-        .bg-highlight-text {
-            color: #0056b3;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .cta--disabled {
-            background-color: #ccc !important;
-            cursor: not-allowed !important;
-            pointer-events: none;
-            opacity: 0.7;
-        }
-    </style>
+<!-- Shared component assets (static, no build step) -->
+<link rel="stylesheet" href="/assets/components/info-box.css">
+<link rel="stylesheet" href="/assets/components/comparison-cards.css">
+<link rel="stylesheet" href="/assets/components/anchor-nav.css">
+<link rel="stylesheet" href="/assets/components/decision-tree.css">
+<link rel="stylesheet" href="/assets/components/site-footer.css">
+
+<style>
+  /* Page-specific layout only — not shared components, stays local to this page */
+  body { font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif; color: #1A1A1A; margin: 0; line-height: 1.8; }
+  .bg-container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  .bg-hero { padding: 32px 0 16px; }
+  .bg-hero__title { color: #0D1B2A; font-size: 1.9rem; margin: 0 0 6px; }
+  .bg-hero__subtitle { color: #555; font-size: 1.05rem; margin: 0 0 4px; }
+  .bg-hero__updated { color: #888; font-size: 0.85rem; }
+  .bg-section { padding: 28px 0; border-top: 1px solid #EEE; }
+  .bg-section__title { color: #0D1B2A; font-size: 1.4rem; }
+  .bg-cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 16px 0; }
+  @media (max-width: 600px) { .bg-cards-grid { grid-template-columns: 1fr; } }
+  .bg-card { background: #F7F7F7; border-radius: 10px; padding: 16px; }
+  .bg-card__title { color: #0D1B2A; font-weight: 700; margin: 0 0 6px; }
+  .bg-faq-item { margin-bottom: 18px; }
+  .bg-faq-item__q { font-weight: 700; color: #0D1B2A; }
+  .bg-cta-final { background: #0D1B2A; color: #FFFFFF; border-radius: 10px; padding: 22px; margin-top: 12px; }
+  .bg-cta-final a { color: #C9A84C; font-weight: 700; }
+  .bg-breadcrumb { font-size: 0.85rem; color: #777; padding-top: 12px; }
+  .bg-breadcrumb a { color: #777; }
+  table.bg-comparison-table { margin-top: 12px; }
+</style>
+
+<!-- Schema.org: Article + BreadcrumbList + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "دليل المنح الدراسية في ألمانيا للطلاب الدوليين",
+  "inLanguage": "ar",
+  "url": "https://www.berlingateway.de/ar/study-in-germany/scholarships/",
+  "publisher": { "@type": "Organization", "name": "Berlin Gateway" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.berlingateway.de/ar/" },
+    { "@type": "ListItem", "position": 2, "name": "الدليل الشامل للدراسة في ألمانيا", "item": "https://www.berlingateway.de/ar/study-in-germany/" },
+    { "@type": "ListItem", "position": 3, "name": "المنح الدراسية", "item": "https://www.berlingateway.de/ar/study-in-germany/scholarships/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "هل تشمل المنح تكاليف الحساب المغلق (Blocked Account)؟", "acceptedAnswer": { "@type": "Answer", "text": "يختلف حسب البرنامج. بعض منح DAAD تغطي التأمين وبدل السفر، لكنها لا تُعفيك بالضرورة من متطلبات الحساب المغلق إذا كانت غير مرتبطة بتأشيرة الطالب." } },
+    { "@type": "Question", "name": "هل يمكن الجمع بين المنحة والعمل الجزئي أثناء الدراسة؟", "acceptedAnswer": { "@type": "Answer", "text": "غالبًا نعم، لكن بعض المنح تضع سقفًا لساعات العمل أو تشترط الإفصاح عن أي دخل إضافي." } },
+    { "@type": "Question", "name": "هل تشمل المنحة الزوج/الزوجة أو الأسرة؟", "acceptedAnswer": { "@type": "Answer", "text": "بعض برامج DAAD تقدم بدلات عائلية محدودة، لكنها ليست ميزة عامة في كل المنح." } },
+    { "@type": "Question", "name": "هل يمكن التقديم على منحة قبل الحصول على قبول جامعي؟", "acceptedAnswer": { "@type": "Answer", "text": "في بعض برامج DAAD نعم، بينما تشترط منح أخرى مثل Deutschlandstipendium أن تكون طالبًا مسجلاً بالفعل." } },
+    { "@type": "Question", "name": "هل اللغة الألمانية إلزامية للتقديم؟", "acceptedAnswer": { "@type": "Answer", "text": "ليست إلزامية دائمًا، لكنها قد تُشترط لبرامج معينة مثل EPOS." } },
+    { "@type": "Question", "name": "هل توجد منح مخصصة لطلاب البكالوريوس؟", "acceptedAnswer": { "@type": "Answer", "text": "عددها محدود مقارنة بالماجستير والدكتوراه، وأبرزها Deutschlandstipendium." } },
+    { "@type": "Question", "name": "هل يوجد حد للعمر للتقديم على المنح؟", "acceptedAnswer": { "@type": "Answer", "text": "لا يوجد حد عمري صارم في أغلب البرامج، لكن بعضها يشترط ألا تكون قد مضت فترة طويلة جدًا منذ التخرج." } }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="/de/study-in-germany/scholarships/" class="lang-switch">Deutsch</a>
-            <a href="mailto:info@berlingateway.de?subject=Scholarships Inquiry" target="_blank">
-                ✉ info@berlingateway.de
-            </a>
-        </div>
-        <div class="top-band__right">
-            <span style="font-size:12px; opacity:0.7;">آخر تحديث: يوليو 2026</span>
-        </div>
+<nav class="bg-anchor-nav" aria-label="التنقل داخل الصفحة">
+  <ul class="bg-anchor-nav__list">
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#overview">نظرة عامة</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#comparison">الجدول</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#daad">DAAD</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#deutschlandstipendium">Deutschlandstipendium</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#institutions">المؤسسات</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#expatrio">Expatrio</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#decision">اختر منحتك</a></li>
+    <li class="bg-anchor-nav__item"><a class="bg-anchor-nav__link" href="#faq">الأسئلة الشائعة</a></li>
+  </ul>
+</nav>
+
+<div class="bg-container">
+
+  <p class="bg-breadcrumb">
+    <a href="/ar/">الرئيسية</a> &gt;
+    <a href="/ar/study-in-germany/">الدليل الشامل للدراسة في ألمانيا</a> &gt;
+    المنح الدراسية
+  </p>
+
+  <header class="bg-hero" id="overview" data-bg-anchor-target>
+    <h1 class="bg-hero__title">دليل المنح الدراسية في ألمانيا للطلاب الدوليين</h1>
+    <p class="bg-hero__subtitle">أحدث فرص التمويل والمنح المتاحة حتى عام 2026</p>
+    <p class="bg-hero__updated">آخر تحديث: يوليو 2026</p>
+
+    <p>الدراسة في ألمانيا لا تعني بالضرورة تكلفة باهظة، لكنها أيضًا ليست "مجانية للجميع" كما يُشاع أحيانًا. الجامعات الحكومية في أغلب الولايات الألمانية لا تفرض رسومًا دراسية (Tuition Fees)، لكنها تفرض رسم فصل دراسي (Semesterbeitrag) يتراوح عادة بين 100 و350 يورو تقريبًا. المنح الدراسية هنا لا "تُعفيك" من رسوم لم تكن موجودة أصلاً، بل تقدّم دعمًا ماليًا لتغطية تكاليف المعيشة، أو تمويلًا كاملاً للدراسة والبحث حسب نوع البرنامج.</p>
+
+    <div class="bg-info-box bg-info-box--summary">
+      <span class="bg-info-box__title">إذا كنت تبحث عن:</span>
+      <ul>
+        <li>تمويل حكومي شامل ← <strong>DAAD</strong></li>
+        <li>دعم شهري أثناء الدراسة ← <strong>Deutschlandstipendium</strong></li>
+        <li>منح من مؤسسات ألمانية ← <strong>Heinrich Böll، Friedrich Ebert، وغيرها</strong></li>
+        <li>مسابقات وجوائز خاصة ← <strong>Expatrio</strong></li>
+      </ul>
     </div>
+  </header>
+
+  <section class="bg-section">
+    <h2 class="bg-section__title">أنواع المنح الدراسية في ألمانيا</h2>
+    <div class="bg-cards-grid">
+      <div class="bg-card"><p class="bg-card__title">منح حكومية</p><p>تمنحها الدولة الألمانية، وأبرزها DAAD.</p></div>
+      <div class="bg-card"><p class="bg-card__title">منح جامعية</p><p>تمنحها الجامعة نفسها، وأبرزها Deutschlandstipendium.</p></div>
+      <div class="bg-card"><p class="bg-card__title">منح المؤسسات</p><p>مؤسسات ألمانية مرتبطة بتوجهات سياسية/مجتمعية معينة.</p></div>
+      <div class="bg-card"><p class="bg-card__title">منح خاصة</p><p>مسابقات وجوائز من شركات، مثل Expatrio.</p></div>
+    </div>
+  </section>
+
+  <section class="bg-section" id="comparison" data-bg-anchor-target>
+    <h2 class="bg-section__title">مقارنة سريعة بين أهم المنح</h2>
+    <table class="bg-comparison-table">
+      <thead>
+        <tr>
+          <th scope="col">المنحة</th>
+          <th scope="col">نوع الجهة</th>
+          <th scope="col">طبيعة الدعم</th>
+          <th scope="col">المرحلة</th>
+          <th scope="col">اللغة</th>
+          <th scope="col">شرط الخبرة</th>
+          <th scope="col">مناسب لمن؟</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="المنحة">DAAD (برامج متعددة)</td>
+          <td data-label="نوع الجهة">جهة حكومية</td>
+          <td data-label="طبيعة الدعم">تمويل دراسة/بحث (يختلف حسب البرنامج)</td>
+          <td data-label="المرحلة">ماجستير، دكتوراه، بكالوريوس محدود</td>
+          <td data-label="اللغة">ألمانية أو إنجليزية حسب البرنامج</td>
+          <td data-label="شرط الخبرة">حسب البرنامج (إلزامي في EPOS)</td>
+          <td data-label="مناسب لمن؟">خريجو البكالوريوس والباحثون</td>
+        </tr>
+        <tr>
+          <td data-label="المنحة">Deutschlandstipendium</td>
+          <td data-label="نوع الجهة">جامعة</td>
+          <td data-label="طبيعة الدعم">دعم شهري ثابت (300€)</td>
+          <td data-label="المرحلة">بكالوريوس وماجستير</td>
+          <td data-label="اللغة">حسب متطلبات الجامعة</td>
+          <td data-label="شرط الخبرة">لا</td>
+          <td data-label="مناسب لمن؟">الطلاب المقبولون بالفعل في جامعة ألمانية</td>
+        </tr>
+        <tr>
+          <td data-label="المنحة">Heinrich Böll / Friedrich Ebert وغيرها</td>
+          <td data-label="نوع الجهة">مؤسسة سياسية/اجتماعية</td>
+          <td data-label="طبيعة الدعم">تمويل دراسة + دعم غير مالي</td>
+          <td data-label="المرحلة">حسب المؤسسة</td>
+          <td data-label="اللغة">غالبًا ألمانية</td>
+          <td data-label="شرط الخبرة">يختلف حسب المؤسسة</td>
+          <td data-label="مناسب لمن؟">أصحاب النشاط الأكاديمي أو المجتمعي</td>
+        </tr>
+        <tr>
+          <td data-label="المنحة">Expatrio Scholarship</td>
+          <td data-label="نوع الجهة">شركة خاصة</td>
+          <td data-label="طبيعة الدعم">مسابقة وجوائز مالية</td>
+          <td data-label="المرحلة">بكالوريوس وماجستير</td>
+          <td data-label="اللغة">فيديو قصير وفق شروط الدورة الحالية</td>
+          <td data-label="شرط الخبرة">لا</td>
+          <td data-label="مناسب لمن؟">الطلاب الذين بدأوا إجراءات الدراسة فعليًا</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="bg-info-box bg-info-box--warning">
+      تنبيه مهم: تختلف شروط الأهلية، وقيم التمويل، ومواعيد التقديم بين البرامج، وقد تتغير من عام إلى آخر. احرص دائمًا على مراجعة الصفحة الرسمية لكل برنامج قبل تقديم طلبك.
+    </div>
+  </section>
+
+  <section class="bg-section" id="daad" data-bg-anchor-target>
+    <h2 class="bg-section__title">منح الحكومة الألمانية: DAAD</h2>
+    <div class="bg-info-box">ملاحظة: تختلف شروط التمويل والأهلية بين برامج DAAD، لذلك لا ينبغي افتراض أن جميع البرامج تقدم المزايا نفسها.</div>
+    <p>DAAD (الهيئة الألمانية للتبادل الأكاديمي) ليست منحة واحدة، بل مظلة تضم عشرات البرامج المختلفة. من أبرزها:</p>
+    <ul>
+      <li><strong>برامج الدراسة العامة (Studienstipendien):</strong> لطلاب الماجستير والدكتوراه، مع دعم شهري ومزايا إضافية.</li>
+      <li><strong>EPOS:</strong> موجهة للمهنيين، وتشترط عادة <strong>خبرة عملية لا تقل عن سنتين</strong> — شرط خاص ببرامج EPOS وليس شرطًا عامًا لكل منح DAAD.</li>
+      <li><strong>برنامج هيلموت شميدت:</strong> لقادة المستقبل في السياسات العامة والحوكمة.</li>
+    </ul>
+    <p>القيمة الشهرية للدعم تختلف حسب البرنامج، ويُنصح دائمًا بمراجعة قاعدة بيانات DAAD الرسمية قبل التقديم.</p>
+    <a href="#" class="bg-cta-link bg-cta-link--disabled" aria-disabled="true" title="الصفحة التفصيلية قيد الإعداد">اقرأ الدليل الكامل لمنحة DAAD ←</a>
+  </section>
+
+  <section class="bg-section" id="deutschlandstipendium" data-bg-anchor-target>
+    <h2 class="bg-section__title">منح الجامعات: Deutschlandstipendium</h2>
+    <ul>
+      <li>دعم شهري بقيمة 300 يورو، بغض النظر عن دخل الطالب أو أسرته.</li>
+      <li>متاحة لطلاب البكالوريوس والماجستير.</li>
+      <li>مفتوحة لجميع الجنسيات.</li>
+      <li>التقديم عبر الجامعة نفسها، وليس عبر DAAD.</li>
+    </ul>
+    <p>ليست منحة مضمونة لكل طالب متقدم — القبول فيها تنافسي ويعتمد على معايير كل جامعة، وتجديدها سنويًا مرهون بقرار الجامعة واستمرار الطالب في استيفاء الشروط.</p>
+    <a href="#" class="bg-cta-link bg-cta-link--disabled" aria-disabled="true" title="الصفحة التفصيلية قيد الإعداد">التفاصيل الكاملة والشروط ←</a>
+  </section>
+
+  <section class="bg-section" id="institutions" data-bg-anchor-target>
+    <h2 class="bg-section__title">منح المؤسسات الألمانية</h2>
+    <p>تقدّم عدة مؤسسات ألمانية مستقلة منحًا دراسية، أبرزها:</p>
+    <ul>
+      <li><strong>Heinrich-Böll-Stiftung:</strong> قريبة من حزب الخضر، وتهتم بالنشاط البيئي والاجتماعي.</li>
+      <li><strong>Friedrich-Ebert-Stiftung:</strong> قريبة من الحزب الاشتراكي الديمقراطي، وتهتم بالعدالة الاجتماعية.</li>
+      <li><strong>Konrad-Adenauer-Stiftung:</strong> قريبة من الاتحاد المسيحي الديمقراطي.</li>
+      <li><strong>Rosa-Luxemburg-Stiftung:</strong> قريبة من حزب اليسار.</li>
+      <li><strong>KAAD:</strong> موجهة أساسًا للطلاب من دول نامية.</li>
+      <li><strong>Studienstiftung:</strong> من أعرق مؤسسات الموهوبين أكاديميًا في ألمانيا.</li>
+    </ul>
+  </section>
+
+  <section class="bg-section" id="private" data-bg-anchor-target>
+    <h2 class="bg-section__title">المنح الخاصة: Expatrio وغيرها</h2>
+    <p>Expatrio Scholarship هي مسابقة (Scholarship Competition) وليست منحة أكاديمية بمعايير DAAD:</p>
+    <ul>
+      <li>الأهلية مرتبطة بكون المتقدم عميلاً في باقة Expatrio Value Package.</li>
+      <li>التقديم لدورة 2026 مفتوح حتى 30 سبتمبر 2026.</li>
+      <li>تُمنح عادة عبر تقديم فيديو قصير وفق شروط الدورة الحالية.</li>
+    </ul>
+    <a href="#" class="bg-cta-link bg-cta-link--disabled" aria-disabled="true" title="الصفحة التفصيلية قيد الإعداد">تفاصيل النسخة الحالية والشروط ←</a>
+  </section>
+
+  <section class="bg-section" id="decision" data-bg-anchor-target>
+    <h2 class="bg-section__title">كيف تختار المنحة المناسبة لحالتك؟</h2>
+    <div id="bg-decision-tree-container"></div>
+  </section>
+
+  <section class="bg-section" id="faq" data-bg-anchor-target>
+    <h2 class="bg-section__title">أسئلة شائعة</h2>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل تشمل المنح تكاليف الحساب المغلق (Blocked Account)؟</p><p>يختلف حسب البرنامج. بعض منح DAAD تغطي التأمين وبدل السفر، لكنها لا تُعفيك بالضرورة من متطلبات الحساب المغلق.</p></div>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل يمكن الجمع بين المنحة والعمل الجزئي أثناء الدراسة؟</p><p>غالبًا نعم، لكن بعض المنح تضع سقفًا لساعات العمل أو تشترط الإفصاح عن الدخل.</p></div>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل تشمل المنحة الزوج/الزوجة أو الأسرة؟</p><p>بعض برامج DAAD تقدم بدلات عائلية محدودة، لكنها ليست ميزة عامة.</p></div>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل يمكن التقديم قبل الحصول على قبول جامعي؟</p><p>في بعض برامج DAAD نعم، بينما تشترط Deutschlandstipendium تسجيلاً مسبقًا.</p></div>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل اللغة الألمانية إلزامية؟</p><p>ليست إلزامية دائمًا، لكنها قد تُشترط لبرامج معينة مثل EPOS.</p></div>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل توجد منح لطلاب البكالوريوس؟</p><p>عددها محدود، وأبرزها Deutschlandstipendium.</p></div>
+    <div class="bg-faq-item"><p class="bg-faq-item__q">هل يوجد حد للعمر؟</p><p>لا يوجد حد عمري صارم في أغلب البرامج.</p></div>
+  </section>
+
+  <div class="bg-cta-final">
+    <p>يساعد فريق Berlin Gateway في تقييم الملف الأكاديمي، واختيار البرامج المناسبة، ومراجعة مستندات التقديم، والإرشاد إلى الجامعات وفرص التمويل التي قد تتوافق مع مؤهلات الطالب. ويظل قرار القبول والمنحة من اختصاص الجامعة أو الجهة المانحة.</p>
+    <p><a href="mailto:info@berlingateway.de">تواصل معنا عبر info@berlingateway.de</a></p>
+  </div>
+
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-            <a href="/ar/systemlogik/">منطق النظام</a>
-            <a href="/ar/monitor/">المرصد</a>
-            <a href="/ar/insights/">الرؤى</a>
-        </nav>
-    </div>
-</header>
-
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="/ar/study-in-germany/">الدليل الشامل للدراسة في ألمانيا</a>
-        <span>&gt;</span>
-        <a href="/ar/study-in-germany/scholarships/">المنح الدراسية</a>
-    </div>
-</nav>
-
-<!-- STICKY ANCHOR NAV -->
-<nav class="bg-anchor-nav">
-    <ul class="bg-anchor-nav__list">
-        <li class="bg-anchor-nav__item"><a href="#types" class="bg-anchor-nav__link">أنواع المنح</a></li>
-        <li class="bg-anchor-nav__item"><a href="#comparison" class="bg-anchor-nav__link">مقارنة سريعة</a></li>
-        <li class="bg-anchor-nav__item"><a href="#government" class="bg-anchor-nav__link">منح الحكومة</a></li>
-        <li class="bg-anchor-nav__item"><a href="#university" class="bg-anchor-nav__link">منح الجامعات</a></li>
-        <li class="bg-anchor-nav__item"><a href="#institutions" class="bg-anchor-nav__link">منح المؤسسات</a></li>
-        <li class="bg-anchor-nav__item"><a href="#private" class="bg-anchor-nav__link">المنح الخاصة</a></li>
-        <li class="bg-anchor-nav__item"><a href="#how-to-choose" class="bg-anchor-nav__link">كيف تختار؟</a></li>
-        <li class="bg-anchor-nav__item"><a href="#faq" class="bg-anchor-nav__link">الأسئلة الشائعة</a></li>
-    </ul>
-</nav>
-
-<!-- BAND 4: CONTENT BODY (WHITE) -->
-<main>
-    <!-- HERO SECTION -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>دليل المنح الدراسية في ألمانيا للطلاب الدوليين</h1>
-                    <p class="sub">أحدث فرص التمويل والمنح المتاحة حتى عام 2026.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXECUTIVE SUMMARY -->
-    <section class="section">
-        <div class="container">
-            <div class="bg-info-box bg-info-box--summary">
-                <span class="bg-info-box__title">ملخص تنفيذي</span>
-                <div class="bg-info-box__content">
-                    <p>الدراسة في ألمانيا لا تعني بالضرورة تكلفة باهظة، لكنها أيضًا ليست "مجانية للجميع" كما يُشاع أحيانًا. الجامعات الحكومية في أغلب الولايات الألمانية لا تفرض رسومًا دراسية (Tuition Fees)، لكنها تفرض رسم فصل دراسي (Semesterbeitrag) يتراوح عادة بين 100 و350 يورو تقريبًا. المنح الدراسية هنا لا "تُعفيك" من رسوم لم تكن موجودة أصلاً، بل تقدّم لك دعمًا ماليًا لتغطية تكاليف المعيشة.</p>
-                </div>
-            </div>
-            <p>هذا الدليل يوضح أنواع المنح المتاحة، الفرق الجوهري بينها، وكيف تختار المسار الأنسب لحالتك، مع روابط لصفحات تفصيلية عن كل برنامج.</p>
-            
-            <div class="bg-info-box bg-info-box--note">
-                <span class="bg-info-box__title">إذا كنت تبحث عن:</span>
-                <div class="bg-info-box__content">
-                    <ul>
-                        <li>تمويل حكومي شامل ← <strong>DAAD</strong></li>
-                        <li>دعم شهري أثناء الدراسة ← <strong>Deutschlandstipendium</strong></li>
-                        <li>منح من مؤسسات ألمانية ← <strong>Heinrich Böll، Friedrich Ebert، وغيرها</strong></li>
-                        <li>مسابقات وجوائز خاصة ← <strong>Expatrio</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TYPES SECTION -->
-    <section class="section" id="types">
-        <div class="container">
-            <h2>أنواع المنح الدراسية في ألمانيا</h2>
-            <p>قبل الدخول في التفاصيل، من المفيد فهم أربعة تصنيفات رئيسية للمنح في ألمانيا:</p>
-            
-            <div class="bg-card-grid">
-                <div class="bg-card">
-                    <span class="bg-card__icon">🏛️</span>
-                    <span class="bg-card__title">منح حكومية</span>
-                    <p>تمنحها الدولة الألمانية أو مؤسسات تابعة لها، وأبرزها DAAD. عادة الأكثر شمولاً من حيث التغطية المالية.</p>
-                </div>
-                <div class="bg-card">
-                    <span class="bg-card__icon">🎓</span>
-                    <span class="bg-card__title">منح جامعية</span>
-                    <p>تمنحها الجامعة نفسها من ميزانيتها أو بدعم من القطاع الخاص، وأبرزها Deutschlandstipendium.</p>
-                </div>
-                <div class="bg-card">
-                    <span class="bg-card__icon">🤝</span>
-                    <span class="bg-card__title">منح المؤسسات</span>
-                    <p>مؤسسات ألمانية مرتبطة بأحزاب أو توجهات مجتمعية معينة، مثل Heinrich Böll وFriedrich Ebert.</p>
-                </div>
-                <div class="bg-card">
-                    <span class="bg-card__icon">💼</span>
-                    <span class="bg-card__title">منح خاصة</span>
-                    <p>تقدمها شركات أو منصات خاصة، وغالبًا تكون على شكل مسابقة أو جائزة مالية، مثل Expatrio.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPARISON TABLE SECTION -->
-    <section class="section" id="comparison">
-        <div class="container">
-            <h2>مقارنة سريعة بين أهم المنح</h2>
-            <table class="bg-comparison-table">
-                <thead>
-                    <tr>
-                        <th>المنحة</th>
-                        <th>نوع الجهة</th>
-                        <th>طبيعة الدعم</th>
-                        <th>المرحلة الدراسية</th>
-                        <th>اللغة المطلوبة</th>
-                        <th>شرط الخبرة</th>
-                        <th>مناسب لمن؟</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="المنحة">DAAD (برامج متعددة)</td>
-                        <td data-label="نوع الجهة">جهة حكومية</td>
-                        <td data-label="طبيعة الدعم">تمويل دراسة/بحث</td>
-                        <td data-label="المرحلة الدراسية">ماجستير، دكتوراه، بكالوريوس محدود</td>
-                        <td data-label="اللغة المطلوبة">ألمانية أو إنجليزية</td>
-                        <td data-label="شرط الخبرة">حسب البرنامج (إلزامي في EPOS)</td>
-                        <td data-label="مناسب لمن؟">خريجو البكالوريوس والباحثون</td>
-                    </tr>
-                    <tr>
-                        <td data-label="المنحة">Deutschlandstipendium</td>
-                        <td data-label="نوع الجهة">جامعة</td>
-                        <td data-label="طبيعة الدعم">دعم شهري ثابت</td>
-                        <td data-label="المرحلة الدراسية">بكالوريوس وماجستير</td>
-                        <td data-label="اللغة المطلوبة">حسب متطلبات الجامعة</td>
-                        <td data-label="شرط الخبرة">لا</td>
-                        <td data-label="مناسب لمن؟">الطلاب المقبولون بالفعل في جامعة ألمانية</td>
-                    </tr>
-                    <tr>
-                        <td data-label="المنحة">منح المؤسسات السياسية</td>
-                        <td data-label="نوع الجهة">مؤسسة سياسية/اجتماعية</td>
-                        <td data-label="طبيعة الدعم">تمويل دراسة + دعم غير مالي</td>
-                        <td data-label="المرحلة الدراسية">حسب المؤسسة</td>
-                        <td data-label="اللغة المطلوبة">غالبًا ألمانية</td>
-                        <td data-label="شرط الخبرة">يختلف حسب المؤسسة</td>
-                        <td data-label="مناسب لمن؟">أصحاب النشاط الأكاديمي أو المجتمعي</td>
-                    </tr>
-                    <tr>
-                        <td data-label="المنحة">Expatrio Scholarship</td>
-                        <td data-label="نوع الجهة">شركة خاصة</td>
-                        <td data-label="طبيعة الدعم">مسابقة وجوائز مالية</td>
-                        <td data-label="المرحلة الدراسية">بكالوريوس وماجستير</td>
-                        <td data-label="اللغة المطلوبة">فيديو قصير حسب الشروط</td>
-                        <td data-label="شرط الخبرة">لا</td>
-                        <td data-label="مناسب لمن؟">الطلاب الذين بدأوا إجراءات الدراسة فعليًا</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <div class="bg-info-box bg-info-box--alert">
-                <span class="bg-info-box__title">تنبيه مهم</span>
-                <div class="bg-info-box__content">
-                    <p>تختلف شروط الأهلية، وقيم التمويل، ومواعيد التقديم بين البرامج، وقد تتغير من عام إلى آخر. احرص دائمًا على مراجعة الصفحة الرسمية لكل برنامج قبل تقديم طلبك.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GOVERNMENT SCHOLARSHIPS SECTION -->
-    <section class="section" id="government">
-        <div class="container">
-            <h2>منح الحكومة الألمانية</h2>
-            <h3>DAAD</h3>
-            <div class="bg-info-box bg-info-box--note">
-                <div class="bg-info-box__content">
-                    <p><strong>ملاحظة:</strong> تختلف شروط التمويل والأهلية بين برامج DAAD، لذلك لا ينبغي افتراض أن جميع البرامج تقدم المزايا نفسها.</p>
-                </div>
-            </div>
-            <p>DAAD (الهيئة الألمانية للتبادل الأكاديمي) ليست منحة واحدة، بل مظلة تضم عشرات البرامج المختلفة، لكل منها شروط وقيمة تمويل مستقلة. من أبرزها:</p>
-            <ul>
-                <li><strong>برامج الدراسة العامة (Studienstipendien)</strong>: لطلاب الماجستير والدكتوراه بشكل أساسي، مع دعم شهري ومزايا إضافية (تأمين، بدل سفر، وأحيانًا دورة لغة ألمانية).</li>
-                <li><strong>EPOS (برامج الدراسات العليا التنموية)</strong>: موجهة للمهنيين من دول نامية، وتشترط عادة <span class="bg-highlight-text">خبرة عملية لا تقل عن سنتين</span> بعد البكالوريوس — وهذا الشرط خاص ببرامج EPOS تحديدًا وليس شرطًا عامًا لكل منح DAAD.</li>
-                <li><strong>برنامج هيلموت شميدت</strong>: لقادة المستقبل في السياسات العامة والحوكمة، ويغطي برامج ماجستير محددة في جامعات شريكة.</li>
-            </ul>
-            <p>القيمة الشهرية للدعم تختلف حسب البرنامج والمرحلة الدراسية، وتُحدَّث دوريًا من DAAD نفسها. الأدق دائمًا مراجعة تفاصيل البرنامج المحدد عبر قاعدة بيانات DAAD الرسمية قبل التقديم.</p>
-            
-            <p><span class="cta cta--disabled">[[اقرأ الدليل الكامل لمنحة DAAD →]]</span></p>
-        </div>
-    </section>
-
-    <!-- UNIVERSITY SCHOLARSHIPS SECTION -->
-    <section class="section" id="university">
-        <div class="container">
-            <h2>منح الجامعات: Deutschlandstipendium</h2>
-            <p>منحة Deutschlandstipendium من أكثر المنح واقعية للتقديم عليها، لأنها:</p>
-            <ul>
-                <li>تقدّم دعمًا شهريًا بقيمة 300 يورو، بغض النظر عن دخل الطالب أو أسرته.</li>
-                <li>متاحة لطلاب البكالوريوس والماجستير.</li>
-                <li>مفتوحة لجميع الجنسيات، وليست حكرًا على الطلاب الألمان.</li>
-                <li>يتم التقديم عليها عبر الجامعة نفسها، وليس عبر DAAD أو أي جهة مركزية.</li>
-            </ul>
-            <p>مع ذلك، هي <strong>ليست منحة مضمونة لكل طالب متقدم</strong>. القبول فيها تنافسي، ويعتمد على معايير كل جامعة على حدة. كما أن تجديدها سنويًا مرهون بقرار الجامعة واستمرار الطالب في استيفاء الشروط، وليس تلقائيًا.</p>
-            
-            <p><span class="cta cta--disabled">[[التفاصيل الكاملة والشروط →]]</span></p>
-        </div>
-    </section>
-
-    <!-- INSTITUTIONS SECTION -->
-    <section class="section" id="institutions">
-        <div class="container">
-            <h2>منح المؤسسات الألمانية</h2>
-            <p>إلى جانب DAAD والجامعات، تقدّم عدة مؤسسات ألمانية مستقلة منحًا دراسية، أبرزها:</p>
-            <ul>
-                <li><strong>Heinrich-Böll-Stiftung</strong>: قريبة من حزب الخضر، وتُعطي وزنًا للنشاط البيئي والاجتماعي.</li>
-                <li><strong>Friedrich-Ebert-Stiftung</strong>: قريبة من الحزب الاشتراكي الديمقراطي، وتشترط عادة دليلًا على التوجه نحو العدالة الاجتماعية.</li>
-                <li><strong>Konrad-Adenauer-Stiftung</strong>: قريبة من الاتحاد المسيحي الديمقراطي.</li>
-                <li><strong>Rosa-Luxemburg-Stiftung</strong>: قريبة من حزب اليسار.</li>
-                <li><strong>Hans-Böckler-Stiftung</strong>: موجهة بشكل خاص لأبناء العمال والنقابيين.</li>
-                <li><strong>KAAD</strong>: موجهة أساسًا للطلاب من دول نامية، مع اهتمام بالحوار بين الثقافات والأديان.</li>
-                <li><strong>Studienstiftung</strong>: من أعرق مؤسسات الموهوبين أكاديميًا في ألمانيا.</li>
-            </ul>
-            <p>كل مؤسسة من هذه لها شرط مميز — خلفية اجتماعية، نشاط سياسي أو مجتمعي، مستوى معين من اللغة الألمانية، أو مرحلة دراسية محددة.</p>
-        </div>
-    </section>
-
-    <!-- PRIVATE SCHOLARSHIPS SECTION -->
-    <section class="section" id="private">
-        <div class="container">
-            <h2>المنح الخاصة: Expatrio وغيرها</h2>
-            <h3>Expatrio Scholarship</h3>
-            <p>فرصة جيدة للتفاعل والتقديم، لكن يجب فهم طبيعتها بدقة:</p>
-            <ul>
-                <li>هي <strong>مسابقة (Scholarship Competition)</strong>، وليست منحة دراسية أكاديمية بمعايير DAAD.</li>
-                <li>الأهلية مرتبطة بكون المتقدم عميلاً في باقة Expatrio Value Package (حساب مغلق وتأمين صحي عبر Expatrio).</li>
-                <li>التقديم لدورة 2026 مفتوح حتى <strong>30 سبتمبر 2026</strong>، ويشترط بدء الدراسة في <strong>فصل الشتاء (Winter Semester) 2026</strong>.</li>
-                <li>تُمنح عادة عبر تقديم فيديو قصير وفق شروط الدورة الحالية.</li>
-            </ul>
-            <p>قبل التقديم، يُنصح دائمًا بالتحقق من شروط الدورة الحالية عبر الموقع الرسمي لـ Expatrio، لأن التفاصيل قابلة للتغيير سنويًا.</p>
-            
-            <p><span class="cta cta--disabled">[[تفاصيل النسخة الحالية والشروط →]]</span></p>
-        </div>
-    </section>
-
-    <!-- DECISION TREE SECTION -->
-    <section class="section" id="how-to-choose">
-        <div class="container">
-            <h2>كيف تختار المنحة المناسبة لحالتك؟</h2>
-            <div class="bg-decision-tree">
-                <!-- Step 1 -->
-                <div class="bg-decision-tree__step" id="step-1">
-                    <p class="bg-decision-tree__question">ما هو هدفك الدراسي الحالي؟</p>
-                    <div class="bg-decision-tree__options">
-                        <button class="bg-decision-tree__button" data-next="step-bachelor">بكالوريوس</button>
-                        <button class="bg-decision-tree__button" data-next="step-master">ماجستير</button>
-                        <button class="bg-decision-tree__button" data-next="step-phd">دكتوراه</button>
-                    </div>
-                </div>
-                
-                <!-- Step: Bachelor -->
-                <div class="bg-decision-tree__step" id="step-bachelor" style="display:none;">
-                    <p class="bg-decision-tree__question">أين أنت الآن؟</p>
-                    <div class="bg-decision-tree__options">
-                        <button class="bg-decision-tree__button" data-next="result-uni">داخل ألمانيا (مقبول في جامعة)</button>
-                        <button class="bg-decision-tree__button" data-next="result-private">خارج ألمانيا</button>
-                    </div>
-                </div>
-
-                <!-- Step: Master -->
-                <div class="bg-decision-tree__step" id="step-master" style="display:none;">
-                    <p class="bg-decision-tree__question">هل لديك خبرة عملية (سنتين فأكثر)؟</p>
-                    <div class="bg-decision-tree__options">
-                        <button class="bg-decision-tree__button" data-next="result-daad-epos">نعم، لدي خبرة</button>
-                        <button class="bg-decision-tree__button" data-next="result-daad-general">لا، خريج جديد</button>
-                    </div>
-                </div>
-
-                <!-- Step: PhD -->
-                <div class="bg-decision-tree__step" id="step-phd" style="display:none;">
-                    <p class="bg-decision-tree__question">المسار الموصى به للدكتوراه:</p>
-                    <p>برامج DAAD البحثية أو مؤسسات الموهوبين مثل Studienstiftung هي الأنسب لك.</p>
-                    <button class="bg-decision-tree__button" data-next="step-1">البدء من جديد</button>
-                </div>
-
-                <!-- Results -->
-                <div class="bg-decision-tree__step" id="result-uni" style="display:none;">
-                    <p class="bg-decision-tree__question">النتيجة:</p>
-                    <p>منحة <strong>Deutschlandstipendium</strong> هي الأنسب لك حالياً.</p>
-                    <button class="bg-decision-tree__button" data-next="step-1">البدء من جديد</button>
-                </div>
-                <div class="bg-decision-tree__step" id="result-private" style="display:none;">
-                    <p class="bg-decision-tree__question">النتيجة:</p>
-                    <p>يمكنك التقديم على <strong>Expatrio Scholarship</strong> أو البحث عن منح المؤسسات الخاصة.</p>
-                    <button class="bg-decision-tree__button" data-next="step-1">البدء من جديد</button>
-                </div>
-                <div class="bg-decision-tree__step" id="result-daad-epos" style="display:none;">
-                    <p class="bg-decision-tree__question">النتيجة:</p>
-                    <p>أنت مؤهل لبرامج <strong>DAAD EPOS</strong>، وهي من أقوى المنح الحكومية.</p>
-                    <button class="bg-decision-tree__button" data-next="step-1">البدء من جديد</button>
-                </div>
-                <div class="bg-decision-tree__step" id="result-daad-general" style="display:none;">
-                    <p class="bg-decision-tree__question">النتيجة:</p>
-                    <p>برامج <strong>DAAD Studienstipendien</strong> العامة هي خيارك الأول.</p>
-                    <button class="bg-decision-tree__button" data-next="step-1">البدء من جديد</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="section" id="faq">
-        <div class="container">
-            <h2>أسئلة شائعة</h2>
-            <div class="bg-faq">
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل تشمل المنح تكاليف الحساب المغلق (Blocked Account)؟</span>
-                    <p>يختلف حسب البرنامج. بعض منح DAAD تغطي التأمين وبدل السفر، لكنها لا تُعفيك بالضرورة من متطلبات الحساب المغلق إذا كانت غير مرتبطة بتأشيرة الطالب.</p>
-                </div>
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل يمكن الجمع بين المنحة والعمل الجزئي أثناء الدراسة؟</span>
-                    <p>غالبًا نعم، لكن بعض المنح تضع سقفًا لساعات العمل أو تشترط الإفصاح عن أي دخل إضافي.</p>
-                </div>
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل تشمل المنحة الزوج/الزوجة أو الأسرة؟</span>
-                    <p>بعض برامج DAAD تقدم بدلات عائلية محدودة، لكنها ليست ميزة عامة في كل المنح.</p>
-                </div>
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل يمكن التقديم على منحة قبل الحصول على قبول جامعي؟</span>
-                    <p>في بعض برامج DAAD نعم، بينما تشترط منح أخرى مثل Deutschlandstipendium أن تكون طالبًا مسجلاً بالفعل في الجامعة.</p>
-                </div>
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل اللغة الألمانية إلزامية للتقديم؟</span>
-                    <p>ليست إلزامية دائمًا. برامج كثيرة بالإنجليزية لا تشترط الألمانية للقبول، لكنها قد تشترطها لاحقًا لبرامج معينة.</p>
-                </div>
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل توجد منح مخصصة لطلاب البكالوريوس؟</span>
-                    <p>عددها محدود مقارنة بالماجستير والدكتوراه، وأبرزها Deutschlandstipendium ومنحة Expatrio.</p>
-                </div>
-                <div class="bg-faq__item">
-                    <span class="bg-faq__question">هل يوجد حد للعمر للتقديم على المنح؟</span>
-                    <p>لا يوجد حد عمري صارم في أغلب البرامج، لكن بعضها يشترط ألا تكون قد مضت فترة طويلة جدًا منذ التخرج.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="section final-statement">
-        <div class="container">
-            <div class="bg-info-box bg-info-box--summary">
-                <span class="bg-info-box__title">كيف يمكن أن يساعدك Berlin Gateway؟</span>
-                <div class="bg-info-box__content">
-                    <p>يساعد فريق Berlin Gateway الطلاب في اختيار البرنامج الدراسي المناسب، ومراجعة مستندات التقديم، والتقديم إلى الجامعات الألمانية، والإرشاد إلى فرص التمويل والمنح التي قد تتوافق مع مؤهلاتهم. أما قرار القبول والمنح فيصدر عن الجامعة أو الجهة المانحة.</p>
-                    <p style="margin-top: 1rem; text-align: center;">
-                        <a href="mailto:info@berlingateway.de" class="cta">تواصل معنا عبر info@berlingateway.de</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- SHARED SITE FOOTER -->
 <footer class="bg-site-footer">
   <div class="bg-site-footer__inner">
     <div>
@@ -508,7 +269,7 @@
       <p class="bg-site-footer__heading">روابط سريعة</p>
       <ul class="bg-site-footer__list">
         <li><a class="bg-site-footer__link" href="/ar/">الرئيسية</a></li>
-        <li><a class="bg-site-footer__link" href="/ar/study-in-germany.html">الدراسة في ألمانيا</a></li>
+        <li><a class="bg-site-footer__link" href="/ar/study-in-germany/">الدراسة في ألمانيا</a></li>
         <li><a class="bg-site-footer__link" href="/ar/insights/">Germany Insider</a></li>
       </ul>
     </div>
@@ -524,76 +285,7 @@
   </div>
 </footer>
 
-<!-- Scripts -->
-<script src="/assets/components/decision-tree.js?v=1.0.0"></script>
-<script src="/assets/components/anchor-nav.js?v=1.0.0"></script>
-
-<!-- Schema.org JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "دليل المنح الدراسية في ألمانيا للطلاب الدوليين",
-  "description": "دليل شامل لأهم المنح الدراسية في ألمانيا (DAAD، Deutschlandstipendium، Expatrio ومنح المؤسسات)، مع شروط الأهلية وكيفية التقديم، محدّث باستمرار.",
-  "author": {
-    "@type": "Organization",
-    "name": "Berlin Gateway"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Berlin Gateway",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.berlingateway.de/assets/images/logo.png"
-    }
-  },
-  "datePublished": "2026-07-10",
-  "dateModified": "2026-07-10"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "الرئيسية",
-    "item": "https://www.berlingateway.de/ar/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "الدليل الشامل للدراسة في ألمانيا",
-    "item": "https://www.berlingateway.de/ar/study-in-germany/"
-  },{
-    "@type": "ListItem",
-    "position": 3,
-    "name": "المنح الدراسية",
-    "item": "https://www.berlingateway.de/ar/study-in-germany/scholarships/"
-  }]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "هل تشمل المنح تكاليف الحساب المغلق (Blocked Account)؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "يختلف حسب البرنامج. بعض منح DAAD تغطي التأمين وبدل السفر، لكنها لا تُعفيك بالضرورة من متطلبات الحساب المغلق إذا كانت غير مرتبطة بتأشيرة الطالب."
-    }
-  }, {
-    "@type": "Question",
-    "name": "هل يمكن الجمع بين المنحة والعمل الجزئي أثناء الدراسة؟",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "غالبًا نعم، لكن بعض المنح تضع سقفًا لساعات العمل أو تشترط الإفصاح عن أي دخل إضافي."
-    }
-  }]
-}
-</script>
-
+<script src="/assets/components/anchor-nav.js"></script>
+<script src="/assets/components/decision-tree.js"></script>
 </body>
 </html>

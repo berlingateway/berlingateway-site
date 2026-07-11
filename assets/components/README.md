@@ -8,10 +8,10 @@
 |---|---|---|---|---|
 | `comparison-cards.css` | تنسيق جداول المقارنة وتحويلها لبطاقات على الموبايل | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
 | `info-box.css` | تنسيق صناديق المعلومات والملخصات التنفيذية | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
-| `decision-tree.css` | تنسيق شجرة القرار التفاعلية | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
 | `decision-tree.js` | منطق أشجار القرار التفاعلية (Vanilla JS) | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
 | `anchor-nav.css` | تنسيق قائمة التنقل الداخلية الثابتة | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
-| `anchor-nav.js` | منطق قائمة التنقل الداخلية الثابتة | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
+| `anchor-nav.js` | منطق قائمة التنقل الداخلية الثابتة والتمرير السلس | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
+| `site-footer.css` | تذييل الموقع المشترك لجميع الصفحات | 1.0.1 | 2026-07-10 | `/ar/study-in-germany/scholarships/` |
 
 ## قواعد التعديل
 

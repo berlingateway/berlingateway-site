@@ -1,0 +1,80 @@
+/* site-footer.css — v1.0.0
+   Component: bg-site-footer
+   Shared footer used across all Berlin Gateway pages.
+*/
+
+.bg-site-footer {
+  background: #0D1B2A;
+  color: #E8E8E8;
+  padding: 40px 20px 24px;
+  margin-top: 40px;
+}
+
+.bg-site-footer__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .bg-site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+.bg-site-footer__brand {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+.bg-site-footer__tagline {
+  color: #A9B4C0;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.bg-site-footer__heading {
+  color: #C9A84C;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+.bg-site-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-site-footer__list li {
+  margin-bottom: 6px;
+}
+
+.bg-site-footer__link {
+  color: #E8E8E8;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.bg-site-footer__link:hover,
+.bg-site-footer__link:focus-visible {
+  color: #C9A84C;
+  text-decoration: underline;
+}
+
+.bg-site-footer__bottom {
+  max-width: 860px;
+  margin: 28px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.8rem;
+  color: #7C8896;
+  text-align: center;
+}

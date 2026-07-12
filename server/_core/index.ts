@@ -225,8 +225,6 @@ async function startServer() {
   // 301 Redirects: English legacy pages → canonical pages
   const REDIRECTS_301: Record<string, string> = {
     '/submit-case': '/send-medical-reports',
-    // Trailing slash canonical fix (targeted — not a global middleware)
-    '/prostate-cancer-treatment-germany/': '/prostate-cancer-treatment-germany',
     // English slug without /ar/ prefix — redirect to canonical Arabic URL
     '/neck-pain-dizziness-germany': '/ar/neck-pain-dizziness-germany',
     // Empty shell pages — 301 redirect to homepage

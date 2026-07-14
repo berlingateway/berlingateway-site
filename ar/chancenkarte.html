@@ -1,170 +1,622 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — تقييم بطاقة الفرص</title>
-    <link rel="canonical" href="https://berlingateway.de/templates/master_ar_chancenkarte">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://berlingateway.de/ar/chancenkarte">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/chancenkarte">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/chancenkarte">
+  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/chancenkarte">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/en/chancenkarte">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقة الفرص — تقييم الأهلية | Berlin Gateway</title>
+  <meta name="description" content="بطاقة الفرص ليست لكل أحد. اكتشف إذا كنت مؤهلاً قبل أن تضيع أشهراً في المسار الخطأ.">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── PAGE VARIABLES ── */
+    :root {
+      --ink:     #0D1117;
+      --ink-mid: #374151;
+      --ink-low: #6B7280;
+      --white:   #FFFFFF;
+      --off:     #F8F9FA;
+      --border:  #E5E7EB;
+      --blue:    #0B3B8C;
+      --blue-dk: #0B1F3A;
+      --red:     #B91C1C;
+      --gold:    #D97706;
+    }
+
+    body { font-family: 'IBM Plex Sans Arabic', sans-serif; color: #0D1117; background: #FFFFFF; margin: 0; }
+
+    /* ── TOP BAND ── */
+    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+
+    /* ── HEADER ── */
+    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
+    .brand span { color: #0B3B8C; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav a:hover { color: #0B3B8C; }
+
+    /* ── HERO — HOOK ── */
+    .hero-hook {
+      background: #0B1F3A;
+      padding: 64px 24px 60px; /* Reduced height */
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-hook::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(11,59,140,0.3) 0%, transparent 70%); /* Reduced glow */
+      pointer-events: none;
+    }
+    .hero-hook .kicker {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero-hook h1 {
+      color: #FFFFFF;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 720px;
+      margin: 0 auto 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero-hook h1 em {
+      font-style: normal;
+      color: #60A5FA; /* Darker blue, higher quality */
+      text-shadow: none; /* Removed glow */
+      font-weight: 800;
+    }
+    .hero-hook .sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 17px;
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .cta-primary {
+      display: inline-block;
+      background: #FFFFFF;
+      color: #0B1F3A;
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-size: 16px; /* Slightly larger */
+      font-weight: 700;
+      padding: 16px 40px; /* Slightly stronger */
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .cta-note { color: rgba(255,255,255,0.4); font-size: 12px; margin-top: 12px; }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 64px 24px; } /* Reduced height */
+    .section--alt { background: #F8F9FA; }
+    .inner { max-width: 780px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0B3B8C;
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 16px;
+      letter-spacing: -0.3px;
+    }
+    .section .lead {
+      font-size: 17px;
+      color: #374151;
+      line-height: 1.75;
+      margin: 0 0 32px;
+      font-weight: 300;
+    }
+
+    /* ── FILTER SECTION ── */
+    .filter-box {
+      border: 1.5px solid #E5E7EB;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .filter-box__header {
+      background: #0D1117;
+      color: #FFFFFF;
+      padding: 16px 24px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .filter-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 24px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .filter-item:last-child { border-bottom: none; }
+    .filter-check {
+      width: 22px; height: 22px;
+      background: #DCFCE7;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    .filter-item p { margin: 0; font-size: 15px; line-height: 1.6; color: #374151; }
+    .filter-item strong { color: #0D1117; display: block; margin-bottom: 2px; }
+
+    .exclusion-box {
+      background: #FEF2F2;
+      border: 1.5px solid #FECACA;
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .exclusion-box .icon { font-size: 20px; flex-shrink: 0; }
+    .exclusion-box p { margin: 0; font-size: 15px; color: #7F1D1D; line-height: 1.65; }
+
+    /* ── RISK SECTION ── */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .risk-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-right: 4px solid #B91C1C;
+      border-radius: 8px;
+      padding: 20px 20px 20px 16px;
+    }
+    .risk-card h4 { margin: 0 0 6px; font-size: 15px; color: #0D1117; font-weight: 600; }
+    .risk-card p { margin: 0; font-size: 13px; color: #6B7280; line-height: 1.6; }
+
+    /* ── POSITIONING ── */
+    .position-block {
+      background: #0B1F3A;
+      border-radius: 12px;
+      padding: 32px 40px; /* Reduced vertical padding */
+      color: #FFFFFF;
+      margin-top: 0;
+      border: 1px solid rgba(255,255,255,0.05); /* Subtle border for premium feel */
+    }
+    .position-block h3 { font-size: 22px; font-weight: 700; margin: 0 0 16px; }
+    .position-block p { font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.75; margin: 0 0 24px; font-weight: 300; }
+    .position-list { list-style: none; margin: 0; padding: 0; }
+    .position-list li {
+      display: flex; align-items: center; gap: 12px; /* Increased gap */
+      font-size: 14px; color: rgba(255,255,255,0.85);
+      margin-bottom: 12px; /* Luftiger */
+      line-height: 1.5;
+    }
+    .position-list li::before { content: '—'; color: #60A5FA; flex-shrink: 0; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: #F8F9FA;
+      border-top: 1px solid #E5E7EB;
+      padding: 64px 24px; /* Reduced height */
+      text-align: center;
+    }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 34px); font-weight: 700; margin: 0 0 16px; letter-spacing: -0.3px; }
+    .final-cta p { font-size: 16px; color: #374151; max-width: 480px; margin: 0 auto 32px; line-height: 1.7; font-weight: 300; }
+    .cta-primary--dark {
+      display: inline-block;
+      background: #0B1F3A;
+      color: #FFFFFF;
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-primary--dark:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,31,58,0.25); }
+
+    /* ── FOOTER ── */
+    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
+    .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .nav { display: none; }
+      .risk-grid { grid-template-columns: 1fr; }
+      .position-block { padding: 28px 24px; }
+      .hero-hook { padding: 48px 20px 44px; } /* Reduced mobile height */
+      .section { padding: 48px 20px; } /* Reduced mobile section padding */
+      .position-list li { margin-bottom: 14px; } /* Even airier on mobile */
+    }
+  </style>
+  <!-- 1. FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي بطاقة الفرصة الألمانية (Chancenkarte)؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "بطاقة الفرصة (Chancenkarte) هي تأشيرة ألمانية جديدة تتيح للمهنيين المهرة من خارج الاتحاد الأوروبي القدوم إلى ألمانيا للبحث عن عمل لمدة تصل إلى سنة، دون الحاجة إلى عقد عمل مسبق. تعمل بنظام النقاط وتُمنح بناءً على المؤهلات والخبرة واللغة والعمر."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the German Chancenkarte (Opportunity Card)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Chancenkarte is a German points-based visa that allows skilled workers from non-EU countries to come to Germany for up to one year to search for a job — without needing a job offer in advance. Points are awarded based on qualifications, work experience, language skills, and age."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wer kann die Chancenkarte beantragen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Chancenkarte richtet sich an qualifizierte Fachkräfte aus Drittstaaten (außerhalb der EU), die entweder einen anerkannten Berufsabschluss oder einen Hochschulabschluss besitzen. Zusätzlich muss ein Punktestand von mindestens 6 Punkten aus den Kategorien Sprachkenntnisse, Berufserfahrung, Deutschland-Bezug und Alter erreicht werden. Außerdem müssen die Lebenshaltungskosten für die Aufenthaltsdauer nachgewiesen werden (ca. 1.000 € pro Monat)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viele Punkte brauche ich für die Chancenkarte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sie benötigen mindestens 6 Punkte. Punkte werden vergeben für: Deutschkenntnisse (B2 = 3 Punkte, A1 = 1 Punkt), Englischkenntnisse auf C1-Niveau (1 Punkt), Berufserfahrung von mindestens 2 Jahren (1 Punkt), Alter unter 35 Jahren (1 Punkt), frühere Aufenthalte oder Ausbildung in Deutschland (1 Punkt). Berlin Gateway berechnet kostenlos Ihren Punktestand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكنني التقدم للحصول على بطاقة الفرصة بدون لغة ألمانية؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، يمكن التقدم بدون لغة ألمانية إذا توفرت نقاط كافية من معايير أخرى. اللغة الإنجليزية على مستوى C1 تمنحك نقطة واحدة. ومع ذلك، تعلّم اللغة الألمانية ولو على مستوى B2 يمنحك 3 نقاط ويرفع فرصك بشكل كبير. يمكننا في برلين غيتواي مساعدتك في تقييم وضعك وتحديد ما إذا كانت نقاطك كافية."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich während der Chancenkarte arbeiten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, aber eingeschränkt. Mit der Chancenkarte dürfen Sie bis zu 20 Stunden pro Woche in einem nicht-qualifikationsgebundenen Job arbeiten (z.B. als Aushilfe). Sobald Sie einen Arbeitsplatz in Ihrem Fachbereich gefunden haben, können Sie direkt auf ein Arbeitsvisum umsteigen, ohne Deutschland verlassen zu müssen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم تستغرق معالجة طلب بطاقة الفرصة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تستغرق عملية المعالجة عادةً من 4 إلى 12 أسبوعاً حسب السفارة الألمانية في بلدك. التقديم الصحيح مع مستندات كاملة يسرّع العملية بشكل كبير. يقوم فريق برلين غيتواي بمراجعة جميع الوثائق قبل التقديم لتفادي أي رفض أو تأخير."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert, wenn ich in Deutschland keinen Job finde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wenn Sie innerhalb des Jahres keinen passenden Job finden, müssen Sie Deutschland verlassen. Eine Verlängerung ist grundsätzlich nicht vorgesehen. Deshalb ist eine gute Vorbereitung entscheidend: Berlin Gateway unterstützt Sie aktiv bei der Jobsuche parallel zur Antragsstellung, damit Sie bestmöglich vorbereitet ankommen."
+        }
+      }
+    ]
+  }
+  </script>
+	
+  <!-- 2. WebPage Schema für /ar/chancenkarte -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://berlingateway.de/ar/chancenkarte#webpage",
+    "url": "https://berlingateway.de/ar/chancenkarte",
+    "name": "بطاقة الفرصة الألمانية – Chancenkarte | برلين غيتواي",
+    "description": "كل ما تحتاج معرفته عن بطاقة الفرصة الألمانية: الشروط، نظام النقاط، طريقة التقديم، وكيف يساعدك برلين غيتواي في الوصول إلى ألمانيا.",
+    "inLanguage": "ar",
+    "isPartOf": {
+      "@id": "https://berlingateway.de/#website"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://berlingateway.de/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "بطاقة الفرصة",
+          "item": "https://berlingateway.de/ar/chancenkarte"
+        }
+      ]
+    }
+  }
+  </script>
+	
+  <!-- 3. HowTo Schema – Chancenkarte beantragen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Chancenkarte beantragen – Schritt für Schritt",
+    "description": "So beantragen Sie die deutsche Chancenkarte mit Unterstützung von Berlin Gateway – von der Punkteberechnung bis zur Ankunft in Deutschland.",
+    "totalTime": "P3M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "EUR",
+      "value": "75"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Reisepass (mindestens 1 Jahr gültig)"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Beglaubigte Kopien von Abschlusszeugnissen"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Nachweis über Sprachkenntnisse (Goethe, TestDaF oder IELTS)"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Kontoauszug oder Sperrkonto-Nachweis (ca. 12.000 €)"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Lebenslauf auf Deutsch oder Englisch"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Punktestand berechnen lassen",
+        "text": "Berlin Gateway berechnet kostenlos Ihren Punktestand für die Chancenkarte und sagt Ihnen, ob Sie die Mindestvoraussetzungen erfüllen.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Unterlagen vollständig vorbereiten",
+        "text": "Wir erstellen eine individuelle Checkliste mit allen erforderlichen Dokumenten: Zeugnisse, Übersetzungen, Sprachnachweise und Finanznachweise.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Antrag bei der deutschen Botschaft einreichen",
+        "text": "Sie reichen den Antrag bei der deutschen Botschaft in Ihrem Heimatland ein. Berlin Gateway bereitet alle Formulare vor und prüft die Vollständigkeit.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Visum erhalten und nach Deutschland einreisen",
+        "text": "Nach Erteilung des Visums unterstützt Berlin Gateway Sie bei der Vorbereitung auf die Ankunft: Wohnung, Bankonto, Krankenversicherung und erste Schritte in Deutschland.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Job finden und Aufenthaltstitel umwandeln",
+        "text": "Unser Jobvermittlungsteam unterstützt Sie aktiv bei der Suche nach einer passenden Stelle. Sobدا يتم التوصل إلى وظيفة، نساعدك في التحويل إلى تأشيرة عمل عادية.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
+<!-- TOP BAND -->
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="/de/chancenkarte/" class="lang-switch">Deutsch</a>
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/de/chancenkarte" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5;">مقيمون في ألمانيا</span>
     </div>
+  </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
+<!-- HEADER -->
 <header class="header">
-    <div class="header__inner">
-        <a href="/ar/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-            <a href="/ar/systemlogik/">منطق النظام</a>
-            <a href="/ar/monitor/">المرصد</a>
-            <a href="/ar/insights/">الرؤى</a></nav>
-    </div>
+  <div class="header__inner">
+    <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav"><a href="/ar/success-stories">قصص حقيقية</a>
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/assessment">التقييم</a>
+      <a href="/ar/aerzte">أطباء</a>
+      <a href="/ar/pflege">تمريض</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">تقييم معتمد</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">اتصل بنا</a>
+<!-- 1. HOOK — ILLUSION BREAK -->
+<section class="hero-hook" style="background:#0B1F3A !important;">
+  <div class="inner" style="position:relative;z-index:1;">
+    <p class="kicker" style="color:rgba(255,255,255,0.7) !important;">بطاقة الفرص — من داخل النظام الألماني</p>
+    <h1 style="color:#FFFFFF !important;">بطاقة الفرص ليست مناسبة<br>لكل <em style="font-style:normal;color:#93C5FD !important;">شخص.</em></h1>
+    <p class="sub" style="color:rgba(255,255,255,0.65) !important;">والمشكلة أن كثيرين يكتشفون ذلك بعد أشهر من إضاعة الوقت والجهد في المسار الخطأ.</p>
+    <a href="/ar/assessment" class="cta-primary" style="display:inline-block;background:#FFFFFF !important;color:#0B1F3A !important;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييمك الآن ←</a>
+    <p class="cta-note" style="color:rgba(255,255,255,0.4) !important;">رد من فريق يعيش في ألمانيا — بدون التزام</p>
+  </div>
+</section>
+
+<!-- 2. QUALIFICATION FILTER -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">فلتر الأهلية</p>
+    <h2>هل أنت مناسب لبطاقة الفرص؟</h2>
+    <p class="lead">قبل أي خطوة، ثلاثة معايير حقيقية. إذا انطبقت عليك — تابع. إذا لم تنطبق — هذا التقييم سيوفر عليك وقتاً ثميناً.</p>
+
+    <div class="filter-box">
+      <div class="filter-box__header">المعايير الأساسية</div>
+
+      <div class="filter-item">
+        <div class="filter-check">✓</div>
+        <p><strong>شهادة أكاديمية أو مهنية معترف بها</strong>ليس كل مؤهل يُقبل في ألمانيا. النوع والمستوى والبلد — كلها تحدد فرصتك الفعلية.</p>
+      </div>
+      <div class="filter-item">
+        <div class="filter-check">✓</div>
+        <p><strong>خبرة عمل حقيقية وموثقة</strong>على الأقل سنتان في مجال ذي صلة مباشرة. الخبرة العامة لا تكفي.</p>
+      </div>
+      <div class="filter-item">
+        <div class="filter-check">✓</div>
+        <p><strong>جدية حقيقية في الانتقال خلال 12 شهراً</strong>بطاقة الفرص مسار استراتيجي — ليست تصريح سفر.</p>
+      </div>
     </div>
-</nav>
 
-<!-- BAND 4: CONTENT BODY (WHITE) -->
-<main>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>بطاقة الفرص الألمانية – اترك ملفك يُقيّم بشكل احترافي</h1>
-                    <p class="sub">كثيرون يبدأون… وقليل يصلون. ليس بسبب نقص الفرص، بل بسبب التقييم الخاطئ.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="exclusion-box">
+      <div class="icon">⚠</div>
+      <p>إذا كنت تبحث عن <strong>"أي طريقة للدخول إلى ألمانيا"</strong> — فهذه الصفحة ليست لك. Berlin Gateway مخصصة للمهنيين الجادين فقط.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
-        <div class="container">
-            <h2>لماذا تقييمنا مهم</h2>
-            <p>نحن لا نقدم نصائح عامة. نقوم بتقييم الحالات وفق معايير سوق العمل الألماني.</p>
-        </div>
-    </section>
+<!-- 3. DECISION RISK -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">مخاطر القرار الخاطئ</p>
+    <h2>ماذا يحدث عندما يُختار المسار الخطأ؟</h2>
+    <p class="lead">معظم الطلبات لا تُرفض لأن المتقدم غير مؤهل — بل لأن المسار اختير بشكل خاطئ من البداية.</p>
 
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>هذا التقييم مناسب لك إذا:</h2>
-            <ul>
-                <li>لديك شهادة (جامعية أو مهنية)</li>
-                <li>لديك خبرة عملية</li>
-                <li>لديك نية حقيقية للعمل في ألمانيا</li>
-            </ul>
-            <p>إذا لم تنطبق هذه الشروط، هذا التقييم غير مناسب لك.</p>
-        </div>
-    </section>
+    <div class="risk-grid">
+      <div class="risk-card">
+        <h4>رفض الطلب</h4>
+        <p>بسبب نقص في الوثائق oder اختيار نوع التأشيرة الخطأ منذ البداية.</p>
+      </div>
+      <div class="risk-card">
+        <h4>خسارة الوقت</h4>
+        <p>أشهر من الانتظار والتحضير — ثم اكتشاف أن الأساس غير صحيح.</p>
+      </div>
+      <div class="risk-card">
+        <h4>تأخير فرص العمل</h4>
+        <p>سوق العمل الألماني لا ينتظر. كل شهر تأخير هو فرصة يأخذها غيرك.</p>
+      </div>
+      <div class="risk-card">
+        <h4>مشاكل الاعتراف بالمؤهلات</h4>
+        <p>الاعتراف بالشهادات عملية منفصلة ومعقدة — وإذا لم تُحضّر لها مبكراً، تتأخر كل شيء.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- FORM (GATE) -->
-    <section class="section form-gate">
-        <div class="container">
-            <div class="form-card">
-                <form class="assessment-form" id="assessment-form">
-                    <h3>ابدأ التقييم الآن</h3>
-                    <label>المهنة المستهدفة</label>
-                    <input type="text" placeholder="مثلاً: مهندس برمجيات" required>
-                    <label>المؤهل العلمي</label>
-                    <input type="text" placeholder="مثلاً: ماجستير في علوم الحاسوب" required>
-                    <label>سنوات الخبرة</label>
-                    <input type="number" placeholder="مثلاً: 5" required>
-                    <label>مستوى اللغة</label>
-                    <input type="text" placeholder="مثلاً: ألمانية B2، إنجليزية C1" required>
-                    <label>رفع السيرة الذاتية أو الشهادات</label>
-                    <input type="file" required>
-                    <button type="submit" class="cta">إرسال الطلب</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<!-- 4. POSITIONING -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">Berlin Gateway</p>
+    <div style="background:#0B1F3A;border-radius:12px;padding:40px;">
+      <h3 style="color:#FFFFFF !important;font-size:22px;font-weight:700;margin:0 0 16px;">نحن لا نبيع حلماً — نقيّم المسار.</h3>
+      <p style="color:rgba(255,255,255,0.85) !important;font-size:16px;line-height:1.75;font-weight:300;">Berlin Gateway ليست وكالة هجرة. نحن نقيّم وضعك الفعلي وفق المعايير الحقيقية للنظام الألماني — ونخبرك بصدق إذا كنت مؤهلاً، وأين تقف فعلاً.</p>
+      <ul class="position-list">
+        <li>تقييم مبني على بيانات سوق العمل الحالية</li>
+        <li>تحليل مؤهلاتك وفق قوانين الاعتراف الألمانية</li>
+        <li>مسار واضح — أو إجابة صريحة بأن الوقت لم يحن بعد</li>
+        <li>بدون وعود مبالغ فيها، بدون شورت كات</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>الرد خلال 24–48 ساعة</li>
-                <li>التقييم مبني على واقع السوق الألماني</li>
-                <li>يتم التعامل فقط مع الحالات الجادة</li>
-            </ul>
-        </div>
-    </section>
+<!-- INTERNAL LINKS -->
+<section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
+  <div style="max-width:780px;margin:0 auto;">
+    
+    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">اقرأ أيضاً</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+      <a href="/ar/ingenieure/" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">المسار الهندسي</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">مهندسون في ألمانيا ←</p>
+      </a>
+      <a href="/ar/pflege/" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">مسار التمريض</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">التمريض في ألمانيا ←</p>
+      </a>
+      <a href="/ar/success-stories/" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">قصص حقيقية</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">قصص حقيقية ←</p>
+      </a>
+      <a href="/ar/insights/تجنس-ألمانيا" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">الهدف النهائي</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">الجنسية الألمانية ←</p>
+      </a>
+      <a href="/ar/visa" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">تأشيرة العمل</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">تأشيرة العمل في ألمانيا ←</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>تعرف وضعك الحقيقي قبل أن تضيع وقتك ومالك.</p>
-        </div>
-    </section>
+  <!-- Internal link: Success Stories -->
+  <section style="background:#F0F4FF;border-top:1px solid #DBEAFE;padding:32px 24px;text-align:center;">
+    <div style="max-width:680px;margin:0 auto;">
+      <p style="font-size:13px;color:#0B3B8C;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">من نجح قبلك</p>
+      <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:12px;">منذ 2011 — بصمتنا في حياة مئات الكفاءات</h3>
+      <p style="font-size:15px;color:#374151;margin-bottom:20px;">أطباء ومهندسون وطلاب بدأوا من نفس نقطة البداية.</p>
+      <a href="/ar/success-stories" style="display:inline-block;background:#0B1F3A;color:#fff;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;">اقرأ قصصهم ←</a>
+    </div>
+  </section>
 
-</main>
+  <!-- 5. FINAL CTA -->
+  <section class="final-cta">
+  <div class="inner">
+    <h2>لا تحتاج معلومات أكثر.<br>تحتاج تقييماً حقيقياً لحالتك.</h2>
+    <p>دقيقتان، أسئلة محددة، إجابة واضحة. هذا كل ما في الأمر.</p>
+    <a href="/ar/assessment" class="cta-primary--dark">ابدأ التقييم الآن ←</a>
+    <div style="margin-top:24px;">
+      <a href="/ar/ingenieure/" style="margin:0 10px; color:#0B3B8C; text-decoration:none; font-weight:600;">مهندسون في ألمانيا ←</a>
+      <a href="/ar/pflege/" style="margin:0 10px; color:#0B3B8C; text-decoration:none; font-weight:600;">التمريض في ألمانيا ←</a>
+      <a href="/ar/success-stories/" style="margin:0 10px; color:#0B3B8C; text-decoration:none; font-weight:600;">قصص حقيقية ←</a>
+    </div>
+    <p style="margin-top:16px;font-size:13px;color:#9CA3AF;">الرد خلال 24–48 ساعة · معالجة الطلبات الجادة فقط</p>
+  </div>
+</section>
 
-<!-- FOOTER (BLACK) -->
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>تقييم مهني احترافي لألمانيا.</p>
-            </div>
-            <div>
-                <h4>الملاحة</h4>
-                <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المرصد</a>
-            </div>
-            <div>
-                <h4>القانونية</h4>
-                <a href="/ar/impressum/">بصمة الموقع</a>
-                <a href="/ar/datenschutz/">خصوصية البيانات</a>
-            </div>
-            <div>
-                <h4>الاتصال</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
-        </div>
-    </div>
+  <p>Berlin Gateway &mdash; تقييم مهني لألمانيا</p>
+  <p style="margin-top:8px;">
+    <a href="/ar/impressum">بصمة الموقع</a>
+    <a href="/ar/datenschutz">خصوصية البيانات</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
-
-<script>
-// Form submission logic will be handled here or via a separate JS file
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("تم إرسال النموذج بنجاح! (هذه رسالة اختبار)");
-});
-</script>
 
 </body>
 </html>

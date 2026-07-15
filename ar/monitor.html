@@ -2,86 +2,281 @@
 <html lang="ar" dir="rtl">
 <head>
   <link rel="canonical" href="https://berlingateway.de/ar/monitor">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/monitor">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/monitor">
+  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/monitor">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/en/monitor">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مرصد سوق العمل الألماني — بيانات وفرص 2026 | Berlin Gateway</title>
-  <meta name="description" content="بيانات حقيقية عن سوق العمل الألماني — المهن الأكثر طلباً، الرواتب، والاتجاهات الحالية لعام 2026.">
+  <title>مراقبة سوق العمل الألماني — Berlin Gateway</title>
+  <meta name="description" content="مراقبة حية لسوق العمل الألماني: الوظائف الشاغرة، الرواتب، المهن المطلوبة، والولايات الألمانية الأكثر احتياجاً. تحديثات مستمرة.">
+  <link rel="stylesheet" href="/assets/css/app.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'IBM Plex Sans Arabic',sans-serif;color:#0D1117;background:#FFFFFF}
-    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
-    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
-    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
-    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
-    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
-    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
-    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
-    .brand span{color:#0B3B8C}
-    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
-    .inner{max-width:780px;margin:0 auto}
-    .inner--wide{max-width:1080px;margin:0 auto;padding:0 24px}
-    .section{padding:72px 24px}
-    .section--alt{background:#F8F9FA}
-    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
-    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
-    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
-
-    /* STATS STRIP */
-    .stats-strip{background:#0B1F3A;padding:40px 24px}
-    .stats-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-    .stat-item h3{font-size:clamp(28px,4vw,42px);font-weight:700;color:#FFFFFF;margin-bottom:6px}
-    .stat-item h3 span{color:#93C5FD}
-    .stat-item p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5}
-
-    /* DEMAND TABLE */
-    .demand-table{width:100%;border-collapse:collapse;margin-top:24px;font-size:14px}
-    .demand-table th{background:#0B1F3A;color:#FFFFFF;padding:12px 16px;text-align:right;font-weight:600;font-size:13px}
-    .demand-table td{padding:14px 16px;border-bottom:1px solid #E5E7EB;color:#374151;vertical-align:middle}
-    .demand-table tr:last-child td{border-bottom:none}
-    .demand-table tr:hover td{background:#F8F9FA}
-    .demand-bar{height:8px;border-radius:4px;background:#E5E7EB;width:120px;display:inline-block;vertical-align:middle;position:relative}
-    .demand-bar__fill{height:100%;border-radius:4px;background:#0B3B8C;position:absolute;right:0;top:0}
-    .tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
-    .tag-green{background:#DCFCE7;color:#15803D}
-    .tag-amber{background:#FEF3C7;color:#92400E}
-    .tag-red{background:#FEE2E2;color:#B91C1C}
-
-    /* REGION GRID */
-    .region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
-    .region-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
-    .region-card h4{font-size:15px;font-weight:700;color:#0B1F3A;margin-bottom:8px}
-    .region-card p{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:10px}
-    .region-tags{display:flex;flex-wrap:wrap;gap:6px}
-    .region-tag{font-size:11px;background:#EFF6FF;color:#1D4ED8;padding:3px 8px;border-radius:4px;font-weight:600}
-
-    /* SALARY TABLE */
-    .salary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
-    .salary-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:20px;background:#FFFFFF}
-    .salary-card h4{font-size:14px;font-weight:600;color:#374151;margin-bottom:8px}
-    .salary-card .salary-num{font-size:22px;font-weight:700;color:#0B1F3A;margin-bottom:4px}
-    .salary-card .salary-range{font-size:12px;color:#6B7280}
-
-    /* CTA */
-    .cta-block{background:#0B1F3A;border-radius:12px;padding:48px 40px;text-align:center}
-    .cta-block h2{color:#FFFFFF;font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:16px;line-height:1.3}
-    .cta-block p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto}
-    .cta-btn{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none}
-    .wa-link{display:block;color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;margin-top:16px}
-
-    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
-    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
-
-    @media(max-width:768px){
-      .nav{display:none}
-      .stats-grid{grid-template-columns:repeat(2,1fr)}
-      .region-grid{grid-template-columns:1fr}
-      .salary-grid{grid-template-columns:1fr}
-      .cta-block{padding:32px 24px}
+    /* ── PAGE VARIABLES ── */
+    :root {
+      --ink:     #0D1117;
+      --ink-mid: #374151;
+      --ink-low: #6B7280;
+      --white:   #FFFFFF;
+      --off:     #F8F9FA;
+      --border:  #E5E7EB;
+      --blue:    #0B3B8C;
+      --blue-dk: #0B1F3A;
+      --red:     #B91C1C;
+      --gold:    #D97706;
     }
-    @media(max-width:480px){
-      .stats-grid{grid-template-columns:1fr 1fr}
+
+    body { font-family: 'IBM Plex Sans Arabic', sans-serif; color: #0D1117; background: #FFFFFF; margin: 0; }
+
+    /* ── TOP BAND ── */
+    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+
+    /* ── HEADER ── */
+    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
+    .brand span { color: #0B3B8C; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav a:hover { color: #0B3B8C; }
+
+    /* ── HERO ── */
+    .hero {
+      background: #0B1F3A;
+      padding: 64px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(11,59,140,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .kicker {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      color: #FFFFFF;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 720px;
+      margin: 0 auto 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: #60A5FA;
+      text-shadow: none;
+      font-weight: 800;
+    }
+    .hero .sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 17px;
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 64px 24px; }
+    .section--alt { background: #F8F9FA; }
+    .inner { max-width: 780px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0B3B8C;
+      margin-bottom: 16px;
+    }
+    .section-label--light { color: #93C5FD; }
+    .section h2 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 16px;
+      letter-spacing: -0.3px;
+    }
+    .section .lead {
+      font-size: 17px;
+      color: #374151;
+      line-height: 1.75;
+      margin: 0 0 32px;
+      font-weight: 300;
+    }
+
+    /* ── STATS GRID ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .stat-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-card h3 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #0B3B8C;
+      margin-bottom: 8px;
+    }
+    .stat-card p {
+      font-size: 15px;
+      color: #0D1117;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .stat-card span {
+      font-size: 13px;
+      color: #6B7280;
+    }
+
+    /* ── SALARY GRID ── */
+    .salary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .salary-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .salary-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0D1117;
+      margin-bottom: 8px;
+    }
+    .salary-card .salary-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0B3B8C;
+      margin-bottom: 4px;
+    }
+    .salary-card .salary-range {
+      font-size: 13px;
+      color: #6B7280;
+    }
+
+    /* ── CTA BLOCK ── */
+    .cta-block {
+      background: #0B1F3A;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-top: 40px;
+    }
+    .cta-block h2 { color: #FFFFFF; margin-bottom: 16px; }
+    .cta-block p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+    .cta-btn {
+      display: inline-block;
+      background: #FFFFFF;
+      color: #0B1F3A;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .wa-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #60A5FA;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    /* ── INTERNAL LINKS ── */
+    .internal-links {
+      background: #F8F9FA;
+      border-top: 1px solid #E5E7EB;
+      padding: 48px 24px;
+    }
+    .internal-links__grid {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .internal-links__item {
+      display: block;
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 16px 20px;
+      text-decoration: none;
+    }
+    .internal-links__item p {
+      font-size: 12px;
+      color: #0B3B8C;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .internal-links__item h4 {
+      font-size: 14px;
+      color: #0D1117;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .internal-links__item span {
+      font-size: 12px;
+      color: #6B7280;
+    }
+
+    /* ── FOOTER ── */
+    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
+    .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
+    .footer__grid {
+      max-width: 1080px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: right;
+    }
+    .footer__grid h4 { color: #FFFFFF; font-size: 16px; margin-bottom: 16px; }
+    .footer__grid a { display: block; margin: 0 0 8px 0; text-align: right; }
+    .footer__brand { color: #FFFFFF; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .footer__tagline { font-size: 14px; line-height: 1.6; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .salary-grid { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; text-align: center; }
+      .footer__grid a { text-align: center; }
     }
   </style>
 </head>
@@ -92,7 +287,7 @@
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="/de/monitor" class="lang-badge">Deutsch</a>
-      <span style="opacity:.5">بيانات 2026</span>
+      <span style="opacity:.5">خبراء مقيمون في برلين</span>
     </div>
   </div>
 </div>
@@ -100,7 +295,8 @@
 <header class="header">
   <div class="header__inner">
     <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
-    <nav class="nav"><a href="/ar/success-stories">قصص حقيقية</a>
+    <nav class="nav">
+      <a href="/ar/success-stories">قصص حقيقية</a>
       <a href="/ar/chancenkarte">بطاقة الفرص</a>
       <a href="/ar/assessment">التقييم</a>
       <a href="/ar/aerzte">أطباء</a>
@@ -110,160 +306,47 @@
 </header>
 
 <!-- HERO -->
-<section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
-  <div class="inner">
-    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">مرصد سوق العمل — Monitor 2026</p>
-    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">سوق العمل الألماني —<br><em style="font-style:normal;color:#93C5FD;">بيانات حقيقية، ليس إعلانات.</em></h1>
-    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto;line-height:1.7;font-weight:300;">أرقام موثقة عن الطلب الفعلي على الكفاءات الأجنبية في ألمانيا — لتعرف أين تقف ملفك تحديداً.</p>
+<section class="hero">
+  <div class="inner" style="position:relative;z-index:1">
+    <p class="kicker">من قلب سوق العمل الألماني</p>
+    <h1>مراقبة سوق العمل الألماني —<br><em style="font-style:normal;color:#93C5FD;">أرقام حقيقية ومحدثة.</em></h1>
+    <p class="sub">الوظائف الشاغرة، الرواتب، المهن المطلوبة، والولايات الألمانية الأكثر احتياجاً. تحديثات مستمرة من مصادر رسمية.</p>
+    <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
   </div>
 </section>
 
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stats-grid">
-    <div class="stat-item">
-      <h3>+<span>570,000</span></h3>
-      <p>وظيفة شاغرة في المهن المتخصصة — 2026</p>
-    </div>
-    <div class="stat-item">
-      <h3><span>73%</span></h3>
-      <p>من الشركات الألمانية تعاني نقص الكفاءات</p>
-    </div>
-    <div class="stat-item">
-      <h3>+<span>200,000</span></h3>
-      <p>ممرض وممرضة مطلوبون بشكل عاجل</p>
-    </div>
-    <div class="stat-item">
-      <h3><span>3,200€</span></h3>
-      <p>متوسط الراتب الشهري الصافي للكفاءات الأجنبية</p>
-    </div>
-  </div>
-</div>
-
-<!-- DEMAND TABLE -->
+<!-- SECTION -->
 <section class="section">
   <div class="inner">
-    <p class="section-label">الطلب حسب المجال</p>
-    <h2>المهن الأكثر طلباً على الكفاءات الدولية</h2>
-    <p class="lead">هذه البيانات مبنية على إحصاءات Bundesagentur für Arbeit وتقارير سوق العمل الألماني لعام 2026.</p>
-    <table class="demand-table">
-      <thead>
-        <tr>
-          <th>المجال</th>
-          <th>مستوى الطلب</th>
-          <th>نوع المهنة</th>
-          <th>متطلب اللغة</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>تمريض ورعاية</strong></td>
-          <td><span class="tag tag-red">عاجل جداً</span></td>
-          <td>منظمة</td>
-          <td>C1 متخصص</td>
-        </tr>
-        <tr>
-          <td><strong>طب وصحة</strong></td>
-          <td><span class="tag tag-red">عاجل جداً</span></td>
-          <td>منظمة</td>
-          <td>C1 طبي</td>
-        </tr>
-        <tr>
-          <td><strong>تكنولوجيا المعلومات</strong></td>
-          <td><span class="tag tag-green">مرتفع جداً</span></td>
-          <td>غير منظمة</td>
-          <td>B2</td>
-        </tr>
-        <tr>
-          <td><strong>هندسة ميكانيكية وكهربائية</strong></td>
-          <td><span class="tag tag-green">مرتفع جداً</span></td>
-          <td>منظمة جزئياً</td>
-          <td>B2–C1</td>
-        </tr>
-        <tr>
-          <td><strong>حرف وصناعة</strong></td>
-          <td><span class="tag tag-green">مرتفع</span></td>
-          <td>منظمة جزئياً</td>
-          <td>B1–B2</td>
-        </tr>
-        <tr>
-          <td><strong>تعليم وتدريب</strong></td>
-          <td><span class="tag tag-amber">متوسط–مرتفع</span></td>
-          <td>منظمة</td>
-          <td>C1</td>
-        </tr>
-        <tr>
-          <td><strong>اقتصاد وإدارة</strong></td>
-          <td><span class="tag tag-amber">متوسط</span></td>
-          <td>غير منظمة</td>
-          <td>B2–C1</td>
-        </tr>
-      </tbody>
-    </table>
+    <p class="section-label">مقدمة</p>
+    <h2>سوق العمل الألماني يتغير باستمرار.</h2>
+    <p class="lead">البيانات الدقيقة هي مفتاح اتخاذ القرارات الصحيحة. نقدم لك هنا نظرة شاملة ومحدثة على أهم مؤشرات سوق العمل.</p>
+    <p>فهم ديناميكيات سوق العمل الألماني أمر بالغ الأهمية لأي شخص يخطط للهجرة المهنية. ما هي المهن الأكثر طلباً؟ كم هي الرواتب المتوقعة؟ أين توجد أفضل الفرص؟ هذه الأسئلة تتطلب إجابات مبنية على بيانات حقيقية، وليس على إشاعات أو معلومات قديمة.</p>
+    <p>نحن نجمع البيانات من مصادر رسمية وموثوقة، ونقدمها لك في شكل مبسط وواضح، لمساعدتك على تحديد مسارك بدقة وتجنب الأخطاء الشائعة. فريقنا يراقب السوق باستمرار لضمان حصولك على أحدث المعلومات.</p>
   </div>
 </section>
 
-<!-- REGIONS -->
+<!-- STATS -->
 <section class="section section--alt">
   <div class="inner">
-    <p class="section-label">التوزيع الجغرافي</p>
-    <h2>أين يتركز الطلب في ألمانيا؟</h2>
-    <p class="lead">الطلب ليس موزعاً بالتساوي — بعض المناطق تعاني نقصاً حاداً في مهن محددة.</p>
-    <div class="region-grid">
-      <div class="region-card">
-        <h4>🏙️ برلين وبراندنبورغ</h4>
-        <p>مركز تقني وصحي. طلب مرتفع في IT والتمريض والطب.</p>
-        <div class="region-tags">
-          <span class="region-tag">IT</span>
-          <span class="region-tag">تمريض</span>
-          <span class="region-tag">طب</span>
-          <span class="region-tag">Startups</span>
-        </div>
+    <p class="section-label">أرقام رئيسية</p>
+    <h2>سوق العمل الألماني في أرقام — 2026</h2>
+    <p class="lead">نظرة سريعة على أهم المؤشرات التي يجب أن تعرفها.</p>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>200,000+</h3>
+        <p>وظيفة شاغرة</p>
+        <span>في قطاع التمريض وحده</span>
       </div>
-      <div class="region-card">
-        <h4>🏭 بافاريا وبادن-فورتمبيرغ</h4>
-        <p>قلب الصناعة الألمانية. طلب مرتفع في الهندسة والتقنية.</p>
-        <div class="region-tags">
-          <span class="region-tag">هندسة</span>
-          <span class="region-tag">سيارات</span>
-          <span class="region-tag">تقنية</span>
-        </div>
+      <div class="stat-card">
+        <h3>1.7 مليون</h3>
+        <p>وظيفة شاغرة</p>
+        <span>في جميع القطاعات</span>
       </div>
-      <div class="region-card">
-        <h4>🌊 شمال الراين–وستفاليا</h4>
-        <p>أكبر ولاية سكانياً. طلب واسع في التمريض والحرف والإدارة.</p>
-        <div class="region-tags">
-          <span class="region-tag">تمريض</span>
-          <span class="region-tag">حرف</span>
-          <span class="region-tag">لوجستيك</span>
-        </div>
-      </div>
-      <div class="region-card">
-        <h4>🏙️ هامبورغ وبريمن</h4>
-        <p>موانئ وتجارة. طلب في اللوجستيك والIT والهندسة البحرية.</p>
-        <div class="region-tags">
-          <span class="region-tag">لوجستيك</span>
-          <span class="region-tag">IT</span>
-          <span class="region-tag">هندسة</span>
-        </div>
-      </div>
-      <div class="region-card">
-        <h4>🌲 ساكسونيا وتورينغيا</h4>
-        <p>مناطق نامية. طلب في الحرف والرعاية الصحية بتنافسية عالية.</p>
-        <div class="region-tags">
-          <span class="region-tag">حرف</span>
-          <span class="region-tag">رعاية</span>
-          <span class="region-tag">تصنيع</span>
-        </div>
-      </div>
-      <div class="region-card">
-        <h4>🌾 المناطق الريفية</h4>
-        <p>نقص حاد في الأطباء العامين والتمريض. فرص أسرع للوصول.</p>
-        <div class="region-tags">
-          <span class="region-tag">طب عام</span>
-          <span class="region-tag">تمريض</span>
-          <span class="region-tag">صيدلة</span>
-        </div>
+      <div class="stat-card">
+        <h3>3.5%</h3>
+        <p>معدل البطالة</p>
+        <span>من الأدنى في أوروبا</span>
       </div>
     </div>
   </div>
@@ -347,6 +430,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <p>Berlin Gateway — تقييم مهني لألمانيا</p>
   <p style="margin-top:8px;">

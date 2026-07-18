@@ -5,11 +5,11 @@
   <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/insights">
   <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/insights">
   <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/insights">
-  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/en/insights">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/ar/insights">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>رؤى وأخبار سوق العمل الألماني — Berlin Gateway</title>
-  <meta name="description" content="أحدث رؤى وأخبار سوق العمل الألماني، تحليل للمهن المطلوبة، نصائح للهجرة المهنية، وتحديثات مستمرة.">
+  <title>رؤى وتحليلات — Berlin Gateway</title>
+  <meta name="description" content="مقالات وتحليلات متعمقة حول سوق العمل الألماني، التأشيرات، الرواتب، والاعتراف بالشهادات.">
   <link rel="stylesheet" href="/assets/css/app.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
     .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
     .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
     .brand span { color: #0B3B8C; }
-    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-left: 24px; font-weight: 500; }
     .nav a:hover { color: #0B3B8C; }
 
     /* ── HERO ── */
@@ -141,20 +141,19 @@
       text-decoration: none;
     }
     .article-card .tag {
-      display: inline-block;
-      background: #EFF6FF;
-      color: #1D4ED8;
       font-size: 11px;
       font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin-bottom: 12px;
+      color: #0B3B8C;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
     }
     .article-card h3 {
       font-size: 18px;
       font-weight: 700;
       color: #0D1117;
       margin-bottom: 8px;
+      line-height: 1.4;
     }
     .article-card p {
       font-size: 14px;
@@ -164,99 +163,18 @@
     }
     .article-card .read-more {
       font-size: 14px;
+      font-weight: 600;
       color: #0B3B8C;
-      font-weight: 600;
-    }
-
-    /* ── CTA BLOCK ── */
-    .cta-block {
-      background: #0B1F3A;
-      border-radius: 12px;
-      padding: 40px;
-      text-align: center;
-      color: #FFFFFF;
-      margin-top: 40px;
-    }
-    .cta-block h2 { color: #FFFFFF; margin-bottom: 16px; }
-    .cta-block p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
-    .cta-btn {
-      display: inline-block;
-      background: #FFFFFF;
-      color: #0B1F3A;
-      font-weight: 700;
-      padding: 14px 32px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-    .wa-link {
-      display: inline-block;
-      margin-top: 16px;
-      color: #60A5FA;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    /* ── INTERNAL LINKS ── */
-    .internal-links {
-      background: #F8F9FA;
-      border-top: 1px solid #E5E7EB;
-      padding: 48px 24px;
-    }
-    .internal-links__grid {
-      max-width: 780px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    .internal-links__item {
-      display: block;
-      background: #FFFFFF;
-      border: 1.5px solid #E5E7EB;
-      border-radius: 8px;
-      padding: 16px 20px;
-      text-decoration: none;
-    }
-    .internal-links__item p {
-      font-size: 12px;
-      color: #0B3B8C;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .internal-links__item h4 {
-      font-size: 14px;
-      color: #0D1117;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .internal-links__item span {
-      font-size: 12px;
-      color: #6B7280;
     }
 
     /* ── FOOTER ── */
     .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
     .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
-    .footer__grid {
-      max-width: 1080px;
-      margin: 0 auto 40px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: right;
-    }
-    .footer__grid h4 { color: #FFFFFF; font-size: 16px; margin-bottom: 16px; }
-    .footer__grid a { display: block; margin: 0 0 8px 0; text-align: right; }
-    .footer__brand { color: #FFFFFF; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .footer__tagline { font-size: 14px; line-height: 1.6; }
-    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
       .nav { display: none; }
       .article-grid { grid-template-columns: 1fr; }
-      .footer__grid { grid-template-columns: 1fr; text-align: center; }
-      .footer__grid a { text-align: center; }
     }
   </style>
 </head>
@@ -288,9 +206,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="inner" style="position:relative;z-index:1">
-    <p class="kicker">من قلب سوق العمل الألماني</p>
-    <h1>رؤى وأخبار سوق العمل الألماني —<br><em style="font-style:normal;color:#93C5FD;">تحليلات معمقة، تحديثات مستمرة.</em></h1>
-    <p class="sub">أحدث رؤى وأخبار سوق العمل الألماني، تحليل للمهن المطلوبة، نصائح للهجرة المهنية، وتحديثات مستمرة من خبراء مقيمين في ألمانيا.</p>
+    <p class="kicker">من خبراء مقيمين في ألمانيا</p>
+    <h1>رؤى متعمقة حول ألمانيا —<br><em style="font-style:normal;color:#93C5FD;">كل ما تحتاج لمعرفته.</em></h1>
+    <p class="sub">مقالات وتحليلات حول سوق العمل الألماني، الهجرة، الاعتراف بالشهادات، والاندماج. دليلك الشامل للنجاح في ألمانيا.</p>
     <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
   </div>
 </section>
@@ -299,10 +217,10 @@
 <section class="section">
   <div class="inner">
     <p class="section-label">مقدمة</p>
-    <h2>ابق على اطلاع دائم بفرصك في ألمانيا.</h2>
-    <p class="lead">سوق العمل الألماني يتغير باستمرار. المعلومات الدقيقة والمحدثة هي مفتاح نجاحك.</p>
-    <p>في هذا القسم، نقدم لك تحليلات معمقة، مقالات متخصصة، وأخباراً حصرية حول سوق العمل الألماني. سواء كنت تبحث عن معلومات حول المهن الأكثر طلباً، أو ترغب في فهم أعمق لمتطلبات الهجرة والاعتراف بالشهادات، ستجد هنا كل ما تحتاجه لاتخاذ قرارات مستنيرة.</p>
-    <p>فريقنا من الخبراء المقيمين في ألمانيا يتابع عن كثب التطورات القانونية والاقتصادية، ويقدم لك خلاصة خبرته لضمان حصولك على أحدث وأدق المعلومات. هدفنا هو تمكينك بالمعرفة اللازمة لتحقيق أهدافك المهنية في ألمانيا.</p>
+    <h2>معلومات دقيقة وموثوقة.</h2>
+    <p class="lead">نقدم لك تحليلات معمقة ومقالات شاملة لمساعدتك على فهم كل جانب من جوانب الحياة والعمل في ألمانيا.</p>
+    <p>في Berlin Gateway، نؤمن بأن المعرفة هي القوة. لذلك، قمنا بجمع فريق من الخبراء المقيمين في ألمانيا لتقديم رؤى دقيقة وموثوقة حول كل ما يتعلق بالهجرة، سوق العمل، الاعتراف بالشهادات، والاندماج. سواء كنت تبحث عن معلومات حول الرواتب، أو شروط الحصول على التأشيرة، أو كيفية التغلب على التحديات البيروقراطية، ستجد هنا الإجابات التي تحتاجها.</p>
+    <p>هدفنا هو تزويدك بالأدوات والمعلومات اللازمة لاتخاذ قرارات مستنيرة وبناء مستقبل ناجح في ألمانيا. استكشف مقالاتنا وتعمق في فهم النظام الألماني من الداخل.</p>
   </div>
 </section>
 
@@ -322,19 +240,19 @@
       <a href="/ar/insights/راتب-ممرض-ألمانيا" class="article-card">
         <p class="tag">الرواتب</p>
         <h3>راتب الممرض في ألمانيا 2026</h3>
-        <p>متوسط الرواتب الصافية للممرضين والممرضات حسب الخبرة والولاية.</p>
+        <p>دليل شامل لرواتب الممرضين والممرضات في مختلف الولايات الألمانية.</p>
         <span class="read-more">اقرأ ←</span>
       </a>
       <a href="/ar/insights/راتب-مبرمج-ألمانيا" class="article-card">
         <p class="tag">الرواتب</p>
         <h3>راتب المبرمج في ألمانيا 2026</h3>
-        <p>متوسط الرواتب الصافية للمبرمجين ومهندسي البرمجيات حسب التخصص.</p>
+        <p>نظرة عامة على رواتب مطوري البرمجيات حسب الخبرة والتقنيات.</p>
         <span class="read-more">اقرأ ←</span>
       </a>
       <a href="/ar/insights/راتب-صيدلاني-ألمانيا" class="article-card">
         <p class="tag">الرواتب</p>
         <h3>راتب الصيدلاني في ألمانيا 2026</h3>
-        <p>متوسط الرواتب الصافية للصيادلة في الصيدليات والمستشفيات والشركات.</p>
+        <p>متوسط الرواتب الصافية للصيادلة في الصيدليات والمستشفيات وشركات الأدوية.</p>
         <span class="read-more">اقرأ ←</span>
       </a>
       <a href="/ar/insights/راتب-محاسب-ألمانيا" class="article-card">
@@ -382,7 +300,6 @@
     </div>
   </div>
 </section>
-
 <!-- CTA -->
 <section class="section">
   <div class="inner" style="max-width:720px;text-align:center;">
@@ -400,10 +317,20 @@
       <a href="https://wa.me/4915781497451" target="_blank" style="display:block;color:rgba(255,255,255,0.4);font-size:13px;text-decoration:none;margin-top:16px;">
         أو تواصل معنا عبر واتساب
       </a>
+    <div style="margin-top:40px; text-align:center;">
+      <a href="/ar/chancenkarte/" style="margin:0 15px; color:#0B3B8C; text-decoration:none; font-weight:600;">بطاقة الفرص ←</a>
+      <a href="/ar/success-stories/" style="margin:0 15px; color:#0B3B8C; text-decoration:none; font-weight:600;">قصص حقيقية ←</a>
+      <a href="/ar/العمل-في-ألمانيا/" style="margin:0 15px; color:#0B3B8C; text-decoration:none; font-weight:600;">العمل في ألمانيا ←</a>
     </div>
   </div>
 </section>
-
+<section style="background:#F8F9FA;padding:48px 24px;text-align:center;border-top:1px solid #E5E7EB;">
+  <div class="inner">
+    <a href="/ar/chancenkarte/" style="margin:0 15px; color:#0B3B8C; text-decoration:none; font-weight:600;">بطاقة الفرص ←</a>
+    <a href="/ar/success-stories/" style="margin:0 15px; color:#0B3B8C; text-decoration:none; font-weight:600;">قصص حقيقية ←</a>
+    <a href="/ar/العمل-في-ألمانيا/" style="margin:0 15px; color:#0B3B8C; text-decoration:none; font-weight:600;">العمل في ألمانيا ←</a>
+  </div>
+</section>
 <!-- FOOTER -->
 <section style="background:#FFFFFF;border-top:1px solid #E5E7EB;padding:48px 24px;">
   <div style="max-width:780px;margin:0 auto;">
@@ -423,6 +350,5 @@
   </div>
   <p style="opacity:0.5;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
-
 </body>
 </html>

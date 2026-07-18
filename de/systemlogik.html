@@ -1,174 +1,424 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — Systemlogik</title>
-    <link rel="canonical" href="https://berlingateway.de/templates/master_de_generic">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://berlingateway.de/de/systemlogik">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/systemlogik">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/systemlogik">
+  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/systemlogik">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/systemlogik">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systemlogik — Berlin Gateway</title>
+  <meta name="description" content="Verstehen Sie die Systemlogik hinter der deutschen Fachkräfteeinwanderung. Wie funktionieren Anerkennung, Visa und Jobsuche? Experten erklären den Prozess.">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── PAGE VARIABLES ── */
+    :root {
+      --ink:     #0D1117;
+      --ink-mid: #374151;
+      --ink-low: #6B7280;
+      --white:   #FFFFFF;
+      --off:     #F8F9FA;
+      --border:  #E5E7EB;
+      --blue:    #0B3B8C;
+      --blue-dk: #0B1F3A;
+      --red:     #B91C1C;
+      --gold:    #D97706;
+    }
+
+    body { font-family: 'IBM Plex Sans', sans-serif; color: #0D1117; background: #FFFFFF; margin: 0; }
+
+    /* ── TOP BAND ── */
+    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+
+    /* ── HEADER ── */
+    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
+    .brand span { color: #0B3B8C; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav a:hover { color: #0B3B8C; }
+
+    /* ── HERO ── */
+    .hero {
+      background: #0B1F3A;
+      padding: 64px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(11,59,140,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .kicker {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      color: #FFFFFF;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 720px;
+      margin: 0 auto 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: #60A5FA;
+      text-shadow: none;
+      font-weight: 800;
+    }
+    .hero .sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 17px;
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 64px 24px; }
+    .section--alt { background: #F8F9FA; }
+    .inner { max-width: 780px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0B3B8C;
+      margin-bottom: 16px;
+    }
+    .section-label--light { color: #93C5FD; }
+    .section h2 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 16px;
+      letter-spacing: -0.3px;
+    }
+    .section .lead {
+      font-size: 17px;
+      color: #374151;
+      line-height: 1.75;
+      margin: 0 0 32px;
+      font-weight: 300;
+    }
+
+    /* ── PROCESS GRID ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .process-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .process-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0D1117;
+      margin-bottom: 8px;
+    }
+    .process-card p {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* ── CTA BLOCK ── */
+    .cta-block {
+      background: #0B1F3A;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-top: 40px;
+    }
+    .cta-block h2 { color: #FFFFFF; margin-bottom: 16px; }
+    .cta-block p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+    .cta-btn {
+      display: inline-block;
+      background: #FFFFFF;
+      color: #0B1F3A;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .wa-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #60A5FA;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    /* ── INTERNAL LINKS ── */
+    .internal-links {
+      background: #F8F9FA;
+      border-top: 1px solid #E5E7EB;
+      padding: 48px 24px;
+    }
+    .internal-links__grid {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .internal-links__item {
+      display: block;
+      background: #FFFFFF;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 16px 20px;
+      text-decoration: none;
+    }
+    .internal-links__item p {
+      font-size: 12px;
+      color: #0B3B8C;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .internal-links__item h4 {
+      font-size: 14px;
+      color: #0D1117;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .internal-links__item span {
+      font-size: 12px;
+      color: #6B7280;
+    }
+
+    /* ── FOOTER ── */
+    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
+    .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
+    .footer__grid {
+      max-width: 1080px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+    .footer__grid h4 { color: #FFFFFF; font-size: 16px; margin-bottom: 16px; }
+    .footer__grid a { display: block; margin: 0 0 8px 0; text-align: left; }
+    .footer__brand { color: #FFFFFF; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .footer__tagline { font-size: 14px; line-height: 1.6; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .process-grid { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; text-align: center; }
+      .footer__grid a { text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/systemlogik/" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Systemlogik</span>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/ar/systemlogik" class="lang-badge">العربية</a>
+      <span style="opacity:.5">Experten vor Ort in Berlin</span>
     </div>
+  </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
 <header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/chancenkarte/">Chancenkarte</a>
-            <a href="/de/systemlogik/">Systemlogik</a>
-            <a href="/de/monitor/">Monitor</a>
-            <a href="/de/insights/">Insights</a></nav>
-    </div>
+  <div class="header__inner">
+    <a href="/de" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/de/success-stories">Erfolgsgeschichten</a>
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/assessment">Assessment</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflege">Pflege</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="inner" style="position:relative;z-index:1">
+    <p class="kicker">Ihr Weg nach Deutschland</p>
+    <h1>Die Systemlogik —<br><em style="font-style:normal;color:#93C5FD;">Verstehen Sie den Prozess.</em></h1>
+    <p class="sub">Wie funktioniert die deutsche Fachkräfteeinwanderung? Wir erklären Ihnen die Schritte von der Anerkennung bis zur Jobsuche.</p>
+    <a href="/de/assessment" class="cta-btn">Kostenloses Assessment starten ←</a>
+  </div>
+</section>
+
+<!-- SECTION -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">Einführung</p>
+    <h2>Der deutsche Weg — komplex, aber logisch.</h2>
+    <p class="lead">Die Einwanderung nach Deutschland als Fachkraft folgt einer klaren Systemlogik. Wir helfen Ihnen, diese zu verstehen und erfolgreich zu navigieren.</p>
+    <p>Deutschland ist bekannt für seine präzisen Prozesse, und die Fachkräfteeinwanderung ist keine Ausnahme. Es gibt spezifische Anforderungen für die Anerkennung von Abschlüssen, Sprachkenntnisse, Visakategorien und die Jobsuche. Ohne ein klares Verständnis dieser Schritte kann der Prozess überwältigend wirken.</p>
+    <p>Unser Ziel ist es, Ihnen diese Systemlogik transparent zu machen. Wir zerlegen den gesamten Prozess in verständliche Phasen und zeigen Ihnen, welche Schritte in welcher Reihenfolge notwendig sind, um Ihr Ziel – eine erfolgreiche Karriere in Deutschland – zu erreichen.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">Der Prozess</p>
+    <h2>Schritt für Schritt zum Erfolg.</h2>
+    <p class="lead">Jeder Schritt ist entscheidend. Wir begleiten Sie durch den gesamten Prozess.</p>
+    <div class="process-grid">
+      <div class="process-card">
+        <h4>1. Profil-Assessment</h4>
+        <p>Wir bewerten Ihr Profil anhand deutscher Standards und identifizieren die besten Wege für Sie.</p>
+      </div>
+      <div class="process-card">
+        <h4>2. Anerkennung des Abschlusses</h4>
+        <p>Für viele Berufe ist die offizielle Anerkennung Ihres ausländischen Abschlusses in Deutschland notwendig.</p>
+      </div>
+      <div class="process-card">
+        <h4>3. Sprachliche Qualifikation</h4>
+        <p>Je nach Beruf und Visum sind spezifische Deutschkenntnisse (mindestens B1/B2) erforderlich.</p>
+      </div>
+      <div class="process-card">
+        <h4>4. Jobsuche & Bewerbung</h4>
+        <p>Wir unterstützen Sie bei der Jobsuche und optimieren Ihre Bewerbungsunterlagen für den deutschen Markt.</p>
+      </div>
+      <div class="process-card">
+        <h4>5. Visum & Einreise</h4>
+        <p>Wir führen Sie durch den Visumantragsprozess und bereiten Sie auf die Einreise vor.</p>
+      </div>
+      <div class="process-card">
+        <h4>6. Integration & Start</h4>
+        <p>Nach Ihrer Ankunft helfen wir Ihnen bei den ersten Schritten in Deutschland, damit Sie sich schnell einleben.</p>
+      </div>
     </div>
-</nav>
+  </div>
+</section>
 
-<!-- BAND 4: CONTENT BODY (WHITE) -->
-<main>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>Die Logik des deutschen Arbeitsmarkts</h1>
-                    <p class="sub">Verstehen Sie die Struktur und Anforderungen, die hinter der Chancenkarte stehen.</p>
-                    <div class="badges">
-                        <span class="badge">Systemlogik</span>
-                        <span class="badge">Transparenz</span>
-                    </div>
-                </div>
-            </div>
+<!-- FAQ -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">Häufig gestellte Fragen</p>
+    <h2>Systemlogik — FAQ</h2>
+    <p class="lead">Finden Sie Antworten auf die wichtigsten Fragen zu unserer Systemlogik.</p>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <div class="faq-question">
+          <span>Wie lange dauert eine vollständige Bewertung?</span>
+          <span class="faq-toggle">▼</span>
         </div>
-    </section>
-
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
-        <div class="container">
-            <h2>Wie das System funktioniert</h2>
-            <p>Die Chancenkarte folgt klaren, nachvollziehbaren Regeln. Wir erklären die Logik dahinter und zeigen, wie Sie diese zu Ihrem Vorteil nutzen.</p>
+        <div class="faq-answer">
+          <p>Eine erste Bewertung dauert 24–48 Stunden. Eine vollständige Bewertung mit allen Dokumenten kann 5–10 Tage dauern, je nach Komplexität.</p>
         </div>
-    </section>
-
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>Diese Seite hilft Ihnen, wenn:</h2>
-            <ul>
-                <li>Sie die Anforderungen der Chancenkarte verstehen möchten</li>
-                <li>Sie wissen wollen, wie Ihre Qualifikation bewertet wird</li>
-                <li>Sie Ihre Chancen realistisch einschätzen möchten</li>
-            </ul>
-            <p>Detaillierte Informationen zur Systemlogik finden Sie in unseren Insights-Artikeln.</p>
+      </li>
+      <li class="faq-item">
+        <div class="faq-question">
+          <span>Kann ich mehrere Pfade gleichzeitig verfolgen?</span>
+          <span class="faq-toggle">▼</span>
         </div>
-    </section>
-
-    <!-- FORM (GATE) -->
-    <section class="section form-gate">
-        <div class="container">
-            <div class="form-card">
-                <form class="assessment-form" id="assessment-form">
-                    <h3>Ihre Chancen prüfen</h3>
-                    <label>Zielberuf</label>
-                    <input type="text" placeholder="z.B. Softwareentwickler" required>
-                    <label>Abschluss</label>
-                    <input type="text" placeholder="z.B. Master Informatik" required>
-                    <label>Berufserfahrung (Jahre)</label>
-                    <input type="number" placeholder="z.B. 5" required>
-                    <label>Sprachkenntnisse</label>
-                    <input type="text" placeholder="z.B. Deutsch B2, Englisch C1" required>
-                    <label>Lebenslauf / Dokumente hochladen</label>
-                    <input type="file" required>
-                    <button type="submit" class="cta">Fall Einreichen</button>
-                </form>
-            </div>
+        <div class="faq-answer">
+          <p>Ja, in einigen Fällen. Zum Beispiel können Sie die Chancenkarte verfolgen, während Sie sich auf die Anerkennung vorbereiten. Wir beraten Sie zu den besten Optionen.</p>
         </div>
-    </section>
-
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>Basierend auf aktuellen Arbeitsmarktdaten</li>
-                <li>Strukturierte Analyse nach deutschen Standards</li>
-                <li>Klare, verständliche Ergebnisse</li>
-            </ul>
+      </li>
+      <li class="faq-item">
+        <div class="faq-question">
+          <span>Was ist der Unterschied zwischen Chancenkarte und Anerkennung?</span>
+          <span class="faq-toggle">▼</span>
         </div>
-    </section>
-
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>Verstehen Sie das System und treffen Sie informierte Entscheidungen für Ihre Karriere in Deutschland.</p>
+        <div class="faq-answer">
+          <p>Die Chancenkarte ist ein Punktesystem für alle Fachkräfte. Anerkennung ist für regulierte Berufe erforderlich (Ärzte, Pflegekräfte, Ingenieure). Beide können zu einer Arbeitserlaubnis führen.</p>
         </div>
-    </section>
-
-</main>
-
-<!-- FOOTER (BLACK) -->
+      </li>
+      <li class="faq-item">
+        <div class="faq-question">
+          <span>Wie objektiv ist eure Bewertung?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Unsere Bewertung basiert auf offiziellen deutschen Kriterien und Anforderungen. Wir verwenden keine Algorithmen — echte Menschen mit Erfahrung im System bewerten jedes Profil.</p>
+        </div>
+      </li>
+      <li class="faq-item">
+        <div class="faq-question">
+          <span>Was passiert, wenn mein Profil nicht passt?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Wir sagen Ihnen ehrlich, was fehlt. Dann zeigen wir Ihnen konkrete Schritte: Sprachkurs, Zusatzqualifikation, Ausbildung — was wirklich hilft.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- INTERNAL LINKS -->
+<section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
+  <div style="max-width:780px;margin:0 auto;">
+    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">Auch interessant</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+      <a href="/de/assessment" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Assessment</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Profil bewerten</p>
+        <p style="font-size:12px;color:#6B7280;">Echte Experten-Bewertung</p>
+      </a>
+      <a href="/de/chancenkarte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Chancenkarte</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Sind Sie qualifiziert?</p>
+        <p style="font-size:12px;color:#6B7280;">Kriterien und Eignungsfilter</p>
+      </a>
+      <a href="/de/aerzte" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">Ärzte</p>
+        <p style="font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:4px;">Weg für Mediziner</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6);">Approbation & Anerkennung</p>
+      </a>
+    </div>
+  </div>
+</section>
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/chancenkarte/">Chancenkarte</a>
-                <a href="/de/systemlogik/">Systemlogik</a>
-                <a href="/de/monitor/">Monitor</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum/">Impressum</a>
-                <a href="/de/datenschutz/">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
+  <p>Berlin Gateway — Experten vor Ort in Deutschland</p>
+  <p style="margin-top:8px;">
+    <a href="/de/impressum">Impressum</a>
+    <a href="/de/datenschutz">Datenschutz</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
 </footer>
-
 <script>
-// Form submission logic will be handled here or via a separate JS file
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
+document.querySelectorAll(".faq-question").forEach(function(el) {
+  el.addEventListener("click", function() {
+    var answer = this.nextElementSibling;
+    var toggle = this.querySelector(".faq-toggle");
+    answer.classList.toggle("active");
+    toggle.classList.toggle("active");
+  });
 });
 </script>
-
 </body>
 </html>

@@ -1,319 +1,112 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <link rel="canonical" href="https://berlingateway.de/ar/">
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/">
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/">
-  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/">
-  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berlin Gateway — العمل والهجرة إلى ألمانيا</title>
-  <meta name="description" content="خبراء مقيمون في ألمانيا يقدمون لك تقييماً مهنياً حقيقياً، ومساراً واضحاً للعمل، الدراسة، أو التكوين المهني في ألمانيا. ابدأ رحلتك اليوم.">
-  <link rel="stylesheet" href="/assets/css/app.css">
+  <title>Berlin Gateway — نحن لا نوصلك فقط — نضمن نجاحك من داخل ألمانيا</title>
+  <meta name="description" content="Berlin Gateway — خبرة حقيقية من داخل النظام الألماني. عمل، دراسة، تدريب مهني. نضمن نجاحك من اليوم الأول.">
+  <link rel="canonical" href="https://berlingateway.de/ar">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ── PAGE VARIABLES ── */
-    :root {
-      --ink:     #0D1117;
-      --ink-mid: #374151;
-      --ink-low: #6B7280;
-      --white:   #FFFFFF;
-      --off:     #F8F9FA;
-      --border:  #E5E7EB;
-      --blue:    #0B3B8C;
-      --blue-dk: #0B1F3A;
-      --red:     #B91C1C;
-      --gold:    #D97706;
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'IBM Plex Sans Arabic',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none}
+    .brand span{color:#0B3B8C}
+    .nav{display:flex;align-items:center;gap:0}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-right:0 !important}
+    .inner{max-width:780px;margin:0 auto}
+    .inner--wide{max-width:1080px;margin:0 auto;padding:0 24px}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section--dark{background:#0B1F3A}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section-label--light{color:#93C5FD}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
 
-    body { font-family: 'IBM Plex Sans Arabic', sans-serif; color: #0D1117; background: #FFFFFF; margin: 0; }
+    /* HERO */
+    .hero{background:#0B1F3A;padding:96px 24px 88px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center top, rgba(11,59,140,0.4) 0%, transparent 70%);pointer-events:none}
+    .hero .kicker{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:32px}
+    .hero h1{color:#FFFFFF;font-size:clamp(30px,5.5vw,56px);font-weight:700;line-height:1.2;max-width:800px;margin:0 auto 24px;letter-spacing:-0.5px}
+    .hero h1 em{font-style:normal;color:#93C5FD}
+    .hero p{color:rgba(255,255,255,0.65);font-size:18px;max-width:560px;margin:0 auto 44px;line-height:1.7;font-weight:300}
+    .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none}
+    .btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,0.8);border:1.5px solid rgba(255,255,255,0.3);font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:600;padding:16px 36px;border-radius:6px;text-decoration:none}
 
-    /* ── TOP BAND ── */
-    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
-    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
-    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+    /* TRUST STRIP */
+    .trust-strip{background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:20px 24px}
+    .trust-strip__inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500}
+    .trust-item span{color:#15803D;font-size:15px}
 
-    /* ── HEADER ── */
-    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
-    .brand span { color: #0B3B8C; }
-    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
-    .nav a:hover { color: #0B3B8C; }
+    /* PATHS */
+    .paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+    .path-card{border:1.5px solid #E5E7EB;border-radius:12px;padding:32px 24px;background:#FFFFFF;text-decoration:none;display:block;transition:border-color 0.15s,transform 0.15s}
+    .path-card:hover{border-color:#0B3B8C;transform:translateY(-2px)}
+    .path-card__icon{font-size:32px;margin-bottom:16px}
+    .path-card h3{font-size:18px;font-weight:700;color:#0B1F3A;margin-bottom:10px}
+    .path-card p{font-size:14px;color:#6B7280;line-height:1.65;margin-bottom:16px}
+    .path-card .path-link{font-size:13px;color:#0B3B8C;font-weight:600}
 
-    /* ── HERO ── */
-    .hero {
-      background: #0B1F3A;
-      padding: 64px 24px 60px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%; transform: translateX(-50%);
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(11,59,140,0.3) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero .kicker {
-      display: inline-block;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.7);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      color: #FFFFFF;
-      font-size: clamp(26px, 5vw, 44px);
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 720px;
-      margin: 0 auto 16px;
-      letter-spacing: -0.5px;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: #60A5FA;
-      text-shadow: none;
-      font-weight: 800;
-    }
-    .hero .sub {
-      color: rgba(255,255,255,0.65);
-      font-size: 17px;
-      max-width: 540px;
-      margin: 0 auto 32px;
-      line-height: 1.7;
-      font-weight: 300;
-    }
+    /* AFTER ARRIVAL */
+    .timeline{margin-top:32px}
+    .timeline-item{display:flex;gap:24px;padding:24px 0;border-bottom:1px solid #E5E7EB;position:relative}
+    .timeline-item:last-child{border-bottom:none}
+    .timeline-dot{width:48px;height:48px;background:#0B1F3A;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px}
+    .timeline-content h4{font-size:16px;font-weight:700;color:#0B1F3A;margin-bottom:6px}
+    .timeline-content p{font-size:14px;color:#6B7280;line-height:1.65}
+    .timeline-tag{display:inline-block;background:#FEF3C7;color:#92400E;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-top:8px}
 
-    /* ── SECTION BASE ── */
-    .section { padding: 64px 24px; }
-    .section--alt { background: #F8F9FA; }
-    .inner { max-width: 780px; margin: 0 auto; }
-    .section-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #0B3B8C;
-      margin-bottom: 16px;
-    }
-    .section-label--light { color: #93C5FD; }
-    .section h2 {
-      font-size: clamp(22px, 4vw, 32px);
-      font-weight: 700;
-      line-height: 1.3;
-      margin: 0 0 16px;
-      letter-spacing: -0.3px;
-    }
-    .section .lead {
-      font-size: 17px;
-      color: #374151;
-      line-height: 1.75;
-      margin: 0 0 32px;
-      font-weight: 300;
-    }
+    /* WHY US */
+    .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+    .why-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:24px}
+    .why-card h4{font-size:15px;font-weight:700;color:#FFFFFF;margin-bottom:8px}
+    .why-card p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65}
 
-    /* ── PATHS GRID ── */
-    .paths-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .path-card {
-      background: #FFFFFF;
-      border: 1.5px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 24px;
-      text-align: center;
-      text-decoration: none;
-    }
-    .path-card h3 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #0D1117;
-      margin-bottom: 8px;
-    }
-    .path-card p {
-      font-size: 15px;
-      color: #6B7280;
-      margin-bottom: 16px;
-    }
-    .path-card .cta {
-      font-size: 14px;
-      color: #0B3B8C;
-      font-weight: 600;
-    }
+    /* WARNING */
+    .warning-box{background:#FEF2F2;border:1.5px solid #FECACA;border-radius:12px;padding:32px;margin-top:32px;text-align:center}
+    .warning-box h3{font-size:20px;font-weight:700;color:#B91C1C;margin-bottom:12px}
+    .warning-box p{font-size:15px;color:#7F1D1D;line-height:1.7;max-width:560px;margin:0 auto}
 
-    /* ── TIMELINE ── */
-    .timeline {
-      position: relative;
-      padding: 40px 0;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background: #E5E7EB;
-      transform: translateX(-50%);
-    }
-    .timeline-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
-    }
-    .timeline-item:nth-child(odd) {
-      flex-direction: row-reverse;
-    }
-    .timeline-item:nth-child(even) {
-      flex-direction: row;
-    }
-    .timeline-marker {
-      width: 40px;
-      height: 40px;
-      background: #0B3B8C;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      font-weight: 700;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
-    }
-    .timeline-content {
-      width: calc(50% - 40px);
-      padding: 20px;
-      background: #FFFFFF;
-      border: 1.5px solid #E5E7EB;
-      border-radius: 12px;
-    }
-    .timeline-content h4 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #0D1117;
-      margin-bottom: 8px;
-    }
-    .timeline-content p {
-      font-size: 15px;
-      color: #374151;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-    .timeline-content .timeline-tag {
-      display: inline-block;
-      background: #EFF6FF;
-      color: #1D4ED8;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
+    /* CTA */
+    .cta-block{background:#0B1F3A;border-radius:12px;padding:56px 40px;text-align:center}
+    .cta-block h2{color:#FFFFFF;font-size:clamp(22px,3vw,32px);font-weight:700;margin-bottom:16px;line-height:1.3}
+    .cta-block p{color:rgba(255,255,255,0.65);font-size:17px;margin-bottom:36px;line-height:1.7;font-weight:300;max-width:520px;margin-left:auto;margin-right:auto}
+    .cta-btn{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;padding:16px 40px;border-radius:6px;text-decoration:none}
+    .wa-link{display:block;color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;margin-top:16px}
 
-    /* ── WARNING BOX ── */
-    .warning-box {
-      background: #FEF2F2;
-      border: 1.5px solid #FCA5A5;
-      border-radius: 12px;
-      padding: 32px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .warning-box h3 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #B91C1C;
-      margin-bottom: 16px;
-    }
-    .warning-box p {
-      font-size: 17px;
-      color: #B91C1C;
-      line-height: 1.7;
-    }
+    /* FOOTER */
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:56px 24px 32px}
+    .footer__grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .footer__brand{font-size:16px;font-weight:700;color:#FFFFFF;margin-bottom:10px}
+    .footer__tagline{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6}
+    .footer h4{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px}
+    .footer a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;margin-bottom:8px}
+    .footer__bottom{max-width:1080px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);text-align:center;font-size:12px}
 
-    /* ── WHY US GRID ── */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 32px;
+    @media(max-width:768px){
+      .nav a:not(.nav-cta){display:none}
+      .paths-grid{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:1fr}
+      .footer__grid{grid-template-columns:1fr 1fr}
+      .cta-block{padding:36px 24px}
+      .hero{padding:72px 24px 64px}
     }
-    .why-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .why-card h4 {
-      color: #FFFFFF;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .why-card p {
-      color: rgba(255,255,255,0.65);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    /* ── FOOTER ── */
-    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
-    .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
-    .footer__grid {
-      max-width: 1080px;
-      margin: 0 auto 40px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: right;
-    }
-    .footer__grid h4 { color: #FFFFFF; font-size: 16px; margin-bottom: 16px; }
-    .footer__grid a { display: block; margin: 0 0 8px 0; text-align: right; }
-    .footer__brand { color: #FFFFFF; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .footer__tagline { font-size: 14px; line-height: 1.6; }
-    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
-
-    /* ── MOBILE ── */
-    @media (max-width: 768px) {
-      .nav { display: none; }
-      .paths-grid { grid-template-columns: 1fr; }
-      .timeline::before { left: 20px; }
-      .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .timeline-item:nth-child(odd) {
-        flex-direction: column;
-      }
-      .timeline-marker {
-        margin-right: 0;
-        margin-bottom: 16px;
-        position: absolute;
-        left: 0;
-      }
-      .timeline-content {
-        width: 100%;
-        padding-left: 60px;
-      }
-      .why-grid { grid-template-columns: 1fr; }
-      .footer__grid { grid-template-columns: 1fr; text-align: center; }
-      .footer__grid a { text-align: center; }
+    @media(max-width:480px){
+      .footer__grid{grid-template-columns:1fr}
+      .trust-strip__inner{gap:20px}
+      .hero-btns{flex-direction:column;align-items:center}
     }
   </style>
 </head>
@@ -324,20 +117,21 @@
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="/de/" class="lang-badge">Deutsch</a>
-      <span style="opacity:.5">خبراء مقيمون في برلين</span>
+      <span style="opacity:.5">مقيمون في ألمانيا</span>
     </div>
   </div>
 </div>
 
 <header class="header">
   <div class="header__inner">
-    <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
-    <nav class="nav">
-      <a href="/ar/success-stories">قصص حقيقية</a>
+    <a href="/ar/" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav"><a href="/ar/success-stories">قصص حقيقية</a>
       <a href="/ar/chancenkarte">بطاقة الفرص</a>
-      <a href="/ar/assessment">التقييم</a>
       <a href="/ar/aerzte">أطباء</a>
       <a href="/ar/pflege">تمريض</a>
+      <a href="/ar/systemlogik">النظام</a>
+      <a href="/ar/voraussetzungen">المتطلبات</a>
+      <a href="/ar/assessment" class="nav-cta">ابدأ التقييم</a>
     </nav>
   </div>
 </header>
@@ -345,88 +139,84 @@
 <!-- HERO -->
 <section class="hero">
   <div class="inner" style="position:relative;z-index:1">
-    <p class="kicker">من داخل ألمانيا — إليك</p>
-    <h1>العمل، الدراسة، أو التكوين المهني في ألمانيا —<br><em style="font-style:normal;color:#60A5FA;">مسارك الواضح يبدأ هنا.</em></h1>
-    <p class="sub">خبراء مقيمون في ألمانيا يقدمون لك تقييماً مهنياً حقيقياً، ومساراً واضحاً للوصول إلى ألمانيا. لا وعود كاذبة، فقط حقائق وفرص حقيقية.</p>
-    <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="section">
-  <div class="inner">
-    <p class="section-label">أرقام وحقائق</p>
-    <h2>ألمانيا تحتاجك الآن.</h2>
-    <p class="lead">ألمانيا تواجه نقصاً حاداً في الكفاءات. فرصتك للنجاح لم تكن أفضل من الآن.</p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3>200,000+</h3>
-        <p>وظيفة شاغرة</p>
-        <span>في قطاعات حيوية</span>
-      </div>
-      <div class="stat-card">
-        <h3>10,000+</h3>
-        <p>تأشيرة عمل</p>
-        <span>تصدر شهرياً</span>
-      </div>
-      <div class="stat-card">
-        <h3>100%</h3>
-        <p>نجاح</p>
-        <span>لعملائنا الملتزمين</span>
-      </div>
+    <p class="kicker">Berlin Gateway — من داخل النظام الألماني</p>
+    <h1>نحن لا نوصلك فقط.<br><em>نضمن نجاحك من داخل النظام.</em></h1>
+    <p>فريقنا مقيم في ألمانيا، يعمل داخل المستشفيات والمؤسسات. نحن لا نعطيك معلومات فقط، بل نرافقك خطوة بخطوة من داخل النظام.</p>
+    <div class="hero-btns">
+      <a href="/ar/assessment" class="btn-primary">ابدأ تقييمك المجاني ←</a>
+      <a href="/ar/chancenkarte" class="btn-outline">بطاقة الفرص</a>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip__inner">
+  <div class="trust-item"><span>✓</span> فريق مقيم في ألمانيا</div>
+    <div class="trust-item"><span>✓</span> خبراء داخل المستشفيات والمؤسسات</div>
+    <div class="trust-item"><span>✓</span> مرافقة حقيقية بعد الوصول</div>
+    <div class="trust-item"><span>✓</span> لا نستخدم الردود الآلية</div></div>
+
+<!-- 3 PATHS -->
+<section class="section">
+  <div class="inner--wide">
+    <p class="section-label">مساراتنا</p>
+    <h2 class="section h2">ثلاثة مسارات — نتيجة واحدة: النجاح في ألمانيا</h2>
+    <p class="lead" style="max-width:600px">سواء كنت تبحث عن عمل أو دراسة أو تدريب مهني — نحن نعرف المسار الصحيح لملفك تحديداً.</p>
+    <div class="paths-grid">
+      <a href="/ar/assessment" class="path-card">
+        <div class="path-card__icon">💼</div>
+        <h3>العمل في ألمانيا</h3>
+        <p>أطباء، مهندسون، ممرضون، مبرمجون — نعرف أي ولاية، أي مستشفى، أي شركة تناسب ملفك. ونتابعك بعد الوصول.</p>
+        <span class="path-link">ابدأ التقييم ←</span>
+      </a>
+      <a href="/ar/الدراسة-في-ألمانيا" class="path-card">
+        <div class="path-card__icon">🎓</div>
+        <h3>الدراسة في ألمانيا</h3>
+        <p>من يأتي معنا يستشيرنا ويكمل دراسته. نعرف الجامعات والمتطلبات والمسار الصحيح من البداية.</p>
+        <span class="path-link">اعرف المزيد ←</span>
+      </a>
+      <a href="/ar/التدريب-المهني-في-ألمانيا" class="path-card">
+        <div class="path-card__icon">🔧</div>
+        <h3>التدريب المهني</h3>
+        <p>نجد أفضل مركز تدريب مهني يناسب تخصصك — وبعدها نساعدك في إيجاد العمل مباشرة.</p>
+        <span class="path-link">اعرف المزيد ←</span>
+      </a>
+      <a href="/ar/visa" class="path-card">
+        <div class="path-card__icon">🛂</div>
+        <h3>تأشيرة العمل</h3>
+        <p>دليل شامل لأنواع تأشيرات العمل في ألمانيا 2026 — الشروط والوثائق والمسار الأسرع.</p>
+        <span class="path-link">تأشيرة العمل في ألمانيا ←</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AFTER ARRIVAL -->
 <section class="section section--alt">
   <div class="inner">
-    <p class="section-label">كيف نعمل</p>
-    <h2>طريقك إلى ألمانيا — خطوة بخطوة.</h2>
-    <p class="lead">نحن نرافقك في كل مرحلة، من التقييم الأولي حتى استقرارك في ألمانيا.</p>
+    <p class="section-label">ما بعد الوصول</p>
+    <h2>الفترة الحرجة — نحن معك في كل خطوة</h2>
+    <p class="lead">معظم الفشل يحدث بعد الوصول — ليس قبله. الأسبوع الأول والشهر الأول هما الأهم.</p>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-marker">1</div>
+        <div class="timeline-dot">أ1</div>
         <div class="timeline-content">
-          <h4>التقييم الأولي — مجاني</h4>
-          <p>أرسل لنا ملفك (سيرة ذاتية، شهادات). نقوم بتقييم مجاني لفرصك في ألمانيا خلال 48 ساعة.</p>
-          <span class="timeline-tag">تقييم حقيقي — ليس وعوداً</span>
+          <h4>الأسبوع الأول — الأخطر</h4>
+          <p>بيئة عمل جديدة، لغة مختلفة، عقلية مختلفة. من لا يفهم طبيعة الألمان في العمل يرتكب أخطاء لا تُغتفر في الأسبوع الأول.</p>
+          <span class="timeline-tag">نحن معك منذ اليوم الأول</span>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-marker">2</div>
+        <div class="timeline-dot">أ2</div>
         <div class="timeline-content">
-          <h4>تحديد المسار — 1 أسبوع</h4>
-          <p>نحدد لك المسار الأنسب: بطاقة الفرص، Blue Card، تأشيرة عمل، أو تدريب مهني.</p>
-          <span class="timeline-tag">مسار مخصص لنجاحك</span>
+          <h4>الشهر الأول — التوجيه الحقيقي</h4>
+          <p>السكن، التأمين، الحساب البنكي، وكيفية التعامل mit الزملاء. نحن نوجهك لتجاوز هذه المرحلة بسلام.</p>
+          <span class="timeline-tag">نوجهك في كل خطوة</span>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-marker">3</div>
-        <div class="timeline-content">
-          <h4>تجهيز الملف — 2-4 أسابيع</h4>
-          <p>نساعدك في تجهيز جميع الوثائق المطلوبة، بما في ذلك الاعتراف بالشهادات.</p>
-          <span class="timeline-tag">دقة واحترافية</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">4</div>
-        <div class="timeline-content">
-          <h4>البحث عن عمل — 4-12 أسبوع</h4>
-          <p>نبحث لك عن فرص عمل مناسبة ونجهزك للمقابلات مع أرباب العمل الألمان.</p>
-          <span class="timeline-tag">فرص حقيقية</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">5</div>
-        <div class="timeline-content">
-          <h4>تأشيرة الدخول — 4-8 أسابيع</h4>
-          <p>نقدم لك الدعم الكامل في إجراءات الحصول على التأشيرة من السفارة الألمانية.</p>
-          <span class="timeline-tag">دعم حتى الوصول</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">6</div>
+        <div class="timeline-dot">أ3</div>
         <div class="timeline-content">
           <h4>الستة أشهر الأولى — الاندماج الحقيقي</h4>
           <p>راتب أقل بـ 100€ مع اندماج حقيقي أفضل من راتب أعلى مع Kündigung. نحن نعرف أين تناسبك — ليس فقط أين تجد عملاً.</p>
@@ -436,6 +226,7 @@
     </div>
   </div>
 </section>
+
 <!-- WARNING -->
 <section class="section">
   <div class="inner">
@@ -448,6 +239,7 @@
     </div>
   </div>
 </section>
+
 <!-- WHY US -->
 <section class="section section--dark" style="padding:72px 24px;">
   <div class="inner">
@@ -474,6 +266,7 @@
     </div>
   </div>
 </section>
+
 <!-- CTA -->
 <section class="section section--alt">
   <div class="inner">
@@ -486,6 +279,7 @@
     </div>
   </div>
 </section>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer__grid">
@@ -519,5 +313,6 @@
     © 2026 Berlin Gateway. جميع الحقوق محفوظة.
   </div>
 </footer>
+
 </body>
 </html>

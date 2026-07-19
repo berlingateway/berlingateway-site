@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بطاقة الفرص — تقييم الأهلية | Berlin Gateway</title>
-  <meta name="description" content="بطاقة الفرصة ليست لكل أحد. اكتشف إذا كنت مؤهلاً قبل أن تضيع أشهراً في المسار الخطأ.">
+  <meta name="description" content="بطاقة الفرص ليست لكل أحد. اكتشف إذا كنت مؤهلاً قبل أن تضيع أشهراً في المسار الخطأ.">
   <link rel="stylesheet" href="/assets/css/app.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -80,7 +80,7 @@
       line-height: 1.2;
       max-width: 720px;
       margin: 0 auto 16px;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.5px;
     }
     .hero-hook h1 em {
       font-style: normal;
@@ -160,6 +160,15 @@
       border-bottom: 1px solid #E5E7EB;
     }
     .filter-item:last-child { border-bottom: none; }
+    .filter-check {
+      width: 22px; height: 22px;
+      background: #DCFCE7;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 12px;
+      margin-top: 2px;
+    }
     .filter-item p { margin: 0; font-size: 15px; line-height: 1.6; color: #374151; }
     .filter-item strong { color: #0D1117; display: block; margin-bottom: 2px; }
 
@@ -322,7 +331,7 @@
     ]
   }
   </script>
-		
+	
   <!-- 2. WebPage Schema für /ar/chancenkarte -->
   <script type="application/ld+json">
   {
@@ -331,14 +340,10 @@
     "@id": "https://berlingateway.de/ar/chancenkarte#webpage",
     "url": "https://berlingateway.de/ar/chancenkarte",
     "name": "بطاقة الفرصة الألمانية – Chancenkarte | برلين غيتواي",
-    "description": "بطاقة الفرصة (Chancenkarte) هي تأشيرة ألمانية جديدة تتيح للمهنيين المهرة من خارج الاتحاد الأوروبي القدوم إلى ألمانيا للبحث عن عمل لمدة تصل إلى سنة، دون الحاجة إلى عقد عمل مسبق. اكتشف أهليتك اليوم.",
+    "description": "كل ما تحتاج معرفته عن بطاقة الفرصة الألمانية: الشروط، نظام النقاط، طريقة التقديم، وكيف يساعدك برلين غيتواي في الوصول إلى ألمانيا.",
     "inLanguage": "ar",
-    "datePublished": "2024-06-01",
-    "dateModified": "2026-07-02",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://berlingateway.de/ar/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "isPartOf": {
+      "@id": "https://berlingateway.de/#website"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -347,7 +352,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "الرئيسية",
-          "item": "https://berlingateway.de/ar"
+          "item": "https://berlingateway.de/ar/"
         },
         {
           "@type": "ListItem",
@@ -356,29 +361,103 @@
           "item": "https://berlingateway.de/ar/chancenkarte"
         }
       ]
-    },
-    "mainEntityOfPage": "https://berlingateway.de/ar/chancenkarte"
+    }
   }
   </script>
-
+	
+  <!-- 3. HowTo Schema – Chancenkarte beantragen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Chancenkarte beantragen – Schritt für Schritt",
+    "description": "So beantragen Sie die deutsche Chancenkarte mit Unterstützung von Berlin Gateway – von der Punkteberechnung bis zur Ankunft in Deutschland.",
+    "totalTime": "P3M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "EUR",
+      "value": "75"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Reisepass (mindestens 1 Jahr gültig)"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Beglaubigte Kopien von Abschlusszeugnissen"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Nachweis über Sprachkenntnisse (Goethe, TestDaF oder IELTS)"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Kontoauszug oder Sperrkonto-Nachweis (ca. 12.000 €)"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Lebenslauf auf Deutsch oder Englisch"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Punktestand berechnen lassen",
+        "text": "Berlin Gateway berechnet kostenlos Ihren Punktestand für die Chancenkarte und sagt Ihnen, ob Sie die Mindestvoraussetzungen erfüllen.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Unterlagen vollständig vorbereiten",
+        "text": "Wir erstellen eine individuelle Checkliste mit allen erforderlichen Dokumenten: Zeugnisse, Übersetzungen, Sprachnachweise und Finanznachweise.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Antrag bei der deutschen Botschaft einreichen",
+        "text": "Sie reichen den Antrag bei der deutschen Botschaft in Ihrem Heimatland ein. Berlin Gateway bereitet alle Formulare vor und prüft die Vollständigkeit.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Visum erhalten und nach Deutschland einreisen",
+        "text": "Nach Erteilung des Visums unterstützt Berlin Gateway Sie bei der Vorbereitung auf die Ankunft: Wohnung, Bankonto, Krankenversicherung und erste Schritte in Deutschland.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Job finden und Aufenthaltstitel umwandeln",
+        "text": "Unser Jobvermittlungsteam unterstützt Sie aktiv bei der Suche nach einer passenden Stelle. Sobدا يتم التوصل إلى وظيفة، نساعدك في التحويل إلى تأشيرة عمل عادية.",
+        "url": "https://berlingateway.de/ar/chancenkarte"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
+<!-- TOP BAND -->
 <div class="top-band">
   <div class="top-band__inner">
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-    <div style="display:flex;gap:12px;align-items:center">
+    <div style="display:flex;gap:12px;align-items:center;">
       <a href="/de/chancenkarte" class="lang-badge">Deutsch</a>
-      <span style="opacity:.5">خبراء مقيمون في برلين</span>
+      <span style="opacity:.5;">مقيمون في ألمانيا</span>
     </div>
   </div>
 </div>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header__inner">
     <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
-    <nav class="nav">
-      <a href="/ar/success-stories">قصص حقيقية</a>
+    <nav class="nav"><a href="/ar/success-stories">قصص حقيقية</a>
       <a href="/ar/chancenkarte">بطاقة الفرص</a>
       <a href="/ar/assessment">التقييم</a>
       <a href="/ar/aerzte">أطباء</a>
@@ -387,221 +466,157 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero-hook">
-  <div class="inner" style="position:relative;z-index:1">
-    <p class="kicker">تأشيرة ألمانيا 2026 — محدث يوليو 2026</p>
-    <h1>بطاقة الفرصة الألمانية (Chancenkarte)<br><em>هل أنت مؤهل؟</em></h1>
-    <p class="sub">البوابة الجديدة للكفاءات غير الأكاديمية. اكتشف إذا كنت مؤهلاً قبل أن تضيع أشهراً في المسار الخطأ.</p>
-    <a href="/ar/assessment" class="cta-primary">ابدأ تقييم الأهلية المجاني ←</a>
-    <p class="cta-note">رد خلال 24–48 ساعة · بدون التزام</p>
+<!-- 1. HOOK — ILLUSION BREAK -->
+<section class="hero-hook" style="background:#0B1F3A !important;">
+  <div class="inner" style="position:relative;z-index:1;">
+    <p class="kicker" style="color:rgba(255,255,255,0.7) !important;">بطاقة الفرص — من داخل النظام الألماني</p>
+    <h1 style="color:#FFFFFF !important;">بطاقة الفرص ليست مناسبة<br>لكل <em style="font-style:normal;color:#93C5FD !important;">شخص.</em></h1>
+    <p class="sub" style="color:rgba(255,255,255,0.65) !important;">والمشكلة أن كثيرين يكتشفون ذلك بعد أشهر من إضاعة الوقت والجهد في المسار الخطأ.</p>
+    <a href="/ar/assessment" class="cta-primary" style="display:inline-block;background:#FFFFFF !important;color:#0B1F3A !important;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">ابدأ تقييمك الآن ←</a>
+    <p class="cta-note" style="color:rgba(255,255,255,0.4) !important;">رد من فريق يعيش في ألمانيا — بدون التزام</p>
   </div>
 </section>
 
-<!-- SECTION -->
+<!-- 2. QUALIFICATION FILTER -->
 <section class="section">
   <div class="inner">
-    <p class="section-label">مقدمة</p>
-    <h2>بطاقة الفرصة: فرصة حقيقية أم مجرد وعود؟</h2>
-    <p class="lead">بطاقة الفرصة الألمانية (Chancenkarte) هي أحدث مبادرة من الحكومة الألمانية لجذب الكفاءات من خارج الاتحاد الأوروبي. لكن هل هي مناسبة لك؟</p>
-    <p>تُعد بطاقة الفرصة خطوة مهمة نحو تبسيط إجراءات الهجرة للعمالة الماهرة. تتيح لك هذه التأشيرة الجديدة القدوم إلى ألمانيا لمدة تصل إلى عام واحد للبحث عن عمل، حتى لو لم يكن لديك عقد عمل مسبق. تعتمد البطاقة على نظام النقاط، حيث تُمنح النقاط بناءً على مؤهلاتك، خبرتك المهنية، مهاراتك اللغوية، وعمرك. الهدف هو جذب الأفراد الذين لديهم أفضل الفرص للاندماج بنجاح في سوق العمل والمجتمع الألماني.</p>
-    <p>لكن، ليست كل البطاقات متساوية. الكثيرون يظنون أن مجرد الحصول على البطاقة يضمن لهم وظيفة. الحقيقة هي أن البطاقة هي مجرد تصريح للبحث عن عمل. النجاح الحقيقي يعتمد على فهمك للسوق الألماني، قدرتك على التواصل، وشبكة علاقاتك. هنا يأتي دور Berlin Gateway. نحن نساعدك على تقييم أهليتك، ونوجهك خلال عملية التقديم، والأهم من ذلك، نعدك للنجاح بعد وصولك إلى ألمانيا.</p>
-  </div>
-</section>
-
-<!-- FILTER SECTION -->
-<section class="section section--alt">
-  <div class="inner">
-    <p class="section-label">تقييم سريع</p>
-    <h2>هل أنت مؤهل لبطاقة الفرصة؟</h2>
-    <p class="lead">استخدم هذا التقييم السريع لمعرفة ما إذا كنت تستوفي الشروط الأساسية.</p>
+    <p class="section-label">فلتر الأهلية</p>
+    <h2>هل أنت مناسب لبطاقة الفرص؟</h2>
+    <p class="lead">قبل أي خطوة، ثلاثة معايير حقيقية. إذا انطبقت عليك — تابع. إذا لم تنطبق — هذا التقييم سيوفر عليك وقتاً ثميناً.</p>
 
     <div class="filter-box">
-      <div class="filter-box__header">الشروط الأساسية</div>
+      <div class="filter-box__header">المعايير الأساسية</div>
+
       <div class="filter-item">
-        <div class="filter-check">✅</div>
-        <p><strong>مؤهل جامعي أو مهني معترف به:</strong> يجب أن يكون لديك شهادة جامعية أو مؤهل مهني معترف به في ألمانيا، أو مؤهل أجنبي يعادل مؤهلاً ألمانياً.</p>
+        <div class="filter-check">✓</div>
+        <p><strong>شهادة أكاديمية أو مهنية معترف بها</strong>ليس كل مؤهل يُقبل في ألمانيا. النوع والمستوى والبلد — كلها تحدد فرصتك الفعلية.</p>
       </div>
       <div class="filter-item">
-        <div class="filter-check">✅</div>
-        <p><strong>إثبات القدرة المالية:</strong> يجب أن تكون قادراً على تغطية نفقات معيشتك في ألمانيا (حوالي 1000 يورو شهرياً) لمدة عام واحد.</p>
+        <div class="filter-check">✓</div>
+        <p><strong>خبرة عمل حقيقية وموثقة</strong>على الأقل سنتان في مجال ذي صلة مباشرة. الخبرة العامة لا تكفي.</p>
       </div>
       <div class="filter-item">
-        <div class="filter-check">✅</div>
-        <p><strong>نقاط كافية:</strong> يجب أن تحصل على 6 نقاط على الأقل في نظام النقاط الخاص بالبطاقة.</p>
+        <div class="filter-check">✓</div>
+        <p><strong>جدية حقيقية في الانتقال خلال 12 شهراً</strong>بطاقة الفرص مسار استراتيجي — ليست تصريح سفر.</p>
       </div>
     </div>
 
     <div class="exclusion-box">
-      <div class="icon">⚠️</div>
-      <p><strong>إذا لم تستوفِ أحد هذه الشروط الأساسية، فمن غير المرجح أن تكون مؤهلاً لبطاقة الفرصة.</strong> ومع ذلك، يمكننا في Berlin Gateway مساعدتك في استكشاف مسارات بديلة للهجرة إلى ألمانيا.</p>
+      <div class="icon">⚠</div>
+      <p>إذا كنت تبحث عن <strong>"أي طريقة للدخول إلى ألمانيا"</strong> — فهذه الصفحة ليست لك. Berlin Gateway مخصصة للمهنيين الجادين فقط.</p>
     </div>
   </div>
 </section>
 
-<!-- POINTS SECTION -->
-<section class="section">
-  <div class="inner">
-    <p class="section-label">نظام النقاط</p>
-    <h2>كيف تحصل على النقاط؟</h2>
-    <p class="lead">تُمنح النقاط بناءً على عدة معايير. كلما زادت نقاطك، زادت فرصك.</p>
-
-    <div class="filter-box">
-      <div class="filter-box__header">معايير النقاط</div>
-      <div class="filter-item">
-        <div class="filter-check">3</div>
-        <p><strong>اللغة الألمانية (B2):</strong> إذا كنت تتقن اللغة الألمانية بمستوى B2 أو أعلى.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">2</div>
-        <p><strong>اللغة الألمانية (B1):</strong> إذا كنت تتقن اللغة الألمانية بمستوى B1.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">1</div>
-        <p><strong>اللغة الألمانية (A1):</strong> إذا كنت تتقن اللغة الألمانية بمستوى A1.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">1</div>
-        <p><strong>اللغة الإنجليزية (C1):</strong> إذا كنت تتقن اللغة الإنجليزية بمستوى C1 أو أعلى.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">2</div>
-        <p><strong>خبرة مهنية (3 سنوات):</strong> إذا كان لديك 3 سنوات على الأقل من الخبرة المهنية في مجال تخصصك خلال السنوات السبع الماضية.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">1</div>
-        <p><strong>خبرة مهنية (2 سنوات):</strong> إذا كان لديك سنتان على الأقل من الخبرة المهنية في مجال تخصصك خلال السنوات الخمس الماضية.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">1</div>
-        <p><strong>العمر (أقل من 35):</strong> إذا كان عمرك أقل من 35 عاماً.</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">1</div>
-        <p><strong>إقامة سابقة في ألمانيا:</strong> إذا كنت قد أقمت في ألمانيا لمدة 6 أشهر على الأقل في السنوات الخمس الماضية (للدراسة أو العمل).</p>
-      </div>
-      <div class="filter-item">
-        <div class="filter-check">1</div>
-        <p><strong>زوج/زوجة مؤهل:</strong> إذا كان زوجك/زوجتك مؤهلاً لبطاقة الفرصة أيضاً.</p>
-      </div>
-    </div>
-
-    <div class="exclusion-box">
-      <div class="icon">💡</div>
-      <p><strong>تحتاج إلى 6 نقاط على الأقل لتكون مؤهلاً.</strong> لا تقلق إذا لم تكن متأكداً من عدد نقاطك، يمكننا في Berlin Gateway مساعدتك في حسابها بدقة.</p>
-    </div>
-  </div>
-</section>
-
-<!-- RISKS -->
+<!-- 3. DECISION RISK -->
 <section class="section section--alt">
   <div class="inner">
-    <p class="section-label">المخاطر</p>
-    <h2>ما هي مخاطر بطاقة الفرصة؟</h2>
-    <p class="lead">بطاقة الفرصة ليست ضماناً للنجاح. هناك مخاطر يجب أن تكون على دراية بها.</p>
+    <p class="section-label">مخاطر القرار الخاطئ</p>
+    <h2>ماذا يحدث عندما يُختار المسار الخطأ؟</h2>
+    <p class="lead">معظم الطلبات لا تُرفض لأن المتقدم غير مؤهل — بل لأن المسار اختير بشكل خاطئ من البداية.</p>
+
     <div class="risk-grid">
       <div class="risk-card">
-        <h4>عدم إيجاد عمل</h4>
-        <p>البطاقة تمنحك حق البحث عن عمل، وليس ضماناً له. إذا لم تجد عملاً خلال عام، يجب عليك مغادرة ألمانيا.</p>
+        <h4>رفض الطلب</h4>
+        <p>بسبب نقص في الوثائق oder اختيار نوع التأشيرة الخطأ منذ البداية.</p>
       </div>
       <div class="risk-card">
-        <h4>صعوبة الاندماج</h4>
-        <p>اللغة والثقافة الألمانية قد تكون تحدياً. عدم الاستعداد الجيد قد يؤدي إلى صعوبات في الاندماج المهني والاجتماعي.</p>
+        <h4>خسارة الوقت</h4>
+        <p>أشهر من الانتظار والتحضير — ثم اكتشاف أن الأساس غير صحيح.</p>
       </div>
       <div class="risk-card">
-        <h4>الوثائق غير الكافية</h4>
-        <p>أي نقص أو خطأ في الوثائق قد يؤدي إلى رفض طلبك أو تأخيره بشكل كبير.</p>
+        <h4>تأخير فرص العمل</h4>
+        <p>سوق العمل الألماني لا ينتظر. كل شهر تأخير هو فرصة يأخذها غيرك.</p>
       </div>
       <div class="risk-card">
-        <h4>الاعتماد على معلومات خاطئة</h4>
-        <p>الكثير من المعلومات المضللة على الإنترنت. الاعتماد عليها قد يكلفك الوقت والمال والفرصة.</p>
+        <h4>مشاكل الاعتراف بالمؤهلات</h4>
+        <p>الاعتراف بالشهادات عملية منفصلة ومعقدة — وإذا لم تُحضّر لها مبكراً، تتأخر كل شيء.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- POSITIONING -->
+<!-- 4. POSITIONING -->
 <section class="section">
   <div class="inner">
-    <div class="position-block">
-      <h3>كيف نضعك في أفضل وضع؟</h3>
-      <p>نحن لا نعدك بالوصول فقط، بل نضمن لك النجاح في ألمانيا. هذا ما يميزنا:</p>
+    <p class="section-label">Berlin Gateway</p>
+    <div style="background:#0B1F3A;border-radius:12px;padding:40px;">
+      <h3 style="color:#FFFFFF !important;font-size:22px;font-weight:700;margin:0 0 16px;">نحن لا نبيع حلماً — نقيّم المسار.</h3>
+      <p style="color:rgba(255,255,255,0.85) !important;font-size:16px;line-height:1.75;font-weight:300;">Berlin Gateway ليست وكالة هجرة. نحن نقيّم وضعك الفعلي وفق المعايير الحقيقية للنظام الألماني — ونخبرك بصدق إذا كنت مؤهلاً، وأين تقف فعلاً.</p>
       <ul class="position-list">
-        <li>تقييم دقيق لملفك وتحديد نقاط قوتك وضعفك.</li>
-        <li>مساعدتك في تحضير جميع الوثائق المطلوبة بشكل صحيح.</li>
-        <li>توجيهك للبحث عن عمل في القطاعات والولايات التي تناسب مؤهلاتك.</li>
-        <li>إعدادك للمقابلات الشخصية وثقافة العمل الألمانية.</li>
-        <li>دعمك في إجراءات الاعتراف بالشهادات والفيزا.</li>
-        <li>مرافقتك بعد الوصول لضمان اندماجك السلس.</li>
+        <li>تقييم مبني على بيانات سوق العمل الحالية</li>
+        <li>تحليل مؤهلاتك وفق قوانين الاعتراف الألمانية</li>
+        <li>مسار واضح — أو إجابة صريحة بأن الوقت لم يحن بعد</li>
+        <li>بدون وعود مبالغ فيها، بدون شورت كات</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="inner">
-    <h2>ابدأ رحلتك إلى ألمانيا اليوم.</h2>
-    <p>لا تترك مستقبلك للصدفة. ابدأ بتقييم أهليتك لبطاقة الفرصة مع خبراء Berlin Gateway. التقييم مجاني وبدون التزام.</p>
-    <a href="/ar/assessment" class="cta-primary--dark">ابدأ التقييم المجاني ←</a>
-    <p class="cta-note">رد خلال 24–48 ساعة · بدون التزام</p>
+<!-- INTERNAL LINKS -->
+<section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
+  <div style="max-width:780px;margin:0 auto;">
+    
+    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">اقرأ أيضاً</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+      <a href="/ar/ingenieure/" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">المسار الهندسي</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">مهندسون في ألمانيا ←</p>
+      </a>
+      <a href="/ar/pflege/" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">مسار التمريض</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">التمريض في ألمانيا ←</p>
+      </a>
+      <a href="/ar/success-stories/" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">قصص حقيقية</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">قصص حقيقية ←</p>
+      </a>
+      <a href="/ar/insights/تجنس-ألمانيا" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">الهدف النهائي</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">الجنسية الألمانية ←</p>
+      </a>
+      <a href="/ar/visa" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">تأشيرة العمل</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">تأشيرة العمل في ألمانيا ←</p>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
+  <!-- Internal link: Success Stories -->
+  <section style="background:#F0F4FF;border-top:1px solid #DBEAFE;padding:32px 24px;text-align:center;">
+    <div style="max-width:680px;margin:0 auto;">
+      <p style="font-size:13px;color:#0B3B8C;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">من نجح قبلك</p>
+      <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:12px;">منذ 2011 — بصمتنا في حياة مئات الكفاءات</h3>
+      <p style="font-size:15px;color:#374151;margin-bottom:20px;">أطباء ومهندسون وطلاب بدأوا من نفس نقطة البداية.</p>
+      <a href="/ar/success-stories" style="display:inline-block;background:#0B1F3A;color:#fff;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;">اقرأ قصصهم ←</a>
+    </div>
+  </section>
+
+  <!-- 5. FINAL CTA -->
+  <section class="final-cta">
   <div class="inner">
-    <div class="footer__grid">
-      <div>
-        <p class="footer__brand">Berlin Gateway</p>
-        <p class="footer__tagline">من داخل النظام الألماني.<br>عمل، دراسة، تدريب مهني.<br>نضمن نجاحك — ليس فقط وصولك.</p>
-      </div>
-      <div>
-        <h4>المسارات</h4>
-        <a href="/ar/aerzte">الأطباء</a>
-        <a href="/ar/pflege">التمريض</a>
-        <a href="/ar/chancenkarte">بطاقة الفرص</a>
-        <a href="/ar/assessment">التقييم</a>
-      </div>
-      <div>
-        <h4>النظام</h4>
-        <a href="/ar/systemlogik">منطق النظام</a>
-        <a href="/ar/voraussetzungen">المتطلبات</a>
-        <a href="/ar/anerkennung">الاعتراف المهني</a>
-        <a href="/ar/monitor">مرصد السوق</a>
-      </div>
-      <div>
-        <h4>التواصل</h4>
-        <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
-        <a href="https://wa.me/4915781497451">واتساب</a>
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/impressum">بصمة الموقع</a>
-      </div>
+    <h2>لا تحتاج معلومات أكثر.<br>تحتاج تقييماً حقيقياً لحالتك.</h2>
+    <p>دقيقتان، أسئلة محددة، إجابة واضحة. هذا كل ما في الأمر.</p>
+    <a href="/ar/assessment" class="cta-primary--dark">ابدأ التقييم الآن ←</a>
+    <div style="margin-top:24px;">
+      <a href="/ar/ingenieure/" style="margin:0 10px; color:#0B3B8C; text-decoration:none; font-weight:600;">مهندسون في ألمانيا ←</a>
+      <a href="/ar/pflege/" style="margin:0 10px; color:#0B3B8C; text-decoration:none; font-weight:600;">التمريض في ألمانيا ←</a>
+      <a href="/ar/success-stories/" style="margin:0 10px; color:#0B3B8C; text-decoration:none; font-weight:600;">قصص حقيقية ←</a>
     </div>
-    <div class="footer__bottom">
-      © 2026 Berlin Gateway. جميع الحقوق محفوظة.
-    </div>
+    <p style="margin-top:16px;font-size:13px;color:#9CA3AF;">الرد خلال 24–48 ساعة · معالجة الطلبات الجادة فقط</p>
   </div>
+</section>
+
+<footer class="footer">
+  <p>Berlin Gateway &mdash; تقييم مهني لألمانيا</p>
+  <p style="margin-top:8px;">
+    <a href="/ar/impressum">بصمة الموقع</a>
+    <a href="/ar/datenschutz">خصوصية البيانات</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
 </footer>
-
-<script>
-  // FAQ Accordion Logic
-  document.addEventListener('DOMContentLoaded', function() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    faqQuestions.forEach(question => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        question.classList.toggle('active');
-        if (question.classList.contains('active')) {
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        } else {
-          answer.style.maxHeight = null;
-        }
-      });
-    });
-  });
-</script>
 
 </body>
 </html>

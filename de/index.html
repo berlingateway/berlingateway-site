@@ -3,380 +3,356 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berlin Gateway — Ihr Weg nach Deutschland</title>
+  <title>Berlin Gateway — Erfolg in Deutschland | Wir sind im System</title>
+  <meta name="description" content="Ihr Partner für die berufliche Integration in Deutschland. Wir navigieren Sie durch Anerkennung, Chancenkarte und Arbeitsmarkt – mit Insider-Wissen direkt aus dem System.">
   <link rel="canonical" href="https://berlingateway.de/de/">
   <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/">
   <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/">
-  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/">
   <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/">
-  <meta name="description" content="Berlin Gateway ist Ihr institutioneller Partner für die Migration nach Deutschland. Wir bieten umfassende Unterstützung für Fachkräfte, Ärzte und Pflegepersonal.">
-  <link rel="stylesheet" href="/assets/css/app.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Berlin Gateway — Erfolg in Deutschland | Wir sind im System">
+  <meta property="og:description" content="Wir navigieren Sie durch das deutsche System. Anerkennung, Visum und Jobsuche mit Experten vor Ort.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://berlingateway.de/de/">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* ── PAGE VARIABLES ── */
     :root {
-      --ink:     #0D1117;
-      --ink-mid: #374151;
-      --ink-low: #6B7280;
-      --white:   #FFFFFF;
-      --off:     #F8F9FA;
-      --border:  #E5E7EB;
-      --blue:    #0B3B8C;
-      --blue-dk: #0B1F3A;
-      --red:     #B91C1C;
-      --gold:    #D97706;
+      --primary: #0B3B8C;
+      --dark: #0B1F3A;
+      --accent: #93C5FD;
+      --text: #1F2937;
+      --text-light: #6B7280;
+      --white: #FFFFFF;
+      --bg-light: #F8F9FA;
+      --border: #E5E7EB;
     }
 
-    body { font-family: 'IBM Plex Sans', sans-serif; color: #0D1117; background: #FFFFFF; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'IBM Plex Sans', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); -webkit-font-smoothing: antialiased; }
 
-    /* ── TOP BAND ── */
-    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
-    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band { background: var(--dark); color: var(--white); padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
     .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
-    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+    .lang-switch { display: flex; gap: 12px; align-items: center; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; text-decoration: none; color: var(--white) !important; }
 
-    /* ── HEADER ── */
-    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; letter-spacing: -0.3px; }
-    .brand span { color: #0B3B8C; }
-    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-left: 24px; font-weight: 500; }
-    .nav a:hover { color: #0B3B8C; }
+    .header { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 0; position: sticky; top: 0; z-index: 1000; }
+    .header__inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 20px; font-weight: 800; color: var(--dark); text-decoration: none; letter-spacing: -0.5px; }
+    .brand span { color: var(--primary); }
+    .nav { display: flex; gap: 24px; }
+    .nav a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+    .nav a:hover { color: var(--primary); }
 
-    /* ── HERO ── */
-    .hero {
-      background: #0B1F3A;
-      padding: 64px 24px 60px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; left: 50%; transform: translateX(-50%);
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(11,59,140,0.3) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero .kicker {
-      display: inline-block;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.7);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      color: #FFFFFF;
-      font-size: clamp(26px, 5vw, 44px);
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 720px;
-      margin: 0 auto 16px;
-      letter-spacing: -0.5px;
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: #60A5FA;
-      text-shadow: none;
-      font-weight: 800;
-    }
-    .hero .sub {
-      color: rgba(255,255,255,0.65);
-      font-size: 17px;
-      max-width: 540px;
-      margin: 0 auto 32px;
-      line-height: 1.7;
-      font-weight: 300;
-    }
+    .hero { background: var(--dark); color: var(--white); padding: 100px 24px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 50%, rgba(11, 59, 140, 0.2) 0%, transparent 70%); }
+    .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+    .kicker { display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 32px; }
+    .hero h1 { font-size: clamp(32px, 6vw, 56px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px; }
+    .hero p { color: rgba(255,255,255,0.7); font-size: 18px; max-width: 600px; margin: 0 auto 40px; font-weight: 300; }
+    
+    .cta-group { display: flex; gap: 16px; justify-content: center; }
+    .cta-primary { background: var(--white); color: var(--dark); padding: 16px 36px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: transform 0.2s; }
+    .cta-secondary { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.3); padding: 16px 36px; border-radius: 6px; font-weight: 700; text-decoration: none; }
+    .cta-primary:hover { transform: translateY(-2px); }
 
-    /* ── SECTION BASE ── */
-    .section { padding: 64px 24px; }
-    .section--alt { background: #F8F9FA; }
-    .inner { max-width: 780px; margin: 0 auto; }
-    .section-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #0B3B8C;
-      margin-bottom: 16px;
-    }
-    .section-label--light { color: #93C5FD; }
-    .section h2 {
-      font-size: clamp(22px, 4vw, 32px);
-      font-weight: 700;
-      line-height: 1.3;
-      margin: 0 0 16px;
-      letter-spacing: -0.3px;
-    }
-    .section .lead {
-      font-size: 17px;
-      color: #374151;
-      line-height: 1.75;
-      margin: 0 0 32px;
-      font-weight: 300;
-    }
+    .trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .trust-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { font-size: 11px; font-weight: 700; color: var(--text-light); letter-spacing: 1px; display: flex; align-items: center; gap: 8px; }
+    .trust-item::before { content: '✓'; color: #10B981; font-weight: 900; }
 
-    /* ── STATS GRID ── */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .stat-card {
-      background: #FFFFFF;
-      border: 1.5px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 24px;
-      text-align: center;
-    }
-    .stat-card h3 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #0B3B8C;
-      margin-bottom: 8px;
-    }
-    .stat-card p {
-      font-size: 15px;
-      color: #0D1117;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .stat-card span {
-      font-size: 13px;
-      color: #6B7280;
-    }
+    .section { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; display: block; }
+    .section h2 { font-size: 36px; font-weight: 800; margin-bottom: 48px; letter-spacing: -0.5px; }
 
-    /* ── PROCESS TIMELINE ── */
-    .timeline {
-      position: relative;
-      max-width: 780px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 2px;
-      background: #E5E7EB;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -1px;
-    }
-    .timeline-item {
-      padding: 10px 0;
-      position: relative;
-      width: 50%;
-    }
-    .timeline-item:nth-child(odd) {
-      left: 0;
-      padding-right: 30px;
-      text-align: right;
-    }
-    .timeline-item:nth-child(even) {
-      left: 50%;
-      padding-left: 30px;
-      text-align: left;
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      right: -8px;
-      background: #0B3B8C;
-      border: 2px solid #FFFFFF;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .timeline-item:nth-child(even)::after {
-      left: -8px;
-    }
-    .timeline-content {
-      background: #F8F9FA;
-      padding: 20px;
-      border-radius: 8px;
-      position: relative;
-      border: 1px solid #E5E7EB;
-    }
-    .timeline-content h4 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #0D1117;
-      margin-bottom: 8px;
-    }
-    .timeline-content p {
-      font-size: 15px;
-      color: #374151;
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-    .timeline-tag {
-      display: inline-block;
-      background: #E0F2FE;
-      color: #0B3B8C;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
+    .path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+    .path-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: all 0.3s; text-decoration: none; color: inherit; }
+    .path-card:hover { border-color: var(--primary); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .path-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--dark); }
+    .path-card p { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
+    .path-link { color: var(--primary); font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 4px; }
 
-    /* ── WARNING BOX ── */
-    .warning-box {
-      background: #FEF2F2;
-      border: 1px solid #FCA5A5;
-      border-radius: 8px;
-      padding: 24px;
-      margin-top: 32px;
-      text-align: center;
-    }
-    .warning-box h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #B91C1C;
-      margin-bottom: 12px;
-    }
-    .warning-box p {
-      font-size: 16px;
-      color: #B91C1C;
-      line-height: 1.6;
-    }
+    .features { background: var(--bg-light); padding: 100px 24px; }
+    .features-inner { max-width: 1100px; margin: 0 auto; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+    .feature-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--dark); }
+    .feature-item p { font-size: 15px; color: var(--text-light); }
 
-    /* ── WHY GRID ── */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .why-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .why-card h4 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-    .why-card p {
-      font-size: 15px;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.6;
-    }
+    .footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 80px 24px 40px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+    .footer-brand { color: var(--white); font-size: 20px; font-weight: 800; margin-bottom: 20px; }
+    .footer h5 { color: var(--white); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer ul { list-style: none; }
+    .footer ul li { margin-bottom: 12px; }
+    .footer ul a { color: inherit; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .footer ul a:hover { color: var(--white); }
+    .footer-bottom { max-width: 1100px; margin: 60px auto 0; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 12px; }
 
-    /* ── CTA BLOCK ── */
-    .cta-block {
-      background: #0B1F3A;
-      border-radius: 12px;
-      padding: 40px;
-      text-align: center;
-      color: #FFFFFF;
-      margin-top: 40px;
-    }
-    .cta-block h2 { color: #FFFFFF; margin-bottom: 16px; }
-    .cta-block p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
-    .cta-btn {
-      display: inline-block;
-      background: #FFFFFF;
-      color: #0B1F3A;
-      font-weight: 700;
-      padding: 14px 32px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-    .wa-link {
-      display: inline-block;
-      margin-top: 16px;
-      color: #60A5FA;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    /* ── FOOTER ── */
-    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 32px 24px; text-align: center; font-size: 13px; }
-    .footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 12px; }
-    .footer__grid {
-      max-width: 1080px;
-      margin: 0 auto 40px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: left;
-    }
-    .footer__grid h4 { color: #FFFFFF; font-size: 16px; margin-bottom: 16px; }
-    .footer__grid a { display: block; margin: 0 0 8px 0; text-align: left; }
-    .footer__brand { color: #FFFFFF; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .footer__tagline { font-size: 14px; line-height: 1.6; }
-    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
-
-    /* ── MOBILE ── */
     @media (max-width: 768px) {
-      .nav { display: none; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .timeline::after { left: 18px; }
-      .timeline-item { width: 100%; padding-left: 50px; padding-right: 0; }
-      .timeline-item:nth-child(odd) {
-        text-align: left;
-        padding-right: 0;
-      }
-      .timeline-item:nth-child(even) { left: 0; }
-      .timeline-item::after, .timeline-item:nth-child(even)::after { left: 10px; }
-      .why-grid { grid-template-columns: 1fr; }
-      .footer__grid { grid-template-columns: 1fr; text-align: center; }
-      .footer__grid a { text-align: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+      .header__inner { flex-direction: column; gap: 16px; }
+      .nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
+      .hero { padding: 60px 24px; }
+      .cta-group { flex-direction: column; }
     }
   </style>
+
+  <!-- Structured Data -->
+  <!-- 1. Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://berlingateway.de/#organization",
+    "name": "Berlin Gateway",
+    "alternateName": "BG Berlin Gateway",
+    "url": "https://berlingateway.de/de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://berlingateway.de/assets/images/logo.png",
+      "width": 200,
+      "height": 60
+    },
+    "image": "https://berlingateway.de/assets/images/logo.png",
+    "description": "Berlin Gateway ist eine Einwanderungs- und Rekrutierungsberatung in Berlin, die arabischsprachige Fachkräfte bei der Einwanderung nach Deutschland unterstützt – von der Anerkennung ausländischer Abschlüsse bis zur Arbeitsvisum-Beantragung.",
+    "telephone": "+4915781497451",
+    "email": "info@berlingateway.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Berlin",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Deutschland"
+      },
+      {
+        "@type": "Country",
+        "name": "Libyen"
+      },
+      {
+        "@type": "Country",
+        "name": "Algerien"
+      },
+      {
+        "@type": "Country",
+        "name": "Marokko"
+      },
+      {
+        "@type": "Country",
+        "name": "Tunesien"
+      },
+      {
+        "@type": "Country",
+        "name": "Irak"
+      },
+      {
+        "@type": "Country",
+        "name": "Ägypten"
+      },
+      {
+        "@type": "Country",
+        "name": "Saudi-Arabien"
+      }
+    ],
+    "serviceType": [
+      "Einwanderungsberatung",
+      "Anerkennungsberatung",
+      "Fachkräftevermittlung",
+      "Visa-Beratung",
+      "Chancenkarte-Beratung"
+    ],
+    "knowsLanguage": ["de", "ar"],
+    "sameAs": [
+      "https://www.facebook.com/berlingateway"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Hamza Al-Ais"
+    },
+    "priceRange": "€€",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+  <!-- 2. WebSite Schema mit SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://berlingateway.de/#website",
+    "name": "Berlin Gateway",
+    "url": "https://berlingateway.de/",
+    "inLanguage": ["de", "ar"],
+    "description": "Einwanderungsberatung und Fachkräftevermittlung für arabischsprachige Fachkräfte in Deutschland",
+    "publisher": {
+      "@id": "https://berlingateway.de/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://berlingateway.de/de/suche?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- 3. WebPage Schema für /de/ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://berlingateway.de/de/#webpage",
+    "url": "https://berlingateway.de/de/",
+    "name": "Berlin Gateway – Einwanderung & Jobvermittlung für arabische Fachkräfte",
+    "description": "Ihr vertrauenswürdiger Partner für die Einwanderung nach Deutschland. Wir begleiten arabischsprachige Fachkräfte von der Anerkennung bis zum Arbeitsbeginn in Berlin und ganz Deutschland.",
+    "isPartOf": {
+      "@id": "https://berlingateway.de/#website"
+    },
+    "about": {
+      "@id": "https://berlingateway.de/#organization"
+    },
+    "inLanguage": "de",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://berlingateway.de/de/"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- 4. Service Schema – Hauptdienstleistungen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Einwanderungs- und Rekrutierungsberatung für arabische Fachkräfte",
+    "description": "Berlin Gateway unterstützt arabischsprachige Fachkräfte aus Nordafrika und dem Nahen Osten bei der qualifizierten Einwanderung nach Deutschland: Anerkennung ausländischer Abschlüsse, Arbeitsvisum, Chancenkarte, Jobvermittlung.",
+    "provider": {
+      "@id": "https://berlingateway.de/#organization"
+    },
+    "serviceType": "Einwanderungsberatung",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Deutschland"
+    },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://berlingateway.de/de/",
+      "servicePhone": "+4915781497451",
+      "availableLanguage": ["Deutsch", "Arabisch"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Unsere Leistungen",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Anerkennung ausländischer Abschlüsse",
+            "url": "https://berlingateway.de/de/anerkennung"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Chancenkarte Beratung",
+            "url": "https://berlingateway.de/ar/chancenkarte"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Voraussetzungen für die Einwanderung",
+            "url": "https://berlingateway.de/de/voraussetzungen"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Orientierung in Deutschland",
+            "url": "https://berlingateway.de/de/orientierung"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
 <div class="top-band">
   <div class="top-band__inner">
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
-    <div style="display:flex;gap:12px;align-items:center">
+    <div class="lang-switch">
       <a href="/ar/" class="lang-badge">العربية</a>
-      <span style="opacity:.5">Experten vor Ort in Berlin</span>
+      <span style="opacity:0.5">Experten vor Ort</span>
     </div>
   </div>
 </div>
 
 <header class="header">
   <div class="header__inner">
-    <a href="/de" class="brand">Berlin <span>Gateway</span></a>
+    <a href="/de/" class="brand">BERLIN<span>GATEWAY</span></a>
     <nav class="nav">
-      <a href="/de/success-stories">Erfolgsgeschichten</a>
       <a href="/de/chancenkarte">Chancenkarte</a>
-      <a href="/de/assessment">Assessment</a>
       <a href="/de/aerzte">Ärzte</a>
-      <a href="/de/pflege">Pflege</a>
+      <a href="/de/pflegekraefte">Pflege</a>
+      <a href="/de/assessment">Assessment</a>
+      <a href="/de/monitor">Monitor</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="inner" style="position:relative;z-index:1">
-    <p class="kicker">Ihr Weg nach Deutschland</p>
-    <h1>Ihr institutioneller Partner für die Migration nach Deutschland.</h1>
-    <p class="sub">Wir bieten umfassende Unterstützung für Fachkräfte, Ärzte und Pflegepersonal. Von der Anerkennung bis zur Integration.</p>
-    <a href="/de/assessment" class="cta-btn">Kostenloses Assessment starten ←</a>
+  <div class="hero-inner">
+    <span class="kicker">Berlin Gateway — Wir sind im System</span>
+    <h1>Wir bringen Sie nicht nur nach Deutschland. Wir sichern Ihren <em style="color:var(--accent); font-style:normal;">Erfolg.</em></h1>
+    <p>Als Experten vor Ort in Deutschland arbeiten wir direkt in Kliniken, Institutionen und Unternehmen. Wir kennen die Realität hinter den Formularen.</p>
+    <div class="cta-group">
+      <a href="/de/assessment" class="cta-primary">Assessment starten</a>
+      <a href="/de/chancenkarte" class="cta-secondary">Chancenkarte prüfen</a>
+    </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
     <div class="trust-item">INSIDER-WISSEN</div>
@@ -386,41 +362,37 @@
   </div>
 </div>
 
-<!-- PATHS -->
 <section class="section">
-  <div class="inner">
-    <p class="section-label">Unsere Pfade</p>
-    <h2>Wählen Sie Ihren Weg nach Deutschland</h2>
-    <div class="path-grid">
-      <a href="/de/aerzte" class="path-card">
-        <h3>Ärzte & Medizin</h3>
-        <p>Approbation, Facharztweiterbildung und klinische Integration. Wir navigieren Sie durch die Kammern.</p>
-        <span class="path-link">Pfad öffnen →</span>
-      </a>
-      <a href="/de/pflegekraefte" class="path-card">
-        <h3>Pflegekräfte</h3>
-        <p>Anerkennung, Sprachvalidierung und Direkteinstieg in Top-Kliniken. Wir kennen die besten Bundesländer.</p>
-        <span class="path-link">Pfad öffnen →</span>
-      </a>
-      <a href="/de/studieren-in-deutschland" class="path-card">
-        <h3>Studium</h3>
-        <p>Weltklasse-Bildung an staatlichen Universitäten. Zulassung, Visum und Karriereplanung.</p>
-        <span class="path-link">Pfad öffnen →</span>
-      </a>
-      <a href="/de/chancenkarte" class="path-card">
-        <h3>Chancenkarte</h3>
-        <p>Das neue Punktesystem für Arbeitssuchende. Wir prüfen Ihre Kompatibilität zum System.</p>
-        <span class="path-link">Pfad öffnen →</span>
-      </a>
-    </div>
+  <span class="section-label">Unsere Pfade</span>
+  <h2>Wählen Sie Ihren Weg nach Deutschland</h2>
+  <div class="path-grid">
+    <a href="/de/aerzte" class="path-card">
+      <h3>Ärzte & Medizin</h3>
+      <p>Approbation, Facharztweiterbildung und klinische Integration. Wir navigieren Sie durch die Kammern.</p>
+      <span class="path-link">Pfad öffnen →</span>
+    </a>
+    <a href="/de/pflegekraefte" class="path-card">
+      <h3>Pflegekräfte</h3>
+      <p>Anerkennung, Sprachvalidierung und Direkteinstieg in Top-Kliniken. Wir kennen die besten Bundesländer.</p>
+      <span class="path-link">Pfad öffnen →</span>
+    </a>
+    <a href="/de/studieren-in-deutschland" class="path-card">
+      <h3>Studium</h3>
+      <p>Weltklasse-Bildung an staatlichen Universitäten. Zulassung, Visum und Karriereplanung.</p>
+      <span class="path-link">Pfad öffnen →</span>
+    </a>
+    <a href="/de/chancenkarte" class="path-card">
+      <h3>Chancenkarte</h3>
+      <p>Das neue Punktesystem für Arbeitssuchende. Wir prüfen Ihre Kompatibilität zum System.</p>
+      <span class="path-link">Pfad öffnen →</span>
+    </a>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="features">
   <div class="features-inner">
-    <p class="section-label">Warum Berlin Gateway?</p>
-    <h2>Wir sind im System – nicht außerhalb</h2>
+    <span class="section-label">Warum Berlin Gateway?</span>
+    <h2 style="margin-bottom: 60px;">Wir sind im System – nicht außerhalb</h2>
     <div class="feature-grid">
       <div class="feature-item">
         <h4>Innerhalb der Kliniken</h4>
@@ -438,24 +410,21 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section">
-  <div class="inner">
-    <p class="section-label">Häufige Fragen</p>
-    <h2>FAQ</h2>
-    <div style="max-width: 800px;">
-      <div style="margin-bottom: 32px;">
-        <h4 style="margin-bottom: 8px;">Was unterscheidet Berlin Gateway von Agenturen?</h4>
-        <p style="color:var(--ink-mid); font-size: 15px;">Agenturen wollen oft nur "verkaufen". Wir sind ein institutionelles Gateway. Unser Ziel ist die langfristige, erfolgreiche Integration in das deutsche System.</p>
-      </div>
-      <div style="margin-bottom: 32px;">
-        <h4 style="margin-bottom: 8px;">Ist die Bewertung kostenlos?</h4>
-        <p style="color:var(--ink-mid); font-size: 15px;">Das initiale Assessment ist kostenlos. Wir prüfen Ihr Profil auf Systemkompatibilität und geben Ihnen eine erste strategische Einschätzung.</p>
-      </div>
-      <div style="margin-bottom: 32px;">
-        <h4 style="margin-bottom: 8px;">Arbeiten Sie deutschlandweit?</h4>
-        <p style="color:var(--ink-mid); font-size: 15px;">Ja. Wir haben Expertise in allen 16 Bundesländern, wobei wir Schwerpunkte in Regionen mit besonders hoher Nachfrage und effizienten Behörden setzen.</p>
-      </div>
+  <span class="section-label">Häufige Fragen</span>
+  <h2>FAQ</h2>
+  <div style="max-width: 800px;">
+    <div style="margin-bottom: 32px;">
+      <h4 style="margin-bottom: 8px;">Was unterscheidet Berlin Gateway von Agenturen?</h4>
+      <p style="color:var(--text-light); font-size: 15px;">Agenturen wollen oft nur "verkaufen". Wir sind ein institutionelles Gateway. Unser Ziel ist die langfristige, erfolgreiche Integration in das deutsche System.</p>
+    </div>
+    <div style="margin-bottom: 32px;">
+      <h4 style="margin-bottom: 8px;">Ist die Bewertung kostenlos?</h4>
+      <p style="color:var(--text-light); font-size: 15px;">Das initiale Assessment ist kostenlos. Wir prüfen Ihr Profil auf Systemkompatibilität und geben Ihnen eine erste strategische Einschätzung.</p>
+    </div>
+    <div style="margin-bottom: 32px;">
+      <h4 style="margin-bottom: 8px;">Arbeiten Sie deutschlandweit?</h4>
+      <p style="color:var(--text-light); font-size: 15px;">Ja. Wir haben Expertise in allen 16 Bundesländern, wobei wir Schwerpunkte in Regionen mit besonders hoher Nachfrage und effizienten Behörden setzen.</p>
     </div>
   </div>
 </section>
@@ -490,5 +459,6 @@
     <p>Handmade in Berlin.</p>
   </div>
 </footer>
+
 </body>
 </html>

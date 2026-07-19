@@ -1,182 +1,268 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berlin Gateway — Insights</title>
-    <link rel="canonical" href="https://berlingateway.de/templates/master_de_generic">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institutionelle Insights & Analysen – Berlin Gateway</title>
+  <meta name="description" content="Analytische Einordnung und institutionelle Interpretation des deutschen Migrations- und Arbeitsmarktsystems für Fachkräfte. Strategische Orientierung direkt aus Berlin.">
+  <link rel="canonical" href="https://berlingateway.de/de/insights">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/insights">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/insights">
+  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/insights">
+  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/en/insights">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
+    .nav a:hover{color:#0B3B8C}
+    .hero{background:#0B1F3A;padding:80px 24px;text-align:center}
+    .hero .kicker{display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px}
+    .hero h1{color:#FFFFFF;font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.2;max-width:760px;margin:0 auto 20px}
+    .hero .lead{color:rgba(255,255,255,0.7);font-size:17px;max-width:620px;margin:0 auto;line-height:1.7;font-weight:300}
+    .inner{max-width:900px;margin:0 auto}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section--dark{background:#0B1F3A}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section-label--light{color:#93C5FD}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
+    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+    .card-grid--2{grid-template-columns:repeat(2,1fr)}
+    .card-grid--4{grid-template-columns:repeat(4,1fr)}
+    .card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
+    .card h3, .card h4{font-size:16px;font-weight:700;color:#0D1117;margin-bottom:10px}
+    .card p{font-size:14px;color:#6B7280;line-height:1.65}
+    .card--link{text-align:center;transition:border-color 0.15s;text-decoration:none;display:block}
+    .card--link:hover{border-color:#0B3B8C}
+    .card--link p{color:#6B7280;opacity:0.8}
+    .numbered-list{display:grid;gap:20px;margin-top:24px}
+    .numbered-item{display:flex;gap:16px;align-items:flex-start}
+    .numbered-item .num{color:#0B3B8C;font-weight:800;font-size:15px;flex-shrink:0}
+    .numbered-item h4{font-size:16px;font-weight:700;margin-bottom:4px;color:#0D1117}
+    .numbered-item p{font-size:14px;color:#6B7280;line-height:1.6}
+    .quote-card{background:#FFFFFF;border-left:4px solid #0B3B8C;border-radius:10px;padding:32px}
+    .quote-card p{font-size:17px;font-style:italic;color:#0D1117;line-height:1.7;margin-bottom:16px}
+    .quote-card cite{font-size:14px;font-weight:700;font-style:normal;color:#374151}
+    .faq-list{list-style:none;padding:0;margin:0}
+    .faq-item{border-bottom:1px solid #E5E7EB;padding:24px 0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-item h4{font-size:15px;font-weight:600;color:#0D1117;margin-bottom:10px}
+    .faq-item p{font-size:14px;color:#6B7280;line-height:1.65}
+    .cta-block{background:#0B1F3A;border-radius:12px;padding:48px 40px;text-align:center}
+    .cta-block h2{color:#FFFFFF;font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:16px;line-height:1.3}
+    .cta-block p{color:rgba(255,255,255,0.65);font-size:16px;margin-bottom:32px;line-height:1.7;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-btn{display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;margin:0 6px}
+    .cta-btn--outline{background:transparent;color:#FFFFFF;border:1.5px solid rgba(255,255,255,0.4)}
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    @media(max-width:768px){
+      .nav a:not(.nav-cta){display:none}
+      .card-grid, .card-grid--2, .card-grid--4{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/insights/" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Insights</span>
-        </div>
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/ar/insights" class="lang-badge">العربية</a>
+      <span style="opacity:.5">Governance: Institutional Analysis Layer</span>
     </div>
+  </div>
 </div>
 
-<!-- BAND 2: MAIN HEADER (WHITE) -->
 <header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/chancenkarte/">Chancenkarte</a>
-            <a href="/de/systemlogik/">Systemlogik</a>
-            <a href="/de/monitor/">Monitor</a>
-            <a href="/de/insights/">Insights</a></nav>
-    </div>
+  <div class="header__inner">
+    <a href="/de/" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflegekraefte">Pflegekräfte</a>
+      <a href="/de/voraussetzungen">Voraussetzungen</a>
+      <a href="/de/systemlogik">Systemlogik</a>
+      <a href="/de/monitor">Monitor</a>
+      <a href="/de/assessment">Assessment</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="inner">
+    <p class="kicker">Strategic Insights</p>
+    <h1>Ihre Situation. Unsere Realität.</h1>
+    <p class="lead">Analytische Einordnung individueller Fachkräfte-Szenarien in das deutsche Migrationssystem. Wir interpretieren die institutionellen Barrieren für Ihren Erfolg.</p>
+  </div>
+</section>
+
+<!-- ANALYTICAL CATEGORIES -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label">Szenarien-Analyse</p>
+    <h2>Typische institutionelle Hürden</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Qualifikations-Mismatch</h3>
+        <p>Exzellente Abschlüsse aus dem Ausland werden in Deutschland oft nicht unmittelbar anerkannt, da das duale System oder spezifische Approbationsordnungen fehlen.</p>
+      </div>
+      <div class="card">
+        <h3>Sprachliche Barrieren</h3>
+        <p>Gutes Englisch reicht im deutschen Mittelstand und im Gesundheitswesen selten aus. B2/C1 ist die operative Währung für echte Integration.</p>
+      </div>
+      <div class="card">
+        <h3>Fehlende Markterfahrung</h3>
+        <p>Absagen erfolgen oft nicht wegen mangelnder Kompetenz, sondern aufgrund fehlender Kenntnis der deutschen Arbeitskultur und Dokumentationsstandards.</p>
+      </div>
     </div>
-</nav>
+  </div>
+</section>
 
-<!-- BAND 4: CONTENT BODY (WHITE) -->
-<main>
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero-content">
-                    <h1>Insights & Analysen</h1>
-                    <p class="sub">Tiefgehende Einblicke in den deutschen Arbeitsmarkt.</p>
-                    <div class="badges">
-                        <span class="badge">Analyse</span>
-                        <span class="badge">Strategie</span>
-                    </div>
-                </div>
+<!-- INTERPRETATION -->
+<section class="section section--alt">
+  <div class="inner">
+    <div class="card-grid card-grid--2" style="align-items:center">
+      <div>
+        <p class="section-label">Interpretation</p>
+        <h2>Warum Fachkräfte scheitern</h2>
+        <p class="lead" style="margin-bottom:0">Erfolg in Deutschland ist kein Zufall, sondern das Ergebnis einer präzisen institutionellen Vorbereitung. Die meisten Ablehnungen resultieren aus unvollständigen Unterlagen, falscher Pfad-Allokation oder einer Unterschätzung der regionalen Unterschiede.</p>
+        <div class="numbered-list">
+          <div class="numbered-item">
+            <span class="num">01</span>
+            <div>
+              <h4>Dokumenten-Integrität</h4>
+              <p>Formale Fehler in der Übersetzung oder Beglaubigung führen zu monatelangen Verzögerungen.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- AUTHORITY STATEMENT -->
-    <section class="section">
-        <div class="container">
-            <h2>Fundierte Informationen für Ihre Karriere</h2>
-            <p>Unsere Insights bieten Ihnen detaillierte Analysen und strategische Empfehlungen, um Ihre berufliche Zukunft in Deutschland erfolgreich zu gestalten.</p>
-        </div>
-    </section>
-
-    <!-- WHO THIS IS FOR (FILTER) -->
-    <section class="section">
-        <div class="container">
-            <h2>Für wen sind unsere Insights?</h2>
-            <ul>
-                <li>Fachkräfte, die den deutschen Arbeitsmarkt verstehen wollen</li>
-                <li>Akademiker, die ihre Qualifikationen optimal einsetzen möchten</li>
-                <li>Unternehmen, die internationale Talente suchen</li>
-            </ul>
-            <p>Wir beleuchten verschiedene Branchen, Berufe und Regionen.</p>
-        </div>
-    </section>
-
-    <!-- INSIGHTS GRID -->
-    <section class="section">
-        <div class="container">
-            <h2>Aktuelle Artikel</h2>
-            <div class="insights-grid">
-                <a href="/de/insights/chancenkarte-aus-dem-golf/" class="insight-card">
-                    <h3>Chancenkarte aus dem Golf</h3>
-                    <p>Wie Fachkräfte aus den Golfstaaten die Chancenkarte nutzen können.</p>
-                    <span class="date">15. Juni 2026</span>
-                </a>
-                <a href="/de/insights/gehalt-softwareentwickler-deutschland/" class="insight-card">
-                    <h3>Gehalt Softwareentwickler</h3>
-                    <p>Was Softwareentwickler in Deutschland verdienen können.</p>
-                    <span class="date">10. Juni 2026</span>
-                </a>
-                <a href="/de/insights/gehalt-arzt-deutschland/" class="insight-card">
-                    <h3>Gehalt Arzt Deutschland</h3>
-                    <p>Verdienstmöglichkeiten für Ärzte in deutschen Krankenhäusern.</p>
-                    <span class="date">5. Juni 2026</span>
-                </a>
-                <a href="/de/insights/gehalt-krankenpfleger-deutschland/" class="insight-card">
-                    <h3>Gehalt Krankenpfleger</h3>
-                    <p>Einblicke in die Gehälter von Pflegekräften in Deutschland.</p>
-                    <span class="date">1. Juni 2026</span>
-                </a>
+          </div>
+          <div class="numbered-item">
+            <span class="num">02</span>
+            <div>
+              <h4>Strategische Pfadwahl</h4>
+              <p>Die Wahl zwischen Chancenkarte und direktem Arbeitsvisum entscheidet über die Markteinstiegsgeschwindigkeit.</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="quote-card">
+        <p>„Wir sehen täglich hochqualifizierte Profile, die an der deutschen Systemkomplexität scheitern. Unsere Aufgabe ist die Reduktion dieser Komplexität durch strukturierte Analyse."</p>
+        <cite>— Berlin Gateway Institutional Advisory</cite>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- MICRO-TRUST -->
-    <section class="section micro-trust">
-        <div class="container">
-            <ul>
-                <li>Fundierte Analysen</li>
-                <li>Praxisnahe Empfehlungen</li>
-                <li>Regelmäßige Updates</li>
-            </ul>
-        </div>
-    </section>
+<!-- STRATEGIC ORIENTATION -->
+<section class="section">
+  <div class="inner">
+    <p class="section-label" style="text-align:center">Verknüpfung</p>
+    <h2 style="text-align:center">Vom Insight zur Aktion</h2>
+    <div class="card-grid card-grid--4">
+      <a href="/de/assessment" class="card card--link">
+        <h4>Assessment</h4>
+        <p>Profil-Validierung</p>
+      </a>
+      <a href="/de/voraussetzungen" class="card card--link">
+        <h4>Voraussetzungen</h4>
+        <p>System-Kriterien</p>
+      </a>
+      <a href="/de/systemlogik" class="card card--link">
+        <h4>Systemlogik</h4>
+        <p>Prozess-Rahmen</p>
+      </a>
+      <a href="/de/monitor" class="card card--link">
+        <h4>Monitor</h4>
+        <p>Markt-Daten</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- FINAL STATEMENT -->
-    <section class="section final-statement">
-        <div class="container">
-            <p>Nutzen Sie unser Wissen für Ihren Erfolg in Deutschland.</p>
-        </div>
-    </section>
+<!-- REALITY LAYER -->
+<section class="section section--dark">
+  <div class="inner">
+    <p class="section-label section-label--light">Institutional Realism</p>
+    <h2 style="color:#FFFFFF">Keine Garantien, nur Struktur.</h2>
+    <p class="lead" style="color:rgba(255,255,255,0.7)">Wir versprechen keinen Job. Wir versprechen eine institutionelle Einordnung Ihres Profils in das deutsche System. Wer die Regeln des deutschen Arbeitsmarktes versteht, minimiert sein Risiko und maximiert seine Erfolgsquote.</p>
+  </div>
+</section>
 
-</main>
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="inner">
+    <p class="section-label">FAQ</p>
+    <h2>Häufige Szenarien</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <h4>Was tun bei fehlender Anerkennung?</h4>
+        <p>In vielen Fällen kann die Chancenkarte als Brücke dienen, um vor Ort Qualifizierungsmaßnahmen oder Anpassungslehrgänge zu absolvieren.</p>
+      </li>
+      <li class="faq-item">
+        <h4>Warum ist B1/B2 so kritisch?</h4>
+        <p>Die meisten deutschen Arbeitgeber im Mittelstand operieren auf Deutsch. Ohne Sprachzertifikat wird Ihr Profil oft aussortiert, bevor Ihre fachliche Kompetenz geprüft wird.</p>
+      </li>
+      <li class="faq-item">
+        <h4>Wie lange dauert die Vorbereitung?</h4>
+        <p>Eine solide institutionelle Vorbereitung dauert in der Regel 3 bis 9 Monate, abhängig von Sprachniveau und Anerkennungsstatus.</p>
+      </li>
+    </ul>
+  </div>
+</section>
 
-<!-- FOOTER (BLACK) -->
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="inner" style="max-width:720px">
+    <div class="cta-block">
+      <p class="section-label section-label--light">Nächster Schritt</p>
+      <h2>Ihre Situation bewerten lassen</h2>
+      <p>Beginnen Sie mit einer strukturierten Analyse Ihres Profils.</p>
+      <a href="/de/assessment" class="cta-btn">Bewertung starten</a>
+      <a href="https://wa.me/493025730875" class="cta-btn cta-btn--outline">Per WhatsApp kontaktieren</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNAL LINKS -->
+<section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
+  <div style="max-width:900px;margin:0 auto;">
+    <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">Auch interessant</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+      <a href="/de/chancenkarte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Chancenkarte</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">Profil professionell prüfen</p>
+      </a>
+      <a href="/de/aerzte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Ärzte</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;">Weg für Mediziner</p>
+      </a>
+      <a href="/de/pflegekraefte" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">Pflege</p>
+        <p style="font-size:14px;color:#FFFFFF;font-weight:600;">Weg für Pflegekräfte</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/chancenkarte/">Chancenkarte</a>
-                <a href="/de/assessment/">Assessment</a>
-                <a href="/de/systemlogik/">Systemlogik</a>
-                <a href="/de/insights/">Insights</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum/">Impressum</a>
-                <a href="/de/datenschutz/">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 30 25730875</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
+  <p>Berlin Gateway — Experten vor Ort in Deutschland</p>
+  <p style="margin-top:8px;">
+    <a href="/de/impressum">Impressum</a>
+    <a href="/de/datenschutz">Datenschutz</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
 </footer>
-
-<script>
-// Form submission logic will be handled here or via a separate JS file
-document.getElementById("assessment-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Implement form submission logic (e.g., AJAX to backend endpoint)
-    alert("Formular erfolgreich eingereicht! (Dies ist eine Testnachricht)");
-});
-</script>
 
 </body>
 </html>

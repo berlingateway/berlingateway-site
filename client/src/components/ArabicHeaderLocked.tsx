@@ -8,25 +8,30 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
 
+// Entries served by the React SPA router (wouter <Link>)
 const MEDICAL_CONDITIONS = [
   { label: "الأعصاب والجهاز العصبي", href: "/ar/neurology-treatment-germany" },
   { label: "تنميل اليدين والقدمين", href: "/ar/numbness-hands-feet-germany" },
-  { label: "ألم الرقبة مع دوخة", href: "/ar/neck-pain-dizziness-germany" },
   { label: "العمود الفقري والانزلاق الغضروفي", href: "/ar/herniated-disc" },
   { label: "أورام المخ", href: "/ar/brain-tumor-treatment-germany" },
   { label: "القلب والأوعية الدموية", href: "/ar/cardiology-treatment-germany" },
   { label: "العظام والمفاصل", href: "/ar/orthopedics-germany" },
-  { label: "استبدال مفصل الركبة", href: "/ar/knee-replacement-germany" },
-  { label: "استبدال مفصل الورك", href: "/ar/hip-replacement-germany" },
-  { label: "جراحة الكتف", href: "/ar/shoulder-surgery-germany" },
   { label: "إعادة التأهيل المتقدم", href: "/ar/advanced-rehabilitation-germany" },
   { label: "ألم العصب الخامس", href: "/ar/trigeminal-neuralgia-treatment-germany" },
   { label: "سرطان البروستاتا", href: "/ar/prostate-cancer-treatment-germany" },
-  { label: "سرطان الكبد", href: "/ar/liver-cancer-treatment-germany" },
   { label: "سرطان الثدي", href: "/ar/breast-cancer-treatment-germany" },
   { label: "سرطان القولون", href: "/ar/colon-cancer-treatment-germany" },
   { label: "رأي ثانٍ قبل العملية", href: "/ar/surgery-second-opinion" },
   { label: "الحالات المعقدة", href: "/ar/complex-cases" },
+];
+
+// Entries backed by static HTML files — must use plain <a> for full-page navigation
+const STATIC_MEDICAL_CONDITIONS = [
+  { label: "ألم الرقبة مع دوخة", href: "/ar/neck-pain-dizziness-germany" },
+  { label: "استبدال مفصل الركبة", href: "/ar/knee-replacement-germany" },
+  { label: "استبدال مفصل الورك", href: "/ar/hip-replacement-germany" },
+  { label: "جراحة الكتف", href: "/ar/shoulder-surgery-germany" },
+  { label: "سرطان الكبد", href: "/ar/liver-cancer-treatment-germany" },
 ];
 
 const INTERNATIONAL_PATIENTS = [
@@ -152,6 +157,16 @@ export default function ArabicHeaderLocked() {
                       {item.label}
                     </Link>
                   ))}
+                  {STATIC_MEDICAL_CONDITIONS.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 border-b border-slate-100 last:border-0 text-right transition-colors"
+                      onClick={closeAll}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
                   <div className="px-4 py-2 bg-slate-50 border-b border-slate-100">
                     <span className="text-[10px] text-slate-400 uppercase tracking-widest font-medium">
                       المرضى الدوليون
@@ -254,6 +269,16 @@ export default function ArabicHeaderLocked() {
               >
                 {item.label}
               </Link>
+            ))}
+            {STATIC_MEDICAL_CONDITIONS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="block px-6 py-3 text-sm text-slate-700 hover:bg-slate-50 border-b border-slate-100 last:border-0 text-right transition-colors"
+                onClick={closeAll}
+              >
+                {item.label}
+              </a>
             ))}
 
             {/* Divider + International Patients section */}

@@ -141,6 +141,17 @@
       transition: background 0.2s;
     }
     .nav-wa:hover { background: var(--green-dark); }
+    .nav-logo-group { flex: 1; }
+    .nav-back {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: block;
+      margin-top: 4px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .nav-back:hover { opacity: 1; color: var(--gold); }
     .breadcrumb {
       padding: 10px 24px;
       font-size: 12px;
@@ -297,10 +308,13 @@
 
 <!-- NAV -->
 <nav>
-  <a href="https://medicalcaregermany.com/ar/" class="nav-logo">
-    ميديكال كير <span>جيرماني</span>
-    <span class="nav-sub">مرجعية طبية استراتيجية للمرضى الدوليين</span>
-  </a>
+  <div class="nav-logo-group">
+    <a href="https://medicalcaregermany.com/ar/" class="nav-logo">
+      ميديكال كير <span>جيرماني</span>
+      <span class="nav-sub">مرجعية طبية استراتيجية للمرضى الدوليين</span>
+    </a>
+    <a href="/ar/hip-replacement-germany/" class="nav-back">→ العودة لصفحة علاج مفصل الورك</a>
+  </div>
   <a href="https://wa.me/4915781497451?text=أريد+التحدث+مع+منسق+طبي+بخصوص+مفصل+الورك" class="nav-wa" target="_blank" rel="noopener">
     &#9899; التنسيق الطبي
   </a>

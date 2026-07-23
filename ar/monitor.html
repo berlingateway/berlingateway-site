@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <link rel="canonical" href="https://berlingateway.de/ar/systemlogik">
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/systemlogik">
-  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/systemlogik">
-  <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/systemlogik">
+  <link rel="canonical" href="https://berlingateway.de/ar/monitor">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منطق النظام الألماني — كيف يعمل فعلاً | Berlin Gateway</title>
-  <meta name="description" content="النظام الألماني للهجرة المهنية معقد — لكنه منطقي. افهم كيف يعمل قبل أن تبدأ أي خطوة.">
+  <title>مرصد سوق العمل الألماني — بيانات وفرص 2026 | Berlin Gateway</title>
+  <meta name="description" content="بيانات حقيقية عن سوق العمل الألماني — المهن الأكثر طلباً، الرواتب، والاتجاهات الحالية لعام 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -24,52 +21,47 @@
     .brand span{color:#0B3B8C}
     .nav a{color:#374151;text-decoration:none;font-size:14px;margin-right:24px;font-weight:500}
     .inner{max-width:780px;margin:0 auto}
+    .inner--wide{max-width:1080px;margin:0 auto;padding:0 24px}
     .section{padding:72px 24px}
     .section--alt{background:#F8F9FA}
     .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
     .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
     .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
 
-    /* VISA GRID */
-    .visa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-    .visa-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
-    .visa-card h4{font-size:15px;font-weight:700;margin-bottom:10px;color:#0B1F3A}
-    .visa-card p{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:12px}
-    .visa-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
-    .tag-blue{background:#EFF6FF;color:#1D4ED8}
+    /* STATS STRIP */
+    .stats-strip{background:#0B1F3A;padding:40px 24px}
+    .stats-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+    .stat-item h3{font-size:clamp(28px,4vw,42px);font-weight:700;color:#FFFFFF;margin-bottom:6px}
+    .stat-item h3 span{color:#93C5FD}
+    .stat-item p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5}
+
+    /* DEMAND TABLE */
+    .demand-table{width:100%;border-collapse:collapse;margin-top:24px;font-size:14px}
+    .demand-table th{background:#0B1F3A;color:#FFFFFF;padding:12px 16px;text-align:right;font-weight:600;font-size:13px}
+    .demand-table td{padding:14px 16px;border-bottom:1px solid #E5E7EB;color:#374151;vertical-align:middle}
+    .demand-table tr:last-child td{border-bottom:none}
+    .demand-table tr:hover td{background:#F8F9FA}
+    .demand-bar{height:8px;border-radius:4px;background:#E5E7EB;width:120px;display:inline-block;vertical-align:middle;position:relative}
+    .demand-bar__fill{height:100%;border-radius:4px;background:#0B3B8C;position:absolute;right:0;top:0}
+    .tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
     .tag-green{background:#DCFCE7;color:#15803D}
     .tag-amber{background:#FEF3C7;color:#92400E}
+    .tag-red{background:#FEE2E2;color:#B91C1C}
 
-    /* FLOW */
-    .flow-list{list-style:none;padding:0;margin:32px 0 0}
-    .flow-item{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E5E7EB;position:relative}
-    .flow-item:last-child{border-bottom:none}
-    .flow-num{width:32px;height:32px;background:#0B3B8C;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px}
-    .flow-content h4{font-size:15px;font-weight:600;margin-bottom:4px;color:#0D1117}
-    .flow-content p{font-size:14px;color:#6B7280;line-height:1.6}
+    /* REGION GRID */
+    .region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+    .region-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
+    .region-card h4{font-size:15px;font-weight:700;color:#0B1F3A;margin-bottom:8px}
+    .region-card p{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:10px}
+    .region-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .region-tag{font-size:11px;background:#EFF6FF;color:#1D4ED8;padding:3px 8px;border-radius:4px;font-weight:600}
 
-    /* BARRIER TABLE */
-    .barrier-list{margin-top:32px}
-    .barrier-item{display:flex;gap:16px;align-items:flex-start;padding:20px;border:1.5px solid #E5E7EB;border-radius:10px;margin-bottom:12px;background:#FFFFFF}
-    .barrier-icon{font-size:20px;flex-shrink:0;margin-top:2px}
-    .barrier-content h4{font-size:15px;font-weight:600;margin-bottom:4px;color:#0D1117}
-    .barrier-content p{font-size:13px;color:#6B7280;line-height:1.6}
-
-    /* INSIGHT BOX */
-    .insight-box{background:#0B1F3A;border-radius:12px;padding:32px;margin-top:32px;color:#FFFFFF}
-    .insight-box h4{font-size:17px;font-weight:700;margin-bottom:12px}
-    .insight-box p{font-size:15px;color:rgba(255,255,255,0.75);line-height:1.75;font-weight:300}
-
-    /* MYTH GRID */
-    .myth-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
-    .myth-card{border-radius:10px;padding:20px}
-    .myth-card--wrong{background:#FEF2F2;border:1.5px solid #FECACA}
-    .myth-card--right{background:#F0FDF4;border:1.5px solid #BBF7D0}
-    .myth-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:10px;display:block}
-    .myth-label--wrong{color:#B91C1C}
-    .myth-label--right{color:#15803D}
-    .myth-card h4{font-size:14px;font-weight:600;margin-bottom:6px;color:#0D1117}
-    .myth-card p{font-size:13px;color:#374151;line-height:1.6}
+    /* SALARY TABLE */
+    .salary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+    .salary-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:20px;background:#FFFFFF}
+    .salary-card h4{font-size:14px;font-weight:600;color:#374151;margin-bottom:8px}
+    .salary-card .salary-num{font-size:22px;font-weight:700;color:#0B1F3A;margin-bottom:4px}
+    .salary-card .salary-range{font-size:12px;color:#6B7280}
 
     /* CTA */
     .cta-block{background:#0B1F3A;border-radius:12px;padding:48px 40px;text-align:center}
@@ -81,45 +73,17 @@
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
 
-    @media(max-width:640px){
+    @media(max-width:768px){
       .nav{display:none}
-      .visa-grid{grid-template-columns:1fr}
-      .myth-grid{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .region-grid{grid-template-columns:1fr}
+      .salary-grid{grid-template-columns:1fr}
       .cta-block{padding:32px 24px}
     }
+    @media(max-width:480px){
+      .stats-grid{grid-template-columns:1fr 1fr}
+    }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "ما الفرق بين Chancenkarte و Fachkräfte-Visum في ألمانيا؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Chancenkarte تأشيرة مؤقتة لمدة 12 شهراً للبحث عن عمل داخل ألمانيا وتحتاج نقاطاً كافية. Fachkräfte-Visum تأشيرة عمل مباشر تحتاج عقد عمل واعتراف بالمؤهل ومستوى لغوي محدد وهي أسرع وأكثر استقراراً."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "لماذا يفشل كثيرون في الحصول على عمل في ألمانيا؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "معظم الفشل لا يكون بسبب المؤهلات بل بسبب: اختيار المسار الخطأ، ملف وثائق غير مكتمل، الفجوة اللغوية الحقيقية، واختيار الولاية الخطأ. ألمانيا لا ترفض الكفاءات بل ترفض الملفات الناقصة."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "هل كل المهن تحتاج Anerkennung في ألمانيا؟",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "لا، ليس كل المهن تحتاج اعترافاً. IT والهندسة أحياناً لا تحتاجه. الطب والتمريض والصيدلة تحتاجه دائماً. معرفة الفرق توفر سنة كاملة من الوقت."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -127,8 +91,8 @@
   <div class="top-band__inner">
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
-      <a href="/de/systemlogik" class="lang-badge">Deutsch</a>
-      <span style="opacity:.5">مقيمون في ألمانيا</span>
+      <a href="/de/monitor" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5">بيانات 2026</span>
     </div>
   </div>
 </div>
@@ -148,168 +112,210 @@
 <!-- HERO -->
 <section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
   <div class="inner">
-    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">منطق النظام — Systemlogik</p>
-    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">النظام الألماني معقد.<br>لكنه <em style="font-style:normal;color:#93C5FD;">منطقي تماماً — إذا فهمته.</em></h1>
-    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:540px;margin:0 auto;line-height:1.7;font-weight:300;">معظم من يفشلون في ألمانيا لم يفشلوا بسبب مؤهلاتهم — بل لأنهم لم يفهموا كيف يعمل النظام قبل البداية.</p>
+    <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">مرصد سوق العمل — Monitor 2026</p>
+    <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">سوق العمل الألماني —<br><em style="font-style:normal;color:#93C5FD;">بيانات حقيقية، ليس إعلانات.</em></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:520px;margin:0 auto;line-height:1.7;font-weight:300;">أرقام موثقة عن الطلب الفعلي على الكفاءات الأجنبية في ألمانيا — لتعرف أين تقف ملفك تحديداً.</p>
   </div>
 </section>
 
-<!-- VISA TYPES -->
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <h3>+<span>570,000</span></h3>
+      <p>وظيفة شاغرة في المهن المتخصصة — 2026</p>
+    </div>
+    <div class="stat-item">
+      <h3><span>73%</span></h3>
+      <p>من الشركات الألمانية تعاني نقص الكفاءات</p>
+    </div>
+    <div class="stat-item">
+      <h3>+<span>200,000</span></h3>
+      <p>ممرض وممرضة مطلوبون بشكل عاجل</p>
+    </div>
+    <div class="stat-item">
+      <h3><span>3,200€</span></h3>
+      <p>متوسط الراتب الشهري الصافي للكفاءات الأجنبية</p>
+    </div>
+  </div>
+</div>
+
+<!-- DEMAND TABLE -->
 <section class="section">
   <div class="inner">
-    <p class="section-label">مسارات الدخول</p>
-    <h2>ثلاثة مسارات — وليس مساراً واحداً</h2>
-    <p class="lead">ألمانيا لا تملك "تأشيرة عمل" واحدة. كل مسار له شروطه ومتطلباته — واختيار المسار الخطأ يضيع أشهراً.</p>
-    <div class="visa-grid">
-      <div class="visa-card">
-        <span class="visa-tag tag-blue" style="margin-bottom:12px;display:inline-block;">للباحثين عن عمل</span>
-        <h4>Chancenkarte</h4>
-        <p>تأشيرة مؤقتة (12 شهراً) للبحث عن عمل داخل ألمانيا. تحتاج نقاطاً كافية من: الخبرة، اللغة، العمر، الروابط بألمانيا.</p>
-        <span class="visa-tag tag-blue">نقاط + مؤهل معترف</span>
-      </div>
-      <div class="visa-card">
-        <span class="visa-tag tag-green" style="margin-bottom:12px;display:inline-block;">للمتخصصين</span>
-        <h4>Fachkräfte-Visum</h4>
-        <p>تأشيرة عمل مباشر. تحتاج عقد عمل + اعتراف بالمؤهل + مستوى لغوي محدد. أسرع وأكثر استقراراً من Chancenkarte.</p>
-        <span class="visa-tag tag-green">عقد + اعتراف + لغة</span>
-      </div>
-      <div class="visa-card">
-        <span class="visa-tag tag-amber" style="margin-bottom:12px;display:inline-block;">للمهن المنظمة</span>
-        <h4>Berufsanerkennung</h4>
-        <p>للمهن المنظمة كالطب والتمريض والهندسة. الاعتراف بالمؤهل شرط مسبق قبل أي تأشيرة. العملية طويلة لكن ضرورية.</p>
-        <span class="visa-tag tag-amber">اعتراف قبل كل شيء</span>
-      </div>
-    </div>
+    <p class="section-label">الطلب حسب المجال</p>
+    <h2>المهن الأكثر طلباً على الكفاءات الدولية</h2>
+    <p class="lead">هذه البيانات مبنية على إحصاءات Bundesagentur für Arbeit وتقارير سوق العمل الألماني لعام 2026.</p>
+    <table class="demand-table">
+      <thead>
+        <tr>
+          <th>المجال</th>
+          <th>مستوى الطلب</th>
+          <th>نوع المهنة</th>
+          <th>متطلب اللغة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>تمريض ورعاية</strong></td>
+          <td><span class="tag tag-red">عاجل جداً</span></td>
+          <td>منظمة</td>
+          <td>C1 متخصص</td>
+        </tr>
+        <tr>
+          <td><strong>طب وصحة</strong></td>
+          <td><span class="tag tag-red">عاجل جداً</span></td>
+          <td>منظمة</td>
+          <td>C1 طبي</td>
+        </tr>
+        <tr>
+          <td><strong>تكنولوجيا المعلومات</strong></td>
+          <td><span class="tag tag-green">مرتفع جداً</span></td>
+          <td>غير منظمة</td>
+          <td>B2</td>
+        </tr>
+        <tr>
+          <td><strong>هندسة ميكانيكية وكهربائية</strong></td>
+          <td><span class="tag tag-green">مرتفع جداً</span></td>
+          <td>منظمة جزئياً</td>
+          <td>B2–C1</td>
+        </tr>
+        <tr>
+          <td><strong>حرف وصناعة</strong></td>
+          <td><span class="tag tag-green">مرتفع</span></td>
+          <td>منظمة جزئياً</td>
+          <td>B1–B2</td>
+        </tr>
+        <tr>
+          <td><strong>تعليم وتدريب</strong></td>
+          <td><span class="tag tag-amber">متوسط–مرتفع</span></td>
+          <td>منظمة</td>
+          <td>C1</td>
+        </tr>
+        <tr>
+          <td><strong>اقتصاد وإدارة</strong></td>
+          <td><span class="tag tag-amber">متوسط</span></td>
+          <td>غير منظمة</td>
+          <td>B2–C1</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- REGIONS -->
 <section class="section section--alt">
   <div class="inner">
-    <p class="section-label">كيف يعمل النظام</p>
-    <h2>الترتيب الصحيح — خطوة بخطوة</h2>
-    <p class="lead">النظام الألماني يعمل بتسلسل منطقي. من يتجاوز خطوة يعود إليها لاحقاً — بتكلفة أعلى ووقت أطول.</p>
-    <ul class="flow-list">
-      <li class="flow-item">
-        <div class="flow-num">1</div>
-        <div class="flow-content">
-          <h4>تحديد المسار المناسب لملفك</h4>
-          <p>Chancenkarte أم Fachkräfte-Visum أم Berufsanerkennung؟ الإجابة تعتمد على مؤهلك وخبرتك ومجالك وهدفك الزمني. هذه الخطوة وحدها توفر أشهراً.</p>
+    <p class="section-label">التوزيع الجغرافي</p>
+    <h2>أين يتركز الطلب في ألمانيا؟</h2>
+    <p class="lead">الطلب ليس موزعاً بالتساوي — بعض المناطق تعاني نقصاً حاداً في مهن محددة.</p>
+    <div class="region-grid">
+      <div class="region-card">
+        <h4>🏙️ برلين وبراندنبورغ</h4>
+        <p>مركز تقني وصحي. طلب مرتفع في IT والتمريض والطب.</p>
+        <div class="region-tags">
+          <span class="region-tag">IT</span>
+          <span class="region-tag">تمريض</span>
+          <span class="region-tag">طب</span>
+          <span class="region-tag">Startups</span>
         </div>
-      </li>
-      <li class="flow-item">
-        <div class="flow-num">2</div>
-        <div class="flow-content">
-          <h4>الاعتراف بالمؤهل — إذا كان مطلوباً</h4>
-          <p>ليس كل المهن تحتاج اعترافاً. IT والهندسة أحياناً لا تحتاجه. الطب والتمريض والصيدلة تحتاجه دائماً. معرفة الفرق توفر سنة كاملة.</p>
+      </div>
+      <div class="region-card">
+        <h4>🏭 بافاريا وبادن-فورتمبيرغ</h4>
+        <p>قلب الصناعة الألمانية. طلب مرتفع في الهندسة والتقنية.</p>
+        <div class="region-tags">
+          <span class="region-tag">هندسة</span>
+          <span class="region-tag">سيارات</span>
+          <span class="region-tag">تقنية</span>
         </div>
-      </li>
-      <li class="flow-item">
-        <div class="flow-num">3</div>
-        <div class="flow-content">
-          <h4>اللغة — المستوى الحقيقي المطلوب</h4>
-          <p>ليس B2 دائماً. وليس C1 دائماً. كل مجال له متطلب لغوي مختلف. والفرق بين C1 عام وC1 متخصص كبير جداً في بعض المهن.</p>
+      </div>
+      <div class="region-card">
+        <h4>🌊 شمال الراين–وستفاليا</h4>
+        <p>أكبر ولاية سكانياً. طلب واسع في التمريض والحرف والإدارة.</p>
+        <div class="region-tags">
+          <span class="region-tag">تمريض</span>
+          <span class="region-tag">حرف</span>
+          <span class="region-tag">لوجستيك</span>
         </div>
-      </li>
-      <li class="flow-item">
-        <div class="flow-num">4</div>
-        <div class="flow-content">
-          <h4>ملف الوثائق — الأكثر إرهاقاً</h4>
-          <p>القائمة طويلة: شهادات مترجمة، خبرات موثقة، سيرة ذاتية بالمعيار الألماني، عقود سابقة، وأحياناً توثيق نوتاري. كل وثيقة ناقصة تأخير.</p>
+      </div>
+      <div class="region-card">
+        <h4>🏙️ هامبورغ وبريمن</h4>
+        <p>موانئ وتجارة. طلب في اللوجستيك والIT والهندسة البحرية.</p>
+        <div class="region-tags">
+          <span class="region-tag">لوجستيك</span>
+          <span class="region-tag">IT</span>
+          <span class="region-tag">هندسة</span>
         </div>
-      </li>
-      <li class="flow-item">
-        <div class="flow-num">5</div>
-        <div class="flow-content">
-          <h4>التأشيرة — الخطوة الأخيرة فقط</h4>
-          <p>كثيرون يبدؤون من هنا — وهذا الخطأ الأكبر. التأشيرة نتيجة لعملية صحيحة، ليست البداية. من يجهز ملفه جيداً ينتظر أسابيع — لا أشهر.</p>
+      </div>
+      <div class="region-card">
+        <h4>🌲 ساكسونيا وتورينغيا</h4>
+        <p>مناطق نامية. طلب في الحرف والرعاية الصحية بتنافسية عالية.</p>
+        <div class="region-tags">
+          <span class="region-tag">حرف</span>
+          <span class="region-tag">رعاية</span>
+          <span class="region-tag">تصنيع</span>
         </div>
-      </li>
-    </ul>
-
-    <div class="insight-box">
-      <h4>الفهم الحقيقي للنظام</h4>
-      <p>ألمانيا لا ترفض الكفاءات الأجنبية — بل ترفض الملفات الناقصة والمسارات الخاطئة. النظام مصمم لمن يفهمه ويحضّر له بشكل صحيح.</p>
+      </div>
+      <div class="region-card">
+        <h4>🌾 المناطق الريفية</h4>
+        <p>نقص حاد في الأطباء العامين والتمريض. فرص أسرع للوصول.</p>
+        <div class="region-tags">
+          <span class="region-tag">طب عام</span>
+          <span class="region-tag">تمريض</span>
+          <span class="region-tag">صيدلة</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BARRIERS -->
+<!-- SALARIES -->
 <section class="section">
   <div class="inner">
-    <p class="section-label">عوائق النظام</p>
-    <h2>أين يتعثر معظم الناس؟</h2>
-    <p class="lead">هذه ليست مشاكل استثنائية — هي الأسباب الأكثر شيوعاً للتأخير أو الرفض.</p>
-    <div class="barrier-list">
-      <div class="barrier-item">
-        <div class="barrier-icon">⚖️</div>
-        <div class="barrier-content">
-          <h4>اختلاف أنظمة التعليم</h4>
-          <p>ما يُعتبر "بكالوريوس" في بلدك قد يُصنَّف بشكل مختلف في ألمانيا. المدة والمحتوى والمؤسسة — كلها تؤثر على قرار الاعتراف.</p>
-        </div>
+    <p class="section-label">الرواتب</p>
+    <h2>متوسط الرواتب الشهرية الصافية — 2026</h2>
+    <p class="lead">هذه أرقام صافية (بعد الضرائب والتأمين) للسنوات الأولى من العمل في ألمانيا.</p>
+    <div class="salary-grid">
+      <div class="salary-card">
+        <h4>طبيب متخصص</h4>
+        <div class="salary-num">4,800 – 6,500€</div>
+        <div class="salary-range">صافي شهرياً · بعد التخصص</div>
       </div>
-      <div class="barrier-item">
-        <div class="barrier-icon">🗣️</div>
-        <div class="barrier-content">
-          <h4>الفجوة اللغوية الحقيقية</h4>
-          <p>كثيرون يصلون بمستوى لغوي يكفي للتواصل اليومي — لكنه لا يكفي لبيئة العمل المتخصصة. الفجوة تظهر في المقابلات والعمل الفعلي.</p>
-        </div>
+      <div class="salary-card">
+        <h4>طبيب عام / مقيم</h4>
+        <div class="salary-num">3,200 – 4,500€</div>
+        <div class="salary-range">صافي شهرياً · السنوات الأولى</div>
       </div>
-      <div class="barrier-item">
-        <div class="barrier-icon">📋</div>
-        <div class="barrier-content">
-          <h4>ملف وثائق غير مكتمل</h4>
-          <p>الجهات الألمانية لا تطلب وثائق إضافية — تطلب كل شيء من البداية. ملف ناقص = توقف كامل حتى يكتمل.</p>
-        </div>
+      <div class="salary-card">
+        <h4>ممرض / ممرضة</h4>
+        <div class="salary-num">2,200 – 3,000€</div>
+        <div class="salary-range">صافي شهرياً · حسب الخبرة والولاية</div>
       </div>
-      <div class="barrier-item">
-        <div class="barrier-icon">🗺️</div>
-        <div class="barrier-content">
-          <h4>اختيار الولاية الخطأ</h4>
-          <p>ألمانيا 16 ولاية — وكل ولاية لها آليات معالجة مختلفة. بعضها يعالج ملفات التمريض في 3 أشهر، وبعضها يأخذ 14 شهراً.</p>
-        </div>
+      <div class="salary-card">
+        <h4>مهندس برمجيات</h4>
+        <div class="salary-num">3,500 – 5,000€</div>
+        <div class="salary-range">صافي شهرياً · حسب التخصص</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- MYTHS -->
-<section class="section section--alt">
-  <div class="inner">
-    <p class="section-label">مفاهيم خاطئة</p>
-    <h2>ما الذي يُقال — وما الذي يحدث فعلاً؟</h2>
-    <p class="lead">هذه المفاهيم الخاطئة تكلف الناس أشهراً وأحياناً سنوات.</p>
-    <div class="myth-grid">
-      <div class="myth-card myth-card--wrong">
-        <span class="myth-label myth-label--wrong">❌ ما يُقال</span>
-        <h4>"ألمانيا تحتاج عمال — يمكنني الذهاب بأي مؤهل"</h4>
-        <p>الطلب حقيقي — لكنه على مؤهلات محددة في مهن محددة بمستويات لغوية محددة.</p>
+      <div class="salary-card">
+        <h4>مهندس ميكانيكي/كهربائي</h4>
+        <div class="salary-num">2,800 – 4,000€</div>
+        <div class="salary-range">صافي شهرياً · حسب الشركة</div>
       </div>
-      <div class="myth-card myth-card--right">
-        <span class="myth-label myth-label--right">✓ الواقع</span>
-        <h4>الطلب على الكفاءات المتخصصة — ليس على أي عامل</h4>
-        <p>المهن ذات الطلب الأعلى: تمريض، IT، هندسة، حرف يدوية متخصصة. لكل منها متطلبات واضحة.</p>
-      </div>
-      <div class="myth-card myth-card--wrong">
-        <span class="myth-label myth-label--wrong">❌ ما يُقال</span>
-        <h4>"B2 كافٍ للعمل في أي مجال"</h4>
-        <p>B2 قد يكفي للمقابلة — لكن بيئة العمل المتخصصة تتطلب مستوى أعلى في معظم الحالات.</p>
-      </div>
-      <div class="myth-card myth-card--right">
-        <span class="myth-label myth-label--right">✓ الواقع</span>
-        <h4>المستوى المطلوب يعتمد على المجال والمهنة</h4>
-        <p>IT: B2 في كثير من الأحيان. طب وتمريض: C1 متخصص دائماً. هندسة: B2–C1 حسب الشركة.</p>
+      <div class="salary-card">
+        <h4>حرفي متخصص</h4>
+        <div class="salary-num">2,000 – 3,200€</div>
+        <div class="salary-range">صافي شهرياً · حسب المهنة</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="section">
+<section class="section section--alt">
   <div class="inner">
     <div class="cta-block">
-      <h2>فهمت النظام — الآن وقت تقييم ملفك.</h2>
-      <p>المعلومات العامة مهمة — لكن ما يهمك أنت تحديداً هو: أين تقف في هذا النظام؟ ما مسارك؟ ما الذي ينقصك؟</p>
+      <h2>البيانات وضحت — أين تقف ملفك تحديداً؟</h2>
+      <p>الأرقام العامة لا تخبرك عن وضعك الشخصي. التقييم يجيبك على سؤال واحد: أنت — أين تقف في هذا السوق؟</p>
       <a href="/ar/assessment" class="cta-btn">ابدأ التقييم المجاني ←</a>
       <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px;">رد خلال 24–48 ساعة · بدون التزام</p>
       <a href="https://wa.me/4915781497451" class="wa-link">أو تواصل مباشرة عبر واتساب ←</a>
@@ -322,20 +328,20 @@
   <div style="max-width:780px;margin:0 auto;">
     <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">استكشف أيضاً</p>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-      <a href="/ar/chancenkarte" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">بطاقة الفرص</p>
-        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">هل أنت مؤهل؟</p>
-        <p style="font-size:12px;color:#6B7280;">فلتر الأهلية والمعايير</p>
-      </a>
       <a href="/ar/voraussetzungen" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
         <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">المتطلبات</p>
         <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">ما الذي تحتاجه؟</p>
         <p style="font-size:12px;color:#6B7280;">المؤهلات، اللغة، الوثائق</p>
       </a>
+      <a href="/ar/systemlogik" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
+        <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">منطق النظام</p>
+        <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">كيف يعمل النظام؟</p>
+        <p style="font-size:12px;color:#6B7280;">المسارات والخطوات</p>
+      </a>
       <a href="/ar/assessment" style="display:block;background:#0B1F3A;border:1.5px solid #0B1F3A;border-radius:8px;padding:16px 20px;text-decoration:none;">
-        <p style="font-size:12px;color:#93C5FD;font-weight:600;margin-bottom:4px;">التقييم</p>
-        <p style="font-size:14px;color:#FFFFFF;font-weight:600;margin-bottom:4px;">ابدأ تقييمك الآن</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.6);">مجاني — رد خلال 24 ساعة</p>
+        <p style="font-size:12px;color:#93C5FD !important;font-weight:600;margin-bottom:4px;">التقييم</p>
+        <p style="font-size:14px;color:#FFFFFF !important;font-weight:600;margin-bottom:4px;">ابدأ تقييمك الآن</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.6) !important;">مجاني — رد خلال 24 ساعة</p>
       </a>
     </div>
   </div>

@@ -428,7 +428,7 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.8,
   },
   {
-    loc: `${CANONICAL_DOMAIN}/ar/neck-pain-dizziness`,
+    loc: `${CANONICAL_DOMAIN}/ar/neck-pain-dizziness-germany`,
     changefreq: 'monthly',
     priority: 0.8,
   },

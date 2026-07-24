@@ -233,6 +233,8 @@ async function startServer() {
     '/case-architectures': '/',
     '/advisory-access': '/',
     '/professional-interfaces': '/',
+    // Orphan shell page — 301 redirect to homepage
+    '/physician-referral-interface': '/',
   };
 
   // 301 Redirects: Arabic slug aliases → canonical Arabic URLs

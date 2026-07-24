@@ -400,6 +400,78 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.8,
   },
+
+  // ── Static Arabic Pages (previously missing) ─────────────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/checkup-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/hip-replacement-germany`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/knee-replacement-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/libya-german-hospital`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/medical-visa-germany-libya`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/neck-pain-dizziness`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/oncology-germany-libya`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/rehabilitation-germany-libya`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/shoulder-surgery-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/treatment-costs-germany`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/treatment-germany-iraq`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/treatment-germany-libya`,
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/treatment-germany-tunisia`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/treatment-germany-yemen`,
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 ];
 
 function generateSitemapXML(urls: SitemapUrl[]): string {

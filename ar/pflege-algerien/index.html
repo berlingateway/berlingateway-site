@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>العمل ممرضاً في ألمانيا من الجزائر | برلين غيتواي</title>
   <meta name="description" content="هل أنت ممرض أو ممرضة من الجزائر؟ اكتشف كيف تعمل في ألمانيا براتب يصل إلى 3500 يورو — سواء كان لديك تكوين مهني أو شهادة جامعية. برلين غيتواي يرافقك في كل خطوة.">
-  <link rel="canonical" href="https://berlingateway.de/ar/pflege-algerien">
-  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/pflege-algerien">
+  <link rel="canonical" href="https://berlingateway.de/ar/pflege-algerien/">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/pflege-algerien/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -45,7 +45,7 @@
     .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #374151; font-weight: 600; }
     .trust-item span { color: #15803D; font-size: 15px; }
 
-    /* SALARY SECTION */
+    /* SECTIONS */
     .section { padding: 72px 24px; }
     .section--alt { background: #F8F9FA; }
     .inner { max-width: 820px; margin: 0 auto; }
@@ -99,6 +99,17 @@
     .faq-answer.open { display: block; }
     .faq-answer .fr-a { font-family: 'Inter', sans-serif; font-style: italic; color: #9CA3AF; font-size: 13px; margin-top: 8px; display: block; border-right: 2px solid #E5E7EB; padding-right: 12px; }
 
+    /* CITIES SECTION */
+    .cities-section { padding: 64px 24px; background: #fff; }
+    .cities-section h2 { font-size: clamp(20px,3.5vw,28px); font-weight: 700; margin-bottom: 8px; }
+    .cities-section .fr { font-size: 14px; color: #9CA3AF; font-family: "Inter",sans-serif; font-style: italic; margin-bottom: 32px; display: block; }
+    .cities-group { margin-bottom: 28px; }
+    .cities-group__label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0B3B8C; margin-bottom: 12px; font-family: "Inter",sans-serif; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #F1F5F9; color: #374151; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #E2E8F0; }
+    .tag.hospital { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
+    .tag.institute { background: #F0FDF4; border-color: #BBF7D0; color: #166534; }
+
     /* CTA SECTION */
     .cta-section { background: #0B1F3A; padding: 72px 24px; text-align: center; }
     .cta-section h2 { color: #fff; font-size: clamp(22px, 4vw, 34px); font-weight: 700; margin-bottom: 10px; }
@@ -117,23 +128,19 @@
     @media (max-width: 640px) {
       .salary-grid { grid-template-columns: 1fr; }
       .paths { grid-template-columns: 1fr; }
-      .trust__inner { gap: 16px; }
       .nav a:not(.nav-cta) { display: none; }
       .hero__cta-group { flex-direction: column; align-items: center; }
     }
-
-    /* CITIES SECTION */
-    .cities-section { padding: 64px 24px; background: #fff; }
-    .cities-section h2 { font-size: clamp(20px,3.5vw,28px); font-weight: 700; margin-bottom: 8px; }
-    .cities-section .fr { font-size: 14px; color: #9CA3AF; font-family: "Inter",sans-serif; font-style: italic; margin-bottom: 32px; display: block; }
-    .cities-group { margin-bottom: 28px; }
-    .cities-group__label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0B3B8C; margin-bottom: 12px; font-family: "Inter",sans-serif; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag { background: #F1F5F9; color: #374151; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #E2E8F0; }
-    .tag.hospital { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
-    .tag.institute { background: #F0FDF4; border-color: #BBF7D0; color: #166534; }
-
   </style>
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      answer.classList.toggle('open');
+      icon.classList.toggle('open');
+      icon.textContent = answer.classList.contains('open') ? '×' : '+';
+    }
+  </script>
 </head>
 <body>
 
@@ -142,7 +149,7 @@
   <div class="top-band__inner">
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
-      <a href="/de/pflege-algerien" class="lang-badge">Deutsch</a>
+      <a href="/de/pflege-algerien/" class="lang-badge">Deutsch</a>
       <span style="opacity:.5">خبراء في برلين</span>
     </div>
   </div>
@@ -154,7 +161,7 @@
     <a href="/ar" class="brand">Berlin <span>Gateway</span></a>
     <nav class="nav">
       <a href="/ar/chancenkarte">Chancenkarte</a>
-      <a href="/ar/pflege-algerien">Pflege</a>
+      <a href="/ar/pflege-algerien/">Pflege</a>
       <a href="/ar/insights">Insights</a>
       <a href="mailto:info@berlingateway.de" class="nav-cta">تواصل معنا</a>
     </nav>
@@ -163,10 +170,10 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero__badge">ممرضون من الجزائر — Infirmiers Algériens</div>
+  <div class="hero__badge">ممرضون من الجزائر — Infirmiers d'Algérie</div>
   <h1>العمل ممرضاً في ألمانيا<br><em>براتب يصل إلى 3500 يورو</em></h1>
-  <p class="hero__sub">سواء كان لديك تكوين مهني في التمريض أو شهادة جامعية — الطريق إلى ألمانيا مفتوح. برلين غيتواي يرافقك من الجزائر حتى أول يوم عمل.</p>
-  <p class="hero__fr">Que vous ayez une formation professionnelle ou un diplôme universitaire — l'Allemagne recrute des infirmiers algériens.</p>
+  <p class="hero__sub">سواء كنت حاصلاً على شهادة IDE أو Licence من الجزائر — الطريق إلى ألمانيا مفتوح. برلين غيتواي يرافقك من العاصمة حتى أول يوم عمل.</p>
+  <p class="hero__fr">Diplôme d'État ou Licence en soins infirmiers — l'Allemagne recrute activement en Algérie.</p>
   <div class="hero__cta-group">
     <a href="mailto:info@berlingateway.de" class="btn-primary">أرسل ملفك الآن</a>
     <a href="https://wa.me/4915781497451" class="btn-secondary">WhatsApp +49 1578 149 7451</a>
@@ -176,7 +183,7 @@
 <!-- TRUST STRIP -->
 <div class="trust">
   <div class="trust__inner">
-    <div class="trust-item"><span>✓</span> تكوين مهني معترف به</div>
+    <div class="trust-item"><span>✓</span> تكوين مهني (INFSPM) معترف به</div>
     <div class="trust-item"><span>✓</span> شهادة جامعية مقبولة</div>
     <div class="trust-item"><span>✓</span> دعم باللغة العربية والفرنسية</div>
     <div class="trust-item"><span>✓</span> خبراء في برلين</div>
@@ -190,7 +197,7 @@
     <h2>كم يكسب الممرض في ألمانيا؟
       <span class="fr">Combien gagne un infirmier en Allemagne ?</span>
     </h2>
-    <p class="lead">الأرقام الحقيقية — بدون مبالغة، بدون تقليل.</p>
+    <p class="lead">الأرقام الحقيقية — بدون مبالغة، استناداً إلى بيانات 2026.</p>
     <div class="salary-grid">
       <div class="salary-card">
         <div class="salary-card__label">مبتدئ · Débutant</div>
@@ -211,7 +218,7 @@
         <div class="salary-card__note">ICU, OP, Psychiatrie</div>
       </div>
     </div>
-    <p style="font-size:13px;color:#9CA3AF;margin-top:16px;text-align:center;font-family:'Inter',sans-serif;">* الأرقام صافية قبل الضريبة · Salaires bruts avant impôts · Quelle: Bundesagentur für Arbeit 2025</p>
+    <p style="font-size:13px;color:#9CA3AF;margin-top:16px;text-align:center;font-family:'Inter',sans-serif;">* الأرقام صافية قبل الضريبة · Salaires bruts avant impôts · Quelle: Bundesagentur für Arbeit 2026</p>
   </div>
 </section>
 
@@ -219,168 +226,183 @@
 <section class="section section--alt">
   <div class="inner">
     <p class="section-label">مسارك — Votre parcours</p>
-    <h2>مسارك يعتمد على مؤهلك
-      <span class="fr">Votre parcours dépend de votre qualification</span>
+    <h2>مسارك يعتمد على مؤهلك في الجزائر
+      <span class="fr">Votre parcours dépend de votre diplôme algérien</span>
     </h2>
-    <p class="lead">في تونس والجزائر والمغرب — التكوين المهني في التمريض له نفس قيمة الشهادة الجامعية عند التقديم في ألمانيا.</p>
     <div class="paths">
-      <div class="path-card featured">
-        <div class="path-card__tag">المسار الأول</div>
-        <h3>تكوين مهني في التمريض</h3>
-        <p class="path-card__fr">Formation professionnelle en soins infirmiers</p>
-        <ul>
-          <li><span class="check">✓</span> مدة التكوين 3 سنوات أو أكثر</li>
-          <li><span class="check">✓</span> العمل في مستشفى أو عيادة</li>
-          <li><span class="check">✓</span> اعتراف مباشر في ألمانيا ممكن</li>
-          <li><span class="check">✓</span> قد تحتاج دورة تكميلية (3-6 أشهر)</li>
-          <li><span class="check">✓</span> اللغة الألمانية B2 مطلوبة</li>
-        </ul>
-      </div>
       <div class="path-card">
-        <div class="path-card__tag">المسار الثاني</div>
-        <h3>شهادة جامعية في التمريض</h3>
-        <p class="path-card__fr">Licence / Diplôme universitaire en soins infirmiers</p>
+        <div class="path-card__tag">المسار المباشر — Direct</div>
+        <h3>للممرضين المجازين (IDE/Licence)</h3>
+        <p class="path-card__fr">Pour les infirmiers diplômés d'État</p>
         <ul>
-          <li><span class="check">✓</span> شهادة ليسانس أو بكالوريوس</li>
-          <li><span class="check">✓</span> الحصول على ترخيص مزاولة المهنة</li>
-          <li><span class="check">✓</span> تقديم ملف الاعتراف (Anerkennung)</li>
-          <li><span class="check">✓</span> العمل كممرض معتمد فور الاعتراف</li>
-          <li><span class="check">✓</span> دعم كامل من برلين غيتواي للملف</li>
+          <li><span class="check">✓</span> معادلة الشهادة الجزائرية (Anerkennung)</li>
+          <li><span class="check">✓</span> مستوى لغة ألمانية B1/B2</li>
+          <li><span class="check">✓</span> عقد عمل مباشر في مستشفى ألماني</li>
+          <li><span class="check">✓</span> تأشيرة العمل المتخصص (§18)</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CITIES SECTION -->
-<section class="cities-section">
-  <div class="inner">
-    <h2>أين يعمل ممرضو الجزائر في ألمانيا؟</h2>
-    <span class="fr">Où travaillent les infirmiers algériens en Allemagne ?</span>
-    
-    <div class="cities-group">
-      <div class="cities-group__label">المدن الكبرى · Grandes Villes</div>
-      <div class="tags">
-        <span class="tag">برلين · Berlin</span>
-        <span class="tag">ميونخ · Munich</span>
-        <span class="tag">هامبورغ · Hambourg</span>
-        <span class="tag">فرانكفورت · Francfort</span>
-        <span class="tag">كولونيا · Cologne</span>
-        <span class="tag">شتوتغارت · Stuttgart</span>
-      </div>
-    </div>
-
-    <div class="cities-group">
-      <div class="cities-group__label">مستشفيات شريكة · Hôpitaux Partenaires</div>
-      <div class="tags">
-        <span class="tag hospital">Charité Berlin</span>
-        <span class="tag hospital">Vivantes</span>
-        <span class="tag hospital">Helios Kliniken</span>
-        <span class="tag hospital">Asklepios</span>
-        <span class="tag hospital">Uniklinik München</span>
-      </div>
-    </div>
-
-    <div class="cities-group">
-      <div class="cities-group__label">معاهد اللغة · Instituts de Langue</div>
-      <div class="tags">
-        <span class="tag institute">Institut Français Algérie</span>
-        <span class="tag institute">Goethe-Institut Alger</span>
-        <span class="tag institute">مراكز اللغة الألمانية المعتمدة</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STEPS -->
-<section class="section">
-  <div class="inner">
-    <p class="section-label">الخطوات — Les étapes</p>
-    <h2>كيف نبدأ؟ · Comment commencer ?</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step__num">1</div>
-        <div class="step__content">
-          <h4>تقييم الملف · Évaluation du dossier</h4>
-          <p class="step__fr">Analyse de vos diplômes et de votre expérience.</p>
-          <p>نراجع شهاداتك الجزائرية ونحدد المسار الأنسب لك في ألمانيا.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step__num">2</div>
-        <div class="step__content">
-          <h4>تعلم اللغة · Apprentissage de la langue</h4>
-          <p class="step__fr">Cours d'allemand jusqu'au niveau B1/B2.</p>
-          <p>اللغة هي مفتاحك. نوجهك لأفضل المراكز في الجزائر أو ألمانيا.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step__num">3</div>
-        <div class="step__content">
-          <h4>الاعتراف والفيزا · Reconnaissance et Visa</h4>
-          <p class="step__fr">Dépôt du dossier d'équivalence et demande de visa.</p>
-          <p>نتولى الجانب القانوني والبيروقراطي المعقد في ألمانيا نيابة عنك.</p>
-        </div>
+      <div class="path-card featured">
+        <div class="path-card__tag">مسار التكوين — Formation</div>
+        <h3>التكوين المهني (Ausbildung)</h3>
+        <p class="path-card__fr">Formation professionnelle en alternance</p>
+        <ul>
+          <li><span class="check">✓</span> متاح لمن لديه مستوى السنة 2 ثانوي</li>
+          <li><span class="check">✓</span> دراسة وعمل براتب شهري في ألمانيا</li>
+          <li><span class="check">✓</span> مستوى لغة ألمانية B1 مطلوب</li>
+          <li><span class="check">✓</span> ضمان وظيفة فور التخرج</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section--alt">
+<section class="section">
   <div class="inner">
-    <p class="section-label">الأسئلة الشائعة — FAQ</p>
-    <h2>كل ما يدور في ذهنك
-      <span class="fr">Tout ce que vous devez savoir</span>
+    <p class="section-label">أسئلة شائعة — FAQ</p>
+    <h2>ما يسألنا عنه الممرضون الجزائريون
+      <span class="fr">Questions des infirmiers algériens</span>
     </h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>هل التكوين المهني الجزائري مقبول فعلاً؟</span>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>هل شهادة "مساعد تمريض" من الجزائر مقبولة في ألمانيا؟
+            <span class="fr-q">Le diplôme d'aide-soignant algérien est-il reconnu ?</span>
+          </span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>نعم، ألمانيا تعترف بالتكوين المهني في التمريض من الجزائر. المهم هو محتوى التكوين وساعات التدريب العملي، وهو ما نقوم بتقييمه لك.</p>
-          <span class="fr-a">Oui, la formation professionnelle algérienne est reconnue sous certaines conditions.</span>
+          نعم، ولكن غالباً ما يتم تصنيفها كـ "Pflegehelfer" (مساعد تمريض). للعمل كممرض متخصص (Pflegefachkraft)، تحتاج عادةً لشهادة "IDE" أو "Licence" مع إجراءات معادلة.
+          <span class="fr-a">Oui, mais souvent classé comme "Pflegehelfer". Pour être "Pflegefachkraft", un diplôme IDE ou Licence avec reconnaissance est nécessaire.</span>
         </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>هل أحتاج لشهادة البكالوريا للتقديم من الجزائر؟
+            <span class="fr-q">Le Bac est-il obligatoire pour postuler ?</span>
+          </span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          للتكوين المهني (Ausbildung)، يكفي مستوى السنة الثانية ثانوي أحياناً. لكن للعمل كممرض مؤهل، يجب أن تكون حاصلاً على شهادة التمريض الجزائرية المعترف بها.
+          <span class="fr-a">Pour l'Ausbildung, un niveau 2ème AS peut suffire. Pour le poste d'infirmier qualifié, le diplôme de santé est requis.</span>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>هل يطلب Goethe-Institut في الجزائر مواعيد بعيدة؟
+            <span class="fr-q">Les rendez-vous au Goethe-Institut d'Alger sont-ils longs ?</span>
+          </span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          نعم، مواعيد امتحانات B1 و B2 في الجزائر تشهد ضغطاً كبيراً. ننصح بالحجز المبكر أو التفكير في مراكز معتمدة أخرى مثل ÖSD إذا توفرت.
+          <span class="fr-a">Oui, les places sont limitées. Nous recommandons de réserver tôt ou de considérer les centres agréés ÖSD.</span>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>هل الخبرة في المستشفيات الجامعية (CHU) أفضل؟
+            <span class="fr-q">L'expérience en CHU est-elle valorisée ?</span>
+          </span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          كلاهما مقبول، لكن الخبرة في CHU Mustapha Pacha أو المستشفيات الجامعية الكبرى تعطي انطباعاً قوياً عن القدرة على التعامل مع الحالات المعقدة.
+          <span class="fr-a">L'expérience en CHU (comme Mustapha Pacha) est fortement valorisée par les hôpitaux allemands.</span>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>هل يمكنني السفر بفيزا البحث عن عمل (Chancenkarte)؟
+            <span class="fr-q">Puis-je utiliser la Chancenkarte (Carte d'opportunité) ?</span>
+          </span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          نعم، إذا كانت شهادتك معترف بها جزئياً ولديك مستوى لغة B1، يمكنك استخدام بطاقة الفرص للبحث عن صاحب عمل في ألمانيا مباشرة.
+          <span class="fr-a">Oui, avec une reconnaissance partielle et un niveau B1, la Chancenkarte est une excellente option.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CITIES SECTION -->
+<section class="cities-section section--alt">
+  <div class="inner">
+    <p class="section-label">تغطيتنا في الجزائر — Notre couverture en Algérie</p>
+    <h2>نستقبل ملفات الممرضين من جميع الولايات الجزائرية
+      <span class="fr">Nous acceptons les dossiers de toutes les Wilayas d'Algérie</span>
+    </h2>
+    <div class="cities-group">
+      <div class="cities-group__label">الولايات والمدن الكبرى — Wilayas & Grandes Villes</div>
+      <div class="tags">
+        <span class="tag">الجزائر العاصمة</span>
+        <span class="tag">وهران</span>
+        <span class="tag">قسنطينة</span>
+        <span class="tag">عنابة</span>
+        <span class="tag">سطيف</span>
+        <span class="tag">البليدة</span>
+        <span class="tag">تيزي وزو</span>
+        <span class="tag">باتنة</span>
+        <span class="tag">بجاية</span>
+        <span class="tag">تلمسان</span>
+        <span class="tag">سكيكدة</span>
+        <span class="tag">جيجل</span>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>ما هو مستوى اللغة المطلوب للبدء؟</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>يمكننا البدء في تقييم ملفك وأنت في مستوى A2، لكن للسفر والعمل ستحتاج إلى شهادة B2 (أو B1 لبعض عقود التدريب).</p>
-          <span class="fr-a">Un niveau B2 est généralement requis pour exercer en tant qu'infirmier certifié.</span>
-        </div>
+    </div>
+    <div class="cities-group">
+      <div class="cities-group__label">المستشفيات الجامعية الكبرى — Centres Hospitalo-Universitaires (CHU)</div>
+      <div class="tags">
+        <span class="tag hospital">CHU Mustapha Pacha — Alger</span>
+        <span class="tag hospital">CHU Bab El Oued</span>
+        <span class="tag hospital">CHU Nafissa Hamoud</span>
+        <span class="tag hospital">CHU Frantz Fanon — Blida</span>
+        <span class="tag hospital">CHU Ben Badis — Constantine</span>
+        <span class="tag hospital">EHU Oran</span>
+        <span class="tag hospital">CHU Sétif</span>
+        <span class="tag hospital">CHU Tizi Ouzou</span>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          <span>هل يمكنني إحضار عائلتي معي؟</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>نعم، بمجرد حصولك على عقد عمل وسكن مناسب، يحق لك تقديم طلب لم شمل الأسرة (الزوج/الزوجة والأبناء).</p>
-          <span class="fr-a">Oui, le regroupement familial est possible une fois le contrat de travail signé.</span>
-        </div>
+    </div>
+    <div class="cities-group">
+      <div class="cities-group__label">معاهد التكوين الشبه طبي — Instituts Paramédicaux (INFSPM)</div>
+      <div class="tags">
+        <span class="tag institute">INFSPM Alger</span>
+        <span class="tag institute">INFSPM Oran</span>
+        <span class="tag institute">INFSPM Constantine</span>
+        <span class="tag institute">INFSPM Batna</span>
+        <span class="tag institute">INFSPM Sétif</span>
+        <span class="tag institute">INFSPM Tizi Ouzou</span>
+        <span class="tag institute">Goethe-Institut Algier</span>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,#0B1F3A 0%,#1E3A5F 100%);border-radius:12px;padding:28px;margin-top:24px;text-align:center;">
+      <h3 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:10px;">الجزائر — بوابة المغرب العربي إلى ألمانيا<br><span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.6);">L'Algérie — La porte du Maghreb vers l'Allemagne</span></h3>
+      <p style="color:rgba(255,255,255,0.7);font-size:14px;line-height:1.8;margin-bottom:16px;">نستقبل أيضاً ملفات الممرضين من الجنسيات الأخرى المقيمين في الجزائر.<br>Nous acceptons aussi les infirmiers d'autres nationalités résidant en Algérie.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+        <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);padding:5px 14px;border-radius:20px;font-size:13px;">🇸🇾 سوريا — Syrie</span>
+        <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);padding:5px 14px;border-radius:20px;font-size:13px;">🇵🇸 فلسطين — Palestine</span>
+        <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);padding:5px 14px;border-radius:20px;font-size:13px;">🇲🇱 مالي — Mali</span>
+        <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.85);padding:5px 14px;border-radius:20px;font-size:13px;">🇳🇪 النيجر — Niger</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA SECTION -->
 <section class="cta-section">
   <div class="inner">
-    <h2>ابدأ رحلتك إلى ألمانيا اليوم</h2>
-    <p class="fr">Commencez votre voyage vers l'Allemagne dès aujourd'hui</p>
+    <h2>ابدأ رحلتك اليوم</h2>
+    <p class="fr">Commencez votre parcours aujourd'hui — Berlin Gateway vous accompagne.</p>
     <div class="contact-cards">
       <a href="mailto:info@berlingateway.de" class="contact-card">
         <div class="contact-card__icon">✉</div>
-        <div class="contact-card__label">Email</div>
+        <div class="contact-card__label">البريد الإلكتروني · Email</div>
         <div class="contact-card__value">info@berlingateway.de</div>
       </a>
       <a href="https://wa.me/4915781497451" class="contact-card">
-        <div class="contact-card__icon">💬</div>
+        <div class="contact-card__icon">📱</div>
         <div class="contact-card__label">WhatsApp</div>
         <div class="contact-card__value">+49 1578 149 7451</div>
       </a>
@@ -388,20 +410,68 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <p>&copy; 2026 Berlin Gateway. <a href="/de/impressum">Impressum</a> | <a href="/de/datenschutz">Datenschutz</a></p>
+  <p>Berlin Gateway — خبراء في برلين · Experts à Berlin</p>
+  <p style="margin-top:8px;">
+    <a href="/de/impressum">Impressum</a>
+    <a href="/de/datenschutz">Datenschutz</a>
+    <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+  </p>
+  <p style="margin-top:8px;">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
 </footer>
 
-<script>
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
-      const icon = button.querySelector('.faq-icon');
-      answer.classList.toggle('open');
-      icon.classList.toggle('open');
-      icon.textContent = answer.classList.contains('open') ? '−' : '+';
-    });
-  });
+<!-- SCHEMAS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "هل شهادة مساعد تمريض من الجزائر مقبولة في ألمانيا؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، ولكن غالباً ما يتم تصنيفها كـ مساعد تمريض. للعمل كممرض متخصص، تحتاج عادةً لشهادة IDE أو Licence مع إجراءات معادلة."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل أحتاج لشهادة البكالوريا للتقديم من الجزائر؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "للتكوين المهني (Ausbildung)، يكفي مستوى السنة الثانية ثانوي أحياناً. لكن للعمل كممرض مؤهل، يجب أن تكون حاصلاً على شهادة التمريض الجزائرية المعترف بها."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يطلب Goethe-Institut في الجزائر مواعيد بعيدة؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، مواعيد امتحانات B1 و B2 في الجزائر تشهد ضغطاً كبيراً. ننصح بالحجز المبكر أو التفكير في مراكز معتمدة أخرى مثل ÖSD إذا توفرت."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://berlingateway.de/ar/pflege-algerien/#webpage",
+  "url": "https://berlingateway.de/ar/pflege-algerien/",
+  "name": "العمل ممرضاً في ألمانيا من الجزائر | برلين غيتواي",
+  "description": "دليل الممرضين الجزائريين للعمل في ألمانيا: الرواتب، الشروط، وإجراءات المعادلة.",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Berlin Gateway", "item": "https://berlingateway.de/ar/" },
+      { "@type": "ListItem", "position": 2, "name": "Pflege", "item": "https://berlingateway.de/ar/pflege/" },
+      { "@type": "ListItem", "position": 3, "name": "Algerien", "item": "https://berlingateway.de/ar/pflege-algerien/" }
+    ]
+  }
+}
 </script>
 
 </body>

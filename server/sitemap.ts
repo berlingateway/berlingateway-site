@@ -414,6 +414,36 @@ const STATIC_ROUTES: SitemapUrl[] = [
     changefreq: 'monthly',
     priority: 0.9,
   },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/war-injury-treatment-germany-libya`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/war-injury-treatment-germany-algeria`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/war-injury-treatment-germany-iraq`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/war-injury-treatment-germany-yemen`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/accident-injury-disability-germany-gulf`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
 
   // ── Static Arabic Pages (previously missing) ─────────────────────────────
   {

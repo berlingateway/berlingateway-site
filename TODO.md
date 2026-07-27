@@ -1,0 +1,1 @@
+- [ ] Technical Debt: Refactor inline styles for tags in country pages to shared CSS classes.\n- [ ] Content: Add coverage section to Syria nursing page (/ar/pflege-syrien.html).

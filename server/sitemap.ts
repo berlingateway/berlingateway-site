@@ -401,6 +401,20 @@ const STATIC_ROUTES: SitemapUrl[] = [
     priority: 0.8,
   },
 
+  // ── War Injury Cluster (new static pages 2026-07-27) ──────────────────────
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/war-injury-treatment-germany`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
+    loc: `${CANONICAL_DOMAIN}/ar/chronic-pain-after-trauma-germany`,
+    lastmod: '2026-07-27',
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+
   // ── Static Arabic Pages (previously missing) ─────────────────────────────
   {
     loc: `${CANONICAL_DOMAIN}/ar/checkup-germany`,

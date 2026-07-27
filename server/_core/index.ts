@@ -243,8 +243,6 @@ async function startServer() {
   const ARABIC_REDIRECTS_301: Record<string, string> = {
     '/ar/neck-pain-dizziness': '/ar/neck-pain-dizziness-germany',
     '/ar/second-opinion-germany': '/ar/surgery-second-opinion',
-    '/ar/war-injury-treatment-germany': '/ar/war-injury-treatment-germany/',
-    '/ar/chronic-pain-after-trauma-germany': '/ar/chronic-pain-after-trauma-germany/',
   };
 
   app.use((req, res, next) => {

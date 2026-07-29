@@ -3,78 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ممرض سوري؟ ألمانيا تحتاجك | Berlin Gateway</title>
-  <meta name="description" content="فرص عمل حقيقية في ألمانيا لكوادر التمريض السورية — سواء كنت في سوريا، الخليج، مصر أو دول الجوار." />
+  <title>التمريض في ألمانيا للسوريين | طريقك الآمن نحو مستقبل مهني مستقر – Berlin Gateway</title>
+  <meta name="description" content="دليل شامل للممرضين السوريين الطموحين، سواء كنت في سوريا أو دول اللجوء الرئيسية، الراغبين في بناء مسيرة مهنية مزدهرة في ألمانيا بدعم من خبراء النظام الصحي." />
   <link rel="canonical" href="https://berlingateway.de/ar/pflege-syrien" />
   <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/pflege-syrien" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #0a0f1e;
-      --navy2: #111827;
-      --gold: #c9a84c;
+      --navy: #0B1F3A;
+      --navy-light: #1a2a4a;
+      --gold: #C9A84C;
       --gold-light: #e8c97a;
       --white: #ffffff;
       --grey: #9ca3af;
       --card-bg: #1a2235;
       --border: #1e2d45;
+      --text-main: #0D1117;
     }
 
     body {
-      font-family: 'Cairo', sans-serif;
-      background: var(--navy);
-      color: var(--white);
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      background: var(--white);
+      color: var(--text-main);
       direction: rtl;
       line-height: 1.7;
     }
 
-    /* NAV */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2rem;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      background: var(--navy);
-      z-index: 100;
-    }
+    /* TOP BAND */
+    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
 
-    .logo {
-      font-size: 1.3rem;
-      font-weight: 900;
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    .logo span { color: var(--gold); }
-
-    nav a.cta-nav {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.5rem 1.4rem;
-      border-radius: 6px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: background 0.2s;
-    }
-
-    nav a.cta-nav:hover { background: var(--gold-light); }
+    /* HEADER */
+    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; }
+    .brand span { color: #0B3B8C; }
+    .nav { display: flex; align-items: center; gap: 0; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-right: 24px; font-weight: 500; }
+    .nav-cta { background: #0B1F3A; color: #FFFFFF !important; padding: 8px 18px; border-radius: 6px; font-weight: 600 !important; margin-right: 0 !important; }
 
     /* HERO */
     .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 80px 24px 72px;
+      background: var(--navy);
       text-align: center;
-      padding: 5rem 1.5rem;
-      background: radial-gradient(ellipse at 60% 40%, #1a2a4a 0%, var(--navy) 70%);
+      color: var(--white);
       position: relative;
       overflow: hidden;
     }
@@ -82,48 +60,57 @@
     .hero::before {
       content: '';
       position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-      top: -100px;
-      left: -100px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center top, rgba(11,59,140,0.4) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .hero-badge {
       display: inline-block;
-      background: rgba(201,168,76,0.15);
-      border: 1px solid rgba(201,168,76,0.4);
-      color: var(--gold);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
       padding: 0.4rem 1.2rem;
       border-radius: 50px;
       font-size: 0.9rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 900;
+      font-weight: 700;
       line-height: 1.2;
       margin-bottom: 1.2rem;
-      max-width: 750px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      position: relative;
+      z-index: 1;
     }
 
-    .hero h1 span { color: var(--gold); }
+    .hero h1 span { color: #93C5FD; }
 
     .hero p {
       font-size: 1.15rem;
-      color: var(--grey);
-      max-width: 580px;
+      color: rgba(255,255,255,0.65);
+      max-width: 600px;
       margin: 0 auto 2.5rem;
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
     }
 
     .btn-primary {
       display: inline-block;
-      background: var(--gold);
+      background: var(--white);
       color: var(--navy);
       padding: 0.9rem 2.5rem;
       border-radius: 8px;
@@ -131,405 +118,371 @@
       font-size: 1.05rem;
       text-decoration: none;
       transition: background 0.2s, transform 0.2s;
+      position: relative;
+      z-index: 1;
     }
 
     .btn-primary:hover {
-      background: var(--gold-light);
+      background: #f8f9fa;
       transform: translateY(-2px);
     }
 
     /* SECTIONS */
-    section { padding: 5rem 1.5rem; }
-
-    .container { max-width: 1000px; margin: 0 auto; }
+    section { padding: 72px 24px; }
+    .section--alt { background: #F8F9FA; }
+    .container { max-width: 900px; margin: 0 auto; }
 
     .section-label {
-      color: var(--gold);
-      font-size: 0.85rem;
+      color: #0B3B8C;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
       font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 900;
-      margin-bottom: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--navy);
     }
 
-    .section-sub {
-      color: var(--grey);
+    .content-text p {
+      margin-bottom: 1.5rem;
       font-size: 1.05rem;
-      max-width: 600px;
-      margin-bottom: 3rem;
+      color: #374151;
     }
 
-    /* WHY GERMANY */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .why-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
+    /* TABLES */
+    .table-container {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border: 1px solid #E5E7EB;
       border-radius: 12px;
-      padding: 1.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: right;
+    }
+
+    th {
+      background: #F9FAFB;
+      color: var(--navy);
+      padding: 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid #E5E7EB;
+    }
+
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #E5E7EB;
+      font-size: 0.95rem;
+      color: #4B5563;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* INTERNAL LINKS */
+    .internal-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .link-card {
+      background: var(--white);
+      border: 1.5px solid #E5E7EB;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-decoration: none;
       transition: border-color 0.2s;
     }
 
-    .why-card:hover { border-color: var(--gold); }
+    .link-card:hover { border-color: #0B3B8C; }
 
-    .why-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .why-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
+    .link-card h4 {
+      color: #0B3B8C;
+      font-size: 0.9rem;
       margin-bottom: 0.5rem;
+      font-weight: 700;
     }
 
-    .why-card p { color: var(--grey); font-size: 0.95rem; }
-
-    /* SUCCESS STORIES */
-    .stories { background: var(--navy2); }
-
-    .stories-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+    .link-card p {
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 1.05rem;
     }
 
-    .story-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-right: 3px solid var(--gold);
+    /* CTA BLOCK */
+    .cta-block {
+      background: var(--navy);
       border-radius: 12px;
-      padding: 2rem;
+      padding: 56px 40px;
+      text-align: center;
+      color: var(--white);
+      margin-top: 4rem;
     }
 
-    .story-card p {
-      color: var(--grey);
-      font-size: 1rem;
-      font-style: italic;
-      line-height: 1.8;
-    }
+    .cta-block h2 { color: var(--white); margin-bottom: 1rem; }
+    .cta-block p { color: rgba(255,255,255,0.65); margin-bottom: 2rem; font-weight: 300; }
 
-    .story-card .tag {
+    .cta-btn-white {
       display: inline-block;
-      margin-top: 1.2rem;
-      background: rgba(201,168,76,0.15);
-      color: var(--gold);
-      padding: 0.3rem 0.9rem;
-      border-radius: 50px;
-      font-size: 0.82rem;
+      background: var(--white);
+      color: var(--navy);
+      padding: 1rem 2.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 56px 24px 32px; }
+    .footer__grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; text-align: right; }
+    .footer__brand { font-size: 16px; font-weight: 700; color: #FFFFFF; margin-bottom: 10px; }
+    .footer__tagline { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+    .footer h4 { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+    .footer a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; margin-bottom: 8px; }
+    .footer__bottom { max-width: 1080px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 12px; }
+
+    @media (max-width: 768px) {
+      .nav a:not(.nav-cta) { display: none; }
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 60px 20px; }
+    }
+    @media (max-width: 480px) {
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+
+    /* HOW WE WORK SECTION SPECIFIC STYLES */
+    .content-text h3 {
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
       font-weight: 600;
     }
 
-    /* CONDITIONS */
-    .conditions-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
+    .content-text ul {
+      list-style: none;
+      padding-right: 0;
+      margin-bottom: 1.5rem;
     }
 
-    .conditions-table th {
-      background: var(--card-bg);
-      color: var(--gold);
-      padding: 1rem 1.5rem;
-      text-align: right;
-      font-weight: 700;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .conditions-table td {
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-      color: var(--grey);
-    }
-
-    .conditions-table tr:hover td { background: var(--card-bg); color: var(--white); }
-
-    /* STEPS */
-    .steps { background: var(--navy2); }
-
-    .steps-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
+    .content-text ul li {
+      color: #374151;
+      margin-bottom: 0.5rem;
       position: relative;
+      padding-right: 1.5rem;
     }
 
-    .step {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      transition: border-color 0.2s;
-    }
-
-    .step:hover { border-color: var(--gold); }
-
-    .step-num {
-      background: var(--gold);
+    .content-text ul li::before {
+      content: '•';
       color: var(--navy);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .step-text h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .step-text p { color: var(--grey); font-size: 0.95rem; }
-
-    /* CTA SECTION */
-    .cta-section {
-      text-align: center;
-      background: radial-gradient(ellipse at center, #1a2a4a 0%, var(--navy) 70%);
-      padding: 6rem 1.5rem;
-    }
-
-    .cta-section h2 { margin-bottom: 1rem; }
-
-    .cta-section p {
-      color: var(--grey);
-      font-size: 1.05rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .cta-email {
-      display: block;
-      margin-top: 1.5rem;
-      color: var(--grey);
-      font-size: 0.95rem;
-    }
-
-    .cta-email a { color: var(--gold); text-decoration: none; }
-    .cta-email a:hover { text-decoration: underline; }
-
-    /* FOOTER */
-    footer {
-      background: var(--navy2);
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      text-align: center;
-      color: var(--grey);
-      font-size: 0.88rem;
-    }
-
-    footer a { color: var(--gold); text-decoration: none; }
-
-    @media (max-width: 600px) {
-      nav { padding: 1rem; }
-      .step { flex-direction: column; gap: 1rem; }
-      .conditions-table th, .conditions-table td { padding: 0.8rem 1rem; }
+      position: absolute;
+      right: 0;
+      font-size: 1.2rem;
+      line-height: 1;
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="/ar/" class="logo">Berlin <span>Gateway</span></a>
-  <a href="https://tally.so/r/68MrBP" class="cta-nav">تقدم الآن</a>
-</nav>
+<div class="top-band">
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/de/" class="lang-badge">Deutsch</a>
+      <span style="opacity:.5">مقيمون في ألمانيا</span>
+    </div>
+  </div>
+</div>
 
-<!-- HERO -->
+<header class="header">
+  <div class="header__inner">
+    <a href="/ar/" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/ar/success-stories">قصص حقيقية</a>
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+      <a href="/ar/aerzte">أطباء</a>
+      <a href="/ar/pflege">تمريض</a>
+      <a href="/ar/systemlogik">النظام</a>
+      <a href="/ar/voraussetzungen">المتطلبات</a>
+      <a href="/ar/assessment" class="nav-cta">ابدأ التقييم</a>
+    </nav>
+  </div>
+</header>
+
 <section class="hero">
-  <div>
-    <div class="hero-badge">🇩🇪 فرص تمريض حقيقية في ألمانيا</div>
-    <h1>ممرض سوري؟<br><span>ألمانيا تحتاجك الآن</span></h1>
-    <p>سواء كنت في سوريا، الخليج، مصر أو دول الجوار — نفتح لك الباب نحو مستقبل مستقر في ألمانيا</p>
-    <a href="https://tally.so/r/68MrBP" class="btn-primary">ابدأ التقديم مجاناً</a>
+  <div class="container">
+    <div class="hero-badge">🇩🇪 التمريض في ألمانيا للسوريين</div>
+    <h1>التمريض في ألمانيا للسوريين<br><span>طريقك الآمن نحو مستقبل مهني مستقر</span></h1>
+    <p>دليل شامل للممرضين السوريين الطموحين، سواء كنت في سوريا أو دول اللجوء الرئيسية، الراغبين في بناء مسيرة مهنية مزدهرة في ألمانيا بدعم من خبراء النظام الصحي.</p>
+    <a href="/ar/assessment" class="btn-primary">ابدأ تقييم ملفك مجاناً ←</a>
   </div>
 </section>
 
-<!-- WHY GERMANY -->
 <section>
   <div class="container">
     <div class="section-label">لماذا ألمانيا؟</div>
-    <h2>فرصة لن تجدها في مكان آخر</h2>
-    <p class="section-sub">ألمانيا تعاني من نقص حاد في الكوادر التمريضية — وهذا يعني فرصة حقيقية ومستدامة لك</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">💶</div>
-        <h3>راتب يبدأ من 2,500€</h3>
-        <p>شهرياً من اليوم الأول — مع زيادات منتظمة بحسب الخبرة</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🏠</div>
-        <h3>إقامة قانونية مستقرة</h3>
-        <p>إقامة عمل رسمية من اليوم الأول — بعيداً عن القلق والتجديد السنوي</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🇩🇪</div>
-        <h3>جنسية ألمانية</h3>
-        <p>بعد 5 سنوات من العمل — جواز سفر يفتح كل الأبواب</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">👨‍👩‍👧</div>
-        <h3>لم شمل الأسرة</h3>
-        <p>حق قانوني لاصطحاب عائلتك للعيش معك في ألمانيا</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🏥</div>
-        <h3>+200,000 وظيفة شاغرة</h3>
-        <p>الطلب على الممرضين في ألمانيا يتزايد كل عام</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">📚</div>
-        <h3>تطوير مهني مستمر</h3>
-        <p>دورات تدريبية مدفوعة وفرص للتخصص والترقي</p>
-      </div>
+    <h2>ألمانيا: وجهة الممرض السوري نحو الاستقرار والازدهار</h2>
+    <div class="content-text">
+      <p>يواجه خريج التمريض في سوريا تحديات كبيرة تتمثل في ظروف العمل الصعبة، الرواتب التي لا تتناسب مع الجهد المبذول، ومحدودية فرص التطور المهني. في المقابل، تقدم ألمانيا فرصًا واعدة لآلاف الممرضين الأجانب سنويًا لسد النقص المستمر في كوادرها الصحية. براتب يبدأ من 2,800 إلى 3,200 يورو شهريًا للممرض المعترف به، بالإضافة إلى تأمين صحي واجتماعي شامل وإقامة قابلة للتحول إلى دائمة، توفر ألمانيا بيئة عمل مستقرة ومحفزة.</p>
+      <p>الاستقرار هو جوهر ما تقدمه ألمانيا: عقد عمل ألماني يضمن إقامة قانونية طويلة الأمد، إمكانية لمّ شمل الأسرة، ومسارًا واضحًا للحصول على الجنسية بعد سنوات محددة. هذه المزايا تجعل ألمانيا خيارًا لا يُضاهى مقارنة بفرص العمل الإقليمية الأخرى.</p>
     </div>
   </div>
 </section>
 
-<!-- SUCCESS STORIES -->
-<section class="stories">
+<section class="section--alt">
   <div class="container">
-    <div class="section-label">قصص نجاح حقيقية</div>
-    <h2>سوريون فتحنا لهم الباب</h2>
-    <p class="section-sub">بدأوا برحلة مشابهة لرحلتك — واليوم يعيشون ويعملون في ألمانيا</p>
-    <div class="stories-grid">
-      <div class="story-card">
-        <p>"بدأت رحلتي مع Berlin Gateway بملف واحد. اليوم أعمل في عيادة ألمانية ناجحة وأعيش باستقرار لم أحلم به."</p>
-        <span class="tag">طبيب أسنان — من الخليج إلى ألمانيا</span>
-      </div>
-      <div class="story-card">
-        <p>"كنت أعمل في الخليج بدون إقامة دائمة. Berlin Gateway ساعدني في الحصول على عقد عمل في ألمانيا خلال أشهر قليلة."</p>
-        <span class="tag">مهندس سوري — من الإمارات إلى برلين</span>
-      </div>
-    </div>
-    <div style="margin-top: 2rem; text-align: center;">
-      <a href="/ar/pflege-irak/" style="color: var(--gold); text-decoration: none; font-weight: 700;">دليل الممرضين العراقيين للعمل في ألمانيا ←</a>
+    <div class="section-label">تغطيتنا</div>
+    <h2>دعم شامل للممرضين السوريين أينما كانوا</h2>
+    <div class="content-text">
+      <p>ندرك أن الممرضين السوريين يتواجدون في مناطق جغرافية مختلفة، وأن دول الجوار مثل <strong>تركيا، لبنان، والأردن</strong> تستضيف أعدادًا كبيرة منهم. لذلك، نقدم دعمنا الشامل سواء كنت داخل سوريا أو في هذه الدول. نساعدك في تجهيز ملفك من أي مكان، ونربطك بفرص عمل في المستشفيات الألمانية التي تقدر خبرتك.</p>
+      <p><strong>داخل سوريا:</strong> نقدم إرشادات حول تصديق الوثائق من الجهات الرسمية، ونوجهك نحو مراكز اللغة المعتمدة التي تؤهلك لمستويات B1/B2. <strong>تجدر الإشارة إلى أن معهد جوته في دمشق لا يقدم حاليًا اختبارات اللغة، ويوجه المتقدمين إلى معاهد بيروت وعمّان وأربيل، مما يؤكد أهمية خيارات دول اللجوء حتى للمقيمين داخل سوريا.</strong></p>
+      <p><strong>في دول اللجوء الرئيسية (تركيا، لبنان، الأردن):</strong> نقدم دعمًا مخصصًا لإجراءات معادلة الشهادات وتصديق الوثائق بما يتناسب مع قوانين كل بلد. كما نوجهك لأفضل مراكز تعلم اللغة الألمانية الموثوقة، مثل <strong>معهد جوته في إسطنبول (تركيا)، بيروت (لبنان)، وعمّان (الأردن)</strong>.</p>
     </div>
   </div>
 </section>
 
-<!-- CONDITIONS -->
 <section>
   <div class="container">
     <div class="section-label">شروط القبول</div>
     <h2>هل أنت مؤهل؟</h2>
-    <p class="section-sub">الشروط واضحة وبسيطة — تحقق من ملفك الآن</p>
-    <table class="conditions-table">
-      <thead>
-        <tr>
-          <th>الشرط</th>
-          <th>التفاصيل</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>الشهادة</td>
-          <td>دبلوم تمريض أو بكالوريوس تمريض</td>
-        </tr>
-        <tr>
-          <td>اللغة الألمانية</td>
-          <td>B1 للبدء — B2 للعمل المباشر</td>
-        </tr>
-        <tr>
-          <td>الخبرة</td>
-          <td>سنة واحدة على الأقل في مجال التمريض</td>
-        </tr>
-        <tr>
-          <td>السجل الجنائي</td>
-          <td>نظيف بلا قيود</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- STEPS -->
-<section class="steps">
-  <div class="container">
-    <div class="section-label">كيف نعمل معك؟</div>
-    <h2>6 خطوات إلى ألمانيا</h2>
-    <p class="section-sub">نرافقك في كل خطوة — من أول ملف حتى أول يوم عمل</p>
-    <div class="steps-list">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <h3>أرسل ملفك لنا</h3>
-          <p>عبر النموذج أدناه — مجاناً وبدون أي التزام</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <h3>نقيّم ملفك خلال 48 ساعة</h3>
-          <p>فريقنا يراجع وثائقك ويحدد المسار الأنسب لك</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <h3>نجد لك صاحب عمل ألماني</h3>
-          <p>نتواصل مع مستشفيات وعيادات شريكة في ألمانيا</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-text">
-          <h3>نساعدك في الاعتراف بالشهادة</h3>
-          <p>نرشدك خلال إجراءات Anerkennung الرسمية</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-text">
-          <h3>نرافقك في إجراءات الفيزا</h3>
-          <p>نجهز ملف الفيزا كاملاً ونتابع مع السفارة</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">6</div>
-        <div class="step-text">
-          <h3>تبدأ حياة جديدة في ألمانيا 🇩🇪</h3>
-          <p>راتب كامل، إقامة قانونية، ومستقبل مستقر</p>
-        </div>
-      </div>
+    <div class="content-text">
+      <p>الشروط واضحة وبسيطة — تحقق من ملفك الآن.</p>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>الشرط</th>
+            <th>التفاصيل</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الشهادة</td>
+            <td>دبلوم تمريض أو بكالوريوس تمريض</td>
+          </tr>
+          <tr>
+            <td>اللغة الألمانية</td>
+            <td>B1 للبدء — B2 للعمل المباشر</td>
+          </tr>
+          <tr>
+            <td>الخبرة</td>
+            <td>سنة واحدة على الأقل في مجال التمريض</td>
+          </tr>
+          <tr>
+            <td>السجل الجنائي</td>
+            <td>نظيف بلا قيود</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
+<section class="section--alt">
   <div class="container">
-    <div class="section-label">ابدأ الآن</div>
-    <h2>رحلتك إلى ألمانيا تبدأ هنا</h2>
-    <p>التقييم مجاني — الفرصة حقيقية — الوقت لا ينتظر</p>
-    <a href="https://tally.so/r/68MrBP" class="btn-primary">تقدم الآن مجاناً</a>
-    <span class="cta-email">أو راسلنا مباشرة: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a></span>
+    <div class="section-label">كيف نعمل معك؟</div>
+    <h2>رحلتك معنا: خطوات واضحة نحو ألمانيا</h2>
+    <div class="content-text">
+      <p>ندرك أن مسار الهجرة المهنية قد يبدو معقدًا، ولكننا هنا لتبسيطه لك. سواء كنت داخل سوريا أو في إحدى دول اللجوء، نقدم لك خطة عمل واضحة ومراحل محددة لضمان تقدمك بثقة نحو هدفك.</p>
+
+      <h3>المرحلة 1: التقييم الأولي وتجهيز الملف (2-4 أسابيع)</h3>
+      <ul>
+        <li><strong>داخل سوريا:</strong> نساعدك في جمع الوثائق الأساسية وإرشادك حول كيفية تصديقها من الجهات الرسمية. نبدأ بتقييم مؤهلاتك وخبراتك لتحديد أفضل مسار لك.</li>
+        <li><strong>في دول اللجوء:</strong> نقدم لك الدعم في معادلة الشهادات وتصديق الوثائق بما يتناسب مع قوانين بلد إقامتك، مع تقييم شامل لملفك.</li>
+      </ul>
+
+      <h3>المرحلة 2: إتقان اللغة الألمانية (6-12 شهرًا)</h3>
+      <ul>
+        <li>نقدم لك إرشادات حول أفضل مراكز اللغة المعتمدة (مثل معاهد جوته) التي تؤهلك لمستويات B1/B2، وهي ضرورية للعمل والاندماج في ألمانيا. يمكن البدء بهذه المرحلة بالتوازي مع المرحلة الأولى.</li>
+      </ul>
+
+      <h3>المرحلة 3: معادلة المؤهل والبحث عن عمل (3-5 أشهر)</h3>
+      <ul>
+        <li>بعد إتقان اللغة وتجهيز الوثائق، نساعدك في تقديم طلب معادلة مؤهلك التمريضي (Anerkennung) في الولاية الألمانية المناسبة. بالتوازي، نبدأ البحث عن فرص عمل تتناسب مع خبراتك ومؤهلاتك في المستشفيات والعيادات الألمانية.</li>
+      </ul>
+
+      <h3>المرحلة 4: تأشيرة الاعتراف والرحيل إلى ألمانيا (2-4 أشهر)</h3>
+      <ul>
+        <li>ندعمك في إجراءات الحصول على تأشيرة الاعتراف بالمؤهلات المهنية الأجنبية (المادة 16d). بعد الحصول على التأشيرة، تكون جاهزًا للانتقال إلى ألمانيا وبدء فصل جديد في حياتك المهنية.</li>
+      </ul>
+
+      <h3>المرحلة 5: التأهيل والاندماج في ألمانيا (6-12 شهرًا)</h3>
+      <ul>
+        <li>بعد وصولك، نواصل دعمك خلال فترة التأهيل العملي (Anpassungslehrgang) واجتياز اختبار اللغة المهنية (Fachsprachenprüfung) للحصول على الاعتراف الكامل بمؤهلك. نساعدك أيضًا في الاندماج في بيئة العمل والمجتمع الألماني.</li>
+      </ul>
+    </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="content-text">
+      <p>إن مسار الهجرة المهنية إلى ألمانيا يتطلب تخطيطًا دقيقًا ودعمًا متخصصًا. في Berlin Gateway، نلتزم بتقديم الإرشاد الشامل والحلول العملية للممرضين السوريين، لضمان انتقال سلس وناجح نحو مستقبل مهني مشرق في قلب أوروبا. قصتك التالية تبدأ هنا، ونحن جاهزون لمرافقتك في كل خطوة.</p>
+    </div>
+
+    <div class="internal-links">
+      <a href="/ar/pflege" class="link-card">
+        <h4>الدليل العام</h4>
+        <p>التمريض في ألمانيا ←</p>
+      </a>
+      <a href="/ar/pflege-irak/" class="link-card">
+        <h4>نماذج مشابهة</h4>
+        <p>التمريض للعراقيين في ألمانيا ←</p>
+      </a>
+      <a href="/ar/pflege-jordanien/" class="link-card">
+        <h4>نماذج مشابهة</h4>
+        <p>التمريض للأردنيين في ألمانيا ←</p>
+      </a>
+      <a href="/ar/pflege-golf/" class="link-card">
+        <h4>نماذج مشابهة</h4>
+        <p>التمريض للمقيمين في الخليج ←</p>
+      </a>
+    </div>
+
+    <div class="cta-block">
+      <h2>جاهز لتقييم فرصتك؟</h2>
+      <p>أجب عن 5 أسئلة سريعة لمعرفة مدى أهليتك للعمل كممرض في ألمانيا.</p>
+      <a href="/ar/assessment" class="cta-btn-white">ابدأ التقييم المجاني الآن</a>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Berlin Gateway — جميع الحقوق محفوظة |
-    <a href="/ar/">الرئيسية</a> |
-    <a href="/ar/pflege">التمريض</a> |
-    <a href="mailto:info@berlingateway.de">تواصل معنا</a>
-  </p>
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__brand">Berlin Gateway</div>
+      <div class="footer__tagline">بوابتك الموثوقة للعمل والاستقرار في ألمانيا. نرافقك من خطوتك الأولى وحتى اندماجك الكامل في النظام الصحي الألماني.</div>
+    </div>
+    <div>
+      <h4>الخدمات</h4>
+      <a href="/ar/aerzte">للأطباء</a>
+      <a href="/ar/pflege">للممرضين</a>
+      <a href="/ar/chancenkarte">بطاقة الفرص</a>
+    </div>
+    <div>
+      <h4>معلومات</h4>
+      <a href="/ar/systemlogik">فهم النظام</a>
+      <a href="/ar/voraussetzungen">المتطلبات</a>
+      <a href="/ar/success-stories">قصص نجاح</a>
+    </div>
+    <div>
+      <h4>تواصل معنا</h4>
+      <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+      <a href="/ar/impressum">Imprint</a>
+      <a href="/ar/datenschutz">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    &copy; 2026 Berlin Gateway. جميع الحقوق محفوظة.
+  </div>
 </footer>
 
 </body>

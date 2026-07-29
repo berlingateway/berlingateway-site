@@ -1,0 +1,38 @@
+[1mdiff --git a/sitemap.xml b/sitemap.xml[m
+[1mindex 84cf41d..1b447f5 100644[m
+[1m--- a/sitemap.xml[m
+[1m+++ b/sitemap.xml[m
+[36m@@ -33,7 +33,7 @@[m
+     <priority>0.9</priority>[m
+   </url>[m
+   <url>[m
+[31m-    <loc>https://berlingateway.de/ar/anerkennung</loc>[m
+[32m+[m[32m    <loc>https://berlingateway.de/ar/anerkennung/</loc>[m
+     <lastmod>2026-06-19</lastmod>[m
+     <changefreq>monthly</changefreq>[m
+     <priority>0.9</priority>[m
+[36m@@ -239,13 +239,13 @@[m
+ [m
+   <!-- ═══ ARABIC SUPPORT PAGES ════════════════════════════ -->[m
+   <url>[m
+[31m-    <loc>https://berlingateway.de/ar/voraussetzungen</loc>[m
+[32m+[m[32m    <loc>https://berlingateway.de/ar/voraussetzungen.html</loc>[m
+     <lastmod>2026-06-19</lastmod>[m
+     <changefreq>monthly</changefreq>[m
+     <priority>0.7</priority>[m
+   </url>[m
+   <url>[m
+[31m-    <loc>https://berlingateway.de/ar/systemlogik</loc>[m
+[32m+[m[32m    <loc>https://berlingateway.de/ar/systemlogik.html</loc>[m
+     <lastmod>2026-07-04</lastmod>[m
+     <changefreq>monthly</changefreq>[m
+     <priority>0.7</priority>[m
+[36m@@ -419,7 +419,7 @@[m
+     <priority>0.7</priority>[m
+   </url>[m
+   <url>[m
+[31m-    <loc>https://berlingateway.de/de/visa</loc>[m
+[32m+[m[32m    <loc>https://berlingateway.de/de/visa.html</loc>[m
+     <lastmod>2026-06-20</lastmod>[m
+     <changefreq>monthly</changefreq>[m
+     <priority>0.7</priority>[m

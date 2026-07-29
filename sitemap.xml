@@ -33,7 +33,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/anerkennung</loc>
+    <loc>https://berlingateway.de/ar/anerkennung/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -239,13 +239,13 @@
 
   <!-- ═══ ARABIC SUPPORT PAGES ════════════════════════════ -->
   <url>
-    <loc>https://berlingateway.de/ar/voraussetzungen</loc>
+    <loc>https://berlingateway.de/ar/voraussetzungen.html</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/systemlogik</loc>
+    <loc>https://berlingateway.de/ar/systemlogik.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -419,7 +419,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/visa</loc>
+    <loc>https://berlingateway.de/de/visa.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

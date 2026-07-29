@@ -10,7 +10,11 @@
 /comments/feed/         /               301
 /feed/                  /               301
 
-# EN redirects
+# EN redirects — Exceptions for English nursing pages
+/en/nurses-philippines/ /en/nurses-philippines/ 200
+/en/nurses-indonesia/   /en/nurses-indonesia/   200
+
+# EN redirects — General
 /en/assessment          /de/assessment/  301
 /en/chancenkarte.html   /de/chancenkarte/ 301
 /en/monitor.html        /en/monitor/     301

@@ -720,6 +720,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://berlingateway.de/en/nurses-philippines/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://berlingateway.de/en/nurses-indonesia/</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- ═══ FRENCH ═══════════════════════════════════════════ -->
   <url>

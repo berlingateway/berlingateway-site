@@ -27,7 +27,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/ar/visa</loc>
+    <loc>https://berlingateway.de/ar/visa/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -413,7 +413,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/anerkennung</loc>
+    <loc>https://berlingateway.de/de/anerkennung/</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -495,13 +495,13 @@
 
   <!-- ═══ GERMAN SUPPORT PAGES ════════════════════════════ -->
   <url>
-    <loc>https://berlingateway.de/de/voraussetzungen</loc>
+    <loc>https://berlingateway.de/de/voraussetzungen/</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/de/systemlogik</loc>
+    <loc>https://berlingateway.de/de/systemlogik.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -566,12 +566,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
-    <loc>https://berlingateway.de/de/orientierung</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+
   <url>
     <loc>https://berlingateway.de/de/top-10-mistakes</loc>
     <lastmod>2026-06-20</lastmod>
@@ -631,7 +626,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/berlin-visa-requirements</loc>
+    <loc>https://berlingateway.de/en/berlin-visa-requirements.html</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

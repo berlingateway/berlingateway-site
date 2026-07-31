@@ -71,7 +71,7 @@
 
   <!-- ═══ ARABIC PFLEGE CLUSTER ════════════════════════════ -->
   <url>
-    <loc>https://berlingateway.de/ar/pflege-syrien</loc>
+    <loc>https://berlingateway.de/ar/pflege-syrien.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -662,13 +662,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/nursing</loc>
+    <loc>https://berlingateway.de/en/nursing/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/nurses-gulf</loc>
+    <loc>https://berlingateway.de/en/nurses-gulf/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -692,7 +692,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://berlingateway.de/en/pflege-aegypten</loc>
+    <loc>https://berlingateway.de/en/pflege-aegypten/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

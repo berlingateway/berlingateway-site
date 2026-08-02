@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seite nicht gefunden - Berlin Gateway</title>
+  <meta name="description" content="Die Seite, die Sie suchen, wurde nicht gefunden. Sie können zur Startseite zurückkehren oder eine kostenlose Bewertung starten." />
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0B1F3A;
+      --navy-light: #1a2a4a;
+      --gold: #C9A84C;
+      --gold-light: #e8c97a;
+      --white: #ffffff;
+      --grey: #9ca3af;
+      --card-bg: #1a2235;
+      --border: #1e2d45;
+      --text-main: #0D1117;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text-main);
+      direction: ltr;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* TOP BAND */
+    .top-band { background: #0B1F3A; color: #FFFFFF; padding: 10px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+
+    /* HEADER */
+    .header { background: #FFFFFF; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; }
+    .brand span { color: #0B3B8C; }
+    .nav { display: flex; align-items: center; gap: 0; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-left: 24px; font-weight: 500; }
+    .nav-cta { background: #0B1F3A; color: #FFFFFF !important; padding: 8px 18px; border-radius: 6px; font-weight: 600 !important; margin-left: 0 !important; }
+
+    /* 404 HERO */
+    .hero-404 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      background: var(--navy);
+      text-align: center;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-404::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center top, rgba(11,59,140,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-404-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    .hero-404 h1 {
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 1rem;
+      color: #93C5FD;
+    }
+
+    .hero-404 h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .hero-404 p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .link-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .link-item:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .link-item.primary {
+      background: var(--white);
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .link-item.primary:hover {
+      background: #f8f9fa;
+    }
+
+    /* FOOTER */
+    .footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 56px 24px 32px; margin-top: auto; }
+    .footer__grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; text-align: left; }
+    .footer__brand { font-size: 16px; font-weight: 700; color: #FFFFFF; margin-bottom: 10px; }
+    .footer__tagline { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+    .footer h4 { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+    .footer a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; margin-bottom: 8px; }
+    .footer__bottom { max-width: 1080px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 12px; }
+
+    @media (max-width: 768px) {
+      .nav a:not(.nav-cta) { display: none; }
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-band">
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <span style="opacity:.5">In Deutschland ansässig</span>
+      <a href="/ar/" class="lang-badge">العربية</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/de/" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/de/success-stories">Erfolgsgeschichten</a>
+      <a href="/de/chancenkarte.html">Chancenkarte</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflege/">Pflege</a>
+      <a href="/de/systemlogik">Das System</a>
+      <a href="/de/voraussetzungen">Voraussetzungen</a>
+      <a href="/de/assessment/" class="nav-cta">Kostenlose Bewertung</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-404">
+  <div class="hero-404-content">
+    <h1>404</h1>
+    <h2>Entschuldigung, die gesuchte Seite wurde nicht gefunden.</h2>
+    <p>Der von Ihnen verwendete Link ist möglicherweise fehlerhaft, oder die Seite wurde verschoben oder gelöscht. Keine Sorge, Sie können zur Startseite zurückkehren oder die unten stehenden Links erkunden.</p>
+    
+    <div class="links-grid">
+      <a href="/de/assessment/" class="link-item primary">
+        Kostenlose Bewertung starten <span>→</span>
+      </a>
+      <a href="/" class="link-item">
+        Zur Startseite <span>→</span>
+      </a>
+      <a href="/de/pflege/" class="link-item">
+        Pflege in Deutschland <span>→</span>
+      </a>
+      <a href="/de/anerkennung/" class="link-item">
+        Anerkennung von Abschlüssen <span>→</span>
+      </a>
+      <a href="/de/chancenkarte.html" class="link-item">
+        Chancenkarte <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__brand">Berlin Gateway</div>
+      <div class="footer__tagline">Ihr zuverlässiges Tor zu Arbeit und Leben in Deutschland. Wir arbeiten innerhalb des deutschen Gesundheitssystems, um einen sicheren und transparenten Weg für medizinisches Fachpersonal zu gewährleisten.</div>
+    </div>
+    <div>
+      <h4>Dienstleistungen</h4>
+      <a href="/de/assessment/">Kostenlose Bewertung</a>
+      <a href="/de/aerzte">Für Ärzte</a>
+      <a href="/de/pflege/">Für Pflegekräfte</a>
+    </div>
+    <div>
+      <h4>Informationen</h4>
+      <a href="/de/systemlogik">Wie wir arbeiten</a>
+      <a href="/de/voraussetzungen">Voraussetzungen</a>
+      <a href="/de/chancenkarte.html">Chancenkarte</a>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <a href="mailto:info@berlingateway.de">info@berlingateway.de</a>
+      <a href="/de/impressum/">Impressum</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    © 2026 Berlin Gateway. Alle Rechte vorbehalten.
+  </div>
+</footer>
+
+</body>
+</html>

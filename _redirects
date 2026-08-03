@@ -1,31 +1,37 @@
-# Index pages
+# ==========================================
+# BERLIN GATEWAY — GLOBAL REDIRECT RULES
+# ==========================================
+
+# 1. Root & Index Handling
+/                       /ar/             302
 /de/index.html          /de/             301
 /de/index               /de/             301
 /ar/index.html          /ar/             301
 /ar/index               /ar/             301
-/ar/index.html          /ar/             301
 
-# Impressum & misc
+# 2. Legal & Misc
 /impressum/             /de/impressum/   301
-/comments/feed/         /               301
-/feed/                  /               301
+/impressum              /de/impressum/   301
+/ar/impressum.html      /ar/impressum/   301
+/de/impressum.html      /de/impressum/   301
+/comments/feed/         /                301
+/feed/                  /                301
 
-# EN redirects — Exceptions for English nursing pages
+# 3. English (EN) Cluster — Exceptions & Redirects
 /en/nurses-philippines/ /en/nurses-philippines/ 200
 /en/nurses-indonesia/   /en/nurses-indonesia/   200
-
-# EN redirects — General
+/en/nurses-tunisia/     /en/nurses-tunisia/     200
 /en/assessment          /de/assessment/  301
 /en/chancenkarte.html   /de/chancenkarte/ 301
 /en/monitor.html        /en/monitor/     301
 /en/systemlogic.html    /en/systemlogik/ 301
 
-# DE .html → clean URL with slash
+# 4. German (DE) — Clean URL Architecture (.html -> /)
 /de/anerkennung.html    /de/anerkennung/    301
 /de/assessment.html     /de/assessment/     301
 /de/apply.html          /de/apply/          301
 /de/chancenkarte.html   /de/chancenkarte/   301
-/de/systemlogik/    /de/systemlogik.html    301
+/de/systemlogik.html    /de/systemlogik/    301
 /de/monitor.html        /de/monitor/        301
 /de/insights.html       /de/insights/       301
 /de/voraussetzungen.html /de/voraussetzungen/ 301
@@ -33,8 +39,10 @@
 /de/aerzte.html         /de/aerzte/         301
 /de/orientierung.html   /de/orientierung/   301
 /de/framework.html      /de/framework/      301
+/de/framework           /de/systemlogik/    301
+/de/insights/arbeit-in-deutschland /de/assessment/ 301
 
-# AR .html → clean URL with slash
+# 5. Arabic (AR) — Clean URL Architecture (.html -> /)
 /ar/assessment.html     /ar/assessment/     301
 /ar/apply.html          /ar/apply/          301
 /ar/chancenkarte.html   /ar/chancenkarte/   301
@@ -44,13 +52,32 @@
 /ar/voraussetzungen.html /ar/voraussetzungen/ 301
 /ar/visa.html           /ar/visa/           301
 /ar/aerzte.html         /ar/aerzte/         301
-/ar/framework.html      /ar/systemlogik/    301
+/ar/anerkennung.html     /ar/anerkennung/    301
+/ar/success-stories.html /ar/success-stories/ 301
+/ar/thankyou.html        /ar/thankyou/       301
+
+# 6. Arabic Nursing Cluster
+/ar/pflege-syrien.html   /ar/pflege-syrien/   301
+/ar/pflege-irak.html     /ar/pflege-irak/     301
+/ar/pflege-jordanien.html /ar/pflege-jordanien/ 301
+/ar/pflege-golf.html     /ar/pflege-golf/     301
+/ar/pflege-aegypten.html /ar/pflege-aegypten/ 301
+/ar/pflege-algerien.html /ar/pflege-algerien/ 301
+/ar/pflege-marokko.html  /ar/pflege-marokko/  301
+/ar/pflege-tunesien.html /ar/pflege-tunesien/ 301
+
+# 7. Arabic Insights Cluster
+/ar/insights/تجنس-ألمانيا.html            /ar/insights/تجنس-ألمانيا/            301
+/ar/insights/إقامة-دائمة-ألمانيا.html      /ar/insights/إقامة-دائمة-ألمانيا/      301
+/ar/insights/تعليم-الأبناء-ألمانيا.html     /ar/insights/تعليم-الأبناء-ألمانيا/     301
+/ar/insights/راتب-طبيب-ألمانيا.html        /ar/insights/راتب-طبيب-ألمانيا/        301
+/ar/insights/راتب-ممرض-ألمانيا.html        /ar/insights/راتب-ممرض-ألمانيا/        301
+/ar/insights/راتب-مهندس-ألمانيا.html       /ar/insights/راتب-مهندس-ألمانيا/       301
+/ar/insights/شرح-النظام.html              /ar/insights/شرح-النظام/              301
+/ar/insights/أخطاء-المتقدمين.html          /ar/insights/أخطاء-المتقدمين/          301
+/ar/insights/التكوين-المهني-المانيا.html    /ar/insights/التكوين-المهني-المانيا/    301
+
+# 8. Alias & Legacy
+/ar/framework           /ar/systemlogik/    301
 /ar/eligibility.html    /ar/chancenkarte/   301
 /ar/إرسال-التقارير-الطبية.html /ar/إرسال-التقارير-الطبية/ 301
-/ar/anerkennung.html     /ar/anerkennung/    301
-/ar/pflege-algerien.html /ar/pflege-algerien/ 301
-
-# Framework → Systemlogik (surgical)
-/de/framework           /de/systemlogik/    301
-/ar/framework           /ar/systemlogik/    301
-/de/insights/arbeit-in-deutschland /de/assessment/ 301

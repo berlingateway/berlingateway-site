@@ -1,12 +1,56 @@
-<!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Berlin Gateway</title>
-    <link rel="canonical" href="https://berlingateway.de/index">
-  <meta http-equiv="refresh" content="0; url=/de/" />
-  <script>location.replace('/de/');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berlin Gateway | Choose Language</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0B3B8C; --dark: #0B1F3A; --white: #FFFFFF; --bg: #0D1117; --card-bg: #161B22; --border: #30363D; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', sans-serif; background: var(--bg); color: var(--white); display: flex; flex-direction: column; min-height: 100vh; align-items: center; justify-content: center; padding: 20px; }
+    .logo { font-size: 28px; font-weight: 800; margin-bottom: 40px; text-decoration: none; color: var(--white); }
+    .logo span { color: #3b82f6; }
+    .title { font-size: 18px; color: #8b949e; margin-bottom: 40px; text-align: center; font-weight: 400; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 100%; max-width: 1000px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-decoration: none; color: var(--white); transition: all 0.2s ease; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .card:hover { border-color: #8b949e; transform: translateY(-4px); background: #1c2128; }
+    .card h2 { font-size: 24px; margin-bottom: 12px; font-weight: 600; }
+    .card p { font-size: 14px; color: #8b949e; margin-bottom: 24px; line-height: 1.5; }
+    .card .btn { font-size: 14px; font-weight: 600; color: #58a6ff; display: flex; align-items: center; gap: 8px; }
+    .rtl { direction: rtl; font-family: 'IBM Plex Sans Arabic', sans-serif; }
+    @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body></body>
+<body>
+
+  <a href="/" class="logo">BERLIN<span>GATEWAY</span></a>
+  
+  <h1 class="title">Choose your path / اختر مسارك / Wählen Sie Ihren Weg</h1>
+
+  <div class="grid">
+    <!-- Arabic -->
+    <a href="/ar/" class="card rtl">
+      <h2>العربية</h2>
+      <p>دليلك الشامل للعمل والدراسة والعيش في ألمانيا من داخل النظام الألماني.</p>
+      <span class="btn">دخول ←</span>
+    </a>
+
+    <!-- German -->
+    <a href="/de/" class="card">
+      <h2>Deutsch</h2>
+      <p>Ihr institutionelles Gateway für Fachkräfte und akademische Integration in Deutschland.</p>
+      <span class="btn">Eintreten ←</span>
+    </a>
+
+    <!-- English -->
+    <a href="/en/nursing/" class="card">
+      <h2>English</h2>
+      <p>Institutional gateway to the German labor market for international professionals.</p>
+      <span class="btn">Enter ←</span>
+    </a>
+  </div>
+
+</body>
 </html>

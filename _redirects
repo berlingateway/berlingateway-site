@@ -3,7 +3,7 @@
 # ==========================================
 
 # 1. Root & Index Handling
-/                       /ar/             302
+# Root / serves index.html (Language Selector) - No redirect needed
 /de/index.html          /de/             301
 /de/index               /de/             301
 /ar/index.html          /ar/             301
@@ -17,10 +17,7 @@
 /comments/feed/         /                301
 /feed/                  /                301
 
-# 3. English (EN) Cluster — Exceptions & Redirects
-/en/nurses-philippines/ /en/nurses-philippines/ 200
-/en/nurses-indonesia/   /en/nurses-indonesia/   200
-/en/nurses-tunisia/     /en/nurses-tunisia/     200
+# 3. English (EN) Cluster — Redirects
 /en/assessment          /de/assessment/  301
 /en/chancenkarte.html   /de/chancenkarte/ 301
 /en/monitor.html        /en/monitor/     301
@@ -53,7 +50,6 @@
 /ar/visa.html           /ar/visa/           301
 /ar/aerzte.html         /ar/aerzte/         301
 /ar/anerkennung.html     /ar/anerkennung/    301
-/ar/success-stories.html /ar/success-stories/ 301
 /ar/thankyou.html        /ar/thankyou/       301
 
 # 6. Arabic Nursing Cluster

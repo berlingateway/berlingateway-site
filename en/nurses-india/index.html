@@ -530,3 +530,20 @@
 }
 </script>
 
+<script>
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('.faq-icon');
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(function(a){ a.classList.remove('open'); });
+  document.querySelectorAll('.faq-icon').forEach(function(i){ i.classList.remove('open'); i.textContent = '+'; });
+  if (!isOpen) {
+    answer.classList.add('open');
+    icon.classList.add('open');
+    icon.textContent = '×';
+  }
+}
+</script>
+
+</body>
+</html>

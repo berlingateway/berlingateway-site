@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work, Train &amp; Study in Germany | Berlin Gateway</title>
+  <meta name="description" content="Berlin Gateway helps nurses, engineers, and skilled professionals from Arab countries and beyond build a career in Germany — recognition, visas, language, and job placement, guided by experts in Berlin.">
+  <link rel="canonical" href="https://berlingateway.de/en/">
+  <link rel="alternate" hreflang="en" href="https://berlingateway.de/en/">
+  <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/">
+  <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: #0D1117; background: #fff; }
+
+    .top-band { background: #0B1F3A; color: rgba(255,255,255,0.75); padding: 9px 0; font-size: 13px; }
+    .top-band__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .top-band a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .lang-badge { background: rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 4px; font-size: 12px; }
+
+    .header { background: #fff; border-bottom: 1px solid #E5E7EB; padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+    .header__inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 18px; font-weight: 700; color: #0D1117; text-decoration: none; }
+    .brand span { color: #0B3B8C; }
+    .nav a { color: #374151; text-decoration: none; font-size: 14px; margin-left: 24px; font-weight: 500; }
+    .nav-cta { background: #0B1F3A; color: #fff !important; padding: 8px 18px; border-radius: 6px; font-weight: 600 !important; }
+
+    .hero { background: #0B1F3A; padding: 80px 24px 72px; text-align: center; }
+    .hero__badge { display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 20px; margin-bottom: 28px; }
+    .hero h1 { color: #fff; font-size: clamp(28px, 5vw, 52px); font-weight: 900; line-height: 1.1; max-width: 760px; margin: 0 auto 18px; }
+    .hero h1 em { font-style: normal; color: #93C5FD; }
+    .hero__sub { color: rgba(255,255,255,0.65); font-size: 18px; max-width: 580px; margin: 0 auto 40px; line-height: 1.8; font-weight: 300; }
+    .hero__cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: #C9A84C; color: #0B1F3A; padding: 15px 36px; border-radius: 8px; font-weight: 700; font-size: 16px; text-decoration: none; display: inline-block; }
+    .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; padding: 15px 36px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-block; border: 1px solid rgba(255,255,255,0.2); }
+
+    .trust { background: #F8F9FA; border-bottom: 1px solid #E5E7EB; padding: 18px 24px; }
+    .trust__inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #374151; font-weight: 600; }
+    .trust-item span { color: #15803D; }
+
+    .section { max-width: 1080px; margin: 0 auto; padding: 72px 24px; }
+    .section h2 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 800; color: #0B1F3A; text-align: center; margin-bottom: 12px; }
+    .section__sub { text-align: center; color: #6B7280; font-size: 16px; max-width: 600px; margin: 0 auto 48px; line-height: 1.7; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card { border: 1px solid #E5E7EB; border-radius: 10px; padding: 28px 24px; text-decoration: none; color: inherit; transition: box-shadow .2s, border-color .2s; }
+    .card:hover { border-color: #0B3B8C; box-shadow: 0 4px 16px rgba(11,31,58,0.08); }
+    .card__eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C9A84C; margin-bottom: 10px; }
+    .card h3 { font-size: 18px; font-weight: 700; color: #0B1F3A; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: #6B7280; line-height: 1.6; }
+
+    .band-dark { background: #0B1F3A; padding: 64px 24px; text-align: center; }
+    .band-dark h2 { color: #fff; font-size: clamp(22px, 3vw, 30px); font-weight: 800; margin-bottom: 16px; }
+    .band-dark p { color: rgba(255,255,255,0.65); max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
+
+    footer { background: #0D1117; color: rgba(255,255,255,0.5); padding: 40px 24px; text-align: center; font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="top-band">
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="/ar/" class="lang-badge">العربية</a>
+      <span style="opacity:.5">Experts in Berlin</span>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/en" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav">
+      <a href="/en/nursing/">Nursing</a>
+      <a href="/en/jobs-in-germany.html">Jobs</a>
+      <a href="/en/study-in-germany.html">Study</a>
+      <a href="mailto:info@berlingateway.de" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__badge">Berlin Gateway — Your Path to Germany</div>
+  <h1>Work, Train &amp; Study<br>in <em>Germany</em></h1>
+  <p class="hero__sub">Berlin Gateway guides nurses, engineers, and skilled professionals from across the Arab world and beyond through recognition, language, visas, and job placement — with a team based in Berlin.</p>
+  <div class="hero__cta-group">
+    <a href="mailto:info@berlingateway.de" class="btn-primary">Send Your CV Now</a>
+    <a href="https://wa.me/4915781497451" class="btn-secondary">WhatsApp Us</a>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust__inner">
+    <div class="trust-item"><span>✓</span> Vocational diplomas recognized</div>
+    <div class="trust-item"><span>✓</span> University degrees accepted</div>
+    <div class="trust-item"><span>✓</span> All nationalities welcome</div>
+    <div class="trust-item"><span>✓</span> Experts based in Berlin</div>
+  </div>
+</div>
+
+<section class="section">
+  <h2>Explore by Pathway</h2>
+  <p class="section__sub">Choose the route that fits your profession and background — each guide covers recognition, timelines, and what to expect.</p>
+  <div class="card-grid">
+    <a class="card" href="/en/nursing/">
+      <div class="card__eyebrow">Profession</div>
+      <h3>Nursing in Germany</h3>
+      <p>Complete guide for nurses — vocational diploma or university degree, all countries.</p>
+    </a>
+    <a class="card" href="/en/nurses-gulf/">
+      <div class="card__eyebrow">Region</div>
+      <h3>Nurses from the Gulf</h3>
+      <p>Pathways for GCC-licensed nurses moving to the German healthcare system.</p>
+    </a>
+    <a class="card" href="/en/ausbildung-in-germany.html">
+      <div class="card__eyebrow">Vocational Training</div>
+      <h3>Ausbildung in Germany</h3>
+      <p>Dual vocational training routes for young professionals and career starters.</p>
+    </a>
+    <a class="card" href="/en/study-in-germany.html">
+      <div class="card__eyebrow">Education</div>
+      <h3>Study in Germany</h3>
+      <p>University pathways, language requirements, and how to apply from abroad.</p>
+    </a>
+    <a class="card" href="/en/jobs-in-germany.html">
+      <div class="card__eyebrow">Employment</div>
+      <h3>Jobs in Germany</h3>
+      <p>How Berlin Gateway matches qualified candidates with verified employers.</p>
+    </a>
+    <a class="card" href="/en/chancenkarte-from-gulf.html">
+      <div class="card__eyebrow">Immigration</div>
+      <h3>Chancenkarte (Opportunity Card)</h3>
+      <p>Germany's points-based work-seeker visa, explained for Gulf applicants.</p>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Practical Guides</h2>
+  <p class="section__sub">Everything you need before and after arrival.</p>
+  <div class="card-grid">
+    <a class="card" href="/en/visa-germany.html">
+      <div class="card__eyebrow">Visa</div>
+      <h3>Germany Visa Requirements</h3>
+      <p>Document checklists and application steps for work and training visas.</p>
+    </a>
+    <a class="card" href="/en/berlin-visa-requirements.html">
+      <div class="card__eyebrow">Visa</div>
+      <h3>Berlin Visa Requirements</h3>
+      <p>City-specific requirements and appointment guidance for Berlin applicants.</p>
+    </a>
+    <a class="card" href="/en/cost-of-living-germany.html">
+      <div class="card__eyebrow">Living</div>
+      <h3>Cost of Living in Germany</h3>
+      <p>Realistic monthly budgets for housing, food, insurance, and transport.</p>
+    </a>
+    <a class="card" href="/en/send-medical-reports.html">
+      <div class="card__eyebrow">Documents</div>
+      <h3>Send Your Medical Reports</h3>
+      <p>How to securely share qualification and health documents with our team.</p>
+    </a>
+    <a class="card" href="/en/success-stories/">
+      <div class="card__eyebrow">Community</div>
+      <h3>Success Stories</h3>
+      <p>Real placements — nurses, engineers, and professionals now working in Germany.</p>
+    </a>
+  </div>
+</section>
+
+<div class="band-dark">
+  <h2>Ready to start your journey to Germany?</h2>
+  <p>Send your CV and qualifications — our Berlin-based team will review your case and outline the fastest realistic pathway.</p>
+  <a href="mailto:info@berlingateway.de" class="btn-primary">Send Your CV Now</a>
+</div>
+
+<footer>
+  <p>© 2026 Berlin Gateway · Berlin, Germany · <a href="mailto:info@berlingateway.de">info@berlingateway.de</a></p>
+</footer>
+
+</body>
+</html>

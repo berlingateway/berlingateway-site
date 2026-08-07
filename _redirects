@@ -75,8 +75,8 @@
 # 8. Alias & Legacy
 /ar/insights/arbeiten-in-deutschland.html /ar/insights/arbeit-in-deutschland.html 301
 /de/ausbildung-in-deutschland.html /de/ausbildung.html 301
-/de/bg-master-template-v1/ /de/bg-master-template-v1 410
-/de/bg-master-template-v1 /de/bg-master-template-v1 410
+/de/bg-master-template-v1/ /de/404.html 404
+/de/bg-master-template-v1 /de/404.html 404
 /ar/framework           /ar/systemlogik/    301
 /ar/eligibility.html    /ar/chancenkarte/   301
 /ar/إرسال-التقارير-الطبية.html /ar/إرسال-التقارير-الطبية/ 301

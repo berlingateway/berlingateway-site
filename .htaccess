@@ -24,6 +24,7 @@
   RewriteRule ^ar/insights/arbeiten-in-deutschland\.html$ /ar/insights/arbeit-in-deutschland.html [R=301,L]
   RewriteRule ^de/ausbildung-in-deutschland\.html$ /de/ausbildung.html [R=301,L]
   RewriteRule ^de/visa\.html$ /de/visum-deutschland.html [R=301,L]
+  RewriteRule ^de/bg-master-template-v1/?$ - [G,L]
 
   # Combined WWW to non-WWW and HTTP to HTTPS redirect
   RewriteCond %{HTTPS} off [OR]

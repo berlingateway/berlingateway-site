@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anerkennung & Onboarding internationaler Fachkräfte — Berlin Gateway</title>
-  <meta name="description" content="Wir managen den gesamten Anerkennungsprozess und begleiten das Onboarding Ihrer neuen Mitarbeiter aus dem Ausland. Strukturiert und rechtssicher.">
+  <meta name="description" content="Wir managen den gesamten Anerkennungsprozess und begleiten das Onboarding Ihrer neuen Mitarbeiter aus dem Ausland. Strukturiert und nachvollziehbar.">
   <link rel="canonical" href="https://berlingateway.de/de/unternehmen/anerkennung-onboarding/">
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <style>
@@ -18,7 +18,7 @@
     .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
     .brand span{color:#b8902a}
     .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
-    .nav-cta{background:#b8902a;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:0 !important}
+    .nav-cta{background:#b8902a;color:#0f1f35 !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:24px;text-decoration:none;font-size:14px;}
     .inner{max-width:800px;margin:0 auto}
     .section{padding:80px 24px}
     .section--alt{background:#F8F9FA}
@@ -32,17 +32,44 @@
     .process-content h3{font-size:18px;font-weight:700;margin-bottom:8px;color:#0B1F3A}
     .process-content p{font-size:15px;color:#6B7280;line-height:1.6}
     
-    .cta-box{background:#0B1F3A;border-radius:12px;padding:48px;text-align:center;color:#FFFFFF;margin-top:64px}
-    .cta-box h2{color:#FFFFFF;margin-bottom:16px}
-    .cta-box p{color:rgba(255,255,255,0.7);margin-bottom:32px}
-    .cta-btn{display:inline-block;background:#b8902a;color:#FFFFFF;padding:16px 36px;border-radius:6px;font-weight:700;text-decoration:none}
-    
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .btn--primary {
+      background: #b8902a;
+      color: white;
+    }
+
+    .btn--primary:hover {
+      background: #a67f25;
+    }
+
+    .btn--outline {
+      border: 2px solid #ddd;
+      color: #0f1f35;
+    }
+
+    .btn--outline:hover {
+      border-color: #b8902a;
+    }
+
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:60px 24px;text-align:center;font-size:14px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
     
     @media(max-width:640px){
       .nav a:not(.nav-cta){display:none}
-      .cta-box{padding:32px 24px}
     }
   </style>
 </head>
@@ -53,7 +80,7 @@
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="/ar/" class="lang-badge">العربية</a>
-      <span style="opacity:.5">B2B Service Layer</span>
+      <span style="opacity:.5">Berlin Gateway — B2B Service Layer</span>
     </div>
   </div>
 </div>
@@ -64,16 +91,16 @@
     <nav class="nav">
       <a href="/de/unternehmen/internationale-fachkraefte/">Übersicht</a>
       <a href="/de/unternehmen/pflege/">Pflege-Recruiting</a>
-      <a href="/de/unternehmen/internationale-fachkraefte/#kontakt" class="nav-cta">Anfrage stellen</a>
+      <a href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20internationale%20Fachkräfte" class="nav-cta">Personalbedarf besprechen</a>
     </nav>
   </div>
 </header>
 
 <section class="section">
   <div class="inner">
-    <p class="section-label">Anerkennung & Onboarding</p>
-    <h2>Vom Zertifikat zur Integration.</h2>
-    <p class="lead">Wir nehmen Ihnen die bürokratische Last ab. Berlin Gateway managt den gesamten Anerkennungsprozess und sorgt für einen reibungslosen Start Ihrer neuen Fachkräfte.</p>
+    <p class="section-label">Prozess-Sicherung</p>
+    <h1 style="font-size:clamp(28px,5vw,48px);font-weight:800;line-height:1.1;margin-bottom:24px;color:#0B1F3A;">Anerkennung und Onboarding internationaler Fachkräfte</h1>
+    <p class="lead">Vom Zertifikat zur Integration. Wir nehmen Ihnen die bürokratische Last ab. Berlin Gateway managt den gesamten Anerkennungsprozess und sorgt für einen reibungslosen Start Ihrer neuen Fachkräfte — strukturiert und nachvollziehbar.</p>
     
     <div class="process-grid">
       <div class="process-item">
@@ -105,11 +132,28 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="cta-box">
-      <h2>Prozesse professionalisieren</h2>
-      <p>Reduzieren Sie Ihre Abbruchquoten durch eine strukturierte Begleitung.</p>
-      <a href="/de/unternehmen/internationale-fachkraefte/#kontakt" class="cta-btn">Jetzt Erstgespräch vereinbaren</a>
+<!-- CONTACT BLOCK -->
+<section class="section section--alt" id="kontakt">
+  <div class="inner" style="max-width: 800px; text-align: center;">
+    <span class="section-label">B2B Kontakt</span>
+    <h2>Personalbedarf besprechen</h2>
+    <p class="lead">Sie suchen internationale Pflegekräfte, Ärzte, Physiotherapeuten oder weitere Gesundheitsfachkräfte? Beschreiben Sie uns kurz Ihren Personalbedarf oder sprechen Sie direkt mit uns.</p>
+    
+    <div style="margin: 40px 0; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+      <a href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20internationale%20Fachkräfte" class="btn btn--primary" style="width: 100%; max-width: 400px;">
+        Personalbedarf per E-Mail besprechen
+      </a>
+      <a href="tel:+4915781497451" class="btn btn--outline" style="width: 100%; max-width: 400px;">
+        Direkt anrufen: +49 157 81497451
+      </a>
+    </div>
+
+    <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
+      <p>Für Bewerber und Fachkräfte: <a href="mailto:jobs@berlingateway.de" style="color: #b8902a; text-decoration: none; font-weight: 600;">jobs@berlingateway.de</a></p>
+      <p>Allgemeine Anfragen: <a href="mailto:info@berlingateway.de" style="color: #b8902a; text-decoration: none; font-weight: 600;">info@berlingateway.de</a></p>
     </div>
   </div>
 </section>

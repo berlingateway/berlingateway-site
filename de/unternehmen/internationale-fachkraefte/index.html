@@ -18,7 +18,7 @@
     .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
     .brand span{color:#b8902a}
     .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
-    .nav-cta{background:#b8902a;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:0 !important}
+    .nav-cta{background:#b8902a;color:#0f1f35 !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:24px;text-decoration:none;font-size:14px;}
     .inner{max-width:900px;margin:0 auto}
     .section{padding:80px 24px}
     .section--alt{background:#F8F9FA}
@@ -36,20 +36,44 @@
     .card h3{font-size:20px;font-weight:700;margin-bottom:12px;color:#0B1F3A}
     .card p{font-size:15px;color:#6B7280;line-height:1.6}
     
-    .form-container{max-width:640px;margin:0 auto;background:#FFFFFF;border:1px solid #E5E7EB;border-radius:16px;padding:48px;box-shadow:0 20px 50px rgba(0,0,0,0.05)}
-    .field-group{margin-bottom:24px}
-    .field-group label{display:block;font-size:14px;font-weight:600;color:#0D1117;margin-bottom:8px}
-    .field-group input, .field-group select, .field-group textarea{width:100%;padding:14px 16px;border:1.5px solid #E5E7EB;border-radius:8px;font-family:inherit;font-size:15px;outline:none;transition:border-color 0.15s}
-    .field-group input:focus, .field-group select:focus, .field-group textarea:focus{border-color:#b8902a}
-    .submit-btn{width:100%;padding:16px;background:#b8902a;color:#FFFFFF;font-size:16px;font-weight:700;border:none;border-radius:8px;cursor:pointer;transition:opacity 0.15s}
-    .submit-btn:hover{opacity:0.9}
-    
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .btn--primary {
+      background: #b8902a;
+      color: white;
+    }
+
+    .btn--primary:hover {
+      background: #a67f25;
+    }
+
+    .btn--outline {
+      border: 2px solid #ddd;
+      color: #0f1f35;
+    }
+
+    .btn--outline:hover {
+      border-color: #b8902a;
+    }
+
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:60px 24px;text-align:center;font-size:14px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
     
     @media(max-width:768px){
       .grid{grid-template-columns:1fr}
-      .form-container{padding:32px 24px}
       .nav a:not(.nav-cta){display:none}
     }
   </style>
@@ -61,7 +85,7 @@
     <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="/ar/" class="lang-badge">العربية</a>
-      <span style="opacity:.5">B2B Institutional Portal</span>
+      <span style="opacity:.5">Berlin Gateway — B2B Institutional Portal</span>
     </div>
   </div>
 </div>
@@ -72,7 +96,7 @@
     <nav class="nav">
       <a href="/de/unternehmen/pflege/">Pflege-Recruiting</a>
       <a href="/de/unternehmen/anerkennung-onboarding/">Anerkennung & Onboarding</a>
-      <a href="#kontakt" class="nav-cta">Anfrage stellen</a>
+      <a href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20internationale%20Fachkräfte" class="nav-cta">Personalbedarf besprechen</a>
     </nav>
   </div>
 </header>
@@ -81,7 +105,11 @@
   <div class="inner">
     <span class="section-label" style="color:#b8902a;margin-bottom:24px;display:inline-block">Für Arbeitgeber</span>
     <h1>Strukturelle Fachkräfte-Sicherung aus dem Ausland.</h1>
-    <p>Wir begleiten Kliniken, Pflegeeinrichtungen und Unternehmen bei der nachhaltigen Gewinnung und Integration internationaler Experten.</p>
+    <p>Berlin Gateway verbindet praktische Erfahrung im deutschen Gesundheitswesen, direkten Austausch mit Einrichtungen und internationale Bewerbernetzwerke zu einem strukturierten Rekrutierungs- und Onboardingprozess.</p>
+    <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+      <a href="#kontakt" class="btn btn--primary">Personalbedarf besprechen</a>
+      <a href="/de/unternehmen/pflege/" class="btn btn--outline" style="color: white; border-color: white;">Fokus Pflege</a>
+    </div>
   </div>
 </section>
 
@@ -92,7 +120,7 @@
     <div class="grid">
       <a href="/de/unternehmen/pflege/" class="card">
         <h3>Pflege-Recruiting</h3>
-        <p>Gezielte Gewinnung von Pflegekräften aus dem arabischen Raum und Asien. Vollständig vorqualifiziert.</p>
+        <p>Gezielte Gewinnung von Pflegekräften aus dem arabischen Raum und Asien. Strukturierte Vorauswahl nach Qualifikation, Berufserfahrung und Sprachstand.</p>
       </a>
       <a href="/de/unternehmen/anerkennung-onboarding/" class="card">
         <h3>Anerkennung & Onboarding</h3>
@@ -100,65 +128,53 @@
       </a>
       <div class="card">
         <h3>Strategische Beratung</h3>
-        <p>Analyse Ihres Bedarfs und Aufbau nachhaltiger Rekrutierungskanäle für langfristige Stabilität.</p>
+        <p>Analyse Ihres Bedarfs und Aufbau nachhaltiger Rekrutierungskanäle für langfristige Stabilität im Gesundheitswesen.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--alt" id="kontakt">
-  <div class="inner">
-    <div style="text-align:center;margin-bottom:48px;">
-      <p class="section-label">B2B Anfrage</p>
-      <h2>Sprechen Sie mit unseren Experten</h2>
-      <p class="lead">Hinterlassen Sie uns Ihre Daten. Wir melden uns innerhalb von 24 Stunden für ein Erstgespräch.</p>
+<section class="section section--alt">
+  <div class="inner" style="text-align: center;">
+    <p class="section-label">Expertise</p>
+    <h2>Berlin Gateway — Ihr Partner im Gesundheitswesen</h2>
+    <div class="grid">
+      <div class="card">
+        <h3 style="color: #b8902a;">14 Jahre</h3>
+        <p>Erfahrung in der Beratung und Integration im deutschen System.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: #b8902a;">500+</h3>
+        <p>Begleitete und vermittelte Fachkräfte in den deutschen Arbeitsmarkt.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: #b8902a;">10+</h3>
+        <p>Herkunftsländer in unserem aktiven Bewerbernetzwerk.</p>
+      </div>
+    </div>
+    <p style="margin-top: 40px; font-weight: 600;">Direkt aus Berlin – mit tiefem Verständnis für die Anforderungen deutscher Einrichtungen.</p>
+  </div>
+</section>
+
+<!-- CONTACT BLOCK -->
+<section class="section" id="kontakt">
+  <div class="inner" style="max-width: 800px; text-align: center;">
+    <span class="section-label">B2B Kontakt</span>
+    <h2>Personalbedarf besprechen</h2>
+    <p class="lead">Sie suchen internationale Pflegekräfte, Ärzte, Physiotherapeuten oder weitere Gesundheitsfachkräfte? Beschreiben Sie uns kurz Ihren Personalbedarf oder sprechen Sie direkt mit uns.</p>
+    
+    <div style="margin: 40px 0; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+      <a href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20internationale%20Fachkräfte" class="btn btn--primary" style="width: 100%; max-width: 400px;">
+        Personalbedarf per E-Mail besprechen
+      </a>
+      <a href="tel:+4915781497451" class="btn btn--outline" style="width: 100%; max-width: 400px;">
+        Direkt anrufen: +49 157 81497451
+      </a>
     </div>
 
-    <div class="form-container">
-      <form action="#" method="POST">
-        <div class="field-group">
-          <label>Institutionstyp</label>
-          <select name="type" required>
-            <option value="">Bitte wählen...</option>
-            <option>Krankenhaus / Klinik</option>
-            <option>Pflegeeinrichtung</option>
-            <option>Industrieunternehmen</option>
-            <option>Personalvermittlung</option>
-            <option>Sonstige</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label>Anzahl der Mitarbeiter</label>
-          <select name="employees">
-            <option value="">Bitte wählen...</option>
-            <option>1-50</option>
-            <option>51-250</option>
-            <option>251-500</option>
-            <option>Über 500</option>
-          </select>
-        </div>
-        <div class="field-group">
-          <label>Gesuchte Berufe / Fachrichtungen</label>
-          <input type="text" name="professions" placeholder="z.B. Intensivpflege, Innere Medizin, IT" required>
-        </div>
-        <div class="field-group">
-          <label>Bundesland der Einrichtung</label>
-          <input type="text" name="state" placeholder="z.B. Berlin, NRW, Bayern" required>
-        </div>
-        <div class="field-group">
-          <label>Ansprechpartner / Verantwortliche Person</label>
-          <input type="text" name="contact_person" placeholder="Vollständiger Name" required>
-        </div>
-        <div class="field-group">
-          <label>E-Mail-Adresse</label>
-          <input type="email" name="email" placeholder="geschäftliche@email.de" required>
-        </div>
-        <div class="field-group">
-          <label>Wunschtermin für Erstgespräch</label>
-          <input type="text" name="appointment" placeholder="z.B. Nächste Woche Dienstag Vormittag">
-        </div>
-        <button type="submit" class="submit-btn">Beratungstermin anfragen →</button>
-      </form>
+    <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
+      <p>Für Bewerber und Fachkräfte: <a href="mailto:jobs@berlingateway.de" style="color: #b8902a; text-decoration: none; font-weight: 600;">jobs@berlingateway.de</a></p>
+      <p>Allgemeine Anfragen: <a href="mailto:info@berlingateway.de" style="color: #b8902a; text-decoration: none; font-weight: 600;">info@berlingateway.de</a></p>
     </div>
   </div>
 </section>

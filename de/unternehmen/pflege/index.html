@@ -215,6 +215,9 @@
       .timeline-item {
         flex-direction: column;
       }
+      .nav-cta {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -226,7 +229,7 @@
       <a href="mailto:info@berlingateway.de" style="color:rgba(255,255,255,0.8);text-decoration:none;">✉ info@berlingateway.de</a>
       <div style="display:flex;gap:12px;align-items:center;">
         <a href="/ar/" style="background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px;text-decoration:none;color:#FFFFFF;">العربية</a>
-        <span style="opacity:0.5;">Employer Portal</span>
+        <span style="opacity:0.5;">Berlin Experience — Employer Portal</span>
       </div>
     </div>
   </div>
@@ -235,9 +238,10 @@
   <header style="background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:1000;">
     <div style="max-width:1100px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
       <a href="/de" style="font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px;">Berlin <span style="color:#0B3B8C;">Gateway</span></a>
-      <nav>
+      <nav style="display:flex;align-items:center;">
         <a href="/de/unternehmen/internationale-fachkraefte/" style="color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500;">B2B Übersicht</a>
         <a href="/de/unternehmen/anerkennung-onboarding/" style="color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500;">Anerkennung</a>
+        <a href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20internationale%20Fachkräfte" class="nav-cta" style="background:#b8902a;color:#0f1f35 !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:24px;text-decoration:none;font-size:14px;">Personalbedarf besprechen</a>
       </nav>
     </div>
   </header>
@@ -247,9 +251,9 @@
     <div class="container hero__grid">
       <div class="hero__content">
         <h1>Pflegekräfte aus dem Ausland – Zuverlässig. Integriert. Einsatzbereit.</h1>
-        <p>Für Pflegeheime, Kliniken und Krankenhäuser in Deutschland</p>
+        <p>Pflegefachkräfte gehören seit Jahren zu den besonders gefragten Berufsgruppen in Deutschland. Wir kennen den Bedarf nicht nur aus Statistiken, sondern aus dem direkten Austausch mit Einrichtungen, Beschäftigten und Patienten im deutschen Gesundheitswesen. Berlin Gateway ist Ihr Partner direkt aus Berlin.</p>
         <div class="hero__ctas">
-          <a href="/de/unternehmen/internationale-fachkraefte/#kontakt" class="btn btn--primary">B2B Anfrage stellen</a>
+          <a href="#kontakt" class="btn btn--primary">Personalbedarf besprechen</a>
           <a href="#problem" class="btn btn--outline">Mehr erfahren</a>
         </div>
       </div>
@@ -264,7 +268,8 @@
     <div class="container">
       <span class="section-label">Der Markt</span>
       <h2>Der Pflegenotstand ist real. Unsere Lösung auch.</h2>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Über 300.000 Pflegefachkräfte fehlen heute in Deutschland – Tendenz steigend. Wir schließen diese Lücke nachhaltig.</p>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 20px;">Der Fachkräftemangel im deutschen Gesundheitswesen ist längst betriebliche Realität. Pflegeeinrichtungen, Kliniken, Praxen und Reha-Einrichtungen suchen nicht nur Pflegefachkräfte, sondern auch Ärzte, Physiotherapeuten und weitere qualifizierte Gesundheitsfachkräfte.</p>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 0.95rem; color: #666;">Das Statistische Bundesamt erwartet selbst bei einer positiven Entwicklung bis 2049 einen zusätzlichen Bedarf von mindestens <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2024/01/PD24_033_23_12.html" target="_blank" style="color: var(--secondary); text-decoration: none; font-weight: 600;">280.000 Pflegekräften</a>.</p>
       
       <div class="stats-grid">
         <div class="stat-card">
@@ -325,12 +330,12 @@
         </div>
         <div class="stat-card">
           <div style="font-size: 2.5rem; margin-bottom: 10px;">🔍</div>
-          <h4>Strenge Selektion</h4>
-          <p>Nur die besten 5% der Bewerber werden aufgenommen.</p>
+          <h4>Strukturierte Vorauswahl</h4>
+          <p>Nach Qualifikation, Berufserfahrung, Sprachstand und Anerkennungsfähigkeit.</p>
         </div>
         <div class="stat-card">
           <div style="font-size: 2.5rem; margin-bottom: 10px;">📜</div>
-          <h4>Rechtssicherheit</h4>
+          <h4>Strukturiert und nachvollziehbar</h4>
           <p>Vollständige Abwicklung aller bürokratischen Prozesse.</p>
         </div>
       </div>
@@ -437,14 +442,35 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section" style="background: var(--primary); color: white; text-align: center;">
-    <div class="container">
-      <h2 style="color: white;">Jetzt handeln – bevor der nächste Engpass kommt</h2>
-      <p style="margin-bottom: 40px; font-size: 1.2rem;">Kein Druck. Keine Verpflichtung. Nur Klarheit.</p>
-      <div class="hero__ctas" style="justify-content: center;">
-        <a href="/de/unternehmen/internationale-fachkraefte/#kontakt" class="btn btn--primary">B2B Beratung anfragen</a>
-        <a href="https://wa.me/4915255925661" class="btn btn--outline" style="color: white; border-color: white;">Oder kontaktieren Sie uns direkt via WhatsApp →</a>
+  <!-- PILLAR LINK -->
+  <section class="section section--alt">
+    <div class="container" style="text-align: center;">
+      <span class="section-label">Weitere Kategorien</span>
+      <h2>Nicht nur Pflege – Medizin & Technik</h2>
+      <p style="max-width: 700px; margin: 0 auto 30px;">Berlin Gateway unterstützt Unternehmen auch bei der Gewinnung von Ärzten, Ingenieuren und IT-Spezialisten nach demselben qualitätsgesicherten Verfahren.</p>
+      <a href="/de/unternehmen/internationale-fachkraefte/" class="btn btn--outline" style="border-color: #b8902a; color: #0f1f35;">Alle Fachkräfte-Kategorien ansehen →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT BLOCK -->
+  <section class="section" id="kontakt">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <span class="section-label">B2B Kontakt</span>
+      <h2>Personalbedarf besprechen</h2>
+      <p class="lead">Sie suchen internationale Pflegekräfte, Ärzte, Physiotherapeuten oder weitere Gesundheitsfachkräfte? Beschreiben Sie uns kurz Ihren Personalbedarf oder sprechen Sie direkt mit uns.</p>
+      
+      <div style="margin: 40px 0; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+        <a href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20internationale%20Fachkräfte" class="btn btn--primary" style="background: #b8902a; color: white; width: 100%; max-width: 400px;">
+          Personalbedarf per E-Mail besprechen
+        </a>
+        <a href="tel:+4915781497451" class="btn btn--outline" style="border-color: #b8902a; color: #0f1f35; width: 100%; max-width: 400px;">
+          Direkt anrufen: +49 157 81497451
+        </a>
+      </div>
+
+      <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
+        <p>Für Bewerber und Fachkräfte: <a href="mailto:jobs@berlingateway.de" style="color: #b8902a; text-decoration: none; font-weight: 600;">jobs@berlingateway.de</a></p>
+        <p>Allgemeine Anfragen: <a href="mailto:info@berlingateway.de" style="color: #b8902a; text-decoration: none; font-weight: 600;">info@berlingateway.de</a></p>
       </div>
     </div>
   </section>

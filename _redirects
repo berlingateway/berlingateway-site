@@ -37,6 +37,7 @@
 /de/orientierung.html   /de/orientierung/   301
 /de/framework.html      /de/framework/      301
 /de/framework           /de/systemlogik/    301
+/framework.html         /de/systemlogik     301
 
 # 5. Arabic (AR) — Clean URL Architecture (.html -> /)
 /ar/assessment.html     /ar/assessment/     301

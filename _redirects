@@ -21,8 +21,6 @@
 # 3. English (EN) Cluster — Redirects
 /en/assessment          /de/assessment/  301
 /en/chancenkarte.html   /de/chancenkarte/ 301
-/en/monitor.html        /en/monitor/     301
-/en/systemlogic.html    /en/systemlogik/ 301
 
 # 4. German (DE) — Clean URL Architecture (.html -> /)
 /de/anerkennung.html    /de/anerkennung/    301

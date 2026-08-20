@@ -310,3 +310,53 @@
     font-size: 12px !important;
   }
 }
+
+/* Responsive Profession List */
+.salary-profession-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.salary-profession-item {
+  padding: 16px 0 !important;
+  border-bottom: 1px solid #E5E7EB !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.salary-profession-item:last-child {
+  border-bottom: none !important;
+}
+
+.salary-profession-name {
+  font-weight: 700 !important;
+  color: #1A1D24 !important;
+}
+
+.salary-profession-detail {
+  color: #4B5563 !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .salary-profession-detail {
+  text-align: left !important;
+}
+
+@media (max-width: 600px) {
+  .salary-profession-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 16px 0 !important;
+  }
+
+  .salary-profession-detail {
+    text-align: left !important;
+    margin-top: 6px !important;
+  }
+
+  [dir="rtl"] .salary-profession-detail {
+    text-align: right !important;
+  }
+}

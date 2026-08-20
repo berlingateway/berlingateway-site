@@ -17,8 +17,8 @@ consolidation_skips["ar/visum-deutschland.html"]=1
 consolidation_skips["de/visum-deutschland.html"]=1
 consolidation_skips["en/visum-deutschland.html"]=1
 
-# Nursing Consolidation: Keep pathway-nursing (Primary), skip pflegekraefte
-consolidation_skips["de/pflegekraefte.html"]=1
+# Nursing Consolidation: Keep pflegekraefte (Primary), skip pathway-nursing
+consolidation_skips["de/pathway-nursing.html"]=1
 
 # Doctors Consolidation: Keep aerzte (Primary), skip pathway-doctors
 consolidation_skips["ar/pathway-doctors.html"]=1

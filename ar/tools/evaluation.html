@@ -70,9 +70,42 @@
         .cta-primary-viral:hover {
             background: #0a2f6b;
         }
+
+        /* Responsive Header Fix for Evaluation Page */
+        @media (max-width: 600px) {
+            .evaluation-page .header {
+                height: auto !important;
+            }
+            .evaluation-page .header__inner {
+                flex-direction: column;
+                height: auto !important;
+                padding: 20px;
+                gap: 15px;
+            }
+            .evaluation-page .brand {
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .evaluation-page .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+                margin: 0;
+                width: 100%;
+            }
+            .evaluation-page .nav a,
+            .evaluation-page .nav-link {
+                margin: 0;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
     </style>
 </head>
-<body class="rtl">
+<body class="rtl evaluation-page">
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">

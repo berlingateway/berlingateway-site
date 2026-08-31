@@ -40,6 +40,7 @@
     .btn--primary:hover { background:#a67f25; }
     .btn--light { border:2px solid rgba(255,255,255,.85); color:#fff; }
     .btn--light:hover { background:#fff; color:var(--navy); }
+    .cta-context { color:rgba(255,255,255,.8); font-size:.96rem; margin:16px 0 0; max-width:630px; }
     .hero-panel { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); border-radius:14px; padding:30px; backdrop-filter:blur(4px); }
     .hero-panel h2 { color:#fff; font-size:1.32rem; }
     .hero-panel p { color:rgba(255,255,255,.8); }
@@ -58,9 +59,13 @@
     .availability__number strong { color:#e4bf64; font-size:4.25rem; line-height:1; }
     .availability__number span { font-size:1.02rem; margin-top:8px; }
     .availability__content { background:#fff; border:1px solid var(--line); border-radius:14px; padding:32px; }
-    .process { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:32px; }
-    .process-item { padding:22px 16px; background:#fff; border:1px solid var(--line); border-radius:10px; }
+    .qualification-list { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:32px; }
+    .qualification-item { padding:20px 16px; background:#fff; border:1px solid var(--line); border-radius:10px; }
+    .qualification-item__number { display:block; color:var(--gold); font-weight:750; font-size:.82rem; margin-bottom:9px; }
+    .process { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px; }
+    .process-item { padding:25px 20px; background:#fff; border:1px solid var(--line); border-radius:10px; }
     .process-item__number { width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--navy); color:#fff; font-size:.86rem; font-weight:700; margin-bottom:15px; }
+    .scope-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:32px; }
     .link-panel { background:var(--navy); color:#fff; padding:34px; border-radius:14px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
     .link-panel h2 { color:#fff; font-size:1.62rem; }
     .link-panel p { color:rgba(255,255,255,.8); margin:0; }
@@ -68,14 +73,15 @@
     .link-panel__links a { color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.75); border-radius:6px; padding:10px 13px; font-size:.9rem; font-weight:650; }
     .contact { max-width:780px; text-align:center; margin:0 auto; }
     .contact .lead { margin-left:auto; margin-right:auto; }
+    .contact-context { max-width:620px; margin:0 auto 22px; color:#53627a; }
     .contact-actions { display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:28px; }
     .contact-actions .btn { width:100%; max-width:460px; }
     .btn--outline { border:2px solid var(--navy); color:var(--navy); }
     .btn--outline:hover { background:var(--navy); color:#fff; }
     .footer { background:var(--navy-dark); color:rgba(255,255,255,.76); padding:38px 0; text-align:center; font-size:.92rem; }
     .footer a { color:rgba(255,255,255,.8); text-decoration:none; margin:0 9px; }
-    @media (max-width:900px) { .hero-grid,.availability { grid-template-columns:1fr; } .grid,.grid--two { grid-template-columns:1fr 1fr; } .process { grid-template-columns:repeat(3,1fr); } }
-    @media (max-width:640px) { .section { padding:58px 0; } .hero { padding:62px 0 58px; } .grid,.grid--two,.process { grid-template-columns:1fr; } .nav a:not(.nav-cta) { display:none; } .top-band__inner { flex-wrap:wrap; } .link-panel { flex-direction:column; align-items:flex-start; } }
+    @media (max-width:900px) { .hero-grid,.availability { grid-template-columns:1fr; } .grid,.grid--two,.scope-grid { grid-template-columns:1fr 1fr; } .qualification-list { grid-template-columns:repeat(3,1fr); } .process { grid-template-columns:repeat(3,1fr); } }
+    @media (max-width:640px) { .section { padding:58px 0; } .hero { padding:62px 0 58px; } .grid,.grid--two,.scope-grid,.qualification-list,.process { grid-template-columns:1fr; } .nav a:not(.nav-cta) { display:none; } .top-band__inner { flex-wrap:wrap; } .link-panel { flex-direction:column; align-items:flex-start; } }
   </style>
 </head>
 <body>
@@ -102,18 +108,19 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Internationale Fachkräfte für OP und Anästhesie</span>
+          <span class="eyebrow">ATA-Personalbedarf für Anästhesie und OP</span>
           <h1>Anästhesietechnische Assistenten für Kliniken in Deutschland</h1>
-          <p class="lead">Sie suchen qualifizierte Mitarbeiter für Anästhesie und OP? Berlin Gateway unterstützt Kliniken und medizinische Einrichtungen bei der Gewinnung internationaler Fachkräfte für den Anästhesie- und OP-Bereich.</p>
+          <p class="lead">Berlin Gateway unterstützt Kliniken und medizinische Einrichtungen dabei, ihren Bedarf an internationalen ATA-Kandidatinnen und -Kandidaten für Anästhesie und OP fallbezogen einzuordnen und das Anforderungsprofil zu klären.</p>
           <div class="btn-row">
             <a href="#kontakt" class="btn btn--primary">ATA-Personalbedarf besprechen</a>
-            <a href="#aktuell-berlin" class="btn btn--light">Aktuelle Kandidatensituation</a>
+            <a href="#aktuell-berlin" class="btn btn--light">Aktuelle ATA-Situation</a>
           </div>
+          <p class="cta-context">Im ersten Gespräch klären wir Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen.</p>
         </div>
         <aside class="hero-panel" aria-label="B2B Fokus ATA">
           <h2>Für Einrichtungen mit spezialisierter Personalplanung</h2>
-          <p>Wir schaffen einen strukturierten Gesprächsrahmen für Personalbedarf, Anforderungsprofil, Kandidatenabstimmung und die nächsten erforderlichen Schritte.</p>
-          <p><strong>Direkt für Arbeitgeber:</strong> Die Kontaktaufnahme richtet sich an Kliniken, OP-Zentren, Anästhesieabteilungen und weitere medizinische Einrichtungen.</p>
+          <p>Wir besprechen Bedarf und Anforderungsprofil und klären, welche Kandidatenprofile und nächsten Schritte für Ihren Fall sinnvoll sind.</p>
+          <p><strong>Direkt für Arbeitgeber:</strong> Die Kontaktaufnahme richtet sich an Kliniken, OP-Zentren, Anästhesieabteilungen und weitere geeignete medizinische Einrichtungen.</p>
         </aside>
       </div>
     </section>
@@ -122,28 +129,29 @@
       <div class="container">
         <span class="label">ATA für Anästhesie und OP</span>
         <h2>Für welche Arbeitgeber und Einsatzbereiche ist die Berufsgruppe relevant?</h2>
-        <p class="lead">Anästhesietechnische Assistenz ist insbesondere für Einrichtungen mit Anästhesie- und OP-bezogenen Aufgabenfeldern relevant. Arbeitgeber sollten das konkrete Einsatzprofil, die vorhandene Qualifikation, den Anerkennungsstand und die jeweils erforderlichen Rahmenbedingungen im Einzelfall prüfen.</p>
+        <p class="lead">Anästhesietechnische Assistenz ist insbesondere für Einrichtungen mit Anästhesie- und OP-bezogenen Aufgabenfeldern relevant. Arbeitgeber sollten das konkrete Einsatzprofil, die vorhandene Qualifikation, den Anerkennungsstatus und die jeweils erforderlichen Rahmenbedingungen im Einzelfall prüfen.</p>
         <div class="grid">
           <article class="card card--accent"><h3>Krankenhäuser und Kliniken</h3><p>Für Häuser, die ihre Personalplanung für OP, Anästhesie oder angrenzende Funktionsbereiche strukturiert besprechen möchten.</p></article>
           <article class="card card--accent"><h3>OP-Zentren</h3><p>Für Einrichtungen, die Anforderungen, Einarbeitung und Teamkonstellation früh in die Personalbedarfsplanung einbeziehen.</p></article>
           <article class="card card--accent"><h3>Anästhesieabteilungen</h3><p>Für Abteilungen, die die Rolle, das Aufgabenprofil und die erforderlichen Schritte für einen möglichen Einsatz individuell einordnen wollen.</p></article>
         </div>
         <div class="notice">
-          <p><strong>Individuelle Prüfung bleibt entscheidend:</strong> Diese Seite setzt keine ausländische Qualifikation mit einem deutschen ATA-Abschluss gleich und macht keine Aussage über die individuelle Einsetzbarkeit. Qualifikation, Anerkennungsweg und konkrete Aufgaben werden im jeweiligen Einzelfall beurteilt.</p>
+          <p><strong>Individuelle Einordnung:</strong> Eine ausländische Qualifikation wird nicht automatisch mit einem deutschen ATA-Abschluss gleichgesetzt. Aufgabenprofil, Qualifikation, Anerkennungsstatus und mögliche Einsetzbarkeit werden im jeweiligen Einzelfall geprüft.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="aktuell-berlin">
+    <!-- AKTUELLER ATA-KANDIDATENSTATUS: Zahl und Wortlaut nur nach Betreiberbestätigung aktualisieren. -->
+    <section class="section section--alt" id="aktuell-berlin" data-current-ata-candidate-situation>
       <div class="container">
-        <span class="label">Aktuell in Berlin</span>
-        <h2>Fünf internationale ATA-Kandidaten begleiten wir derzeit vor Ort</h2>
+        <span class="label">Aktuelle ATA-Situation in Berlin</span>
+        <h2>Aktuell fünf internationale ATA-Kandidatinnen und -Kandidaten in Berlin</h2>
         <div class="availability">
-          <div class="availability__number"><strong>5</strong><span>internationale ATA-Kandidaten<br>aktuell in Berlin</span></div>
+          <div class="availability__number"><strong>5</strong><span>internationale ATA-Kandidatinnen und -Kandidaten<br>in Berlin</span></div>
           <div class="availability__content">
-            <p>Berlin Gateway begleitet derzeit fünf internationale ATA-Kandidaten, die sich bereits in Berlin befinden und aktuell nach geeigneten Arbeitgebern suchen. Ihr Aufenthaltskontext ist die Chancenkarte.</p>
-            <p>Wir veröffentlichen weder Namen noch Lebensläufe oder andere personenbezogene Informationen. Für Arbeitgeber erfolgt die Abstimmung von Profilen und Gesprächen vertraulich im Rahmen der konkreten Bedarfsklärung.</p>
-            <p><strong>Keine Pauschalzusagen:</strong> Die Angabe ist keine Aussage, dass jede Person sofort einsetzbar ist. Voraussetzungen, Anerkennungsstand und mögliche nächste Schritte werden jeweils individuell geklärt.</p>
+            <p>Aktuell befinden sich nach Betreiberbestätigung fünf internationale ATA-Kandidatinnen und -Kandidaten in Berlin und suchen aktiv geeignete Arbeitgeber. Qualifikation, Anerkennungsstatus, mögliche Einsatzbereiche und nächste Schritte werden für jede Person und den jeweiligen Arbeitgeberbedarf individuell eingeordnet.</p>
+            <p>Weitere ATA-Kandidatinnen und -Kandidaten können hinzukommen. Die jeweils aktuelle Anzahl, Verfügbarkeit und der individuelle Status werden im Bedarfsgespräch geprüft.</p>
+            <p><strong>Vertrauliche Abstimmung:</strong> Namen, Lebensläufe, Fotos oder andere personenbezogene Daten der Kandidatinnen und Kandidaten werden nicht öffentlich dargestellt.</p>
           </div>
         </div>
       </div>
@@ -151,15 +159,75 @@
 
     <section class="section">
       <div class="container">
+        <span class="label">Erster Schritt für Arbeitgeber</span>
+        <h2>Was wir im ersten Gespräch klären</h2>
+        <p class="lead">Ein klarer Bedarf erleichtert die weitere Einordnung. Dabei besprechen wir die Punkte, die für Ihren konkreten ATA-Bedarf entscheidend sind.</p>
+        <div class="qualification-list" aria-label="Arbeitgeber-Qualifizierung">
+          <article class="qualification-item"><span class="qualification-item__number">01</span><h3>Einsatzbereich</h3><p>Zielrolle und Aufgaben im Anästhesie- oder OP-Kontext.</p></article>
+          <article class="qualification-item"><span class="qualification-item__number">02</span><h3>Anzahl</h3><p>Wie viele Personen Sie für Ihren Bedarf einplanen.</p></article>
+          <article class="qualification-item"><span class="qualification-item__number">03</span><h3>Standort</h3><p>Wo der Einsatz stattfinden soll.</p></article>
+          <article class="qualification-item"><span class="qualification-item__number">04</span><h3>Gewünschter Start</h3><p>Welcher Startzeitpunkt oder Korridor für Sie relevant ist.</p></article>
+          <article class="qualification-item"><span class="qualification-item__number">05</span><h3>Zentrale Anforderungen</h3><p>Welche Must-have-Kriterien für Ihre Einrichtung gelten.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="label">Anonymisierte Profilübersichten und Kandidatenprofile</span>
+        <h2>Eine klare Grundlage für den ersten fachlichen Abgleich</h2>
+        <div class="scope-grid">
+          <article class="card card--accent">
+            <h3>Stufe 1: Anonymisierte Profilübersicht</h3>
+            <p>Für einen ersten Abgleich können anonymisierte Profilübersichten herangezogen werden. Sie helfen dabei, den Bedarf und mögliche Profile sachlich einzuordnen.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Stufe 2: Weitergehendes Kandidatenprofil</h3>
+            <p>Weitergehende Kandidatenprofile werden nur im für den konkreten nächsten Schritt erforderlichen Umfang und nach dokumentierter Zustimmung der betreffenden Person übermittelt. Vorhandene Angaben werden entsprechend ihrem aktuellen Status eingeordnet.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
         <span class="label">Arbeitgeberprozess</span>
-        <h2>Von der Bedarfsklärung zum nächsten passenden Schritt</h2>
-        <p class="lead">Berlin Gateway bietet Arbeitgebern einen klaren B2B-Prozess. Umfang und Reihenfolge richten sich nach der konkreten Einrichtung, dem Anforderungsprofil und den Kandidatenprofilen.</p>
+        <h2>Vom Bedarf zum nächsten passenden Schritt</h2>
+        <p class="lead">Der Prozess bleibt für Arbeitgeber einfach: Bedarf und Anforderungen klären, mögliche Kandidatenprofile einordnen und Gespräche für eine fundierte Auswahl vorbereiten.</p>
         <div class="process">
-          <article class="process-item"><div class="process-item__number">1</div><h3>Bedarf</h3><p>Personalbedarf und Einsatzkontext besprechen.</p></article>
-          <article class="process-item"><div class="process-item__number">2</div><h3>Profil</h3><p>Anforderungsprofil gemeinsam aufnehmen.</p></article>
-          <article class="process-item"><div class="process-item__number">3</div><h3>Abstimmung</h3><p>Geeignete Kandidatenprofile abstimmen.</p></article>
-          <article class="process-item"><div class="process-item__number">4</div><h3>Gespräch</h3><p>Vorstellungsgespräche koordinieren.</p></article>
-          <article class="process-item"><div class="process-item__number">5</div><h3>Weitere Schritte</h3><p>Vertrags- und weitere erforderliche Schritte begleiten.</p></article>
+          <article class="process-item"><div class="process-item__number">1</div><h3>Bedarf und Profil klären</h3><p>Personalbedarf, Einsatzkontext und Anforderungsprofil gemeinsam besprechen.</p></article>
+          <article class="process-item"><div class="process-item__number">2</div><h3>Mögliche Kandidatenprofile einordnen</h3><p>Mögliche Kandidatenprofile im zulässigen und dokumentiert freigegebenen Umfang einordnen.</p></article>
+          <article class="process-item"><div class="process-item__number">3</div><h3>Gespräche und Auswahl</h3><p>Arbeitgebergespräche koordinieren und die Auswahlentscheidung vorbereiten.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <span class="label">Nach der Auswahl</span>
+        <h2>Vereinbarte nächste Schritte für den konkreten Fall</h2>
+        <div class="scope-grid">
+          <article class="card card--accent">
+            <h3>Administrative Begleitung</h3>
+            <p>Nach einer Auswahl kann Berlin Gateway die vereinbarten administrativen nächsten Schritte und die Vorbereitung der Arbeitsaufnahme koordinieren. Umfang, Zuständigkeiten, Unterlagen und externe Entscheidungen werden für den konkreten Fall festgelegt.</p>
+          </article>
+          <article class="card card--accent">
+            <h3>Kontaktpunkt nach dem Start</h3>
+            <p>Nach der Arbeitsaufnahme kann ein vereinbarter Kontaktpunkt für praktische oder administrative offene Fragen vorgesehen werden. Die Auswahl- und Einstellungsentscheidung liegt beim Arbeitgeber; Behörden und zuständige Stellen treffen ihre eigenen Entscheidungen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container contact">
+        <span class="label">B2B Kontakt</span>
+        <h2>ATA-Personalbedarf besprechen</h2>
+        <p class="lead">Sie möchten Ihren Personalbedarf für Anästhesie und OP besprechen? Kontaktieren Sie Berlin Gateway für eine direkte Arbeitgeberanfrage.</p>
+        <p class="contact-context">Im ersten Gespräch klären wir Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen.</p>
+        <div class="contact-actions">
+          <a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=ATA-Personalbedarf%20An%C3%A4sthesie%20und%20OP">ATA-Personalbedarf per E-Mail besprechen</a>
+          <a class="btn btn--outline" href="tel:+4915781497451">Direkt anrufen: +49 157 81497451</a>
         </div>
       </div>
     </section>
@@ -180,7 +248,6 @@
       </div>
     </section>
 
-
     <!-- B2B CLUSTER NAVIGATION -->
     <section class="section" data-b2b-cluster-nav style="padding-top:0;">
       <div class="container">
@@ -189,43 +256,31 @@
           <h2 style="margin-bottom:14px;">Weitere Fachkräfte für Ihr Unternehmen</h2>
           <p class="lead" style="margin-bottom:28px;">Entdecken Sie weitere internationale Fachkräfteprofile für Ihren konkreten Personalbedarf.</p>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:16px;">
-        <a href="/de/unternehmen/pflege/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
-          <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
-          <strong style="font-size:1rem; line-height:1.3;">Pflegefachkräfte</strong>
-          <span style="color:#627884; font-size:.9rem; line-height:1.45;">Internationale Pflegefachkräfte für Einrichtungen</span>
-          <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Mehr erfahren →</span>
-        </a>
-        <a href="/de/unternehmen/physiotherapeuten/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
-          <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
-          <strong style="font-size:1rem; line-height:1.3;">Physiotherapie</strong>
-          <span style="color:#627884; font-size:.9rem; line-height:1.45;">Internationale Physiotherapeuten für Arbeitgeber</span>
-          <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Mehr erfahren →</span>
-        </a>
-        <a href="/de/unternehmen/kfz-nutzfahrzeugmechatroniker/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
-          <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
-          <strong style="font-size:1rem; line-height:1.3;">Kfz &amp; Nutzfahrzeuge</strong>
-          <span style="color:#627884; font-size:.9rem; line-height:1.45;">Internationale Fachkräfte für Werkstatt und Nutzfahrzeugtechnik</span>
-          <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Mehr erfahren →</span>
-        </a>
-        <a href="/de/unternehmen/internationale-fachkraefte/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
-          <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
-          <strong style="font-size:1rem; line-height:1.3;">Internationale Fachkräfte</strong>
-          <span style="color:#627884; font-size:.9rem; line-height:1.45;">Weitere Fachkräfte und Lösungen für Arbeitgeber</span>
-          <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Alle Fachkräfte →</span>
-        </a>
+            <a href="/de/unternehmen/pflege/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
+              <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
+              <strong style="font-size:1rem; line-height:1.3;">Pflegefachkräfte</strong>
+              <span style="color:#627884; font-size:.9rem; line-height:1.45;">Internationale Pflegefachkräfte für Einrichtungen</span>
+              <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Mehr erfahren →</span>
+            </a>
+            <a href="/de/unternehmen/physiotherapeuten/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
+              <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
+              <strong style="font-size:1rem; line-height:1.3;">Physiotherapie</strong>
+              <span style="color:#627884; font-size:.9rem; line-height:1.45;">Internationale Physiotherapeuten für Arbeitgeber</span>
+              <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Mehr erfahren →</span>
+            </a>
+            <a href="/de/unternehmen/kfz-nutzfahrzeugmechatroniker/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
+              <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
+              <strong style="font-size:1rem; line-height:1.3;">Kfz &amp; Nutzfahrzeuge</strong>
+              <span style="color:#627884; font-size:.9rem; line-height:1.45;">Internationale Fachkräfte für Werkstatt und Nutzfahrzeugtechnik</span>
+              <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Mehr erfahren →</span>
+            </a>
+            <a href="/de/unternehmen/internationale-fachkraefte/" style="display:flex; min-height:154px; flex-direction:column; justify-content:space-between; gap:12px; padding:20px; border:1px solid #d9e7e8; border-radius:10px; background:#ffffff; color:#123644; text-decoration:none; box-shadow:0 1px 0 rgba(18,54,68,.03);">
+              <span style="display:block; width:28px; height:3px; border-radius:3px; background:#b8902a;"></span>
+              <strong style="font-size:1rem; line-height:1.3;">Internationale Fachkräfte</strong>
+              <span style="color:#627884; font-size:.9rem; line-height:1.45;">Weitere Fachkräfte und Lösungen für Arbeitgeber</span>
+              <span style="color:#176f7d; font-size:.9rem; font-weight:700;">Alle Fachkräfte →</span>
+            </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-<section class="section" id="kontakt">
-      <div class="container contact">
-        <span class="label">B2B Kontakt</span>
-        <h2>ATA-Personalbedarf besprechen</h2>
-        <p class="lead">Sie möchten Ihren Personalbedarf für Anästhesie und OP besprechen? Kontaktieren Sie Berlin Gateway für eine direkte Arbeitgeberanfrage.</p>
-        <div class="contact-actions">
-          <a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=ATA-Personalbedarf%20An%C3%A4sthesie%20und%20OP">ATA-Personalbedarf per E-Mail besprechen</a>
-          <a class="btn btn--outline" href="tel:+4915781497451">Direkt anrufen: +49 157 81497451</a>
         </div>
       </div>
     </section>

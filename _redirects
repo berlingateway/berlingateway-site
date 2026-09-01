@@ -82,6 +82,8 @@
 /de/bg-master-template-v1 /de/404.html 404
 /ar/framework           /ar/systemlogik/    301
 /ar/eligibility.html    /ar/chancenkarte/   301
+/de/pflege             /de/unternehmen/pflege/   301
+/de/pflege/            /de/unternehmen/pflege/   301
 
 # 9. Pathway Migration (Legacy -> Primary)
 /de/pathway-doctors     /de/aerzte       301

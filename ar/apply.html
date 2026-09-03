@@ -12,6 +12,7 @@
   <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/apply" />
   <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/" />
   <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,9 +68,167 @@
     gap: 12px;
     margin-top: 24px;
   }
+
+  /* Apply-page presentation parity: scoped to this route only. */
+  .apply-page {
+    font-family: 'IBM Plex Sans Arabic', 'Tajawal', system-ui, -apple-system, sans-serif !important;
+    color: #0D1117;
+  }
+  .apply-page .top-band {
+    background: #0B1F3A !important;
+    padding: 10px 0;
+  }
+  .apply-page .header {
+    height: auto;
+    min-height: 64px;
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E7EB !important;
+  }
+  .apply-page .header__inner,
+  .apply-page .top-band__inner,
+  .apply-page .subnav__inner {
+    max-width: 1080px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .apply-page .brand {
+    color: #0D1117 !important;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .apply-page .brand-icon {
+    display: none;
+  }
+  .apply-page .nav a {
+    color: #374151 !important;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .apply-page .subnav {
+    background: #F8F9FA !important;
+    color: #0B1F3A !important;
+    padding: 8px 0;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 13px;
+  }
+  .apply-page .subnav a {
+    color: #0B1F3A !important;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 600;
+  }
+  .apply-page main.container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  .apply-page main .hero {
+    margin: 0 !important;
+    padding: 72px 24px 48px;
+    background: #0B1F3A !important;
+    text-align: center;
+  }
+  .apply-page .hero .kicker {
+    display: inline-block;
+    margin: 0 0 20px !important;
+    padding: 6px 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.72) !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+  }
+  .apply-page .hero .h1 {
+    max-width: 680px;
+    margin: 0 auto !important;
+    color: #FFFFFF !important;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: clamp(28px, 5vw, 44px) !important;
+    font-weight: 700 !important;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+  .apply-page main > .section:not(.form) {
+    max-width: 780px;
+    margin: 0 auto !important;
+    padding: 40px 24px 32px;
+  }
+  .apply-page main > .section:not(.form) p {
+    color: #374151 !important;
+    font-size: 17px;
+    line-height: 1.75 !important;
+    margin-bottom: 16px !important;
+    font-weight: 300;
+  }
+  .apply-page main > .section.form {
+    width: 100%;
+    max-width: none;
+    margin: 0 !important;
+    padding: 48px 24px 56px;
+    background: #F8F9FA !important;
+  }
+  .apply-page .form-container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 !important;
+    overflow: hidden;
+    border: 1.5px solid #E5E7EB !important;
+    border-radius: 12px !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05) !important;
+  }
+  .apply-page .form-container iframe {
+    display: block;
+    width: 100%;
+    height: 800px;
+    border: 0;
+  }
+  @media (max-width: 768px) {
+    .apply-page .top-band__inner,
+    .apply-page .header__inner,
+    .apply-page .subnav__inner {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .apply-page .header {
+      min-height: 58px;
+      padding: 12px 0;
+    }
+    .apply-page .nav {
+      display: none;
+    }
+    .apply-page .subnav {
+      padding: 10px 0;
+      font-size: 12px;
+    }
+    .apply-page .subnav__inner {
+      justify-content: center;
+      gap: 18px;
+    }
+    .apply-page main .hero {
+      padding: 56px 20px 36px;
+    }
+    .apply-page .hero .kicker {
+      margin-bottom: 16px !important;
+    }
+    .apply-page main > .section:not(.form) {
+      padding: 32px 20px 28px;
+    }
+    .apply-page main > .section.form {
+      padding: 32px 20px 40px;
+    }
+  }
 </style>
 </head>
-<body class="rtl">
+<body class="rtl apply-page">
 
 <!-- BAND 1: TOP BAND (BLACK) -->
 <div class="top-band">

@@ -38,7 +38,7 @@
 /de/visa.html           /de/visum-deutschland.html 301
 /de/aerzte.html         /de/aerzte/         301
 /de/orientierung.html   /de/orientierung/   301
-/de/framework.html      /de/framework/      301
+/de/framework.html      /de/systemlogik     301
 /de/framework           /de/systemlogik/    301
 /framework.html         /de/systemlogik     301
 
@@ -47,6 +47,7 @@
 /ar/apply.html          /ar/apply/          301
 /ar/chancenkarte.html   /ar/chancenkarte/   301
 /ar/systemlogik.html    /ar/systemlogik/    301
+/ar/framework.html      /ar/systemlogik     301
 /ar/monitor.html        /ar/monitor/        301
 /ar/insights.html       /ar/insights/       301
 /ar/voraussetzungen.html /ar/voraussetzungen/ 301

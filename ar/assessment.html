@@ -138,6 +138,7 @@
   <div class="inner">
     <div class="form-container" style="padding:0;border:none;box-shadow:none;background:transparent;">
       <iframe 
+        id="tally-form"
         src="https://tally.so/embed/eqYl0Q?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
         loading="lazy" 
         width="100%" 
@@ -148,6 +149,24 @@
         style="border-radius:12px;">
       </iframe>
     </div>
+
+    <script>
+      (function () {
+        const sourceCountry = sessionStorage.getItem('source_country');
+        const allowedCountries = ['morocco', 'tunisia'];
+
+        if (!allowedCountries.includes(sourceCountry)) {
+          sessionStorage.removeItem('source_country');
+          return;
+        }
+
+        const tallyFrame = document.getElementById('tally-form');
+        const tallyUrl = new URL(tallyFrame.src);
+        tallyUrl.searchParams.set('source_country', sourceCountry);
+        tallyFrame.src = tallyUrl.toString();
+        sessionStorage.removeItem('source_country');
+      }());
+    </script>
 
     <div class="or-divider"><span>أو تواصل مباشرة</span></div>
 

@@ -251,3 +251,20 @@
   font-display: swap;
   src: url('/assets/fonts/tajawal-900.woff2') format('woff2');
 }
+
+/* Employer portal mobile safeguards.
+   Scoped to the employer-style top-band/header/hero structure so other page
+   templates keep their existing mobile navigation behaviour. */
+@media (max-width: 640px) {
+  .top-band + .header .nav .nav-cta[href="#kontakt"] {
+    display: none !important;
+  }
+
+  .top-band + .header + main .hero h1 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}

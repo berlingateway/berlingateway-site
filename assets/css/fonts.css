@@ -256,7 +256,8 @@
    Scoped to the employer-style top-band/header/hero structure so other page
    templates keep their existing mobile navigation behaviour. */
 @media (max-width: 640px) {
-  .top-band + .header .nav .nav-cta[href="#kontakt"] {
+  .top-band + .header .nav .nav-cta[href="#kontakt"],
+  .top-band + .header .nav .nav-cta[href^="mailto:recruitment@berlingateway.de"] {
     display: none !important;
   }
 

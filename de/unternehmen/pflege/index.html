@@ -237,20 +237,28 @@
     }
     .dossier-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
       margin: 0;
     }
-    .dossier-field {
-      display: grid;
-      grid-template-columns: minmax(145px, .7fr) 1fr;
-      gap: 12px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--line);
+    .dossier-card {
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
     }
-    .dossier-field dt { color: var(--navy); font-weight: 800; }
-    .dossier-field dd { margin: 0; color: var(--muted); }
-    .dossier-placeholder { font-style: italic; }
+    .dossier-card__badge {
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 14px;
+      padding: 5px 9px;
+      color: #236044;
+      background: var(--success-soft);
+      border-radius: 5px;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .dossier-card h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.05rem; }
+    .dossier-card p { margin: 0; color: var(--muted); }
     .status-navigator {
       display: grid;
       grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -366,6 +374,7 @@
 
     @media (max-width: 960px) {
       .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .dossier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .status-navigator { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
     @media (max-width: 800px) {
@@ -388,7 +397,6 @@
       .pattern-shell { padding: 22px; }
       .status-navigator { grid-template-columns: 1fr; gap: 12px; }
       .status-step { min-height: auto; padding: 18px; }
-      .dossier-field { grid-template-columns: 1fr; gap: 3px; }
       .pipeline-card { min-height: auto; }
     }
     @media (max-width: 520px) {
@@ -481,16 +489,16 @@
         <p class="section-intro">Dieses Muster zeigt ausschließlich, welche Informationen in einer späteren, bedarfsbezogenen Übersicht strukturiert werden können. Es ist kein reales Kandidatenprofil und enthält keine erfundenen Werte.</p>
         <div class="pattern-shell">
           <div class="pattern-label">DARSTELLUNGSMUSTER — KEIN REALES KANDIDATENPROFIL</div>
-          <dl class="dossier-grid">
-            <div class="dossier-field"><dt>Beruf</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>Qualifikation</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>Berufserfahrung</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>Einsatzbereich</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>Deutsch</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>Anerkennung</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>Standort/Mobilität</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-            <div class="dossier-field"><dt>BG-Prozessstatus</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
-          </dl>
+          <div class="dossier-grid">
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Beruf</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Qualifikation</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Berufserfahrung</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Einsatzbereich</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Deutsch</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Anerkennung</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>Standort/Mobilität</h3><p>Keine Daten hinterlegt.</p></article>
+            <article class="card dossier-card"><span class="dossier-card__badge">Strukturfeld</span><h3>BG-Prozessstatus</h3><p>Keine Daten hinterlegt.</p></article>
+          </div>
         </div>
       </div>
     </section>

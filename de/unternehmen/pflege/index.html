@@ -8,30 +8,649 @@
   <link rel="canonical" href="https://berlingateway.de/de/unternehmen/pflege/">
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <style>
-    :root{--navy:#0b1f3a;--ink:#17273b;--blue:#0b3b8c;--gold:#b8902a;--gold-dark:#98751e;--mist:#f3f6f8;--line:#d9e2e8;--white:#fff;--muted:#526477}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--white)} a{color:#176f7d} .container{width:min(1100px,calc(100% - 40px));margin:auto}.topbar{background:var(--navy);color:#fff;font-size:.81rem}.topbar__inner,.header__inner{display:flex;align-items:center;justify-content:space-between;gap:18px}.topbar__inner{min-height:40px}.topbar a{color:#fff;text-decoration:none}.header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}.header__inner{min-height:74px}.brand{color:#101820;text-decoration:none;font-size:1.1rem;font-weight:800}.brand span{color:var(--blue)}.nav{display:flex;align-items:center;gap:20px}.nav a{color:#34445a;text-decoration:none;font-size:.9rem;font-weight:600}.nav .nav-cta{background:var(--gold);padding:9px 16px;border-radius:6px;color:var(--navy)}
-    .hero{background:linear-gradient(124deg,#0b1f3a 0%,#113f73 63%,#245a78 100%);color:#fff;padding:76px 0 66px}.hero__grid{display:grid;grid-template-columns:1.35fr .8fr;gap:48px;align-items:center}.eyebrow{display:block;color:var(--gold);font-size:.78rem;letter-spacing:.11em;font-weight:800;text-transform:uppercase;margin-bottom:14px}.hero h1{font-size:clamp(2.25rem,5vw,4.15rem);line-height:1.06;letter-spacing:-.045em;margin:0 0 24px;color:#fff;max-width:760px}.lead{font-size:1.15rem;line-height:1.7;color:#e8eef5;max-width:730px;margin:0}.hero__ctas,.contact-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:6px;font-weight:800;text-decoration:none;text-align:center}.btn--primary{background:var(--gold);color:#17273b}.btn--primary:hover{background:#c99f32}.btn--outline{border:2px solid rgba(255,255,255,.85);color:#fff}.hero-panel{padding:28px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.23);border-radius:14px}.hero-panel strong{display:block;font-size:1.2rem;line-height:1.3;margin-bottom:10px}.hero-panel p{margin:0;color:#e7eef5}.hero-qualification{margin-top:22px;font-size:.95rem;color:#dce8f1}
-    .section{padding:78px 0}.section--mist{background:var(--mist)}.section h2{font-size:clamp(1.75rem,3vw,2.65rem);line-height:1.16;letter-spacing:-.035em;margin:0 0 18px;color:var(--navy)}.section-intro{max-width:800px;margin:0 0 34px;color:var(--muted);font-size:1.06rem}.grid{display:grid;gap:18px}.grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}.card h3{font-size:1.13rem;line-height:1.3;color:var(--navy);margin:0 0 10px}.card p{margin:0;color:var(--muted)}.card a{font-weight:800}.field{padding:22px;border-left:4px solid var(--gold);background:#fff;border-radius:0 10px 10px 0}.field h3{margin:0 0 8px;font-size:1.05rem}.field p{margin:0;color:var(--muted)}.notice{max-width:900px;border-left:4px solid var(--gold);padding:20px 24px;background:#fff8e7;color:#35445a;border-radius:0 8px 8px 0}.notice p{margin:0}.steps{counter-reset:step;display:grid;gap:18px}.step{position:relative;padding:25px 25px 25px 78px;background:#fff;border:1px solid var(--line);border-radius:12px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:24px;top:24px;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}.step h3{margin:0 0 8px;color:var(--navy)}.step p{margin:0;color:var(--muted)}.faq{display:grid;gap:12px}.faq details{background:#fff;border:1px solid var(--line);border-radius:9px;padding:18px 20px}.faq summary{cursor:pointer;font-weight:800;color:var(--navy)}.faq p{color:var(--muted);margin:13px 0 0}.sources{display:flex;flex-wrap:wrap;gap:12px}.source{display:inline-flex;padding:10px 14px;border:1px solid var(--line);border-radius:7px;background:#fff;font-size:.92rem;font-weight:700;text-decoration:none}.contact{background:var(--navy);color:#fff}.contact h2{color:#fff}.contact .section-intro{color:#dce6ef}.contact .btn--outline{color:#fff;border-color:#bfcbd8}.footer{background:#07172b;color:#ccd6df;padding:32px 0;text-align:center;font-size:.9rem}.footer a{color:#dce6ef;text-decoration:none;margin:0 8px}.cluster{padding-top:0}.cluster .card{min-height:160px;display:flex;flex-direction:column;justify-content:space-between}.cluster .card a{margin-top:14px;text-decoration:none}
-    @media(max-width:800px){.topbar__inner{justify-content:center}.topbar__inner span{display:none}.header__inner{min-height:64px}.nav>a:not(.nav-cta){display:none}.nav .nav-cta{font-size:.83rem;padding:8px 12px}.hero{padding:56px 0}.hero__grid,.grid--2,.grid--3,.grid--4{grid-template-columns:1fr}.section{padding:56px 0}.hero__ctas,.contact-actions{flex-direction:column}.btn{width:100%}.hero-panel{padding:22px}}
+    :root {
+      --navy: #0b1f3a;
+      --navy-deep: #07172b;
+      --ink: #17273b;
+      --blue: #0b3b8c;
+      --gold: #b8902a;
+      --gold-dark: #98751e;
+      --mist: #f3f6f8;
+      --line: #d9e2e8;
+      --white: #fff;
+      --muted: #526477;
+      --success-soft: #eef6f1;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    a { color: #176f7d; }
+    a:focus-visible,
+    summary:focus-visible,
+    .btn:focus-visible {
+      outline: 3px solid #e3bd58;
+      outline-offset: 3px;
+    }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { background: var(--navy); color: var(--white); font-size: .82rem; }
+    .topbar__inner,
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .topbar__inner { min-height: 40px; }
+    .topbar a { color: var(--white); text-decoration: none; }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .header__inner { min-height: 74px; }
+    .brand {
+      color: #101820;
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .brand span { color: var(--blue); }
+    .nav { display: flex; align-items: center; gap: 20px; }
+    .nav a {
+      color: #34445a;
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav .nav-cta {
+      padding: 9px 16px;
+      color: var(--navy);
+      background: var(--gold);
+      border-radius: 6px;
+    }
+    .hero {
+      padding: 78px 0 70px;
+      color: var(--white);
+      background: linear-gradient(124deg, #0b1f3a 0%, #113f73 63%, #245a78 100%);
+    }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1.35fr .8fr;
+      gap: 52px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      max-width: 760px;
+      margin: 0 0 24px;
+      color: var(--white);
+      font-size: clamp(2.25rem, 5vw, 4.15rem);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+    }
+    .lead {
+      max-width: 730px;
+      margin: 0;
+      color: #e8eef5;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+    .hero__ctas,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+    }
+    .btn--primary { color: var(--ink); background: var(--gold); }
+    .btn--primary:hover { background: #c99f32; }
+    .btn--outline { color: var(--white); border: 2px solid rgba(255, 255, 255, .85); }
+    .btn--outline:hover { background: rgba(255, 255, 255, .08); }
+    .hero-panel {
+      padding: 30px;
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .23);
+      border-radius: 14px;
+    }
+    .hero-panel strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+    .hero-panel p { margin: 0; color: #e7eef5; }
+    .hero-qualification { margin: 22px 0 0; color: #dce8f1; font-size: .95rem; }
+
+    .section { padding: 78px 0; }
+    .section--mist { background: var(--mist); }
+    .section h2 {
+      max-width: 900px;
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: clamp(1.85rem, 3vw, 2.65rem);
+      line-height: 1.16;
+      letter-spacing: -.035em;
+    }
+    .section-intro {
+      max-width: 820px;
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+    .grid { display: grid; gap: 18px; }
+    .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      padding: 26px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.13rem;
+      line-height: 1.3;
+    }
+    .card p { margin: 0; color: var(--muted); }
+    .card a { font-weight: 800; }
+    .card__link { display: inline-block; margin-top: 16px; text-decoration: none; }
+    .pipeline-card {
+      position: relative;
+      min-height: 188px;
+      padding-top: 52px;
+    }
+    .pipeline-card__region {
+      position: absolute;
+      top: 22px;
+      left: 26px;
+      color: var(--gold-dark);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .pipeline-card__count {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.18rem;
+      line-height: 1.35;
+    }
+    .pipeline-note {
+      margin-top: 24px;
+      padding: 20px 24px;
+      color: #35445a;
+      background: #fff8e7;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+    }
+    .pipeline-note p { margin: 0; }
+    .pattern-shell {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .pattern-label {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 7px 10px;
+      color: var(--navy);
+      background: #fff8e7;
+      border: 1px solid #e5cb85;
+      border-radius: 5px;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+    }
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+      margin: 0;
+    }
+    .dossier-field {
+      display: grid;
+      grid-template-columns: minmax(145px, .7fr) 1fr;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .dossier-field dt { color: var(--navy); font-weight: 800; }
+    .dossier-field dd { margin: 0; color: var(--muted); }
+    .dossier-placeholder { font-style: italic; }
+    .status-navigator {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .status-step {
+      min-height: 138px;
+      padding: 18px 14px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--gold);
+      border-radius: 9px;
+    }
+    .status-step__number {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      margin-bottom: 14px;
+      place-items: center;
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+    .status-step h3 { margin: 0 0 7px; color: var(--navy); font-size: 1rem; }
+    .status-step p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .field {
+      padding: 22px;
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+    }
+    .field h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.05rem; }
+    .field p { margin: 0; color: var(--muted); }
+    .evidence-card { min-height: 184px; }
+    .evidence-status {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 9px;
+      color: #236044;
+      background: var(--success-soft);
+      border-radius: 5px;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .process-list { display: grid; gap: 14px; }
+    .process-step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 20px 22px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .process-step__number {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+    .process-step h3 { margin: 0 0 5px; color: var(--navy); }
+    .process-step p { margin: 0; color: var(--muted); }
+    .notice {
+      max-width: 900px;
+      padding: 20px 24px;
+      color: #35445a;
+      background: #fff8e7;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+    }
+    .notice p { margin: 0; }
+    .faq { display: grid; gap: 12px; }
+    .faq details {
+      padding: 18px 20px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+    }
+    .faq summary { color: var(--navy); cursor: pointer; font-weight: 800; }
+    .faq p { margin: 13px 0 0; color: var(--muted); }
+    .cluster .card { min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; }
+    .cluster .card a { margin-top: 14px; text-decoration: none; }
+    .trust-list { display: grid; gap: 12px; max-width: 900px; margin: 0; padding: 0; list-style: none; }
+    .trust-list li {
+      padding: 18px 20px 18px 48px;
+      color: var(--muted);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      position: relative;
+    }
+    .trust-list li::before {
+      content: "✓";
+      position: absolute;
+      top: 17px;
+      left: 18px;
+      color: var(--gold-dark);
+      font-weight: 900;
+    }
+    .contact { color: var(--white); background: var(--navy); }
+    .contact h2 { color: var(--white); }
+    .contact .section-intro { color: #dce6ef; }
+    .contact .btn--outline { color: var(--white); border-color: #bfcbd8; }
+    .contact-note { margin: 22px 0 0; color: #dce6ef; font-size: .95rem; }
+    .footer { padding: 32px 0; color: #ccd6df; background: var(--navy-deep); text-align: center; font-size: .9rem; }
+    .footer a { margin: 0 8px; color: #dce6ef; text-decoration: none; }
+
+    @media (max-width: 960px) {
+      .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .status-navigator { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 800px) {
+      .topbar__inner { justify-content: center; }
+      .topbar__inner span { display: none; }
+      .header__inner { min-height: 64px; }
+      .nav > a:not(.nav-cta) { display: none; }
+      .nav .nav-cta { padding: 8px 12px; font-size: .83rem; }
+      .hero { padding: 56px 0; }
+      .hero__grid,
+      .grid--2,
+      .grid--3,
+      .grid--4,
+      .dossier-grid { grid-template-columns: 1fr; }
+      .section { padding: 56px 0; }
+      .hero__ctas,
+      .contact-actions { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+      .hero-panel,
+      .pattern-shell { padding: 22px; }
+      .status-navigator { grid-template-columns: 1fr; gap: 12px; }
+      .status-step { min-height: auto; padding: 18px; }
+      .dossier-field { grid-template-columns: 1fr; gap: 3px; }
+      .pipeline-card { min-height: auto; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 28px, 1120px); }
+      body { font-size: 16px; }
+      .hero h1 { font-size: clamp(2rem, 11vw, 3rem); }
+      .lead { font-size: 1.05rem; }
+      .card p,
+      .field p,
+      .dossier-field dd,
+      .process-step p,
+      .trust-list li { font-size: 15px; }
+      .card,
+      .process-step { padding: 20px; }
+      .process-step { grid-template-columns: 42px 1fr; gap: 12px; }
+      .footer a { display: inline-block; margin-top: 8px; }
+    }
   </style>
 </head>
 <body>
-  <div class="topbar"><div class="container topbar__inner"><a href="mailto:recruitment@berlingateway.de">✉ recruitment@berlingateway.de</a><span>Berlin Gateway — Employer Portal</span></div></div>
-  <header class="header"><div class="container header__inner"><a class="brand" href="/de/">Berlin <span>Gateway</span></a><nav class="nav"><a href="/de/unternehmen/internationale-fachkraefte/">B2B Übersicht</a><a class="nav-cta" href="#kontakt">Personalbedarf besprechen</a></nav></div></header>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="mailto:recruitment@berlingateway.de">✉ recruitment@berlingateway.de</a>
+      <span>Berlin Gateway — Pflege Arbeitgeberportal</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="/de/">Berlin <span>Gateway</span></a>
+      <nav class="nav" aria-label="Arbeitgebernavigation">
+        <a href="/de/unternehmen/internationale-fachkraefte/">B2B Übersicht</a>
+        <a class="nav-cta" href="#kontakt">Personalbedarf besprechen</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <section class="hero"><div class="container hero__grid"><div><span class="eyebrow">Pflege-Recruiting für Arbeitgeber</span><h1>Pflegekräfte aus dem Ausland rekrutieren: Bedarf strukturiert klären</h1><p class="lead">Sie möchten internationale Pflegefachkräfte für Ihre Einrichtung gewinnen oder ausländische Pflegekräfte einstellen? Im ersten Gespräch klären wir gemeinsam Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen. Welche Profile für Ihren konkreten Bedarf in Betracht kommen und welche weiteren Schritte sinnvoll sind, wird fallbezogen eingeordnet.</p><div class="hero__ctas"><a class="btn btn--primary" href="#kontakt">Pflege-Personalbedarf besprechen</a><a class="btn btn--outline" href="#bedarfsklaerung">Bedarf und Anforderungen klären</a></div><p class="hero-qualification">Im ersten Gespräch klären wir Einrichtungstyp, Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen.</p></div><aside class="hero-panel"><strong>Für Einrichtungen mit konkretem Personalbedarf</strong><p>Wir besprechen Ihren Bedarf und Ihr Anforderungsprofil und ordnen mögliche nächste Schritte für den konkreten Fall ein.</p></aside></div></section>
-    <section class="section"><div class="container"><span class="eyebrow">Einrichtungstyp</span><h2>Für welche Einrichtungen ist internationale Pflege-Rekrutierung ein Thema?</h2><p class="section-intro">Internationale Pflege-Rekrutierung ist keine einheitliche Lösung für jede Einrichtung. Entscheidend sind Versorgungsumfeld, Aufgabenprofil, Team, Standort und die Frage, welche Anforderungen für die gesuchte Rolle unverzichtbar sind. Wählen Sie zunächst den Einrichtungstyp, damit der Personalbedarf im passenden Kontext besprochen werden kann.</p><div class="grid grid--4"><article class="card"><h3>Pflegeheime / stationäre Altenpflege</h3><p>Sie planen Personal für die stationäre Langzeitpflege? Wir klären mit Ihnen Versorgungsstruktur, Schicht- und Einsatzkontext sowie Anforderungen an mögliche Pflegeprofile.</p><a href="/de/unternehmen/pflege/pflegeheime/">Personalbedarf für Pflegeheime einordnen</a></article><article class="card"><h3>Ambulante Pflegedienste</h3><p>Bei ambulanten Diensten stehen Touren, Einsatzgebiet, Arbeitsorganisation und die konkrete Rolle im Mittelpunkt der Bedarfsaufnahme.</p></article><article class="card"><h3>Krankenhäuser und Kliniken</h3><p>Für Stationen und Fachbereiche kann ein gemeinsames Gespräch klären, welche Rolle, welches Teamumfeld und welche Anforderungen maßgeblich sind.</p></article><article class="card"><h3>Reha-Einrichtungen</h3><p>Reha-Einrichtungen können ihren Bedarf anhand von Einsatzbereich, Aufgabenprofil, Standort und gewünschtem Start strukturiert einordnen.</p></article></div></div></section>
-    <section id="bedarfsklaerung" class="section section--mist"><div class="container"><span class="eyebrow">Bedarfsklärung</span><h2>Personalbedarf und Anforderungen strukturiert klären</h2><p class="section-intro">Ein erstes Gespräch dient der Klärung Ihres konkreten Bedarfs. Eine klare Bedarfserfassung hilft, spätere Rückfragen zu reduzieren und mögliche nächste Schritte transparent zu ordnen.</p><div class="grid grid--3"><article class="field"><h3>Einrichtung und Einsatzbereich</h3><p>Welcher Versorgungs- und Aufgabenbereich steht im Mittelpunkt?</p></article><article class="field"><h3>Anzahl</h3><p>Wie viele Rollen sollen im Bedarf betrachtet werden?</p></article><article class="field"><h3>Standort</h3><p>An welchem Standort und in welchem Umfeld ist die Rolle vorgesehen?</p></article><article class="field"><h3>Gewünschter Start</h3><p>Welcher Planungszeitpunkt ist für Ihre Einrichtung relevant?</p></article><article class="field"><h3>Zentrale Anforderungen</h3><p>Welche fachlichen und kommunikativen Kriterien sind für die Rolle wichtig?</p></article></div></div></section>
-    <section class="section"><div class="container"><span class="eyebrow">Einordnung</span><h2>Möglichkeiten und Grenzen internationaler Pflege-Rekrutierung</h2><p class="section-intro">Internationale Pflegekräfte können ein zusätzlicher Weg der Personalgewinnung sein. Ob dieser Weg für einen konkreten Bedarf geeignet ist, hängt unter anderem von Beruf, Qualifikation, Anerkennungsstand, Sprachstand, Arbeitgeberprofil, Aufenthaltsweg und weiteren Voraussetzungen ab. Der Weg unterscheidet sich je nach Einzelfall.</p><div class="sources"><a class="source" href="https://www.make-it-in-germany.com/de/unternehmen/einreise/arbeitsmarktzulassung/pflegepersonal" target="_blank" rel="noopener">Pflegepersonal aus dem Ausland: Informationen für Arbeitgeber</a><a class="source" href="https://www.anerkennung-in-deutschland.de/html/de/arbeitgeber.php" target="_blank" rel="noopener">Anerkennung ausländischer Berufsqualifikationen: Informationen für Arbeitgeber</a></div></div></section>
-    <section class="section section--mist"><div class="container"><span class="eyebrow">Profilinformation</span><h2>Zuerst eine anonymisierte Profilübersicht, dann – falls erforderlich – ein weitergehendes Pflegeprofil</h2><p class="section-intro">Berlin Gateway arbeitet mit internationalen Kandidatinnen und Kandidaten aus dem Pflegebereich in unterschiedlichen Qualifikations-, Anerkennungs- und Vermittlungsphasen. Für einen ersten fachlichen Abgleich werden mögliche Profile anhand Ihres konkreten Bedarfs und Anforderungsprofils eingeordnet. Weitergehende personenbezogene Angaben werden nur nach dokumentierter Zustimmung und im erforderlichen Umfang übermittelt.</p><div class="grid grid--2"><article class="card"><h3>Angaben nach aktuellem Status einordnen</h3><p>Fachliche Qualifikation, Anerkennungsstatus, Deutschkenntnisse, Einsatzbereich und weitere Voraussetzungen werden im Verhältnis zum konkreten Bedarf eingeordnet. Eine Angabe kann bestätigt, durch ein vorliegendes Dokument belegt, selbst angegeben, noch offen oder nicht anwendbar sein. Ein vorliegendes Dokument ist keine behördliche Entscheidung.</p></article><article class="card"><h3>Informationen auf den Bedarf begrenzen</h3><p>Die Übersicht konzentriert sich auf die für die Rolle relevanten Punkte. Maßgeblich ist nicht die Anzahl möglicher Profile, sondern ihre Einordnung zum konkreten Bedarf und Anforderungsprofil. Namen, Dokumente und weitergehende personenbezogene Angaben gehören nicht in den ersten fachlichen Abgleich.</p></article></div></div></section>
-    <section class="section"><div class="container"><span class="eyebrow">Anerkennung und Ablauf</span><h2>Anerkennung und individuelle Voraussetzungen</h2><p class="section-intro">Pflegefachkraft ist ein reglementierter Beruf. Die zuständige Stelle prüft die berufliche Qualifikation und weitere Voraussetzungen im Einzelfall. Arbeitgeber können ihren Aufgaben- und Beschäftigungskontext früh klären; Berlin Gateway kann im vereinbarten Umfang nächste administrative Schritte koordinieren. Über Anerkennung, Berufsausübung oder behördliche Verfahren entscheiden die zuständigen Stellen.</p><div class="sources"><a class="source" href="https://www.anerkennung-in-deutschland.de/html/de/arbeitgeber.php" target="_blank" rel="noopener">Anerkennung im Einzelfall einordnen</a><a class="source" href="https://www.make-it-in-germany.com/de/unternehmen/einreise/arbeitsmarktzulassung/pflegepersonal" target="_blank" rel="noopener">Voraussetzungen für Pflegepersonal aus dem Ausland</a><a class="source" href="https://www.arbeitsagentur.de/unternehmen/arbeitskraefte/fachkraefte-ausland" target="_blank" rel="noopener">Informationen der Bundesagentur für Arbeit</a></div></div></section>
-    <section class="section section--mist"><div class="container"><span class="eyebrow">Arbeitgeber-Journey</span><h2>Vom Bedarf zu möglichen Pflegeprofilen, Gesprächen und Ihrer Entscheidung</h2><div class="steps"><article class="step"><h3>Bedarf und Anforderungsprofil klären</h3><p>Der Ablauf beginnt mit Ihrem Bedarf und dem abgestimmten Anforderungsprofil.</p></article><article class="step"><h3>Mögliche Pflegeprofile einordnen und Gespräche koordinieren</h3><p>Mögliche Pflegeprofile werden im Verhältnis zu den Anforderungen eingeordnet. Wenn Arbeitgeberprofil und Pflegeprofil eine weitere Prüfung sinnvoll erscheinen lassen, können Gespräche koordiniert werden.</p></article><article class="step"><h3>Arbeitgeberentscheidung und vereinbarte nächste Schritte</h3><p>Die Auswahl- und Einstellungsentscheidung liegt beim Arbeitgeber. Nach einer Entscheidung können weitere administrative Schritte für den konkreten Fall vereinbart und Kontaktpunkte koordiniert werden.</p></article></div></div></section>
-    <section class="section"><div class="container"><span class="eyebrow">Arbeitsaufnahme</span><h2>Vorbereitung der Arbeitsaufnahme</h2><p class="section-intro">Der Arbeitgeber bereitet Arbeitsplatz, betriebliche Einarbeitung, Ansprechpartner und die relevanten Teamstrukturen vor. Je nach Fall übernehmen Kandidatinnen und Kandidaten, Arbeitgeber und weitere zuständige Stellen eigene Schritte. Berlin Gateway kann vereinbarte Kontaktpunkte koordinieren.</p><div class="notice"><p><strong>Realistisch planen, individuell entscheiden:</strong> Ein strukturierter Bedarf und ein klarer Status helfen dabei, Entscheidungen früh und nachvollziehbar zu treffen. Zuständigkeiten, Unterlagen und Entscheidungen können je nach Beruf, Bundesland und individueller Konstellation unterschiedlich sein.</p></div></div></section>
-    <section class="section section--mist"><div class="container"><span class="eyebrow">Häufige Fragen</span><h2>Häufige Fragen von Arbeitgebern</h2><div class="faq"><details><summary>Für welche Einrichtungen ist die Seite gedacht?</summary><p>Die Seite richtet sich an Pflegeheime, ambulante Pflegedienste, Krankenhäuser, Kliniken und Reha-Einrichtungen, die ihren Pflege-Personalbedarf strukturiert einordnen möchten.</p></details><details><summary>Welche Informationen sollten wir für ein erstes Gespräch bereithalten?</summary><p>Hilfreich sind Einrichtung und Einsatzbereich, Anzahl, Standort, gewünschter Start und die zentralen Anforderungen.</p></details><details><summary>Gibt es sofort verfügbare Pflegekräfte?</summary><p>Ob und wann ein konkretes Profil im Verhältnis zu Ihrem Bedarf eingeordnet werden kann, hängt vom einzelnen Fall ab. Ausschlaggebend sind unter anderem Qualifikations- und Anerkennungsstatus, Deutschkenntnisse, Einsatzbereich sowie weitere erforderliche Schritte und Voraussetzungen.</p></details><details><summary>Erhalte ich sofort vollständige Pflegeprofile?</summary><p>Für einen ersten fachlichen Abgleich kann eine anonymisierte Profilübersicht ausreichen. Weitergehende personenbezogene Angaben werden nur im für den nächsten Schritt erforderlichen Umfang und nach dokumentierter Zustimmung der betreffenden Person übermittelt.</p></details><details><summary>Ist die Anerkennung bei internationalen Pflegefachkräften automatisch geregelt?</summary><p>Bei Pflegefachkräften werden Qualifikation und weitere Voraussetzungen von den zuständigen Stellen im Einzelfall geprüft. Der Arbeitgeber kann die eigene Rolle und erforderliche Unterlagen früh klären.</p></details><details><summary>Wer trifft die Auswahl- und Einstellungsentscheidung?</summary><p>Die Auswahl- und Einstellungsentscheidung liegt beim Arbeitgeber. Berlin Gateway kann im vereinbarten Umfang die Bedarfsklärung, die Einordnung möglicher Pflegeprofile und die Koordination von Gesprächen unterstützen.</p></details><details><summary>Was geschieht nach einer Arbeitgeberentscheidung?</summary><p>Je nach Fall werden die nächsten Schritte, Zuständigkeiten, Unterlagen und Kontaktpunkte gemeinsam eingeordnet. Betriebliche Einarbeitung und die Vorbereitung des Arbeitsplatzes bleiben Aufgaben des Arbeitgebers.</p></details></div></div></section>
-    <section class="section"><div class="container"><span class="eyebrow">Vertiefung</span><h2>Vertiefende Inhalte für Arbeitgeber</h2><div class="grid grid--3"><article class="card"><h3>Pflegeheime und stationäre Altenpflege</h3><p>Personalbedarf im stationären Kontext strukturiert einordnen.</p><a href="/de/unternehmen/pflege/pflegeheime/">Personalbedarf für Pflegeheime einordnen</a></article><article class="card"><h3>Pflegekräftemangel sachlich einordnen</h3><p>Mehrere Handlungsfelder für die nächste Personalentscheidung prüfen.</p><a href="/de/insights/pflegekraeftemangel-loesungen-fuer-arbeitgeber/">Handlungsfelder gegen Pflegekräftemangel einordnen</a></article><article class="card"><h3>Regionaler Pflegebedarf</h3><p>Bestehenden regionalen Kontext für die neuen Bundesländer prüfen.</p><a href="/de/unternehmen/pflege-neue-bundeslaender/">Regionalen Pflegebedarf in den neuen Bundesländern einordnen</a></article><article class="card"><h3>Marokko-bezogener Rekrutierungsweg</h3><p>Unterlagen, Sprachstand und Anerkennungsstatus fallbezogen transparent einordnen.</p><a href="/de/unternehmen/pflegefachkraefte-marokko/">Marokko-bezogenen Rekrutierungsweg prüfen</a></article><article class="card"><h3>Tunesien-bezogener Rekrutierungsweg</h3><p>Fragen zu Bedarf, Qualifikation, Anerkennung und Einstieg früh klären.</p><a href="/de/unternehmen/pflegefachkraefte-tunesien/">Tunesien-bezogenen Rekrutierungsweg prüfen</a></article></div></div></section>
-    <section class="section cluster section--mist" data-b2b-cluster-nav><div class="container"><div style="border-top:1px solid var(--line);padding-top:48px"><span class="eyebrow">Weitere Arbeitgeberlösungen</span><h2>Weitere Fachkräfte für Ihr Unternehmen</h2><p class="section-intro">Entdecken Sie weitere internationale Fachkräfteprofile für Ihren konkreten Personalbedarf.</p><div class="grid grid--4"><article class="card"><h3>Anästhesietechnische Assistenten</h3><p>Internationale ATA-Fachkräfte für Kliniken und OP-Bereiche.</p><a href="/de/unternehmen/anaesthesietechnische-assistenten/">Mehr erfahren →</a></article><article class="card"><h3>Physiotherapie</h3><p>Internationale Physiotherapeuten für Arbeitgeber.</p><a href="/de/unternehmen/physiotherapeuten/">Mehr erfahren →</a></article><article class="card"><h3>Kfz &amp; Nutzfahrzeuge</h3><p>Internationale Fachkräfte für Werkstatt und Nutzfahrzeugtechnik.</p><a href="/de/unternehmen/kfz-nutzfahrzeugmechatroniker/">Mehr erfahren →</a></article><article class="card"><h3>Internationale Fachkräfte</h3><p>Weitere Fachkräfte und Lösungen für Arbeitgeber.</p><a href="/de/unternehmen/internationale-fachkraefte/">Alle Fachkräfte →</a></article></div></div></div></section>
-    <section id="kontakt" class="section contact"><div class="container" style="max-width:850px"><span class="eyebrow">B2B Kontakt</span><h2>Pflege-Personalbedarf besprechen</h2><p class="section-intro">Beschreiben Sie uns kurz Ihren Einrichtungstyp, den Einsatzbereich, die Anzahl, den Standort, den gewünschten Start und die wichtigsten Anforderungen. Wir vereinbaren ein erstes Arbeitgebergespräch, um mögliche nächste Schritte einzuordnen.</p><div class="contact-actions"><a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Pflege-Personalbedarf">Pflege-Personalbedarf per E-Mail besprechen</a><a class="btn btn--outline" href="tel:+4915781497451">Direkt anrufen: +49 157 81497451</a></div></div></section>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">Pflege-Recruiting für Arbeitgeber</span>
+          <h1>Pflegekräfte aus dem Ausland rekrutieren: Bedarf strukturiert klären</h1>
+          <p class="lead">Berlin Gateway strukturiert die für den Arbeitgeber relevanten Angaben zu Qualifikation, Berufserfahrung, Deutschstand und vorhandenem Anerkennungsstatus auf Grundlage des jeweiligen Informations- und Dokumentenstands. Im ersten Gespräch klären wir gemeinsam Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen. Welche Profile für Ihren konkreten Bedarf in Betracht kommen und welche weiteren Schritte sinnvoll sind, wird fallbezogen eingeordnet.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#kontakt">Pflegeprofile anfragen</a>
+            <a class="btn btn--outline" href="#kontakt">Personalbedarf besprechen</a>
+          </div>
+          <p class="hero-qualification">Im ersten Gespräch klären wir Einrichtungstyp, Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen.</p>
+        </div>
+        <aside class="hero-panel">
+          <strong>Für Einrichtungen mit konkretem Personalbedarf</strong>
+          <p>Wir besprechen Ihren Bedarf und Ihr Anforderungsprofil und ordnen mögliche nächste Schritte für den konkreten Fall ein.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="pipeline">
+      <div class="container">
+        <span class="eyebrow">Aggregierte Pflege-Pipeline</span>
+        <h2>Pflegeprofile im BG-Prozess nach Herkunftsmarkt</h2>
+        <p class="section-intro">Die folgende Übersicht stellt ausschließlich aggregierte Pflege-Pipeline dar. Sie enthält keine personenbezogenen Angaben und ist keine öffentliche Zusage zu Verfügbarkeit, Anerkennung, Sprachstand oder Starttermin.</p>
+        <div class="grid grid--3">
+          <article class="card pipeline-card">
+            <span class="pipeline-card__region">Ägypten</span>
+            <strong class="pipeline-card__count">Mehrere Pflegeprofile im BG-Prozess</strong>
+            <p>Aggregierte Marktübersicht ohne individuelle Profildaten.</p>
+          </article>
+          <article class="card pipeline-card">
+            <span class="pipeline-card__region">Marokko</span>
+            <strong class="pipeline-card__count">2 Pflegeprofile im BG-Prozess</strong>
+            <p>Aggregierte Marktübersicht ohne individuelle Profildaten.</p>
+          </article>
+          <article class="card pipeline-card">
+            <span class="pipeline-card__region">Tunesien</span>
+            <strong class="pipeline-card__count">2 Pflegeprofile im BG-Prozess</strong>
+            <p>Aggregierte Marktübersicht ohne individuelle Profildaten.</p>
+          </article>
+        </div>
+        <div class="pipeline-note">
+          <p><strong>Datensparsam dargestellt:</strong> Die Übersicht veröffentlicht keine Namen, Dokumente, Bescheidarten, individuellen Statusangaben oder privaten Kontaktdaten.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="darstellungsmuster">
+      <div class="container">
+        <span class="eyebrow">Anonymisierte Struktur</span>
+        <h2>Ein einheitliches Darstellungsmuster für Pflegeprofile</h2>
+        <p class="section-intro">Dieses Muster zeigt ausschließlich, welche Informationen in einer späteren, bedarfsbezogenen Übersicht strukturiert werden können. Es ist kein reales Kandidatenprofil und enthält keine erfundenen Werte.</p>
+        <div class="pattern-shell">
+          <div class="pattern-label">DARSTELLUNGSMUSTER — KEIN REALES KANDIDATENPROFIL</div>
+          <dl class="dossier-grid">
+            <div class="dossier-field"><dt>Beruf</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>Qualifikation</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>Berufserfahrung</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>Einsatzbereich</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>Deutsch</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>Anerkennung</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>Standort/Mobilität</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+            <div class="dossier-field"><dt>BG-Prozessstatus</dt><dd class="dossier-placeholder">Strukturfeld — keine Daten</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="status">
+      <div class="container">
+        <span class="eyebrow">BG Status Navigator</span>
+        <h2>Status statt Versprechen</h2>
+        <p class="section-intro">Der Navigator beschreibt die Prozessphasen, in denen ein Pflegeprofil eingeordnet werden kann. Er ist keine Zusage für Anerkennung, Auswahl, Einreise oder Arbeitsaufnahme.</p>
+        <div class="status-navigator" aria-label="Sieben Phasen des BG-Prozesses">
+          <article class="status-step"><span class="status-step__number">1</span><h3>Profil</h3><p>Bedarfsbezogene Profilausgangslage.</p></article>
+          <article class="status-step"><span class="status-step__number">2</span><h3>Prüfung</h3><p>Relevante Angaben und Unterlagen einordnen.</p></article>
+          <article class="status-step"><span class="status-step__number">3</span><h3>Matching</h3><p>Abgleich mit dem Arbeitgeberbedarf.</p></article>
+          <article class="status-step"><span class="status-step__number">4</span><h3>Gespräch</h3><p>Weitere Klärung zwischen den Beteiligten.</p></article>
+          <article class="status-step"><span class="status-step__number">5</span><h3>Verfahren</h3><p>Fallbezogene nächste administrative Schritte.</p></article>
+          <article class="status-step"><span class="status-step__number">6</span><h3>Start</h3><p>Vorbereitung des vereinbarten Einstiegs.</p></article>
+          <article class="status-step"><span class="status-step__number">7</span><h3>Onboarding</h3><p>Betriebliche Einarbeitung und Begleitung.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="qualification">
+      <div class="container">
+        <span class="eyebrow">Qualification &amp; Recognition</span>
+        <h2>Qualifikation, Erfahrung, Deutsch und Anerkennung getrennt einordnen</h2>
+        <p class="section-intro">Für einen fachlichen Abgleich werden relevante Punkte im Verhältnis zum konkreten Bedarf betrachtet. Ein Status beschreibt den vorliegenden Informationsstand und ersetzt keine behördliche Entscheidung.</p>
+        <div class="grid grid--4">
+          <article class="card evidence-card"><span class="evidence-status">Statusfeld</span><h3>Qualifikation</h3><p>Ausbildung und fachliche Grundlage werden bedarfsbezogen strukturiert erfasst.</p></article>
+          <article class="card evidence-card"><span class="evidence-status">Statusfeld</span><h3>Erfahrung</h3><p>Berufserfahrung wird nur im erforderlichen Umfang und ohne private Detaildaten betrachtet.</p></article>
+          <article class="card evidence-card"><span class="evidence-status">Statusfeld</span><h3>Deutsch</h3><p>Sprachinformationen werden als Status eingeordnet und nicht pauschal versprochen.</p></article>
+          <article class="card evidence-card"><span class="evidence-status">Statusfeld</span><h3>Anerkennung</h3><p>Die zuständigen Stellen entscheiden im Einzelfall über Anerkennung und Berufsausübung.</p></article>
+        </div>
+        <div class="notice" style="margin-top:24px"><p><strong>Dokumentbasierter Status:</strong> Ein vorliegendes Dokument kann einen Informationsstand belegen. Es ist keine behördliche Anerkennungsentscheidung und keine Garantie für einen bestimmten Verfahrensausgang.</p></div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="arbeitgeberprozess">
+      <div class="container">
+        <span class="eyebrow">Employer Process</span>
+        <h2>Vom Personalbedarf zum möglichen Einstieg</h2>
+        <p class="section-intro">Der Arbeitgeberprozess macht die nächsten Schritte nachvollziehbar. Die Auswahl- und Einstellungsentscheidung liegt beim Arbeitgeber; weitere Verfahren hängen vom Einzelfall und den zuständigen Stellen ab.</p>
+        <div class="process-list">
+          <article class="process-step"><span class="process-step__number">1</span><div><h3>Bedarf</h3><p>Einrichtungstyp, Einsatzbereich, Anzahl, Standort, gewünschter Start und zentrale Anforderungen werden geklärt.</p></div></article>
+          <article class="process-step"><span class="process-step__number">2</span><div><h3>Vorauswahl</h3><p>Relevante Kriterien werden auf den konkreten Bedarf bezogen eingeordnet.</p></div></article>
+          <article class="process-step"><span class="process-step__number">3</span><div><h3>Profil</h3><p>Eine datensparsame Übersicht beschreibt die für die Rolle relevanten Statusfelder.</p></div></article>
+          <article class="process-step"><span class="process-step__number">4</span><div><h3>Gespräch</h3><p>Wenn eine weitere Prüfung sinnvoll erscheint, können Gespräche koordiniert werden.</p></div></article>
+          <article class="process-step"><span class="process-step__number">5</span><div><h3>Entscheidung</h3><p>Der Arbeitgeber entscheidet über Auswahl und Einstellung.</p></div></article>
+          <article class="process-step"><span class="process-step__number">6</span><div><h3>Verfahren</h3><p>Fallbezogene Unterlagen, Zuständigkeiten und weitere administrative Schritte werden eingeordnet.</p></div></article>
+          <article class="process-step"><span class="process-step__number">7</span><div><h3>Einstieg</h3><p>Arbeitsplatz, Einarbeitung, Ansprechpartner und Teamstrukturen werden für den Start vorbereitet.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bedarfsklaerung">
+      <div class="container">
+        <span class="eyebrow">Bestehende wertvolle Inhalte</span>
+        <h2>Personalbedarf und Anforderungen strukturiert klären</h2>
+        <p class="section-intro">Internationale Pflege-Rekrutierung ist keine einheitliche Lösung für jede Einrichtung. Entscheidend sind Versorgungsumfeld, Aufgabenprofil, Team, Standort und die Anforderungen der gesuchten Rolle.</p>
+        <div class="grid grid--4">
+          <article class="card"><h3>Pflegeheime / stationäre Altenpflege</h3><p>Versorgungsstruktur, Schicht- und Einsatzkontext sowie Anforderungen an mögliche Pflegeprofile klären.</p></article>
+          <article class="card"><h3>Ambulante Pflegedienste</h3><p>Touren, Einsatzgebiet, Arbeitsorganisation und die konkrete Rolle in der Bedarfsaufnahme betrachten.</p></article>
+          <article class="card"><h3>Krankenhäuser und Kliniken</h3><p>Station, Fachbereich, Teamumfeld und maßgebliche Anforderungen gemeinsam einordnen.</p></article>
+          <article class="card"><h3>Reha-Einrichtungen</h3><p>Einsatzbereich, Aufgabenprofil, Standort und gewünschter Start strukturiert betrachten.</p></article>
+        </div>
+        <div class="grid grid--3" style="margin-top:18px">
+          <article class="field"><h3>Einrichtung und Einsatzbereich</h3><p>Welcher Versorgungs- und Aufgabenbereich steht im Mittelpunkt?</p></article>
+          <article class="field"><h3>Anzahl und Standort</h3><p>Wie viele Rollen sind an welchem Standort vorgesehen?</p></article>
+          <article class="field"><h3>Gewünschter Start</h3><p>Welcher Planungszeitpunkt ist für Ihre Einrichtung relevant?</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="einordnung">
+      <div class="container">
+        <span class="eyebrow">Einordnung und Arbeitsaufnahme</span>
+        <h2>Möglichkeiten und Grenzen internationaler Pflege-Rekrutierung</h2>
+        <p class="section-intro">Internationale Pflegekräfte können ein zusätzlicher Weg der Personalgewinnung sein. Ob dieser Weg für einen konkreten Bedarf geeignet ist, hängt unter anderem von Beruf, Qualifikation, Anerkennungsstand, Sprachstand, Arbeitgeberprofil, Aufenthaltsweg und weiteren Voraussetzungen ab. Der Weg unterscheidet sich je nach Einzelfall.</p>
+        <div class="grid grid--2">
+          <article class="card"><h3>Anerkennung und individuelle Voraussetzungen</h3><p>Pflegefachkraft ist ein reglementierter Beruf. Die zuständige Stelle prüft die berufliche Qualifikation und weitere Voraussetzungen im Einzelfall. Über Anerkennung, Berufsausübung oder behördliche Verfahren entscheiden die zuständigen Stellen.</p><a class="card__link" href="https://www.anerkennung-in-deutschland.de/html/de/arbeitgeber.php" target="_blank" rel="noopener">Anerkennung im Einzelfall einordnen</a></article>
+          <article class="card"><h3>Vorbereitung der Arbeitsaufnahme</h3><p>Der Arbeitgeber bereitet Arbeitsplatz, betriebliche Einarbeitung, Ansprechpartner und relevante Teamstrukturen vor. Berlin Gateway kann vereinbarte Kontaktpunkte koordinieren.</p><a class="card__link" href="https://www.make-it-in-germany.com/de/unternehmen/einreise/arbeitsmarktzulassung/pflegepersonal" target="_blank" rel="noopener">Voraussetzungen für Pflegepersonal</a></article>
+        </div>
+        <div class="notice" style="margin-top:24px"><p><strong>Realistisch planen, individuell entscheiden:</strong> Zuständigkeiten, Unterlagen und Entscheidungen können je nach Beruf, Bundesland und individueller Konstellation unterschiedlich sein.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow">Häufige Fragen</span>
+        <h2>Häufige Fragen von Arbeitgebern</h2>
+        <div class="faq">
+          <details><summary>Für welche Einrichtungen ist die Seite gedacht?</summary><p>Die Seite richtet sich an Pflegeheime, ambulante Pflegedienste, Krankenhäuser, Kliniken und Reha-Einrichtungen, die ihren Pflege-Personalbedarf strukturiert einordnen möchten.</p></details>
+          <details><summary>Welche Informationen sollten wir für ein erstes Gespräch bereithalten?</summary><p>Hilfreich sind Einrichtung und Einsatzbereich, Anzahl, Standort, gewünschter Start und die zentralen Anforderungen.</p></details>
+          <details><summary>Wie werden mögliche Pflegeprofile zeitlich eingeordnet?</summary><p>Die aggregierte Pipeline ist keine Aussage über individuelle Verfügbarkeit. Ob ein konkretes Profil im Verhältnis zu Ihrem Bedarf eingeordnet werden kann, hängt vom einzelnen Fall und den erforderlichen weiteren Schritten ab.</p></details>
+          <details><summary>Erhalte ich sofort vollständige Pflegeprofile?</summary><p>Für einen ersten fachlichen Abgleich kann eine datensparsame Profilübersicht ausreichen. Weitergehende personenbezogene Angaben werden nur im erforderlichen Umfang und nach dokumentierter Zustimmung übermittelt.</p></details>
+          <details><summary>Ist die Anerkennung bei internationalen Pflegefachkräften automatisch geregelt?</summary><p>Bei Pflegefachkräften werden Qualifikation und weitere Voraussetzungen von den zuständigen Stellen im Einzelfall geprüft. Eine öffentliche Pipeline-Angabe ersetzt keine behördliche Entscheidung.</p></details>
+          <details><summary>Wer trifft die Auswahl- und Einstellungsentscheidung?</summary><p>Die Auswahl- und Einstellungsentscheidung liegt beim Arbeitgeber. Berlin Gateway kann im vereinbarten Umfang die Bedarfsklärung, die Einordnung möglicher Pflegeprofile und die Koordination von Gesprächen unterstützen.</p></details>
+          <details><summary>Was geschieht nach einer Arbeitgeberentscheidung?</summary><p>Je nach Fall werden die nächsten Schritte, Zuständigkeiten, Unterlagen und Kontaktpunkte gemeinsam eingeordnet. Betriebliche Einarbeitung und die Vorbereitung des Arbeitsplatzes bleiben Aufgaben des Arbeitgebers.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="trust">
+      <div class="container">
+        <span class="eyebrow">Trust &amp; Compliance</span>
+        <h2>Transparente Statuslogik und klare Verantwortlichkeiten</h2>
+        <p class="section-intro">Die Arbeitgeberstrecke trennt aggregierte Prozessinformation, bedarfsbezogene Profilstruktur und behördliche Entscheidungen. So bleibt sichtbar, was bereits eingeordnet werden kann und was offen bleibt.</p>
+        <ul class="trust-list">
+          <li><strong>Dokumentbasierter Status:</strong> Ein vorhandenes Dokument kann einen Informationsstand belegen, ist aber keine behördliche Entscheidung.</li>
+          <li><strong>Datenschutz:</strong> Personenbezogene Angaben werden nicht öffentlich veröffentlicht und nur nach dokumentierter Zustimmung sowie im erforderlichen Umfang weitergegeben.</li>
+          <li><strong>Keine Behörden- oder Erfolgszusage:</strong> Berlin Gateway garantiert weder Anerkennung noch Berufsausübung, Aufenthaltsweg, Verfügbarkeit oder Starttermin.</li>
+          <li><strong>Klare Prozessverantwortung:</strong> Arbeitgeber, Pflegeprofile und zuständige Stellen behalten ihre jeweiligen Aufgaben und Entscheidungen.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cluster" id="pflege-cluster">
+      <div class="container">
+        <span class="eyebrow">Pflege-Cluster</span>
+        <h2>Vertiefende Pflege-Inhalte für Arbeitgeber</h2>
+        <p class="section-intro">Weitere Pflege-Inhalte ordnen Einrichtungskontext, regionale Fragen und Herkunftsmarkt-bezogene Wege sachlich ein.</p>
+        <div class="grid grid--3">
+          <article class="card"><h3>Pflegeheime und stationäre Altenpflege</h3><p>Personalbedarf im stationären Kontext strukturiert einordnen.</p><a href="/de/unternehmen/pflege/pflegeheime/">Personalbedarf für Pflegeheime einordnen</a></article>
+          <article class="card"><h3>Regionale Pflegeversorgung</h3><p>Bestehenden regionalen Kontext für die neuen Bundesländer prüfen.</p><a href="/de/unternehmen/pflege-neue-bundeslaender/">Regionalen Pflegebedarf einordnen</a></article>
+          <article class="card"><h3>Pflegekräfte aus Marokko</h3><p>Bedarf, Qualifikation, Sprache und Prozessstatus fallbezogen einordnen.</p><a href="/de/unternehmen/pflegefachkraefte-marokko/">Pflege-Rekrutierung aus Marokko prüfen</a></article>
+          <article class="card"><h3>Pflegekräfte aus Tunesien</h3><p>Fragen zu Bedarf, Qualifikation und Einstieg früh klären.</p><a href="/de/unternehmen/pflegefachkraefte-tunesien/">Pflege-Rekrutierung aus Tunesien prüfen</a></article>
+          <article class="card"><h3>Pflegekräftemangel sachlich einordnen</h3><p>Mehrere Handlungsfelder für die nächste Personalentscheidung prüfen.</p><a href="/de/insights/pflegekraeftemangel-loesungen-fuer-arbeitgeber/">Handlungsfelder einordnen</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="weitere-arbeitgeberloesungen">
+      <div class="container">
+        <span class="eyebrow">Weitere Arbeitgeberlösungen</span>
+        <h2>Weitere Fachkräfte für Ihr Unternehmen</h2>
+        <p class="section-intro">Weitere B2B-Recruiting-Lösungen für Arbeitgeber außerhalb des Pflege-Clusters.</p>
+        <div class="grid grid--4">
+          <article class="card"><h3>Anästhesietechnische Assistenz</h3><p>Anästhesietechnische Assistenz für Arbeitgeber.</p><a class="card__link" href="/de/unternehmen/anaesthesietechnische-assistenten/">ATA-Arbeitgeberlösung</a></article>
+          <article class="card"><h3>Physiotherapie</h3><p>Internationale Physiotherapieprofile für Arbeitgeber.</p><a class="card__link" href="/de/unternehmen/physiotherapeuten/">Physiotherapie-Arbeitgeberlösung</a></article>
+          <article class="card"><h3>Kfz / Nutzfahrzeuge</h3><p>Internationale Fachkräfte für Kfz und Nutzfahrzeuge.</p><a class="card__link" href="/de/unternehmen/kfz-nutzfahrzeugmechatroniker/">Kfz-Arbeitgeberlösung</a></article>
+          <article class="card"><h3>Internationale Fachkräfte</h3><p>Übergeordnete Arbeitgeberstrecke für internationale Fachkräfte.</p><a class="card__link" href="/de/unternehmen/internationale-fachkraefte/">B2B-Übersicht</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact">
+      <div class="container" style="max-width:850px">
+        <span class="eyebrow">Employer Request</span>
+        <h2>Pflegeprofile anfragen und Personalbedarf besprechen</h2>
+        <p class="section-intro">Beschreiben Sie uns kurz Ihren Einrichtungstyp, den Einsatzbereich, die Anzahl, den Standort, den gewünschten Start und die wichtigsten Anforderungen. Wir vereinbaren ein erstes Arbeitgebergespräch, um mögliche nächste Schritte einzuordnen.</p>
+        <div class="contact-actions">
+          <a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Pflegeprofile%20anfragen">Pflegeprofile per E-Mail anfragen</a>
+          <a class="btn btn--outline" href="mailto:recruitment@berlingateway.de?subject=Personalbedarf%20besprechen">Personalbedarf per E-Mail besprechen</a>
+        </div>
+        <p class="contact-note">Primärer Arbeitgeberkontakt: <a href="mailto:recruitment@berlingateway.de" style="color:#fff">recruitment@berlingateway.de</a></p>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="container">© 2026 Berlin Gateway. Alle Rechte vorbehalten. | <a href="/de/impressum">Impressum</a> | <a href="/de/datenschutz/">Datenschutz</a></div></footer>
+
+  <footer class="footer">
+    <div class="container">© 2026 Berlin Gateway. Alle Rechte vorbehalten. | <a href="/de/impressum">Impressum</a> | <a href="/de/datenschutz/">Datenschutz</a></div>
+  </footer>
 </body>
 </html>

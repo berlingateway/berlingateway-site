@@ -23,8 +23,8 @@
 /feed/                  /                301
 
 # 3. English (EN) Cluster — Redirects
-/en/assessment          /de/assessment/  301
-/en/assessment/         /de/assessment/  301
+/en/assessment          /de/assessment   301
+/en/assessment/         /de/assessment   301
 /en/chancenkarte.html   /de/chancenkarte/ 301
 
 # 4. German (DE) — Clean URL Architecture (.html -> /)

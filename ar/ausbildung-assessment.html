@@ -609,7 +609,7 @@
         if (documents.some(value => bDocumentStatuses.has(value))) topics.push('حالة الوثائق');
         if (location === 'location_unsure') topics.push('الموقع الحالي');
         if (place === 'place_or_contract_no') topics.push('مكان التدريب أو عقد التدريب');
-        return topics.slice(0, 3);
+        return topics;
       }
 
       function classify() {

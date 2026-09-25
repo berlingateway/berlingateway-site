@@ -420,7 +420,7 @@
           <div class="choice-grid">
             <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_yes"><span>نعم</span></label>
             <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_no"><span>لا</span></label>
-            <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_unsure"><span>غير متأكد</span></label>
+            <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_unsure"><span>غير متأكد/ة</span></label>
           </div>
         </fieldset>
 
@@ -430,7 +430,7 @@
             <label class="choice"><input type="checkbox" name="q6_document_status" value="school_certificate_available"><span>شهادة مدرسية متاحة</span></label>
             <label class="choice"><input type="checkbox" name="q6_document_status" value="cv_available"><span>سيرة ذاتية متاحة</span></label>
             <label class="choice"><input type="checkbox" name="q6_document_status" value="language_proof_available"><span>إثبات لغة متاح</span></label>
-            <label class="choice"><input type="checkbox" name="q6_document_status" value="translation_open_or_unclear"><span>الترجمة ما زالت مفتوحة أو غير واضحة</span></label>
+            <label class="choice"><input type="checkbox" name="q6_document_status" value="translation_open_or_unclear"><span>الترجمة لم تُستكمل بعد أو وضعها غير واضح</span></label>
             <label class="choice"><input type="checkbox" name="q6_document_status" value="documents_not_yet_complete"><span>الوثائق ليست مكتملة بعد</span></label>
           </div>
         </fieldset>
@@ -442,7 +442,7 @@
             <div class="choice-grid">
               <label class="choice"><input type="radio" name="q7_location" value="inside_germany"><span>داخل ألمانيا</span></label>
               <label class="choice"><input type="radio" name="q7_location" value="outside_germany"><span>خارج ألمانيا</span></label>
-              <label class="choice"><input type="radio" name="q7_location" value="location_unsure"><span>غير متأكد</span></label>
+              <label class="choice"><input type="radio" name="q7_location" value="location_unsure"><span>غير متأكد/ة</span></label>
             </div>
           </div>
           <div class="subgroup">
@@ -540,7 +540,7 @@
           <div class="choice-grid">
             <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_yes"><span>نعم</span></label>
             <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_no"><span>لا</span></label>
-            <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_unsure"><span>غير متأكد</span></label>
+            <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_unsure"><span>غير متأكد/ة</span></label>
           </div>`;
         q8Mount.appendChild(section);
       }
@@ -626,7 +626,7 @@
         if (outcome.kind === 'A') {
           result.innerHTML = `
             <h2>أ — أكمل المعلومات</h2>
-            <p>يرجى إكمال المعلومات الأساسية حتى نتمكن من عرض الخطوات التحضيرية المناسبة لملفك.</p>
+            <p>يرجى إكمال المعلومات الأساسية لعرض النتيجة التوجيهية.</p>
             <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
           return;
         }
@@ -641,7 +641,7 @@
         } else {
           result.innerHTML = `
             <h2>ج — توجيه أولي غير ملزم</h2>
-            <p>توفر إجاباتك أساسًا أوليًا لتوجيهك بشكل غير ملزم حول مسار Ausbildung والخطوات التي ينبغي توضيحها.</p>
+            <p>توفر إجاباتك أساسًا أوليًا لتوجيهك بشكل غير ملزم حول مسار التدريب المهني والخطوات التي ينبغي توضيحها.</p>
             <p class="result-disclaimer">إذا كان لديك مكان تدريب أو عقد، تبقى متطلبات العقد والتمويل والإجراءات الإدارية بحاجة إلى توضيح منفصل. هذه النتيجة ليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
         }
       }
@@ -658,7 +658,7 @@
       function showValidation(missing) {
         clearValidation();
         missing.forEach(markInvalidQuestion);
-        validationSummary.textContent = 'يرجى إكمال المعلومات الأساسية حتى نتمكن من عرض الخطوات التحضيرية المناسبة لملفك.';
+        validationSummary.textContent = 'يرجى إكمال المعلومات الأساسية لعرض النتيجة التوجيهية.';
         validationSummary.hidden = false;
         const first = form.querySelector(`[data-question="${missing[0]}"] input, [data-question="${missing[0]}"] textarea`);
         if (first) first.focus();

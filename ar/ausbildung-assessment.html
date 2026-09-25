@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>توجيه أولي لمسار التدريب المهني | Berlin Gateway</title>
+  <link rel="icon" href="data:,">
+  <link rel="canonical" href="https://berlingateway.de/ar/ausbildung-assessment">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17233a;
+      --muted: #506176;
+      --line: #d8e0e9;
+      --paper: #ffffff;
+      --ground: #f4f7fa;
+      --navy: #1b355f;
+      --blue: #2962a3;
+      --gold: #b8902a;
+      --gold-soft: #fff7e6;
+      --success: #196a45;
+      --warning: #9b5e00;
+      --danger: #a12d37;
+      --danger-soft: #fff1f2;
+      --shadow: 0 16px 42px rgba(23, 35, 58, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--ground); }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--ground);
+      color: var(--ink);
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.75;
+      text-align: right;
+    }
+
+    button, input, textarea { font: inherit; }
+
+    .site-header {
+      background: var(--navy);
+      color: #fff;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .header-inner,
+    main,
+    .site-footer {
+      width: min(100% - 32px, 960px);
+      margin-inline: auto;
+    }
+
+    .header-inner { padding: 24px 0 21px; }
+
+    .brand {
+      display: block;
+      direction: ltr;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      text-align: left;
+    }
+
+    .eyebrow {
+      margin: 5px 0 0;
+      color: #dbe7f5;
+      font-size: 0.94rem;
+    }
+
+    main { padding: 34px 0 52px; }
+
+    .hero,
+    .assessment-card,
+    .fallback-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: clamp(24px, 4vw, 42px);
+      margin-bottom: 24px;
+      border-top: 5px solid var(--gold);
+    }
+
+    h1, h2, h3, p { overflow-wrap: anywhere; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 2.65rem);
+      line-height: 1.35;
+      color: var(--navy);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 13px 0 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .privacy-note {
+      margin: 20px 0 0;
+      padding: 18px 20px;
+      border-right: 4px solid var(--gold);
+      border-radius: 10px;
+      background: var(--gold-soft);
+      color: #493711;
+      font-size: 0.97rem;
+    }
+
+    .assessment-card,
+    .fallback-card { padding: clamp(22px, 3.5vw, 38px); }
+
+    .intro {
+      margin: 0 0 25px;
+      color: var(--muted);
+    }
+
+    .question {
+      padding: 23px 0;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      margin: 0;
+      min-inline-size: 0;
+    }
+
+    .question:first-of-type { padding-top: 0; }
+    .question:last-of-type { border-bottom: 0; }
+
+    legend,
+    .question-title {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0 0 11px;
+      color: var(--navy);
+      font-size: 1.11rem;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .question-number {
+      display: inline-block;
+      direction: ltr;
+      min-width: 2.1rem;
+      margin-left: 8px;
+      color: var(--gold);
+      font-size: 0.96rem;
+      font-weight: 900;
+    }
+
+    .subgroup {
+      margin-top: 17px;
+      padding: 16px;
+      border: 1px solid #e2e8ef;
+      border-radius: 12px;
+      background: #fbfcfe;
+    }
+
+    .subgroup-label {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .choice {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      min-width: 0;
+      padding: 10px 12px;
+      border: 1px solid #dce4ec;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .choice:hover { border-color: #9cb8d7; }
+
+    .choice input {
+      width: 1.1rem;
+      height: 1.1rem;
+      flex: 0 0 auto;
+      margin: 0.38rem 0 0;
+      accent-color: var(--blue);
+    }
+
+    .choice span { min-width: 0; }
+
+    .conditional {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid #bfd3e9;
+      border-radius: 12px;
+      background: #f5f9fe;
+    }
+
+    .conditional[hidden],
+    [hidden] { display: none !important; }
+
+    .field-label {
+      display: block;
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    textarea {
+      display: block;
+      width: 100%;
+      min-height: 102px;
+      resize: vertical;
+      padding: 12px;
+      border: 1px solid #aab8c8;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    textarea:focus,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid rgba(41, 98, 163, 0.32);
+      outline-offset: 2px;
+    }
+
+    .field-help,
+    .counter {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .counter { direction: ltr; text-align: left; }
+
+    .validation-summary {
+      margin: 0 0 19px;
+      padding: 12px 15px;
+      border: 1px solid #ebc2c6;
+      border-radius: 10px;
+      background: var(--danger-soft);
+      color: var(--danger);
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .button {
+      min-height: 48px;
+      padding: 10px 19px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .button-primary { background: var(--navy); color: #fff; }
+    .button-primary:hover { background: #142946; }
+    .button-secondary { background: #fff; color: var(--navy); border-color: #aab8c8; }
+    .button-secondary:hover { background: #f2f6fa; }
+
+    .result {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid #c7d8ea;
+      border-radius: 14px;
+      background: #f7fbff;
+    }
+
+    .result[data-kind="A"] { border-color: #eccb8d; background: #fffaf0; }
+    .result[data-kind="B"] { border-color: #d8c18d; background: #fffbf1; }
+    .result[data-kind="C"] { border-color: #add7c4; background: #f2fcf7; }
+
+    .result h2,
+    .fallback-card h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.4rem;
+    }
+
+    .result p,
+    .fallback-card p { margin: 10px 0 0; }
+
+    .result ul { margin: 13px 0 0; padding-right: 1.2rem; }
+
+    .result-disclaimer {
+      margin-top: 16px !important;
+      padding-top: 14px;
+      border-top: 1px solid currentColor;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .fallback-card {
+      border-top: 5px solid var(--warning);
+      color: var(--ink);
+    }
+
+    .site-footer {
+      padding: 0 0 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner,
+      main,
+      .site-footer { width: min(100% - 24px, 960px); }
+      .header-inner { padding: 20px 0 18px; }
+      main { padding-top: 22px; }
+      .hero, .assessment-card, .fallback-card { border-radius: 14px; }
+      .choice-grid { grid-template-columns: 1fr; }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="brand">Berlin Gateway</span>
+      <p class="eyebrow">توجيه أولي محلي لمسار التدريب المهني</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">توجيه أولي غير ملزم لمسار التدريب المهني</h1>
+      <p>أجب عن الأسئلة التالية للحصول على نتيجة توجيهية آلية ومحلية على جهازك فقط.</p>
+      <p class="privacy-note">تُستخدم إجابات الأسئلة 1–8 في هذه المرحلة فقط لعرض نتيجة توجيهية آلية وغير ملزمة (A/B/C) على جهازك. لا تُرسل هذه الإجابات إلى Berlin Gateway ولا يراجعها شخص قبل ظهور النتيجة. لا نطلب وثائق أو تاريخ الميلاد أو معلومات عن الصحة أو الدين أو الآراء السياسية. يُرجى عدم كتابة هذه المعلومات في الحقول المفتوحة. إذا اخترت بعد ظهور النتيجة بدء تواصل منفصل، سنوضح لك قبل الإرسال البيانات التي ستُرسل، والجهة المستلمة، والغرض، ومدة الاحتفاظ أو معيارها، ومعلومات الخصوصية وحقوقك. لا تُنقل إجابات التوجيه تلقائيًا. النتيجة ليست قرار قبول ولا وعدًا بمكان تدريب أو تأشيرة أو اعتراف أو وقت للرد.</p>
+    </section>
+
+    <section class="assessment-card" id="assessment-shell" aria-labelledby="form-title">
+      <p class="intro" id="form-title">الحقول المطلوبة تساعد فقط على عرض التوجيه المحلي. لا توجد عملية تواصل أو إرسال أو رفع مستندات في هذه المرحلة.</p>
+      <div class="validation-summary" id="validation-summary" role="alert" hidden></div>
+
+      <form id="a2-form" novalidate>
+        <fieldset class="question" data-question="q1_education_status">
+          <legend><span class="question-number">Q1</span>ما أعلى مستوى تعليمي أكملته؟</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="q1_education_status" value="highest_completed_education"><span>لدي مؤهل تعليمي مكتمل</span></label>
+            <label class="choice"><input type="radio" name="q1_education_status" value="still_in_school"><span>ما زلت في المدرسة</span></label>
+            <label class="choice"><input type="radio" name="q1_education_status" value="no_completed_qualification"><span>لا أملك مؤهلًا تعليميًا مكتملًا</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-question="q2_current_learning_status">
+          <legend><span class="question-number">Q2</span>ما وضعك الحالي في التدريب أو الدراسة؟</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="q2_current_learning_status" value="school"><span>أنا في المدرسة حاليًا</span></label>
+            <label class="choice"><input type="radio" name="q2_current_learning_status" value="vocational_training"><span>أنا في تدريب مهني حاليًا</span></label>
+            <label class="choice"><input type="radio" name="q2_current_learning_status" value="study"><span>أنا أدرس حاليًا</span></label>
+            <label class="choice"><input type="radio" name="q2_current_learning_status" value="completed_or_neither"><span>أنهيتُ التدريب أو الدراسة / لا أتابع تدريبًا أو دراسةً حاليًا</span></label>
+            <label class="choice"><input type="radio" name="q2_current_learning_status" value="unsure"><span>غير متأكد/ة</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-question="q3_german_and_certificate">
+          <legend><span class="question-number">Q3</span>ما مستواك الحالي في اللغة الألمانية، وهل لديك شهادة؟</legend>
+          <div class="subgroup">
+            <p class="subgroup-label">مستواك الحالي في اللغة الألمانية</p>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_none"><span>لا معرفة باللغة الألمانية</span></label>
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_a1"><span>A1</span></label>
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_a2"><span>A2</span></label>
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_b1"><span>B1</span></label>
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_b2"><span>B2</span></label>
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_c1_plus"><span>C1 أو أعلى</span></label>
+              <label class="choice"><input type="radio" name="q3_language_level" value="german_level_unsure"><span>غير متأكد/ة</span></label>
+            </div>
+          </div>
+          <div class="subgroup">
+            <p class="subgroup-label">حالة شهادة اللغة الألمانية</p>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="q3_certificate_status" value="certificate_present"><span>لدي شهادة</span></label>
+              <label class="choice"><input type="radio" name="q3_certificate_status" value="certificate_in_preparation"><span>الشهادة قيد التحضير</span></label>
+              <label class="choice"><input type="radio" name="q3_certificate_status" value="certificate_not_present"><span>لا أملك شهادة</span></label>
+              <label class="choice"><input type="radio" name="q3_certificate_status" value="certificate_unsure"><span>غير متأكد/ة</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-question="q4_training_goal">
+          <legend><span class="question-number">Q4</span>في أي مجال مهني تريد أن تتدرّب؟</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="q4_training_goal" value="broad_training_field"><span>لدي مجال مهني محدد أو مجال أهتم به</span></label>
+            <label class="choice"><input type="radio" name="q4_training_goal" value="undecided"><span>لم أحدد مجالًا مهنيًا بعد</span></label>
+          </div>
+          <div class="conditional" id="q4-text-wrapper" hidden>
+            <label class="field-label" for="broad_training_field_text">المجال المهني</label>
+            <textarea id="broad_training_field_text" name="broad_training_field_text" maxlength="120" aria-describedby="q4-help q4-count"></textarea>
+            <p class="field-help" id="q4-help">اكتب اسم المجال المهني فقط، دون بيانات شخصية أو حساسة.</p>
+            <p class="counter" id="q4-count" aria-live="polite">0 / 120</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-question="q5_relevant_experience">
+          <legend><span class="question-number">Q5</span>هل لديك خبرة عملية ذات صلة؟ <span class="field-help">(اختياري)</span></legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_yes"><span>نعم</span></label>
+            <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_no"><span>لا</span></label>
+            <label class="choice"><input type="radio" name="q5_relevant_experience" value="experience_unsure"><span>غير متأكد</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-question="q6_document_status">
+          <legend><span class="question-number">Q6</span>ما الوثائق المتاحة لديك حاليًا؟</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="checkbox" name="q6_document_status" value="school_certificate_available"><span>شهادة مدرسية متاحة</span></label>
+            <label class="choice"><input type="checkbox" name="q6_document_status" value="cv_available"><span>سيرة ذاتية متاحة</span></label>
+            <label class="choice"><input type="checkbox" name="q6_document_status" value="language_proof_available"><span>إثبات لغة متاح</span></label>
+            <label class="choice"><input type="checkbox" name="q6_document_status" value="translation_open_or_unclear"><span>الترجمة ما زالت مفتوحة أو غير واضحة</span></label>
+            <label class="choice"><input type="checkbox" name="q6_document_status" value="documents_not_yet_complete"><span>الوثائق ليست مكتملة بعد</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="question" data-question="q7_starting_point">
+          <legend><span class="question-number">Q7</span>ما نقطة انطلاقك الحالية؟</legend>
+          <div class="subgroup">
+            <p class="subgroup-label">أين تتواجد حاليًا؟</p>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="q7_location" value="inside_germany"><span>داخل ألمانيا</span></label>
+              <label class="choice"><input type="radio" name="q7_location" value="outside_germany"><span>خارج ألمانيا</span></label>
+              <label class="choice"><input type="radio" name="q7_location" value="location_unsure"><span>غير متأكد</span></label>
+            </div>
+          </div>
+          <div class="subgroup">
+            <p class="subgroup-label">هل لديك مكان تدريب مهني محدد أو عقد تدريب؟</p>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="q7_place_or_contract" value="place_or_contract_yes"><span>نعم</span></label>
+              <label class="choice"><input type="radio" name="q7_place_or_contract" value="place_or_contract_no"><span>لا</span></label>
+            </div>
+          </div>
+          <div class="conditional" id="q7-search-wrapper" hidden>
+            <p class="subgroup-label">ما وضعك الحالي بالنسبة للبحث عن مكان تدريب مهني؟</p>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="q7_search_status" value="search"><span>أنا أتقدّم أو أبحث حاليًا عن مكان تدريب مهني</span></label>
+              <label class="choice"><input type="radio" name="q7_search_status" value="not_started"><span>لم أبدأ البحث بعد</span></label>
+            </div>
+          </div>
+          <div id="q8-mount"></div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="button button-primary" type="submit">عرض النتيجة التوجيهية</button>
+          <button class="button button-secondary" type="button" id="abort-button">إلغاء التقييم</button>
+        </div>
+      </form>
+
+      <section class="result" id="result" aria-live="polite" hidden></section>
+    </section>
+
+    <section class="fallback-card" id="fallback" role="alert" aria-live="assertive" hidden>
+      <h2>تعذّر إكمال التوجيه</h2>
+      <p id="fallback-message"></p>
+      <div class="actions"><button class="button button-primary" type="button" id="retry-button">إعادة المحاولة</button></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">Berlin Gateway</footer>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const form = document.getElementById('a2-form');
+      const shell = document.getElementById('assessment-shell');
+      const result = document.getElementById('result');
+      const fallback = document.getElementById('fallback');
+      const fallbackMessage = document.getElementById('fallback-message');
+      const validationSummary = document.getElementById('validation-summary');
+      const q4TextWrapper = document.getElementById('q4-text-wrapper');
+      const q4Text = document.getElementById('broad_training_field_text');
+      const q4Count = document.getElementById('q4-count');
+      const q7SearchWrapper = document.getElementById('q7-search-wrapper');
+      const q8Mount = document.getElementById('q8-mount');
+
+      const fallbackTexts = {
+        form: 'تعذّر تحميل النموذج. يرجى المحاولة لاحقًا.',
+        hosting: 'الخدمة غير متاحة حاليًا. يرجى المحاولة لاحقًا.',
+        abort: 'لم يكتمل التقييم. لم يتم عرض نتيجة.',
+        timeout: 'لم نتمكن من عرض النتيجة. يرجى المحاولة لاحقًا.'
+      };
+
+      const bLanguageLevels = new Set(['german_none', 'german_a1', 'german_a2', 'german_level_unsure']);
+      const bCertificateStatuses = new Set(['certificate_in_preparation', 'certificate_not_present', 'certificate_unsure']);
+      const bDocumentStatuses = new Set(['translation_open_or_unclear', 'documents_not_yet_complete']);
+
+      function valueOf(name) {
+        const selected = form.querySelector(`input[name="${name}"]:checked`);
+        return selected ? selected.value : '';
+      }
+
+      function valuesOf(name) {
+        return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`), input => input.value);
+      }
+
+      function updateCounter() {
+        q4Count.textContent = `${q4Text.value.length} / 120`;
+      }
+
+      function clearRadio(name) {
+        form.querySelectorAll(`input[name="${name}"]`).forEach(input => { input.checked = false; });
+      }
+
+      function removeQ8() {
+        const current = document.getElementById('q8-question');
+        if (current) current.remove();
+      }
+
+      function createQ8() {
+        if (document.getElementById('q8-question')) return;
+        const section = document.createElement('section');
+        section.className = 'conditional';
+        section.id = 'q8-question';
+        section.setAttribute('data-question', 'q8_age_under_35');
+        section.innerHTML = `
+          <p class="subgroup-label"><span class="question-number">Q8</span>هل عمرك أقل من 35 عامًا؟</p>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_yes"><span>نعم</span></label>
+            <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_no"><span>لا</span></label>
+            <label class="choice"><input type="radio" name="q8_age_under_35" value="age_under_35_unsure"><span>غير متأكد</span></label>
+          </div>`;
+        q8Mount.appendChild(section);
+      }
+
+      function syncConditionalControls() {
+        const q4Goal = valueOf('q4_training_goal');
+        const needsQ4Text = q4Goal === 'broad_training_field';
+        q4TextWrapper.hidden = !needsQ4Text;
+        q4Text.required = needsQ4Text;
+        if (!needsQ4Text) {
+          q4Text.value = '';
+          updateCounter();
+        }
+
+        const place = valueOf('q7_place_or_contract');
+        const location = valueOf('q7_location');
+        const needsSearchStatus = place === 'place_or_contract_no';
+        q7SearchWrapper.hidden = !needsSearchStatus;
+        if (!needsSearchStatus) clearRadio('q7_search_status');
+
+        const q8Visible = location === 'outside_germany' && place === 'place_or_contract_no';
+        if (q8Visible) createQ8();
+        else removeQ8();
+      }
+
+      function clearValidation() {
+        validationSummary.hidden = true;
+        validationSummary.textContent = '';
+        form.querySelectorAll('[aria-invalid="true"]').forEach(element => element.removeAttribute('aria-invalid'));
+      }
+
+      function markInvalidQuestion(questionId) {
+        const element = form.querySelector(`[data-question="${questionId}"]`);
+        if (element) element.setAttribute('aria-invalid', 'true');
+      }
+
+      function missingRequiredQuestions() {
+        const missing = [];
+        const q4Goal = valueOf('q4_training_goal');
+        const place = valueOf('q7_place_or_contract');
+        const location = valueOf('q7_location');
+        const q8Visible = location === 'outside_germany' && place === 'place_or_contract_no';
+
+        if (!valueOf('q1_education_status')) missing.push('q1_education_status');
+        if (!valueOf('q2_current_learning_status')) missing.push('q2_current_learning_status');
+        if (!valueOf('q3_language_level') || !valueOf('q3_certificate_status')) missing.push('q3_german_and_certificate');
+        if (!q4Goal || (q4Goal === 'broad_training_field' && !q4Text.value.trim())) missing.push('q4_training_goal');
+        if (valuesOf('q6_document_status').length === 0) missing.push('q6_document_status');
+        if (!location || !place || (place === 'place_or_contract_no' && !valueOf('q7_search_status'))) missing.push('q7_starting_point');
+        if (q8Visible && !valueOf('q8_age_under_35')) missing.push('q8_age_under_35');
+        return missing;
+      }
+
+      function getBTopics() {
+        const topics = [];
+        const language = valueOf('q3_language_level');
+        const certificate = valueOf('q3_certificate_status');
+        const goal = valueOf('q4_training_goal');
+        const documents = valuesOf('q6_document_status');
+        const location = valueOf('q7_location');
+        const place = valueOf('q7_place_or_contract');
+
+        if (bLanguageLevels.has(language)) topics.push('مستوى اللغة الألمانية');
+        if (bCertificateStatuses.has(certificate)) topics.push('حالة شهادة اللغة الألمانية');
+        if (goal === 'undecided') topics.push('المجال المهني');
+        if (documents.some(value => bDocumentStatuses.has(value))) topics.push('حالة الوثائق');
+        if (location === 'location_unsure') topics.push('الموقع الحالي');
+        if (place === 'place_or_contract_no') topics.push('مكان التدريب أو عقد التدريب');
+        return topics.slice(0, 3);
+      }
+
+      function classify() {
+        const missing = missingRequiredQuestions();
+        if (missing.length) return { kind: 'A', topics: [], missing };
+        const topics = getBTopics();
+        return { kind: topics.length ? 'B' : 'C', topics, missing: [] };
+      }
+
+      function renderResult(outcome) {
+        result.dataset.kind = outcome.kind;
+        result.hidden = false;
+
+        if (outcome.kind === 'A') {
+          result.innerHTML = `
+            <h2>أ — أكمل المعلومات</h2>
+            <p>يرجى إكمال المعلومات الأساسية حتى نتمكن من عرض الخطوات التحضيرية المناسبة لملفك.</p>
+            <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
+          return;
+        }
+
+        if (outcome.kind === 'B') {
+          const items = outcome.topics.map(topic => `<li>${topic}</li>`).join('');
+          result.innerHTML = `
+            <h2>ب — التحضير أو التوضيح</h2>
+            <p>توضح إجاباتك نقاطًا تحتاج إلى توضيح أو تحضير قبل الخطوة التالية:</p>
+            <ul>${items}</ul>
+            <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
+        } else {
+          result.innerHTML = `
+            <h2>ج — توجيه أولي غير ملزم</h2>
+            <p>توفر إجاباتك أساسًا أوليًا لتوجيهك بشكل غير ملزم حول مسار Ausbildung والخطوات التي ينبغي توضيحها.</p>
+            <p class="result-disclaimer">إذا كان لديك مكان تدريب أو عقد، تبقى متطلبات العقد والتمويل والإجراءات الإدارية بحاجة إلى توضيح منفصل. هذه النتيجة ليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
+        }
+      }
+
+      function showFallback(kind) {
+        const message = fallbackTexts[kind] || fallbackTexts.timeout;
+        form.hidden = true;
+        result.hidden = true;
+        fallbackMessage.textContent = message;
+        fallback.hidden = false;
+        window.__a2LastFallback = kind;
+      }
+
+      function showValidation(missing) {
+        clearValidation();
+        missing.forEach(markInvalidQuestion);
+        validationSummary.textContent = 'يرجى إكمال المعلومات الأساسية حتى نتمكن من عرض الخطوات التحضيرية المناسبة لملفك.';
+        validationSummary.hidden = false;
+        const first = form.querySelector(`[data-question="${missing[0]}"] input, [data-question="${missing[0]}"] textarea`);
+        if (first) first.focus();
+      }
+
+      form.addEventListener('change', () => {
+        clearValidation();
+        syncConditionalControls();
+      });
+
+      q4Text.addEventListener('input', () => {
+        if (q4Text.value.length > 120) q4Text.value = q4Text.value.slice(0, 120);
+        updateCounter();
+        clearValidation();
+      });
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        clearValidation();
+        result.hidden = true;
+        const missing = missingRequiredQuestions();
+        if (missing.length) {
+          showValidation(missing);
+          return;
+        }
+        try {
+          renderResult(classify());
+          result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (error) {
+          showFallback('timeout');
+        }
+      });
+
+      document.getElementById('abort-button').addEventListener('click', () => showFallback('abort'));
+      document.getElementById('retry-button').addEventListener('click', () => window.location.reload());
+      window.addEventListener('offline', () => showFallback('hosting'));
+      window.addEventListener('error', () => showFallback('form'));
+
+      window.__a2TestFallback = kind => {
+        if (Object.prototype.hasOwnProperty.call(fallbackTexts, kind)) showFallback(kind);
+      };
+
+      updateCounter();
+      syncConditionalControls();
+    })();
+  </script>
+</body>
+</html>

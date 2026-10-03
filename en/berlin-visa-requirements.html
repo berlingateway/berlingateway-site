@@ -127,6 +127,17 @@
     .req-table tr:nth-child(even) td{background:#F8F9FA}
     .req-table .note{font-size:12px;color:#9CA3AF;margin-top:4px}
 
+    .req-table-scroll {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .req-table-scroll:focus {
+      outline: 2px solid #0B3B8C;
+      outline-offset: 2px;
+    }
+
     /* Track record */
     .track{background:#0B1F3A;border-radius:14px;padding:44px 36px;margin-top:8px}
     .track .number{color:#fff;font-size:clamp(32px,5vw,48px);font-weight:700;line-height:1}
@@ -310,6 +321,8 @@
       These are the standard requirements. What varies — and where most
       applications run into problems — is document preparation and timing.
     </p>
+    <div class="req-table-scroll" tabindex="0" role="region"
+         aria-label="Requirements table, scroll horizontally to see all columns">
     <table class="req-table">
       <thead>
         <tr>
@@ -361,6 +374,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 

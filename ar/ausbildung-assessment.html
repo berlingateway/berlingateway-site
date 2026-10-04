@@ -312,6 +312,39 @@
       font-size: 0.94rem;
     }
 
+    .result-next-step {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .result-next-step > p { margin-top: 0; }
+
+    .result-next-step__links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .result-next-step__links a {
+      display: block;
+      max-width: 100%;
+      color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      overflow-wrap: anywhere;
+    }
+
+    .result-next-step__links a:focus-visible {
+      outline: 3px solid rgba(41, 98, 163, 0.32);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     .fallback-card {
       border-top: 5px solid var(--warning);
       color: var(--ink);
@@ -474,6 +507,13 @@
     <section class="fallback-card" id="fallback" role="alert" aria-live="assertive" hidden>
       <h2>تعذّر إكمال التوجيه</h2>
       <p id="fallback-message"></p>
+      <div class="result-next-step" id="fallback-next-step" hidden>
+        <p>هذا التوجيه لا يرسل إجاباتك إلى برلين غيتواي. إذا أردت مناقشة وضعك والخطوة التالية، يمكنك التواصل معنا عبر واتساب وذكر بلد إقامتك، وآخر مؤهل دراسي، ومستواك في اللغة الألمانية.</p>
+        <div class="result-next-step__links">
+          <a href="https://wa.me/4915781497451">تواصل معنا عبر واتساب</a>
+          <a href="/ar/ausbildung">العودة إلى دليل التدريب المهني</a>
+        </div>
+      </div>
       <div class="actions"><button class="button button-primary" type="button" id="retry-button">إعادة المحاولة</button></div>
     </section>
   </main>
@@ -489,6 +529,7 @@
       const result = document.getElementById('result');
       const fallback = document.getElementById('fallback');
       const fallbackMessage = document.getElementById('fallback-message');
+      const fallbackNextStep = document.getElementById('fallback-next-step');
       const validationSummary = document.getElementById('validation-summary');
       const q4TextWrapper = document.getElementById('q4-text-wrapper');
       const q4Text = document.getElementById('broad_training_field_text');
@@ -627,7 +668,15 @@
           result.innerHTML = `
             <h2>أ — أكمل المعلومات</h2>
             <p>يرجى إكمال المعلومات الأساسية لعرض النتيجة التوجيهية.</p>
-            <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
+            <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>
+            <p>يمكنك استكمال المعلومات الناقصة في الحقول أعلاه ثم عرض النتيجة مجدداً.</p>
+            <div class="result-next-step">
+              <p>هذا التوجيه لا يرسل إجاباتك إلى برلين غيتواي. إذا أردت مناقشة وضعك والخطوة التالية، يمكنك التواصل معنا عبر واتساب وذكر بلد إقامتك، وآخر مؤهل دراسي، ومستواك في اللغة الألمانية.</p>
+              <div class="result-next-step__links">
+                <a href="https://wa.me/4915781497451">تواصل معنا عبر واتساب</a>
+                <a href="/ar/ausbildung">العودة إلى دليل التدريب المهني</a>
+              </div>
+            </div>`;
           return;
         }
 
@@ -637,12 +686,26 @@
             <h2>ب — التحضير أو التوضيح</h2>
             <p>توضح إجاباتك نقاطًا تحتاج إلى توضيح أو تحضير قبل الخطوة التالية:</p>
             <ul>${items}</ul>
-            <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
+            <p class="result-disclaimer">هذه النتيجة توجيهية وآلية وغير ملزمة، وليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>
+            <div class="result-next-step">
+              <p>هذا التوجيه لا يرسل إجاباتك إلى برلين غيتواي. إذا أردت مناقشة وضعك والخطوة التالية، يمكنك التواصل معنا عبر واتساب وذكر بلد إقامتك، وآخر مؤهل دراسي، ومستواك في اللغة الألمانية.</p>
+              <div class="result-next-step__links">
+                <a href="https://wa.me/4915781497451">تواصل معنا عبر واتساب</a>
+                <a href="/ar/ausbildung">العودة إلى دليل التدريب المهني</a>
+              </div>
+            </div>`;
         } else {
           result.innerHTML = `
             <h2>ج — توجيه أولي غير ملزم</h2>
             <p>توفر إجاباتك أساسًا أوليًا لتوجيهك بشكل غير ملزم حول مسار التدريب المهني والخطوات التي ينبغي توضيحها.</p>
-            <p class="result-disclaimer">إذا كان لديك مكان تدريب أو عقد، تبقى متطلبات العقد والتمويل والإجراءات الإدارية بحاجة إلى توضيح منفصل. هذه النتيجة ليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>`;
+            <p class="result-disclaimer">إذا كان لديك مكان تدريب أو عقد، تبقى متطلبات العقد والتمويل والإجراءات الإدارية بحاجة إلى توضيح منفصل. هذه النتيجة ليست قرار قبول أو وعدًا بمكان تدريب أو تأشيرة أو اعتراف.</p>
+            <div class="result-next-step">
+              <p>هذا التوجيه لا يرسل إجاباتك إلى برلين غيتواي. إذا أردت مناقشة وضعك والخطوة التالية، يمكنك التواصل معنا عبر واتساب وذكر بلد إقامتك، وآخر مؤهل دراسي، ومستواك في اللغة الألمانية.</p>
+              <div class="result-next-step__links">
+                <a href="https://wa.me/4915781497451">تواصل معنا عبر واتساب</a>
+                <a href="/ar/ausbildung">العودة إلى دليل التدريب المهني</a>
+              </div>
+            </div>`;
         }
       }
 
@@ -651,6 +714,7 @@
         form.hidden = true;
         result.hidden = true;
         fallbackMessage.textContent = message;
+        fallbackNextStep.hidden = kind !== 'abort';
         fallback.hidden = false;
         window.__a2LastFallback = kind;
       }

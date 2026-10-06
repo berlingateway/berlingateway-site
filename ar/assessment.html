@@ -160,7 +160,11 @@
           params.get('source_page') === '/ar/pflege-tunesien/' &&
           params.get('source_profession') === 'pflege';
 
-        if (sourceCountry !== 'morocco' && !validTunisiaContext) {
+        const validEgyptContext = queryCountry === 'egypt' &&
+          params.get('source_page') === '/ar/pflege-aegypten/' &&
+          params.get('source_profession') === 'pflege';
+
+        if (sourceCountry !== 'morocco' && !validTunisiaContext && !validEgyptContext) {
           sessionStorage.removeItem('source_country');
           return;
         }
@@ -169,7 +173,7 @@
         const tallyUrl = new URL(tallyFrame.src);
         tallyUrl.searchParams.set('source_country', sourceCountry);
 
-        if (validTunisiaContext) {
+        if (validTunisiaContext || validEgyptContext) {
           tallyUrl.searchParams.set('source_page', params.get('source_page'));
           tallyUrl.searchParams.set('source_profession', params.get('source_profession'));
         }

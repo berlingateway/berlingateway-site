@@ -154,8 +154,11 @@
       (function () {
         const params = new URLSearchParams(window.location.search);
         const queryCountry = params.get('source_country');
+        const validSalaryContext = queryCountry === null &&
+          params.get('source_page') === '/ar/insights/راتب-ممرض-ألمانيا' &&
+          params.get('source_profession') === 'pflege';
         const storedCountry = sessionStorage.getItem('source_country');
-        const sourceCountry = queryCountry || (storedCountry === 'morocco' ? storedCountry : null);
+        const sourceCountry = validSalaryContext ? null : (queryCountry || (storedCountry === 'morocco' ? storedCountry : null));
         const validTunisiaContext = queryCountry === 'tunisia' &&
           params.get('source_page') === '/ar/pflege-tunesien/' &&
           params.get('source_profession') === 'pflege';
@@ -164,16 +167,16 @@
           params.get('source_page') === '/ar/pflege-aegypten/' &&
           params.get('source_profession') === 'pflege';
 
-        if (sourceCountry !== 'morocco' && !validTunisiaContext && !validEgyptContext) {
+        if (sourceCountry !== 'morocco' && !validTunisiaContext && !validEgyptContext && !validSalaryContext) {
           sessionStorage.removeItem('source_country');
           return;
         }
 
         const tallyFrame = document.getElementById('tally-form');
         const tallyUrl = new URL(tallyFrame.src);
-        tallyUrl.searchParams.set('source_country', sourceCountry);
+        if (sourceCountry) tallyUrl.searchParams.set('source_country', sourceCountry);
 
-        if (validTunisiaContext || validEgyptContext) {
+        if (validTunisiaContext || validEgyptContext || validSalaryContext) {
           tallyUrl.searchParams.set('source_page', params.get('source_page'));
           tallyUrl.searchParams.set('source_profession', params.get('source_profession'));
         }

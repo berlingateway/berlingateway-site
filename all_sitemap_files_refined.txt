@@ -85,6 +85,7 @@ de/visa.html
 de/visum-deutschland.html
 de/voraussetzungen/index.html
 en/404.html
+en/assessment/index.html
 en/ausbildung-in-germany.html
 en/berlin-visa-requirements.html
 en/chancenkarte-from-gulf.html
@@ -96,6 +97,7 @@ en/nurses-philippines/index.html
 en/nurses-tunisia/index.html
 en/nursing/index.html
 en/pflege-aegypten/index.html
+en/physiotherapy-germany/index.html
 en/study-in-germany.html
 en/success-stories/index.html
 en/visa-germany.html

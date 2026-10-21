@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <title>Professional Assessment for Germany | Berlin Gateway</title>
+  <meta name="description" content="Share your professional background with Berlin Gateway for an initial assessment of possible recognition, employment, training and visa pathways in Germany.">
+  <link rel="canonical" href="https://berlingateway.de/en/assessment/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:#0D1117;background:#FFFFFF}
+    .top-band{background:#0B1F3A;color:#FFFFFF;padding:10px 0;font-size:13px}
+    .top-band__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .top-band a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .lang-badge{background:rgba(255,255,255,0.1);padding:3px 10px;border-radius:4px;font-size:12px}
+    .header{background:#FFFFFF;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header__inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-size:18px;font-weight:700;color:#0D1117;text-decoration:none;letter-spacing:-0.3px}
+    .brand span{color:#0B3B8C}
+    .nav a{color:#374151;text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
+    .nav-cta{background:#0B1F3A;color:#FFFFFF !important;padding:8px 18px;border-radius:6px;font-weight:600 !important;margin-left:0 !important}
+    .inner{max-width:780px;margin:0 auto}
+    .section{padding:72px 24px}
+    .section--alt{background:#F8F9FA}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:16px}
+    .section h2{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.3;margin:0 0 16px}
+    .section .lead{font-size:17px;color:#374151;line-height:1.75;margin:0 0 32px;font-weight:300}
+    .trust-strip{background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:20px 24px}
+    .trust-strip__inner{max-width:1080px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#374151;font-weight:500}
+    .trust-item span{color:#15803D;font-size:15px}
+    .pathway-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+    .pathway-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:22px;background:#FFFFFF}
+    .pathway-card h3{font-size:16px;font-weight:600;margin-bottom:8px;color:#0B3B8C}
+    .pathway-card p{font-size:14px;color:#6B7280;line-height:1.7}
+    .document-list{padding-left:22px;margin:20px 0 20px 0}
+    .document-list li{font-size:15px;color:#374151;line-height:1.75;margin-bottom:8px}
+    .note-box{border-left:4px solid #0B3B8C;background:#F8F9FA;padding:20px 24px;margin-top:24px;border-radius:6px}
+    .note-box p{font-size:14px;color:#374151;line-height:1.75}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .step-card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF;text-align:center}
+    .step-num{width:40px;height:40px;background:#0B1F3A;color:#FFFFFF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;margin:0 auto 16px}
+    .step-card h3{font-size:15px;font-weight:600;margin-bottom:8px;color:#0D1117}
+    .step-card p{font-size:13px;color:#6B7280;line-height:1.6}
+    .privacy-box{border:1.5px solid #BFDBFE;background:#EFF6FF;padding:24px;border-radius:10px;margin-top:24px}
+    .privacy-box p{font-size:15px;color:#374151;line-height:1.8}
+    .privacy-box a{color:#0B3B8C;font-weight:600;text-decoration:underline}
+    .guarantee-box{border:1.5px solid #E5E7EB;background:#FFFFFF;padding:24px;border-radius:10px;margin-top:24px}
+    .guarantee-box p{font-size:15px;color:#374151;line-height:1.8}
+    .form-wrap{max-width:640px;margin:0 auto}
+    .form-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:24px;display:block}
+    .form-title{font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:8px;line-height:1.3}
+    .form-sub{font-size:15px;color:#374151;margin-bottom:36px;line-height:1.6;font-weight:300}
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    @media(max-width:640px){
+      .nav a:not(.nav-cta){display:none}
+      .pathway-grid,.steps-grid{grid-template-columns:1fr}
+      .trust-strip__inner{gap:20px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-band">
+  <div class="top-band__inner">
+    <a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a>
+    <span style="opacity:.7">On-site team in Germany</span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/en" class="brand">Berlin <span>Gateway</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#who">Who it is for</a>
+      <a href="#pathways">Pathways</a>
+      <a href="#documents">Documents</a>
+      <a href="#assessment" class="nav-cta">Start assessment</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section style="background:#0B1F3A;padding:72px 24px 64px;text-align:center;">
+    <div class="inner">
+      <p style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px;">BERLIN GATEWAY · PROFESSIONAL ASSESSMENT</p>
+      <h1 style="color:#FFFFFF;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.25;max-width:680px;margin:0 auto 20px;">Explore a realistic pathway to Germany</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:17px;max-width:620px;margin:0 auto 30px;line-height:1.7;font-weight:300;">Share your professional background and current situation. Berlin Gateway uses the information for an initial assessment of possible next steps—not as a decision on recognition, employment or residence.</p>
+      <a href="#assessment" style="display:inline-block;background:#FFFFFF;color:#0B1F3A;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;padding:16px 36px;border-radius:6px;text-decoration:none;">Continue to the assessment</a>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="trust-strip__inner">
+      <div class="trust-item"><span>✓</span> Human profile review</div>
+      <div class="trust-item"><span>✓</span> Pathways depend on your case</div>
+      <div class="trust-item"><span>✓</span> No outcome is guaranteed</div>
+    </div>
+  </div>
+
+  <section class="section" id="who">
+    <div class="inner">
+      <p class="section-label">Who the assessment is for</p>
+      <h2>For international professionals considering Germany</h2>
+      <p class="lead">The assessment is a starting point for people with qualifications or work experience from outside Germany who want to understand which questions and possible routes are relevant to their situation. Berlin Gateway’s existing guidance covers health and care profiles such as nursing, physiotherapy and medicine, as well as other professional fields including IT, engineering and skilled trades.</p>
+      <p class="lead" style="margin-bottom:0;">The relevant route depends on your profession, qualifications, experience, language level and current circumstances. An initial profile assessment is not an eligibility decision by an authority or employer.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="pathways">
+    <div class="inner">
+      <p class="section-label">Possible pathways</p>
+      <h2>Different profiles can raise different questions</h2>
+      <p class="lead">The routes below are described in Berlin Gateway’s existing guidance. They are possible topics for an initial assessment, not a promise that a particular route is available or suitable for every person.</p>
+      <div class="pathway-grid">
+        <article class="pathway-card">
+          <h3>Recognition of professional qualifications</h3>
+          <p>For regulated professions, formal recognition or a professional licence may be relevant. The competent authority assesses the qualification and applicable requirements for the individual profession and case.</p>
+        </article>
+        <article class="pathway-card">
+          <h3>Opportunity Card (Chancenkarte)</h3>
+          <p>This may be relevant to eligible skilled professionals who want to explore job opportunities without already having a job offer. Its criteria and residence conditions must be checked for the individual case.</p>
+        </article>
+        <article class="pathway-card">
+          <h3>Skilled-worker or work visa</h3>
+          <p>A work-related residence route may be relevant where there is a suitable employment offer and the applicable qualification and other conditions are met. Requirements differ by route and profession.</p>
+        </article>
+        <article class="pathway-card">
+          <h3>Vocational training (Ausbildung)</h3>
+          <p>Company-based dual training and school-based training are different forms. The training place, programme, documents, language and residence questions may differ between them.</p>
+        </article>
+        <article class="pathway-card">
+          <h3>Direct employment</h3>
+          <p>For some profiles, employment with a German employer may be a relevant goal. The employer decides whether to hire, and any residence route is assessed separately.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="documents">
+    <div class="inner">
+      <p class="section-label">Documents to prepare</p>
+      <h2>Have relevant records available</h2>
+      <p class="lead">The assessment form asks for a CV. Depending on your profession and the route you are exploring, other supporting records may also be useful. Examples in Berlin Gateway’s existing professional guidance include:</p>
+      <ul class="document-list">
+        <li>A current CV with your education and work history.</li>
+        <li>Your diploma or degree certificate and academic transcript.</li>
+        <li>A description of subjects studied and theoretical or practical hours, where relevant to the profession.</li>
+        <li>Evidence of professional experience and, for regulated professions, registration or a licence where applicable.</li>
+        <li>Language certificates, identity documents and translations where relevant to your route or requested by the competent authority.</li>
+      </ul>
+      <div class="note-box">
+        <p>This is an indicative list, not a universal checklist. Requirements vary by profession, route, provider and competent authority. The assessment itself does not replace any official document or recognition process.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="inner">
+      <p class="section-label">After you submit</p>
+      <h2>What the initial assessment describes</h2>
+      <p class="lead">Berlin Gateway’s existing assessment information describes a review by the team in Germany, an honest initial view of which pathway may fit and what may be missing, and guidance on next steps. It states a 24–48-hour review period; this describes the information currently published on the German assessment page and is not a decision or timeline set by an authority or employer.</p>
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-num">1</div>
+          <h3>Profile review</h3>
+          <p>The team reviews the information you provide and checks which route-related questions are relevant.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-num">2</div>
+          <h3>Initial assessment</h3>
+          <p>You receive an honest view of the possible pathway and any gaps identified from the information provided.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-num">3</div>
+          <h3>Next-step guidance</h3>
+          <p>If your profile is ready, the existing page describes an action plan. If not, it says the team will explain what to address first.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy">
+    <div class="inner">
+      <p class="section-label">Privacy and consent</p>
+      <h2>Your information is used for the initial profile assessment</h2>
+      <div class="privacy-box">
+        <p>Berlin Gateway processes the information and documents you submit for the initial assessment of your professional profile and possible next steps. Read the <a href="/en/privacy/">English privacy policy</a> for further information. Your profile or documents are shared with a specific potential employer only after you have given separate prior written consent to that disclosure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="inner">
+      <p class="section-label">Important limitation</p>
+      <h2>An assessment is not a guaranteed outcome</h2>
+      <div class="guarantee-box">
+        <p>Berlin Gateway does not guarantee professional recognition, a job or employment contract, a visa, or entry to Germany. Competent authorities decide on recognition and residence matters. Employers decide whether to hire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="assessment">
+    <div class="form-wrap">
+      <span class="form-label">Berlin Gateway assessment</span>
+      <h2 class="form-title">Tell us about your professional profile</h2>
+      <p class="form-sub">Complete the form below to share your background and documents for an initial assessment.</p>
+      <div class="form-container" style="padding:0;border:none;box-shadow:none;background:transparent;">
+        <iframe src="https://tally.so/embed/eqYl0Q?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:12px;"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><b>Berlin Gateway</b> — On-site team in Germany</p>
+  <div style="margin:20px 0;">
+    <a href="/en/impressum">Legal Notice</a>
+    <a href="/en/privacy/">Privacy Policy</a>
+    <a href="mailto:info@berlingateway.de">Contact</a>
+  </div>
+  <p style="opacity:0.5">© 2026 Berlin Gateway. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

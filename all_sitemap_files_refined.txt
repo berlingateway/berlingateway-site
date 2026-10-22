@@ -21,6 +21,7 @@ ar/insights/chancenkarte-voraussetzungen.html
 ar/insights/chancenkarte-vs-bluecard.html
 ar/insights/gefragte-berufe/index.html
 ar/insights/gehaelter-deutschland.html
+ar/insights/التكوين-المهني-المانيا.html
 ar/monitor.html
 ar/pflege-aegypten/index.html
 ar/pflege-algerien/index.html

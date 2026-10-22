@@ -149,7 +149,7 @@
       </iframe>
       <script>
         (function () {
-          var frame = document.getElementById('tally-form') || document.currentScript.previousElementSibling;
+          var frame = document.getElementById('tally-form') || document.querySelector('iframe[src*="tally.so/embed/eqYl0Q"]');
           if (!frame || frame.tagName !== 'IFRAME') return;
           var url = new URL(frame.getAttribute('src'), window.location.href);
           if (url.searchParams.has('source_page')) { frame.removeAttribute('hidden'); return; }

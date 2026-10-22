@@ -146,7 +146,7 @@
         frameborder="0" 
         marginheight="0" 
         marginwidth="0"
-        style="border-radius:12px;">
+        style="border-radius:12px;" hidden>
       </iframe>
     </div>
 
@@ -185,6 +185,49 @@
         sessionStorage.removeItem('source_country');
       }());
     </script>
+
+      <script>
+        (function () {
+          var frame = document.getElementById('tally-form') || document.currentScript.previousElementSibling;
+          if (!frame || frame.tagName !== 'IFRAME') return;
+          var url = new URL(frame.getAttribute('src'), window.location.href);
+          if (url.searchParams.has('source_page')) { frame.removeAttribute('hidden'); return; }
+
+          var sourcePage = 'unknown', sourcePath = '', referrer = document.referrer;
+          if (referrer) {
+            try {
+              var ref = new URL(referrer);
+              if (ref.origin === window.location.origin) {
+                if (/^\/(de|en|ar|fr)\/[A-Za-z0-9\/_.%\-\u0600-\u06FF]{0,120}$/.test(ref.pathname)) {
+                  sourcePage = ref.pathname;
+                  sourcePath = ref.pathname.toLowerCase();
+                } else sourcePage = 'other';
+              } else {
+                var host = ref.hostname.toLowerCase();
+                sourcePage = /^[a-z0-9.-]{1,80}$/.test(host) ? 'ext:' + host : 'ext:other';
+              }
+            } catch (error) { sourcePage = 'other'; }
+          }
+
+          var country = '', profession = '';
+          if (sourcePath) {
+            var countrySources = [['pflege-aegypten','egypt'],['pflege-tunesien','tunisia'],['pflege-marokko','morocco'],['pflege-algerien','algeria'],['pflege-syrien','syria'],['nurses-india','india'],['nurses-indonesia','indonesia'],['nurses-philippines','philippines'],['nurses-tunisia','tunisia'],['nurses-gulf','gulf']];
+            var match = countrySources.find(function (entry) { return sourcePath.indexOf(entry[0]) !== -1; });
+            if (match) { country = match[1]; profession = 'pflege'; }
+            else if (sourcePath.indexOf('physio') !== -1) profession = 'physio';
+            else if (sourcePath.indexOf('aerzte') !== -1) profession = 'aerzte';
+            else if (/(^|\/)(pflege|pflegekraefte|nursing)([-.]|\/|$)/i.test(sourcePath)) profession = 'pflege';
+          }
+
+          [['source_page',sourcePage],['source_country',country],['source_profession',profession]].forEach(function (item) {
+            if (item[1] && !url.searchParams.has(item[0])) {
+              url.search += (url.search ? '&' : '?') + encodeURIComponent(item[0]) + '=' + encodeURIComponent(item[1]);
+            }
+          });
+          frame.setAttribute('src', url.href);
+          frame.removeAttribute('hidden');
+        }());
+      </script>
 
     <div class="or-divider"><span>أو تواصل مباشرة</span></div>
 

@@ -372,6 +372,75 @@
     .footer { padding: 32px 0; color: #ccd6df; background: var(--navy-deep); text-align: center; font-size: .9rem; }
     .footer a { margin: 0 8px; color: #dce6ef; text-decoration: none; }
 
+    #pipeline [hidden] { display:none !important; }
+    .cand-label { display:block; color:var(--muted); font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+    .cand-nojs { margin:0 0 18px; }
+    .cand-ready .cand-nojs { display:none; }
+    .cand-dlg .cand-disabled { opacity:.5; cursor:not-allowed; }
+    .cand-filter { display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; margin:0 0 20px; padding:16px 18px; background:var(--white); border:1px solid var(--line); border-radius:12px; }
+    .cand-filter strong { color:var(--navy); }
+    .cand-chip { padding:8px 14px; color:var(--ink); background:var(--mist); border:1px solid var(--line); border-radius:999px; font:inherit; font-weight:600; font-size:.9rem; cursor:pointer; }
+    .cand-chip[aria-pressed="true"] { color:#fff; background:var(--navy); border-color:var(--navy); }
+    .cand-count { margin-left:auto; color:var(--muted); font-size:.9rem; }
+    .cand-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr)); gap:18px; }
+    .cand-card { display:flex; flex-direction:column; gap:14px; min-width:0; padding:22px; background:var(--white); border:1px solid var(--line); border-radius:12px; }
+    .cand-card[hidden] { display:none; }
+    .cand-top { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+    .cand-code { color:var(--gold-dark); font-size:.78rem; font-weight:800; letter-spacing:.1em; }
+    .cand-card h3 { margin:4px 0 0; color:var(--navy); font-size:1.12rem; line-height:1.3; }
+    .cand-sub { margin:4px 0 0; color:var(--muted); font-size:.88rem; }
+    .cand-save { flex:none; padding:7px 12px; color:var(--navy); background:var(--white); border:1px solid var(--navy); border-radius:6px; font:inherit; font-weight:700; font-size:.85rem; cursor:pointer; }
+    .cand-save[aria-pressed="true"] { color:#fff; background:var(--navy); }
+    .cand-facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 14px; margin:0; }
+    .cand-facts dt { color:var(--muted); font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+    .cand-facts dd { margin:2px 0 0; color:var(--ink); font-weight:700; overflow-wrap:anywhere; }
+    .cand-facts .wide { grid-column:1 / -1; }
+    .cand-steps { display:flex; margin:0; padding:0; list-style:none; }
+    .cand-steps li { flex:1; min-width:0; overflow-wrap:anywhere; hyphens:auto; position:relative; padding-top:20px; color:var(--muted); font-size:.74rem; text-align:center; }
+    .cand-steps li::before { content:""; position:absolute; top:4px; left:50%; width:12px; height:12px; background:var(--line); border-radius:50%; transform:translateX(-50%); z-index:1; }
+    .cand-steps li::after { content:""; position:absolute; top:9px; left:-50%; width:100%; height:2px; background:var(--line); }
+    .cand-steps li:first-child::after { display:none; }
+    .cand-steps li.done { color:#236044; font-weight:700; }
+    .cand-steps li.done::before, .cand-steps li.done::after { background:#236044; }
+    .cand-steps li.next { color:var(--gold-dark); font-weight:700; }
+    .cand-steps li.next::before { background:var(--gold); }
+    .cand-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .cand-tag { padding:4px 9px; color:var(--navy); background:#e9eff6; border-radius:5px; font-size:.82rem; }
+    .cand-tag.ok { color:#236044; background:var(--success-soft); }
+    .cand-when { padding:12px 14px; color:#35445a; background:#fff8e7; border-left:4px solid var(--gold); border-radius:0 8px 8px 0; font-size:.92rem; }
+    .cand-fit { color:#236044; font-size:.85rem; font-weight:800; }
+    .cand-more { padding-top:10px; border-top:1px solid var(--line); }
+    .cand-more summary { color:var(--blue); font-weight:800; cursor:pointer; }
+    .cand-more h4 { margin:14px 0 4px; color:var(--muted); font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; }
+    .cand-more p, .cand-more ul { margin:0; color:var(--ink); }
+    .cand-more ul { padding-left:18px; }
+    .cand-actions { margin-top:auto; }
+    .cand-bar { position:sticky; bottom:0; z-index:9; margin-top:22px; padding:14px 18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; background:var(--white); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 30px rgba(11,31,58,.14); }
+    .cand-bar span { flex:1; min-width:200px; color:var(--ink); }
+    .cand-bar .btn { min-height:44px; padding:9px 16px; font:inherit; font-weight:800; cursor:pointer; }
+    .cand-bar .btn:disabled { opacity:.45; cursor:not-allowed; }
+    .cand-bar .btn--ghost { color:var(--navy); background:var(--white); border:2px solid var(--navy); }
+    .cand-dlg { width:min(980px,calc(100% - 24px)); max-height:85vh; padding:0; color:var(--ink); border:1px solid var(--line); border-radius:14px; }
+    .cand-dlg::backdrop { background:rgba(11,31,58,.55); }
+    .cand-dlg-in { padding:22px; }
+    .cand-dlg-head { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+    .cand-dlg-head h3 { margin:0; color:var(--navy); }
+    .cand-x { width:36px; height:36px; color:var(--ink); background:var(--mist); border:0; border-radius:50%; font-size:1.2rem; cursor:pointer; }
+    .cand-scroll { overflow-x:auto; margin-top:14px; }
+    .cand-scroll table { width:100%; border-collapse:collapse; font-size:.92rem; }
+    .cand-scroll th, .cand-scroll td { min-width:130px; padding:11px 12px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+    .cand-scroll th { background:var(--mist); color:var(--navy); }
+    .cand-scroll th:first-child { position:sticky; left:0; z-index:1; min-width:96px; max-width:110px; }
+    .cand-dlg textarea { width:100%; min-height:200px; padding:12px; font:inherit; color:var(--ink); border:1px solid var(--line); border-radius:8px; }
+    .cand-dlg-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .cand-need { margin-top:28px; padding:24px; background:var(--white); border:1px solid var(--line); border-radius:12px; }
+    .cand-need h3 { margin:0 0 6px; color:var(--navy); font-size:1.3rem; }
+    .cand-need p { margin:0 0 14px; color:var(--muted); }
+    .cand-need form { display:flex; flex-wrap:wrap; gap:10px; }
+    .cand-need input { flex:1; min-width:160px; padding:12px; font:inherit; border:1px solid var(--line); border-radius:6px; }
+    @media (max-width:520px) { .cand-scroll table { font-size:.84rem; } .cand-scroll th, .cand-scroll td { box-sizing:border-box; min-width:116px; padding:9px 8px; overflow-wrap:anywhere; hyphens:auto; } .cand-scroll th:first-child { min-width:84px; max-width:84px; } .cand-dlg-in { padding:16px; } }
+    @media (max-width:800px) { .cand-filter .cand-count { margin-left:0; width:100%; } .cand-bar .btn { flex:1; } }
+
     @media (max-width: 960px) {
       .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .dossier-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -456,32 +525,163 @@
     </section>
 
     <section class="section section--mist" id="pipeline">
-      <div class="container">
-        <span class="eyebrow">Aggregierte Pflege-Pipeline</span>
-        <h2>Pflegeprofile im BG-Prozess nach Herkunftsmarkt</h2>
-        <p class="section-intro">Die folgende Übersicht stellt ausschließlich aggregierte Pflege-Pipeline dar. Sie enthält keine personenbezogenen Angaben und ist keine öffentliche Zusage zu Verfügbarkeit, Anerkennung, Sprachstand oder Starttermin.</p>
-        <div class="grid grid--3">
-          <article class="card pipeline-card">
-            <span class="pipeline-card__region">Ägypten</span>
-            <strong class="pipeline-card__count">Mehrere Pflegeprofile im BG-Prozess</strong>
-            <p>Aggregierte Marktübersicht ohne individuelle Profildaten.</p>
-          </article>
-          <article class="card pipeline-card">
-            <span class="pipeline-card__region">Marokko</span>
-            <strong class="pipeline-card__count">2 Pflegeprofile im BG-Prozess</strong>
-            <p>Aggregierte Marktübersicht ohne individuelle Profildaten.</p>
-          </article>
-          <article class="card pipeline-card">
-            <span class="pipeline-card__region">Tunesien</span>
-            <strong class="pipeline-card__count">2 Pflegeprofile im BG-Prozess</strong>
-            <p>Aggregierte Marktübersicht ohne individuelle Profildaten.</p>
-          </article>
-        </div>
-        <div class="pipeline-note">
-          <p><strong>Datensparsam dargestellt:</strong> Die Übersicht veröffentlicht keine Namen, Dokumente, Bescheidarten, individuellen Statusangaben oder privaten Kontaktdaten.</p>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <span class="eyebrow">Kandidatenbereich Pflege</span>
+    <h2>Pflegekräfte mit B2 und Defizitbescheid kennenlernen</h2>
+    <p class="section-intro">Sie suchen internationale Pflegekräfte und können einen Anerkennungsweg unterstützen? Diese Profile zeigen Erfahrung, Sprachnachweis und Anerkennungsweg. Kontakt und Vermittlung laufen ausschließlich über Berlin Gateway.</p>
+
+    <p class="cand-nojs"><a class="btn btn--primary" href="#kontakt">Pflegeprofile anfragen</a></p>
+
+    <div class="cand-filter" role="group" hidden aria-label="Anerkennungsweg">
+      <strong>Welchen Anerkennungsweg können Sie unterstützen?</strong>
+      <button type="button" class="cand-chip" data-w="alle" aria-pressed="true">Alle Profile</button>
+      <button type="button" class="cand-chip" data-w="lehrgang" aria-pressed="false">Lehrgang festgelegt oder gewählt</button>
+      <button type="button" class="cand-chip" data-w="pruefung" aria-pressed="false">Kenntnisprüfung möglich</button>
+      <span class="cand-count" id="candCount" aria-live="polite"></span>
+    </div>
+
+    <div class="cand-grid" id="candGrid">
+      <article class="cand-card" data-code="BG-PFK-001" data-weg="lehrgang" data-exp="über 7 Jahre" data-route="Intensivstation Frauen → Aufnahmebereich" data-lang="telc B2" data-bescheid="Sachsen-Anhalt" data-wegtext="Anpassungslehrgang, 10 Monate (720 h + 900 h)" data-vor="Anpassungslehrgang in Sachsen-Anhalt, davon 500 h stationäre Langzeitpflege. Danach Berufserlaubnis.">
+        <div class="cand-top"><div><div class="cand-code">BG-PFK-001</div><h3>Intensivstation-Erfahrung · telc B2 · Lehrgang 10 Monate</h3><p class="cand-sub">Pflegefachkraft aus Ägypten, Intensivstation und Aufnahmebereich</p></div>
+        <button type="button" class="cand-save" data-save="BG-PFK-001" aria-pressed="false" hidden>Vormerken</button></div>
+        <dl class="cand-facts">
+          <div><dt>Berufserfahrung</dt><dd>über 7 Jahre</dd></div><div><dt>Deutsch</dt><dd>telc B2</dd></div>
+          <div><dt>Bescheid</dt><dd>Sachsen-Anhalt</dd></div><div><dt>Aufenthalt</dt><dd>Ägypten</dd></div>
+          <div class="wide"><dt>Anerkennungsweg</dt><dd>Anpassungslehrgang, 10 Monate (720 h + 900 h)</dd></div>
+        </dl>
+        <div class="cand-route"><span class="cand-label">Werdegang</span><strong>Intensivstation Frauen → Aufnahmebereich</strong></div>
+        <ol class="cand-steps" aria-label="Anerkennungsstand"><li class="done">Deutsch B2</li><li class="done">Bescheid</li><li class="next">Lehrgang</li><li class="">Berufs&shy;erlaubnis</li><li class="">Start</li></ol>
+        <div class="cand-tags"><span class="cand-tag">Intensivstation</span><span class="cand-tag">Wundversorgung</span><span class="cand-tag">Infusionstherapie</span><span class="cand-tag">Dekubitusprophylaxe</span><span class="cand-tag ok">Sprachnachweis liegt vor · prüfbar über results.telc.net</span></div>
+        <div class="cand-when"><strong>Passt zu Ihrer Einrichtung, wenn …</strong><br>Sie einen Anpassungslehrgang gemeinsam mit einem Bildungspartner in Sachsen-Anhalt ermöglichen können und langfristig in der stationären Langzeitpflege besetzen wollen.</div>
+        <span class="cand-fit" data-fit hidden>Passt zu Ihrem Anerkennungsweg</span>
+        <details class="cand-more"><summary>Profil ansehen</summary>
+          <h4>Werdegang</h4><p>Seit 2019 Pflegefachkraft: zunächst Intensivstation für Frauen in einem Krankenhaus, danach Aufnahmebereich eines Gesundheitszentrums (Teilzeit).</p>
+          <h4>Tätigkeiten</h4><ul><li>Überwachung nach Geburten und Kaiserschnitten: Vitalzeichen, Blutungen, Wunden, Komplikationen</li><li>Infusionstherapie und Medikamentengabe nach ärztlicher Anordnung</li><li>Wundversorgung, Verbandswechsel, Injektionen, Sauerstoff- und Inhalationstherapie</li><li>Elektronische Pflegedokumentation</li></ul>
+          <h4>Ausbildung</h4><p>Diplom des Technischen Instituts für Krankenpflege, Gesamtprädikat „gut“. Kurs Infektionsprävention.</p>
+          <h4>Vor dem Start</h4><p>Anpassungslehrgang in Sachsen-Anhalt, davon 500 h stationäre Langzeitpflege. Danach Berufserlaubnis.</p>
+          <h4>Einsatzwunsch</h4><p>Stationäre Alten- und Langzeitpflege. Sie arbeitet ruhig, konzentriert und geduldig.</p>
+        </details>
+        <div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-PFK-001">Kennenlerngespräch anfragen</a></div>
+      </article>
+      <article class="cand-card" data-code="BG-PFK-002" data-weg="pruefung" data-exp="5 Jahre" data-route="Chirurgie → Innere Medizin → Notaufnahme" data-lang="Goethe B2" data-bescheid="Nordrhein-Westfalen" data-wegtext="Lehrgang 320 h + 280 h oder Kenntnisprüfung" data-vor="Anpassungslehrgang (auch modularisiert möglich) oder Kenntnisprüfung. Danach Berufserlaubnis.">
+        <div class="cand-top"><div><div class="cand-code">BG-PFK-002</div><h3>Notaufnahme-Erfahrung · Goethe B2 · Lehrgang 600 Stunden</h3><p class="cand-sub">Krankenpfleger aus Ägypten, Notaufnahme</p></div>
+        <button type="button" class="cand-save" data-save="BG-PFK-002" aria-pressed="false" hidden>Vormerken</button></div>
+        <dl class="cand-facts">
+          <div><dt>Berufserfahrung</dt><dd>5 Jahre</dd></div><div><dt>Deutsch</dt><dd>Goethe B2</dd></div>
+          <div><dt>Bescheid</dt><dd>Nordrhein-Westfalen</dd></div><div><dt>Aufenthalt</dt><dd>Ägypten</dd></div>
+          <div class="wide"><dt>Anerkennungsweg</dt><dd>Lehrgang 320 h + 280 h oder Kenntnisprüfung</dd></div>
+        </dl>
+        <div class="cand-route"><span class="cand-label">Werdegang</span><strong>Chirurgie → Innere Medizin → Notaufnahme</strong></div>
+        <ol class="cand-steps" aria-label="Anerkennungsstand"><li class="done">Deutsch B2</li><li class="done">Bescheid</li><li class="next">Lehrgang / Prüfung</li><li class="">Berufs&shy;erlaubnis</li><li class="">Start</li></ol>
+        <div class="cand-tags"><span class="cand-tag">Notaufnahme</span><span class="cand-tag">Triage</span><span class="cand-tag">Innere Medizin</span><span class="cand-tag">Chirurgie</span><span class="cand-tag ok">Sprachnachweis liegt vor · prüfbar über goethe.de/verify</span></div>
+        <div class="cand-when"><strong>Passt zu Ihrer Einrichtung, wenn …</strong><br>Sie eine Notaufnahme oder internistische Station haben und einen kurzen Lehrgang (320 h + 280 h) oder die Prüfungsvorbereitung ermöglichen können.</div>
+        <span class="cand-fit" data-fit hidden>Passt zu Ihrem Anerkennungsweg</span>
+        <details class="cand-more"><summary>Profil ansehen</summary>
+          <h4>Werdegang</h4><p>Seit 2021 an einem Universitätskrankenhaus: Chirurgie, danach Innere Medizin, seit 2025 Notaufnahme.</p>
+          <h4>Tätigkeiten</h4><ul><li>Ersteinschätzung und Priorisierung von Notfallpatienten</li><li>Medikamenten-, Infusions- und Sauerstofftherapie nach Anordnung, Blutentnahmen, venöse Zugänge</li><li>Wundversorgung und Mitwirkung bei Reanimationsmaßnahmen</li><li>Chirurgie: prä- und postoperative Betreuung, Drainagen, Katheter, steriler Verbandswechsel</li></ul>
+          <h4>Ausbildung</h4><p>Technisches Institut für Krankenpflege.</p>
+          <h4>Vor dem Start</h4><p>Anpassungslehrgang (auch modularisiert möglich) oder Kenntnisprüfung. Danach Berufserlaubnis.</p>
+          <h4>Einsatzwunsch</h4><p>Notaufnahme, Innere Medizin, Chirurgie. Er möchte seine Zukunft langfristig in Deutschland aufbauen.</p>
+        </details>
+        <div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-PFK-002">Kennenlerngespräch anfragen</a></div>
+      </article>
+      <article class="cand-card" data-code="BG-PFK-003" data-weg="lehrgang" data-exp="über 20 Jahre" data-route="Innere Medizin → Kinderabteilung" data-lang="telc B2" data-bescheid="Niedersachsen" data-wegtext="Anpassungslehrgang, 18 Monate (gewählt)" data-vor="Anpassungslehrgang, 18 Monate. Danach Berufserlaubnis.">
+        <div class="cand-top"><div><div class="cand-code">BG-PFK-003</div><h3>Über 20 Jahre Erfahrung · telc B2 · Anpassungslehrgang gewählt</h3><p class="cand-sub">Pflegefachkraft aus Ägypten, Innere Medizin und Kinderabteilung</p></div>
+        <button type="button" class="cand-save" data-save="BG-PFK-003" aria-pressed="false" hidden>Vormerken</button></div>
+        <dl class="cand-facts">
+          <div><dt>Berufserfahrung</dt><dd>über 20 Jahre</dd></div><div><dt>Deutsch</dt><dd>telc B2</dd></div>
+          <div><dt>Bescheid</dt><dd>Niedersachsen</dd></div><div><dt>Aufenthalt</dt><dd>Ägypten</dd></div>
+          <div class="wide"><dt>Anerkennungsweg</dt><dd>Anpassungslehrgang, 18 Monate (gewählt)</dd></div>
+        </dl>
+        <div class="cand-route"><span class="cand-label">Werdegang</span><strong>Innere Medizin → Kinderabteilung</strong></div>
+        <ol class="cand-steps" aria-label="Anerkennungsstand"><li class="done">Deutsch B2</li><li class="done">Bescheid</li><li class="next">Lehrgang</li><li class="">Berufs&shy;erlaubnis</li><li class="">Start</li></ol>
+        <div class="cand-tags"><span class="cand-tag">Innere Medizin</span><span class="cand-tag">Kinderpflege</span><span class="cand-tag">Medikamentenmanagement</span><span class="cand-tag">Pflegeplanung</span><span class="cand-tag ok">Sprachnachweis liegt vor · prüfbar über results.telc.net</span></div>
+        <div class="cand-when"><strong>Passt zu Ihrer Einrichtung, wenn …</strong><br>Sie einen längeren Anpassungsweg (18 Monate) organisieren können und eine langfristige Besetzung suchen.</div>
+        <span class="cand-fit" data-fit hidden>Passt zu Ihrem Anerkennungsweg</span>
+        <details class="cand-more"><summary>Profil ansehen</summary>
+          <h4>Werdegang</h4><p>Langjährige Tätigkeit in einem Zentralkrankenhaus: Innere Medizin, später auch Kinderabteilung.</p>
+          <h4>Tätigkeiten</h4><ul><li>Ganzheitliche Betreuung stationärer Patienten</li><li>Medikamentenmanagement, Vitalzeichenkontrolle</li><li>Pflegeplanung und Dokumentation, Übergabe</li><li>Zusammenarbeit im interdisziplinären Team</li></ul>
+          <h4>Ausbildung</h4><p>Sekundarschule für Krankenpflege.</p>
+          <h4>Vor dem Start</h4><p>Anpassungslehrgang, 18 Monate. Danach Berufserlaubnis.</p>
+          <h4>Einsatzwunsch</h4><p>Einrichtung mit Zugang zum Anpassungslehrgang und Perspektive auf Beschäftigung danach.</p>
+        </details>
+        <div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-PFK-003">Kennenlerngespräch anfragen</a></div>
+      </article>
+      <article class="cand-card" data-code="BG-PFK-004" data-weg="pruefung" data-exp="über 2 Jahre" data-route="Rotation (Notaufnahme, Innere, OP, Pädiatrie) → Stroke ICU" data-lang="telc B2" data-bescheid="Niedersachsen" data-wegtext="Kenntnisprüfung oder Anpassungslehrgang, nach Wahl" data-vor="Kenntnisprüfung (u. a. drei Pflegesituationen in der stationären Langzeitpflege) oder Anpassungslehrgang. Danach Berufserlaubnis.">
+        <div class="cand-top"><div><div class="cand-code">BG-PFK-004</div><h3>Stroke ICU · telc B2 · Prüfung oder Lehrgang nach Wahl</h3><p class="cand-sub">Pflegefachkraft aus Ägypten, Stroke ICU</p></div>
+        <button type="button" class="cand-save" data-save="BG-PFK-004" aria-pressed="false" hidden>Vormerken</button></div>
+        <dl class="cand-facts">
+          <div><dt>Berufserfahrung</dt><dd>über 2 Jahre</dd></div><div><dt>Deutsch</dt><dd>telc B2</dd></div>
+          <div><dt>Bescheid</dt><dd>Niedersachsen</dd></div><div><dt>Aufenthalt</dt><dd>Ägypten</dd></div>
+          <div class="wide"><dt>Anerkennungsweg</dt><dd>Kenntnisprüfung oder Anpassungslehrgang, nach Wahl</dd></div>
+        </dl>
+        <div class="cand-route"><span class="cand-label">Werdegang</span><strong>Rotation (Notaufnahme, Innere, OP, Pädiatrie) → Stroke ICU</strong></div>
+        <ol class="cand-steps" aria-label="Anerkennungsstand"><li class="done">Deutsch B2</li><li class="done">Bescheid</li><li class="next">Lehrgang / Prüfung</li><li class="">Berufs&shy;erlaubnis</li><li class="">Start</li></ol>
+        <div class="cand-tags"><span class="cand-tag">Stroke ICU</span><span class="cand-tag">Neurologie</span><span class="cand-tag">Thrombolyse</span><span class="cand-tag">Notaufnahme</span><span class="cand-tag ok">Sprachnachweis liegt vor · prüfbar über results.telc.net</span></div>
+        <div class="cand-when"><strong>Passt zu Ihrer Einrichtung, wenn …</strong><br>Sie eine neurologische oder intensivmedizinische Station haben und Prüfungsvorbereitung oder einen Lehrgang ermöglichen können.</div>
+        <span class="cand-fit" data-fit hidden>Passt zu Ihrem Anerkennungsweg</span>
+        <details class="cand-more"><summary>Profil ansehen</summary>
+          <h4>Werdegang</h4><p>Seit 2024 Stroke ICU an einem Universitätslehrkrankenhaus; davor Rotation durch Notaufnahme, Innere Medizin, OP, Pädiatrie und Neonatologie.</p>
+          <h4>Tätigkeiten</h4><ul><li>Überwachung akuter Schlaganfallpatienten, Vitalzeichen und neurologischer Status</li><li>Thrombolyse-Therapien und Infusionen nach Anordnung</li><li>Früherkennung von Komplikationen: Hirnödem, erhöhter Hirndruck, Aspirationspneumonie</li><li>Schluckstörungen und Aspirationsprophylaxe</li></ul>
+          <h4>Vor dem Start</h4><p>Kenntnisprüfung (u. a. drei Pflegesituationen in der stationären Langzeitpflege) oder Anpassungslehrgang. Danach Berufserlaubnis.</p>
+          <h4>Einsatzwunsch</h4><p>Einsatzbereich nach Absprache.</p>
+        </details>
+        <div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-PFK-004">Kennenlerngespräch anfragen</a></div>
+      </article>
+      <article class="cand-card" data-code="BG-PFK-005" data-weg="pruefung" data-exp="mehrjährig" data-route="Kinderkrankenhaus, Pädiatrie" data-lang="Goethe B2" data-bescheid="Schleswig-Holstein" data-wegtext="Kenntnisprüfung oder Anpassungslehrgang, nach Wahl" data-vor="Kenntnisprüfung oder Anpassungslehrgang. Danach Berufserlaubnis.">
+        <div class="cand-top"><div><div class="cand-code">BG-PFK-005</div><h3>Pädiatrie-Erfahrung · Goethe B2 · Bescheid liegt vor</h3><p class="cand-sub">Krankenschwester aus Marokko, Pädiatrie</p></div>
+        <button type="button" class="cand-save" data-save="BG-PFK-005" aria-pressed="false" hidden>Vormerken</button></div>
+        <dl class="cand-facts">
+          <div><dt>Berufserfahrung</dt><dd>mehrjährig</dd></div><div><dt>Deutsch</dt><dd>Goethe B2</dd></div>
+          <div><dt>Bescheid</dt><dd>Schleswig-Holstein</dd></div><div><dt>Aufenthalt</dt><dd>Marokko</dd></div>
+          <div class="wide"><dt>Anerkennungsweg</dt><dd>Kenntnisprüfung oder Anpassungslehrgang, nach Wahl</dd></div>
+        </dl>
+        <div class="cand-route"><span class="cand-label">Werdegang</span><strong>Kinderkrankenhaus, Pädiatrie</strong></div>
+        <ol class="cand-steps" aria-label="Anerkennungsstand"><li class="done">Deutsch B2</li><li class="done">Bescheid</li><li class="next">Lehrgang / Prüfung</li><li class="">Berufs&shy;erlaubnis</li><li class="">Start</li></ol>
+        <div class="cand-tags"><span class="cand-tag">Pädiatrie</span><span class="cand-tag">Kinderkrankenhaus</span><span class="cand-tag">Vitalzeichen</span><span class="cand-tag">Infusionen</span><span class="cand-tag ok">Sprachnachweis liegt vor · prüfbar über goethe.de/verify</span></div>
+        <div class="cand-when"><strong>Passt zu Ihrer Einrichtung, wenn …</strong><br>Sie eine Kinder- oder Pädiatrie-Abteilung haben und Prüfung oder Lehrgang ermöglichen können.</div>
+        <span class="cand-fit" data-fit hidden>Passt zu Ihrem Anerkennungsweg</span>
+        <details class="cand-more"><summary>Profil ansehen</summary>
+          <h4>Werdegang</h4><p>Krankenschwester in der Pädiatrie eines Kinderkrankenhauses.</p>
+          <h4>Tätigkeiten</h4><ul><li>Vitalzeichenkontrolle und sichere Medikamentengabe</li><li>Unterstützung bei Infusionen und Blutabnahmen</li><li>Zusammenarbeit mit Ärzten und Angehörigen</li></ul>
+          <h4>Ausbildung</h4><p>Diplom in allgemeiner Krankenpflege (Infirmier Polyvalent).</p>
+          <h4>Vor dem Start</h4><p>Kenntnisprüfung oder Anpassungslehrgang. Danach Berufserlaubnis.</p>
+          <h4>Einsatzwunsch</h4><p>Pädiatrie und Kinderpflege.</p>
+        </details>
+        <div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-PFK-005">Kennenlerngespräch anfragen</a></div>
+      </article>
+    </div>
+
+    <div class="cand-bar" id="candBar" hidden>
+      <span id="candBarText">Noch keine Profile vorgemerkt. Mit „Vormerken“ stellen Sie mehrere Profile in einer Anfrage zusammen.</span>
+      <button type="button" class="btn btn--ghost" id="candCompare" disabled>Auswahl vergleichen</button>
+      <button type="button" class="btn btn--primary" id="candSend" disabled>Anfrage vorbereiten</button>
+    </div>
+
+    <div class="cand-need" hidden>
+      <h3>Welches Profil fehlt Ihnen?</h3>
+      <p>Drei Angaben genügen. Wir suchen gezielt in unserem Kandidatenbestand und melden uns mit passenden Profilen.</p>
+      <form id="candNeed">
+        <label class="sr-only" for="needArea" style="position:absolute;left:-9999px">Einsatzbereich</label>
+        <input id="needArea" required maxlength="150" placeholder="Einsatzbereich, z. B. stationäre Altenpflege">
+        <label class="sr-only" for="needLoc" style="position:absolute;left:-9999px">Standort</label>
+        <input id="needLoc" required maxlength="100" placeholder="Standort / Region">
+        <label class="sr-only" for="needNum" style="position:absolute;left:-9999px">Anzahl</label>
+        <input id="needNum" type="number" min="1" max="999" required placeholder="Anzahl">
+        <button class="btn btn--primary" type="submit">Anfrage vorbereiten</button>
+      </form>
+    </div>
+
+    <div class="pipeline-note">
+      <p><strong>Datensparsam dargestellt:</strong> Die Profile zeigen keine Namen, Fotos, Dokumente oder privaten Kontaktdaten. Das ausführliche Dossier erhalten Sie nach Ihrer Anfrage über Berlin Gateway. Welche personenbezogenen Informationen übermittelt werden dürfen, klären wir vor der Weitergabe.</p>
+    </div>
+  </div>
+
+  <dialog class="cand-dlg" id="candDlg"><div class="cand-dlg-in">
+    <div class="cand-dlg-head"><h3 id="candDlgTitle"></h3><button type="button" class="cand-x" id="candX" aria-label="Schließen">×</button></div>
+    <div id="candDlgBody"></div>
+  </div></dialog>
+</section>
 
     <section class="section" id="bedarfsklaerung">
       <div class="container">
@@ -649,5 +849,80 @@
   <footer class="footer">
     <div class="container">© 2026 Berlin Gateway. Alle Rechte vorbehalten. | <a href="/de/impressum">Impressum</a> | <a href="/de/datenschutz/">Datenschutz</a></div>
   </footer>
+<script>
+(function () {
+  var sec = document.getElementById('pipeline');
+  var grid = document.getElementById('candGrid');
+  if (!sec || !grid || !grid.querySelector) return;
+  var cards = [].slice.call(grid.querySelectorAll('.cand-card'));
+  var sel = 'alle', saved = [];
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function mailAddr() {
+    var a = document.querySelector('.contact-note a'); if (!a) return '';
+    var t = (a.textContent || '').trim(); if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)) return t;
+    var h = a.getAttribute('href') || ''; if (h.indexOf('mailto:') === 0) { var v = h.slice(7).split('?')[0]; if (v.indexOf('@') > 0) return v; }
+    return '';
+  }
+  function refresh() {
+    var n = 0;
+    cards.forEach(function (el) {
+      var show = sel === 'alle' || el.dataset.weg.split(' ').indexOf(sel) > -1;
+      el.hidden = !show; if (show) n++;
+      el.querySelector('[data-fit]').hidden = sel === 'alle' || !show;
+      var code = el.dataset.code, on = saved.indexOf(code) > -1, b = el.querySelector('[data-save]');
+      b.setAttribute('aria-pressed', on); b.textContent = on ? 'Vorgemerkt' : 'Vormerken';
+    });
+    $('candCount').textContent = n + ' von ' + cards.length + ' Profilen';
+    var k = saved.length;
+    $('candBarText').textContent = k ? k + (k === 1 ? ' Profil' : ' Profile') + ' in Ihrer Anfrage: ' + saved.join(', ') : 'Noch keine Profile vorgemerkt. Mit „Vormerken“ stellen Sie mehrere Profile in einer Anfrage zusammen.';
+    $('candSend').disabled = !k; $('candCompare').disabled = k < 2; $('candBar').hidden = k === 0;
+  }
+  function openDlg(title, html) { $('candDlgTitle').textContent = title; $('candDlgBody').innerHTML = html; if ($('candDlg').showModal) $('candDlg').showModal(); }
+  function compose(subject, text) {
+    var addr = mailAddr();
+    openDlg('Anfrage prüfen und senden',
+      '<p>Die Seite versendet nichts selbst. ' + (addr ? 'Empfänger: <strong>' + esc(addr) + '</strong>' : 'Die Kontaktadresse ist gerade nicht lesbar. Kopieren Sie den Text und nutzen Sie die Kontaktangaben im <a href="#kontakt" id="candToContact">Abschnitt „Kontakt“</a>.') + '</p>' +
+      '<label for="candMsg" style="position:absolute;left:-9999px">Ihre Nachricht</label><textarea id="candMsg"></textarea>' +
+      '<div class="cand-dlg-actions">' + (addr ? '<a class="btn btn--primary" id="candMail" href="#">Im E-Mail-Programm öffnen</a>' : '<span class="btn btn--primary cand-disabled" id="candMail" aria-disabled="true">E-Mail-Programm nicht verfügbar</span>') +
+      '<button type="button" class="btn" id="candCopy" style="color:var(--navy);border:2px solid var(--navy);background:#fff;cursor:pointer">Text kopieren</button></div><p id="candCopyMsg" class="cand-count" role="status"></p>');
+    var m = $('candMsg'); m.value = text;
+    if (addr) { var ref = function () { $('candMail').href = 'mailto:' + addr + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(m.value); }; ref(); m.oninput = ref; }
+    var tc = $('candToContact'); if (tc) tc.onclick = function () { $('candDlg').close(); };
+    $('candCopy').onclick = function () {
+      var say = function (t) { $('candCopyMsg').textContent = t; };
+      var fallback = function () { m.focus(); m.select(); var ok = false; try { ok = document.execCommand('copy'); } catch (e) {} say(ok ? 'Kopiert' : 'Text markiert – bitte kopieren'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(m.value).then(function () { say('Kopiert'); }, fallback); else fallback();
+    };
+  }
+  function ask(codes) {
+    compose('Profilanfrage ' + codes.join(', '), 'Guten Tag Berlin Gateway,\n\nwir interessieren uns für folgende Profile: ' + codes.join(', ') + '.\nBitte kontaktieren Sie uns für einen fachlichen Abgleich und ein mögliches Kennenlerngespräch.\n\nEinrichtung:\nStandort:\nAnsprechpartner/in:\nTelefon:\nWir können folgenden Anerkennungsweg unterstützen:\n\nMit freundlichen Grüßen');
+  }
+  grid.addEventListener('click', function (e) {
+    var s = e.target.closest('[data-save]'), a = e.target.closest('[data-ask]');
+    if (s) { var c = s.dataset.save, i = saved.indexOf(c); if (i > -1) saved.splice(i, 1); else saved.push(c); refresh(); }
+    if (a) { e.preventDefault(); ask([a.dataset.ask]); }
+  });
+  [].forEach.call(document.querySelectorAll('.cand-chip'), function (b) {
+    b.onclick = function () { sel = b.dataset.w; [].forEach.call(document.querySelectorAll('.cand-chip'), function (x) { x.setAttribute('aria-pressed', x === b); }); refresh(); };
+  });
+  $('candSend').onclick = function () { ask(saved.slice()); };
+  $('candCompare').onclick = function () {
+    var ps = cards.filter(function (el) { return saved.indexOf(el.dataset.code) > -1; });
+    var rows = [['Erfahrung', 'exp'], ['Verlauf', 'route'], ['Deutsch', 'lang'], ['Bescheid', 'bescheid'], ['Weg', 'wegtext'], ['Vor dem Start', 'vor']];
+    openDlg('Ihre Auswahl im Vergleich', '<div class="cand-scroll"><table><thead><tr><th>Merkmal</th>' + ps.map(function (p) { return '<th>' + esc(p.dataset.code) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      rows.map(function (r) { return '<tr><th>' + r[0] + '</th>' + ps.map(function (p) { return '<td>' + esc(p.dataset[r[1]]).replace(/Anpassungslehrgang/g, 'Anpassungs&shy;lehrgang').replace(/Aufnahmebereich/g, 'Aufnahme&shy;bereich').replace(/Kenntnisprüfung/g, 'Kenntnis&shy;prüfung').replace(/Langzeitpflege/g, 'Langzeit&shy;pflege') + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>');
+  };
+  $('candNeed').onsubmit = function (e) {
+    e.preventDefault();
+    compose('Suchauftrag Pflege – ' + $('needLoc').value, 'Guten Tag Berlin Gateway,\n\nwir suchen Pflegepersonal:\nEinsatzbereich: ' + $('needArea').value + '\nStandort: ' + $('needLoc').value + '\nAnzahl: ' + $('needNum').value + '\n\nEinrichtung:\nAnsprechpartner/in:\nTelefon:\nGewünschter Start:\nUnterstützbarer Anerkennungsweg:\n\nMit freundlichen Grüßen');
+  };
+  $('candX').onclick = function () { $('candDlg').close(); };
+  $('candDlg').addEventListener('click', function (e) { if (e.target === $('candDlg')) $('candDlg').close(); });
+  [].forEach.call(sec.querySelectorAll('.cand-filter, .cand-bar, .cand-need, .cand-save'), function (el) { el.hidden = false; });
+  sec.classList.add('cand-ready');
+  refresh();
+})();
+</script>
 </body>
 </html>

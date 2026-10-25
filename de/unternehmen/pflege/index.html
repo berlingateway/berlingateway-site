@@ -417,6 +417,7 @@
     .cand-actions { margin-top:auto; }
     .cand-bar { position:sticky; bottom:0; z-index:9; margin-top:22px; padding:14px 18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; background:var(--white); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 30px rgba(11,31,58,.14); }
     .cand-bar span { flex:1; min-width:200px; color:var(--ink); }
+    .cand-email-note { flex:0 0 100%; margin:0; color:var(--muted); font-size:.9rem; line-height:1.45; }
     .cand-bar .btn { min-height:44px; padding:9px 16px; font:inherit; font-weight:800; cursor:pointer; }
     .cand-bar .btn:disabled { opacity:.45; cursor:not-allowed; }
     .cand-bar .btn--ghost { color:var(--navy); background:var(--white); border:2px solid var(--navy); }
@@ -515,7 +516,7 @@
             <a class="btn btn--primary" href="#kontakt">Pflegeprofile anfragen</a>
             <a class="btn btn--outline" href="#kontakt">Personalbedarf besprechen</a>
           </div>
-          <p class="hero-qualification">Im ersten Gespräch klären wir Einrichtungstyp, Einsatzbereich, Anzahl, Standort, gewünschten Start und zentrale Anforderungen.</p>
+          <p class="hero-qualification">Zuerst besprechen wir den Personalbedarf Ihrer Einrichtung. Danach ordnen wir mögliche Pflegeprofile im Verhältnis zu Ihren Anforderungen ein.</p>
         </div>
         <aside class="hero-panel">
           <strong>Für Einrichtungen mit konkretem Personalbedarf</strong>
@@ -676,8 +677,9 @@
 
     <div class="cand-bar" id="candBar" hidden>
       <span id="candBarText">Noch keine Profile vorgemerkt. Mit „Vormerken“ stellen Sie mehrere Profile in einer Anfrage zusammen.</span>
+      <p class="cand-email-note" id="candEmailNote">Öffnet in Ihrem E-Mail-Programm einen vorausgefüllten Entwurf. Es wird nichts automatisch gesendet.</p>
       <button type="button" class="btn btn--ghost" id="candCompare" disabled>Auswahl vergleichen</button>
-      <button type="button" class="btn btn--primary" id="candSend" disabled>Anfrage vorbereiten</button>
+      <button type="button" class="btn btn--primary" id="candSend" aria-describedby="candEmailNote" disabled>E-Mail-Entwurf öffnen</button>
     </div>
 
     <div class="cand-need" hidden>
@@ -707,7 +709,7 @@
 
     <section class="section" id="bedarfsklaerung">
       <div class="container">
-        <span class="eyebrow">Bestehende wertvolle Inhalte</span>
+        <span class="eyebrow">Für Arbeitgeber: Bedarf und Einordnung</span>
         <h2>Personalbedarf und Anforderungen strukturiert klären</h2>
         <p class="section-intro">Internationale Pflege-Rekrutierung ist keine einheitliche Lösung für jede Einrichtung. Entscheidend sind Versorgungsumfeld, Aufgabenprofil, Team, Standort und die Anforderungen der gesuchten Rolle.</p>
         <div class="grid grid--4">
@@ -769,7 +771,7 @@
 
     <section class="section section--mist" id="ablauf">
       <div class="container">
-        <span class="eyebrow">Employer Process</span>
+        <span class="eyebrow">Ablauf für Arbeitgeber</span>
         <h2>Der Ablauf in fünf Schritten</h2>
         <p class="section-intro">Von der Bedarfsklärung bis zur Vorbereitung der Arbeitsaufnahme stimmen wir die nächsten Schritte mit Ihrer Einrichtung ab.</p>
         <div class="process-list">
@@ -813,7 +815,7 @@
 
     <section class="section section--mist" id="trust">
       <div class="container">
-        <span class="eyebrow">Trust &amp; Compliance</span>
+        <span class="eyebrow">Vertrauen und klare Zuständigkeiten</span>
         <h2>Transparente Statuslogik und klare Verantwortlichkeiten</h2>
         <p class="section-intro">Die Arbeitgeberstrecke trennt aggregierte Prozessinformation, bedarfsbezogene Profilstruktur und behördliche Entscheidungen. So bleibt sichtbar, was bereits eingeordnet werden kann und was offen bleibt.</p>
         <ul class="trust-list">
@@ -856,7 +858,7 @@
 
     <section id="kontakt" class="section contact">
       <div class="container" style="max-width:850px">
-        <span class="eyebrow">Employer Request</span>
+        <span class="eyebrow">Kontakt für Arbeitgeber</span>
         <h2>Pflegeprofile anfragen und Personalbedarf besprechen</h2>
         <p class="section-intro">Beschreiben Sie uns kurz Ihren Einrichtungstyp, den Einsatzbereich, die Anzahl, den Standort, den gewünschten Start und die wichtigsten Anforderungen. Wir vereinbaren ein erstes Arbeitgebergespräch, um mögliche nächste Schritte einzuordnen.</p>
         <div class="contact-actions">
@@ -903,7 +905,7 @@
   function openDlg(title, html) { $('candDlgTitle').textContent = title; $('candDlgBody').innerHTML = html; if ($('candDlg').showModal) $('candDlg').showModal(); }
   function compose(subject, text) {
     var addr = mailAddr();
-    openDlg('Anfrage prüfen und senden',
+    openDlg('Anfrage prüfen',
       '<p>Die Seite versendet nichts selbst. ' + (addr ? 'Empfänger: <strong>' + esc(addr) + '</strong>' : 'Die Kontaktadresse ist gerade nicht lesbar. Kopieren Sie den Text und nutzen Sie die Kontaktangaben im <a href="#kontakt" id="candToContact">Abschnitt „Kontakt“</a>.') + '</p>' +
       '<label for="candMsg" style="position:absolute;left:-9999px">Ihre Nachricht</label><textarea id="candMsg"></textarea>' +
       '<div class="cand-dlg-actions">' + (addr ? '<a class="btn btn--primary" id="candMail" href="#">Im E-Mail-Programm öffnen</a>' : '<span class="btn btn--primary cand-disabled" id="candMail" aria-disabled="true">E-Mail-Programm nicht verfügbar</span>') +

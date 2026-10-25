@@ -488,14 +488,12 @@
       .footer a { display: inline-block; margin-top: 8px; }
     }
 
-    [data-demo]{display:none!important}
     .cand-empty, .cand-teaser { margin:18px 0 0; padding:20px 22px; color:#35445a; background:#fff8e7; border-left:4px solid var(--gold); border-radius:0 8px 8px 0; }
     .cand-empty p, .cand-teaser p { margin:0; }
     .cand-empty a, .cand-teaser a { font-weight:800; }
     .cand-disclaimer { margin-top:24px; padding:20px 24px; color:#35445a; background:var(--mist); border:1px solid var(--line); border-radius:10px; }
     .cand-disclaimer p { margin:0; }
     .cand-contact-line { margin:0; color:var(--muted); font-size:.86rem; }
-    .cand-demo-ribbon { align-self:flex-start; padding:3px 8px; color:#fff; background:#9b2226; border-radius:4px; font-size:.72rem; font-weight:900; letter-spacing:.08em; }
     .cand-compare-hint { width:100%; margin:0; color:var(--muted); font-size:.88rem; }
     .cand-filter__label { min-width:145px; }
     @media (max-width:520px) { .cand-scroll table { table-layout:fixed; } .cand-scroll th, .cand-scroll td { overflow-wrap:normal!important; word-break:normal!important; hyphens:manual!important; } }
@@ -573,7 +571,7 @@
             </div>
             <div class="cand-tags"><span class="cand-tag">Mechanische Fertigung</span><span class="cand-tag">CNC-Drehen</span><span class="cand-tag">Praxiserfahrung</span><span class="cand-tag">Ausbildung 2027</span></div>
             <dl class="cand-facts">
-              <div><dt>Ausbildungsziel</dt><dd>Zerspanungsmechaniker</dd></div>
+              <div><dt>Ausbildungsziel</dt><dd>Zerspanungs&shy;mechaniker</dd></div>
               <div><dt>Qualifikation</dt><dd>Technikerdiplom Mechanische Fertigung (2025), Abitur (2024)</dd></div>
               <div class="wide"><dt>Praxis</dt><dd>Praktische Erfahrung im CNC-Drehen und in der konventionellen Zerspanung</dd></div>
               <div class="wide"><dt>Deutsch</dt><dd>B1-Prüfung teilweise bestanden; Modul Schreiben noch offen</dd></div>
@@ -589,15 +587,6 @@
             <p class="cand-contact-line">Berlin Gateway · <a href="mailto:recruitment@berlingateway.de">recruitment@berlingateway.de</a></p>
           </article>
 
-          <!-- remove demo cards before release -->
-          <article class="cand-card" data-demo="1" data-code="BG-DEMO-001" data-branche="technik" data-art="fachkraft" data-route="Beispielprofil Technik" data-lang="Beispielangabe" data-exp="Beispielangabe" data-status="DEMO" data-vor="Sie ein allgemeines Profil aus dem technischen Bereich vergleichen möchten." data-wegtext="Beispielangabe" data-ziel="Beispielangabe" data-qual="Beispielangabe" data-praxis="Beispielangabe" data-start="Beispielangabe" data-aufenthalt="Beispielangabe">
-            <span class="cand-demo-ribbon">DEMO</span><div class="cand-top"><div><div class="cand-code">BG-DEMO-001</div><h3>Beispielprofil Technik</h3><p class="cand-sub">Demo · Fachkraft · Musterangaben</p></div><button type="button" class="cand-save" data-save="BG-DEMO-001" aria-pressed="false" hidden>Vormerken</button></div>
-            <dl class="cand-facts"><div><dt>Berufsfeld</dt><dd>Technik</dd></div><div><dt>Status</dt><dd>DEMO</dd></div></dl><div class="cand-when"><strong>Demo</strong><br>Allgemeines Beispiel ohne reale Personendaten.</div><span class="cand-fit" data-fit hidden>Passt zu Ihren Filtern</span><details class="cand-more"><summary>Profil ansehen</summary><p>Allgemeines Beispiel ohne reale Personendaten.</p></details><div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-DEMO-001">Kennenlerngespräch anfragen</a></div>
-          </article>
-          <article class="cand-card" data-demo="1" data-code="BG-DEMO-002" data-branche="fahrzeug" data-art="ausbildung" data-route="Beispielprofil Fahrzeugtechnik" data-lang="Beispielangabe" data-exp="Beispielangabe" data-status="DEMO" data-vor="Sie ein allgemeines Profil aus dem Bereich Fahrzeugtechnik vergleichen möchten." data-wegtext="Beispielangabe" data-ziel="Beispielangabe" data-qual="Beispielangabe" data-praxis="Beispielangabe" data-start="Beispielangabe" data-aufenthalt="Beispielangabe">
-            <span class="cand-demo-ribbon">DEMO</span><div class="cand-top"><div><div class="cand-code">BG-DEMO-002</div><h3>Beispielprofil Fahrzeugtechnik</h3><p class="cand-sub">Demo · Ausbildung · Musterangaben</p></div><button type="button" class="cand-save" data-save="BG-DEMO-002" aria-pressed="false" hidden>Vormerken</button></div>
-            <dl class="cand-facts"><div><dt>Berufsfeld</dt><dd>Fahrzeugtechnik</dd></div><div><dt>Status</dt><dd>DEMO</dd></div></dl><div class="cand-when"><strong>Demo</strong><br>Allgemeines Beispiel ohne reale Personendaten.</div><span class="cand-fit" data-fit hidden>Passt zu Ihren Filtern</span><details class="cand-more"><summary>Profil ansehen</summary><p>Allgemeines Beispiel ohne reale Personendaten.</p></details><div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-DEMO-002">Kennenlerngespräch anfragen</a></div>
-          </article>
         </div>
 
         <div class="cand-bar" id="candBar" hidden>
@@ -635,7 +624,7 @@
   var grid = document.getElementById('candGrid');
   if (!sec || !grid || !grid.querySelector) return;
   var cards = [].slice.call(grid.querySelectorAll('.cand-card'));
-  var realCards = cards.filter(function (el) { return !el.hasAttribute('data-demo'); });
+  var realCards = cards;
   var branche = 'alle', art = 'alle', saved = [];
   var $ = function (id) { return document.getElementById(id); };
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
@@ -652,7 +641,7 @@
       var matchArt = art === 'alle' || el.dataset.art === art;
       var show = matchBranche && matchArt;
       el.hidden = !show;
-      if (show && !el.hasAttribute('data-demo')) visible++;
+      if (show) visible++;
       var fit = el.querySelector('[data-fit]'); if (fit) fit.hidden = !show || (branche === 'alle' && art === 'alle');
       var code = el.dataset.code, on = saved.indexOf(code) > -1, b = el.querySelector('[data-save]');
       if (b) { b.setAttribute('aria-pressed', on); b.textContent = on ? 'Vorgemerkt' : 'Vormerken'; }
@@ -664,7 +653,7 @@
     $('candCompare').disabled = k < 2;
     $('candCompareHint').hidden = k !== 1;
     $('candBar').hidden = k === 0;
-    var teaserVisible = branche === 'pflege' && art !== 'ausbildung';
+    var teaserVisible = branche === 'pflege' && art === 'alle';
     $('pflegeTeaser').hidden = !teaserVisible;
     $('candEmpty').hidden = visible !== 0 || teaserVisible;
   }

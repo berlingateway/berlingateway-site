@@ -653,7 +653,7 @@
     $('candCompare').disabled = k < 2;
     $('candCompareHint').hidden = k !== 1;
     $('candBar').hidden = k === 0;
-    var teaserVisible = branche === 'pflege' && art === 'alle';
+    var teaserVisible = branche === 'pflege' && art !== 'ausbildung';
     $('pflegeTeaser').hidden = !teaserVisible;
     $('candEmpty').hidden = visible !== 0 || teaserVisible;
   }

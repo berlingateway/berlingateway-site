@@ -81,6 +81,7 @@ de/studieren-in-deutschland.html
 de/systemlogik.html
 de/thankyou.html
 de/top-10-mistakes.html
+de/unternehmen/fachkraefte/index.html
 de/unternehmen/pflege/index.html
 de/visa.html
 de/visum-deutschland.html

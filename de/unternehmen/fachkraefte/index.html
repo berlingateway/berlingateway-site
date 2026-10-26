@@ -371,8 +371,8 @@
     .contact .section-intro { color: #dce6ef; }
     .contact .btn--outline { color: var(--white); border-color: #bfcbd8; }
     .contact-note { margin: 22px 0 0; color: #dce6ef; font-size: .95rem; }
-    .footer { padding: 32px 0; color: #ccd6df; background: var(--navy-deep); text-align: center; font-size: .9rem; }
-    .footer a { margin: 0 8px; color: #dce6ef; text-decoration: none; }
+
+
 
     #pipeline [hidden] { display:none !important; }
     .cand-label { display:block; color:var(--muted); font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
@@ -498,7 +498,7 @@
       .process-step { padding: 20px; }
       .pipeline-card { padding-top: 52px; }
       .process-step { grid-template-columns: 42px 1fr; gap: 12px; }
-      .footer a { display: inline-block; margin-top: 8px; }
+
     }
 
     .cand-empty, .cand-teaser { margin:18px 0 0; padding:20px 22px; color:#35445a; background:#fff8e7; border-left:4px solid var(--gold); border-radius:0 8px 8px 0; }
@@ -510,6 +510,19 @@
     .cand-compare-hint { width:100%; margin:0; color:var(--muted); font-size:.88rem; }
     .cand-filter__label { min-width:145px; }
     @media (max-width:520px) { .cand-scroll table { table-layout:fixed; } .cand-scroll th, .cand-scroll td { overflow-wrap:normal!important; word-break:normal!important; hyphens:manual!important; } }
+</style>
+<style>
+    .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:60px 24px;text-align:center;font-size:14px}
+    .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    .footer__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px;text-align:left}
+    .footer__title{margin:0 0 12px;color:#FFFFFF;font-size:14px;line-height:1.35;font-weight:700}
+    .footer__group ul{list-style:none;margin:0;padding:0}
+    .footer__group a{display:flex;align-items:center;min-height:44px;margin:0;padding:8px 0;line-height:1.4;overflow-wrap:anywhere}
+    .footer__bottom{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.16)}
+    .footer__brand{margin:0;color:rgba(255,255,255,0.72)}
+    .footer__copyright{margin:24px 0 0;opacity:0.3}
+    @media(max-width:768px){.footer__grid{grid-template-columns:1fr;gap:22px}.footer__group a{width:100%}}
+.footer .footer__inner{max-width:900px;margin:0 auto}
 </style>
 </head>
 <body>
@@ -646,14 +659,59 @@
         <span class="eyebrow">Kontakt für Arbeitgeber</span>
         <h2>Kennenlerngespräch anfragen</h2>
         <p class="section-intro">Interessierte Arbeitgeber melden sich bei Berlin Gateway. Den Kontakt zu einer Kandidatin oder einem Kandidaten stellen wir erst nach der gesonderten Zustimmung her.</p>
-        <div class="contact-actions"><a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Profilanfrage%20BG-TEC-001">Profilanfrage BG-TEC-001 per E-Mail</a></div>
+        <div class="contact-actions"><a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Arbeitgeberanfrage%20%E2%80%93%20Fachkr%C3%A4fte%20und%20Ausbildung">Personalbedarf besprechen</a></div>
         <p class="contact-note">Berlin Gateway · <a href="mailto:recruitment@berlingateway.de" style="color:#fff">recruitment@berlingateway.de</a></p>
       </div>
     </section>
   </main>
   <footer class="footer">
-    <div class="container">© 2026 Berlin Gateway. Alle Rechte vorbehalten. | <a href="/de/impressum">Impressum</a> | <a href="/de/datenschutz/">Datenschutz</a></div>
-  </footer>
+  <div class="inner footer__inner">
+    <nav class="footer__grid" aria-label="Footer-Navigation">
+      <section class="footer__group">
+        <p class="footer__title">Für Arbeitgeber</p>
+        <ul>
+          <li><a href="/de/unternehmen/internationale-fachkraefte/">Internationale Fachkräfte</a></li>
+          <li><a href="/de/unternehmen/anerkennung-onboarding/">Anerkennung &amp; Onboarding</a></li>
+          <li><a href="#kontakt">Personalbedarf besprechen</a></li>
+        </ul>
+      </section>
+      <section class="footer__group">
+        <p class="footer__title">Fachkräfte nach Berufsfeld</p>
+        <ul>
+          <li><a href="/de/unternehmen/pflege/">Pflegefachkräfte</a></li>
+          <li><a href="/de/unternehmen/pflege/pflegeheime/">Pflegeheime</a></li>
+          <li><a href="/de/unternehmen/anaesthesietechnische-assistenten/">ATA / Anästhesietechnische Assistenten</a></li>
+          <li><a href="/de/unternehmen/kfz-nutzfahrzeugmechatroniker/">Kfz- und Nutzfahrzeugmechatroniker</a></li>
+          <li><a href="/de/unternehmen/physiotherapeuten/">Physiotherapeuten</a></li>
+          <li><a href="/de/unternehmen/fachkraefte/">Fachkräfte und Auszubildende</a></li>
+        </ul>
+      </section>
+      <section class="footer__group">
+        <p class="footer__title">Für Bewerber</p>
+        <ul>
+          <li><a href="/de/">Deutschsprachige Startseite</a></li>
+          <li><a href="/de/pflegekraefte">Pflegekräfte</a></li>
+          <li><a href="/de/aerzte">Ärzte</a></li>
+          <li><a href="/de/ingenieure">Ingenieure</a></li>
+          <li><a href="/de/ausbildung">Ausbildung</a></li>
+        </ul>
+      </section>
+      <section class="footer__group">
+        <p class="footer__title">Berlin Gateway</p>
+        <ul>
+          <li><a href="/de/impressum">Impressum</a></li>
+          <li><a href="/de/datenschutz">Datenschutz</a></li>
+          <li><a href="mailto:info@berlingateway.de">Kontakt</a></li>
+          <li><a href="/ar/">العربية</a></li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer__bottom">
+      <p class="footer__brand">Berlin Gateway — Institutionelle Fachkräfte-Sicherung</p>
+      <p class="footer__copyright">© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>
 <script>
 (function () {
   var sec = document.getElementById('pipeline');

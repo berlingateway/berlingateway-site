@@ -391,6 +391,19 @@
     .cand-code { color:var(--gold-dark); font-size:.78rem; font-weight:800; letter-spacing:.1em; }
     .cand-card h3 { margin:4px 0 0; color:var(--navy); font-size:1.12rem; line-height:1.3; }
     .cand-sub { margin:4px 0 0; color:var(--muted); font-size:.88rem; }
+
+    .cand-top > div:first-child { flex:1; min-width:0; }
+    .cand-person { display:flex; align-items:center; gap:10px; min-width:0; margin:0 0 10px; }
+    .cand-avatar { display:block; flex:0 0 44px; width:44px; height:44px; border-radius:50%; }
+    .cand-person__text { min-width:0; }
+    .cand-person__line { margin:0; color:var(--navy); font-size:.78rem; font-weight:800; line-height:1.25; }
+    .cand-person__line--meta { margin-top:2px; color:var(--muted); font-size:.74rem; font-weight:600; }
+    @media (max-width:520px) {
+      .cand-person { gap:8px; }
+      .cand-avatar { flex-basis:40px; width:40px; height:40px; }
+      .cand-person__line { font-size:.72rem; }
+      .cand-person__line--meta { font-size:.68rem; }
+    }
     .cand-save { flex:none; padding:7px 12px; color:var(--navy); background:var(--white); border:1px solid var(--navy); border-radius:6px; font:inherit; font-weight:700; font-size:.85rem; cursor:pointer; }
     .cand-save[aria-pressed="true"] { color:#fff; background:var(--navy); }
     .cand-facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 14px; margin:0; }
@@ -557,7 +570,7 @@
         </div>
 
         <div class="cand-teaser" id="pflegeTeaser" hidden>
-          <p>Pflege: sechs geprüfte Profile von Pflegekräften. <a href="/de/unternehmen/pflege/#pipeline">Zu den Pflege-Profilen</a></p>
+          <p>Pflege: sieben geprüfte Profile von Pflegekräften. <a href="/de/unternehmen/pflege/#pipeline">Zu den Pflege-Profilen</a></p>
         </div>
         <div class="cand-empty" id="candEmpty" hidden>
           <p>Profile in Vorbereitung. Zu den Anforderungen eines Arbeitgebers sprechen wir Sie gern an. <a href="#kontakt" id="emptyAsk">Anfrage stellen</a></p>
@@ -566,7 +579,7 @@
         <div class="cand-grid" id="candGrid">
           <article class="cand-card" data-code="BG-TEC-001" data-branche="technik" data-art="ausbildung" data-route="Ausbildung 2027" data-lang="B1 teilweise, Modul Schreiben offen" data-exp="CNC-Drehen und konventionelle Zerspanung (Praxis)" data-status="Arbeitgebervermittlung in Vorbereitung" data-vor="Sie einen Ausbildungsbewerber mit technischer Vorbildung und praktischer Erfahrung in der Zerspanung suchen." data-wegtext="Wiederholung des B1-Moduls Schreiben und Kennenlernen eines passenden Ausbildungsbetriebs." data-ziel="Zerspanungsmechaniker" data-qual="Technikerdiplom Mechanische Fertigung (2025), Abitur (2024)" data-praxis="Praktische Erfahrung im CNC-Drehen und in der konventionellen Zerspanung" data-start="August oder September 2027" data-aufenthalt="Marokko">
             <div class="cand-top">
-              <div><div class="cand-code">BG-TEC-001</div><h3>BG-TEC-001 · Ausbildungsbewerber aus Marokko</h3><p class="cand-sub">Zerspanungsmechanik · Technische Vorbildung · Ausbildung 2027</p></div>
+              <div><div class="cand-person"><svg class="cand-avatar cand-avatar--male" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><circle cx="22" cy="22" r="22" fill="#0b1f3a"/><circle class="cand-avatar__silhouette" cx="22" cy="14" r="6" fill="#b8902a"/><path class="cand-avatar__silhouette" d="M9 39c.8-7.8 5.1-12 13-12s12.2 4.2 13 12v1H9z" fill="#b8902a"/></svg><div class="cand-person__text"><p class="cand-person__line">A. B. · Ausbildungsbewerber</p><p class="cand-person__line cand-person__line--meta">männlich · Marokko</p></div></div><div class="cand-code">BG-TEC-001</div><h3>BG-TEC-001 · Ausbildungsbewerber aus Marokko</h3><p class="cand-sub">Zerspanungsmechanik · Technische Vorbildung · Ausbildung 2027</p></div>
               <button type="button" class="cand-save" data-save="BG-TEC-001" aria-pressed="false" hidden>Vormerken</button>
             </div>
             <div class="cand-tags"><span class="cand-tag">Mechanische Fertigung</span><span class="cand-tag">CNC-Drehen</span><span class="cand-tag">Praxiserfahrung</span><span class="cand-tag">Ausbildung 2027</span></div>

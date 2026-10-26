@@ -390,7 +390,7 @@
     .cand-card h3 { margin:4px 0 0; color:var(--navy); font-size:1.12rem; line-height:1.3; }
     .cand-sub { margin:4px 0 0; color:var(--muted); font-size:.88rem; }
 
-    .cand-top > div:first-child { flex:1; min-width:0; }
+    .cand-top > div:first-child:has(> .cand-person) { flex:1; min-width:0; }
     .cand-person { display:flex; align-items:center; gap:10px; min-width:0; margin:0 0 10px; }
     .cand-avatar { display:block; flex:0 0 44px; width:44px; height:44px; border-radius:50%; }
     .cand-person__text { min-width:0; }

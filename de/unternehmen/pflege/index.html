@@ -409,7 +409,7 @@
     .cand-facts dd { margin:2px 0 0; color:var(--ink); font-weight:700; overflow-wrap:anywhere; }
     .cand-facts .wide { grid-column:1 / -1; }
     .cand-steps { display:flex; margin:0; padding:0; list-style:none; }
-    .cand-steps li { flex:1; min-width:0; overflow-wrap:anywhere; hyphens:auto; position:relative; padding-top:20px; color:var(--muted); font-size:.74rem; text-align:center; }
+    .cand-steps li { flex:1; min-width:0; overflow-wrap:normal; hyphens:manual; position:relative; padding-top:20px; color:var(--muted); font-size:.74rem; text-align:center; }
     .cand-steps li::before { content:""; position:absolute; top:4px; left:50%; width:12px; height:12px; background:var(--line); border-radius:50%; transform:translateX(-50%); z-index:1; }
     .cand-steps li::after { content:""; position:absolute; top:9px; left:-50%; width:100%; height:2px; background:var(--line); }
     .cand-steps li:first-child::after { display:none; }
@@ -429,6 +429,7 @@
     .cand-more ul { padding-left:18px; }
     .cand-actions { margin-top:auto; }
     .cand-bar { position:sticky; bottom:0; z-index:9; margin-top:22px; padding:14px 18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; background:var(--white); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 30px rgba(11,31,58,.14); }
+    .cand-bar.cand-bar--dialog-open { display:none!important; }
     .cand-bar span { flex:1; min-width:200px; color:var(--ink); }
     .cand-email-note { flex:0 0 100%; margin:0; color:var(--muted); font-size:.9rem; line-height:1.45; }
     .cand-bar .btn { min-height:44px; padding:9px 16px; font:inherit; font-weight:800; cursor:pointer; }
@@ -452,7 +453,7 @@
     .cand-need p { margin:0 0 14px; color:var(--muted); }
     .cand-need form { display:flex; flex-wrap:wrap; gap:10px; }
     .cand-need input { flex:1; min-width:160px; padding:12px; font:inherit; border:1px solid var(--line); border-radius:6px; }
-    @media (max-width:520px) { .cand-scroll table { font-size:.84rem; } .cand-scroll th, .cand-scroll td { box-sizing:border-box; min-width:116px; padding:9px 8px; overflow-wrap:anywhere; hyphens:auto; } .cand-scroll th:first-child { min-width:84px; max-width:84px; } .cand-dlg-in { padding:16px; } }
+    @media (max-width:520px) { .cand-steps li { font-size:.72rem; } .cand-steps li:first-child { flex:1.1; } .cand-scroll table { font-size:.84rem; } .cand-scroll th, .cand-scroll td { box-sizing:border-box; min-width:116px; padding:9px 8px; overflow-wrap:anywhere; hyphens:auto; } .cand-scroll th:first-child { min-width:84px; max-width:84px; } .cand-dlg-in { padding:16px; } }
     @media (max-width:800px) { .cand-filter .cand-count { margin-left:0; width:100%; } .cand-bar .btn { flex:1; } }
 
     @media (max-width: 960px) {
@@ -508,7 +509,7 @@
     .footer__group a{display:flex;align-items:center;min-height:44px;margin:0;padding:8px 0;line-height:1.4;overflow-wrap:anywhere}
     .footer__bottom{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.16)}
     .footer__brand{margin:0;color:rgba(255,255,255,0.72)}
-    .footer__copyright{margin:24px 0 0;opacity:0.3}
+    .footer__copyright{margin:24px 0 0;color:rgba(255,255,255,0.62)}
     @media(max-width:768px){.footer__grid{grid-template-columns:1fr;gap:22px}.footer__group a{width:100%}}
 .footer .footer__inner{max-width:900px;margin:0 auto}
 </style>
@@ -984,7 +985,7 @@
         <p class="footer__title">Berlin Gateway</p>
         <ul>
           <li><a href="/de/impressum">Impressum</a></li>
-          <li><a href="/de/datenschutz">Datenschutz</a></li>
+          <li><a href="/de/datenschutz/">Datenschutz</a></li>
           <li><a href="mailto:info@berlingateway.de">Kontakt</a></li>
           <li><a href="/ar/">العربية</a></li>
         </ul>
@@ -1025,7 +1026,7 @@
     $('candBarText').textContent = k ? k + (k === 1 ? ' Profil' : ' Profile') + ' in Ihrer Anfrage: ' + saved.join(', ') : 'Noch keine Profile vorgemerkt. Mit „Vormerken“ stellen Sie mehrere Profile in einer Anfrage zusammen.';
     $('candSend').disabled = !k; $('candCompare').disabled = k < 2; $('candBar').hidden = k === 0;
   }
-  function openDlg(title, html) { $('candDlgTitle').textContent = title; $('candDlgBody').innerHTML = html; if ($('candDlg').showModal) $('candDlg').showModal(); }
+  function openDlg(title, html) { var dlg = $('candDlg'), bar = $('candBar'); $('candDlgTitle').textContent = title; $('candDlgBody').innerHTML = html; if (dlg.showModal) { bar.classList.add('cand-bar--dialog-open'); dlg.addEventListener('close', function () { bar.classList.remove('cand-bar--dialog-open'); }, { once: true }); dlg.showModal(); } }
   function compose(subject, text) {
     var addr = mailAddr();
     openDlg('Anfrage prüfen',

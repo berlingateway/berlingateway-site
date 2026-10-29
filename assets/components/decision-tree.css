@@ -1,48 +1,101 @@
-/* decision-tree.css — v1.0.1
+/* decision-tree.css — v1.1.0
    Component: bg-decision-tree
 */
+
+#bg-decision-tree-container {
+  display: flow-root;
+  min-height: 18rem;
+  box-sizing: border-box;
+}
+
+.bg-decision-tree,
+.bg-decision-tree * {
+  box-sizing: border-box;
+}
+
+.bg-decision-tree[hidden] {
+  display: none !important;
+}
 
 .bg-decision-tree {
   background: #F7F7F7;
   border-radius: 10px;
   padding: 20px;
   margin: 20px 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  color: #1A1A1A;
+  direction: rtl;
+  text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .bg-decision-tree__step {
-  margin-bottom: 18px;
+  margin-bottom: 0;
+  min-width: 0;
 }
 
 .bg-decision-tree__question {
-  font-weight: 700;
-  color: #0D1B2A;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 14px;
+  color: #0D1B2A;
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.bg-decision-tree__question:focus {
+  outline: 2px solid #C9A84C;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .bg-decision-tree__options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  min-width: 0;
 }
 
+.bg-decision-tree__button,
 .bg-decision-tree__option {
-  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px 16px;
   border: 2px solid #D8D8D8;
   border-radius: 8px;
-  padding: 10px 16px;
-  font-size: 0.95rem;
-  cursor: pointer;
+  background: #FFFFFF;
   color: #0D1B2A;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: right;
+  overflow-wrap: anywhere;
+  cursor: pointer;
 }
 
-.bg-decision-tree__option:hover {
+.bg-decision-tree__option:hover,
+.bg-decision-tree__button:hover {
   border-color: #C9A84C;
 }
 
-.bg-decision-tree__option:focus-visible {
-  outline: 2px solid #C9A84C;
-  outline-offset: 2px;
+.bg-decision-tree__option:focus-visible,
+.bg-decision-tree__button:focus-visible,
+.bg-decision-tree__back:focus-visible,
+.bg-decision-tree__restart:focus-visible,
+.bg-decision-tree__details:focus-visible,
+.bg-decision-tree__assessment:focus-visible,
+.bg-decision-tree__fallback a:focus-visible {
+  outline: 3px solid #C9A84C;
+  outline-offset: 3px;
 }
 
 .bg-decision-tree__option--selected {
@@ -51,14 +104,146 @@
   color: #FFFFFF;
 }
 
-.bg-decision-tree__result {
+.bg-decision-tree__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.bg-decision-tree__back,
+.bg-decision-tree__restart {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 9px 14px;
+  border: 1px solid #D8D8D8;
+  border-radius: 8px;
   background: #FFFFFF;
-  border-right: 4px solid #C9A84C;
-  border-radius: 6px;
-  padding: 14px 16px;
+  color: #0D1B2A;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.bg-decision-tree__cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
   margin-top: 12px;
 }
 
+.bg-decision-tree__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 100%;
+  padding: 15px;
+  border: 1px solid #E4E4E4;
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow-wrap: anywhere;
+}
+
+.bg-decision-tree__card-title {
+  margin: 0 0 6px;
+  color: #0D1B2A;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.bg-decision-tree__result {
+  min-width: 0;
+  max-width: 100%;
+  padding: 16px;
+  border-right: 4px solid #C9A84C;
+  border-radius: 8px;
+  background: #F7F7F7;
+  overflow-wrap: anywhere;
+}
+
 .bg-decision-tree__result-text {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+
+.bg-decision-tree__details {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  margin-top: auto;
+  color: #0D1B2A;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bg-decision-tree__note,
+.bg-decision-tree__disclaimer {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-right: 4px solid #C9A84C;
+  border-radius: 6px;
+  background: #FFFFFF;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.bg-decision-tree__disclaimer {
+  font-size: 0.92rem;
+}
+
+.bg-decision-tree__assessment {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  max-width: 100%;
+  margin-top: 14px;
+  padding: 11px 18px;
+  border: 2px solid #0D1B2A;
+  border-radius: 8px;
+  background: #0D1B2A;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.bg-decision-tree__fallback {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  line-height: 1.7;
+}
+
+.bg-decision-tree__fallback a {
+  color: #0D1B2A;
+  font-weight: 700;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 640px) {
+  .bg-decision-tree__options,
+  .bg-decision-tree__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-decision-tree,
+  .bg-decision-tree * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -409,7 +409,7 @@ p {
 .footer a:hover { color: var(--white); }
 
 .footer p {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.7) !important;
   font-size: 14px;
   margin: 0;
 }

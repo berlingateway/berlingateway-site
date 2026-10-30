@@ -12,6 +12,7 @@
   <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/apply" />
   <link rel="alternate" hreflang="x-default" href="https://berlingateway.de/de/" />
   <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,25 +48,53 @@
 }
 </script>
 
+<style>
+@media (max-width: 768px) {
+  .nav a:not(.nav-cta) { display: none; }
+}
+</style>
 </head>
 <body>
-<header class="header">
-  <div class="container wrap">
-    <a href="/de/" class="brand-link"><div class="brand">BERLIN GATEWAY <span class="emblem"></span></div></a>
-    <nav class="nav">
-      <a href="/de/monitor/">Arbeitsmarkt Monitor</a>
-      <a href="/de/systemlogik.html">Systemlogik</a>
-      <a href="/de/chancenkarte/">Chancenkarte</a>
-    </nav>
-    <div class="lang-switcher">
-      <button class="lang-toggle" onclick="toggleLangDropdown(event)">🌐 Deutsch</button>
-      <div class="lang-dropdown" id="langDropdown">
-        <a href="/de/">Deutsch</a>
-        <a href="/ar/">العربية</a>
-      </div>
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/ar/apply" class="lang-switch">العربية</a>
+            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
+<header class="header">
+    <div class="header__inner">
+        <a href="/de/" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/de/chancenkarte" class="nav-link ">Chancenkarte</a>
+            <a href="/de/assessment" class="nav-link ">Punkte-Rechner</a>
+            <a href="/de/systemlogik" class="nav-link ">Systemlogik</a>
+            <a href="/de/monitor" class="nav-link ">Monitor</a>
+            <a href="/de/insights" class="nav-link ">Insights</a>
+            <a href="/de/pflegekraefte" class="nav-link">Pflege</a>
+            <a href="/de/unternehmen/internationale-fachkraefte/" class="nav-link" style="color:#0B3B8C;font-weight:700;">Für Arbeitgeber</a>
+        </nav>
+    </div>
 </header>
+
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
+    </div>
+</nav>
 <nav class="breadcrumb" >
   <a href="/de/" style="color:#0B3B8C; text-decoration:none; font-weight:500;">Startseite</a> >
   <a href="/de/apply/" style="color:#0B3B8C; text-decoration:none; font-weight:500; margin:0 8px;">Bewerbung</a> >
@@ -111,85 +140,41 @@
 </main>
 
 <footer class="footer">
-  <div class="container wrap">
-    <div><b>Berlin Gateway</b> — Strukturelle Eintrittsarchitektur für Fachkräfte</div>
-    <div class="footer-contact">Kontakt: <a href="mailto:info@berlingateway.de">info@berlingateway.de</a> · Telefon: <a href="tel:+4915781497451">+49 157 81497451</a></div>
-  </div>
-  <div class="container">
-    <div class="footer-copyright">© <span id="year">2026</span> Berlin Gateway. Alle Rechte vorbehalten.</div>
-    <div class="footer-closing">Strukturiert. Selektiv. Systemisch.</div>
-  </div>
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <a href="/de/chancenkarte">Chancenkarte</a>
+                <a href="/de/assessment">Punkte-Rechner</a>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Monitor</a>
+                <a href="/de/insights">Insights</a>
+            </div>
+            <div>
+                <h4>Rechtliches</h4>
+                <a href="/de/impressum/">Impressum</a>
+                <a href="/de/datenschutz/">Datenschutz</a>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 157 81497451</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        </div>
+    </div>
 </footer>
 
 
 <script>
-  // ---------- Step navigation + disable inactive inputs ----------
-  function setStep(n){
-    for(let i=1;i<=5;i++){
-      const step = document.getElementById('s'+i);
-      const active = (i === n);
-      step.classList.toggle('active', active);
-
-      // Disable inputs in inactive steps so "required" won't block submit
-      step.querySelectorAll('input, select, textarea, button').forEach(el=>{
-        // keep step navigation buttons clickable only in active step
-        if(el.type === 'button') return;
-        el.disabled = !active;
-      });
-    }
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
-
-  function nextStep(n){ setStep(n); }
-
-  // ---------- ID / Aktenzeichen ----------
-  function randomDigits(len){
-    let s='';
-    for(let i=0;i<len;i++) s += Math.floor(Math.random()*10);
-    return s;
-  }
-
-  // ---------- Text normalization (safe) ----------
-  function normalizeText(v){
-    if(!v) return v;
-    v = v.trim().replace(/\s+/g,' ');
-    // Capitalize first letter only if latin; leave Arabic as-is
-    if(/^[A-Za-z]/.test(v)) v = v.charAt(0).toUpperCase() + v.slice(1);
-    return v;
-  }
-
-  function normalizeField(form, name){
-    const el = form.querySelector(`[name="${name}"]`);
-    if(el && typeof el.value === 'string') el.value = normalizeText(el.value);
-  }
-
-  // ---------- Submit handler ----------
-  const form = document.getElementById('bgForm');
-
-  // Initialize: activate step 1 and disable others
-  setStep(1);
-
-  // Enable all fields before submit (Worker handles Aktenzeichen + redirect)
-  form.addEventListener('submit', function(){
-    // Normalize only these text fields (do NOT touch Email)
-    normalizeField(form, 'Abschlussland');
-    normalizeField(form, 'Abschlussname');
-    normalizeField(form, 'Zielregion');
-    normalizeField(form, 'Name');
-    normalizeField(form, 'WhatsApp');
-    normalizeField(form, 'Notiz');
-
-    // Before submit, temporarily enable all fields so they get sent
-    for(let i=1;i<=5;i++){
-      document.getElementById('s'+i)
-        .querySelectorAll('input, select, textarea')
-        .forEach(el=> el.disabled = false);
-    }
-  });
-
-  // Set year
   const y = document.getElementById('year');
-  if(y) y.textContent = new Date().getFullYear();
+  if (y) y.textContent = new Date().getFullYear();
 </script>
 <script>
 function toggleLangDropdown(event) {

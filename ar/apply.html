@@ -48,77 +48,10 @@
 }
 </script>
 <style>
-  .step { display: none; }
-  .step.active { display: block; }
-  form select, form input, form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-family: inherit;
-  }
-  form label {
-    display: block;
-    margin-bottom: 8px;
-    color: #000;
-  }
-  .actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 24px;
-  }
-
   /* Apply-page presentation parity: scoped to this route only. */
-  .apply-page {
+  .apply-page main {
     font-family: 'IBM Plex Sans Arabic', 'Tajawal', system-ui, -apple-system, sans-serif !important;
     color: #0D1117;
-  }
-  .apply-page .top-band {
-    background: #0B1F3A !important;
-    padding: 10px 0;
-  }
-  .apply-page .header {
-    height: auto;
-    min-height: 64px;
-    padding: 16px 0;
-    border-bottom: 1px solid #E5E7EB !important;
-  }
-  .apply-page .header__inner,
-  .apply-page .top-band__inner,
-  .apply-page .subnav__inner {
-    max-width: 1080px;
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-  .apply-page .brand {
-    color: #0D1117 !important;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-transform: none;
-  }
-  .apply-page .brand-icon {
-    display: none;
-  }
-  .apply-page .nav a {
-    color: #374151 !important;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .apply-page .subnav {
-    background: #F8F9FA !important;
-    color: #0B1F3A !important;
-    padding: 8px 0;
-    border-bottom: 1px solid #E5E7EB;
-    font-size: 13px;
-  }
-  .apply-page .subnav a {
-    color: #0B1F3A !important;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-weight: 600;
   }
   .apply-page main.container {
     max-width: none;
@@ -192,27 +125,7 @@
     border: 0;
   }
   @media (max-width: 768px) {
-    .apply-page .top-band__inner,
-    .apply-page .header__inner,
-    .apply-page .subnav__inner {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-    .apply-page .header {
-      min-height: 58px;
-      padding: 12px 0;
-    }
-    .apply-page .nav {
-      display: none;
-    }
-    .apply-page .subnav {
-      padding: 10px 0;
-      font-size: 12px;
-    }
-    .apply-page .subnav__inner {
-      justify-content: center;
-      gap: 18px;
-    }
+    .nav a:not(.nav-cta) { display: none; }
     .apply-page main .hero {
       padding: 56px 20px 36px;
     }
@@ -238,7 +151,7 @@
                 ✉ info@berlingateway.de
             </a></div>
         <div class="top-band__right">
-            <a href="/de/apply/" class="lang-switch">Deutsch</a>
+            <a href="/de/apply" class="lang-switch">Deutsch</a>
             <span style="font-size:12px; opacity:0.7;">تقييم معتمد</span>
         </div>
     </div>
@@ -251,12 +164,13 @@
             <div class="brand-icon"></div>
             Berlin Gateway
         </a>
-        <nav class="nav"><a href="/ar/success-stories">قصص حقيقية</a>
-            <a href="/ar/chancenkarte/" class="nav-link">بطاقة الفرص</a>
-            <a href="/ar/assessment/" class="nav-link">حاسبة النقاط</a>
-            <a href="/ar/systemlogik/" class="nav-link">منطق النظام</a>
-            <a href="/ar/monitor/" class="nav-link">المرصد</a>
-            <a href="/ar/insights/" class="nav-link">الرؤى</a>
+        <nav class="nav">
+            <a href="/ar/chancenkarte" class="nav-link ">بطاقة الفرص</a>
+            <a href="/ar/assessment" class="nav-link ">حاسبة النقاط</a>
+            <a href="/ar/systemlogik" class="nav-link ">منطق النظام</a>
+            <a href="/ar/monitor" class="nav-link ">المرصد</a>
+            <a href="/ar/insights" class="nav-link ">الرؤى</a>
+            <a href="/ar/pflege/" class="nav-link ">تمريض</a>
         </nav>
     </div>
 </header>
@@ -312,11 +226,11 @@
             </div>
             <div>
                 <h4>التنقل</h4>
-                <a href="/ar/chancenkarte/">بطاقة الفرص</a>
-                <a href="/ar/assessment/">حاسبة النقاط</a>
-                <a href="/ar/systemlogik/">منطق النظام</a>
-                <a href="/ar/monitor/">المرصد</a>
-                <a href="/ar/insights/">الرؤى</a>
+                <a href="/ar/chancenkarte">بطاقة الفرص</a>
+                <a href="/ar/assessment">حاسبة النقاط</a>
+                <a href="/ar/systemlogik">منطق النظام</a>
+                <a href="/ar/monitor">المرصد</a>
+                <a href="/ar/insights">الرؤى</a>
             </div>
             <div>
                 <h4>القانونية</h4>
@@ -335,32 +249,6 @@
     </div>
 </footer>
 
-<script>
-  function setStep(n){
-    for(let i=1;i<=5;i++){
-      const step = document.getElementById('s'+i);
-      const active = (i === n);
-      step.classList.toggle('active', active);
-      step.querySelectorAll('input, select, textarea, button').forEach(el=>{
-        if(el.type === 'button') return;
-        el.disabled = !active;
-      });
-    }
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
 
-  function nextStep(n){ setStep(n); }
-
-  const form = document.getElementById('bgForm');
-  setStep(1);
-
-  form.addEventListener('submit', function(){
-    for(let i=1;i<=5;i++){
-      document.getElementById('s'+i)
-        .querySelectorAll('input, select, textarea')
-        .forEach(el=> el.disabled = false);
-    }
-  });
-</script>
 </body>
 </html>

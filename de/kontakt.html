@@ -9,6 +9,7 @@
   <link rel="canonical" href="https://berlingateway.de/de/kontakt">
   <link rel="alternate" hreflang="de" href="https://berlingateway.de/de/kontakt">
   <link rel="alternate" hreflang="ar" href="https://berlingateway.de/ar/kontakt">
+  <link rel="stylesheet" href="/assets/css/app.css">
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <style>
     :root { --primary: #0B3B8C; --dark: #0B1F3A; --text: #1F2937; --white: #FFFFFF; --border: #E5E7EB; }
@@ -30,15 +31,53 @@
     .footer p { color: rgba(255,255,255,0.6); }
     a { color: var(--primary); text-decoration: none; }
     strong { color: var(--dark); }
-  </style>
+    @media (max-width: 768px) {
+      .nav a:not(.nav-cta) { display: none; }
+    }
+</style>
 </head>
 <body>
 
+<!-- BAND 1: TOP BAND (BLACK) -->
+<div class="top-band">
+    <div class="top-band__inner">
+        <div class="top-band__left">
+            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
+                ✉ info@berlingateway.de
+            </a></div>
+        <div class="top-band__right">
+            <a href="/ar/kontakt" class="lang-switch">العربية</a>
+            <span style="font-size:12px; opacity:0.7;">Zertifizierte Bewertung</span>
+        </div>
+    </div>
+</div>
+
+<!-- BAND 2: MAIN HEADER (WHITE) -->
 <header class="header">
-  <div class="header__inner">
-    <a href="/de/" class="brand">BERLIN<span>GATEWAY</span></a>
-  </div>
+    <div class="header__inner">
+        <a href="/de/" class="brand">
+            <div class="brand-icon"></div>
+            Berlin Gateway
+        </a>
+        <nav class="nav">
+            <a href="/de/chancenkarte" class="nav-link ">Chancenkarte</a>
+            <a href="/de/assessment" class="nav-link ">Punkte-Rechner</a>
+            <a href="/de/systemlogik" class="nav-link ">Systemlogik</a>
+            <a href="/de/monitor" class="nav-link ">Monitor</a>
+            <a href="/de/insights" class="nav-link ">Insights</a>
+            <a href="/de/pflegekraefte" class="nav-link">Pflege</a>
+            <a href="/de/unternehmen/internationale-fachkraefte/" class="nav-link" style="color:#0B3B8C;font-weight:700;">Für Arbeitgeber</a>
+        </nav>
+    </div>
 </header>
+
+<!-- BAND 3: SUB NAV BAND (BLACK) -->
+<nav class="subnav">
+    <div class="subnav__inner">
+        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifizierte Bewertung</a>
+        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
+    </div>
+</nav>
 
 <main class="content">
   <h1>Kontakt</h1>
@@ -59,9 +98,39 @@
   <p>Die vollständigen Betreiber- und Kontaktangaben finden Sie im <a href="/de/impressum/">Impressum</a>.</p>
 </main>
 
+<!-- FOOTER (BLACK) -->
 <footer class="footer">
-  <p>© 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+            <div>
+                <h4>Berlin Gateway</h4>
+                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
+            </div>
+            <div>
+                <h4>Navigation</h4>
+                <a href="/de/chancenkarte">Chancenkarte</a>
+                <a href="/de/assessment">Punkte-Rechner</a>
+                <a href="/de/systemlogik">Systemlogik</a>
+                <a href="/de/monitor">Monitor</a>
+                <a href="/de/insights">Insights</a>
+            </div>
+            <div>
+                <h4>Rechtliches</h4>
+                <a href="/de/impressum/">Impressum</a>
+                <a href="/de/datenschutz/">Datenschutz</a>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>info@berlingateway.de</p>
+                <p>+49 157 81497451</p>
+            </div>
+        </div>
+        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
+            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        </div>
+    </div>
 </footer>
+
 
 </body>
 </html>

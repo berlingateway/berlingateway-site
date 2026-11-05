@@ -7,168 +7,153 @@
   <meta name="description" content="Entdecken Sie die Durchschnittsgehälter in Deutschland nach Branche und Qualifikation. Chancen für internationale Fachkräfte." />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/assets/css/app.css" />
+  <link rel="stylesheet" href="/assets/css/fonts.css" />
+  <style>
+/* BG editorial layout: local fonts and the current two-band site header. */
+:root{--navy:#0B1F3A;--blue:#0B3B8C;--ink:#0D1117;--muted:#4B5563;--line:#E5E7EB;--soft:#F8F9FA}
+*,*::before,*::after{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}html[dir=rtl] body{font-family:'IBM Plex Sans Arabic',sans-serif}a{color:var(--blue);text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #93C5FD;outline-offset:5px}h1,h2,h3,p,ul{margin:0}h1,h2,h3{text-wrap:balance}h2,h3{color:var(--navy)}
+.top-band{background:var(--navy);color:#fff;font-size:13px;padding:9px 0}.top-band__inner,.header__inner{max-width:1120px;margin:auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.top-band a{color:#fff;text-decoration:none}.top-links{display:flex;gap:12px;align-items:center}.lang-badge{background:rgba(255,255,255,.12);padding:4px 12px;border-radius:5px;min-height:36px;display:inline-flex;align-items:center}
+.header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}.header__inner{min-height:80px}.brand{font-size:20px;font-weight:800;color:var(--navy);text-decoration:none;direction:ltr;white-space:nowrap}.brand span{color:var(--blue)}.desktop-nav{display:flex;align-items:center;gap:22px}.desktop-nav a,.mobile-menu a{font-size:14px;font-weight:600;color:#374151;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}.desktop-nav a:last-child{border:1px solid var(--line);border-radius:6px;padding:0 14px}.mobile-menu{display:none}.mobile-menu summary{cursor:pointer;min-height:44px;display:flex;align-items:center;padding:0 14px;border:1px solid var(--line);border-radius:6px;font-size:14px;font-weight:600}.mobile-menu nav{position:absolute;inset-inline:0;top:100%;background:white;border-bottom:1px solid var(--line);padding:14px 24px;box-shadow:0 12px 20px #0b1f3a12;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 20px}.mobile-menu nav a{white-space:normal}
+.article-hero{background:var(--navy);color:white;padding:64px 24px 60px}.hero-inner{max-width:960px;margin:auto}.article-hero .kicker{display:inline-block;padding:5px 14px;border:1px solid #ffffff30;border-radius:24px;color:#BFDBFE;letter-spacing:1px;font-size:12px;font-weight:600;margin-bottom:22px}.article-hero h1{font-size:clamp(30px,4.2vw,48px);font-weight:800;line-height:1.25;max-width:940px;margin-bottom:24px}.article-hero .hero-lead{font-size:17px;color:#D6E1EF;line-height:1.9;max-width:850px}html[dir=rtl] .article-hero h1{line-height:1.6}html[dir=rtl] .article-hero{text-align:right}
+.article-content{max-width:1008px;margin:auto;padding:52px 24px 64px}.article-content h2{font-size:clamp(23px,3vw,30px);line-height:1.4;margin:42px 0 18px;padding-top:30px;border-top:1px solid var(--line)}.article-content h2:first-child{margin-top:0;padding-top:0;border:0}.article-content p{font-size:16px;line-height:1.95;color:var(--muted);margin-bottom:20px}.article-content ul{padding-inline-start:24px;margin-bottom:24px;color:var(--muted)}.article-content li{padding-inline-start:4px;margin:10px 0}.article-content strong,.article-content b{color:var(--navy)}
+.salary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:30px 0 42px}.salary-card,.topic-card{min-width:0;border:1px solid var(--line);border-radius:12px;background:var(--soft);padding:28px;border-inline-start:3px solid var(--blue)}.salary-card:last-child{grid-column:1/-1}.salary-card h3,.topic-card h3{font-size:20px;line-height:1.5;margin-bottom:14px}.salary-card p{font-size:15px;margin-bottom:0}.salary-card strong{display:inline-block;background:#E8EEF8;padding:7px 10px;border-radius:5px;font-size:15px;margin-bottom:12px}.topic-card{margin:24px 0}.topic-card p:last-child,.topic-card ul:last-child{margin-bottom:0}.article-quote{padding:28px;border-radius:12px;background:#EFF6FF;border:1px solid #BFDBFE;margin:30px 0}.article-quote p{margin:0;color:var(--navy);font-weight:700}
+.article-cta{background:var(--navy);color:#fff;padding:42px 32px;border-radius:14px;text-align:center;margin-top:46px}.article-cta h2{color:#fff;border:0;margin:0 0 14px;padding:0}.article-cta p{color:#D6E1EF;margin-bottom:24px}.article-cta a{display:inline-flex;justify-content:center;align-items:center;min-height:52px;padding:12px 28px;border-radius:6px;background:white;color:var(--navy);font-weight:700;text-decoration:none;max-width:100%}
+.footer{background:#0D1117;color:#B8BEC8;padding:48px 24px 28px;font-size:14px}.footer>.container{max-width:1080px;margin:auto}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}.footer h4{font-size:15px;color:#fff;margin:0 0 14px}.footer p{margin:8px 0}.footer a{display:flex;align-items:center;min-height:44px;color:#CBD5E1;text-decoration:none}.footer-bottom{padding-top:24px;border-top:1px solid #ffffff22;font-size:12px;color:#ADB5C2;text-align:center}
+@media(max-width:960px){.desktop-nav{display:none}.mobile-menu{display:block}.header__inner{position:relative;min-height:70px}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.top-band__inner,.header__inner{padding-inline:18px;gap:12px}.top-band{font-size:12px}.top-links{gap:8px}.brand{font-size:18px}.article-hero{padding:44px 20px}.article-hero h1{font-size:30px;line-height:1.3}.article-hero .hero-lead{font-size:16px}.article-content{padding:34px 20px 44px}.salary-grid{grid-template-columns:1fr;gap:16px}.salary-card:last-child{grid-column:auto}.salary-card,.topic-card{padding:22px}.article-cta{padding:30px 22px}.footer-grid{grid-template-columns:1fr;gap:24px}.footer{padding:36px 20px 24px}.article-content h2{font-size:24px}html[dir=rtl] .article-hero h1{font-size:30px}.top-band a{white-space:nowrap}}
+  </style>
 </head>
 <body>
-
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/insights/gehaelter-deutschland/" class="lang-switch">العربية</a>
-            <span style="font-size:12px; opacity:0.7;">Zertifiziertes Assessment</span>
-        </div>
-    </div>
-</div>
-
-<!-- BAND 2: MAIN HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/chancenkarte/" class="nav-link ">Chancenkarte</a>
-            <a href="/de/assessment/" class="nav-link ">Punkte-Rechner</a>
-            <a href="/de/systemlogik.html" class="nav-link ">Systemlogik</a>
-            <a href="/de/monitor/" class="nav-link ">Monitor</a>
-            <a href="/de/insights/" class="nav-link ">Insights</a>
-        </nav>
-    </div>
-</header>
-
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Zertifiziertes Assessment</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
-    </div>
-</nav>
-
-<main class="container" style="padding: 80px 20px;">
-  <article style="max-width: 900px; margin: 0 auto;">
-    <p class="kicker" style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 10px;">Markt-Insights</p>
-    <h1 class="h1" style="font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: #000; margin-bottom: 24px;">Gehälter in Deutschland 2026: Durchschnittsgehälter für Fachkräfte</h1>
+<div class="top-band"><div class="top-band__inner"><a href="mailto:info@berlingateway.de">✉ info@berlingateway.de</a><div class="top-links"><a class="lang-badge" href="/ar/insights/gehaelter-deutschland/">العربية</a></div></div></div>
+<header class="header"><div class="header__inner"><a href="/de/" class="brand">Berlin <span>Gateway</span></a><nav class="desktop-nav" aria-label="Hauptnavigation">
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflegekraefte">Pflege</a>
+      <a href="/de/assessment">Assessment</a>
+      <a href="/de/monitor">Monitor</a>
+      <a href="/de/unternehmen/internationale-fachkraefte/">Für Arbeitgeber</a>
+    </nav><details class="mobile-menu"><summary>Menü</summary><nav aria-label="Mobile Navigation">
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/aerzte">Ärzte</a>
+      <a href="/de/pflegekraefte">Pflege</a>
+      <a href="/de/assessment">Assessment</a>
+      <a href="/de/monitor">Monitor</a>
+      <a href="/de/unternehmen/internationale-fachkraefte/">Für Arbeitgeber</a>
+    </nav></details></div></header>
+<section class="article-hero"><div class="hero-inner"><p class="kicker">Markt-Insights</p>
+    <h1 class="h1">Gehälter in Deutschland 2026: Durchschnittsgehälter für Fachkräfte</h1>
     
-    <p style="font-size: 18px; line-height: 1.6; color: #4B5563; margin-bottom: 40px;">
+    <p class="hero-lead">
       Eines der wichtigsten Kriterien bei der Entscheidung, ins Ausland zu gehen, ist die Frage: "Wie viel verdiene ich dort?" Deutschland bietet nicht nur sichere Arbeitsplätze und gute Arbeitsbedingungen, sondern auch attraktive Gehälter. Mit einem stabilen Arbeitsmarkt und starken Tarifverträgen gehört Deutschland zu den Ländern mit den höchsten Löhnen in Europa.
     </p>
 
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">Durchschnittsgehälter nach Branche</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px;">
+    </div></section>
+<main class="article-content">
+  <h2>Durchschnittsgehälter nach Branche</h2>
+    <p>
       Die Gehälter variieren je nach Branche, Region und Erfahrung. Hier sind die Durchschnittswerte für die gefragtesten Branchen:
     </p>
 
-    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px;">
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-left: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">IT und Softwareentwicklung</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>Durchschnittliches Gehalt: 50.000 – 80.000 Euro pro Jahr</strong><br/>
+    <div class="salary-grid">
+      <div class="salary-card">
+        <h3>IT und Softwareentwicklung</h3>
+        <p>
+          <strong>Durchschnittliches Gehalt: 50.000 – 80.000 Euro pro Jahr</strong><br>
           Softwareentwickler verdienen in Deutschland sehr gut. Junior-Entwickler starten oft bei 45.000 Euro, während Senior-Entwickler und Tech-Leads 80.000 bis 120.000 Euro verdienen können. In Berlin und München sind die Gehälter oft etwas höher. Zusätzlich zum Grundgehalt erhalten viele IT-Profis Bonuszahlungen, Aktienoptionen und andere Zusatzleistungen.
         </p>
       </div>
 
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-left: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">Ingenieurwesen</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>Durchschnittliches Gehalt: 55.000 – 85.000 Euro pro Jahr</strong><br/>
+      <div class="salary-card">
+        <h3>Ingenieurwesen</h3>
+        <p>
+          <strong>Durchschnittliches Gehalt: 55.000 – 85.000 Euro pro Jahr</strong><br>
           Ingenieure sind in Deutschland sehr gefragt und verdienen entsprechend gut. Ein Maschinenbauingenieur mit Berufserfahrung verdient durchschnittlich 60.000 bis 85.000 Euro. Elektroingenieure und Verfahrenstechniker liegen in ähnlichen Bereichen. Mit Führungsverantwortung können Ingenieure 100.000 Euro und mehr verdienen.
         </p>
       </div>
 
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-left: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">Pflege und Gesundheitswesen</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>Durchschnittliches Gehalt: 35.000 – 50.000 Euro pro Jahr</strong><br/>
+      <div class="salary-card">
+        <h3>Pflege und Gesundheitswesen</h3>
+        <p>
+          <strong>Durchschnittliches Gehalt: 35.000 – 50.000 Euro pro Jahr</strong><br>
           Krankenpfleger und Altenpfleger verdienen weniger als IT-Profis, aber das Gehalt ist stabil und wird oft durch Schichtzulagen erhöht. Eine Krankenschwester mit Berufserfahrung verdient etwa 40.000 bis 50.000 Euro. Zusätzlich gibt es Nachtschicht- und Wochenendarbeit-Zulagen. Der Pflegesektor bietet auch gute Aufstiegschancen.
         </p>
       </div>
 
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-left: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">Handwerk und Technik</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>Durchschnittliches Gehalt: 40.000 – 60.000 Euro pro Jahr</strong><br/>
+      <div class="salary-card">
+        <h3>Handwerk und Technik</h3>
+        <p>
+          <strong>Durchschnittliches Gehalt: 40.000 – 60.000 Euro pro Jahr</strong><br>
           Handwerker wie Elektriker, Klempner und Schreiner verdienen solide Gehälter. Ein erfahrener Elektriker verdient etwa 45.000 bis 60.000 Euro. Viele Handwerker können zusätzlich durch Selbstständigkeit oder Meisterprüfungen ihr Einkommen erheblich steigern.
         </p>
       </div>
 
-      <div style="padding: 24px; border: 1px solid #E5E7EB; border-radius: 8px; border-left: 4px solid #0B3B8C;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #000; margin-bottom: 12px;">Logistik und Transport</h3>
-        <p style="font-size: 15px; color: #666; margin: 0; line-height: 1.6;">
-          <strong>Durchschnittliches Gehalt: 35.000 – 65.000 Euro pro Jahr</strong><br/>
+      <div class="salary-card">
+        <h3>Logistik und Transport</h3>
+        <p>
+          <strong>Durchschnittliches Gehalt: 35.000 – 65.000 Euro pro Jahr</strong><br>
           Logistikfachkräfte und Supply-Chain-Manager verdienen je nach Qualifikation und Verantwortung unterschiedlich. Ein Lagerleiter verdient etwa 40.000 bis 50.000 Euro, während ein Supply-Chain-Manager 60.000 bis 80.000 Euro verdienen kann.
         </p>
       </div>
     </div>
 
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">Faktoren, die das Gehalt beeinflussen</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
+    <h2>Faktoren, die das Gehalt beeinflussen</h2>
+    <p>
       Das Gehalt hängt von mehreren Faktoren ab:
     </p>
 
-    <div style="margin-bottom: 32px;">
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
+    <div>
+      <p>
         <strong>Berufserfahrung:</strong> Je mehr Erfahrung Sie haben, desto höher ist Ihr Gehalt. Ein Junior-Entwickler verdient weniger als ein Senior-Entwickler. Typischerweise steigt das Gehalt mit jedem Jahr Erfahrung.
       </p>
 
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
+      <p>
         <strong>Qualifikation:</strong> Ein Abschluss von einer anerkannten Universität oder Fachschule erhöht das Gehalt. Ein Ingenieur mit Diplom verdient mehr als ein Techniker.
       </p>
 
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
+      <p>
         <strong>Region:</strong> Die Gehälter in München und Hamburg sind oft höher als in kleineren Städten. Berlin ist ein Mittelweg – gute Gehälter, aber nicht so hoch wie in München.
       </p>
 
-      <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 16px;">
+      <p>
         <strong>Unternehmensgröße:</strong> Große Konzerne zahlen oft mehr als kleine Mittelständler. Aber auch kleine Unternehmen können attraktive Gehälter und Zusatzleistungen bieten.
       </p>
     </div>
 
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">Wie internationale Fachkräfte profitieren können</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 24px;">
+    <h2>Wie internationale Fachkräfte profitieren können</h2>
+    <p>
       Die Chancenkarte öffnet Türen zu diesen Gehältern. Mit der Chancenkarte können Sie:
     </p>
 
-    <ul style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px; padding-left: 20px;">
-      <li style="margin-bottom: 8px;">Deutschland kennenlernen und nach einem Job suchen</li>
-      <li style="margin-bottom: 8px;">Ihre Qualifikationen anerkennen lassen</li>
-      <li style="margin-bottom: 8px;">Netzwerke aufbauen</li>
-      <li style="margin-bottom: 8px;">Arbeitsverträge mit attraktiven Gehältern verhandeln</li>
+    <ul>
+      <li>Deutschland kennenlernen und nach einem Job suchen</li>
+      <li>Ihre Qualifikationen anerkennen lassen</li>
+      <li>Netzwerke aufbauen</li>
+      <li>Arbeitsverträge mit attraktiven Gehältern verhandeln</li>
     </ul>
 
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 40px;">
+    <p>
       Viele internationale Fachkräfte berichten, dass sie in Deutschland mehr verdienen als in ihrem Heimatland. Zusätzlich zum Gehalt bietet Deutschland auch gute Sozialleistungen wie Krankenversicherung, Rentenversicherung und bezahlten Urlaub.
     </p>
 
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-top: 48px; margin-bottom: 24px;">Wie prüft man die eigenen Chancen?</h2>
-    <p style="font-size: 16px; color: #334155; line-height: 1.8; margin-bottom: 32px;">
+    <h2>Wie prüft man die eigenen Chancen?</h2>
+    <p>
       Der erste Schritt ist eine ehrliche Bewertung Ihrer Qualifikationen und Erfahrung. Nutzen Sie unser kostenloses Bewertungstool, um herauszufinden, wie gut Ihre Chancen sind, die Chancenkarte zu bekommen.
     </p>
 
-    <p style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 48px;">
-      <strong>Weitere Informationen:</strong> Erfahren Sie mehr über die <a href="/de/insights/chancenkarte-voraussetzungen/" style="color: #0B3B8C; text-decoration: underline;">Chancenkarte Voraussetzungen</a>, das <a href="/de/insights/chancenkarte-punkte/" style="color: #0B3B8C; text-decoration: underline;">Punktesystem</a>, und die <a href="/de/insights/gefragte-berufe/" style="color: #0B3B8C; text-decoration: underline;">gefragtesten Berufe in Deutschland</a>.
+    <p>
+      <strong>Weitere Informationen:</strong> Erfahren Sie mehr über die <a href="/de/insights/chancenkarte-voraussetzungen/">Chancenkarte Voraussetzungen</a>, das <a href="/de/insights/chancenkarte-punkte/">Punktesystem</a>, und die <a href="/de/insights/gefragte-berufe/">gefragtesten Berufe in Deutschland</a>.
     </p>
-  </article>
-
   <!-- BOTTOM CTA -->
-  <section class="section" style="text-align: center; padding: 60px 0; border-top: 1px solid #E5E7EB;">
-    <h2 style="font-size: 28px; font-weight: 800; color: #000; margin-bottom: 12px;">Starten Sie Ihr berufliches Assessment</h2>
-    <p style="font-size: 18px; color: #4B5563; margin-bottom: 32px;">Senden Sie uns Ihr Profil und wir bestimmen Ihren optimalen Weg nach Deutschland.</p>
-    <div style="margin-bottom: 24px;">
-      <a href="/de/assessment/" style="display: inline-block; padding: 18px 40px; background-color: #0B3B8C; color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 18px; transition: background-color 0.2s;">Jetzt Assessment starten</a>
+  <section class="article-cta">
+    <h2>Starten Sie Ihr berufliches Assessment</h2>
+    <p>Senden Sie uns Ihr Profil und wir bestimmen Ihren optimalen Weg nach Deutschland.</p>
+    <div>
+      <a href="/de/assessment/">Jetzt Assessment starten</a>
     </div>
   </section>
 </main>
-
-<!-- FOOTER (BLACK) -->
 <footer class="footer">
     <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
+        <div class="footer-grid">
             <div>
                 <h4>Berlin Gateway</h4>
                 <p>Professionelles Assessment im deutschen Arbeitssystem.</p>
@@ -192,11 +177,10 @@
                 <p>+49 157 81497451</p>
             </div>
         </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
+        <div class="footer-bottom">
+            © 2026 Berlin Gateway. Alle Rechte vorbehalten.
         </div>
     </div>
 </footer>
-
 </body>
 </html>

@@ -204,12 +204,23 @@
                   stored = JSON.parse(sessionStorage.getItem('bg_utm') || '{}') || {};
                 }
               } catch (e1) {}
+              var utmQuery = [];
               ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
                 var v = qp.get(k) || stored[k];
-                if (v && /^[A-Za-z0-9_.\-]{1,60}$/.test(v) && !url.searchParams.has(k)) {
-                  url.searchParams.set(k, v);
+                if (v && /^[A-Za-z0-9_.\-]{1,60}$/.test(v)) {
+                  utmQuery.push(k + '=' + encodeURIComponent(v));
+                  if (!url.searchParams.has(k)) url.searchParams.set(k, v);
                 }
               });
+              // Keep the campaign on the "قدّم طلبك الآن" links that lead to /ar/apply
+              if (utmQuery.length) {
+                var tagApplyLinks = function () {
+                  var links = document.querySelectorAll('a[href="/ar/apply"]');
+                  for (var i = 0; i < links.length; i++) links[i].setAttribute('href', '/ar/apply?' + utmQuery.join('&'));
+                };
+                if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tagApplyLinks);
+                else tagApplyLinks();
+              }
             } catch (e2) {}
 
             if (url.searchParams.has('source_page')) { frame.setAttribute('src', url.href); return; }

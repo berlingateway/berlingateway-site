@@ -213,6 +213,21 @@
         marginwidth="0"
         style="border-radius:12px;">
       </iframe>
+      <script data-cfasync="false">
+        (function () {
+          try {
+            var frame = document.querySelector('iframe[src*="tally.so/embed/eqYl0Q"]');
+            if (!frame) return;
+            var qp = new URLSearchParams(window.location.search);
+            var url = new URL(frame.getAttribute('src'), window.location.href);
+            ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+              var v = qp.get(k);
+              if (v && /^[A-Za-z0-9_.\-]{1,60}$/.test(v) && !url.searchParams.has(k)) url.searchParams.set(k, v);
+            });
+            frame.setAttribute('src', url.href);
+          } catch (e) {}
+        }());
+      </script>
     </div>
   </section>
 </main>

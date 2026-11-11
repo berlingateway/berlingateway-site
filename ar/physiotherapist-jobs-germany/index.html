@@ -262,5 +262,18 @@
     <p style="margin-top:9px;"><a href="/ar/impressum">بصمة الموقع</a><a href="/de/datenschutz/">خصوصية البيانات</a><a href="mailto:info@berlingateway.de">info@berlingateway.de</a></p>
     <p style="margin-top:9px;">© 2026 Berlin Gateway. جميع الحقوق محفوظة.</p>
   </footer>
+<script data-cfasync="false">
+(function () {
+  try {
+    var p = new URLSearchParams(window.location.search), out = {}, any = false;
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+      var v = p.get(k);
+      if (v && /^[A-Za-z0-9_.\-]{1,60}$/.test(v)) { out[k] = v; any = true; }
+    });
+    if (any) sessionStorage.setItem('bg_utm', JSON.stringify(out));
+    else sessionStorage.removeItem('bg_utm');
+  } catch (e) {}
+}());
+</script>
 </body>
 </html>

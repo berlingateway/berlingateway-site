@@ -194,7 +194,25 @@
             frame = document.getElementById('tally-form') || document.querySelector('iframe[src*="tally.so/embed/eqYl0Q"]');
             if (!frame || frame.tagName !== 'IFRAME') return;
             var url = new URL(frame.getAttribute('src'), window.location.href);
-            if (url.searchParams.has('source_page')) return;
+// Campaign parameters: from this page's URL, else from sessionStorage (stored by the physio page)
+            try {
+              var qp = new URLSearchParams(window.location.search), stored = {};
+              // stored values count only when the visitor arrives straight from the Arabic physio page
+              try {
+                var rf = document.referrer ? new URL(document.referrer) : null;
+                if (rf && rf.origin === window.location.origin && rf.pathname.indexOf('/ar/physiotherapist-jobs-germany') === 0) {
+                  stored = JSON.parse(sessionStorage.getItem('bg_utm') || '{}') || {};
+                }
+              } catch (e1) {}
+              ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+                var v = qp.get(k) || stored[k];
+                if (v && /^[A-Za-z0-9_.\-]{1,60}$/.test(v) && !url.searchParams.has(k)) {
+                  url.searchParams.set(k, v);
+                }
+              });
+            } catch (e2) {}
+
+            if (url.searchParams.has('source_page')) { frame.setAttribute('src', url.href); return; }
 
             var sourcePage = 'unknown', sourcePath = '', referrer = document.referrer;
             if (referrer) {

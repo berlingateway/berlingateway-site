@@ -82,6 +82,7 @@
     .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
     @media(max-width:640px){
       .related-grid{grid-template-columns:minmax(0,1fr)}
+      .related-grid>a{grid-column:auto!important}
       .nav a:not(.nav-cta){display:none}
       .field-row{grid-template-columns:1fr}
       .steps-grid{grid-template-columns:1fr}

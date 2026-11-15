@@ -57,6 +57,7 @@
     .split-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
     @media(max-width:640px){
       .related-grid{grid-template-columns:minmax(0,1fr)}
+      .related-grid>a{grid-column:auto!important}
       .split-grid{grid-template-columns:minmax(0,1fr)}
       .nav a:not(.nav-cta){display:none}
       .grid-2{grid-template-columns:1fr}

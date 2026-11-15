@@ -34,6 +34,8 @@
     .trust-item span{color:#15803D;font-size:15px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:32px;text-align:center}
+    .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
     .card{border:1.5px solid #E5E7EB;border-radius:10px;padding:24px;background:#FFFFFF}
     .card h4{font-size:15px;font-weight:600;margin-bottom:8px;color:#0D1117}
     .card p{font-size:13px;color:#6B7280;line-height:1.6}
@@ -51,6 +53,7 @@
       .nav a:not(.nav-cta){display:none}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
+      .steps-grid,.related-grid{grid-template-columns:minmax(0,1fr)}
       .trust-strip__inner{gap:20px}
     }
   </style>
@@ -106,7 +109,7 @@
     <h2>Ingenieur-Einstieg 2026</h2>
     <p class="lead">So bewerten wir Ihre Chancen im deutschen Ingenieurwesen.</p>
     
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px;text-align:center;">
+    <div class="steps-grid">
       <div style="background:#F8F9FA;padding:24px;border-radius:12px;border:1px solid #E5E7EB;">
         <div style="font-size:24px;font-weight:800;color:#0B3B8C;margin-bottom:8px;">01</div>
         <h4 style="font-size:13px;margin-bottom:4px;">Analyse</h4>
@@ -227,7 +230,7 @@
 <section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
   <div style="max-width:780px;margin:0 auto;">
     <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">Auch interessant</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+    <div class="related-grid">
       <a href="/de/anerkennung" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
         <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Anerkennung</p>
         <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Prozess & Wege</p>

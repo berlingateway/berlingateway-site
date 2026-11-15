@@ -77,7 +77,9 @@
     .faq-answer.active{display:block}
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
     @media(max-width:640px){
+      .related-grid{grid-template-columns:minmax(0,1fr)}
       .nav a:not(.nav-cta){display:none}
       .field-row{grid-template-columns:1fr}
       .steps-grid{grid-template-columns:1fr}
@@ -292,7 +294,7 @@
 <section style="background:#F8F9FA;border-top:1px solid #E5E7EB;padding:48px 24px;">
   <div style="max-width:780px;margin:0 auto;">
     <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0B3B8C;margin-bottom:20px;">Auch interessant</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+    <div class="related-grid">
       <a href="/de/assessment" style="display:block;background:#FFFFFF;border:1.5px solid #E5E7EB;border-radius:8px;padding:16px 20px;text-decoration:none;">
         <p style="font-size:12px;color:#0B3B8C;font-weight:600;margin-bottom:4px;">Assessment</p>
         <p style="font-size:14px;color:#0D1117;font-weight:600;margin-bottom:4px;">Profil bewerten</p>

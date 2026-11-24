@@ -108,3 +108,8 @@
 /de/pathway-doctors.html /de/aerzte       301
 /de/pathway-engineers.html /de/ingenieure   301
 /de/pathway-nursing.html /de/pflegekraefte 301
+
+# 4. Indonesia nurses page — English version replaced by Bahasa Indonesia page
+/en/nurses-indonesia         /id/perawat-indonesia/   301
+/en/nurses-indonesia/        /id/perawat-indonesia/   301
+/en/nurses-indonesia/index.html  /id/perawat-indonesia/   301

@@ -101,8 +101,23 @@
     .footer { background: #0D1117; color: rgba(255,255,255,0.4); padding: 32px 24px; text-align: center; font-size: 13px; }
     .footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 10px; }
 
+
+    .cmp-wrap { margin-top: 32px; }
+    .cmp { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.7; }
+    .cmp th, .cmp td { border: 1px solid #E5E7EB; padding: 14px 16px; text-align: left; vertical-align: top; color: #374151; overflow-wrap: anywhere; }
+    .cmp thead th { background: #0B1F3A; color: #fff; font-weight: 700; }
+    .cmp tbody th { background: #F8F9FA; font-weight: 700; color: #0B1F3A; width: 22%; }
+    .src-note { font-size: 13px; color: #6B7280; margin-top: 14px; line-height: 1.7; }
+    .src-list { margin: 0 0 8px 20px; font-size: 14px; color: #374151; line-height: 1.9; }
+    .src-list a { color: #0B3B8C; overflow-wrap: anywhere; }
     @media (max-width: 640px) {
       .paths { grid-template-columns: 1fr; }
+      .cmp, .cmp thead, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: 100%; }
+      .cmp thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .cmp tbody tr { margin-bottom: 16px; border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden; }
+      .cmp tbody th { width: 100%; border: none; }
+      .cmp td { border: none; border-top: 1px solid #E5E7EB; }
+      .cmp td::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0B3B8C; margin-bottom: 4px; }
       .nav a:not(.nav-cta) { display: none; }
       .hero__cta-group { flex-direction: column; align-items: center; }
     }
@@ -169,6 +184,58 @@
         <h3>Individual Recognition Route</h3>
         <p>You can begin the recognition process independently, without an employer. An employer becomes relevant later, for the job offer and visa stage.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section class="section" id="at-a-glance">
+  <div class="inner">
+    <p class="section-label">Requirements at a glance</p>
+    <h2>Triple Win vs. Individual Route — What Is Required</h2>
+    <p class="lead">The two pathways differ in who runs them, what is required and who pays for what. This overview uses published information from the Federal Employment Agency, NORKA Roots and the official Make it in Germany portal.</p>
+    <div class="cmp-wrap">
+      <table class="cmp" role="table" aria-label="Comparison of the Triple Win programme and the individual recognition route">
+        <thead role="rowgroup">
+          <tr role="row"><th scope="col" role="columnheader">Topic</th><th scope="col" role="columnheader">Triple Win (Kerala process)</th><th scope="col" role="columnheader">Individual recognition route</th></tr>
+        </thead>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th scope="row" role="rowheader">Who runs it</th>
+            <td role="cell" data-label="Triple Win (Kerala process)">NORKA Roots in Kerala; ZAV (Federal Employment Agency) handles selection and placement; GIZ supports language, preparation and integration.</td>
+            <td role="cell" data-label="Individual recognition route">The competent recognition authority in the German federal state where you plan to work.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">Qualification</th>
+            <td role="cell" data-label="Triple Win (Kerala process)">Graduation from an accredited nursing institution in India (GNM diploma or B.Sc (Basic) Nursing). Both your diploma and your nurse registration certificate are listed among the documents. The current call for applications is decisive.</td>
+            <td role="cell" data-label="Individual recognition route">B.Sc Nursing, GNM and ANM are each assessed individually; there is no automatic equivalence. Whether your specific ANM training can be matched to the German reference occupation is decided by the authority.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">Work experience</th>
+            <td role="cell" data-label="Triple Win (Kerala process)">Depends on your qualification and the application round. In NORKA Roots' 2024 call, GNM nurses needed 3 years of experience; B.Sc and Post Basic B.Sc nurses needed none. Check the current call.</td>
+            <td role="cell" data-label="Individual recognition route">The authority may take your professional experience into account when assessing your qualification.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">German level</th>
+            <td role="cell" data-label="Triple Win (Kerala process)">Proof of B1 at the time of the visa application. Preparation from A1 to B1 takes place at GIZ-commissioned centres in Thiruvananthapuram. B2 is later required for professional recognition.</td>
+            <td role="cell" data-label="Individual recognition route">At least B2 for recognition.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">Costs to you</th>
+            <td role="cell" data-label="Triple Win (Kerala process)">Placement, language and technical preparation, and integration assistance are free. The medical examination and measles vaccination are covered by the programme. Other personal costs depend on the current call.</td>
+            <td role="cell" data-label="Individual recognition route">Ask the competent authority about its fees. Certified translations of your documents are usually required.</td>
+          </tr>
+          <tr role="row">
+            <th scope="row" role="rowheader">Recognition</th>
+            <td role="cell" data-label="Triple Win (Kerala process)">Starts within 12 months after arrival in Germany, with employer and GIZ support.</td>
+            <td role="cell" data-label="Individual recognition route">Can be started from India, before you have a job offer.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src-note">Triple Win column: Federal Employment Agency (ZAV), Triple Win India page, which describes the process for Kerala, and NORKA Roots' call of 2024. Conditions differ between application rounds. GIZ lists Kerala and Telangana as the Indian partner states; for Telangana, check the current call for applications with TOMCOM. Individual route column: Make it in Germany and the official recognition portals. Last checked: 24 November 2026.</p>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="/en/assessment/" class="btn-primary" style="background:#0B1F3A;color:#fff;">Check Which Pathway Fits You</a>
     </div>
   </div>
 </section>
@@ -275,7 +342,7 @@
       <p style="font-size:13px;color:#9CA3AF;">Eligibility criteria — age, professional experience, and required German level — vary between application rounds and are set by NORKA Roots, TOMCOM, and the Federal Employment Agency. Always check the current call for applications on the official website before preparing your documents.</p>
 
       <h3>What "No Placement Fees" Means</h3>
-      <p>The Triple Win programme itself charges no placement or recruitment fees. However, personal costs may still apply depending on the intake — for example, document translation, notarisation, travel to interviews or exams, and in some rounds, part of the language course.</p>
+      <p>The Triple Win programme itself charges no placement or recruitment fees. However, personal costs may still apply depending on the intake — for example, document translation, notarisation, and travel to interviews or exams. Check the current call for applications for the conditions of your round.</p>
 
       <h3>General Process</h3>
       <ol>
@@ -394,6 +461,79 @@
   </div>
 </section>
 
+<!-- FIRST YEAR IN GERMANY -->
+<section class="section section--alt" id="first-year">
+  <div class="inner">
+    <p class="section-label">After you arrive</p>
+    <h2>Your First Year in Germany</h2>
+    <p class="lead">What happens between arrival and full recognition matters as much as the application itself.</p>
+    <div class="info-block">
+      <h3>Working as a Nursing Assistant First</h3>
+      <p>Under Triple Win, new arrivals typically work as nursing assistants while their recognition is completed. Until you are recognised, you cannot work as a fully qualified Pflegefachperson. Which work you may do depends on your residence permit and your recognition status.</p>
+
+      <h3>Residence Status Under Triple Win</h3>
+      <ul>
+        <li>For recognition through a placement agreed between the Federal Employment Agency and the partner country, the Residence Act provides a residence permit for recognition (section 16d, paragraph 4). It is issued for one year at first and can be extended by one year at a time, up to three years in total.</li>
+        <li>After recognition, the immigration authority decides which permit applies next. This depends on your professional licence (Berufsausübungserlaubnis) and your concrete job; it does not change automatically.</li>
+        <li>A settlement permit (Niederlassungserlaubnis) is possible later. The general rule is five years with further conditions (section 9). Skilled workers can qualify after three years with a permit under sections 18a, 18b, 18d or 18g, subject to 36 months of pension contributions, sufficient German and other conditions (section 18c). Which rule applies to you depends on your permit history.</li>
+        <li>Family reunification depends on your residence permit and on the family member. Ask the immigration authority before you plan.</li>
+      </ul>
+      <p style="font-size:13px;color:#9CA3AF;">Sources: Federal Employment Agency, Triple Win India page; Residence Act (AufenthG) sections 9, 16d and 18c. Individual cases are decided by the immigration authority.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISA OPTIONS -->
+<section class="section" id="visa-options">
+  <div class="inner">
+    <p class="section-label">Visa options</p>
+    <h2>Which Visa Applies to Nurses?</h2>
+    <p class="lead">Nurses from India need a residence permit to work in Germany. Which one fits depends on your recognition status and your job.</p>
+    <div class="info-block">
+      <ul>
+        <li><strong>Skilled-worker residence permit (after recognition):</strong> the usual route once your qualification is recognised. It requires your professional licence (Berufsausübungserlaubnis) or its confirmation, and a concrete job offer.</li>
+        <li><strong>Residence permit for a qualification measure (section 16d, paragraph 1):</strong> possible if the recognition authority finds that an adaptation or compensation measure is needed. It requires a suitable measure, German skills matching it and, as with most residence permits, that you can support yourself. Mainly work-based measures may need the consent of the Federal Employment Agency. It is issued for up to 24 months at first and can be extended by up to 12 months. Employment unrelated to the measure is limited to 20 hours per week; employment that is professionally connected to the later occupation may be allowed without this limit under the conditions of section 16d, paragraph 2.</li>
+        <li><strong>Recognition partnership (section 16d, paragraph 3):</strong> a residence permit to complete recognition while working in a qualified job. It requires a concrete job offer, a written agreement with a suitable employer, a state-recognised foreign qualification of at least two years of training or a university degree, and German skills matching the job; the official portal names level A2 as the minimum. In nursing, the job may be an assistant role until your professional licence is granted, if the legal conditions are met (for example a collective-bargaining employer and pay and grading matching the target profession). It is issued for up to one year at first and can be extended to three years in total.</li>
+        <li><strong>Work as a nursing assistant:</strong> an option if your nursing qualification is not recognised. This is a separate route. It requires either a state-recognised German nursing-assistant training or a foreign qualification that the competent state authority has found equivalent to it (section 22a of the Employment Ordinance). A job offer alone is not enough.</li>
+        <li><strong>EU Blue Card:</strong> the usual route for the pathway described here is a skilled-worker residence permit. The EU Blue Card may be available for qualifying academic nursing roles if your qualification and the job meet the requirements. Make it in Germany lists academic and comparable nursing and midwifery professionals as a shortage occupation. For shortage occupations the lower salary threshold of €45,934.20 gross per year (2026) applies, and it requires the approval of the Federal Employment Agency.</li>
+      </ul>
+      <p style="font-size:13px;color:#9CA3AF;">Sources: Residence Act (AufenthG) section 16d and Employment Ordinance (BeschV) section 22a; Make it in Germany, visa for recognition, recognition partnership and EU Blue Card. Which permit fits your case is decided by the German mission and the immigration authority.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAY AND DEMAND -->
+<section class="section section--alt" id="pay-and-demand">
+  <div class="inner">
+    <p class="section-label">Demand and pay</p>
+    <h2>Why Germany Needs Nurses — and How Pay Works</h2>
+    <p class="lead">In 2025, an average of around 31,000 vacancies in nursing occupations were registered with Germany's Federal Employment Agency.</p>
+    <div class="info-block">
+      <h3>How Pay Works</h3>
+      <p>Pay is set by your employment contract or the collective agreement that applies to your employer. It depends on your role, the federal state, and whether you are already recognised or still working as a nursing assistant. Ask for the draft contract before you decide.</p>
+      <p>For current figures, use the Federal Employment Agency's <a href="https://web.arbeitsagentur.de/entgeltatlas/" target="_blank" rel="noopener">Entgeltatlas</a>, which shows monthly gross medians of full-time employees subject to social insurance. We do not quote salary figures on this page, because published ranges differ by source, state and employer type.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section class="section" id="sources">
+  <div class="inner">
+    <p class="section-label">Sources</p>
+    <h2 style="font-size:24px;">Where This Information Comes From</h2>
+    <ul class="src-list">
+      <li><a href="https://www.arbeitsagentur.de/vor-ort/zav/projects-programs/health-and-care/triple-win/india" target="_blank" rel="noopener">Federal Employment Agency (ZAV) — Triple Win India</a></li>
+      <li><a href="https://nifl.norkaroots.org/opportunities-to-get-short-listed-for-selection-of-nurses-to-germany-under-triple-win-program-5th-edition/" target="_blank" rel="noopener">NORKA Roots — Triple Win call for nurses (2024)</a></li>
+      <li><a href="https://www.giz.de/en/when-everyones-winner-international-nurses-germany" target="_blank" rel="noopener">GIZ — Triple Win: international nurses for Germany</a></li>
+      <li><a href="https://www.make-it-in-germany.com/en/working-in-germany/professions-in-demand/nursing" target="_blank" rel="noopener">Make it in Germany — Nursing professionals</a></li>
+      <li><a href="https://www.make-it-in-germany.com/en/visa-recognition/visa-types/eu-blue-card" target="_blank" rel="noopener">Make it in Germany — EU Blue Card</a></li>
+      <li><a href="https://www.gesetze-im-internet.de/aufenthg_2004/__16d.html" target="_blank" rel="noopener">Residence Act, section 16d</a>, <a href="https://www.gesetze-im-internet.de/aufenthg_2004/__18c.html" target="_blank" rel="noopener">section 18c</a> and <a href="https://www.gesetze-im-internet.de/aufenthg_2004/__9.html" target="_blank" rel="noopener">section 9</a></li>
+      <li><a href="https://statistik.arbeitsagentur.de/DE/Statischer-Content/Statistiken/Themen-im-Fokus/Berufe/Online-KV/Pflege.html" target="_blank" rel="noopener">Federal Employment Agency — Arbeitsmarktsituation in Pflegeberufen</a></li>
+    </ul>
+    <p class="src-note">Programme conditions and legal requirements change. Always confirm the current rules with the official bodies before you prepare your documents. Last checked: 24 November 2026.</p>
+  </div>
+</section>
+
 <!-- REFERRAL NETWORK -->
 <section class="section section--alt">
   <div class="inner">
@@ -448,6 +588,48 @@
         </button>
         <div class="faq-answer">Full professional practice generally requires B2. Requirements during the application and language-preparation stage vary by pathway and programme round.</div>
       </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can GNM nurses go to Germany, or only B.Sc Nursing graduates?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Both can qualify. For the Triple Win Kerala process, the Federal Employment Agency lists a GNM diploma or a B.Sc (Basic) Nursing degree. Experience requirements can differ by qualification and round: in NORKA Roots' 2024 call, GNM nurses needed 3 years of experience and B.Sc nurses none. On the individual route, each qualification is assessed individually by the competent authority.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need work experience?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">It depends on your qualification and the application round. The Federal Employment Agency's Triple Win India page states no general requirement, but NORKA Roots' 2024 call asked GNM nurses for 3 years of experience and B.Sc nurses for none. Check the current call. On the individual route, the recognition authority may take your professional experience into account.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Will I work as a nurse straight after arriving?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Not as a fully recognised nurse. Under Triple Win, new arrivals typically work as nursing assistants while their recognition is completed.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can my family join me, and when can I get permanent residence?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Family reunification depends on your residence permit and on the family member; ask the immigration authority before you plan. A settlement permit is possible after five years under the general rule (section 9 of the Residence Act), or after three years with a relevant residence permit for skilled workers (section 18c), subject to further conditions such as 36 months of pension contributions and sufficient German.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Does the EU Blue Card apply to nurses?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">The usual route for the pathway described here is a skilled-worker residence permit. The EU Blue Card may be available for qualifying academic nursing roles if your qualification and the job meet the requirements. Make it in Germany lists academic and comparable nursing and midwifery professionals as a shortage occupation.</div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What salary can I expect as a nurse in Germany?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">Pay depends on your contract or the applicable collective agreement, your role, the federal state and whether you are already recognised. Use the Federal Employment Agency's Entgeltatlas for current medians. We do not quote salary figures on this page.</div>
+      </li>
     </ul>
   </div>
 </section>
@@ -465,6 +647,10 @@
       <a href="/en/nurses-philippines/" style="border:1.5px solid #E5E7EB;border-radius:10px;padding:20px;background:#fff;text-decoration:none;color:inherit;">
         <h4 style="color:#0B3B8C;font-size:14px;margin-bottom:8px;">Philippines</h4>
         <p style="font-size:13px;color:#6B7280;">Triple Win Program guide for Filipino nurses.</p>
+      </a>
+      <a href="/en/nurses-indonesia/" style="border:1.5px solid #E5E7EB;border-radius:10px;padding:20px;background:#fff;text-decoration:none;color:inherit;">
+        <h4 style="color:#0B3B8C;font-size:14px;margin-bottom:8px;">Indonesia</h4>
+        <p style="font-size:13px;color:#6B7280;">Triple Win guide for Indonesian nurses.</p>
       </a>
       <a href="/en/nurses-gulf/" style="border:1.5px solid #E5E7EB;border-radius:10px;padding:20px;background:#fff;text-decoration:none;color:inherit;">
         <h4 style="color:#0B3B8C;font-size:14px;margin-bottom:8px;">Gulf Region</h4>
@@ -513,17 +699,90 @@
     {
       "@type": "Question",
       "name": "Is Triple Win open to nurses from Indian states other than Kerala and Telangana?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Triple Win currently partners specifically with Kerala (via NORKA Roots) and Telangana (via TOMCOM). Nurses from other states use the individual recognition route." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Triple Win currently partners specifically with Kerala (via NORKA Roots) and Telangana (via TOMCOM). Nurses from other states use the individual recognition route."
+      }
     },
     {
       "@type": "Question",
       "name": "Do I need a job offer before starting recognition?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. You can begin the recognition process from India without an employer. A job offer becomes relevant later, for employment and the visa application." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You can begin the recognition process from India without an employer. A job offer becomes relevant later, for employment and the visa application."
+      }
     },
     {
       "@type": "Question",
       "name": "Is ANM automatically equivalent to Pflegefachperson?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. ANM, GNM, and B.Sc Nursing are each assessed individually by the competent authority — there is no automatic equivalence for any of them." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ANM, GNM, and B.Sc Nursing are each assessed individually by the competent authority — there is no automatic equivalence for any of them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Triple Win completely free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are no placement fees. However, some personal costs — such as document translation, notarisation, or travel — may still apply depending on the specific programme round."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What German level do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Full professional practice generally requires B2. Requirements during the application and language-preparation stage vary by pathway and programme round."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can GNM nurses go to Germany, or only B.Sc Nursing graduates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both can qualify. For the Triple Win Kerala process, the Federal Employment Agency lists a GNM diploma or a B.Sc (Basic) Nursing degree. Experience requirements can differ by qualification and round: in NORKA Roots' 2024 call, GNM nurses needed 3 years of experience and B.Sc nurses none. On the individual route, each qualification is assessed individually by the competent authority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need work experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your qualification and the application round. The Federal Employment Agency's Triple Win India page states no general requirement, but NORKA Roots' 2024 call asked GNM nurses for 3 years of experience and B.Sc nurses for none. Check the current call. On the individual route, the recognition authority may take your professional experience into account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I work as a nurse straight after arriving?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as a fully recognised nurse. Under Triple Win, new arrivals typically work as nursing assistants while their recognition is completed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my family join me, and when can I get permanent residence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Family reunification depends on your residence permit and on the family member; ask the immigration authority before you plan. A settlement permit is possible after five years under the general rule (section 9 of the Residence Act), or after three years with a relevant residence permit for skilled workers (section 18c), subject to further conditions such as 36 months of pension contributions and sufficient German."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the EU Blue Card apply to nurses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The usual route for the pathway described here is a skilled-worker residence permit. The EU Blue Card may be available for qualifying academic nursing roles if your qualification and the job meet the requirements. Make it in Germany lists academic and comparable nursing and midwifery professionals as a shortage occupation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What salary can I expect as a nurse in Germany?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pay depends on your contract or the applicable collective agreement, your role, the federal state and whether you are already recognised. Use the Federal Employment Agency's Entgeltatlas for current medians. We do not quote salary figures on this page."
+      }
     }
   ]
 }

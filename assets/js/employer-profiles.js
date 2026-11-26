@@ -2,8 +2,6 @@
   var sec = document.getElementById('pipeline');
   var grid = document.getElementById('candGrid');
   if (!sec || !grid || !grid.querySelector) return;
-  // Initially hidden cards are unpublished drafts, not filter results.
-  // Only removing hidden in the HTML before page load makes a profile available.
   var cards = [].slice.call(grid.querySelectorAll('.cand-card:not([hidden])'));
   var realCards = cards;
   var branche = 'alle', art = 'alle', saved = [];
@@ -40,9 +38,10 @@
     $('candEmpty').hidden = visible !== 0 || teaserVisible;
   }
   function openDlg(title, html) { var dlg = $('candDlg'), bar = $('candBar'); $('candDlgTitle').textContent = title; $('candDlgBody').innerHTML = html; if (dlg.showModal) { bar.classList.add('cand-bar--dialog-open'); dlg.addEventListener('close', function () { bar.classList.remove('cand-bar--dialog-open'); }, { once: true }); dlg.showModal(); } }
-  function compose(subject, text) {
-    var addr = mailAddr();
+  function compose(subject, text, recipient) {
+    var addr = recipient || mailAddr();
     openDlg('Anfrage prüfen', '<p>Die Seite versendet nichts selbst. ' + (addr ? 'Empfänger: <strong>' + esc(addr) + '</strong>' : 'Die Kontaktadresse ist gerade nicht lesbar. Nutzen Sie den Kontaktabschnitt.') + '</p>' +
+      (recipient ? '<p>Bitte senden Sie Ihren Lebenslauf und Ihre Zeugnisse per E-Mail als Anhang.</p>' : '') +
       '<label for="candMsg" style="position:absolute;left:-9999px">Ihre Nachricht</label><textarea id="candMsg"></textarea>' +
       '<div class="cand-dlg-actions">' + (addr ? '<a class="btn btn--primary" id="candMail" href="#">Im E-Mail-Programm öffnen</a>' : '<span class="btn btn--primary cand-disabled" id="candMail" aria-disabled="true">E-Mail-Programm nicht verfügbar</span>') +
       '<button type="button" class="btn" id="candCopy" style="color:var(--navy);border:2px solid var(--navy);background:#fff;cursor:pointer">Text kopieren</button></div><p id="candCopyMsg" class="cand-count" role="status"></p>');
@@ -75,6 +74,14 @@
     if (s && s.dataset.save === card.dataset.code) { var c = s.dataset.save, i = saved.indexOf(c); if (i > -1) saved.splice(i, 1); else saved.push(c); refresh(); }
     if (a) { e.preventDefault(); if (a.dataset.ask === card.dataset.code) ask([a.dataset.ask]); }
   });
+  [].forEach.call(document.querySelectorAll('[data-placement-interest]'), function (el) {
+    el.onclick = function (e) {
+      if (!$('candDlg').showModal) return;
+      e.preventDefault();
+      var recipient = ['info', ['berlingateway', 'de'].join('.')].join('@');
+      compose('Interesse an Vermittlung', 'Guten Tag Berlin Gateway,\n\nich möchte mein Interesse an einer Vermittlung melden.\n\nBeruf:\nWohnort:\nGewünschte Arbeitsregion:\nFrühester Starttermin:\n\nMit freundlichen Grüßen', recipient);
+    };
+  });
   $('emptyAsk').onclick = function (e) { e.preventDefault(); compose('Anfrage zu einem Fachkräfteprofil', 'Guten Tag Berlin Gateway,\n\nich interessiere mich für ein passendes Kurzprofil. Bitte kontaktieren Sie mich.\n\nMit freundlichen Grüßen'); };
   $('candSend').onclick = function () { ask(saved.slice()); };
   $('candCompare').onclick = function () {
@@ -93,7 +100,7 @@
   };
   $('candX').onclick = function () { $('candDlg').close(); };
   $('candDlg').addEventListener('click', function (e) { if (e.target === $('candDlg')) $('candDlg').close(); });
-  [].forEach.call(sec.querySelectorAll('.cand-filter'), function (el) { el.hidden = false; });
+  [].forEach.call(sec.querySelectorAll('.cand-filter'), function (el) { el.hidden = cards.length === 0; });
   cards.forEach(function (card) {
     var save = card.querySelector('.cand-save');
     if (save) save.hidden = false;

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fachkräfte vor Ort in Deutschland | Berlin Gateway</title>
-  <meta name="description" content="Fachkräfte aller Berufe, die bereits in Deutschland leben. Kurzprofile für Arbeitgeber, Vorstellung nach Einwilligung und Kontakt nur über Berlin Gateway.">
+  <meta name="description" content="Fachkräfte aller Berufe, die bereits in Deutschland leben: Kurzprofile bundesweit. Vorstellung nach Zustimmung und Kontakt über Berlin Gateway.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://berlingateway.de/de/unternehmen/fachkraefte-vor-ort/">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="stylesheet" href="/assets/css/employer-profiles.css">
+  <link rel="stylesheet" href="/assets/css/employer-profiles.css">
 </head>
 <body>
   <div class="topbar">
@@ -22,7 +22,7 @@
     <div class="container header__inner">
       <a class="brand" href="/de/">Berlin <span>Gateway</span></a>
       <nav class="nav" aria-label="Arbeitgebernavigation">
-        <a class="nav-cta" href="#kontakt">Anfrage stellen</a>
+        <a class="nav-cta" href="#kontakt">Personalbedarf melden</a>
       </nav>
     </div>
   </header>
@@ -33,11 +33,12 @@
         <div>
           <span class="eyebrow">Kurzprofile für Arbeitgeber</span>
           <h1>Fachkräfte vor Ort</h1>
-          <p class="lead">Hier finden Arbeitgeber qualifizierte Fachkräfte aller Berufe, die bereits in Deutschland leben und erst nach ihrer Einwilligung vorgestellt werden. Der Kontakt erfolgt ausschließlich über Berlin Gateway.</p>
-          <div class="hero__ctas">
-            <a class="btn btn--primary" href="#pipeline">Profile ansehen</a>
-            <a class="btn btn--outline" href="#kontakt">Kennenlerngespräch anfragen</a>
+          <p class="lead">Hier finden Arbeitgeber bundesweit qualifizierte Fachkräfte aller Berufe, die bereits in Deutschland leben und erst nach ihrer Einwilligung vorgestellt werden. Der Kontakt erfolgt ausschließlich über Berlin Gateway.</p>
+          <div class="hero__ctas" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch">
+            <a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Arbeitgeberanfrage%20%E2%80%93%20Fachkr%C3%A4fte%20vor%20Ort">Personalbedarf melden</a>
+            <a class="btn btn--primary" href="#vermittlungsinteresse" data-placement-interest>Interesse an Vermittlung melden</a>
           </div>
+          <p class="hero-qualification"><a href="#pipeline" style="color:inherit">Profile ansehen</a></p>
         </div>
         <aside class="hero-panel">
           <strong>Bereits in Deutschland</strong>
@@ -71,9 +72,8 @@
         <span class="eyebrow">Kurzprofile aus Deutschland</span>
         <h2>Fachkräfte nach Berufsbereich filtern</h2>
         <p class="section-intro">Die Übersicht wird laufend ergänzt. Anfragen und Kennenlerngespräche werden ausschließlich über Berlin Gateway koordiniert.</p>
-        <p class="cand-nojs"><a class="btn btn--primary" href="#kontakt">Anfrage stellen</a></p>
+        <p class="cand-nojs"><a class="btn btn--primary" href="#kontakt">Personalbedarf melden</a></p>
 
-        <!-- Neue Berufsbereiche bei Bedarf als cand-chip mit passendem data-branche ergänzen. -->
         <div class="cand-filter" data-filter-group="branche" role="group" hidden aria-label="Berufsbereich">
           <strong class="cand-filter__label">Berufsbereich</strong>
           <button type="button" class="cand-chip" data-branche="alle" aria-pressed="true">Alle</button>
@@ -94,78 +94,11 @@
           <button type="button" class="cand-chip" data-art="fachkraft" aria-pressed="false">Fachkraft</button>
         </div>
 
-        <!-- Ohne JavaScript sichtbar; die gemeinsame Filterlogik aktualisiert den Leerzustand. -->
         <div class="cand-empty" id="candEmpty" role="status">
-          <p>Aktuell sind keine Fachkräfteprofile sichtbar. Die Übersicht wird nach Einwilligung der Fachkräfte ergänzt. <a href="#kontakt" id="emptyAsk">Personalbedarf besprechen</a></p>
+          <p>Neue Kurzprofile werden laufend ergänzt, jeweils nach Zustimmung der Fachkraft. Sagen Sie uns, welche Fachkraft Sie suchen. <a href="#kontakt" id="emptyAsk">Personalbedarf melden</a></p>
         </div>
 
-        <div class="cand-grid" id="candGrid">
-          <!--
-            Profilpflege: Einen vollständigen article.cand-card kopieren und einen eindeutigen
-            Profilcode in data-code, data-save und data-ask vergeben. Angaben in data-Attributen
-            und sichtbaren Feldern gemeinsam aktualisieren; data-branche muss zum Filter passen.
-            Entwürfe immer mit hidden speichern. Erst nach bestätigter Einwilligung hidden am
-            article entfernen und den Status prüfen. Keine vollständigen Namen, Fotos,
-            Herkunftsländer, Arbeitgeber-/Hochschulnamen oder persönlichen Kontaktdaten ergänzen.
-            Die gemeinsame Kartenlogik zählt und verarbeitet nur freigegebene Profile.
-          -->
-          <article class="cand-card" hidden
-            data-code="BG-LOK-001" data-branche="it" data-art="fachkraft"
-            data-route="Kennenlerngespräch über Berlin Gateway"
-            data-lang="Deutsch C1"
-            data-exp="Softwareentwicklung für Mitgliederportale (Frontend und Backend), 2021-2023; Werkstudent Datenaufbereitung und Datenqualität im Gesundheitsbereich, 2024-2025; Masterarbeit zu KI-gestützter Dokumentenanalyse"
-            data-status="Vorstellung nur nach Einwilligung"
-            data-vor="Sie Erfahrung in Frontend und Backend sowie in Datenaufbereitung und Datenqualität suchen."
-            data-wegtext="Kennenlerngespräch über Berlin Gateway anfragen; Gespräch nach Einwilligung der Fachkraft."
-            data-ziel="Softwareentwickler"
-            data-qual="Bachelor of Science Ingenieurinformatik (2020); Master of Science Ingenieurinformatik, laufend (Abschluss 2026)"
-            data-praxis="Softwareentwicklung für Mitgliederportale (Frontend und Backend), 2021-2023; Werkstudent Datenaufbereitung und Datenqualität im Gesundheitsbereich, 2024-2025; Masterarbeit zu KI-gestützter Dokumentenanalyse"
-            data-start="Nicht angegeben" data-aufenthalt="Berlin">
-            <div class="cand-top">
-              <div>
-                <div class="cand-person">
-                  <div class="cand-person__text">
-                    <p class="cand-person__line">M. L. · Softwareentwickler</p>
-                    <p class="cand-person__line cand-person__line--meta">männlich · Berlin</p>
-                  </div>
-                </div>
-                <div class="cand-code">BG-LOK-001</div>
-                <h3>Softwareentwickler · Frontend und Backend</h3>
-                <p class="cand-sub">Wohnort Berlin · Deutsch C1</p>
-              </div>
-              <button type="button" class="cand-save" data-save="BG-LOK-001" aria-pressed="false" hidden>Vormerken</button>
-            </div>
-            <div class="cand-tags">
-              <span class="cand-tag">C#</span>
-              <span class="cand-tag">Java</span>
-              <span class="cand-tag">React.js</span>
-              <span class="cand-tag">Python</span>
-              <span class="cand-tag">SQL</span>
-              <span class="cand-tag">REST APIs</span>
-            </div>
-            <dl class="cand-facts">
-              <div><dt>Beruf</dt><dd>Softwareentwickler</dd></div>
-              <div><dt>Wohnort</dt><dd>Berlin</dd></div>
-              <div class="wide"><dt>Qualifikation</dt><dd>Bachelor of Science Ingenieurinformatik (2020); Master of Science Ingenieurinformatik, laufend (Abschluss 2026)</dd></div>
-              <div class="wide"><dt>Sprachen</dt><dd>Deutsch C1, Englisch B2, Arabisch (C2), Französisch C1</dd></div>
-              <div class="wide"><dt>Status</dt><dd>Vorstellung nur nach Einwilligung</dd></div>
-            </dl>
-            <div class="cand-route"><span class="cand-label">Nächste Schritte</span><strong>Kennenlerngespräch über Berlin Gateway anfragen; Gespräch nach Einwilligung der Fachkraft.</strong></div>
-            <div class="cand-when"><strong>Passt zu Ihrem Unternehmen, wenn …</strong><br>Sie Erfahrung in Frontend und Backend sowie in Datenaufbereitung und Datenqualität suchen.</div>
-            <span class="cand-fit" data-fit hidden>Passt zu Ihren Filtern</span>
-            <details class="cand-more">
-              <summary>Profil ansehen</summary>
-              <h4>Erfahrung</h4>
-              <ul>
-                <li>Softwareentwicklung für Mitgliederportale (Frontend und Backend), 2021-2023</li>
-                <li>Werkstudent Datenaufbereitung und Datenqualität im Gesundheitsbereich, 2024-2025</li>
-                <li>Masterarbeit zu KI-gestützter Dokumentenanalyse</li>
-              </ul>
-            </details>
-            <div class="cand-actions"><a class="btn btn--primary" href="#kontakt" data-ask="BG-LOK-001">Kennenlerngespräch anfragen</a></div>
-            <p class="cand-contact-line">Kontakt ausschließlich über Berlin Gateway · <a href="mailto:recruitment@berlingateway.de">recruitment@berlingateway.de</a></p>
-          </article>
-        </div>
+        <div class="cand-grid" id="candGrid"></div>
 
         <div class="cand-bar" id="candBar" hidden>
           <span id="candBarText">Noch keine Profile vorgemerkt.</span>
@@ -183,12 +116,23 @@
       </div></dialog>
     </section>
 
+    <section class="section" id="vermittlungsinteresse" aria-labelledby="vermittlungsinteresse-heading">
+      <div class="container">
+        <h2 id="vermittlungsinteresse-heading">Interesse an Vermittlung</h2>
+        <p>Sie sind Fachkraft und leben bereits in Deutschland? Melden Sie Ihr Interesse an einer Vermittlung in eine Festanstellung. Wir stellen Sie nur nach Ihrer Zustimmung passenden Arbeitgebern vor.</p>
+        <p>Hinweise zum Umgang mit Ihren Angaben finden Sie in unserer <a href="/de/datenschutz/">Datenschutzerklärung</a>.</p>
+      </div>
+    </section>
+
     <section id="kontakt" class="section contact">
       <div class="container" style="max-width:850px">
-        <span class="eyebrow">Kontakt für Arbeitgeber</span>
-        <h2>Kennenlerngespräch anfragen</h2>
-        <p class="section-intro">Interessierte Arbeitgeber melden sich bei Berlin Gateway. Den Kontakt zu einer Kandidatin oder einem Kandidaten stellen wir erst nach der gesonderten Zustimmung her.</p>
-        <div class="contact-actions"><a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Arbeitgeberanfrage%20%E2%80%93%20Fachkr%C3%A4fte%20vor%20Ort">Personalbedarf besprechen</a></div>
+        <span class="eyebrow">Kontakt über Berlin Gateway</span>
+        <h2>Personalbedarf oder Vermittlungsinteresse melden</h2>
+        <p class="section-intro">Arbeitgeber melden ihren Personalbedarf; Fachkräfte können ihr Interesse an einer Vermittlung bekunden. Eine Vorstellung erfolgt nur nach Zustimmung der Fachkraft.</p>
+        <div class="contact-actions" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch">
+          <a class="btn btn--primary" href="mailto:recruitment@berlingateway.de?subject=Arbeitgeberanfrage%20%E2%80%93%20Fachkr%C3%A4fte%20vor%20Ort">Personalbedarf melden</a>
+          <a class="btn btn--primary" href="#vermittlungsinteresse" data-placement-interest>Interesse an Vermittlung melden</a>
+        </div>
         <p class="contact-note">Berlin Gateway · <a href="mailto:recruitment@berlingateway.de" style="color:#fff">recruitment@berlingateway.de</a></p>
       </div>
     </section>
@@ -201,7 +145,7 @@
         <ul>
           <li><a href="/de/unternehmen/internationale-fachkraefte/">Internationale Fachkräfte</a></li>
           <li><a href="/de/unternehmen/anerkennung-onboarding/">Anerkennung &amp; Onboarding</a></li>
-          <li><a href="#kontakt">Personalbedarf besprechen</a></li>
+          <li><a href="#kontakt">Personalbedarf melden</a></li>
         </ul>
       </section>
       <section class="footer__group">

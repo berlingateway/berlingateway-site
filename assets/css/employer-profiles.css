@@ -498,7 +498,7 @@
     .cand-contact-line { margin:0; color:var(--muted); font-size:.86rem; }
     .cand-compare-hint { width:100%; margin:0; color:var(--muted); font-size:.88rem; }
     .cand-filter__label { min-width:145px; }
-    @media (max-width:520px) { .cand-scroll table { table-layout:fixed; } .cand-scroll th, .cand-scroll td { overflow-wrap:normal!important; word-break:normal!important; hyphens:manual!important; } }
+    @media (max-width:520px) { .cand-scroll table { table-layout:fixed; } .cand-scroll th, .cand-scroll td { overflow-wrap:anywhere!important; word-break:normal!important; hyphens:manual!important; } }
 
     .footer{background:#0D1117;color:rgba(255,255,255,0.5);padding:60px 24px;text-align:center;font-size:14px}
     .footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 12px}

@@ -8,44 +8,35 @@
     <link rel="canonical" href="https://berlingateway.de/de/insights/chancenkarte-voraussetzungen">
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/fonts.css">
+  <style id="bg-shell">
+    .bg-header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 0;font-family:'IBM Plex Sans',sans-serif}
+    .bg-header__inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .bg-brand{font-size:20px;font-weight:800;color:#0B1F3A;text-decoration:none}
+    .bg-brand span{color:#0B3B8C}
+    .bg-header__links{display:flex;gap:20px;align-items:center;font-size:14px;font-weight:600}
+    .bg-header__links a{color:#0B3B8C;text-decoration:none}
+    .bg-footer{background:#0B1F3A;color:rgba(255,255,255,0.6);padding:40px 24px;text-align:center;font-size:13px;margin-top:80px;font-family:'IBM Plex Sans',sans-serif}
+    .bg-footer__links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;margin-bottom:20px}
+    .bg-footer a{color:rgba(255,255,255,0.8);text-decoration:none}
+    .bg-footer a:hover{color:#fff}
+    .bg-footer p{color:inherit;font-size:13px;margin:0}
+    @media(max-width:768px){.bg-header__inner{flex-direction:column}.bg-header__links{flex-wrap:wrap;justify-content:center}}
+  </style>
 </head>
 <body>
 
-<!-- BAND 1: TOP BAND (BLACK) -->
-<div class="top-band">
-    <div class="top-band__inner">
-        <div class="top-band__left">
-            <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank">
-                ✉ info@berlingateway.de
-            </a></div>
-        <div class="top-band__right">
-            <a href="/ar/insights/chancenkarte-voraussetzungen/" class="lang-switch">العربية</a>
-        </div>
-    </div>
-</div>
-
-<!-- BAND 2: MAIN HEADER (WHITE) -->
-<header class="header">
-    <div class="header__inner">
-        <a href="/de/" class="brand">
-            <div class="brand-icon"></div>
-            Berlin Gateway
-        </a>
-        <nav class="nav">
-            <a href="/de/chancenkarte/">Chancenkarte</a>
-            <a href="/de/systemlogik.html">Systemlogik</a>
-            <a href="/de/monitor/">Monitor</a>
-            <a href="/de/insights/">Insights</a></nav>
-    </div>
+<header class="bg-header">
+  <div class="bg-header__inner">
+    <a href="/de/" class="bg-brand">BERLIN<span>GATEWAY</span></a>
+    <nav class="bg-header__links" aria-label="Hauptnavigation">
+      <a href="/de/unternehmen/internationale-fachkraefte/">Für Arbeitgeber</a>
+      <a href="/de/chancenkarte">Chancenkarte</a>
+      <a href="/de/assessment">Assessment</a>
+      <a href="/ar/insights/chancenkarte-voraussetzungen/">العربية</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BAND 3: SUB NAV BAND (BLACK) -->
-<nav class="subnav">
-    <div class="subnav__inner">
-        <a href="mailto:info@berlingateway.de?subject=Assessment Request" target="_blank" style="cursor: pointer;">Assessment anfragen</a>
-        <a href="https://wa.me/4915781497451" target="_blank" style="cursor: pointer;">Kontakt</a>
-    </div>
-</nav>
 
 <!-- BAND 4: CONTENT BODY (WHITE) -->
 <main>
@@ -70,35 +61,16 @@
 
 </main>
 
-<!-- FOOTER (BLACK) -->
-<footer class="footer">
-    <div class="container">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:40px; margin-bottom:40px;">
-            <div>
-                <h4>Berlin Gateway</h4>
-                <p>Professionelle Einordnung in das deutsche Berufssystem.</p>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <a href="/de/chancenkarte/">Chancenkarte</a>
-                <a href="/de/systemlogik.html">Systemlogik</a>
-                <a href="/de/monitor/">Monitor</a>
-            </div>
-            <div>
-                <h4>Rechtliches</h4>
-                <a href="/de/impressum/">Impressum</a>
-                <a href="/de/datenschutz/">Datenschutz</a>
-            </div>
-            <div>
-                <h4>Kontakt</h4>
-                <p>info@berlingateway.de</p>
-                <p>+49 157 81497451</p>
-            </div>
-        </div>
-        <div style="padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:12px; opacity:0.5; text-align:center;">
-            &copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.
-        </div>
-    </div>
+<footer class="bg-footer">
+  <nav class="bg-footer__links" aria-label="Footer-Navigation">
+    <a href="/de/impressum/">Impressum</a>
+    <a href="/de/datenschutz/">Datenschutz</a>
+    <a href="/de/kontakt">Kontakt</a>
+    <a href="https://www.linkedin.com/company/berlingateway" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.xing.com/pages/berlin-gateway" target="_blank" rel="noopener">XING</a>
+    <a href="https://www.facebook.com/BerlinGateway.de" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+  <p>&copy; 2026 Berlin Gateway. Alle Rechte vorbehalten.</p>
 </footer>
 
 </body>

@@ -36,6 +36,8 @@
     var teaserVisible = !!teaser && branche === 'pflege' && art !== 'ausbildung';
     if (teaser) teaser.hidden = !teaserVisible;
     $('candEmpty').hidden = visible !== 0 || teaserVisible;
+    [].forEach.call(sec.querySelectorAll('.cand-filter'), function (el) { el.hidden = visible === 0; });
+    var reset = $('candReset'); if (reset) reset.hidden = visible !== 0 || realCards.length === 0;
   }
   function openDlg(title, html) { var dlg = $('candDlg'), bar = $('candBar'); $('candDlgTitle').textContent = title; $('candDlgBody').innerHTML = html; if (dlg.showModal) { bar.classList.add('cand-bar--dialog-open'); dlg.addEventListener('close', function () { bar.classList.remove('cand-bar--dialog-open'); }, { once: true }); dlg.showModal(); } }
   function compose(subject, text, recipient) {
@@ -84,11 +86,13 @@
   });
   $('emptyAsk').onclick = function (e) { e.preventDefault(); compose('Anfrage zu einem Fachkräfteprofil', 'Guten Tag Berlin Gateway,\n\nich interessiere mich für ein passendes Kurzprofil. Bitte kontaktieren Sie mich.\n\nMit freundlichen Grüßen'); };
   $('candSend').onclick = function () { ask(saved.slice()); };
+  var reset = $('candReset'); if (reset) reset.onclick = function () { setFilter('branche', 'alle'); setFilter('art', 'alle'); };
   $('candCompare').onclick = function () {
     var ps = cards.filter(function (el) { return saved.indexOf(el.dataset.code) > -1; });
     if (ps.length < 2) return;
     var rows = [['Berufsfeld', 'branche'], ['Art', 'art'], ['Zielberuf', 'ziel'], ['Abschluss', 'qual'], ['Praxis', 'praxis'], ['Deutsch', 'lang'], ['Beginn', 'start'], [sec.dataset.locationLabel || 'Aufenthalt', 'aufenthalt'], ['Status', 'status'], ['Nächste Schritte', 'wegtext'], ['Passung', 'vor']];
     var label = function (key, val) {
+      if (key === 'branche' && val === 'medizin') return 'Medizin';
       var chips = sec.querySelectorAll('[data-filter-group="' + key + '"] .cand-chip');
       for (var i = 0; i < chips.length; i++) {
         if (chips[i].getAttribute('data-' + key) === val) return chips[i].textContent.trim();
@@ -104,6 +108,8 @@
   cards.forEach(function (card) {
     var save = card.querySelector('.cand-save');
     if (save) save.hidden = false;
+    var contact = card.querySelector('[data-profile-contact]'), addr = mailAddr();
+    if (contact && addr) { contact.href = 'mailto:' + addr; contact.textContent = addr; }
   });
   sec.classList.add('cand-ready');
   refresh();
